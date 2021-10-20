@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:peony_bush"
+    }
+  ],
+  "result": {
+    "item": "minecraft:pink_dye"
+  }
+}

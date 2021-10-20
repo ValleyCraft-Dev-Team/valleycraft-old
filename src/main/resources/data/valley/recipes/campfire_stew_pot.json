@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_bars"
+    },
+    "C": {
+      "item": "valley:stew_pot"
+    }
+  },
+  "result": {
+    "item": "valley:stew_campfire_pot",
+    "count": 1
+  }
+}

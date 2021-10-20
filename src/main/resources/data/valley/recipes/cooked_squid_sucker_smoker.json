@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:squid_sucker"
+  },
+  "result": "valley:grilled_sucker",
+  "experience": 0.2,
+  "cookingtime": 400
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:brown_bricks"
+  },
+  "result": "valley:brown_brick_slab",
+  "count": 2
+}

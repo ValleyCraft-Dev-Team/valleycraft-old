@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "i",
+    "/"
+  ],
+  "key": {
+    "i": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:stone_knife",
+    "count": 1
+  }
+}

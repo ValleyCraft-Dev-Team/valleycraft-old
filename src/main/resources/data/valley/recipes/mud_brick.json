@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:mud"
+  },
+  "result": "valley:mud_brick",
+  "experience": 0.3,
+  "cookingtime": 200
+}

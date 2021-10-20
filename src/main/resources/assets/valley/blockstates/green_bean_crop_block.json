@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "valley:block/gb_0"
+    },
+    "age=1": {
+      "model": "valley:block/gb_1"
+    },
+    "age=2": {
+      "model": "valley:block/gb_2"
+    },
+    "age=3": {
+      "model": "valley:block/gb_3"
+    },
+    "age=4": {
+      "model": "valley:block/gb_4"
+    },
+    "age=5": {
+      "model": "valley:block/gb_5"
+    },
+    "age=6": {
+      "model": "valley:block/gb_6"
+    },
+    "age=7": {
+      "model": "valley:block/gb_7"
+    }
+  }
+}
+

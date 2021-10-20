@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "valley:blocks/fiber_bale_top",
+    "side": "valley:blocks/fiber_bale_side"
+  }
+}

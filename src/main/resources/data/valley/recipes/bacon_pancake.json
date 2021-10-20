@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:cooked_egg_bowl"
+    },
+    {
+      "item": "valley:pancake"
+    },
+    {
+      "item": "valley:cooked_bacon"
+    }
+  ],
+  "result": {
+    "item": "valley:large_pancake_breakfast",
+    "count": 1
+  }
+}

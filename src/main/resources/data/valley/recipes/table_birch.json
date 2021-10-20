@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "/ /",
+    "/ /"
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:birch_slab"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:table_birch",
+    "count": 1
+  }
+}

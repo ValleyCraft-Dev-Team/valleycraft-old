@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "valley:golden_sickle", "valley:golden_knife", "valley:golden_hatchet","valley:glistering_honeycomb",
+    "valley:glistering_bitter_berries","valley:glistering_sweet_berries","valley:glistering_spicy_berries",
+    "valley:glistering_kelp","valley:glistering_tomato","valley:glistering_onion","valley:glistering_potato",
+    "valley:glistering_beet","valley:glistering_juice"
+  ]
+}

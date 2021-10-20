@@ -1,0 +1,36 @@
+{    "name": "Hot Biome Foraging",
+  "icon": "valley:small_cactus",
+  "category": "valley:searching",
+  "sortnum":"2",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Hot Biome Foraging",
+      "text": "Foraging in Hot Biomes can mean life or death, so knowing the plants around you is important."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:tomato_bush",
+      "title": "Tomatos",
+      "text": "Tomatos grow high up in Shattered Savannas"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:tumbleweed",
+      "title": "Tumbleweeds",
+      "text": "Tumbleweeds can be found in Deserts, they also often have useful materials stuck inside them."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"minecraft:sugar_cane",
+      "title": "Sugar Cane",
+      "text": "Sugar Cane can be found in Deserts, Rivers, and Lakes. It's very useful in many culinary recipes & for producing Fiber."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:small_cactus",
+      "title": "Cacti",
+      "text": "Cacti grow in Deserts and produce a wonderful green dye."
+    }
+  ]
+}

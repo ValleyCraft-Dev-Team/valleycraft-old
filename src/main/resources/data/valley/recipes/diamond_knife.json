@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "i",
+    "/"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:diamond"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:diamond_knife",
+    "count": 1
+  }
+}

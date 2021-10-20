@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "facing=down,waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=down,waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=east,waterlogged=false": {
+      "y": 90,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=east,waterlogged=true": {
+      "y": 90,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=north,waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=north,waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=south,waterlogged=false": {
+      "y": 180,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=south,waterlogged=true": {
+      "y": 180,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=up,waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=up,waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=west,waterlogged=false": {
+      "y": 270,
+      "model": "valley:block/table_acacia"
+    },
+    "facing=west,waterlogged=true": {
+      "y": 270,
+      "model": "valley:block/table_acacia"
+    }
+  }
+}

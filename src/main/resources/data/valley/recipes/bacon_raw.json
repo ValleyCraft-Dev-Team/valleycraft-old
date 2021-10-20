@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:porkchop"
+    }
+  ],
+  "result": {
+    "item": "valley:raw_bacon",
+    "count": 3
+  }
+}

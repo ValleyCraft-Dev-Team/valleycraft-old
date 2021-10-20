@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:flint"
+    }
+  ],
+  "result": {
+    "item": "valley:flint_rock",
+    "count": 1
+  }
+}

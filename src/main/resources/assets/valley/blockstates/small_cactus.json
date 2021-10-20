@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "y": 0,
+      "model": "valley:block/small_cactus"
+    },
+    "facing=east": {
+      "y": 90,
+      "model": "valley:block/small_cactus"
+    },
+    "facing=north": {
+      "y": 0,
+      "model": "valley:block/small_cactus"
+    },
+    "facing=south": {
+      "y": 180,
+      "model": "valley:block/small_cactus"
+    },
+    "facing=up": {
+      "y": 0,
+      "model": "valley:block/small_cactus"
+    },
+    "facing=west": {
+      "y": 270,
+      "model": "valley:block/small_cactus"
+    }
+  }
+}

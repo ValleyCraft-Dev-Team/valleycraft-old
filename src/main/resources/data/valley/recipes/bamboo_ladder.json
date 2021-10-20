@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bamboo"
+    }
+  },
+  "result": {
+    "item": "valley:bamboo_ladder",
+    "count": 3
+  }
+}

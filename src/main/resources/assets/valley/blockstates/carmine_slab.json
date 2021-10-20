@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "valley:block/carmine_slab"
+    },
+    "type=double": {
+      "model": "valley:block/carmine_bricks"
+    },
+    "type=top": {
+      "model": "valley:block/carmine_slab_top"
+    }
+  }
+}

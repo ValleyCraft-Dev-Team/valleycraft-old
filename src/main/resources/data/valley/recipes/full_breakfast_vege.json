@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "valley:tomato_bush"
+    },
+    {
+      "item": "valley:cooked_egg_bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:full_breakfast_vegetarian",
+    "count": 1
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "facing=up,waterlogged=true": {
+      "model": "valley:block/anchor"
+    },
+    "facing=up,waterlogged=false": {
+      "model": "valley:block/anchor"
+    },
+    "facing=east,waterlogged=true": {
+      "model": "valley:block/anchor",
+      "y": 270
+    },
+    "facing=east,waterlogged=false": {
+      "model": "valley:block/anchor",
+      "y": 270
+    },
+    "facing=north,waterlogged=true": {
+      "model": "valley:block/anchor"
+    },
+    "facing=north,waterlogged=false": {
+      "model": "valley:block/anchor"
+    },
+    "facing=south,waterlogged=true": {
+      "model": "valley:block/anchor"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "valley:block/anchor"
+    },
+    "facing=down,waterlogged=true": {
+      "model": "valley:block/anchor_floor"
+    },
+    "facing=down,waterlogged=false": {
+      "model": "valley:block/anchor_floor"
+    },
+    "facing=west,waterlogged=false": {
+      "model": "valley:block/anchor",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "valley:block/anchor",
+      "y": 270
+    }
+  }
+}

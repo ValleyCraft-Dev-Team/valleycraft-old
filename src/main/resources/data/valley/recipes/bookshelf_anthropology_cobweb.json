@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:bookshelf_anthropology"
+    },
+    {
+      "item": "minecraft:cobweb"
+    }
+  ],
+  "result": {
+    "item": "valley:bookshelf_anthropology_cobweb",
+    "count": 1
+  }
+}

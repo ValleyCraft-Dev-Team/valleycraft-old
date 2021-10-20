@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "valley:bread_dough",
+    "count": 3
+  }
+}

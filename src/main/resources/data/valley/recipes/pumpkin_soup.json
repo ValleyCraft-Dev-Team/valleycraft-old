@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:pumpkin"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "valley:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "valley:pumpkin_bowl",
+    "count": 1
+  }
+}

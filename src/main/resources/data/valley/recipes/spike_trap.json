@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "CCC",
+    "BBB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:flint"
+    },
+    "C": {
+      "item": "valley:climbable_rope"
+    },
+    "B": {
+      "item": "minecraft:bamboo"
+    }
+  },
+  "result": {
+    "item": "valley:spike_wall_block",
+    "count": 1
+  }
+}

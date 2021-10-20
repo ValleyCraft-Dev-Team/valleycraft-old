@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  i",
+    " ii",
+    "/  "
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:diamond"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:diamond_sickle",
+    "count": 1
+  }
+}

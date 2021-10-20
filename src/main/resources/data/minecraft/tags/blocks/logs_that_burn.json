@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "valley:charcoal_block", "valley:rope_bridge_anchor", "valley:rope_bridge",
+    "valley:climbable_rope", "valley:fern_bush", "valley:bush", "valley:rose_bush",
+    "valley:lilac_bush", "valley:peony_bush", "valley:mossy_vines"
+  ]
+}

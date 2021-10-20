@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:mud"
+    }
+  },
+  "result": {
+    "item": "valley:brown_clay",
+    "count": 1
+  }
+}

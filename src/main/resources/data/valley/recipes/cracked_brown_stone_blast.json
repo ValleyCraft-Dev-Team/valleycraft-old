@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "valley:brown_bricks"
+  },
+  "result": "valley:brown_cracked_bricks",
+  "experience": 0.3,
+  "cookingtime": 200
+}

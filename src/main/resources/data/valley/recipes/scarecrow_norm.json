@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "WLW",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:carved_pumpkin"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "L": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:scarecrow",
+    "count": 1
+  }
+}

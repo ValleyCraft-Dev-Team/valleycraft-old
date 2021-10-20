@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:jungle_stone"
+    }
+  },
+  "result": {
+    "item": "valley:carmine_bricks",
+    "count": 4
+  }
+}

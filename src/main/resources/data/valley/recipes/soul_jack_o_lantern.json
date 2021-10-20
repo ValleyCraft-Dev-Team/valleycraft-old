@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:carved_pumpkin"
+    },
+    {
+      "item": "minecraft:soul_torch"
+    }
+  ],
+  "result": {
+    "item": "valley:soul_jack_o_lantern",
+    "count": 1
+  }
+}

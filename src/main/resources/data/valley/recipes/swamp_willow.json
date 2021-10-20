@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:weaping_willow"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lime_dye"
+  }
+}

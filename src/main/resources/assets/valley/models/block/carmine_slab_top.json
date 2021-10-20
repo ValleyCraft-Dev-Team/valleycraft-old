@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "valley:blocks/carmine_bricks",
+    "top": "valley:blocks/carmine_bricks",
+    "side": "valley:blocks/carmine_bricks"
+  }
+}

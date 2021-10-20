@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:cooked_egg_bowl"
+    },
+    {
+      "item": "valley:cooked_bacon"
+    }
+  ],
+  "result": {
+    "item": "valley:bacon_and_eggs",
+    "count": 1
+  }
+}

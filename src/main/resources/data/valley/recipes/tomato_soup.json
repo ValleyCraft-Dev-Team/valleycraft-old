@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:tomato_bush"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "valley:salt"
+    }
+  ],
+  "result": {
+    "item": "valley:tomato_soup",
+    "count": 1
+  }
+}

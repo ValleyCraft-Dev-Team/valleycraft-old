@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "ICB",
+    " N "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:packed_ice"
+    },
+    "I": {
+      "item": "minecraft:ice"
+    },
+    "C": {
+      "item": "valley:single_rose"
+    },
+    "B": {
+      "item": "minecraft:blue_ice"
+    },
+    "N": {
+      "item": "valley:glacial_stone"
+    }
+  },
+  "result": {
+    "item": "valley:ice_rose",
+    "count": 1
+  }
+}

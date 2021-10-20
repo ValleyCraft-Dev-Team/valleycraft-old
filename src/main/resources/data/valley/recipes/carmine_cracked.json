@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:carmine_bricks"
+  },
+  "result": "valley:carmine_cracked",
+  "experience": 0.2,
+  "cookingtime": 200
+}

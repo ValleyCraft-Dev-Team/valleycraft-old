@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "/i/",
+    "/C/"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:coal"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "item": "minecraft:copper_ingot"
+    },
+    "C": {
+      "item": "valley:climbable_rope"
+    }
+  },
+  "result": {
+    "item": "valley:brazier_copper",
+    "count": 1
+  }
+}

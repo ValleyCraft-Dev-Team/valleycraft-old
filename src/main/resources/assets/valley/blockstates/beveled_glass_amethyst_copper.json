@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "facing=up,waterlogged=true": {
+      "model": "valley:block/beveled_glass_amethyst_copper_horizontal"
+    },
+    "facing=up,waterlogged=false": {
+      "model": "valley:block/beveled_glass_amethyst_copper_horizontal"
+    },
+    "facing=east,waterlogged=true": {
+      "model": "valley:block/beveled_glass_amethyst_copper",
+      "y": 270
+    },
+    "facing=east,waterlogged=false": {
+      "model": "valley:block/beveled_glass_amethyst_copper",
+      "y": 270
+    },
+    "facing=north,waterlogged=true": {
+      "model": "valley:block/beveled_glass_amethyst_copper"
+    },
+    "facing=north,waterlogged=false": {
+      "model": "valley:block/beveled_glass_amethyst_copper"
+    },
+    "facing=south,waterlogged=true": {
+      "model": "valley:block/beveled_glass_amethyst_copper"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "valley:block/beveled_glass_amethyst_copper"
+    },
+    "facing=down,waterlogged=true": {
+      "model": "valley:block/beveled_glass_amethyst_copper_horizontal_bottom"
+    },
+    "facing=down,waterlogged=false": {
+      "model": "valley:block/beveled_glass_amethyst_copper_horizontal_bottom"
+    },
+    "facing=west,waterlogged=false": {
+      "model": "valley:block/beveled_glass_amethyst_copper",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "valley:block/beveled_glass_amethyst_copper",
+      "y": 270
+    }
+  }
+}

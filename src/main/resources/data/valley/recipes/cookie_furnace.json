@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:skeleton_cookie_dough"
+  },
+  "result": "valley:skeleton_cookie",
+  "experience": 0.2,
+  "cookingtime": 300
+}

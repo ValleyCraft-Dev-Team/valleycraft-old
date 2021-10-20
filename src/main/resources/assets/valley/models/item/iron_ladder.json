@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:blocks/iron_ladder_alt"
+  }
+}

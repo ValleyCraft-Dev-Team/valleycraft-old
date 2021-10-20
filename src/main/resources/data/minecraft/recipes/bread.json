@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:bread_dough"
+  },
+  "result": "minecraft:bread",
+  "experience": 0.2,
+  "cookingtime": 300
+}

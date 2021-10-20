@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_cod"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:maize_crop"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:cod_chowder",
+    "count": 1
+  }
+}

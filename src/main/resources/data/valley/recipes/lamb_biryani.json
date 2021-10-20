@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_mutton"
+    },
+    {
+      "item": "valley:spicy_berries"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "valley:rice_bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:lamb_biryani",
+    "count": 1
+  }
+}

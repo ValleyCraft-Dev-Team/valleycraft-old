@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:cake_dough"
+  },
+  "result": "minecraft:cake",
+  "experience": 0.2,
+  "cookingtime": 300
+}

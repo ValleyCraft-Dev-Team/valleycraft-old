@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:miners_lettuce"
+    },
+    {
+      "item": "valley:onion"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:miners_salad",
+    "count": 1
+  }
+}

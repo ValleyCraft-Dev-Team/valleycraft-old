@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "valley:block/soul_jack_o_lantern",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "valley:block/soul_jack_o_lantern"
+    },
+    "facing=south": {
+      "model": "valley:block/soul_jack_o_lantern",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "valley:block/soul_jack_o_lantern",
+      "y": 270
+    }
+  }
+}

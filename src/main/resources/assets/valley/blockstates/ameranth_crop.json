@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "valley:block/ameranth_1"
+    },
+    "age=1": {
+      "model": "valley:block/ameranth_2"
+    },
+    "age=2": {
+      "model": "valley:block/ameranth_3"
+    },
+    "age=3": {
+      "model": "valley:block/ameranth_4"
+    },
+    "age=4": {
+      "model": "valley:block/ameranth_5"
+    },
+    "age=5": {
+      "model": "valley:block/ameranth_6"
+    },
+    "age=6": {
+      "model": "valley:block/ameranth_7"
+    },
+    "age=7": {
+      "model": "valley:block/ameranth_7"
+    }
+  }
+}

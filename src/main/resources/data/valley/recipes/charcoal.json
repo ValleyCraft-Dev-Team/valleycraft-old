@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:charcoal_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:charcoal",
+    "count": 9
+  }
+}

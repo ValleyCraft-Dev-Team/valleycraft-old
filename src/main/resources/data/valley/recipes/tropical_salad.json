@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:rice_bowl"
+    },
+    {
+      "item": "valley:cooked_tropical_fish"
+    },
+    {
+      "item": "minecraft:kelp"
+    }
+  ],
+  "result": {
+    "item": "valley:clownfish_salad",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "valley:block/climbable_rope",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "valley:block/climbable_rope"
+    },
+    "axis=z": {
+      "model": "valley:block/climbable_rope",
+      "x": 90
+    }
+  }
+}

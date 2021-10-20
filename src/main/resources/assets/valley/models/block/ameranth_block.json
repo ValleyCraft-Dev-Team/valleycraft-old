@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "valley:blocks/ameranth_bale_top",
+    "side": "valley:blocks/ameranth_bale_side"
+  }
+}

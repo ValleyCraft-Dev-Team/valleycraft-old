@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:cooked_rabbit"
+    },
+    {
+      "item": "valley:spicy_berries"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "valley:bone_broth"
+    }
+  ],
+  "result": {
+    "item": "valley:rabbit_bigo",
+    "count": 1
+  }
+}

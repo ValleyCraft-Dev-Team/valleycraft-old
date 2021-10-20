@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "_ _",
+    "___"
+  ],
+  "key": {
+    "_": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "result": {
+    "item": "valley:rounded_barrel",
+    "count": 1
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "valley:blocks/weaping_swamp_willow"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "valley:nether_coal_ore","valley:salt_ore","valley:charcoal_block","valley:nether_salt","valley:mixed_ore",
+    "valley:brown_bricks","valley:brown_cracked_bricks","valley:brown_mossy_bricks","valley:brown_brick_slab",
+    "valley:brown_brick_stairs","valley:smooth_stone","valley:volc_stone","valley:volc_stone_smooth",
+    "valley:beveled_glass","valley:anchor","valley:stool_stone","valley:table_stone","valley:stew_pot", "valley:hanging_pot",
+    "valley:goblet","valley:brazier","valley:brazier_soul","valley:screen","valley:redstone_lantern","valley:glacial_stone","valley:fossil_ore",
+    "valley:lantern_hanging","valley:soul_hanging","valley:redstone_hanging","valley:beveled_glass", "valley:hanging_pot", "valley:crystal_ball",
+    "valley:saltpeter_ore","valley:iron_ladder", "valley:darkstone", "valley:oceanstone", "valley:taigastone", "valley:swampstone", "valley:scalding_volc_stone", "valley:scalding_stone", "valley:scalding_sandstone", "valley:jungle_stone", "valley:jungle_cobble", "valley:jungle_mossy", "valley:stone_mossy"
+  ]
+}

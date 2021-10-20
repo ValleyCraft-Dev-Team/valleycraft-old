@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:fern"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "valley:small_mug_block"
+    },
+    {
+      "item": "minecraft:dandelion"
+    }
+  ],
+  "result": {
+    "item": "valley:tea_dandelion",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "valley:mug_block"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "valley:mug_block"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "valley:mead_mug",
+    "count": 2
+  }
+}

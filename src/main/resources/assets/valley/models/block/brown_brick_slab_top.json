@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "valley:blocks/brown_bricks",
+    "top": "valley:blocks/brown_bricks",
+    "side": "valley:blocks/brown_bricks"
+  }
+}

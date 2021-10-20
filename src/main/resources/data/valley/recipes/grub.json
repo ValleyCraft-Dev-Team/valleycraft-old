@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "valley:cooked_bacon"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:mead_mug"
+    },
+    {
+      "item": "valley:bone_broth"
+    },
+    {
+      "item": "valley:bone_broth"
+    },
+    {
+      "item": "valley:bone_broth"
+    },
+    {
+      "item": "valley:bone_broth"
+    },
+    {
+      "item": "valley:bone_broth"
+    }
+  ],
+  "result": {
+    "item": "valley:grub",
+    "count": 5
+  }
+}

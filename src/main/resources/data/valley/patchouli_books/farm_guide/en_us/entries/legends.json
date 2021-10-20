@@ -1,0 +1,48 @@
+{    "name": "Legends & Myths",
+  "icon": "valley:tumbleweed",
+  "category": "valley:searching",
+  "sortnum":"3",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Legends & Myths",
+      "text": "There are many crops that have allegedly gone extinct, but I think they can still be found out there."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:spicy_berries",
+      "title": "Spicy Berries",
+      "text": "Spicy Berries, location unknown. Somewhere in the Nether probably."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:ameranth_crop",
+      "title": "Amaranth",
+      "text": "Amaranth, a bright purple plant, location unknown. The Old Ones grew it in temples long ago."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:rice_crop",
+      "title": "Rice",
+      "text": "Rice, location unknown. The Old Ones grew it near temples in ancient villages long ago."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:green_bean",
+      "title": "Green Beans",
+      "text": "Green Beans, location unknown. People once grew it in Villages before they found Carrots."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:mandrake",
+      "title": "Living Mandrake",
+      "text": "Living Mandrakes, an apparently sentient plant. Location unknown."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:puff_ball",
+      "title": "Puff Balls",
+      "text": "Puff Balls, a wonderfully soft source of string. Villagers grew it before they learned to tame Sheep and shear them."
+    }
+  ]
+}

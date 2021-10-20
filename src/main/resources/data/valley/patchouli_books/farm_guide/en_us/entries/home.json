@@ -1,0 +1,29 @@
+{    "name": "Farming At Home",
+  "icon": "valley:holly",
+  "category": "valley:growing",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Farming At Home",
+      "text": "Some plants can be a bit confusing to use at first. Thankfully people in the Villages have passed on their knowledge of the Old Ones and their farming methods to me."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:mulch",
+      "title": "Mulch",
+      "text": "Made with 9 saplings, Mulch can be used to create more soil for farming on."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:turf",
+      "title": "Turf",
+      "text": "Turf can be used to spread grass to places it normally wouldn't be possible, such as underground!"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item":"valley:rice_crop",
+      "title": "Seedlings",
+      "text": "Grown on dirt next to water, they are easy to reproduce using Bone Meal and Water with their crop."
+    }
+  ]
+}

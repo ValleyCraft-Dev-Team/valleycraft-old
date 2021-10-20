@@ -1,0 +1,221 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "valley:block/campfire_pot"
+      }
+    },
+    {
+      "when": {
+        "has_bottle_1": "false",
+        "facing=east": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 270
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "true",
+        "facing=east": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 270
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "false",
+        "facing=north": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 180
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "true",
+        "facing=north": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 180
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "false",
+        "facing=south": {
+          "apply": {
+            "model": "valley:block/campfire_pot"
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "true",
+        "facing=south": {
+          "apply": {
+            "model": "valley:block/campfire_pot"
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "false",
+        "facing=west": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 90
+          }
+        }
+      },
+      "when": {
+        "has_bottle_1": "true",
+        "facing=west": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 90
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "false",
+        "facing=east": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 270
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "true",
+        "facing=east": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 270
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "false",
+        "facing=north": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 180
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "true",
+        "facing=north": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 180
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "false",
+        "facing=south": {
+          "apply": {
+            "model": "valley:block/campfire_pot"
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "true",
+        "facing=south": {
+          "apply": {
+            "model": "valley:block/campfire_pot"
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "false",
+        "facing=west": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 90
+          }
+        }
+      },
+      "when": {
+        "has_bottle_0": "true",
+        "facing=west": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 90
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "false",
+        "facing=east": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 270
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "true",
+        "facing=east": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 270
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "false",
+        "facing=north": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 180
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "true",
+        "facing=north": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 180
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "false",
+        "facing=south": {
+          "apply": {
+            "model": "valley:block/campfire_pot"
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "true",
+        "facing=south": {
+          "apply": {
+            "model": "valley:block/campfire_pot"
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "false",
+        "facing=west": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 90
+          }
+        }
+      },
+      "when": {
+        "has_bottle_2": "true",
+        "facing=west": {
+          "apply": {
+            "model": "valley:block/campfire_pot",
+            "y": 90
+          }
+        }
+      }
+    }
+  ]
+}

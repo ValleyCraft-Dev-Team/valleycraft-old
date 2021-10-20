@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "_ _",
+    "_ _",
+    "_ _"
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:cobblestone_slab"
+    }
+  },
+  "result": {
+    "item": "valley:chimney_cobble",
+    "count": 3
+  }
+}

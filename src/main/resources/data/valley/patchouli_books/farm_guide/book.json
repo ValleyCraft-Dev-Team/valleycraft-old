@@ -1,0 +1,10 @@
+{    "name": "The Farmhand's Guide",
+  "landing_text": "The Farmhand's Guide has anything and everything you'll ever need to know from foraging and farming to harvesting!",
+  "version": X,
+  "model": "valley:farm_guide",
+  "show_progress": false,
+  "creative_tab": "valley.exploration",
+  "use_blocky_font": true,
+  "pause_game": true,
+  "header_color": "0fd297"
+}

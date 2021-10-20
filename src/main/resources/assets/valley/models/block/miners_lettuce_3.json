@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "valley:blocks/miners_lettuce_3"
+  }
+}

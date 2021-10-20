@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:jungle_cobble"
+  },
+  "result": "valley:jungle_stone",
+  "experience": 0.1,
+  "cookingtime": 200
+}

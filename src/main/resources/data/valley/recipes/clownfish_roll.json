@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:tropical_fish"
+    },
+    {
+      "item": "valley:rice_item"
+    }
+  ],
+  "result": {
+    "item": "valley:clownfish_roll",
+    "count": 1
+  }
+}

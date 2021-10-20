@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:arrow"
+    },
+    "C": {
+      "item": "valley:climbable_rope"
+    }
+  },
+  "result": {
+    "item": "valley:arrow_bundle",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:raw_egg_bowl"
+  },
+  "result": "valley:cooked_egg_bowl",
+  "experience": 0.1,
+  "cookingtime": 150
+}

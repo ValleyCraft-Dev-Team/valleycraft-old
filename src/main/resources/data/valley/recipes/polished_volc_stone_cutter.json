@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:volc_stone"
+  },
+  "result": "valley:volc_stone_smooth",
+  "count": 1
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:orange_beauty"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye"
+  }
+}

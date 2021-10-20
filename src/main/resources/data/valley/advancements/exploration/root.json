@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "The Adventure Begins",
+            "color": "yellow",
+            "bold": false
+        },
+        "description": {
+            "text": "\"...where have I woken up?\"",
+            "color": "white"
+        },
+        "icon": {
+            "item": "valley:stone_mossy"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false,
+        "background": "valley:textures/blocks/farmland.png"
+    },
+    "criteria": {
+        "location": {
+            "trigger": "minecraft:location"
+        }
+    },
+    "requirements": [
+        [
+            "location"
+        ]
+    ]
+}

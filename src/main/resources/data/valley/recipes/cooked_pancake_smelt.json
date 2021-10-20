@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:pancake_dough"
+  },
+  "result": "valley:pancake",
+  "experience": 0.2,
+  "cookingtime": 200
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CP",
+    "TTT",
+    "BBB"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:grilled_sucker"
+    },
+    "C": {
+      "item": "minecraft:kelp"
+    },
+    "P": {
+      "item": "minecraft:carrot"
+    },
+    "T": {
+      "item": "valley:rice_item"
+    },
+    "B": {
+      "item": "valley:bento_block"
+    }
+  },
+  "result": {
+    "item": "valley:bbox_unagi",
+    "count": 3
+  }
+}

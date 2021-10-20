@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:cooked_egg_bowl"
+    },
+    {
+      "item": "valley:cooked_bacon"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+  ],
+  "result": {
+    "item": "valley:full_breakfast",
+    "count": 1
+  }
+}

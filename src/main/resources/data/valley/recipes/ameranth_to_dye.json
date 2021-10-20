@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:ameranth"
+    }
+  ],
+  "result": {
+    "item": "minecraft:magenta_dye"
+  }
+}

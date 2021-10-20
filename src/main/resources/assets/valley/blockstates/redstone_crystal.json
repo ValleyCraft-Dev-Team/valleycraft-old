@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/redstone_crystal"
+    },
+    "waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/redstone_crystal"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:salmon"
+    },
+    {
+      "item": "valley:onion"
+    },
+    {
+      "item": "valley:grilled_sucker"
+    },
+    {
+      "item": "valley:rice_bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:poke_bowl",
+    "count": 1
+  }
+}

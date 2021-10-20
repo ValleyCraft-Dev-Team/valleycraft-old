@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CP",
+    "TTT",
+    "BBB"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:tropical_fish"
+    },
+    "P": {
+      "item": "minecraft:kelp"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "T": {
+      "item": "valley:rice_item"
+    },
+    "B": {
+      "item": "valley:bento_block"
+    }
+  },
+  "result": {
+    "item": "valley:bbox_clownfish",
+    "count": 3
+  }
+}

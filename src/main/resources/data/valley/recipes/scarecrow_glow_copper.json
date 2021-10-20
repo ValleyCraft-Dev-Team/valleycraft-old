@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "WLW",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "item": "valley:copper_jack_o_lantern"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "L": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:scarecrow_copper",
+    "count": 1
+  }
+}

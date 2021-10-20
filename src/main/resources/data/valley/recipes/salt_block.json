@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "valley:salt"
+    }
+  ],
+  "result": {
+    "item": "valley:salt_block",
+    "count": 1
+  }
+}

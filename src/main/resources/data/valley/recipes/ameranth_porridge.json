@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "valley:ameranth_porridge",
+    "count": 1
+  }
+}

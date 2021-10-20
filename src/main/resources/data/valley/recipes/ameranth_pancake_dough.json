@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "valley:ameranth_pancake_dough",
+    "count": 3
+  }
+}

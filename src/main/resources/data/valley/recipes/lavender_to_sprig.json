@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:lavender"
+    }
+  ],
+  "result": {
+    "item": "valley:lavender_sprig",
+    "count": 3
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "valley:flour_bag"
+    }
+  ],
+  "result": {
+    "item": "valley:dog_biscuit",
+    "count": 3
+  }
+}

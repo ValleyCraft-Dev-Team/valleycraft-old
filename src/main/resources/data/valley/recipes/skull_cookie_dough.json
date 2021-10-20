@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:flour_bag"
+    },
+    "C": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "valley:skeleton_cookie_dough",
+    "count": 2
+  }
+}

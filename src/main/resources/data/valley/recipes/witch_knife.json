@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/cA"
+  ],
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "c": {
+      "item": "minecraft:copper_ingot"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "item": "valley:witch_dagger",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "__",
+    "//"
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:warped_slab"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:stool_warped",
+    "count": 1
+  }
+}

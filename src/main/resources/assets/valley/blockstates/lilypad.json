@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "valley:block/lilypad"
+      },
+      {
+        "model": "valley:block/lilypad",
+        "y": 90
+      },
+      {
+        "model": "valley:block/lilypad",
+        "y": 180
+      },
+      {
+        "model": "valley:block/lilypad",
+        "y": 270
+      }
+    ]
+  }
+}
