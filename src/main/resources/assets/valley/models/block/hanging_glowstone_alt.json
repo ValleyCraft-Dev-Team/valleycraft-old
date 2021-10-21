@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "valley:blocks/hanging_pot",
 		"1": "valley:blocks/glowstone_crystal",
-		"particle": "block/amethyst_block"
+		"particle": "block/glowstone"
 	},
 	"elements": [
 		{
