@@ -125,14 +125,21 @@ public class Furniture {
     public static final Block FIBER_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
             .breakByTool(FabricToolTags.HOES)
             .breakByHand(true)
-            .sounds(BlockSoundGroup.STONE)
+            .sounds(BlockSoundGroup.GRASS)
             .strength(1, 1.0f));
 
     public static final Block AMERANTH_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
             .breakByTool(FabricToolTags.HOES)
             .breakByHand(true)
-            .sounds(BlockSoundGroup.STONE)
+            .sounds(BlockSoundGroup.GRASS)
             .strength(1, 1.0f));
+
+    public static final Block SEAWEED_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
+            .breakByTool(FabricToolTags.HOES)
+            .breakByHand(true)
+            .sounds(BlockSoundGroup.GRASS)
+            .strength(1, 1.0f));
+
     //rope
     public static final Block CLIMBABLE_ROPE = new ClimbableRopeBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
             .breakByHand(true)
@@ -359,6 +366,8 @@ public class Furniture {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "charcoal_block"), CHARCOAL_BLOCK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "charcoal_block"), new BlockItem(CHARCOAL_BLOCK, new Item.Settings().group(FURNITURE_GROUP)));
 
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seaweed_block"), SEAWEED_BALE);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "seaweed_block"), new BlockItem(SEAWEED_BALE, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ameranth_block"), AMERANTH_BALE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_block"), new BlockItem(AMERANTH_BALE, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fiber_block"), FIBER_BALE);

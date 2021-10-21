@@ -19,6 +19,7 @@ public class FoodAndCooking {
     public static final Item COOKED_TROPICAL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item DRIED_SUCKER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item RICE_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+    public static final Item SEAWEED_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item MILK_BOTTLE = new MilkBottleBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(16));
     public static final Item CHOCO_MILK = new DrinkBottleBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION,300), 1.0f).build()).maxCount(1));
     public static final Item PUMPKIN_BOTTLE = new DrinkBottleBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,300), 1.0f).build()).maxCount(1));
@@ -230,6 +231,7 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chicken_curry"), CHICKEN_CURRY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rice_bowl"), RICE_BOWL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "poke_bowl"), POKE_BOWL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dried_seaweed"), SEAWEED_ITEM);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "grilled_sucker"), GRILLED_SUCKER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dried_salmon"), DRIED_SALMON);
