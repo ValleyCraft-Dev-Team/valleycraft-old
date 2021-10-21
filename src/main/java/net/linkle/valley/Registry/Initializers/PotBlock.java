@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Initializers;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.linkle.valley.Registry.Blocks.Plants.Decorative.RoseBush;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.util.Identifier;
@@ -17,6 +16,6 @@ public class PotBlock {
 
     public static void initialize() {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "potted_single_rose"), new FlowerPotBlock
-                (POTTED_ROSE_SPRIG, net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings.copy(POTTED_POPPY)));
+                (POTTED_ROSE_SPRIG, FabricBlockSettings.copy(POTTED_POPPY)));
     }
 }
