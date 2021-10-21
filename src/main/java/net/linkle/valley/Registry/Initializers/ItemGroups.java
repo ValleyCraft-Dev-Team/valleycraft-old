@@ -17,7 +17,7 @@ public class ItemGroups {
     public static final Item FURNITURE_ICON = new MiscItemBase(new Item.Settings());
     public static final Item MISC_ICON = new MiscItemBase(new Item.Settings());
     public static final Item NATURE_ICON = new MiscItemBase(new Item.Settings());
-    public static final Item ARTEFACT_ICON = new MiscItemBase(new Item.Settings());
+    public static final Item ARTIFACT_ICON = new MiscItemBase(new Item.Settings());
 
     //item groups & some items
     //i hate order of operations in programming
@@ -36,6 +36,9 @@ public class ItemGroups {
     public static final ItemGroup MISC_GROUP = FabricItemGroupBuilder.create(
             new Identifier(MOD_ID, "misc")).icon(() -> new ItemStack(MISC_ICON)).build();
 
+    public static final ItemGroup ARTIFACT_GROUP = FabricItemGroupBuilder.create(
+            new Identifier(MOD_ID, "artifacts")).icon(() -> new ItemStack(ARTIFACT_ICON)).build();
+
     public static void initialize() {
         //icons
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "furniture"), FURNITURE_ICON);
@@ -43,5 +46,6 @@ public class ItemGroups {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "exploration"), EXPLORATION_ICON);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "misc"), MISC_ICON);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nature"), NATURE_ICON);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "artifact"), ARTIFACT_ICON);
     }
 }
