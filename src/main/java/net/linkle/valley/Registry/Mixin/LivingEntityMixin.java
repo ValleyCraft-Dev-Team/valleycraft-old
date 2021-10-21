@@ -14,29 +14,58 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
+import net.minecraft.util.function.BooleanBiFunction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.World;
 
 @Mixin(LivingEntity.class)
 abstract class LivingEntityMixin extends Entity {
 
-	LivingEntityMixin(EntityType<?> type, World world) {
-		super(type, world);
-	}
-	
-	@Shadow
-	abstract boolean isHolding(Predicate<ItemStack> item);
-	
-	@Shadow
-	abstract void swingHand(Hand hand);
-	
-	@Shadow
-	abstract ItemStack getMainHandStack();
-	
-	@Inject(method = "isClimbing", at = @At("HEAD"), cancellable = true)
-	void climbingAxe(CallbackInfoReturnable<Boolean> info) {
-		if (horizontalCollision && isHolding(item -> item.getItem() instanceof ClimbingAxeBase)) {
-			swingHand(getMainHandStack().getItem() instanceof ClimbingAxeBase ? Hand.MAIN_HAND : Hand.OFF_HAND);
-			info.setReturnValue(true);
-		}
-	}
+    LivingEntityMixin(EntityType<?> type, World world) {
+        super(type, world);
+    }
+
+    @Shadow
+    abstract boolean isHolding(Predicate<ItemStack> item);
+
+    @Shadow
+    abstract void swingHand(Hand hand);
+
+    @Shadow
+    abstract ItemStack getMainHandStack();
+
+    @Inject(method = "isClimbing", at = @At("HEAD"), cancellable = true)
+    void climbingAxe(CallbackInfoReturnable<Boolean> info) {
+        if (isHolding(item -> item.getItem() instanceof ClimbingAxeBase)) {
+            var box = getBoundingBox().expand(0.01, 0, 0.01);
+            var minPos = new BlockPos(box.minX, box.minY, box.minZ);
+            var maxPos = new BlockPos(box.maxX, box.maxY, box.maxZ);
+            if (world.isRegionLoaded(minPos, maxPos)) {
+                var boxShape = VoxelShapes.cuboid(box);
+                var mutable = new BlockPos.Mutable();
+                var bool = horizontalCollision;
+                
+                if (!bool) loops : 
+                for(int x = minPos.getX(); x <= maxPos.getX(); ++x)
+                for(int y = minPos.getY(); y <= maxPos.getY(); ++y)
+                for(int z = minPos.getZ(); z <= maxPos.getZ(); ++z) {
+                    var state = world.getBlockState(mutable.set(x, y, z));
+                    var blockShape = state.getCollisionShape(world, mutable).offset(x, y, z);
+                    if (VoxelShapes.matchesAnywhere(blockShape, boxShape, BooleanBiFunction.AND)) {
+                        bool = true;
+                        break loops;
+                    }
+                }
+                
+                if (bool) {
+                    if (!MathHelper.approximatelyEquals(prevY, getY())) {
+                        swingHand(getMainHandStack().getItem() instanceof ClimbingAxeBase ? Hand.MAIN_HAND : Hand.OFF_HAND);
+                    }
+                    info.setReturnValue(true);
+                }
+            }
+        }
+    }
 }
