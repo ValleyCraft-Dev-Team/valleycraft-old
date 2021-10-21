@@ -4,7 +4,8 @@
   "package": "net.linkle.valley.Registry.Mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-	"LivingEntityMixin"
+	"LivingEntityMixin",
+	"CompostableItems"
   ],
   "client": [
   ],

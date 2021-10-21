@@ -29,6 +29,9 @@ public class ValleyMain implements ModInitializer {
         BlocksCont.initialize();
         Furnaces.ints();
         PotBlock.initialize();
+        
+        // Misc Initializers (Recommended put it after the blocks and items initializers)
+        Compostables.initialize();
 
         //Configured Feature Initializers
         OreConfiguredFeatures.initialize();
@@ -41,6 +44,6 @@ public class ValleyMain implements ModInitializer {
         //WaterPlantConfiguredFeatures.initialize();
 
         //Tells you if this shit actually worked
-        System.out.println("The main mod initialization sections loaded fine somehow™️.");
+        System.out.println("The main mod initialization sections loaded fine somehow.");
     }
 }
