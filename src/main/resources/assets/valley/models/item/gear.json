@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/iron_ladder_alt"
+    "layer0": "valley:blocks/rusty_gear"
   }
 }

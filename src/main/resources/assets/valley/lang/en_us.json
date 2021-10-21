@@ -10,11 +10,14 @@
   "block.valley.golem_rusty.tooltip": "Completely non-functional.",
   "block.valley.golem_idling.tooltip": "It's broken inside, but",
   "block.valley.golem_idling.tooltip_2": "the lights are still on.",
-  "block.valley.keg.tooltip": "Refill all your buckets & bottles!",
+  "block.valley.keg.tooltip": "Refills all your buckets & bottles!",
+  "block.valley.gear.tooltip": "It must have been used",
+  "block.valley.gear.tooltip_2": "by some ancient civilization.",
 
   "block.valley.golem_waxed": "Waxed Broken Golem",
   "block.valley.golem_idling": "Idling Broken Golem",
   "block.valley.golem_rusty": "Oxidized Broken Golem",
+  "block.valley.gear": "Rusty Gear",
 
   "block.valley.soul_jack_o_lantern": "Soul Jack o'Lantern",
   "block.valley.scarecrow_soul": "Soul Scarecrow",

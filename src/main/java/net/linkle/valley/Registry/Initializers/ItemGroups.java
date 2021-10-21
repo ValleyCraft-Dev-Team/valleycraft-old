@@ -17,6 +17,7 @@ public class ItemGroups {
     public static final Item FURNITURE_ICON = new MiscItemBase(new Item.Settings());
     public static final Item MISC_ICON = new MiscItemBase(new Item.Settings());
     public static final Item NATURE_ICON = new MiscItemBase(new Item.Settings());
+    public static final Item ARTEFACT_ICON = new MiscItemBase(new Item.Settings());
 
     //item groups & some items
     //i hate order of operations in programming

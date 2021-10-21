@@ -17,7 +17,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class WreathBlock extends FacingBlock implements Waterloggable {
+public class CrestBlock extends FacingBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape EAST_SHAPE;
     protected static final VoxelShape WEST_SHAPE;
@@ -26,11 +26,11 @@ public class WreathBlock extends FacingBlock implements Waterloggable {
     protected static final VoxelShape UP_SHAPE;
     protected static final VoxelShape DOWN_SHAPE;
 
-    public WreathBlock() {
-        super(FabricBlockSettings.of(Material.LEAVES)
+    public CrestBlock() {
+        super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true)
-                .sounds(BlockSoundGroup.GRASS)
-                .strength(0.5f, 0.5f));
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(1.0f, 0.5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

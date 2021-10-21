@@ -111,6 +111,17 @@ public class ClientModInitFix implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(STOOL_WARPED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SMALL_MUG_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(SMALL_MUG_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_PLAID, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_PLAID, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_PLAID, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_PLAID, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CHAIR_STONE, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CHAIR_STONE, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(CREST, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CREST, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GEAR, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(GEAR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(SMALL_CACTUS, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(SMALL_CACTUS, RenderLayer.getCutout());

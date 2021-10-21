@@ -17,6 +17,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
@@ -33,6 +34,7 @@ public class Furniture {
     public static final Block TABLE_WARPED = new TableBlock();
     public static final Block TABLE_CRIMSON = new TableBlock();
     public static final Block TABLE_STONE = new TableBlock();
+    public static final Block TABLE_PLAID = new TableBlock();
 
     public static final Block STOOL_OAK = new StoolBlock();
     public static final Block STOOL_DARK = new StoolBlock();
@@ -43,6 +45,9 @@ public class Furniture {
     public static final Block STOOL_WARPED = new StoolBlock();
     public static final Block STOOL_CRIMSON = new StoolBlock();
     public static final Block STOOL_STONE = new StoolBlock();
+    public static final Block STOOL_PLAID = new StoolBlock();
+
+    public static final Block CHAIR_STONE = new StoolBlock();
 
     public static final Block IRON_LADDER = new IronLadderBlock();
     public static final Block BAMBOO_LADDER = new LadderBlock();
@@ -230,12 +235,16 @@ public class Furniture {
 
     public static final Block PET_BED = new PetBedBlock();
     public static final Block WREATH = new WreathBlock();
+    public static final Block CREST = new CrestBlock();
+    public static final Block GEAR = new GearBlock();
 
     public static void initialize() {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_oak"), TABLE_OAK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_oak"), new BlockItem(TABLE_OAK, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_stone"), TABLE_STONE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_stone"), new BlockItem(TABLE_STONE, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_plaid"), TABLE_PLAID);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_plaid"), new BlockItem(TABLE_PLAID, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_birch"), TABLE_BIRCH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_birch"), new BlockItem(TABLE_BIRCH, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_spruce"), TABLE_SPRUCE);
@@ -255,6 +264,8 @@ public class Furniture {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_oak"), new BlockItem(STOOL_OAK, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_stone"), STOOL_STONE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_stone"), new BlockItem(STOOL_STONE, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_plaid"), STOOL_PLAID);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_plaid"), new BlockItem(STOOL_PLAID, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_birch"), STOOL_BIRCH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_birch"), new BlockItem(STOOL_BIRCH, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_spruce"), STOOL_SPRUCE);
@@ -269,6 +280,9 @@ public class Furniture {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_warped"), new BlockItem(STOOL_WARPED, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_crimson"), STOOL_CRIMSON);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_crimson"), new BlockItem(STOOL_CRIMSON, new Item.Settings().group(FURNITURE_GROUP)));
+
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "chair_stone"), CHAIR_STONE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chair_stone"), new BlockItem(CHAIR_STONE, new Item.Settings().group(FURNITURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "iron_ladder"), IRON_LADDER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_ladder"), new BlockItem(IRON_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
@@ -402,7 +416,7 @@ public class Furniture {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "small_mug_block"), SMALL_MUG_BLOCK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "small_mug_block"), new BlockItem(SMALL_MUG_BLOCK, new Item.Settings().group(COOKING_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "goblet"), GOBLET_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "goblet"), new BlockItem(GOBLET_BLOCK, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "goblet"), new BlockItem(GOBLET_BLOCK, new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bowl_block"), BOWL_BLOCK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bowl_block"), new BlockItem(BOWL_BLOCK, new Item.Settings().group(COOKING_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bento_block"), BENTO_BLOCK);
@@ -413,7 +427,7 @@ public class Furniture {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stew_campfire_pot"), new BlockItem(STEW_POT_CAMPFIRE, new Item.Settings().group(FURNITURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "anchor"), ANCHOR);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "anchor"), new BlockItem(ANCHOR, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "anchor"), new BlockItem(ANCHOR, new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass"), BEVELED_PANE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass"), new BlockItem(BEVELED_PANE, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_copper"), BEVELED_PANE_COPPER);
@@ -526,6 +540,10 @@ public class Furniture {
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "wreath"), WREATH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wreath"), new BlockItem(WREATH, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "miners_crest"), CREST);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "miners_crest"), new BlockItem(CREST, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "gear"), GEAR);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gear"), new BlockItem(GEAR, new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "pet_bed"), PET_BED);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pet_bed"), new BlockItem(PET_BED, new Item.Settings().group(FURNITURE_GROUP)));

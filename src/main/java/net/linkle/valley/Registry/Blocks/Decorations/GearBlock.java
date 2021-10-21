@@ -2,14 +2,18 @@ package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -17,7 +21,9 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class WreathBlock extends FacingBlock implements Waterloggable {
+import java.util.List;
+
+public class GearBlock extends FacingBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape EAST_SHAPE;
     protected static final VoxelShape WEST_SHAPE;
@@ -26,11 +32,11 @@ public class WreathBlock extends FacingBlock implements Waterloggable {
     protected static final VoxelShape UP_SHAPE;
     protected static final VoxelShape DOWN_SHAPE;
 
-    public WreathBlock() {
-        super(FabricBlockSettings.of(Material.LEAVES)
+    public GearBlock() {
+        super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true)
-                .sounds(BlockSoundGroup.GRASS)
-                .strength(0.5f, 0.5f));
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(1.0f, 0.5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 
@@ -81,12 +87,19 @@ public class WreathBlock extends FacingBlock implements Waterloggable {
 
     static {
         WATERLOGGED = Properties.WATERLOGGED;
-        UP_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
-        DOWN_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
-        WEST_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 2.0D, 1.0D, 12.0D, 14.0D);
-        EAST_SHAPE = Block.createCuboidShape(15.0D, 0.0D, 2.0D, 16.0D, 12.0D, 15.0D);
-        NORTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
-        SOUTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 15.0D, 14.0D, 12.0D, 16.0D);
+        UP_SHAPE = Block.createCuboidShape(1.0D, 1.0D, 0.0D, 15.0D, 15.0D, 1.0D);
+        DOWN_SHAPE = Block.createCuboidShape(1.0D, 1.0D, 0.0D, 15.0D, 15.0D, 1.0D);
+        WEST_SHAPE = Block.createCuboidShape(0.0D, 1.0D, 1.0D, 1.0D, 15.0D, 15.0D);
+        EAST_SHAPE = Block.createCuboidShape(15.0D, 1.0D, 1.0D, 16.0D, 15.0D, 15.0D);
+        NORTH_SHAPE = Block.createCuboidShape(1.0D, 1.0D, 0.0D, 15.0D, 15.0D, 1.0D);
+        SOUTH_SHAPE = Block.createCuboidShape(1.0D, 1.0D, 15.0D, 15.0D, 15.0D, 16.0D);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack itemStack, BlockView world, List<Text> tooltip, TooltipContext tooltipContext) {
+        tooltip.add( new TranslatableText("block.valley.gear.tooltip") );
+        tooltip.add( new TranslatableText("block.valley.gear.tooltip_2") );
+
     }
 }
 
