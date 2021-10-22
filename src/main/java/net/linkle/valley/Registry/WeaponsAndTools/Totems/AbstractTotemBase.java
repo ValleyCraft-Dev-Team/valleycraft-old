@@ -37,7 +37,7 @@ public abstract class AbstractTotemBase extends Item {
             var client = MinecraftClient.getInstance();
             client.particleManager.addEmitter(user, ParticleTypes.TOTEM_OF_UNDYING, 30);
             if (user == client.player) {
-                client.gameRenderer.showFloatingItem(stack);
+                client.gameRenderer.showFloatingItem(new ItemStack(this));
             }
         } else {
             world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_TOTEM_USE, user.getSoundCategory(), 1, 1);
