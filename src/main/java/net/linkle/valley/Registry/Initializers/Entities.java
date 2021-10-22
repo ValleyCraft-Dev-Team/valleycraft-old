@@ -36,7 +36,7 @@ public class Entities {
             BiomeKeys.GIANT_TREE_TAIGA,
             BiomeKeys.GIANT_TREE_TAIGA_HILLS
         );
-        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 4, 1, 2);
+        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 2, 1, 2);
     }
 
     public static void initializeClient() {
