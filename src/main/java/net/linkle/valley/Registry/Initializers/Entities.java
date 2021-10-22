@@ -18,29 +18,28 @@ import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.block.Blocks;
 
 public class Entities {
-	
-	public static final EntityType<BearEntity> BEAR = Registry.register(
-            Registry.ENTITY_TYPE,
-            new Identifier(ValleyMain.MOD_ID, "bear"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BearEntity::new)
-            .dimensions(EntityDimensions.fixed(1.4F, 1.4F)).trackRangeBlocks(10)
-            .specificSpawnBlocks(Blocks.GRASS_BLOCK, Blocks.PODZOL, Blocks.COARSE_DIRT).build()
+
+    public static final EntityType<BearEntity> BEAR = Registry.register(Registry.ENTITY_TYPE,
+        new Identifier(ValleyMain.MOD_ID, "bear"),
+        FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BearEntity::new)
+        .dimensions(EntityDimensions.fixed(1.4F, 1.4F)).trackRangeBlocks(10)
+        .specificSpawnBlocks(Blocks.GRASS_BLOCK, Blocks.PODZOL, Blocks.COARSE_DIRT).build()
     );
-	
-	@SuppressWarnings("deprecation")
+
+    @SuppressWarnings("deprecation")
     public static void initialize() {
-		FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
-		
-		var keys = BiomeSelectors.includeByKey(
-		    BiomeKeys.GIANT_SPRUCE_TAIGA,
-		    BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS,
-		    BiomeKeys.GIANT_TREE_TAIGA,
-		    BiomeKeys.GIANT_TREE_TAIGA_HILLS
-		);
-		BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 8, 1, 2);
-	}
-	
-	public static void initializeClient() {
+        FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
+
+        var keys = BiomeSelectors.includeByKey(
+            BiomeKeys.GIANT_SPRUCE_TAIGA,
+            BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS,
+            BiomeKeys.GIANT_TREE_TAIGA,
+            BiomeKeys.GIANT_TREE_TAIGA_HILLS
+        );
+        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 8, 1, 2);
+    }
+
+    public static void initializeClient() {
         EntityRendererRegistry.register(BEAR, (context) -> {
             return new BearEntityRenderer(context);
         });
