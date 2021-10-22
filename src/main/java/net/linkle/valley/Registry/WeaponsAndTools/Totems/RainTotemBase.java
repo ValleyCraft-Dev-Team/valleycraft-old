@@ -10,7 +10,7 @@ public class RainTotemBase extends AbstractTotemBase {
 
     @Override
     public boolean canSetWeather(World world) {
-        return !world.isRaining();
+        return !world.isRaining() || world.isThundering();
     }
 
     @Override
