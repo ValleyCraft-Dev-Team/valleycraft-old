@@ -1,6 +1,7 @@
 package net.linkle.valley.Registry.Initializers;
 
-import static net.linkle.valley.Registry.Mixin.CompostableItems.registerItem;
+import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.ItemConvertible;
 
 /** Registering items for composer block */
 public class Compostables {
@@ -66,5 +67,9 @@ public class Compostables {
         registerItem(levelHigh, Crops.COOKED_MANDRAKE);
 
         registerItem(levelVery, Blocks.AMERANTH_BLOCK);
+    }
+    
+    private static void registerItem(float chance, ItemConvertible item) {
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(item.asItem(), chance);
     }
 }
