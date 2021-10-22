@@ -35,11 +35,13 @@ public class MiscItems {
     public static final Item R_TOTEM = new RainTotemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item G_TOTEM = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item MULCH = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item FUR_CLUMP = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
 
     public static void initialize() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bomb_bag"), BOMB_BAG);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "arrow_bundle"), ARROW_BUNDLE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "puff_ball"), PUFF_BALL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fur_clump"), FUR_CLUMP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mulch"), MULCH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "turf"), TURF_ITEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud"), MUD);

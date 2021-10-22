@@ -116,6 +116,7 @@ public class FoodAndCooking {
     public static final Item CRYS_HONEY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,240), 1.0f).build()).maxCount(64));
     public static final Item MAIZE_PORRIDGE = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,450), 1.0f).build()).maxCount(1));
     public static final Item BEEF_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,60),1.0f).build()).maxCount(1));
+    public static final Item BEAR_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,60),1.0f).build()).maxCount(1));
     public static final Item SPICY_RABBIT_BIGO = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,600),1.0f).build()).maxCount(1));
     public static final Item LAMB_BIRYANI = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST,900), 1.0f).build()).maxCount(1));
     public static final Item PORK_STIR_FRY = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,600), 1.0f).build()).maxCount(1));
@@ -124,6 +125,9 @@ public class FoodAndCooking {
     public static final Item GRILLED_SUCKER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item MONSTER_JERKY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).meat().build()).maxCount(64));
     public static final Item GLOW_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING,600), 1.0f).build()).maxCount(1));
+    public static final Item BEAR_JERKY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.4f).meat().build()).maxCount(64));
+    public static final Item RAW_TENDER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).meat().build()).maxCount(64));
+    public static final Item COOKED_TENDER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.4f).meat().build()).maxCount(64));
 
     public static final Item PANCAKE_BREAKFAST = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,900), 1.0f).build()).maxCount(1));
     public static final Item PANCAKE_BREAKFAST_LARGE = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200), 1.0f).build()).maxCount(1));
@@ -157,6 +161,7 @@ public class FoodAndCooking {
     public static final Item GOLDEN_M = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item GOLDEN_GB_2 = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item VEGE_STIR_FRY = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,600), 1.0f).build()).maxCount(1));
+    public static final Item BEAR_STIR_FRY = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,600), 1.0f).build()).maxCount(1));
     public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,900), 1.0f).build()).maxCount(1));
     public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,900), 1.0f).build()).maxCount(1));
     public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,900), 1.0f).build()).maxCount(1));
@@ -221,10 +226,13 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "maize_porridge"), MAIZE_PORRIDGE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_porridge"), AMERANTH_PORRIDGE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beef_stew"), BEEF_STEW);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_stew"), BEAR_STEW);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rabbit_bigo"), SPICY_RABBIT_BIGO);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lamb_biryani"), LAMB_BIRYANI);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "vege_stir_fry"), VEGE_STIR_FRY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pork_stir_fry"), PORK_STIR_FRY);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_stir_fry"), BEAR_STIR_FRY);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_jerky"), BEAR_JERKY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "seaweed_salad"), SEAWEED_SALAD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mandrake_soup"), MANDRAKE_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cod_chowder"), COD_CHOWDER);
@@ -288,6 +296,8 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_bacon"), RAW_BACON);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_bacon"), COOKED_BACON);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_egg_bowl"), RAW_EGGS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_tenderloin"), RAW_TENDER);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_tenderloin"), COOKED_TENDER);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salt"), SALT);
 
