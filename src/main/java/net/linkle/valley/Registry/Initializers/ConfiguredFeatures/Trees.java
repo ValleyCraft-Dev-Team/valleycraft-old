@@ -46,10 +46,10 @@ public class Trees {
 		RegistryKey<ConfiguredFeature<?, ?>> appleTree = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, "apple_tree"));
 		
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, appleTree.getValue(), Feature.TREE
-		  .configure(APPLE_TREE_CONFIG)
-		  .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
-		  .spreadHorizontally()
-		  .applyChance(2));
+		.configure(APPLE_TREE_CONFIG)
+		.decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
+		.spreadHorizontally()
+		.applyChance(2));
 		
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, appleTree);
 	}

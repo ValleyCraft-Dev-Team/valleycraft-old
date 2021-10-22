@@ -401,7 +401,8 @@
   "item.valley.glistering_spicy_berries": "Golden Spicy Berries",
   "item.valley.glistering_sweet_berries": "Golden Sweet Berries",
   "item.valley.glistering_bitter_berries": "Golden Bitter Berries",
-  "item.valley.glistering_honeycomb": "Golden Honeycomb"
+  "item.valley.glistering_honeycomb": "Golden Honeycomb",
 
-
+  "item.valley.bear_spawn_egg": "Bear Spawn Egg",
+  "entity.valley.bear": "Bear"
 }

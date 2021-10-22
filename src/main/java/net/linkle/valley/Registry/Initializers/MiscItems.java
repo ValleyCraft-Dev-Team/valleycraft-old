@@ -1,13 +1,13 @@
 package net.linkle.valley.Registry.Initializers;
 
 
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.linkle.valley.Registry.Misc.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.RainTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.StormTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.SunshineTotemBase;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -36,6 +36,7 @@ public class MiscItems {
     public static final Item G_TOTEM = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item MULCH = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item FUR_CLUMP = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item BEAR_SPAWN_EGG = new SpawnEggItem(Entities.BEAR, 0x56290D, 0x120802, new Item.Settings().group(MISC_GROUP));
 
     public static void initialize() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bomb_bag"), BOMB_BAG);
@@ -58,5 +59,6 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rain_totem"), R_TOTEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "storm_totem"), ST_TOTEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "growth_totem"), G_TOTEM);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_spawn_egg"), BEAR_SPAWN_EGG);
     }
 }

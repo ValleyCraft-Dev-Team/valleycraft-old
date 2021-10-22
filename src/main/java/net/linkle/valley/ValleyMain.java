@@ -32,6 +32,7 @@ public class ValleyMain implements ModInitializer {
         
         // Misc Initializers (Recommended put it after the blocks and items initializers)
         Compostables.initialize();
+        Entities.initialize();
 
         //Configured Feature Initializers
         OreConfiguredFeatures.initialize();

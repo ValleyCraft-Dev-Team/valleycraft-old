@@ -3,6 +3,7 @@ package net.linkle.valley;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.linkle.valley.Registry.Initializers.Entities;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 
@@ -17,6 +18,8 @@ public class ClientModInitFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        Entities.initializeClient();
+        
         //bush texture fix
         BlockRenderLayerMap.INSTANCE.putBlock(BITTER_BERRY_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SPICY_BERRY_BUSH, RenderLayer.getCutout());
