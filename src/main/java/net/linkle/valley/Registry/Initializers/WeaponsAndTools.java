@@ -31,6 +31,15 @@ public class WeaponsAndTools {
         //CLimbing Axe
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "climbing_axe"), new ClimbingAxeBase(new ClimingAxeToolMaterial()));
 
+        //Rock Pick
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rock_pick"), new RockPickBase(new RockPickToolMaterial()));
+
+        //Artifacts
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "royal_sword"), new RoyalSwordBase(new ToolMaterialSoldiersSpear()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soldiers_spear"), new SoldiersSpearBase(new ToolMaterialSoldiersSpear()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_cutlass"), new DiamondCutlassBase(new DiamondToolMaterialCutlass()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rusty_sword"), new RustySwordBase(new ToolMaterialSoldiersSpear()));
+
         //Witch's Tools
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "witch_wand"), new WitchWandBase(new WitchToolMaterialKnife()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "witch_staff"), new WitchStaffBase(new WitchToolMaterialKnife()));

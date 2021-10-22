@@ -212,6 +212,11 @@ public class ClientModInitFix implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(POTTED_ROSE_SPRIG, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(POTTED_ROSE_SPRIG, RenderLayer.getTranslucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(FROZEN_FOSSIL, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FROZEN_FOSSIL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(CICADA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CICADA, RenderLayer.getTranslucent());
+
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
             if (tintIndex == 1)
                 return BiomeColors.getFoliageColor(view, pos);
