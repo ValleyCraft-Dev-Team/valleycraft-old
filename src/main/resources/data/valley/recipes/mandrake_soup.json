@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:mandrake"
+    },
+    {
+      "item": "valley:onion"
+    },
+    {
+      "item": "valley:bone_broth"
+    },
+    {
+      "item": "valley:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "valley:mandrake_soup",
+    "count": 1
+  }
+}

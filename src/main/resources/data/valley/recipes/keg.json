@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "_#_",
+    "___"
+  ],
+  "key": {
+    "_": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "#": {
+      "tag": "minecraft:water_bucket"
+    }
+  },
+
+  "result": {
+    "item": "valley:keg",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:snow_yam_item"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "valley:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "valley:candied_snow_yams",
+    "count": 1
+  }
+}

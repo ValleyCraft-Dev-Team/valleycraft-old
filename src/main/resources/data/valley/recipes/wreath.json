@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "_ _",
+    "___"
+  ],
+  "key": {
+    "_": {
+      "tag": "valley:holly"
+    }
+  },
+
+  "result": {
+    "item": "valley:wreath",
+    "count": 1
+  }
+}

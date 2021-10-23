@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "/",
+    "i",
+    "i"
+  ],
+  "key": {
+    "i": {
+      "tag": "minecraft:snow_block"
+    },
+    "/": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "item": "valley:snow",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:glow_dough"
+  },
+  "result": "valley:glow_pie",
+  "experience": 0.2,
+  "cookingtime": 200
+}

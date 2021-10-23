@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:seaweed_block"
+    }
+  ],
+  "result": {
+    "item": "valley:dried_seaweed",
+    "count": 9
+  }
+}

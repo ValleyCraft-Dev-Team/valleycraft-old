@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:winter_root_item"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "valley:milk_bottle"
+    }
+  ],
+  "result": {
+    "item": "valley:winter_root_stew",
+    "count": 1
+  }
+}

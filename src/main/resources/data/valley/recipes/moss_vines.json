@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:moss_ball"
+    },
+    {
+      "item": "minecraft:vine"
+    },
+    {
+      "item": "minecraft:bone_meal"
+    }
+  ],
+  "result": {
+    "item": "valley:mossy_vines",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:bitter_dough"
+  },
+  "result": "valley:bitter_pie",
+  "experience": 0.2,
+  "cookingtime": 200
+}

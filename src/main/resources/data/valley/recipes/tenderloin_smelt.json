@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:raw_tenderloin"
+  },
+  "result": "valley:cooked_tenderloin",
+  "experience": 0.1,
+  "cookingtime": 200
+}

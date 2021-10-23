@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:cooked_porkchop"
+      "item": "valley:cooked_tenderloin"
     },
     {
       "item": "valley:green_bean"
     },
     {
-      "item": "minecraft:carrot"
+      "item": "valley:onion"
+    },
+    {
+      "item": "valley:miners_lettuce"
     },
     {
       "item": "minecraft:brown_mushroom"
@@ -21,7 +24,7 @@
     }
   ],
   "result": {
-    "item": "valley:pork_stir_fry",
+    "item": "valley:bear_stir_fry",
     "count": 1
   }
 }

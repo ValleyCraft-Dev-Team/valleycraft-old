@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:cooked_porkchop"
+      "item": "valley:onion"
     },
     {
       "item": "valley:green_bean"
@@ -11,7 +11,7 @@
       "item": "minecraft:carrot"
     },
     {
-      "item": "minecraft:brown_mushroom"
+      "item": "minecraft:red_mushroom"
     },
     {
       "item": "valley:morel_oil"
@@ -21,7 +21,7 @@
     }
   ],
   "result": {
-    "item": "valley:pork_stir_fry",
+    "item": "valley:vege_stir_fry",
     "count": 1
   }
 }

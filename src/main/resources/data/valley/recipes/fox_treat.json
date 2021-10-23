@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "item": "minecraft:rabbit_foot"
+    }
+  ],
+  "result": {
+    "item": "valley:fox_treat",
+    "count": 3
+  }
+}
