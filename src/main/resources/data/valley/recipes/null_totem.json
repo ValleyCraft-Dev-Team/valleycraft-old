@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "_#_",
+    "___"
+  ],
+  "key": {
+    "_": {
+      "item": "valley:tree_branch"
+    },
+    "#": {
+      "tag": "minecraft:logs"
+    }
+  },
+
+  "result": {
+    "item": "valley:null_totem",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:puff_ball"
+    },
+    {
+      "item": "valley:puff_ball"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_wool",
+    "count": 2
+  }
+}

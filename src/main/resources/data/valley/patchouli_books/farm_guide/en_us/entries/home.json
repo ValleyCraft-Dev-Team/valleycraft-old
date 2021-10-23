@@ -15,6 +15,12 @@
     },
     {
       "type": "patchouli:spotlight",
+      "item":"minecraft:dirt",
+      "title": "Soil",
+      "text": "Made with 4 Mulch as a renewable form of dirt."
+    },
+    {
+      "type": "patchouli:spotlight",
       "item":"valley:turf",
       "title": "Turf",
       "text": "Turf can be used to spread grass to places it normally wouldn't be possible, such as underground!"

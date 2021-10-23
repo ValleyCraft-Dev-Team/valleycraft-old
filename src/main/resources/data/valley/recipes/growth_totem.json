@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#VP",
+    "GRG",
+    "VEV"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:red_mushroom"
+    },
+    "V": {
+      "item": "minecraft:vine"
+    },
+    "P": {
+      "item": "minecraft:pink_tulip"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "R": {
+      "item": "valley:sunshine_totem"
+    },
+    "E": {
+      "item": "valley:mossy_vines"
+    }
+  },
+  "result": {
+    "item": "valley:growth_totem",
+    "count": 1
+  }
+}

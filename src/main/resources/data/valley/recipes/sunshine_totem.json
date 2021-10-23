@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "+#+",
+    "___"
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:emerald"
+    },
+    "_": {
+      "item": "valley:null_totem"
+    },
+    "#": {
+      "item": "minecraft:oak_leaves"
+    }
+  },
+
+  "result": {
+    "item": "valley:sunshine_totem",
+    "count": 1
+  }
+}

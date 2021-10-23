@@ -24,6 +24,7 @@ public class MiscItems {
     public static final Item FLOUR_BAG = new MiscItemBase(new Item.Settings().group(COOKING_GROUP).maxCount(64));
     public static final Item AMERANTH = new MiscItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item COPPER_NUGGET = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item NETHER_NUGGET = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item SALTPETER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item SQUID_SUCKER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item FIBER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
@@ -52,6 +53,7 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flour_bag"), FLOUR_BAG);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth"), AMERANTH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "copper_nugget"), COPPER_NUGGET);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_nugget"), NETHER_NUGGET);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "saltpeter"), SALTPETER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "squid_sucker"), SQUID_SUCKER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fiber"), FIBER);

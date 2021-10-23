@@ -8,7 +8,7 @@
       "item": "valley:milk_bottle"
     },
     {
-      "item": "minecraft:egg"
+      "tag": "c:eggs"
     },
     {
       "item": "minecraft:rotten_flesh"

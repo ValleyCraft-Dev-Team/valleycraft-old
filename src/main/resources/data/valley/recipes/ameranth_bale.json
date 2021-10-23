@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    },
+    {
+      "item": "valley:ameranth"
+    }
+  ],
+  "result": {
+    "item": "valley:ameranth_block",
+    "count": 1
+  }
+}

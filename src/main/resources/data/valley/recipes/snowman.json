@@ -7,7 +7,7 @@
   ],
   "key": {
     "i": {
-      "tag": "minecraft:snow_block"
+      "item": "minecraft:snow_block"
     },
     "/": {
       "item": "minecraft:coal"

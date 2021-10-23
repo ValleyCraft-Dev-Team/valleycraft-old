@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "i",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:netherite_nugget"
+    },
+    "i": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "valley:netherite_chain",
+    "count": 3
+  }
+}

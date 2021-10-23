@@ -1,36 +1,17 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    },
-    {
-      "tag": "minecraft:sapling"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
   ],
+  "key": {
+    "#": {
+      "tag": "minecraft:saplings"
+    }
+  },
   "result": {
     "item": "valley:mulch",
-    "count": 4
+    "count": 2
   }
 }

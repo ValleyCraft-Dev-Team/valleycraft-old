@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:stone_tiles"
+    }
+  },
+  "result": {
+    "item": "valley:stone_tile_stairs",
+    "count": 4
+  }
+}

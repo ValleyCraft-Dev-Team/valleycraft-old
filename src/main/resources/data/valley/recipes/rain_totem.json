@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "===",
+    "+#+",
+    "___"
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "#": {
+      "item": "valley:null_totem"
+    },
+    "_": {
+      "item": "minecraft:snow_block"
+    },
+    "=": {
+      "item": "valley:holly"
+    }
+  },
+
+  "result": {
+    "item": "valley:rain_totem",
+    "count": 1
+  }
+}

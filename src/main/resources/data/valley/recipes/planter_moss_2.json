@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "M",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:planter_box_water"
+    },
+    "M": {
+      "item": "minecraft:moss_block"
+    }
+  },
+  "result": {
+    "item": "valley:planter_box",
+    "count": 1
+  }
+}

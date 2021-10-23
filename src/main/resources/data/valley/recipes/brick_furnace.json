@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "minecraft:brick_furnace",
+    "item": "valley:brick_furnace",
     "count": 1
   }
 }

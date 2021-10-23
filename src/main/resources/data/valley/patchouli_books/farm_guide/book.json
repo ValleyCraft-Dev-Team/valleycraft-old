@@ -1,5 +1,5 @@
-{    "name": "The Farmhand's Guide",
-  "landing_text": "The Farmhand's Guide has anything and everything you'll ever need to know from foraging and farming to harvesting!",
+{    "name": "Oir Innlinn",
+  "landing_text": "This anything and everything you'll ever need to know from foraging and farming to harvesting season.",
   "version": X,
   "model": "valley:farm_guide",
   "show_progress": false,

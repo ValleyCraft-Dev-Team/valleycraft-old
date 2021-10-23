@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "M#M",
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stripped_spruce_log"
+    },
+    "M": {
+      "item": "valley:morel"
+    },
+    "C": {
+      "item": "minecraft:mycelium"
+    }
+  },
+  "result": {
+    "item": "valley:stump_morel",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " i/",
+    " //",
+    "/C "
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:emerald"
+    },
+    "/": {
+      "item": "valley:tree_branch"
+    },
+    "C": {
+      "item": "valley:growth_totem"
+    }
+  },
+  "result": {
+    "item": "valley:druid_staff",
+    "count": 1
+  }
+}

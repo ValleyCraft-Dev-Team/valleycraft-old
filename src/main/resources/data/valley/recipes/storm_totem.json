@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "=@=",
+    "+#+",
+    "___"
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:copper_ingot"
+    },
+    "#": {
+      "item": "valley:null_totem"
+    },
+    "=": {
+      "item": "minecraft:powder_snow_bucket"
+    },
+    "_": {
+      "item": "minecraft:snow_block"
+    },
+    "@": {
+      "item": "minecraft:lightning_rod"
+    }
+  },
+
+  "result": {
+    "item": "valley:storm_totem",
+    "count": 1
+  }
+}

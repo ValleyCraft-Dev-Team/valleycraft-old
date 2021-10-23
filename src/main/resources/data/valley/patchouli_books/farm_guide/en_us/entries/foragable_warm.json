@@ -6,7 +6,7 @@
     {
       "type": "patchouli:text",
       "title": "Warm Biome Foraging",
-      "text": "Warm biomes such as Plains, Forests & Jungles  are some of the easiest and safest locations to find an abundance of foragables!"
+      "text": "Warm biomes such as Plains, Forests & Jungles  are some of the easiest and safest locations to find an abundance of foragables."
     },
     {
       "type": "patchouli:spotlight",
@@ -54,7 +54,7 @@
       "type": "patchouli:spotlight",
       "item":"valley:mossy_vines",
       "title": "Moss & Spore Blossoms",
-      "text": "Moss, Moss Vines, and Spore Blossoms grow underground in Jungles off of Mossy Stones & Sporey Carmine"
+      "text": "Moss, Moss Vines, and Spore Blossoms grow underground in Jungles and other warm biomes, hanging off of Mossy Stones & Sporey Carmine"
     }
   ]
 }

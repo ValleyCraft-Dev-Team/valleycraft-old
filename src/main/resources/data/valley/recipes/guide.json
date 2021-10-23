@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "ESE",
+    "#B#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:iron_nugget"
+    },
+    "W": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "S": {
+      "item": "minecraft:writable_book"
+    },
+    "B": {
+      "item": "minecraft:bone_meal"
+    }
+  },
+  "result": {
+    "item": "patchouli:guide_book",
+    "count": 1,
+    "nbt": [
+      {
+        "function": "set_nbt",
+        "tag": "{valley:farm_guide}"
+      }
+    ]
+  }
+}

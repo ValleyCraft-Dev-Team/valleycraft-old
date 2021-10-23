@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:fiber_block"
+    }
+  ],
+  "result": {
+    "item": "valley:fiber",
+    "count": 9
+  }
+}
