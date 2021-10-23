@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:worm"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "valley:worm"
+    },
+    {
+      "item": "valley:worm"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "valley:worm"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:worm_bowl",
+    "count": 1
+  }
+}

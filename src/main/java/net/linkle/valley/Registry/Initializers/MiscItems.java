@@ -37,6 +37,7 @@ public class MiscItems {
     public static final Item G_TOTEM = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item MULCH = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item FUR_CLUMP = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item RAWHIDE = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item BEAR_SPAWN_EGG = new SpawnEggItem(Entities.BEAR, 0x56290D, 0x120802, new Item.Settings().group(MISC_GROUP));
     public static final Item DUCK_SPAWN_EGG = new SpawnEggItem(Entities.DUCK, 0x5B3200, 0x445B22, new Item.Settings().group(MISC_GROUP));
     public static final Item DUCK_EGG = new MiscItemBase((new Item.Settings()).maxCount(16).group(MISC_GROUP));
@@ -46,6 +47,7 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "arrow_bundle"), ARROW_BUNDLE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "puff_ball"), PUFF_BALL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fur_clump"), FUR_CLUMP);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rawhide_lashing"), RAWHIDE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mulch"), MULCH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "turf"), TURF_ITEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud"), MUD);
@@ -58,6 +60,7 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "squid_sucker"), SQUID_SUCKER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fiber"), FIBER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moss_ball"), MOSS_BALL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_egg"), DUCK_EGG);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "null_totem"), E_TOTEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sunshine_totem"), S_TOTEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rain_totem"), R_TOTEM);
@@ -65,6 +68,5 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "growth_totem"), G_TOTEM);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_spawn_egg"), BEAR_SPAWN_EGG);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_spawn_egg"), DUCK_SPAWN_EGG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_egg"), DUCK_EGG);
     }
 }

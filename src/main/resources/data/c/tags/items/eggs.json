@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "valley:rice_item"
+      "valley:duck_egg", "minecraft:egg"
   ]
 }

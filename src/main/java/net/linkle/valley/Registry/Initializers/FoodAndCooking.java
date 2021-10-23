@@ -140,6 +140,7 @@ public class FoodAndCooking {
     public static final Item COOKED_APPLE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build()).maxCount(64));
     public static final Item STUFFED_ONION = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).meat().saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,900), 1.0f).build()).maxCount(64));
     public static final Item BAKED_POTATO_SPECIAL= new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).meat().saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.LUCK,900), 1.0f).build()).maxCount(64));
+    public static final Item WORM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build()).maxCount(64));
 
     public static final Item DOG_BISCUIT= new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).meat().saturationModifier(0.5f).build()).maxCount(64));
     public static final Item DOG_FOOD = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).meat().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,900), 1.0f).build()).maxCount(1));
@@ -165,6 +166,7 @@ public class FoodAndCooking {
     public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,900), 1.0f).build()).maxCount(1));
     public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,900), 1.0f).build()).maxCount(1));
     public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,900), 1.0f).build()).maxCount(1));
+    public static final Item WORM_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,900), 1.0f).build()).maxCount(1));
 
     public static final Item BITTER_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
     public static final Item SWEET_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
@@ -236,6 +238,7 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "seaweed_salad"), SEAWEED_SALAD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mandrake_soup"), MANDRAKE_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cod_chowder"), COD_CHOWDER);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "worm_bowl"), WORM_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chicken_curry"), CHICKEN_CURRY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rice_bowl"), RICE_BOWL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "poke_bowl"), POKE_BOWL);
@@ -298,6 +301,7 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_egg_bowl"), RAW_EGGS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "raw_tenderloin"), RAW_TENDER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_tenderloin"), COOKED_TENDER);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "worm"), WORM);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salt"), SALT);
 

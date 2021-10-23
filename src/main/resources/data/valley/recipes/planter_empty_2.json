@@ -1,13 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "# #",
-    "###"
+    "#"
   ],
   "key": {
     "#": {
-      "item": "minecraft:spruce_trapdoor"
+      "item": "valley:planter_box"
     }
   },
   "result": {
