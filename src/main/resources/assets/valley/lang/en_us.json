@@ -404,5 +404,8 @@
   "item.valley.glistering_honeycomb": "Golden Honeycomb",
 
   "item.valley.bear_spawn_egg": "Bear Spawn Egg",
-  "entity.valley.bear": "Bear"
+  "item.valley.duck_spawn_egg": "Duck Spawn Egg",
+  "entity.valley.bear": "Bear",
+  "entity.valley.duck": "Duck",
+  "item.valley.duck_egg": "Duck Egg"
 }

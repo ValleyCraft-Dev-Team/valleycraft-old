@@ -31,6 +31,7 @@ public class ValleyMain implements ModInitializer {
         PotBlock.initialize();
         
         // Misc Initializers (Recommended put it after the blocks and items initializers)
+        Sounds.initialize();
         Compostables.initialize();
         Entities.initialize();
 
