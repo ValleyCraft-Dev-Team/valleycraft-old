@@ -4,14 +4,14 @@
   "version": "1.3.2",
 
   "name": "ValleyCraft",
-  "description": "",
+  "description": "ValleyCraft is a farming and cooking overhaul mod with a focus on exploration and discovery",
   "authors": [
     "Linkle#2933"
   ],
   "contact": {
     "homepage": "https://github.com/l1nkl3/ValleyCraft-Wiki",
     "sources": "https://github.com/l1nkl3/Calamity",
-    "issues": "https://github.com/l1nkl3/Calamity/issues"
+    "issues": "https://github.com/l1nkl3/ValleyCraft-Wiki/issues"
   },
 
   "license": "CC-BY-NC-SA",
