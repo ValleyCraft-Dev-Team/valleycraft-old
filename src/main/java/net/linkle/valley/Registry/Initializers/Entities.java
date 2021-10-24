@@ -49,11 +49,7 @@ public class Entities {
     }
 
     public static void initializeClient() {
-        EntityRendererRegistry.register(BEAR, (context) -> {
-            return new BearEntityRenderer(context);
-        });
-        EntityRendererRegistry.register(DUCK, (context) -> {
-            return new DuckEntityRenderer(context);
-        });
+        EntityRendererRegistry.register(BEAR, BearEntityRenderer::new);
+        EntityRendererRegistry.register(DUCK, DuckEntityRenderer::new);
     }
 }
