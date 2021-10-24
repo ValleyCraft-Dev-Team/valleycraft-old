@@ -30,7 +30,7 @@ public class LogPileBlock extends FacingBlock implements Waterloggable {
         super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque()
-                .strength(1.5f, 2.5f));
+                .strength(1f, 2.5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

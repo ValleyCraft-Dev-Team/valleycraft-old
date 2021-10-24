@@ -115,12 +115,12 @@ public class Blocks {
     public static final Block RED_PILE = new RedCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(2.0f,2.0f).luminance(7));
+            .strength(1.0f,2.0f).luminance(7));
 
     public static final Block BLUE_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(2.0f,2.0f).luminance(13));
+            .strength(1.0f,2.0f).luminance(13));
 
     //public static final Block GREEN_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             //.breakByHand(false).breakByTool(FabricToolTags.PICKAXES)

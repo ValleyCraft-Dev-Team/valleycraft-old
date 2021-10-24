@@ -17,6 +17,6 @@ public class GlacialStone extends SoulSandBlock {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(true).ticksRandomly()
                 .sounds(BlockSoundGroup.DRIPSTONE_BLOCK)
-                .strength(2f, 2.5f));
+                .strength(1f, 2.5f));
     }
 }

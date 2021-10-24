@@ -32,7 +32,7 @@ public class BeveledGlassBlock extends FacingBlock implements Waterloggable {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.GLASS).nonOpaque()
-                .strength(5f, 5f));
+                .strength(1.5f, 5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

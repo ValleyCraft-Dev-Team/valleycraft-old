@@ -30,7 +30,7 @@ public class LanternBlock extends FacingBlock implements Waterloggable {
         super(FabricBlockSettings.of(Material.METAL)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN).luminance(15)
-                .strength(3.5f, 3.5f));
+                .strength(1f, 3.5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

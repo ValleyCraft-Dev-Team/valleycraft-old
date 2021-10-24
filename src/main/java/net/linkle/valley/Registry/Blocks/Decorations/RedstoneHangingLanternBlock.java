@@ -30,7 +30,7 @@ public class RedstoneHangingLanternBlock extends FacingBlock implements Waterlog
         super(FabricBlockSettings.of(Material.METAL)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN).luminance(7)
-                .strength(3.5f, 3.5f));
+                .strength(0.5f, 3.5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

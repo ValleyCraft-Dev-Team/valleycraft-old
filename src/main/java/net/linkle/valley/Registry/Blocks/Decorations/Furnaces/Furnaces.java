@@ -23,7 +23,7 @@ public class Furnaces {
 			.breakByTool(FabricToolTags.PICKAXES)
 			.breakByHand(false)
 			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS).luminance(7)
-			.strength(2f, 2f));
+			.strength(1.5f, 2f));
 	
 	public static void ints() {
 		var identity = new Identifier(MOD_ID, "brick_furnace");

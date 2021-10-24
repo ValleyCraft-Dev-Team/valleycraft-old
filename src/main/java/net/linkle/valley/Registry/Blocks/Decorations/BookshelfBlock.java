@@ -14,6 +14,6 @@ public class BookshelfBlock extends Block {
                 .breakByTool(FabricToolTags.AXES)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
-                .strength(2, 2f));
+                .strength(1, 2f));
     }
 }

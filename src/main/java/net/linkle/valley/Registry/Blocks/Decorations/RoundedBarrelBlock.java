@@ -15,7 +15,7 @@ public class RoundedBarrelBlock extends BarrelBlock {
         super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
-                .strength(2.5f, 2.5f));
+                .strength(1f, 2.5f));
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

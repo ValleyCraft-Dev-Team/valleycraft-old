@@ -40,7 +40,7 @@ public class GolemBlockWaxed extends FacingBlock implements Waterloggable {
         super(FabricBlockSettings.of(Material.METAL)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN).luminance(4)
-                .strength(2.5f, 2.5f));
+                .strength(1.5f, 2.5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

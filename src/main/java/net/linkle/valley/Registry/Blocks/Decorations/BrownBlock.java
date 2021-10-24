@@ -12,6 +12,6 @@ public class BrownBlock extends Block {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.NETHER_BRICKS)
-                .strength(2, 2));
+                .strength(1, 2));
     }
 }

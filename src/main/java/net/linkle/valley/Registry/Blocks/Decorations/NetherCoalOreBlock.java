@@ -13,6 +13,6 @@ public class NetherCoalOreBlock extends OreBlock {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3, 3f).requiresTool());
+                .strength(1, 3f).requiresTool());
     }
 }

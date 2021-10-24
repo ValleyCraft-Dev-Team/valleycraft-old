@@ -37,7 +37,7 @@ public class ScreenBlock extends FacingBlock implements Waterloggable {
         super(FabricBlockSettings.of(Material.METAL).nonOpaque()
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.METAL)
-                .strength(5f,5f));
+                .strength(1f,5f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 

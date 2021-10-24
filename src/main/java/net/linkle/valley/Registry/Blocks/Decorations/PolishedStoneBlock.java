@@ -12,6 +12,6 @@ public class PolishedStoneBlock extends Block {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3.5f, 3.5f));
+                .strength(1.5f, 3.5f));
     }
 }

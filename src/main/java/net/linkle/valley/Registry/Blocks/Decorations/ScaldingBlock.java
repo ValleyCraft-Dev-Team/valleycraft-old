@@ -13,6 +13,6 @@ public class ScaldingBlock extends MagmaBlock {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false).luminance(3)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(2f, 1.5f));
+                .strength(1f, 1.5f));
     }
 }

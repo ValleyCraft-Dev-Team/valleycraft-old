@@ -13,6 +13,6 @@ public class BookshelfBlockGlow extends Block {
                 .breakByTool(FabricToolTags.AXES)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).luminance(15)
-                .strength(2, 2f));
+                .strength(1, 2f));
     }
 }

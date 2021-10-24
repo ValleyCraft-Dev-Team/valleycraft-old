@@ -13,6 +13,6 @@ public class TileStairsBlock extends StairsBlock {
                 .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(2, 2));
+                .strength(1, 2));
     }
 }

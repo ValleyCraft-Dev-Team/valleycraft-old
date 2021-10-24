@@ -30,7 +30,7 @@ public class StatueGlowBlock extends FacingBlock implements Waterloggable {
         super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque().luminance(13)
-                .strength(2f, 2f));
+                .strength(1f, 2f));
         this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
     }
 
