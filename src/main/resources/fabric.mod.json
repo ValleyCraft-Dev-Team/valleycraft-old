@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://github.com/l1nkl3/ValleyCraft-Wiki",
-    "sources": "https://github.com/l1nkl3/Calamity"
+    "sources": "https://github.com/l1nkl3/Calamity",
+    "issues": "https://github.com/l1nkl3/Calamity/issues"
   },
 
   "license": "CC-BY-NC-SA",
@@ -34,8 +35,5 @@
     "fabric": "*",
     "minecraft": "1.17.x",
     "java": ">=16"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
