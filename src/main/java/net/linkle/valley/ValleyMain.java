@@ -3,6 +3,7 @@ package net.linkle.valley;
 import net.fabricmc.api.ModInitializer;
 import net.linkle.valley.Registry.Blocks.Decorations.Furnaces.Furnaces;
 import net.linkle.valley.Registry.Initializers.*;
+import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.CaveFeatures;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.OreConfiguredFeatures;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.OverworldPlantConfiguredFeatures;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Trees;
@@ -38,6 +39,7 @@ public class ValleyMain implements ModInitializer {
         //Configured Feature Initializers
         OreConfiguredFeatures.initialize();
         OverworldPlantConfiguredFeatures.initialize();
+        CaveFeatures.initialize();
         Trees.ints();
 
         //Future Updates ;)
