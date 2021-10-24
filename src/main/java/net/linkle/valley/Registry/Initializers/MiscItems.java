@@ -18,6 +18,7 @@ import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 public class MiscItems {
     public static final Item BOMB_BAG = new BombBundleBase(new Item.Settings().group(MISC_GROUP).rarity(Rarity.UNCOMMON).maxCount(16));
     public static final Item ARROW_BUNDLE = new ArrowBundleBase(new Item.Settings().group(EXPLORATION_GROUP).rarity(Rarity.UNCOMMON).maxCount(16));
+    public static final Item STIRRUP = new MiscItemBase(new Item.Settings().group(MISC_GROUP));
     public static final Item TURF_ITEM = new MiscItemBase(new Item.Settings().group(MISC_GROUP));
     public static final Item MUD = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item MUD_BRICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
@@ -45,6 +46,7 @@ public class MiscItems {
     public static void initialize() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bomb_bag"), BOMB_BAG);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "arrow_bundle"), ARROW_BUNDLE);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stirrup"), STIRRUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "puff_ball"), PUFF_BALL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fur_clump"), FUR_CLUMP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rawhide_lashing"), RAWHIDE);

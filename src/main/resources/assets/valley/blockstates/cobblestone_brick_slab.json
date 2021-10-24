@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "valley:block/cobblestone_brick_slab"
+    },
+    "type=double": {
+      "model": "valley:block/cobblestone_brick"
+    },
+    "type=top": {
+      "model": "valley:block/cobblestone_brick_slab_top"
+    }
+  }
+}

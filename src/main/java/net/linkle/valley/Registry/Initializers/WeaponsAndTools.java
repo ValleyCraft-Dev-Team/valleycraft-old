@@ -7,6 +7,7 @@ import net.linkle.valley.Registry.WeaponsAndTools.Knives.*;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.*;
 import net.linkle.valley.Registry.WeaponsAndTools.RGRest.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Sickles.*;
+import net.linkle.valley.Registry.WeaponsAndTools.Viking.*;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -17,28 +18,43 @@ public class WeaponsAndTools {
 
     public static void initialize() {
 
-        //Sharp Flint Rock
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flint_rock"), new FlintBaseRock(new FlintToolMaterialRock()));
         //Branch
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tree_branch"), new BranchBase(new BranchMaterial()));
-        //Ladle
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soup_ladle"), new LadleBase(new LadleMaterial()));
-        //Lumber Axe
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lumber_axe"), new LumberAxeBase(new LumberAxeToolMaterial()));
-        //Traveler's Sword
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "travelers_sword"), new TravelerSwordBase(new TravelerToolMaterialSword()));
 
-        //CLimbing Axe
+        //Sharp Flint Rock
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flint_rock"), new FlintBaseRock(new FlintToolMaterialRock()));
+
+        //Bone Knife
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bone_knife"), new BoneBaseKnife(new BoneToolMaterialKnife()));
+
+        //Climbing Axe
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "climbing_axe"), new ClimbingAxeBase(new ClimingAxeToolMaterial()));
 
         //Rock Pick
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rock_pick"), new RockPickBase(new RockPickToolMaterial()));
 
-        //Artifacts
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "royal_sword"), new RoyalSwordBase(new ToolMaterialSoldiersSpear()));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soldiers_spear"), new SoldiersSpearBase(new ToolMaterialSoldiersSpear()));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_cutlass"), new DiamondCutlassBase(new DiamondToolMaterialCutlass()));
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rusty_sword"), new RustySwordBase(new ToolMaterialSoldiersSpear()));
+        //Ice Tongs
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tongs"), new TongsBase(new TongsToolMaterial()));
+
+        //Lumber Axe
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lumber_axe"), new LumberAxeBase(new LumberAxeToolMaterial()));
+
+        //Ladle
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soup_ladle"), new LadleBase(new LadleMaterial()));
+        //Traveler's Sword
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "travelers_sword"), new TravelerSwordBase(new TravelerToolMaterialSword()));
+
+        //Viking Tools
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_great_axe"), new VikingGreatAxeBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_hatchet"), new VikingHatchetBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_knife"), new VikingKnifeBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_war_axe"), new VikingWarAxeBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_hoe"), new VikingHoeBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_shovel"), new VikingShovelBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_hammer"), new VikingHammerBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_pickaxe"), new VikingPickBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_sword"), new VikingSwordBase(new VikingToolMaterial()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "viking_spear"), new VikingSpearBase(new VikingToolMaterial()));
 
         //Witch's Tools
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "witch_wand"), new WitchWandBase(new WitchToolMaterialKnife()));
@@ -47,14 +63,6 @@ public class WeaponsAndTools {
 
         //Druid Staff
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "druid_staff"), new DruidStaffBase(new DruidToolMaterialStaff()));
-
-        //Storm Tools
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "storm_wand"), new StormWandBase(new StormToolMaterialKnife()));
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "storm_staff"), new StormStaffBase(new StormToolMaterialKnife()));
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "storm_dagger"), new StormKnifeBase(new StormToolMaterialKnife()));
-
-        //Ice Tongs
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tongs"), new TongsBase(new TongsToolMaterial()));
 
         //Knives
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wood_knife"), new WoodKnifeBase(new WoodToolMaterialKnife()));
@@ -80,11 +88,17 @@ public class WeaponsAndTools {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rg_hatchet"), new RGHatchetBase(new RGToolMaterialHatchet()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_hatchet"), new DiamondHatchetBase(new DiamondToolMaterialHatchet()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_hatchet"), new NetheriteHatchetBase(new NetheriteToolMaterialHatchet()));
-
+        //Rose Gold Tools
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rg_shovel"), new RGShovelBase(new RGToolMaterialShovel()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rg_pickaxe"), new RGPickaxeBase(new RGToolMaterialPickaxe()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rg_axe"), new RGAxeBase(new RGToolMaterialAxe()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rg_hoe"), new RGHoeBase(new RGToolMaterialHoe()));
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rg_sword"), new RGSwordBase(new RGToolMaterialSword()));
+
+        //Artifacts
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "royal_sword"), new RoyalSwordBase(new ToolMaterialSoldiersSpear()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soldiers_spear"), new SoldiersSpearBase(new ToolMaterialSoldiersSpear()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "diamond_cutlass"), new DiamondCutlassBase(new DiamondToolMaterialCutlass()));
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rusty_sword"), new RustySwordBase(new ToolMaterialSoldiersSpear()));
     }
 }

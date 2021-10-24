@@ -82,17 +82,22 @@ public class Furniture {
     public static final Block ROPE_BRIDGE = new RopeBridgeBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
-            .strength(1.5f,1f));
+            .strength(1.0f,1f));
 
     public static final Block ROPE_BRIDGE_ANCHOR = new RopeNoColBridgeBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
-            .strength(1.5f,1f));
+            .strength(1.0f,1f));
 
     public static final Block SMOOTH_STONE_BRICK = new PolishedStoneBlock();
     public static final Block SMOOTH_STONE_TILE = new PolishedStoneBlock();
     public static final Block SMOOTH_STONE_TILE_SLAB = new TileSlabBlock();
     public static final Block SMOOTH_STONE_TILE_STAIRS = new TileStairsBlock();
+
+    public static final Block COBBLE_BRICK = new PolishedStoneBlock();
+    public static final Block COBBLE_MOSSY = new PolishedStoneBlock();
+    public static final Block COBBLE_SLAB = new TileSlabBlock();
+    public static final Block COBBLE_STAIRS = new TileStairsBlock();
 
     public static final Block NET = new NetBlock();
     public static final Block B_BRICKS = new BrownBlock();
@@ -120,7 +125,7 @@ public class Furniture {
             .breakByTool(FabricToolTags.PICKAXES)
             .breakByHand(false)
             .sounds(BlockSoundGroup.STONE)
-            .strength(2, 2.0f));
+            .strength(1, 2.0f));
 
     public static final Block FIBER_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
             .breakByTool(FabricToolTags.HOES)
@@ -165,7 +170,7 @@ public class Furniture {
     public static final Block REDSTONE_LANTERN = new RedLanternBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.CHAIN)
-            .strength(3.5f,0.8f).luminance(7));
+            .strength(1.0f,0.8f).luminance(7));
 
     public static final Block BEVELED_PANE = new BeveledGlassBlock();
     public static final Block BEVELED_PANE_COPPER = new BeveledGlassBlock();
@@ -190,7 +195,7 @@ public class Furniture {
             .breakByTool(FabricToolTags.AXES)
             .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
-            .strength(2, 1.5f));
+            .strength(1.5f, 1.5f));
 
     public static final Block ROUNDED_BARREL = new RoundedBarrelBlock();
     public static final Block SOUL_JACK = new JackBlock();
@@ -206,7 +211,7 @@ public class Furniture {
             .breakByTool(FabricToolTags.PICKAXES)
             .breakByHand(false)
             .sounds(BlockSoundGroup.STONE)
-            .strength(2, 2.0f));
+            .strength(1, 2.0f));
 
     public static final Block HANGING = new HangingBlock();
     public static final Block CRYSTAL = new CrystalBlock();
@@ -400,6 +405,15 @@ public class Furniture {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_tile_slab"), new BlockItem(SMOOTH_STONE_TILE_SLAB, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stone_tile_stairs"), SMOOTH_STONE_TILE_STAIRS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_tile_stairs"), new BlockItem(SMOOTH_STONE_TILE_STAIRS, new Item.Settings().group(FURNITURE_GROUP)));
+
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_brick"), COBBLE_BRICK);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_brick"), new BlockItem(COBBLE_BRICK, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_mossy_brick"), COBBLE_MOSSY);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_mossy_brick"), new BlockItem(COBBLE_MOSSY, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_brick_slab"), COBBLE_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_brick_slab"), new BlockItem(COBBLE_SLAB, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_brick_stairs"), COBBLE_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_brick_stairs"), new BlockItem(COBBLE_STAIRS, new Item.Settings().group(FURNITURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_bricks"), C_BRICKS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_bricks"), new BlockItem(C_BRICKS, new Item.Settings().group(FURNITURE_GROUP)));
