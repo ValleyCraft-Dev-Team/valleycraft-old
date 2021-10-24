@@ -17,25 +17,23 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
-public class LadderBlock extends FacingBlock implements Waterloggable {
+public class LadderBlock extends HorizontalFacingBlock implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape EAST_SHAPE;
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape SOUTH_SHAPE;
     protected static final VoxelShape NORTH_SHAPE;
-    protected static final VoxelShape UP_SHAPE;
-    protected static final VoxelShape DOWN_SHAPE;
 
     public LadderBlock() {
         super(FabricBlockSettings.of(Material.WOOD).nonOpaque()
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.8f,0.8f));
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)).with(FACING, Direction.NORTH));
+        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        switch ((Direction)state.get(FACING)) {
+        switch (state.get(FACING)) {
             case NORTH:
                 return NORTH_SHAPE;
             case SOUTH:
@@ -44,23 +42,65 @@ public class LadderBlock extends FacingBlock implements Waterloggable {
                 return WEST_SHAPE;
             case EAST:
                 return EAST_SHAPE;
-            case UP:
-                return UP_SHAPE;
-            case DOWN:
-            default:
-                return DOWN_SHAPE;
+            default: return NORTH_SHAPE;
         }
     }
 
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
-        boolean bl = fluidState.getFluid() == Fluids.WATER;
-        return (BlockState)super.getPlacementState(ctx).with(FACING, ctx.getPlayerLookDirection());
+        var directions = ctx.getPlacementDirections();
+        var pos = ctx.getBlockPos();
+        var world = ctx.getWorld();
+        BlockState state;
+        if (!ctx.canReplaceExisting()) {
+            state = world.getBlockState(pos.offset(ctx.getSide().getOpposite()));
+            if (state.getBlock() instanceof LadderBlock && state.get(FACING) == ctx.getSide()) {
+                return null;
+            }
+        }
+        
+        state = getDefaultState();
+        var fluidState = world.getFluidState(pos);
+        
+        if (ctx.getSide().getAxis().isVertical()) {
+            var hitBlock = world.getBlockState(pos.offset(ctx.getSide().getOpposite()));
+            if (hitBlock.getBlock() instanceof LadderBlock) {
+                state = getDefaultState().with(FACING, hitBlock.get(FACING));
+                if (state.canPlaceAt(world, pos)) {
+                    return state.with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+                }
+            }
+        }
+        
+        if ((state = world.getBlockState(pos.down())).getBlock() instanceof LadderBlock) {
+            state = getDefaultState().with(FACING, state.get(FACING));
+            if (state.canPlaceAt(world, pos)) {
+                return state.with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+            }
+        } 
+        if ((state = world.getBlockState(pos.up())).getBlock() instanceof LadderBlock) {
+            state = getDefaultState().with(FACING, state.get(FACING));
+            if (state.canPlaceAt(world, pos)) {
+                return state.with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+            }
+        }
+        
+        state = getDefaultState();
+        for(int i = 0; i < directions.length; ++i) {
+            var direction = directions[i];
+            if (direction.getAxis().isHorizontal()) {
+                state = state.with(FACING, direction);
+                if (state.canPlaceAt(world, pos)) {
+                    return state.with(WATERLOGGED, fluidState.getFluid() == Fluids.WATER);
+                }
+            }
+        }
+        
+        return null;
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
-        if ((Boolean)state.get(WATERLOGGED)) {
+        if (state.get(WATERLOGGED)) {
             world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
 
@@ -72,7 +112,7 @@ public class LadderBlock extends FacingBlock implements Waterloggable {
     }
 
     public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
@@ -81,8 +121,6 @@ public class LadderBlock extends FacingBlock implements Waterloggable {
 
     static {
         WATERLOGGED = Properties.WATERLOGGED;
-        UP_SHAPE = Block.createCuboidShape(0,0,0,16,16,3);
-        DOWN_SHAPE = Block.createCuboidShape(0,0,0,16,16,3);
         EAST_SHAPE = Block.createCuboidShape(13,0,0,16,16,16);
         NORTH_SHAPE = Block.createCuboidShape(0,0,0,16,16,3);
         WEST_SHAPE = Block.createCuboidShape(0,0,0,3,16,16);
