@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:crafting_shaped",
+  "type": "patchouli:shaped_book_recipe",
   "pattern": [
     "#W#",
     "ESE",
@@ -22,14 +22,5 @@
       "item": "minecraft:bone_meal"
     }
   },
-  "result": {
-    "item": "patchouli:guide_book",
-    "count": 1,
-    "nbt": [
-      {
-        "function": "set_nbt",
-        "tag": "{valley:farm_guide}"
-      }
-    ]
-  }
+  "book": "valley:farm_guide"
 }

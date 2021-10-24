@@ -14,6 +14,9 @@
   "block.valley.gear.tooltip": "It must have been used",
   "block.valley.gear.tooltip_2": "by some ancient civilization.",
 
+  "item.valley.copper_billet.tooltip": "Used to knap arrowheads",
+  "item.valley.copper_billet.tooltip_2": "with flint or dripstone.",
+
   "block.valley.golem_waxed": "Waxed Broken Golem",
   "block.valley.golem_idling": "Idling Broken Golem",
   "block.valley.golem_rusty": "Oxidized Broken Golem",
@@ -90,6 +93,10 @@
   "block.valley.salt_ore": "Rock Salt Ore",
   "block.valley.nether_salt": "Nether Rock Salt Ore",
   "block.valley.nether_coal_ore": "Nether Coal Ore",
+
+  "item.valley.copper_billet": "Copper Billet",
+  "item.valley.knapped_flint_arrowhead": "Knapped Flint Arrowhead",
+  "item.valley.knapped_dripstone_arrowhead": "Knapped Dripstone Arrowhead",
 
   "item.valley.moss_ball": "Moss Clump",
   "item.valley.salt": "Rock Salt",

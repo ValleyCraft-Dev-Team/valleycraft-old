@@ -2,6 +2,13 @@ package net.linkle.valley.Registry.Initializers;
 
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+
+import static net.linkle.valley.Registry.Initializers.Crops.SNOW_YAM_ITEM;
+import static net.linkle.valley.Registry.Initializers.Crops.WINTER_ROOT_ITEM;
+import static net.linkle.valley.Registry.Initializers.FoodAndCooking.WORM;
+import static net.linkle.valley.Registry.Initializers.Furniture.FIBER_BALE;
+import static net.linkle.valley.Registry.Initializers.MiscItems.*;
 
 /** Registering items for composer block */
 public class Compostables {
@@ -25,9 +32,18 @@ public class Compostables {
         registerItem(levelLow, Crops.MANDRAKE_SEEDS);
         registerItem(levelLow, Crops.GREEN_BEAN);
         registerItem(levelLow, Crops.GB_SEEDS);
+        registerItem(levelLow, FIBER);
+        registerItem(levelLow, MOSS_BALL);
+        registerItem(levelLow, TURF_ITEM);
+        registerItem(levelLow, Items.STICK);
 
         registerItem(levelMed, Blocks.MOREL);
         registerItem(levelMed, Blocks.BUSH);
+        registerItem(levelMed, Blocks.SNOW_YAM);
+        registerItem(levelMed, SNOW_YAM_ITEM);
+        registerItem(levelMed, WINTER_ROOT_ITEM);
+        registerItem(levelMed, Blocks.SNOW_BUSH);
+        registerItem(levelMed, Blocks.WINTER_ROOT);
         registerItem(levelMed, Blocks.BUSH_ALIVE);
         registerItem(levelMed, Blocks.BUSH_ALIVE_TALL);
         registerItem(levelMed, Blocks.FERNBUSH);
@@ -42,7 +58,12 @@ public class Compostables {
         registerItem(levelMed, Blocks.SWAMP_BUSH);
         registerItem(levelMed, Blocks.HEDGE);
         registerItem(levelMed, Crops.MANDRAKE);
+        registerItem(levelMed, Blocks.BUSH_DEAD_TALL);
+        registerItem(levelMed, Blocks.TUMBLE_WEED);
+        registerItem(levelMed, Blocks.APPLE_LEAVES_EMPTY);
+        registerItem(levelMed, WORM);
 
+        registerItem(levelHigh, MULCH);
         registerItem(levelHigh, Blocks.ROSEBUSH);
         registerItem(levelHigh, Blocks.LILACBUSH);
         registerItem(levelHigh, Blocks.PEONYBUSH);
@@ -65,6 +86,12 @@ public class Compostables {
         registerItem(levelHigh, Blocks.JUNGLE_BUSH);
         registerItem(levelHigh, Blocks.JUNGLE_BUSH);
         registerItem(levelHigh, Crops.COOKED_MANDRAKE);
+        registerItem(levelHigh, Items.EGG);
+        registerItem(levelHigh, DUCK_EGG);
+        registerItem(levelHigh, Items.COD);
+        registerItem(levelHigh, Items.SALMON);
+        registerItem(levelHigh, Items.TROPICAL_FISH);
+        registerItem(levelHigh, FIBER_BALE);
 
         registerItem(levelVery, Blocks.AMERANTH_BLOCK);
     }
