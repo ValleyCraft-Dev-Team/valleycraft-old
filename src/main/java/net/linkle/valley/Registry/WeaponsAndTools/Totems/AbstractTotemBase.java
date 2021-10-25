@@ -33,15 +33,7 @@ public abstract class AbstractTotemBase extends Item {
             Criteria.CONSUME_ITEM.trigger(serverEntity, stack);
         }
         
-        if (world.isClient) {
-            var client = MinecraftClient.getInstance();
-            client.particleManager.addEmitter(user, ParticleTypes.TOTEM_OF_UNDYING, 30);
-            if (user == client.player) {
-                client.gameRenderer.showFloatingItem(new ItemStack(this));
-            }
-        } else {
-            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_TOTEM_USE, user.getSoundCategory(), 1, 1);
-        }
+        showFloatingItem(world, user);
 
         if (playerEntity != null) {
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
@@ -74,6 +66,18 @@ public abstract class AbstractTotemBase extends Item {
         }
 
         return ItemUsage.consumeHeldItem(world, user, hand);
+    }
+    
+    protected void showFloatingItem(World world, LivingEntity user) {
+        if (world.isClient) {
+            var client = MinecraftClient.getInstance();
+            client.particleManager.addEmitter(user, ParticleTypes.TOTEM_OF_UNDYING, 30);
+            if (user == client.player) {
+                client.gameRenderer.showFloatingItem(new ItemStack(this));
+            }
+        } else {
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_TOTEM_USE, user.getSoundCategory(), 1, 1);
+        }
     }
     
     public abstract boolean canSetWeather(World world);

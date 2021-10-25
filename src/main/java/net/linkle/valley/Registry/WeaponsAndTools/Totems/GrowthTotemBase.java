@@ -50,6 +50,8 @@ public class GrowthTotemBase extends AbstractTotemBase {
                 stack.decrement(1);
             }
         }
+        
+        showFloatingItem(world, user);
 
         if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
             if (stack.isEmpty()) {
@@ -64,18 +66,6 @@ public class GrowthTotemBase extends AbstractTotemBase {
         }
 
         return stack.isEmpty() ? new ItemStack(G_TOTEM, 1) : stack;
-    }
-
-    protected void showFloatingItem(World world, LivingEntity user) {
-        if (world.isClient) {
-            var client = MinecraftClient.getInstance();
-            client.particleManager.addEmitter(user, ParticleTypes.TOTEM_OF_UNDYING, 30);
-            if (user == client.player) {
-                client.gameRenderer.showFloatingItem(new ItemStack(this));
-            }
-        } else {
-            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_TOTEM_USE, user.getSoundCategory(), 1, 1);
-        }
     }
 
     @Override
