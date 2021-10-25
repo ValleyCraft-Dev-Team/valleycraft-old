@@ -4,7 +4,7 @@
       "model": "valley:block/stone_mossy"
     },
     "mossy=true": {
-      "model": "valley:block/stone_mossy"
+      "model": "valley:block/stone_mossy_connected"
     }
   }
 }
