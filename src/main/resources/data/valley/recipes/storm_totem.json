@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "=@=",
+    "_@_",
     "+#+",
-    "___"
+    "==="
   ],
   "key": {
     "+": {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:raw_copper"
     },
     "#": {
       "item": "valley:null_totem"
@@ -16,7 +16,7 @@
       "item": "minecraft:powder_snow_bucket"
     },
     "_": {
-      "item": "minecraft:snow_block"
+      "item": "minecraft:snowball"
     },
     "@": {
       "item": "minecraft:lightning_rod"

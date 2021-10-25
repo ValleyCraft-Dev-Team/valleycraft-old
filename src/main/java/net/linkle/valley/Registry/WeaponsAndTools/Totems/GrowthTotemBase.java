@@ -18,8 +18,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class DruidRuneTotemBase extends AbstractTotemBase {
-    public DruidRuneTotemBase(Settings settings) {
+import static net.linkle.valley.Registry.Initializers.MiscItems.G_TOTEM;
+
+public class GrowthTotemBase extends AbstractTotemBase {
+    public GrowthTotemBase(Settings settings) {
         super(settings);
     }
 
@@ -48,16 +50,17 @@ public class DruidRuneTotemBase extends AbstractTotemBase {
 
         if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
             if (stack.isEmpty()) {
-                var item = Registry.ITEM.getOrEmpty(new Identifier("valley:anchor"));
+                var item = Registry.ITEM.getOrEmpty(new Identifier("valley:druid_staff"));
                 return new ItemStack(item.get(), 1);
             }
 
             if (playerEntity != null) {
-                playerEntity.getInventory().insertStack(new ItemStack(Items.ARROW, 8));
+                var item = Registry.ITEM.getOrEmpty(new Identifier("valley:druid_staff"));
+                return new ItemStack(item.get(), 1);
             }
         }
 
-        return stack.isEmpty() ? new ItemStack(Items.ARROW, 8) : stack;
+        return stack.isEmpty() ? new ItemStack(G_TOTEM, 1) : stack;
     }
 
     @Override

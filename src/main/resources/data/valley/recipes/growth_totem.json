@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#VP",
+    "#XP",
     "GRG",
     "VEV"
   ],
@@ -16,13 +16,16 @@
       "item": "minecraft:pink_tulip"
     },
     "G": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:raw_gold"
     },
     "R": {
       "item": "valley:sunshine_totem"
     },
     "E": {
       "item": "valley:mossy_vines"
+    },
+    "X": {
+      "item": "minecraft:emerald"
     }
   },
   "result": {
