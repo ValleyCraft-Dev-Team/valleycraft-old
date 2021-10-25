@@ -2,30 +2,28 @@ package net.linkle.valley.Registry.Blocks.Plants;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
-import net.minecraft.datafixer.fix.ChunkPalettedStorageFix;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 import java.util.Random;
 
 import static net.linkle.valley.Registry.Initializers.Blocks.MOSSY_VINE;
-import static net.linkle.valley.Registry.Initializers.Blocks.REED_BLOCK;
 import static net.minecraft.block.Blocks.MOSS_CARPET;
-import static net.minecraft.block.Blocks.VINE;
-import static net.minecraft.state.property.Properties.FACING;
 
 public class MossyBlock extends OreBlock {
+    
+    public static final BooleanProperty MOSSY = BooleanProperty.of("mossy");
 
     public MossyBlock() {
         super(FabricBlockSettings.of(Material.STONE)
@@ -33,6 +31,24 @@ public class MossyBlock extends OreBlock {
                 .breakByHand(false).ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3, 3f));
+        setDefaultState(stateManager.getDefaultState().with(MOSSY, false));
+    }
+    
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        return direction == Direction.UP ? state.with(MOSSY, isMoss(neighborState)) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    }
+
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos().up());
+        return this.getDefaultState().with(MOSSY, isMoss(blockState));
+    }
+
+    private static boolean isMoss(BlockState state) {
+        return state.isOf(Blocks.MOSS_CARPET) || state.isOf(Blocks.MOSS_BLOCK);
+    }
+
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(MOSSY);
     }
 
     @Override

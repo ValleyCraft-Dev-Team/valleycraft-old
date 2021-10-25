@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+	"mossy=false": {
       "model": "valley:block/jungle_mossy"
+    },
+    "mossy=true": {
+      "model": "valley:block/jungle_mossy_connected"
     }
   }
 }
