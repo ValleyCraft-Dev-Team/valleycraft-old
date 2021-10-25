@@ -3,7 +3,6 @@ package net.linkle.valley.Registry.Initializers;
 
 import net.linkle.valley.Registry.Misc.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.RainTotemBase;
-import net.linkle.valley.Registry.WeaponsAndTools.Totems.RuneTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.StormTotemBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Totems.SunshineTotemBase;
 import net.minecraft.item.FoodComponent;
@@ -37,7 +36,7 @@ public class MiscItems {
     public static final Item ST_TOTEM = new StormTotemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item R_TOTEM = new RainTotemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item G_TOTEM = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
-    public static final Item RUNE_TOTEM = new RuneTotemBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
+    public static final Item RUNE_TOTEM = new RuneBase(new Item.Settings().group(MISC_GROUP).maxCount(1));
     public static final Item MULCH = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item FUR_CLUMP = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item RAWHIDE = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
