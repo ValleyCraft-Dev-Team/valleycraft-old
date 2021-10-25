@@ -26,7 +26,6 @@ public class ClientModInitFix implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(TOMATO_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(HOLLY_BUSH, RenderLayer.getCutout());
 
-        //crop texture fixes
         BlockRenderLayerMap.INSTANCE.putBlock(RICE_SEEDLINGS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MAIZE_CROP, RenderLayer.getCutout());
 
@@ -248,6 +247,7 @@ public class ClientModInitFix implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), PUFF_CROP_BLOCK);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), GB_CROP_BLOCK);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), MANDRAKE_CROP_BLOCK);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), CRYSTAL_CROP_BLOCK);
 
         BlockRenderLayerMap.INSTANCE.putBlock(HANGING, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(HANGING_F, RenderLayer.getTranslucent());
