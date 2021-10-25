@@ -1,22 +1,36 @@
-package net.linkle.valley.Registry.Misc;
+package net.linkle.valley.Registry.WeaponsAndTools.Totems;
 
 import net.minecraft.advancement.criterion.Criteria;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsage;
 import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.stat.Stats;
-import net.minecraft.util.Hand;
-import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.UseAction;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
-public class RuneBase extends Item {
-    public RuneBase(Settings settings) {
+import java.util.List;
+
+public class DruidRuneTotemBase extends AbstractTotemBase {
+    public DruidRuneTotemBase(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public boolean canSetWeather(World world) {
+        return !world.isRaining() || !world.isThundering();
+    }
+
+    @Override
+    public void setWeather(ServerWorld world) {
+        world.setWeather(MAX_DURATION, 0, false, false);
     }
 
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
@@ -34,7 +48,8 @@ public class RuneBase extends Item {
 
         if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
             if (stack.isEmpty()) {
-                return new ItemStack("valley:farm_guide", 1);
+                var item = Registry.ITEM.getOrEmpty(new Identifier("valley:anchor"));
+                return new ItemStack(item.get(), 1);
             }
 
             if (playerEntity != null) {
@@ -45,15 +60,9 @@ public class RuneBase extends Item {
         return stack.isEmpty() ? new ItemStack(Items.ARROW, 8) : stack;
     }
 
-    public int getMaxUseTime(ItemStack stack) {
-        return 1;
-    }
-
-    public UseAction getUseAction(ItemStack stack) {
-        return UseAction.BLOCK;
-    }
-
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        return ItemUsage.consumeHeldItem(world, user, hand);
+    @Override
+    public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+        tooltip.add( new TranslatableText("item.valley.druid_rune.tooltip").formatted(Formatting.YELLOW) );
+        tooltip.add( new TranslatableText("item.valley.druid_rune.tooltip_2").formatted(Formatting.YELLOW) );
     }
 }
