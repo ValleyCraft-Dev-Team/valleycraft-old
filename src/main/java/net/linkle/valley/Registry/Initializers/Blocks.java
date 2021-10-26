@@ -11,8 +11,11 @@ import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
+import net.minecraft.block.WeepingVinesPlantBlock;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -134,7 +137,8 @@ public class Blocks {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block MOSSY_VINE = new VineBlock();
+    public static final MossVinesBlock MOSSY_VINE = new MossVinesBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES));
+    public static final Block MOSSY_VINE_PLANT = new MossVinesPlantBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES));
     public static final Block JUNGLE_BUSH = new JungleBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
@@ -270,6 +274,7 @@ public class Blocks {
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_vines"), MOSSY_VINE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_vines"), new BlockItem(MOSSY_VINE, new Item.Settings().group(NATURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_vines_plant"), MOSSY_VINE_PLANT);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_bush"), JUNGLE_BUSH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_bush"), new BlockItem(JUNGLE_BUSH, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "swamp_bush"), SWAMP_BUSH);

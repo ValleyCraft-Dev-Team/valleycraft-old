@@ -174,6 +174,7 @@ public class ClientModInitFix implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(SNOW_ROCK_PILE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(MOSSY_VINE, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(MOSSY_VINE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(MOSSY_VINE_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_BUSH, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SWAMP_BUSH, RenderLayer.getTranslucent());
