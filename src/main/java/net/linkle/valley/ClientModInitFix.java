@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.linkle.valley.Registry.Initializers.Entities;
+import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 
@@ -14,380 +15,258 @@ import static net.linkle.valley.Registry.Initializers.Furniture.*;
 import static net.linkle.valley.Registry.Initializers.FurnitureCont.*;
 import static net.linkle.valley.Registry.Initializers.PotBlock.POTTED_ROSE_SPRIG;
 
+import java.util.ArrayList;
+
 public class ClientModInitFix implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
         Entities.initializeClient();
+        renderLayer();
+
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : 0xFFFFFFFF;
+        }, APPLE_LEAVES);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+            return tintIndex == 1 ? 4764952 : 0xFFFFFFFF;
+        }, APPLE_LEAVES);
+
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
+            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : 0xFFFFFFFF;
+        }, APPLE_LEAVES_EMPTY);
+
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
+            return tintIndex == 1 ? 4764952 : 0xFFFFFFFF;
+        }, APPLE_LEAVES_EMPTY);
+    }
+    
+    private static void renderLayer() {
+        var cullouts = new ArrayList<Block>(300);
+        var translucents = new ArrayList<Block>(100);
         
         //bush texture fix
-        BlockRenderLayerMap.INSTANCE.putBlock(BITTER_BERRY_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SPICY_BERRY_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TOMATO_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(HOLLY_BUSH, RenderLayer.getCutout());
+        cullouts.add(BITTER_BERRY_BUSH);
+        cullouts.add(SPICY_BERRY_BUSH);
+        cullouts.add(TOMATO_BUSH);
+        cullouts.add(HOLLY_BUSH);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(RICE_SEEDLINGS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(MAIZE_CROP, RenderLayer.getCutout());
+        cullouts.add(RICE_SEEDLINGS);
+        cullouts.add(MAIZE_CROP);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(REDSTONE_LANTERN, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(REDSTONE_LANTERN, RenderLayer.getCutout());
+        cullouts.add(REDSTONE_LANTERN);
+        cullouts.add(WREATH);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(WREATH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WREATH, RenderLayer.getCutout());
+        cullouts.add(PLANTER);
+        cullouts.add(PLANTER_WATER);
+        
+        cullouts.add(PET_BED);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(PLANTER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(PLANTER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(PLANTER_WATER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(PLANTER_WATER, RenderLayer.getCutout());
+        cullouts.add(SOUL_HANGING);
+        cullouts.add(LANTERN_HANGING);
+        cullouts.add(FAIRY_HANGING);
+        cullouts.add(RED_HANGING);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(PET_BED, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(PET_BED, RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(SOUL_HANGING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SOUL_HANGING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(LANTERN_HANGING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(LANTERN_HANGING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FAIRY_HANGING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(FAIRY_HANGING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RED_HANGING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RED_HANGING, RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(ROUNDED_BARREL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROUNDED_BARREL, RenderLayer.getCutout());
+        cullouts.add(ROUNDED_BARREL);
+        
         //spike trap fix
-        BlockRenderLayerMap.INSTANCE.putBlock(SPIKE_WALL_BLOCK, RenderLayer.getCutout());
+        cullouts.add(SPIKE_WALL_BLOCK);
 
         //nether plants
-        //BlockRenderLayerMap.INSTANCE.putBlock(BLAZE_NETTLE, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(WEAPING_BRIAR, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(CORRUPT_WART, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(TAINTED_BUSH, RenderLayer.getCutout());
-        //BlockRenderLayerMap.INSTANCE.putBlock(WATCHERS_GAZE, RenderLayer.getCutout());
+        //cullouts.add(BLAZE_NETTLE);
+        //cullouts.add(WEAPING_BRIAR);
+        //cullouts.add(CORRUPT_WART);
+        //cullouts.add(TAINTED_BUSH);
+        //cullouts.add(WATCHERS_GAZE);
 
         //bushes
-        BlockRenderLayerMap.INSTANCE.putBlock(TUMBLE_WEED, RenderLayer.getCutout());
+        cullouts.add(TUMBLE_WEED);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(JAR_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(JAR_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BOWL_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BOWL_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(MUG_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(MUG_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BENTO_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BENTO_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STEW_POT, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STEW_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_OAK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_OAK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_SPRUCE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_SPRUCE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_BIRCH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_BIRCH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_ACACIA, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_ACACIA, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_JUNGLE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_JUNGLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_DARK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_DARK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_CRIMSON, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_CRIMSON, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_WARPED, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_WARPED, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_STONE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_STONE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_OAK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_OAK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_SPRUCE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_SPRUCE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_JUNGLE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_JUNGLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_ACACIA, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_ACACIA, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_BIRCH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_BIRCH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_DARK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_DARK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_CRIMSON, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_CRIMSON, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_WARPED, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_WARPED, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SMALL_MUG_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SMALL_MUG_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_PLAID, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STOOL_PLAID, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_PLAID, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(TABLE_PLAID, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIR_STONE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIR_STONE, RenderLayer.getCutout());
+        cullouts.add(JAR_BLOCK);
+        cullouts.add(BOWL_BLOCK);
+        cullouts.add(MUG_BLOCK);
+        cullouts.add(BENTO_BLOCK);
+        cullouts.add(STEW_POT);
+        cullouts.add(TABLE_OAK);
+        cullouts.add(TABLE_SPRUCE);
+        cullouts.add(TABLE_BIRCH);
+        cullouts.add(TABLE_ACACIA);
+        cullouts.add(TABLE_JUNGLE);
+        cullouts.add(TABLE_DARK);
+        cullouts.add(TABLE_CRIMSON);
+        cullouts.add(TABLE_WARPED);
+        cullouts.add(TABLE_STONE);
+        cullouts.add(STOOL_OAK);
+        cullouts.add(STOOL_SPRUCE);
+        cullouts.add(STOOL_JUNGLE);
+        cullouts.add(STOOL_ACACIA);
+        cullouts.add(STOOL_BIRCH);
+        cullouts.add(STOOL_DARK);
+        cullouts.add(STOOL_CRIMSON);
+        cullouts.add(STOOL_WARPED);
+        cullouts.add(SMALL_MUG_BLOCK);
+        cullouts.add(STOOL_PLAID);
+        cullouts.add(TABLE_PLAID);
+        cullouts.add(CHAIR_STONE);
+        
+        cullouts.add(CREST);
+        cullouts.add(GEAR);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(CREST, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CREST, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GEAR, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(GEAR, RenderLayer.getCutout());
+        cullouts.add(SMALL_CACTUS);
+        cullouts.add(ROSEBUSH);
+        cullouts.add(BUSH);
+        cullouts.add(LILACBUSH);
+        cullouts.add(PEONYBUSH);
+        cullouts.add(FERNBUSH);
+        cullouts.add(REED_BLOCK);
+        cullouts.add(BUSH_DEAD_TALL);
+        cullouts.add(BUSH_ALIVE);
+        cullouts.add(BUSH_ALIVE_TALL);
+        cullouts.add(WILD_BEET);
+        cullouts.add(WILD_POTATO);
+        cullouts.add(WILD_CARROT);
+        cullouts.add(WILD_WHEAT);
+        cullouts.add(WEAPING_SWAMP_WILLOW);
+        cullouts.add(REDWOOD_SORREL);
+        cullouts.add(DANDELION_PUFF);
+        cullouts.add(ROCK_PILE);
+        cullouts.add(RED_PILE);
+        cullouts.add(BLUE_PILE);
+        cullouts.add(MINER_BUSH);
+        cullouts.add(ONION);
+        cullouts.add(SNOW_BUSH);
+        cullouts.add(SNOW_YAM);
+        cullouts.add(WINTER_ROOT);
+        cullouts.add(SNOW_ROCK_PILE);
+        cullouts.add(MOSSY_VINE);
+        cullouts.add(MOSSY_VINE_PLANT);
+        cullouts.add(JUNGLE_BUSH);
+        cullouts.add(SWAMP_BUSH);
+        cullouts.add(JUNGLE_CAP);
+        cullouts.add(SPROUT);
+        cullouts.add(SWAMP_RIBBON);
+        cullouts.add(BLACK_DAHLIA);
+        cullouts.add(LAVENDER);
+        cullouts.add(LAVENDER_SPRIG);
+        cullouts.add(ROSE_SPRIG);
+        cullouts.add(ICE_ROSE);
+        cullouts.add(ORANGE_FERN);
+        cullouts.add(ORANGE_BEAUTY);
+        cullouts.add(AMERANTH_BLOCK);
+        cullouts.add(APPLE_LEAVES);
+        cullouts.add(APPLE_SAPLING);
+        cullouts.add(CROCUS);
+        cullouts.add(MOREL);
+        cullouts.add(HEDGE);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(SMALL_CACTUS, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SMALL_CACTUS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROSEBUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(LILACBUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(PEONYBUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FERNBUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(REED_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(REED_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH_DEAD_TALL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH_DEAD_TALL, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH_ALIVE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH_ALIVE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH_ALIVE_TALL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BUSH_ALIVE_TALL, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_BEET, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_BEET, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_POTATO, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_POTATO, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_CARROT, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_CARROT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_WHEAT, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WILD_WHEAT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WEAPING_SWAMP_WILLOW, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WEAPING_SWAMP_WILLOW, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(REDWOOD_SORREL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(REDWOOD_SORREL, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(DANDELION_PUFF, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(DANDELION_PUFF, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROCK_PILE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROCK_PILE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RED_PILE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RED_PILE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_PILE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BLUE_PILE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(MINER_BUSH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(MINER_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ONION, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ONION, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW_BUSH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW_YAM, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW_YAM, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WINTER_ROOT, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WINTER_ROOT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW_ROCK_PILE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW_ROCK_PILE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(MOSSY_VINE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(MOSSY_VINE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(MOSSY_VINE_PLANT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_BUSH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SWAMP_BUSH, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SWAMP_BUSH, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_CAP, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_CAP, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SPROUT, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SPROUT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SWAMP_RIBBON, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SWAMP_RIBBON, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BLACK_DAHLIA, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BLACK_DAHLIA, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(LAVENDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(LAVENDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(LAVENDER_SPRIG, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(LAVENDER_SPRIG, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROSE_SPRIG, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROSE_SPRIG, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ICE_ROSE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ICE_ROSE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ORANGE_FERN, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ORANGE_FERN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ORANGE_BEAUTY, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ORANGE_BEAUTY, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(AMERANTH_BLOCK, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(AMERANTH_BLOCK, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(APPLE_LEAVES, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(APPLE_LEAVES, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(APPLE_SAPLING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(APPLE_SAPLING, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(CROCUS, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CROCUS, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(MOREL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(MOREL, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(HEDGE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HEDGE, RenderLayer.getCutout());
+        cullouts.add(POTTED_ROSE_SPRIG);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(POTTED_ROSE_SPRIG, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(POTTED_ROSE_SPRIG, RenderLayer.getTranslucent());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(FROZEN_FOSSIL, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FROZEN_FOSSIL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CICADA, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(CICADA, RenderLayer.getTranslucent());
-
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            if (tintIndex == 1)
-                return BiomeColors.getFoliageColor(view, pos);
-            return 0xFFFFFFFF;
-        }, APPLE_LEAVES);
-
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            if (tintIndex == 1)
-                return 4764952;
-            return 0xFFFFFFFF;
-        }, APPLE_LEAVES);
-
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            if (tintIndex == 1)
-                return BiomeColors.getFoliageColor(view, pos);
-            return 0xFFFFFFFF;
-        }, APPLE_LEAVES_EMPTY);
-
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            if (tintIndex == 1)
-                return 4764952;
-            return 0xFFFFFFFF;
-        }, APPLE_LEAVES_EMPTY);
-
+        cullouts.add(FROZEN_FOSSIL);
+        cullouts.add(CICADA);
+        
         //Seed Type Crops
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), PUFF_CROP_BLOCK);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), GB_CROP_BLOCK);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), MANDRAKE_CROP_BLOCK);
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), CRYSTAL_CROP_BLOCK);
+        cullouts.add(PUFF_CROP_BLOCK);
+        cullouts.add(GB_CROP_BLOCK);
+        cullouts.add(MANDRAKE_CROP_BLOCK);
+        cullouts.add(CRYSTAL_CROP_BLOCK);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_F, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_R, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_D, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_D, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_A, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_A, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_E, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(HANGING_E, RenderLayer.getCutout());
+        translucents.add(HANGING);
+        translucents.add(HANGING_F);
+        translucents.add(HANGING_R);
+        cullouts.add(HANGING_D);
+        cullouts.add(HANGING_A);
+        cullouts.add(HANGING_E);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(CRYSTAL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CRYSTAL_FROZEN, RenderLayer.getTranslucent());
+        translucents.add(CRYSTAL);
+        translucents.add(CRYSTAL_FROZEN);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ROPE_BRIDGE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROPE_BRIDGE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROPE_BRIDGE_ANCHOR, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ROPE_BRIDGE_ANCHOR, RenderLayer.getCutout());
+        cullouts.add(ROPE_BRIDGE);
+        cullouts.add(ROPE_BRIDGE_ANCHOR);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(SCREEN, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCREEN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(NET, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(NET, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(IRON_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(IRON_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BAMBOO_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BAMBOO_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(OAK_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(OAK_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BIRCH_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BIRCH_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(DARK_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(DARK_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(WARPED_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(WARPED_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(CRIMSON_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CRIMSON_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ACACIA_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ACACIA_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_LADDER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SPRUCE_LADDER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SPRUCE_LADDER, RenderLayer.getCutout());
+        cullouts.add(SCREEN);
+        cullouts.add(NET);
+        cullouts.add(IRON_LADDER);
+        cullouts.add(IRON_LADDER);
+        cullouts.add(BAMBOO_LADDER);
+        cullouts.add(OAK_LADDER);
+        cullouts.add(BIRCH_LADDER);
+        cullouts.add(DARK_LADDER);
+        cullouts.add(WARPED_LADDER);
+        cullouts.add(CRIMSON_LADDER);
+        cullouts.add(ACACIA_LADDER);
+        cullouts.add(JUNGLE_LADDER);
+        cullouts.add(SPRUCE_LADDER);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ANCHOR, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(ANCHOR, RenderLayer.getCutout());
+        cullouts.add(ANCHOR);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_GLOW, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_GLOW, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT_GLOW, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT_GLOW, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT_SOUL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT_SOUL, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_SOUL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_SOUL, RenderLayer.getCutout());
+        cullouts.add(SCARE);
+        cullouts.add(SCARE_HAT);
+        cullouts.add(SCARE_GLOW);
+        cullouts.add(SCARE_HAT_GLOW);
+        cullouts.add(SCARE_HAT_SOUL);
+        cullouts.add(SCARE_SOUL);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_TARGET, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_TARGET, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RARE_MELON, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RARE_MELON, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RARE_SKELETON, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RARE_SKELETON, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(RARE_ZOMBIE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(RARE_ZOMBIE, RenderLayer.getCutout());
+        cullouts.add(SCARE_TARGET);
+        cullouts.add(RARE_MELON);
+        cullouts.add(RARE_SKELETON);
+        cullouts.add(RARE_ZOMBIE);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SNOW, RenderLayer.getCutout());
+        cullouts.add(SNOW);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_COPPER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_COPPER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT_COPPER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SCARE_HAT_COPPER, RenderLayer.getCutout());
+        cullouts.add(SCARE_COPPER);
+        cullouts.add(SCARE_HAT_COPPER);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(STEW_POT_CAMPFIRE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STEW_POT_CAMPFIRE, RenderLayer.getCutout());
+        cullouts.add(STEW_POT_CAMPFIRE);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_COPPER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_COPPER, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_GOLD, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_GOLD, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_NETHERITE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_NETHERITE, RenderLayer.getCutout());
+        cullouts.add(BEVELED_PANE);
+        cullouts.add(BEVELED_PANE_COPPER);
+        cullouts.add(BEVELED_PANE_GOLD);
+        cullouts.add(BEVELED_PANE_NETHERITE);
+        
         //Amethyst
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_A, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_A_C, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_A_G, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BEVELED_PANE_A_N, RenderLayer.getTranslucent());
+        translucents.add(BEVELED_PANE_A);
+        translucents.add(BEVELED_PANE_A_C);
+        translucents.add(BEVELED_PANE_A_G);
+        translucents.add(BEVELED_PANE_A_N);
 
-        //BlockRenderLayerMap.INSTANCE.putBlock(CAMPFIRE_POT_BLOCK_NORM, RenderLayer.getTranslucent());
-        //BlockRenderLayerMap.INSTANCE.putBlock(CAMPFIRE_POT_BLOCK_SOUL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BRAZIER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(SOUL_BRAZIER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(COPPER_BRAZIER, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(BLAZE_BRAZIER, RenderLayer.getTranslucent());
+        //translucents.add(CAMPFIRE_POT_BLOCK_NORM);
+        //translucents.add(CAMPFIRE_POT_BLOCK_SOUL);
+        translucents.add(BRAZIER);
+        translucents.add(SOUL_BRAZIER);
+        translucents.add(COPPER_BRAZIER);
+        translucents.add(BLAZE_BRAZIER);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(CHIMNEY_COBBLE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHIMNEY_COBBLE, RenderLayer.getCutout());
+        cullouts.add(BLAZE_BRAZIER);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(STUMP_BROWN, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUMP_BROWN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUMP_RED, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUMP_RED, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUMP_MOREL, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUMP_MOREL, RenderLayer.getCutout());
+        cullouts.add(STUMP_BROWN);
+        cullouts.add(STUMP_RED);
+        cullouts.add(STUMP_MOREL);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(APPLE_LEAVES_EMPTY, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(APPLE_LEAVES_EMPTY, RenderLayer.getCutout());
+        cullouts.add(APPLE_LEAVES_EMPTY);
+        cullouts.add(KEG);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(KEG, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(KEG, RenderLayer.getCutout());
+        cullouts.add(STUFFY_BROWN);
+        cullouts.add(STUFFY_WHITE);
 
-        BlockRenderLayerMap.INSTANCE.putBlock(STUFFY_BROWN, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUFFY_BROWN, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUFFY_WHITE, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(STUFFY_WHITE, RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIN_C, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIN_C, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIN_G, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIN_G, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIN_N, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CHAIN_N, RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(GOLEM_R, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(GOLEM_R, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GOLEM_W, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(GOLEM_W, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(GOLEM_I, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(GOLEM_I, RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(CAMPFIRE_RING, RenderLayer.getTranslucent());
-        BlockRenderLayerMap.INSTANCE.putBlock(CAMPFIRE_RING, RenderLayer.getCutout());
-
-        BlockRenderLayerMap.INSTANCE.putBlock(LOGPILE, RenderLayer.getTranslucent());
+        cullouts.add(CHAIN_C);
+        cullouts.add(CHAIN_G);
+        cullouts.add(CHAIN_N);
+        
+        cullouts.add(GOLEM_R);
+        cullouts.add(GOLEM_W);
+        cullouts.add(GOLEM_I);
+        
+        cullouts.add(CAMPFIRE_RING);
+        
+        translucents.add(LOGPILE);
+        
+        // Remapping block's render layer.
+        var layerMap = BlockRenderLayerMap.INSTANCE;
+        for (var block : cullouts) {
+            layerMap.putBlock(block, RenderLayer.getCutout());
+        }
+        for (var block : translucents) {
+            layerMap.putBlock(block, RenderLayer.getTranslucent());
+        }
     }
 }
