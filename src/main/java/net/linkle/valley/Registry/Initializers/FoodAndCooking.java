@@ -14,6 +14,13 @@ import static net.linkle.valley.Registry.Initializers.ItemGroups.MISC_GROUP;
 
 public class FoodAndCooking {
     public static final Item DRIED_SALMON = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item DRIED_SARDINE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item COOKED_SARDINE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item COOKED_CRAB = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
+
     public static final Item DRIED_COD = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item DRIED_TROPICAL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item COOKED_TROPICAL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).build()).maxCount(64));
@@ -67,6 +74,9 @@ public class FoodAndCooking {
     public static final Item COOKIE_DOUGH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build()).maxCount(64));
 
     public static final Item SALMON_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED,450), 1.0f).build()).maxCount(64));
+    public static final Item CRAB_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450), 1.0f).build()).maxCount(64));
+    public static final Item PERCH_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,450), 1.0f).build()).maxCount(64));
+    public static final Item FIRE_EEL_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,450), 1.0f).build()).maxCount(64));
 
     public static final Item SKELE_DOUGH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(1f).build()).maxCount(64));
     public static final Item SKELE_COOKIE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.7f).build()).maxCount(64));
@@ -105,6 +115,7 @@ public class FoodAndCooking {
     public static final Item FULL_BREAKFAST_VEGETARIAN = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,900), 1.0f).build()).maxCount(1));
     public static final Item COOKED_PUMPKIN_SEEDS = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item COD_CHOWDER = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,600), 1.0f).build()).maxCount(1));
+    public static final Item SARDINE_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,600), 1.0f).build()).maxCount(1));
     public static final Item SEAWEED_SALAD = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build()).maxCount(1));
     public static final Item MUSHROOM_SALAD = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build()).maxCount(1));
     public static final Item MINER_SALAD = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(1));
@@ -238,6 +249,7 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "seaweed_salad"), SEAWEED_SALAD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mandrake_soup"), MANDRAKE_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cod_chowder"), COD_CHOWDER);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sardine_soup"), SARDINE_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "worm_bowl"), WORM_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chicken_curry"), CHICKEN_CURRY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rice_bowl"), RICE_BOWL);
@@ -246,14 +258,21 @@ public class FoodAndCooking {
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "grilled_sucker"), GRILLED_SUCKER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dried_salmon"), DRIED_SALMON);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fire_eel_dried"), DRIED_FIRE_EEL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dried_cod"), DRIED_COD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dried_sucker"), DRIED_SUCKER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dried_tropical_fish"), DRIED_TROPICAL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_tropical_fish"), COOKED_TROPICAL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sardine_cooked"), COOKED_SARDINE);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fire_eel_cooked"), COOKED_FIRE_EEL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crab_red_cooked"), COOKED_CRAB);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salmon_roll"), SALMON_ROLL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "clownfish_roll"), CLOWNFISH_ROLL);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "squid_roll"), SQUID_ROLL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fire_eel_roll"), FIRE_EEL_ROLL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "perch_roll"), PERCH_ROLL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crab_roll"), CRAB_ROLL);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bbox_unagi"), BBOX_UNAGI);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bbox_clownfish"), BBOX_CLOWNFISH);

@@ -18,6 +18,7 @@ public class ValleyMain implements ModInitializer {
 
         //Item Initializers
         FoodAndCooking.initialize();
+        Fishing.initialize();
         ItemGroups.initialize();
         WeaponsAndTools.initialize();
         MiscItems.initialize();
