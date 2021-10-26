@@ -63,7 +63,7 @@ public class ScreenBlock extends FacingBlock implements Waterloggable {
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         FluidState fluidState = ctx.getWorld().getFluidState(ctx.getBlockPos());
         boolean bl = fluidState.getFluid() == Fluids.WATER;
-        return (BlockState)super.getPlacementState(ctx).with(FACING, ctx.getPlayerLookDirection());
+        return (BlockState)super.getPlacementState(ctx).with(FACING, ctx.getPlayerLookDirection()).with(WATERLOGGED, bl);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {

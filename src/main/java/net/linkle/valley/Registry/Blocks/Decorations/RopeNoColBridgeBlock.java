@@ -2,6 +2,8 @@ package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -42,7 +44,9 @@ public class RopeNoColBridgeBlock extends Block implements Waterloggable {
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing());
+        var state = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        var bool = state.getFluid() == Fluids.WATER;
+        return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing()).with(WATERLOGGED, bool);
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {

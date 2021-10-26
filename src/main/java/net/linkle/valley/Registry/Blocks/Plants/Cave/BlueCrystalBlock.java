@@ -4,6 +4,7 @@ import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
@@ -44,6 +45,13 @@ public class BlueCrystalBlock extends RedstoneBlock implements Waterloggable {
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
+    }
+    
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        var state = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        var bool = state.getFluid() == Fluids.WATER;
+        return getDefaultState().with(WATERLOGGED, bool);
     }
 
     static {
