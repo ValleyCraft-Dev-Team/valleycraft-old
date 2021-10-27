@@ -41,6 +41,12 @@ public class PlanterBlockWater extends Block implements Waterloggable {
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(WATERLOGGED);
     }
+    
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        var state = ctx.getWorld().getFluidState(ctx.getBlockPos());
+        var bool = state.getFluid() == Fluids.WATER;
+        return getDefaultState().with(WATERLOGGED, bool);
+    }
 
     public FluidState getFluidState(BlockState state) {
         return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(true) : super.getFluidState(state);
