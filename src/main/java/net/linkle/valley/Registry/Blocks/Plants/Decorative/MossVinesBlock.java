@@ -2,7 +2,7 @@ package net.linkle.valley.Registry.Blocks.Plants.Decorative;
 
 import java.util.Random;
 
-import net.linkle.valley.Registry.Initializers.Blocks;
+import net.linkle.valley.Registry.Initializers.Plants;
 import net.minecraft.block.AbstractPlantStemBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -24,7 +24,7 @@ public class MossVinesBlock extends AbstractPlantStemBlock {
     
     @Override
     protected Block getPlant() {
-        return Blocks.MOSSY_VINE_PLANT;
+        return Plants.MOSSY_VINE_PLANT;
     }
 
     @Override

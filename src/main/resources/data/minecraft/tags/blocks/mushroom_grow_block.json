@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "valley:planter_box_mycelium", "valley:stump_red", "valley:stump_morel", "valley:stump_brown"
+  ]
+}

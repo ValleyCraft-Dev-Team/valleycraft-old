@@ -17,6 +17,7 @@ import static net.linkle.valley.ValleyMain.MOD_ID;
 public class FurnitureCont {
     public static final Block PLANTER = new PlanterBlock();
     public static final Block PLANTER_WATER = new PlanterBlockWater();
+    public static final Block PLANTER_MYCELIUM = new PlanterBlock();
     public static final Block STUFFY_BROWN = new StuffyBlock();
     public static final Block STUFFY_WHITE = new StuffyBlock();
 
@@ -32,6 +33,8 @@ public class FurnitureCont {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "planter_box"), new BlockItem(PLANTER, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "planter_box_water"), PLANTER_WATER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "planter_box_water"), new BlockItem(PLANTER_WATER, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "planter_box_mycelium"), PLANTER_MYCELIUM);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "planter_box_mycelium"), new BlockItem(PLANTER_MYCELIUM, new Item.Settings().group(FURNITURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stuffy_brown"), STUFFY_BROWN);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stuffy_brown"), new BlockItem(STUFFY_BROWN, new Item.Settings().group(FURNITURE_GROUP)));

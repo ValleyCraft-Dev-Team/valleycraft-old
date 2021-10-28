@@ -51,6 +51,7 @@ public class MiscItems {
     public static final Item HOOK_G = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
     public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
     public static final Item DRIFT = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
+    public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
 
     public static void initialize() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stirrup"), STIRRUP);
@@ -76,6 +77,7 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "copper_nugget"), COPPER_NUGGET);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_nugget"), NETHER_NUGGET);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "driftwood"), DRIFT);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "spruce_bark_hilt"), SPRUCE_STICK);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_iron"), HOOK_I);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_copper"), HOOK_C);

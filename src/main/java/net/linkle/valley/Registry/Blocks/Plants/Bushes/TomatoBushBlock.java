@@ -29,7 +29,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.TOMATO_BUSH;
+import static net.linkle.valley.Registry.Initializers.Plants.TOMATO_BUSH;
 import static net.linkle.valley.Registry.Initializers.Furniture.HANGING;
 import static net.linkle.valley.Registry.Initializers.FurnitureCont.PLANTER;
 

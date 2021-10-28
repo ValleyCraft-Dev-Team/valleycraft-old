@@ -28,7 +28,7 @@ import net.minecraft.util.registry.Registry;
 import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 
-public class Blocks {
+public class Plants {
     //bushes
     public static final Block BITTER_BERRY_BUSH = new BitterBerryBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -161,6 +161,16 @@ public class Blocks {
     public static final Block APPLE_LEAVES = new AppleLeavesBlock();
     public static final Block APPLE_LEAVES_EMPTY = new AppleLeavesBlock();
 
+    public static final Block GIANT_RED = new GiantShroomBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
+            .breakByHand(true)
+            .sounds(BlockSoundGroup.WOOD)
+            .strength(0.4f,0.1f));
+
+    public static final Block GIANT_BROWN = new GiantShroomBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
+            .breakByHand(true)
+            .sounds(BlockSoundGroup.GRASS)
+            .strength(0.4f,0.1f));
+
     public static void initialize() {
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "small_cactus"), SMALL_CACTUS);
@@ -208,8 +218,14 @@ public class Blocks {
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fern_bush"), FERNBUSH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fern_bush"), new BlockItem(FERNBUSH, new Item.Settings().group(NATURE_GROUP)));
+        //mushrooms
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "colossal_red_shroom"), GIANT_RED);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "colossal_red_shroom"), new BlockItem(GIANT_RED, new Item.Settings().group(NATURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "colossal_brown_shroom"), GIANT_BROWN);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "colossal_brown_shroom"), new BlockItem(GIANT_BROWN, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_cap"), JUNGLE_CAP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_cap"), new BlockItem(JUNGLE_CAP, new Item.Settings().group(NATURE_GROUP)));
+
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "orange_fern"), ORANGE_FERN);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "orange_fern"), new BlockItem(ORANGE_FERN, new Item.Settings().group(NATURE_GROUP)));
 

@@ -3,11 +3,7 @@ package net.linkle.valley.Registry.Blocks.Plants.Bushes;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.*;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -21,7 +17,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
@@ -29,8 +24,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.BITTER_BERRY_BUSH;
-import static net.linkle.valley.Registry.Initializers.Blocks.ONION;
+import static net.linkle.valley.Registry.Initializers.Plants.ONION;
 import static net.linkle.valley.Registry.Initializers.Furniture.HANGING;
 import static net.linkle.valley.Registry.Initializers.FurnitureCont.PLANTER;
 

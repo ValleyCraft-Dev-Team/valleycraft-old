@@ -11,7 +11,6 @@ import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.MOSSY_VINE;
 import static net.minecraft.block.Blocks.MOSS_CARPET;
 import static net.minecraft.block.Blocks.SPORE_BLOSSOM;
 

@@ -250,6 +250,8 @@ public class Furniture {
     public static final Block CREST = new CrestBlock();
     public static final Block GEAR = new GearBlock();
 
+    public static final Block BRAZIER_METAL = new BrazierMetalBlock();
+
     public static void initialize() {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_oak"), TABLE_OAK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_oak"), new BlockItem(TABLE_OAK, new Item.Settings().group(FURNITURE_GROUP)));
@@ -355,6 +357,8 @@ public class Furniture {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier_soul"), new BlockItem(SOUL_BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brazier_copper"), COPPER_BRAZIER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier_copper"), new BlockItem(COPPER_BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brazier_metal"), BRAZIER_METAL);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier_metal"), new BlockItem(BRAZIER_METAL, new Item.Settings().group(FURNITURE_GROUP)));
         //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "blaze_brazier"), BLAZE_BRAZIER);
         //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "blaze_brazier"), new BlockItem(BLAZE_BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
 

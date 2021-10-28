@@ -27,7 +27,7 @@ import net.minecraft.world.WorldView;
 import java.util.Iterator;
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.MAIZE_CROP;
+import static net.linkle.valley.Registry.Initializers.Plants.MAIZE_CROP;
 import static net.linkle.valley.Registry.Initializers.FurnitureCont.PLANTER;
 
 public class MaizeCropBlock extends PlantBlock implements Fertilizable {

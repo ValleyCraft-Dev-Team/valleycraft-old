@@ -24,7 +24,7 @@ import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.*;
+import static net.linkle.valley.Registry.Initializers.Plants.*;
 import static net.linkle.valley.ValleyMain.MOD_ID;
 
 public class Trees {

@@ -6,25 +6,20 @@ import net.linkle.valley.Registry.Blocks.Plants.Bushes.BitterBerryBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.MinerBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.OnionBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.TomatoBushBlock;
-import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.ProbabilityConfig;
-import net.minecraft.world.gen.decorator.ConfiguredDecorator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
 import static net.linkle.valley.ValleyMain.MOD_ID;
-import static net.linkle.valley.Registry.Initializers.Blocks.*;
+import static net.linkle.valley.Registry.Initializers.Plants.*;
 
 public class OverworldPlantConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> BUSH_PATCH = Feature.RANDOM_PATCH

@@ -5,14 +5,12 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.block.OreBlock;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.MOREL;
 import static net.minecraft.block.Blocks.RED_MUSHROOM;
 
 public class RedStumpBlock extends Block {

@@ -2,26 +2,23 @@ package net.linkle.valley.Registry.Blocks.Plants.Bushes;
 
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldView;
 
 import java.util.Iterator;
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Plants.HEDGE;
 import static net.linkle.valley.Registry.Initializers.Furniture.HANGING;
 import static net.linkle.valley.Registry.Initializers.FurnitureCont.PLANTER;
 
-public class HedgeBushBlock extends PlantBlock {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 1.0D, 1.0D, 15.0D, 15.0D, 15.0D);
+public class GiantShroomBlock extends PlantBlock {
 
-    public HedgeBushBlock(Settings settings) {
+    public GiantShroomBlock(Settings settings) {
         super(settings);
-    }
-
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
     }
 
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
@@ -58,26 +55,17 @@ public class HedgeBushBlock extends PlantBlock {
 
     }
 
-    public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return SHAPE;
+    public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return floor.isOpaqueFullCube(world, pos);
     }
 
-    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        Block block = floor.getBlock();
-        return block == Blocks.GRASS_BLOCK ||
-                block == Blocks.DIRT ||
-                block == Blocks.COARSE_DIRT ||
-                block == Blocks.GRAVEL ||
-                block == Blocks.PODZOL ||
-                block == Blocks.FARMLAND ||
-                block == Blocks.SAND ||
-                block == Blocks.RED_SAND ||
-                block == Blocks.NETHERRACK ||
-                block == Blocks.SOUL_SAND ||
-                block == Blocks.SNOW ||
-                block == HANGING ||
-                block == PLANTER ||
-                block == HEDGE ||
-                block == Blocks.SOUL_SOIL;
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockPos blockPos = pos.down();
+        BlockState blockState = world.getBlockState(blockPos);
+        if (blockState.isIn(BlockTags.MUSHROOM_GROW_BLOCK)) {
+            return true;
+        } else {
+            return world.getBaseLightLevel(pos, 0) < 7 && this.canPlantOnTop(blockState, world, blockPos);
+        }
     }
 }

@@ -2,19 +2,16 @@ package net.linkle.valley.Registry.Blocks.Plants;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.linkle.valley.Registry.Blocks.Plants.ReedBlock;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 
 import java.util.Random;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.REED_BLOCK;
+import static net.linkle.valley.Registry.Initializers.Plants.REED_BLOCK;
 
 public class BrownClayBlock extends FallingBlock {
     public BrownClayBlock() {

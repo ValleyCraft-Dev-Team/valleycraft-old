@@ -15,8 +15,8 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.ROCK_PILE;
-import static net.linkle.valley.Registry.Initializers.BlocksCont.*;
+import static net.linkle.valley.Registry.Initializers.Plants.ROCK_PILE;
+import static net.linkle.valley.Registry.Initializers.StoneBlocks.*;
 import static net.minecraft.block.Blocks.*;
 
 public class OreConfiguredFeatures {

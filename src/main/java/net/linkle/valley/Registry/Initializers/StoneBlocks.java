@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 
-public class BlocksCont {
+public class StoneBlocks {
     public static final Block VOLCANIC_ASH = new VolcanicAshBlock();
     public static final Block VOLCANIC_STONE = new SaltOreBlock();
 

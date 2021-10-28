@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/weaping_ghost"
+    "layer0": "valley:items/viking_spruce_bark_hilt"
   }
 }

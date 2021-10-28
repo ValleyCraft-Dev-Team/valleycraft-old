@@ -8,8 +8,8 @@ import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.*;
-import static net.linkle.valley.Registry.Initializers.BlocksCont.*;
+import static net.linkle.valley.Registry.Initializers.Plants.*;
+import static net.linkle.valley.Registry.Initializers.StoneBlocks.*;
 import static net.linkle.valley.Registry.Initializers.Crops.*;
 import static net.linkle.valley.Registry.Initializers.Furniture.*;
 import static net.linkle.valley.Registry.Initializers.FurnitureCont.*;
@@ -268,5 +268,11 @@ public class ClientModInitFix implements ClientModInitializer {
         for (var block : translucents) {
             layerMap.putBlock(block, RenderLayer.getTranslucent());
         }
+
+        cullouts.add(GIANT_RED);
+        cullouts.add(GIANT_BROWN);
+        cullouts.add(BRAZIER_METAL);
+        translucents.add(BRAZIER_METAL);
+
     }
 }

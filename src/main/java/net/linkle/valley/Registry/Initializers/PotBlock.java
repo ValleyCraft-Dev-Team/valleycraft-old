@@ -6,7 +6,7 @@ import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static net.linkle.valley.Registry.Initializers.Blocks.ROSE_SPRIG;
+import static net.linkle.valley.Registry.Initializers.Plants.ROSE_SPRIG;
 import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.minecraft.block.Blocks.POTTED_POPPY;
 

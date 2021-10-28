@@ -7,7 +7,6 @@ import net.minecraft.block.FallingBlock;
 import net.minecraft.block.Material;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -15,10 +14,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
-import static net.linkle.valley.Registry.Initializers.Blocks.REED_BLOCK;
-import static net.linkle.valley.Registry.Initializers.BlocksCont.B_ROOTS;
+import static net.linkle.valley.Registry.Initializers.StoneBlocks.B_ROOTS;
 
 public class MudBlock extends FallingBlock {
     public MudBlock() {
