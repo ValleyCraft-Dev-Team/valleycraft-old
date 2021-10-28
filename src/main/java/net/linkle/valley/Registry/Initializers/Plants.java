@@ -5,17 +5,17 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Blocks.Plants.*;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.*;
 import net.linkle.valley.Registry.Blocks.Plants.Cave.BlueCrystalBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Cave.GiantShroomBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Cave.RedCrystalBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Cave.SpiderEggBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.AmeranthCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
-import net.minecraft.block.WeepingVinesPlantBlock;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -171,6 +171,11 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0.4f,0.1f));
 
+    public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.LEAVES)
+            .breakByHand(true).nonOpaque().luminance(3)
+            .sounds(BlockSoundGroup.WOOL).breakInstantly()
+            .strength(0.0f,0.1f));
+
     public static void initialize() {
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "small_cactus"), SMALL_CACTUS);
@@ -304,5 +309,8 @@ public class Plants {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_leaves"), new BlockItem(APPLE_LEAVES, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "apple_leaves_empty"), APPLE_LEAVES_EMPTY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_leaves_empty"), new BlockItem(APPLE_LEAVES_EMPTY, new Item.Settings().group(NATURE_GROUP)));
+
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "spider_egg"), SPIDER_EGG_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "spider_egg"), new BlockItem(SPIDER_EGG_BLOCK, new Item.Settings().group(NATURE_GROUP)));
     }
 }

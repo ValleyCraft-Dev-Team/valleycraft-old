@@ -259,7 +259,12 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(CAMPFIRE_RING);
         
         translucents.add(LOGPILE);
-        
+
+        cullouts.add(GIANT_RED);
+        cullouts.add(GIANT_BROWN);
+        translucents.add(BRAZIER_METAL);
+        translucents.add(SPIDER_EGG_BLOCK);
+
         // Remapping block's render layer.
         var layerMap = BlockRenderLayerMap.INSTANCE;
         for (var block : cullouts) {
@@ -268,11 +273,5 @@ public class ClientModInitFix implements ClientModInitializer {
         for (var block : translucents) {
             layerMap.putBlock(block, RenderLayer.getTranslucent());
         }
-
-        cullouts.add(GIANT_RED);
-        cullouts.add(GIANT_BROWN);
-        cullouts.add(BRAZIER_METAL);
-        translucents.add(BRAZIER_METAL);
-
     }
 }

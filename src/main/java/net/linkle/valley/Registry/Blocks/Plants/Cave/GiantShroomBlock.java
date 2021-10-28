@@ -1,4 +1,4 @@
-package net.linkle.valley.Registry.Blocks.Plants.Bushes;
+package net.linkle.valley.Registry.Blocks.Plants.Cave;
 
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;

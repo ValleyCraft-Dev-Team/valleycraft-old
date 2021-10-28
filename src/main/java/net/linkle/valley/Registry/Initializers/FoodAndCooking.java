@@ -183,6 +183,9 @@ public class FoodAndCooking {
     public static final Item SWEET_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
     public static final Item GLOW_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
 
+    public static final Item G_WATER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build()).maxCount(64));
+    public static final Item B_WATER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
+
     public static void initialize() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tea"), TEA);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "tea_sb"), TEA_SB);
@@ -323,6 +326,9 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "worm"), WORM);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salt"), SALT);
+
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "watermelon_fruit_bowl"), B_WATER);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "grilled_watermelon"), G_WATER);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "morel_skewer"), MOREL_KABOB);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fruit_kabob"), FRUIT_KABOB);
