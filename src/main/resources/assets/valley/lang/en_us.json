@@ -14,6 +14,17 @@
   "block.valley.gear.tooltip": "It must have been used",
   "block.valley.gear.tooltip_2": "by some ancient civilization.",
 
+  "block.valley.fossilized_starfish": "Luma Starfish",
+  "block.valley.fossilized_starfish.tooltip": "Some say these are from",
+  "block.valley.fossilized_starfish.tooltip_2": "another galaxy entirely.",
+  "block.valley.clam": "Clam",
+  "block.valley.sand_dollar": "Sand Dollar",
+
+  "item.valley.coin": "Ancient Coin",
+  "block.valley.coin_stack": "Stack of Ancient Coins",
+  "block.valley.coin_stack.tooltip": "An ancient currency",
+  "block.valley.coin_stack.tooltip_2": "devalued by emeralds.",
+
   "item.valley.copper_billet.tooltip": "Used to knap arrowheads",
   "item.valley.copper_billet.tooltip_2": "with flint or dripstone.",
 

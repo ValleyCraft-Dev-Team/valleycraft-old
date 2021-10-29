@@ -47,11 +47,12 @@ public class MiscItems {
     public static final Item ARROWHEAD = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item DRIP_ARROWHEAD = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item HOOK_I = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
-    public static final Item HOOK_C = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
-    public static final Item HOOK_G = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
-    public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
+    public static final Item HOOK_C = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
+    public static final Item HOOK_G = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.RARE));
+    public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.EPIC));
     public static final Item DRIFT = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item COIN = new MiscItemBase(new Item.Settings().group(ARTIFACT_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stirrup"), STIRRUP);
@@ -83,6 +84,8 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_copper"), HOOK_C);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_gold"), HOOK_G);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_netherite"), HOOK_N);
+
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin"), COIN);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud"), MUD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mulch"), MULCH);

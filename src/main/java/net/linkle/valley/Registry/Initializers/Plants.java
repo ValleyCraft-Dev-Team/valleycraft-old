@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Blocks.Plants.*;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.*;
-import net.linkle.valley.Registry.Blocks.Plants.Cave.BlueCrystalBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Cave.GiantShroomBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Cave.RedCrystalBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Cave.SpiderEggBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Cave.*;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.AmeranthCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
@@ -23,6 +20,7 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 import static net.linkle.valley.ValleyMain.MOD_ID;
@@ -124,6 +122,11 @@ public class Plants {
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
             .strength(1.0f,2.0f).luminance(13));
+
+    public static final Block COIN_STACK = new CoinStackBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
+            .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
+            .sounds(BlockSoundGroup.CHAIN).breakInstantly()
+            .strength(1.0f,2.0f));
 
     //public static final Block GREEN_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             //.breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
@@ -276,6 +279,8 @@ public class Plants {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "redstone_crystal"), new BlockItem(RED_PILE, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fluorite_crystal"), BLUE_PILE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fluorite_crystal"), new BlockItem(BLUE_PILE, new Item.Settings().group(NATURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "coin_stack"), COIN_STACK);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin_stack"), new BlockItem(COIN_STACK, new Item.Settings().group(ARTIFACT_GROUP).rarity(Rarity.UNCOMMON)));
         //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "power_crystal"), GREEN_PILE);
         //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "power_crystal"), new BlockItem(GREEN_PILE, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "snow_bush"), SNOW_BUSH);

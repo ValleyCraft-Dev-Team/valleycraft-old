@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "y": 90,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=east,waterlogged=true": {
+      "y": 90,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=north,waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=north,waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=south,waterlogged=false": {
+      "y": 180,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=south,waterlogged=true": {
+      "y": 180,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=west,waterlogged=false": {
+      "y": 270,
+      "model": "valley:block/fossilized_starfish"
+    },
+    "facing=west,waterlogged=true": {
+      "y": 270,
+      "model": "valley:block/fossilized_starfish"
+    }
+  }
+}

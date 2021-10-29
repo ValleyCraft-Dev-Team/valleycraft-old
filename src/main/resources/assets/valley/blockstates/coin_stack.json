@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/coin_stack"
+    },
+    "waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/coin_stack"
+    }
+  }
+}
