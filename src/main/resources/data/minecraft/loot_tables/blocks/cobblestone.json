@@ -24,7 +24,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "valley:jungle_stone",
+              "name": "minecraft:cobblestone",
               "functions": [
                 {
                   "function": "minecraft:set_count",
