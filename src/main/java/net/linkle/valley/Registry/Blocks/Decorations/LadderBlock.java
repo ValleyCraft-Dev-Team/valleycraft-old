@@ -23,12 +23,15 @@ public class LadderBlock extends HorizontalFacingBlock implements Waterloggable 
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape SOUTH_SHAPE;
     protected static final VoxelShape NORTH_SHAPE;
-
+    
     public LadderBlock() {
-        super(FabricBlockSettings.of(Material.WOOD).nonOpaque()
-                .breakByHand(true)
+        this(FabricBlockSettings.of(Material.WOOD)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.8f,0.8f));
+    }
+
+    public LadderBlock(FabricBlockSettings setting) {
+        super(setting.nonOpaque().breakByHand(true));
         setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
     }
 
