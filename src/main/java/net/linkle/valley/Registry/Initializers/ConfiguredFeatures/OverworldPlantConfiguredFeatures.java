@@ -2,26 +2,38 @@ package net.linkle.valley.Registry.Initializers.ConfiguredFeatures;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.BitterBerryBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.MinerBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.OnionBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.TomatoBushBlock;
+import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.ReedPatchFeature;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.decorator.Decorator;
+import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
+import net.minecraft.world.gen.heightprovider.ConstantHeightProvider;
 import net.minecraft.world.gen.placer.SimpleBlockPlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
 import static net.linkle.valley.ValleyMain.MOD_ID;
+
 import static net.linkle.valley.Registry.Initializers.Plants.*;
 
+@SuppressWarnings("deprecation")
 public class OverworldPlantConfiguredFeatures {
+    public static final ReedPatchFeature REED_PATCH = new ReedPatchFeature();    
+    
     public static final ConfiguredFeature<?, ?> BUSH_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(BUSH
                     .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(10).build());
@@ -152,6 +164,8 @@ public class OverworldPlantConfiguredFeatures {
                     .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
 
     public static void initialize() {
+        Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
+        
         //wild patches
         RegistryKey<ConfiguredFeature<?, ?>> wheatPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "wheat_patch"));
@@ -348,5 +362,14 @@ public class OverworldPlantConfiguredFeatures {
                 new Identifier(MOD_ID, "tomato_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tomatoPatch.getValue(), TOMATO_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SHATTERED_SAVANNA, BiomeKeys.SHATTERED_SAVANNA_PLATEAU), GenerationStep.Feature.VEGETAL_DECORATION, tomatoPatch);
+    
+        var ranch = new RangeDecoratorConfig(ConstantHeightProvider.create(YOffset.fixed(62))); // 62 is where a sea level with water block inside.
+        var spread = Decorator.RANGE.configure(ranch).spreadHorizontally(); 
+        
+        // If you want to config reeds counts or something, check the ReedPatchFeature class.
+        var registryKey = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, "reed_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, registryKey.getValue(), REED_PATCH.configure(DefaultFeatureConfig.INSTANCE).decorate(spread));
+        var categories = BiomeSelectors.categories(Category.RIVER, Category.PLAINS, Category.SWAMP, Category.FOREST, Category.JUNGLE, Category.TAIGA);
+        BiomeModifications.addFeature(categories, GenerationStep.Feature.VEGETAL_DECORATION, registryKey);
     }
 }
