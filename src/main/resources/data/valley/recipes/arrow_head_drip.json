@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:pointed_dropstone"
+    },
+    "C": {
+      "item": "valley:copper_billet"
+    }
+  },
+  "result": {
+    "item": "valley:knapped_dripstone_arrowhead",
+    "count": 8
+  }
+}

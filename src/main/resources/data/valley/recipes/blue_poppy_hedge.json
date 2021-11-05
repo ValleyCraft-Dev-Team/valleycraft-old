@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:jungle_bush"
+    }
+  ],
+  "result": {
+    "item": "valley:hedge",
+    "count": 1
+  }
+}

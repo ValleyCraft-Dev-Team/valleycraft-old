@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "M",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:planter_box_water"
+    },
+    "M": {
+      "item": "minecraft:mycelium"
+    }
+  },
+  "result": {
+    "item": "valley:planter_box_mycelium",
+    "count": 1
+  }
+}

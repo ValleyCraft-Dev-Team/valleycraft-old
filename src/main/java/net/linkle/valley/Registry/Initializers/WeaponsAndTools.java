@@ -37,10 +37,10 @@ public class WeaponsAndTools {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lumber_axe"), new LumberAxeBase(new LumberAxeToolMaterial()));
 
         //Sieve
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hand_sieve"), new SieveBase(new SieveToolMaterial()));
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hand_sieve"), new SieveBase(new SieveToolMaterial()));
 
         //Rock Breaker
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rock_breaker"), new RockBreakerBase(new RockBreakerToolMaterial()));
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rock_breaker"), new RockBreakerBase(new RockBreakerToolMaterial()));
 
         //Ladle
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soup_ladle"), new LadleBase(new LadleMaterial()));

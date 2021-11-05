@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:puff_ball"
+      "item": "valley:flint_rock"
     },
     {
-      "item": "valley:puff_ball"
+      "item": "minecraft:rabbit_hide"
     }
   ],
   "result": {
-    "item": "minecraft:white_wool",
+    "item": "minecraft:rawhide_lashing",
     "count": 1
   }
 }
