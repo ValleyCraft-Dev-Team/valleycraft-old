@@ -22,7 +22,7 @@ public class ValleyMain implements ModInitializer {
         ItemGroups.initialize();
         WeaponsAndTools.initialize();
         MiscItems.initialize();
-
+        Armors.initialize();
 
         //Block Initializers
         Furniture.initialize();
