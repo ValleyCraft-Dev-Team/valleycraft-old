@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:flint_rock"
+    },
+    {
+      "item": "valley:bone"
+    }
+  ],
+  "result": {
+    "item": "valley:bone_knife"
+  }
+}

@@ -1,18 +1,15 @@
 package net.linkle.valley.Registry.Initializers;
 
-import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.linkle.valley.Registry.Blocks.Decorations.LanternBlock;
+import static net.linkle.valley.ValleyMain.MOD_ID;
+
 import net.linkle.valley.Registry.WeaponsAndTools.Hatchets.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Knives.*;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.*;
 import net.linkle.valley.Registry.WeaponsAndTools.RGRest.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Sickles.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Viking.*;
-import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-
-import static net.linkle.valley.ValleyMain.MOD_ID;
 
 public class WeaponsAndTools {
 
@@ -40,10 +37,10 @@ public class WeaponsAndTools {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lumber_axe"), new LumberAxeBase(new LumberAxeToolMaterial()));
 
         //Sieve
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hand_sieve"), new SieveBase(new SieveToolMaterial()));
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hand_sieve"), new SieveBase(new SieveToolMaterial()));
 
         //Rock Breaker
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rock_breaker"), new RockBreakerBase(new RockBreakerToolMaterial()));
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rock_breaker"), new RockBreakerBase(new RockBreakerToolMaterial()));
 
         //Ladle
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soup_ladle"), new LadleBase(new LadleMaterial()));

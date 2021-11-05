@@ -43,7 +43,7 @@ public class MiscItems {
     public static final Item BEAR_SPAWN_EGG = new SpawnEggItem(Entities.BEAR, 0x56290D, 0x120802, new Item.Settings().group(MISC_GROUP));
     public static final Item DUCK_SPAWN_EGG = new SpawnEggItem(Entities.DUCK, 0x5B3200, 0x445B22, new Item.Settings().group(MISC_GROUP));
     public static final Item DUCK_EGG = new MiscItemBase((new Item.Settings()).maxCount(16).group(MISC_GROUP));
-    public static final Item COPPER_BILLET = new BilletItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
+    public static final Item COPPER_BILLET = new BilletItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64).recipeRemainder(COPPER_NUGGET));
     public static final Item ARROWHEAD = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item DRIP_ARROWHEAD = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item HOOK_I = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));

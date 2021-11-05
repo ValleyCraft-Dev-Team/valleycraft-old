@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:cobblestone_brick"
+    }
+  },
+  "result": {
+    "item": "valley:cobblestone_brick_stairs",
+    "count": 4
+  }
+}

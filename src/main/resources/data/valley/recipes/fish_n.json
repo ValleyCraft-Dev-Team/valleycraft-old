@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:fish_hook_netherite"
+  },
+  "result": "valley:netherite_nugget",
+  "experience": 0.1,
+  "cookingtime": 300
+}

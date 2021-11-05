@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:flint"
+    },
+    "C": {
+      "item": "valley:copper_billet"
+    }
+  },
+  "result": {
+    "item": "valley:knapped_flint_arrowhead",
+    "count": 16
+  }
+}

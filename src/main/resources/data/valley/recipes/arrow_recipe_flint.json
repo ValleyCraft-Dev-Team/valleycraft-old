@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "/",
+    "F"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:knapped_flint_arrowhead"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "F": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "item": "minecraft:arrow",
+    "count": 4
+  }
+}
