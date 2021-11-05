@@ -14,7 +14,7 @@ public class ClimingAxeToolMaterial implements ToolMaterial {
         //Golden: 32
         //Diamond: 1561
         //Netherite: 2031
-        return 1561;
+        return 250;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class ClimingAxeToolMaterial implements ToolMaterial {
         //Diamond: 8.0f
         //Netherite: 10.0f
         //Gold: 12.0f
-        return 7.0f;
+        return 1.0f;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class ClimingAxeToolMaterial implements ToolMaterial {
         //Diamond: 3
         //Gold: 0
         //Netherite: 3
-        return 2;
+        return 0;
     }
 
     @Override
