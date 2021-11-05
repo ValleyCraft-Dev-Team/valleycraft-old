@@ -1,5 +1,6 @@
 package net.linkle.valley.Registry.Mixin;
 
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,6 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.ClimbingAxeBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
@@ -22,6 +24,8 @@ import net.minecraft.world.World;
 
 @Mixin(LivingEntity.class)
 abstract class LivingEntityMixin extends Entity {
+    
+    private byte durTick;
 
     LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
@@ -35,7 +39,13 @@ abstract class LivingEntityMixin extends Entity {
 
     @Shadow
     abstract ItemStack getMainHandStack();
-
+    
+    @Shadow
+    abstract ItemStack getOffHandStack();
+    
+    @Shadow
+    abstract void sendEquipmentBreakStatus(EquipmentSlot slot);
+    
     @Inject(method = "isClimbing", at = @At("HEAD"), cancellable = true)
     void climbingAxe(CallbackInfoReturnable<Boolean> info) {
         if (isHolding(item -> item.getItem() instanceof ClimbingAxeBase)) {
@@ -60,9 +70,23 @@ abstract class LivingEntityMixin extends Entity {
                 }
                 
                 if (bool) {
-                    if (!MathHelper.approximatelyEquals(prevY, getY())) {
-                        swingHand(getMainHandStack().getItem() instanceof ClimbingAxeBase ? Hand.MAIN_HAND : Hand.OFF_HAND);
+                    var hand = getMainHandStack().getItem() instanceof ClimbingAxeBase ? Hand.MAIN_HAND : Hand.OFF_HAND;
+                    var axe = hand == Hand.MAIN_HAND ? getMainHandStack() : getOffHandStack();
+                    var climbing = !onGround && !MathHelper.approximatelyEquals(prevY, getY());
+                    
+                    if (!world.isClient) {
+                        if (climbing && --durTick < 0) {
+                            durTick = 15;
+                            axe.damage(1, (LivingEntity)(Object)this, e -> {
+                                sendEquipmentBreakStatus(hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
+                            });
+                        }
                     }
+                    
+                    if (climbing) {
+                        swingHand(hand);
+                    }
+                    
                     info.setReturnValue(true);
                 }
             }
