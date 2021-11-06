@@ -53,8 +53,8 @@ public class StoneBlocks {
     public static void initialize() {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_clay"), B_CLAY);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_clay"), new BlockItem(B_CLAY, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "muddy_reed_roots"), B_ROOTS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "muddy_reed_roots"), new BlockItem(B_ROOTS, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "muddy_reed_roots"), B_ROOTS);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "muddy_reed_roots"), new BlockItem(B_ROOTS, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "volc_ash"), VOLCANIC_ASH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "volc_ash"), new BlockItem(VOLCANIC_ASH, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "volc_stone"), VOLCANIC_STONE);
@@ -66,12 +66,12 @@ public class StoneBlocks {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mixed_ore"), new BlockItem(MIXED_ORE, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "saltpeter_ore"), SALTPETER_ORE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "saltpeter_ore"), new BlockItem(SALTPETER_ORE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fossil_ore"), FOSSIL_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fossil_ore"), new BlockItem(FOSSIL_ORE, new Item.Settings().group(ARTIFACT_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "frozen_fossil_ore"), FROZEN_FOSSIL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frozen_fossil_ore"), new BlockItem(FROZEN_FOSSIL, new Item.Settings().group(ARTIFACT_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fossilized_sand_cicada"), CICADA);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fossilized_sand_cicada"), new BlockItem(CICADA, new Item.Settings().group(ARTIFACT_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fossil_ore"), FOSSIL_ORE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fossil_ore"), new BlockItem(FOSSIL_ORE, new Item.Settings().group(ARTIFACT_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "frozen_fossil_ore"), FROZEN_FOSSIL);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frozen_fossil_ore"), new BlockItem(FROZEN_FOSSIL, new Item.Settings().group(ARTIFACT_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fossilized_sand_cicada"), CICADA);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fossilized_sand_cicada"), new BlockItem(CICADA, new Item.Settings().group(ARTIFACT_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "glacial_stone"), GLACIAL_STONE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glacial_stone"), new BlockItem(GLACIAL_STONE, new Item.Settings().group(NATURE_GROUP)));

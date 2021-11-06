@@ -118,9 +118,11 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(LILACBUSH);
         cullouts.add(PEONYBUSH);
         cullouts.add(FERNBUSH);
+        cullouts.add(TAPROOTS);
         cullouts.add(REED_BLOCK);
         cullouts.add(BUSH_DEAD_TALL);
         cullouts.add(BUSH_ALIVE);
+        cullouts.add(HERBS);
         cullouts.add(BUSH_ALIVE_TALL);
         cullouts.add(WILD_BEET);
         cullouts.add(WILD_POTATO);
@@ -179,6 +181,7 @@ public class ClientModInitFix implements ClientModInitializer {
 
         translucents.add(CRYSTAL);
         translucents.add(CRYSTAL_FROZEN);
+        translucents.add(FROZEN_FOSSIL);
 
         cullouts.add(ROPE_BRIDGE);
         cullouts.add(ROPE_BRIDGE_ANCHOR);

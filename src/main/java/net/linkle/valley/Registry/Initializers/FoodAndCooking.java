@@ -20,6 +20,8 @@ public class FoodAndCooking {
     public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item PEPPERCORN = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.6f).build()).maxCount(64));
+    public static final Item THYME = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.6f).build()).maxCount(64));
 
     public static final Item DRIED_COD = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item DRIED_TROPICAL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
@@ -234,13 +236,13 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "full_breakfast"), FULL_BREAKFAST);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "full_breakfast_vegetarian"), FULL_BREAKFAST_VEGETARIAN);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pancake_breakfast"), PANCAKE_BREAKFAST);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_pancake_breakfast"), AMERANTH_PANCAKE_BREAKFAST);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_pancake_breakfast"), AMERANTH_PANCAKE_BREAKFAST);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "large_pancake_breakfast"), PANCAKE_BREAKFAST_LARGE);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glow_soup"), GLOW_SOUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "clownfish_salad"), CLOWN_SALAD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "maize_porridge"), MAIZE_PORRIDGE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_porridge"), AMERANTH_PORRIDGE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_porridge"), AMERANTH_PORRIDGE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beef_stew"), BEEF_STEW);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_stew"), BEAR_STEW);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rabbit_bigo"), SPICY_RABBIT_BIGO);
@@ -290,11 +292,11 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sweet_dough"), SB_DOUGH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bread_dough"), BREAD_DOUGH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pancake_dough"), PANCAKE_DOUGH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_pancake_dough"), AMERANTH_PANCAKE_DOUGH);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_pancake_dough"), AMERANTH_PANCAKE_DOUGH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "skeleton_cookie_dough"), SKELE_DOUGH);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pancake"), PANCAKE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_pancake"), AMERANTH_PANCAKE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_pancake"), AMERANTH_PANCAKE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_pie"), APPLE_PIE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bitter_pie"), BITTER_PIE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sweet_pie"), SWEET_PIE);
@@ -326,6 +328,8 @@ public class FoodAndCooking {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "worm"), WORM);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salt"), SALT);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "thyme"), THYME);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "black_peppercorns"), PEPPERCORN);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "watermelon_fruit_bowl"), B_WATER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "grilled_watermelon"), G_WATER);
