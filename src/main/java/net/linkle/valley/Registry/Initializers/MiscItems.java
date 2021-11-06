@@ -64,7 +64,7 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud_brick"), MUD_BRICK);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flour_bag"), FLOUR_BAG);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "puff_ball"), PUFF_BALL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth"), AMERANTH);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth"), AMERANTH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "saltpeter"), SALTPETER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fiber"), FIBER);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moss_ball"), MOSS_BALL);
@@ -80,12 +80,12 @@ public class MiscItems {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "driftwood"), DRIFT);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "spruce_bark_hilt"), SPRUCE_STICK);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_iron"), HOOK_I);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_copper"), HOOK_C);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_gold"), HOOK_G);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_netherite"), HOOK_N);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_iron"), HOOK_I);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_copper"), HOOK_C);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_gold"), HOOK_G);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_netherite"), HOOK_N);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin"), COIN);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin"), COIN);
 
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud"), MUD);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mulch"), MULCH);

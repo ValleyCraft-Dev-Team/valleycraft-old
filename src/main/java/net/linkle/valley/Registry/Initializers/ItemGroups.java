@@ -45,9 +45,6 @@ public class ItemGroups {
     public static final ItemGroup FISHING_GROUP = FabricItemGroupBuilder.create(
             new Identifier(MOD_ID, "fishing")).icon(() -> new ItemStack(LIONFISH)).build();
 
-    public static final ItemGroup ARTIFACT_GROUP = FabricItemGroupBuilder.create(
-            new Identifier(MOD_ID, "artifacts")).icon(() -> new ItemStack(GOLEM_W)).build();
-
     public static void initialize() {
         //icons
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "furniture"), FURNITURE_ICON);

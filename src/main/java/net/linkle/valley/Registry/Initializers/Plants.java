@@ -75,6 +75,7 @@ public class Plants {
     public static final Block FERNBUSH = new RoseBush();
     public static final Block BUSH = new RoseBush();
     public static final Block MOREL = new MorelBlock();
+    public static final Block HERBS = new RoseBush();
 
     public static final Block HEDGE = new HedgeBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -99,6 +100,7 @@ public class Plants {
     public static final Block REDWOOD_SORREL = new RoseBush();
     public static final Block WEAPING_SWAMP_WILLOW = new RoseBushGlow();
     public static final Block CROCUS = new RoseBush();
+    public static final Block TAPROOTS = new RoseBush();
 
     public static final Block BUSH_ALIVE = new RoseBushTall();
     public static final Block BUSH_ALIVE_TALL = new RoseBushTall();
@@ -194,10 +196,14 @@ public class Plants {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bush"), new BlockItem(BUSH, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "alive_bush"), BUSH_ALIVE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "alive_bush"), new BlockItem(BUSH_ALIVE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "alive_bush_tall"), BUSH_ALIVE_TALL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "alive_bush_tall"), new BlockItem(BUSH_ALIVE_TALL, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dead_bush_tall"), BUSH_DEAD_TALL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dead_bush_tall"), new BlockItem(BUSH_DEAD_TALL, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "alive_bush_tall"), BUSH_ALIVE_TALL);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "alive_bush_tall"), new BlockItem(BUSH_ALIVE_TALL, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dead_bush_tall"), BUSH_DEAD_TALL);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dead_bush_tall"), new BlockItem(BUSH_DEAD_TALL, new Item.Settings().group(NATURE_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "herbs"), HERBS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "herbs"), new BlockItem(HERBS, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64)));
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "taproots"), TAPROOTS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "taproots"), new BlockItem(TAPROOTS, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "weaping_willow"), WEAPING_SWAMP_WILLOW);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "weaping_willow"), new BlockItem(WEAPING_SWAMP_WILLOW, new Item.Settings().group(NATURE_GROUP)));
@@ -227,10 +233,10 @@ public class Plants {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fern_bush"), FERNBUSH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fern_bush"), new BlockItem(FERNBUSH, new Item.Settings().group(NATURE_GROUP)));
         //mushrooms
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "colossal_red_shroom"), GIANT_RED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "colossal_red_shroom"), new BlockItem(GIANT_RED, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "colossal_brown_shroom"), GIANT_BROWN);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "colossal_brown_shroom"), new BlockItem(GIANT_BROWN, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "colossal_red_shroom"), GIANT_RED);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "colossal_red_shroom"), new BlockItem(GIANT_RED, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "colossal_brown_shroom"), GIANT_BROWN);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "colossal_brown_shroom"), new BlockItem(GIANT_BROWN, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_cap"), JUNGLE_CAP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_cap"), new BlockItem(JUNGLE_CAP, new Item.Settings().group(NATURE_GROUP)));
 
@@ -277,26 +283,26 @@ public class Plants {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snow_rocks"), new BlockItem(SNOW_ROCK_PILE, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "redstone_crystal"), RED_PILE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "redstone_crystal"), new BlockItem(RED_PILE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fluorite_crystal"), BLUE_PILE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fluorite_crystal"), new BlockItem(BLUE_PILE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "coin_stack"), COIN_STACK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin_stack"), new BlockItem(COIN_STACK, new Item.Settings().group(ARTIFACT_GROUP).rarity(Rarity.UNCOMMON)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fluorite_crystal"), BLUE_PILE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fluorite_crystal"), new BlockItem(BLUE_PILE, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "coin_stack"), COIN_STACK);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin_stack"), new BlockItem(COIN_STACK, new Item.Settings().group(ARTIFACT_GROUP).rarity(Rarity.UNCOMMON)));
         //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "power_crystal"), GREEN_PILE);
         //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "power_crystal"), new BlockItem(GREEN_PILE, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "snow_bush"), SNOW_BUSH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snow_bush"), new BlockItem(SNOW_BUSH, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "snow_yam"), SNOW_YAM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snow_yam"), new BlockItem(SNOW_YAM, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "winter_root"), WINTER_ROOT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "winter_root"), new BlockItem(WINTER_ROOT, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "snow_yam"), SNOW_YAM);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snow_yam"), new BlockItem(SNOW_YAM, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "winter_root"), WINTER_ROOT);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "winter_root"), new BlockItem(WINTER_ROOT, new Item.Settings().group(NATURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "miners_lettuce"), MINER_BUSH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "miners_lettuce"), new BlockItem(MINER_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "onion"), ONION);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "onion"), new BlockItem(ONION, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ameranth_crop"), AMERANTH_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_crop"), new BlockItem(AMERANTH_BLOCK, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ameranth_crop"), AMERANTH_BLOCK);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_crop"), new BlockItem(AMERANTH_BLOCK, new Item.Settings().group(NATURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_vines"), MOSSY_VINE);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_vines"), new BlockItem(MOSSY_VINE, new Item.Settings().group(NATURE_GROUP)));
@@ -305,8 +311,8 @@ public class Plants {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_bush"), new BlockItem(JUNGLE_BUSH, new Item.Settings().group(NATURE_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "swamp_bush"), SWAMP_BUSH);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "swamp_bush"), new BlockItem(SWAMP_BUSH, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hedge"), HEDGE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hedge"), new BlockItem(HEDGE, new Item.Settings().group(NATURE_GROUP)));
+        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hedge"), HEDGE);
+        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hedge"), new BlockItem(HEDGE, new Item.Settings().group(NATURE_GROUP)));
 
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "apple_sapling"),  APPLE_SAPLING);
         Registry.register(Registry.ITEM,  new Identifier(MOD_ID, "apple_sapling"),  new BlockItem(APPLE_SAPLING, new Item.Settings().group(NATURE_GROUP)));
