@@ -425,5 +425,6 @@
   "item.valley.duck_spawn_egg": "Duck Spawn Egg",
   "entity.valley.bear": "Bear",
   "entity.valley.duck": "Duck",
-  "item.valley.duck_egg": "Duck Egg"
+  "item.valley.duck_egg": "Duck Egg",
+  "item.valley.redstone_wand": "Redstone Wand"
 }

@@ -9,12 +9,10 @@ import net.linkle.valley.Registry.WeaponsAndTools.Totems.SunshineTotemBase;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.registry.Registry;
 
-import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
+import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class MiscItems {
     public static final Item BOMB_BAG = new BombBundleBase(new Item.Settings().group(MISC_GROUP).rarity(Rarity.UNCOMMON).maxCount(16));
@@ -53,8 +51,11 @@ public class MiscItems {
     public static final Item DRIFT = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(ARTIFACT_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
+    public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(MISC_GROUP).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
+        register("redstone_wand", REDSTONE_WAND);
+
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stirrup"), STIRRUP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fur_clump"), FUR_CLUMP);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rawhide_lashing"), RAWHIDE);
@@ -87,12 +88,12 @@ public class MiscItems {
 
         //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin"), COIN);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud"), MUD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mulch"), MULCH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "turf"), TURF_ITEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "squid_sucker"), SQUID_SUCKER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_egg"), DUCK_EGG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_spawn_egg"), BEAR_SPAWN_EGG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_spawn_egg"), DUCK_SPAWN_EGG);
+        register("mud", MUD);
+        register("mulch", MULCH);
+        register("turf", TURF_ITEM);
+        register("squid_sucker", SQUID_SUCKER);
+        register("duck_egg", DUCK_EGG);
+        register("bear_spawn_egg", BEAR_SPAWN_EGG);
+        register("duck_spawn_egg", DUCK_SPAWN_EGG);
     }
 }

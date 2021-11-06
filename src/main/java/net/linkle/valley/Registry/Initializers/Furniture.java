@@ -49,7 +49,7 @@ public class Furniture {
 
     public static final Block CHAIR_STONE = new StoolBlock();
 
-    public static final Block IRON_LADDER = new IronLadderBlock();
+    public static final Block IRON_LADDER = new LadderBlock(FabricBlockSettings.of(Material.METAL).sounds(BlockSoundGroup.METAL).strength(1f,5f));
     public static final Block BAMBOO_LADDER = new LadderBlock();
     public static final Block OAK_LADDER = new LadderBlock();
     public static final Block BIRCH_LADDER = new LadderBlock();
