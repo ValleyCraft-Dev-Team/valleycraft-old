@@ -9,12 +9,10 @@ import net.linkle.valley.Registry.WeaponsAndTools.Totems.SunshineTotemBase;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.SpawnEggItem;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.registry.Registry;
 
-import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
+import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class MiscItems {
     public static final Item BOMB_BAG = new BombBundleBase(new Item.Settings().group(MISC_GROUP).rarity(Rarity.UNCOMMON).maxCount(16));
@@ -53,46 +51,48 @@ public class MiscItems {
     public static final Item DRIFT = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(ARTIFACT_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
+    public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(ARTIFACT_GROUP).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stirrup"), STIRRUP);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fur_clump"), FUR_CLUMP);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rawhide_lashing"), RAWHIDE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "copper_billet"), COPPER_BILLET);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knapped_dripstone_arrowhead"), DRIP_ARROWHEAD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "knapped_flint_arrowhead"), ARROWHEAD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud_brick"), MUD_BRICK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "flour_bag"), FLOUR_BAG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "puff_ball"), PUFF_BALL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth"), AMERANTH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "saltpeter"), SALTPETER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fiber"), FIBER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "moss_ball"), MOSS_BALL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "null_totem"), E_TOTEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sunshine_totem"), S_TOTEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rain_totem"), R_TOTEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "storm_totem"), ST_TOTEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "growth_totem"), G_TOTEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bomb_bag"), BOMB_BAG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "arrow_bundle"), ARROW_BUNDLE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "copper_nugget"), COPPER_NUGGET);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_nugget"), NETHER_NUGGET);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "driftwood"), DRIFT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "spruce_bark_hilt"), SPRUCE_STICK);
+        register("stirrup", STIRRUP);
+        register("fur_clump", FUR_CLUMP);
+        register("rawhide_lashing", RAWHIDE);
+        register("copper_billet", COPPER_BILLET);
+        register("knapped_dripstone_arrowhead", DRIP_ARROWHEAD);
+        register("knapped_flint_arrowhead", ARROWHEAD);
+        register("mud_brick", MUD_BRICK);
+        register("flour_bag", FLOUR_BAG);
+        register("puff_ball", PUFF_BALL);
+        register("ameranth", AMERANTH);
+        register("saltpeter", SALTPETER);
+        register("fiber", FIBER);
+        register("moss_ball", MOSS_BALL);
+        register("null_totem", E_TOTEM);
+        register("sunshine_totem", S_TOTEM);
+        register("rain_totem", R_TOTEM);
+        register("storm_totem", ST_TOTEM);
+        register("growth_totem", G_TOTEM);
+        register("bomb_bag", BOMB_BAG);
+        register("arrow_bundle", ARROW_BUNDLE);
+        register("copper_nugget", COPPER_NUGGET);
+        register("netherite_nugget", NETHER_NUGGET);
+        register("driftwood", DRIFT);
+        register("spruce_bark_hilt", SPRUCE_STICK);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_iron"), HOOK_I);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_copper"), HOOK_C);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_gold"), HOOK_G);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_netherite"), HOOK_N);
+        register("fish_hook_iron", HOOK_I);
+        register("fish_hook_copper", HOOK_C);
+        register("fish_hook_gold", HOOK_G);
+        register("fish_hook_netherite", HOOK_N);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin"), COIN);
+        register("coin", COIN);
+        register("redstone_wand", REDSTONE_WAND);
 
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mud"), MUD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mulch"), MULCH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "turf"), TURF_ITEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "squid_sucker"), SQUID_SUCKER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_egg"), DUCK_EGG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bear_spawn_egg"), BEAR_SPAWN_EGG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "duck_spawn_egg"), DUCK_SPAWN_EGG);
+        register("mud", MUD);
+        register("mulch", MULCH);
+        register("turf", TURF_ITEM);
+        register("squid_sucker", SQUID_SUCKER);
+        register("duck_egg", DUCK_EGG);
+        register("bear_spawn_egg", BEAR_SPAWN_EGG);
+        register("duck_spawn_egg", DUCK_SPAWN_EGG);
     }
 }

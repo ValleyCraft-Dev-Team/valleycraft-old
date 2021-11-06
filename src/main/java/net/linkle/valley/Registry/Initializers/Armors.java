@@ -1,14 +1,13 @@
 package net.linkle.valley.Registry.Initializers;
 
-import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Armors.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+
+import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Armors {
     public static final Item TRADER_HELMET = new ArmorItem(TraderArmorMaterial.INSTANCE, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
@@ -41,9 +40,5 @@ public class Armors {
         register("stray_leggings", STRAY_LEGGINGS);
         
         register("fur_chestplate", FUR_CHESTPLATE);
-    }
-    
-    private static Item register(String ID, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(ValleyMain.MOD_ID, ID), item);
     }
 }
