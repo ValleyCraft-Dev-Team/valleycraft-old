@@ -10,8 +10,8 @@ import net.minecraft.sound.BlockSoundGroup;
 public class BrownStairsBlock extends StairsBlock {
     public BrownStairsBlock() {
         super(Furniture.B_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES)
-                .breakByHand(false)
+                .requiresTool()
+                .breakByTool(FabricToolTags.PICKAXES, 1)
                 .sounds(BlockSoundGroup.NETHER_BRICKS)
                 .strength(1, 2));
     }

@@ -72,7 +72,7 @@ abstract class ServerWorldMixin extends World implements RedstoneWorldExt {
     }
     
     @Override
-    public boolean emitsPower(BlockPos pos) {
+    public boolean isReceivingPower(BlockPos pos) {
         return emitBlockList.contains(pos);
     }
 }

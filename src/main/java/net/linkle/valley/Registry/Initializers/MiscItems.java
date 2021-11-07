@@ -65,7 +65,7 @@ public class MiscItems {
         register("mud_brick", MUD_BRICK);
         register("flour_bag", FLOUR_BAG);
         register("puff_ball", PUFF_BALL);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth"), AMERANTH);
+        //register("ameranth", AMERANTH);
         register("saltpeter", SALTPETER);
         register("fiber", FIBER);
         register("moss_ball", MOSS_BALL);
@@ -81,12 +81,12 @@ public class MiscItems {
         register("driftwood", DRIFT);
         register("spruce_bark_hilt", SPRUCE_STICK);
 
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_iron"), HOOK_I);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_copper"), HOOK_C);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_gold"), HOOK_G);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fish_hook_netherite"), HOOK_N);
+        //register("fish_hook_iron", HOOK_I);
+        //register("fish_hook_copper", HOOK_C);
+        //register("fish_hook_gold", HOOK_G);
+        //register("fish_hook_netherite", HOOK_N);
 
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "coin"), COIN);
+        //register("coin", COIN);
 
         register("mud", MUD);
         register("mulch", MULCH);

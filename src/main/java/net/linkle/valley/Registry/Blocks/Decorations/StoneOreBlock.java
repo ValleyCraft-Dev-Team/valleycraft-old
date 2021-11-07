@@ -6,12 +6,12 @@ import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class SaltOreBlock extends OreBlock {
+public class StoneOreBlock extends OreBlock {
 
-    public SaltOreBlock() {
+    public StoneOreBlock() {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES)
-                .breakByHand(false)
+                .requiresTool()
+                .breakByTool(FabricToolTags.PICKAXES, 1)
                 .sounds(BlockSoundGroup.STONE)
                 .strength(1, 3f));
     }

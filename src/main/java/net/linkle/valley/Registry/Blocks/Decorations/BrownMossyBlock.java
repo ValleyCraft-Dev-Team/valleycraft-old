@@ -9,8 +9,8 @@ import net.minecraft.sound.BlockSoundGroup;
 public class BrownMossyBlock extends Block {
     public BrownMossyBlock() {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES)
-                .breakByHand(false)
+                .requiresTool()
+                .breakByTool(FabricToolTags.PICKAXES, 1)
                 .sounds(BlockSoundGroup.NETHER_BRICKS)
                 .strength(1, 2));
     }

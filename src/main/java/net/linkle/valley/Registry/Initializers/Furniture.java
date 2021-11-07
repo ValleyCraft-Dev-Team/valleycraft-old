@@ -101,7 +101,7 @@ public class Furniture {
 
     public static final Block NET = new NetBlock();
     public static final Block B_BRICKS = new BrownBlock();
-    public static final Block B_CRACKED = new BrownCrackedBlock();
+    public static final Block B_CRACKED = new BrownBlock();
     public static final Block B_MOSSY = new BrownMossyBlock();
     public static final Block B_STAIRS = new BrownStairsBlock();
     public static final Block B_SLAB = new BrownSlabBlock();
@@ -200,7 +200,7 @@ public class Furniture {
     public static final Block ROUNDED_BARREL = new RoundedBarrelBlock();
     public static final Block SOUL_JACK = new JackBlock();
     public static final Block COPPER_JACK = new JackBlock();
-    public static final Block VOLCANIC_STONE_SMOOTH = new SaltOreBlock();
+    public static final Block VOLCANIC_STONE_SMOOTH = new StoneOreBlock();
 
     public static final Block LANTERN_HANGING = new LanternBlock();
     public static final Block SOUL_HANGING = new LanternBlock();

@@ -18,8 +18,9 @@ public class SporeBlock extends OreBlock {
 
     public SporeBlock() {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES)
-                .breakByHand(false).ticksRandomly()
+                .requiresTool()
+                .breakByTool(FabricToolTags.PICKAXES, 1)
+                .ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3, 3f));
     }

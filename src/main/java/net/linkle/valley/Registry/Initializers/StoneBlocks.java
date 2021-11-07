@@ -16,11 +16,11 @@ import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 
 public class StoneBlocks {
     public static final Block VOLCANIC_ASH = new VolcanicAshBlock();
-    public static final Block VOLCANIC_STONE = new SaltOreBlock();
+    public static final Block VOLCANIC_STONE = new StoneOreBlock();
 
-    public static final Block MIXED_ORE = new SaltOreBlock();
-    public static final Block SALTPETER_ORE = new SaltOreBlock();
-    public static final Block FOSSIL_ORE = new SaltOreBlock();
+    public static final Block MIXED_ORE = new StoneOreBlock();
+    public static final Block SALTPETER_ORE = new StoneOreBlock();
+    public static final Block FOSSIL_ORE = new StoneOreBlock();
     public static final Block FROZEN_FOSSIL = new FrozenFossilOreBlock();
 
     public static final Block SCALDING_STONE = new ScaldingBlock();
@@ -30,23 +30,23 @@ public class StoneBlocks {
     public static final Block SCALDING_VOLC = new ScaldingBlock();
     public static final Block GLACIAL_STONE = new GlacialStone();
 
-    public static final Block SALT_ORE = new SaltOreBlock();
-    public static final Block SALT_BLOCK = new SaltOreBlock();
-    public static final Block NETHER_SALT = new NetherSaltBlock();
-    public static final Block NETHER_COAL_ORE = new NetherCoalOreBlock();
+    public static final Block SALT_ORE = new StoneOreBlock();
+    public static final Block SALT_BLOCK = new StoneOreBlock();
+    public static final Block NETHER_SALT = new StoneOreBlock();
+    public static final Block NETHER_COAL_ORE = new StoneOreBlock();
     public static final Block B_CLAY = new MudBlock();
     public static final Block B_ROOTS = new BrownClayBlock();
 
-    public static final Block JUNGLE = new SaltOreBlock();
+    public static final Block JUNGLE = new StoneOreBlock();
     public static final Block JUNGLE_MOSSY = new MossyBlock();
     public static final Block JUNGLE_SPOREY = new SporeBlock();
-    public static final Block JUNGLE_COBBLE = new SaltOreBlock();
+    public static final Block JUNGLE_COBBLE = new StoneOreBlock();
     public static final Block STONE_MOSSY = new MossyBlock();
 
-    public static final Block OCEAN_STONE = new SaltOreBlock();
-    public static final Block SWAMP_STONE = new SaltOreBlock();
-    public static final Block DARK_STONE = new SaltOreBlock();
-    public static final Block TAIGA_STONE = new SaltOreBlock();
+    public static final Block OCEAN_STONE = new StoneOreBlock();
+    public static final Block SWAMP_STONE = new StoneOreBlock();
+    public static final Block DARK_STONE = new StoneOreBlock();
+    public static final Block TAIGA_STONE = new StoneOreBlock();
 
     public static final Block CICADA = new CicadaBlock();
 
