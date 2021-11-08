@@ -82,10 +82,7 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block SMALL_CACTUS = new CactusBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.CROP)
-            .strength(0.4f, 0.1f));
+    public static final Block SMALL_CACTUS = new CactusBlock();
 
     public static final Block REED_BLOCK = new ReedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)

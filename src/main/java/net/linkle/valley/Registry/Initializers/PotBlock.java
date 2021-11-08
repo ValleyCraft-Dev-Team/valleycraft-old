@@ -12,7 +12,7 @@ import static net.minecraft.block.Blocks.POTTED_POPPY;
 
 public class PotBlock {
 
-    public static final Block POTTED_ROSE_SPRIG = new FlowerPotBlock (ROSE_SPRIG, FabricBlockSettings.copy(POTTED_POPPY));
+    public static final Block POTTED_ROSE_SPRIG = new FlowerPotBlock(ROSE_SPRIG, FabricBlockSettings.copy(POTTED_POPPY));
 
     public static void initialize() {
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "potted_single_rose"), new FlowerPotBlock

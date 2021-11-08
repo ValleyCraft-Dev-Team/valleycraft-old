@@ -17,67 +17,49 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.Iterator;
 import java.util.Random;
 
-public class CactusBlock extends FacingBlock {
-    public static final VoxelShape COLLISION_SHAPE;
-    public static final VoxelShape OUTLINE_SHAPE;
-    protected static final VoxelShape EAST_SHAPE;
-    protected static final VoxelShape WEST_SHAPE;
-    protected static final VoxelShape SOUTH_SHAPE;
-    protected static final VoxelShape NORTH_SHAPE;
-    protected static final VoxelShape UP_SHAPE;
-    protected static final VoxelShape DOWN_SHAPE;
+public class CactusBlock extends HorizontalFacingBlock {
+    private static final VoxelShape COLLISION_SHAPE = Block.createCuboidShape(1, 0, 1, 15, 15, 15);
+    private static final VoxelShape OUTLINE_SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
 
-    public CactusBlock(FabricBlockSettings strength) {
+    public CactusBlock() {
         super(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.BAMBOO_SAPLING)
                 .strength(0.4f, 0.1f));
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
+        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        switch ((Direction)state.get(FACING)) {
-            case NORTH:
-                return NORTH_SHAPE;
-            case SOUTH:
-                return SOUTH_SHAPE;
-            case WEST:
-                return WEST_SHAPE;
-            case EAST:
-                return EAST_SHAPE;
-            case UP:
-                return UP_SHAPE;
-            case DOWN:
-            default:
-                return DOWN_SHAPE;
-        }
+        return OUTLINE_SHAPE;
     }
 
-    @Nullable
+    @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)super.getPlacementState(ctx).with(FACING, ctx.getPlayerLookDirection().getOpposite());
+        return (BlockState)super.getPlacementState(ctx).with(FACING, ctx.getPlayerFacing().getOpposite());
     }
 
+    @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!state.canPlaceAt(world, pos)) {
             world.breakBlock(pos, true);
         }
-
     }
 
+    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
+    @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return COLLISION_SHAPE;
     }
 
+    @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
         if (!state.canPlaceAt(world, pos)) {
             world.getBlockTickScheduler().schedule(pos, this, 1);
@@ -86,18 +68,19 @@ public class CactusBlock extends FacingBlock {
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
 
+    @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        Iterator var4 = Direction.Type.HORIZONTAL.iterator();
+        var iterator = Direction.Type.HORIZONTAL.iterator();
 
         Direction direction;
         Material material;
         do {
-            if (!var4.hasNext()) {
+            if (!iterator.hasNext()) {
                 BlockState blockState2 = world.getBlockState(pos.down());
                 return (blockState2.isOf(Blocks.SAND) || blockState2.isOf(Blocks.RED_SAND)) && !world.getBlockState(pos.up()).getMaterial().isLiquid();
             }
 
-            direction = (Direction)var4.next();
+            direction = iterator.next();
             BlockState blockState = world.getBlockState(pos.offset(direction));
             material = blockState.getMaterial();
         } while(!material.isSolid() && !world.getFluidState(pos.offset(direction)).isIn(FluidTags.LAVA));
@@ -105,22 +88,13 @@ public class CactusBlock extends FacingBlock {
         return false;
     }
 
+    @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         entity.damage(DamageSource.CACTUS, 2.0F);
     }
 
+    @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
-    }
-
-    static {
-        COLLISION_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 15.0D, 15.0D);
-        OUTLINE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-        UP_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-        DOWN_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-        EAST_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-        WEST_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-        NORTH_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
-        SOUTH_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 16.0D, 15.0D);
     }
 }

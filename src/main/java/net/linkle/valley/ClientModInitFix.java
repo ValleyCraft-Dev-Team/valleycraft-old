@@ -1,6 +1,8 @@
 package net.linkle.valley;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.linkle.valley.Registry.Initializers.Entities;
@@ -17,27 +19,28 @@ import static net.linkle.valley.Registry.Initializers.PotBlock.POTTED_ROSE_SPRIG
 
 import java.util.ArrayList;
 
+@Environment(EnvType.CLIENT)
 public class ClientModInitFix implements ClientModInitializer {
-
+    
     @Override
     public void onInitializeClient() {
         Entities.initializeClient();
         renderLayer();
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : 0xFFFFFFFF;
+            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1;
         }, APPLE_LEAVES);
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            return tintIndex == 1 ? 4764952 : 0xFFFFFFFF;
+            return tintIndex == 1 ? 4764952 : -1;
         }, APPLE_LEAVES);
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : 0xFFFFFFFF;
+            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1;
         }, APPLE_LEAVES_EMPTY);
 
         ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            return tintIndex == 1 ? 4764952 : 0xFFFFFFFF;
+            return tintIndex == 1 ? 4764952 : -1;
         }, APPLE_LEAVES_EMPTY);
     }
     
@@ -180,7 +183,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(HANGING_E);
 
         translucents.add(CRYSTAL);
-        translucents.add(CRYSTAL_FROZEN);
         translucents.add(FROZEN_FOSSIL);
 
         cullouts.add(ROPE_BRIDGE);

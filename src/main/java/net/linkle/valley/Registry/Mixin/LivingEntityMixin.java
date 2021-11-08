@@ -1,6 +1,5 @@
 package net.linkle.valley.Registry.Mixin;
 
-import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import org.spongepowered.asm.mixin.Mixin;

@@ -60,22 +60,22 @@ public class Furniture {
     public static final Block CRIMSON_LADDER = new LadderBlock();
     public static final Block WARPED_LADDER = new LadderBlock();
 
-    public static final Block SCARE = new StatueBlock();
-    public static final Block SCARE_HAT = new StatueBlock();
+    public static final Block SCARE = new StatueBlock(false);
+    public static final Block SCARE_HAT = new StatueBlock(false);
 
-    public static final Block SCARE_GLOW = new StatueGlowBlock();
-    public static final Block SCARE_HAT_GLOW = new StatueGlowBlock();
+    public static final Block SCARE_GLOW = new StatueBlock(true);
+    public static final Block SCARE_HAT_GLOW = new StatueBlock(true);
 
-    public static final Block SCARE_SOUL = new StatueGlowBlock();
-    public static final Block SCARE_HAT_SOUL = new StatueGlowBlock();
+    public static final Block SCARE_SOUL = new StatueBlock(true);
+    public static final Block SCARE_HAT_SOUL = new StatueBlock(true);
 
-    public static final Block SCARE_TARGET = new StatueBlock();
-    public static final Block RARE_MELON = new StatueBlock();
-    public static final Block RARE_ZOMBIE = new StatueBlock();
-    public static final Block RARE_SKELETON = new StatueBlock();
+    public static final Block SCARE_TARGET = new StatueBlock(false);
+    public static final Block RARE_MELON = new StatueBlock(false);
+    public static final Block RARE_ZOMBIE = new StatueBlock(false);
+    public static final Block RARE_SKELETON = new StatueBlock(false);
 
-    public static final Block SCARE_COPPER = new StatueGlowBlock();
-    public static final Block SCARE_HAT_COPPER = new StatueGlowBlock();
+    public static final Block SCARE_COPPER = new StatueBlock(true);
+    public static final Block SCARE_HAT_COPPER = new StatueBlock(true);
 
     public static final Block SNOW = new SnowmanBlock();
 
@@ -84,10 +84,10 @@ public class Furniture {
             .sounds(BlockSoundGroup.WOOD)
             .strength(1.0f,1f));
 
-    public static final Block ROPE_BRIDGE_ANCHOR = new RopeNoColBridgeBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
+    public static final Block ROPE_BRIDGE_ANCHOR = new RopeBridgeBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
-            .strength(1.0f,1f));
+            .strength(1.0f,1f).collidable(false));
 
     public static final Block SMOOTH_STONE_BRICK = new PolishedStoneBlock();
     public static final Block SMOOTH_STONE_TILE = new PolishedStoneBlock();
@@ -202,10 +202,10 @@ public class Furniture {
     public static final Block COPPER_JACK = new JackBlock();
     public static final Block VOLCANIC_STONE_SMOOTH = new StoneOreBlock();
 
-    public static final Block LANTERN_HANGING = new LanternBlock();
-    public static final Block SOUL_HANGING = new LanternBlock();
-    public static final Block FAIRY_HANGING = new LanternBlock();
-    public static final Block RED_HANGING = new RedstoneHangingLanternBlock();
+    public static final Block LANTERN_HANGING = new LanternBlock(15, false);
+    public static final Block SOUL_HANGING = new LanternBlock(10, false);
+    public static final Block FAIRY_HANGING = new LanternBlock(15, false);
+    public static final Block RED_HANGING = new LanternBlock(7, true);
 
     public static final Block CHIMNEY_COBBLE = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
             .breakByTool(FabricToolTags.PICKAXES)
@@ -215,7 +215,6 @@ public class Furniture {
 
     public static final Block HANGING = new HangingBlock();
     public static final Block CRYSTAL = new CrystalBlock();
-    public static final Block CRYSTAL_FROZEN = new CrystalBlockFrozen();
 
     public static final Block BOOK_COBWEB = new BookshelfBlock();
     public static final Block EMPTY_SHELF = new BookshelfBlock();
@@ -240,10 +239,7 @@ public class Furniture {
     public static final Block HANGING_A = new HangingCrystalAltBlock();
     public static final Block HANGING_G = new HangingCrystalBlock();
 
-    public static final Block KEG = new KegBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.WOOD)
-            .strength(1.0f, 1.0f));
+    public static final Block KEG = new KegBlock();
 
     public static final Block PET_BED = new PetBedBlock();
     public static final Block WREATH = new WreathBlock();

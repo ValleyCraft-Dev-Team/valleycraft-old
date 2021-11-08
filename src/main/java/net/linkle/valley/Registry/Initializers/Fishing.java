@@ -1,17 +1,14 @@
 package net.linkle.valley.Registry.Initializers;
 
 import net.linkle.valley.Registry.Cooking.FoodTypeBases.*;
-import net.linkle.valley.Registry.Misc.FossilItemBase;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.registry.Registry;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
-import static net.linkle.valley.ValleyMain.MOD_ID;
+import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Fishing {
     public static final Item FIRE_EEL = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).rarity(Rarity.RARE).maxCount(64));
@@ -27,17 +24,16 @@ public class Fishing {
     public static final Item SLIMEFISH = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).rarity(Rarity.COMMON).maxCount(64));
 
     public static void initialize() {
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fire_eel"), FIRE_EEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ghost_fish"), GHOST_FISH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "perch"), PERCH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crab_red"), CRAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mussel"), MUSSEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_mussel"), BROWN_MUSSEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cerith_snail"), CERITH_SNAIL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lionfish"), LIONFISH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "sardine"), SARDINE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "slime_fish"), SLIMEFISH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "octopus"), OCTO);
-
+        register("fire_eel", FIRE_EEL);
+        register("ghost_fish", GHOST_FISH);
+        register("perch", PERCH);
+        register("crab_red", CRAB);
+        register("mussel", MUSSEL);
+        register("brown_mussel", BROWN_MUSSEL);
+        register("cerith_snail", CERITH_SNAIL);
+        register("lionfish", LIONFISH);
+        register("sardine", SARDINE);
+        register("slime_fish", SLIMEFISH);
+        register("octopus", OCTO);
     }
 }
