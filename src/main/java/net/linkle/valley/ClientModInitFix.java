@@ -236,10 +236,10 @@ public class ClientModInitFix implements ClientModInitializer {
 
         //translucents.add(CAMPFIRE_POT_BLOCK_NORM);
         //translucents.add(CAMPFIRE_POT_BLOCK_SOUL);
-        translucents.add(BRAZIER);
-        translucents.add(SOUL_BRAZIER);
-        translucents.add(COPPER_BRAZIER);
-        translucents.add(BLAZE_BRAZIER);
+        cullouts.add(BRAZIER);
+        cullouts.add(SOUL_BRAZIER);
+        cullouts.add(COPPER_BRAZIER);
+        cullouts.add(BLAZE_BRAZIER);
 
         cullouts.add(BLAZE_BRAZIER);
 

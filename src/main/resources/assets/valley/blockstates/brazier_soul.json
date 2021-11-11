@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "valley:block/brazier_soul"
-    }
+	"waterlogged=false": {
+	  "model": "valley:block/brazier_soul"
+	},
+	"waterlogged=true": {
+	  "model": "valley:block/brazier_soul_off"
+	}
   }
 }

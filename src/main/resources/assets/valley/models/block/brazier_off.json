@@ -2,7 +2,6 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"fire":  "valley:blocks/campfire_pot_fire",
 		"pot":   "valley:blocks/polished_stone_bricks",
 		"stick": "valley:blocks/sticks",
 		"bend":  "valley:blocks/orange_kelp_side_alt",
@@ -131,34 +130,6 @@
 				"west": {"uv": [7.5, 0, 8, 9.5], "texture": "#stick"},
 				"up": {"uv": [8.5, 3.5, 8, 3], "texture": "#stick"},
 				"down": {"uv": [8.5, 3.5, 8, 4], "texture": "#stick"}
-			}
-		},
-		{
-			"from": [7, 17, 0],
-			"to": [15, 26, 0],
-			"rotation": {"angle": -45, "axis": "y", "origin": [0, 0, 0]},
-			"shade": false,
-			"faces": {
-				"north": {"uv": [2, 0, 6, 4.5], "texture": "#fire"},
-				"east": {"uv": [0, 0, 0, 4.5], "texture": "#fire"},
-				"south": {"uv": [2, 0, 6, 4.5], "texture": "#fire"},
-				"west": {"uv": [0, 0, 0, 4.5], "texture": "#fire"},
-				"up": {"uv": [0, 0, 4, 0], "texture": "#fire"},
-				"down": {"uv": [0, 0, 4, 0], "texture": "#fire"}
-			}
-		},
-		{
-			"from": [11, 17, -4],
-			"to": [11, 26, 4],
-			"rotation": {"angle": -45, "axis": "y", "origin": [0, 0, 0]},
-			"shade": false,
-			"faces": {
-				"north": {"uv": [2, 0, 2, 4.5], "texture": "#fire"},
-				"east": {"uv": [2, 0, 6, 4.5], "texture": "#fire"},
-				"south": {"uv": [2, 0, 2, 4.5], "texture": "#fire"},
-				"west": {"uv": [2, 0, 6, 4.5], "texture": "#fire"},
-				"up": {"uv": [0, 0, 4, 0], "rotation": 270, "texture": "#fire"},
-				"down": {"uv": [0, 0, 4, 0], "rotation": 90, "texture": "#fire"}
 			}
 		}
 	],

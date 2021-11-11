@@ -27,12 +27,12 @@ public class BrazierBlock extends Block implements Waterloggable {
     public static final BooleanProperty WATERLOGGED;
     protected static final VoxelShape BRAZIER_SHAPE;
 
-    public BrazierBlock() {
+    public BrazierBlock(int luminance) {
         super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true).breakByTool(FabricToolTags.AXES)
-                .sounds(BlockSoundGroup.STONE).luminance(13)
+                .sounds(BlockSoundGroup.STONE).luminance(luminance)
                 .strength(1.0f, 1.0f));
-        this.setDefaultState((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(WATERLOGGED, false)));
+        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
     }
 
     @Nullable
@@ -61,15 +61,15 @@ public class BrazierBlock extends Block implements Waterloggable {
     }
 
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-            if (random.nextInt(50) == 0) {
-                world.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_CAMPFIRE_CRACKLE, SoundCategory.BLOCKS, 0.5F + random.nextFloat(), random.nextFloat() * 0.7F + 0.6F, false);
-            }
+        if (random.nextInt(50) == 0) {
+            world.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_CAMPFIRE_CRACKLE, SoundCategory.BLOCKS, 0.5F + random.nextFloat(), random.nextFloat() * 0.7F + 0.6F, false);
+        }
 
-            if (random.nextInt(100) == 0) {
-                for(int i = 0; i < random.nextInt(1) + 1; ++i) {
-                    world.addParticle(ParticleTypes.LAVA, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, (double)(random.nextFloat() / 2.0F), 5.0E-5D, (double)(random.nextFloat() / 2.0F));
-                }
+        if (random.nextInt(100) == 0) {
+            for(int i = 0; i < random.nextInt(1) + 1; ++i) {
+                world.addParticle(ParticleTypes.LAVA, (double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, (double)(random.nextFloat() / 2.0F), 5.0E-5D, (double)(random.nextFloat() / 2.0F));
             }
+        }
     }
 
     static {
