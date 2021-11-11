@@ -14,7 +14,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
 public class StoolBlock extends HorizontalWithWaterBlock {
-    protected static final VoxelShape SHAPE;
+    private static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 8, 14);
 
     public StoolBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
@@ -32,9 +32,5 @@ public class StoolBlock extends HorizontalWithWaterBlock {
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
-    }
-
-    static {
-        SHAPE = Block.createCuboidShape(2, 0, 2, 14, 8, 14);
     }
 }
