@@ -1,9 +1,8 @@
 package net.linkle.valley.Registry.Initializers;
 
+
 import net.linkle.valley.Registry.Blocks.Decorations.*;
-import net.linkle.valley.Registry.Blocks.Plants.BrownClayBlock;
-import net.linkle.valley.Registry.Blocks.Plants.MossyBlock;
-import net.linkle.valley.Registry.Blocks.Plants.MudBlock;
+import net.linkle.valley.Registry.Blocks.Plants.*;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.SporeBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -11,8 +10,9 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import static net.linkle.valley.Registry.Initializers.ItemGroups.NATURE_GROUP;
 import static net.linkle.valley.ValleyMain.MOD_ID;
-import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
+import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
 
 public class StoneBlocks {
     public static final Block VOLCANIC_ASH = new VolcanicAshBlock();
@@ -51,66 +51,40 @@ public class StoneBlocks {
     public static final Block CICADA = new CicadaBlock();
 
     public static void initialize() {
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_clay"), B_CLAY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_clay"), new BlockItem(B_CLAY, new Item.Settings().group(NATURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "muddy_reed_roots"), B_ROOTS);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "muddy_reed_roots"), new BlockItem(B_ROOTS, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "volc_ash"), VOLCANIC_ASH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "volc_ash"), new BlockItem(VOLCANIC_ASH, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "volc_stone"), VOLCANIC_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "volc_stone"), new BlockItem(VOLCANIC_STONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scalding_volc_stone"), SCALDING_VOLC);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scalding_volc_stone"), new BlockItem(SCALDING_VOLC, new Item.Settings().group(NATURE_GROUP)));
+        var natureGroup = new Item.Settings().group(NATURE_GROUP);
+        
+        registerWithItem("brown_clay", B_CLAY, natureGroup);
+        //registerWithItem("muddy_reed_roots", B_ROOTS, natureGroup);
+        registerWithItem("volc_ash", VOLCANIC_ASH, natureGroup);
+        registerWithItem("volc_stone", VOLCANIC_STONE, natureGroup);
+        registerWithItem("scalding_volc_stone", SCALDING_VOLC, natureGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mixed_ore"), MIXED_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mixed_ore"), new BlockItem(MIXED_ORE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "saltpeter_ore"), SALTPETER_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "saltpeter_ore"), new BlockItem(SALTPETER_ORE, new Item.Settings().group(NATURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fossil_ore"), FOSSIL_ORE);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fossil_ore"), new BlockItem(FOSSIL_ORE, new Item.Settings().group(ARTIFACT_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "frozen_fossil_ore"), FROZEN_FOSSIL);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "frozen_fossil_ore"), new BlockItem(FROZEN_FOSSIL, new Item.Settings().group(ARTIFACT_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fossilized_sand_cicada"), CICADA);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fossilized_sand_cicada"), new BlockItem(CICADA, new Item.Settings().group(ARTIFACT_GROUP)));
+        registerWithItem("mixed_ore", MIXED_ORE, natureGroup);
+        registerWithItem("saltpeter_ore", SALTPETER_ORE, natureGroup);
+        //registerWithItem("fossil_ore", FOSSIL_ORE, natureGroup);
+        //registerWithItem("frozen_fossil_ore", FROZEN_FOSSIL, natureGroup);
+        //registerWithItem("fossilized_sand_cicada", CICADA, natureGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "glacial_stone"), GLACIAL_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "glacial_stone"), new BlockItem(GLACIAL_STONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scalding_stone"), SCALDING_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scalding_stone"), new BlockItem(SCALDING_STONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scalding_sandstone"), SCALDING_SANDSTONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scalding_sandstone"), new BlockItem(SCALDING_SANDSTONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "desert_gravel"), DESERT_GRAVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "desert_gravel"), new BlockItem(DESERT_GRAVEL, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bleached_gravel"), BLEACHED_GRAVEL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bleached_gravel"), new BlockItem(BLEACHED_GRAVEL, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("glacial_stone", GLACIAL_STONE, natureGroup);
+        registerWithItem("scalding_stone", SCALDING_STONE, natureGroup);
+        registerWithItem("scalding_sandstone", SCALDING_SANDSTONE, natureGroup);
+        registerWithItem("desert_gravel", DESERT_GRAVEL, natureGroup);
+        registerWithItem("bleached_gravel", BLEACHED_GRAVEL, natureGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_stone"), JUNGLE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_stone"), new BlockItem(JUNGLE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_cobble"), JUNGLE_COBBLE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_cobble"), new BlockItem(JUNGLE_COBBLE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_sporey"), JUNGLE_SPOREY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_sporey"), new BlockItem(JUNGLE_SPOREY, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "jungle_mossy"), JUNGLE_MOSSY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "jungle_mossy"), new BlockItem(JUNGLE_MOSSY, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stone_mossy"), STONE_MOSSY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_mossy"), new BlockItem(STONE_MOSSY, new Item.Settings().group(NATURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "oceanstone"), OCEAN_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "oceanstone"), new BlockItem(OCEAN_STONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "swampstone"), SWAMP_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "swampstone"), new BlockItem(SWAMP_STONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "darkstone"), DARK_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "darkstone"), new BlockItem(DARK_STONE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "taigastone"), TAIGA_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "taigastone"), new BlockItem(TAIGA_STONE, new Item.Settings().group(NATURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "salt_ore"), SALT_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salt_ore"), new BlockItem(SALT_ORE, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "salt_block"), SALT_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "salt_block"), new BlockItem(SALT_BLOCK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "nether_salt"), NETHER_SALT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nether_salt"), new BlockItem(NETHER_SALT, new Item.Settings().group(NATURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "nether_coal_ore"), NETHER_COAL_ORE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "nether_coal_ore"), new BlockItem(NETHER_COAL_ORE, new Item.Settings().group(NATURE_GROUP)));
+        registerWithItem("jungle_stone", JUNGLE, natureGroup);
+        registerWithItem("jungle_cobble", JUNGLE_COBBLE, natureGroup);
+        registerWithItem("jungle_sporey", JUNGLE_SPOREY, natureGroup);
+        registerWithItem("jungle_mossy", JUNGLE_MOSSY, natureGroup);
+        registerWithItem("stone_mossy", STONE_MOSSY, natureGroup);
+        
+        registerWithItem("oceanstone", OCEAN_STONE, natureGroup);
+        registerWithItem("swampstone", SWAMP_STONE, natureGroup);
+        registerWithItem("darkstone", DARK_STONE, natureGroup);
+        registerWithItem("taigastone", TAIGA_STONE, natureGroup);
+        
+        registerWithItem("salt_ore", SALT_ORE, natureGroup);
+        registerWithItem("salt_block", SALT_BLOCK, natureGroup);
+        registerWithItem("nether_salt", NETHER_SALT, natureGroup);
+        registerWithItem("nether_coal_ore", NETHER_COAL_ORE, natureGroup);
     }
 }
