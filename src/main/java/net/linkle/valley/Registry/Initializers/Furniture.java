@@ -13,16 +13,13 @@ import net.linkle.valley.Registry.Blocks.Plants.Stumps.MorelStumpBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Stumps.RedStumpBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.registry.Registry;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.COOKING_GROUP;
-import static net.linkle.valley.ValleyMain.MOD_ID;
+import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
 
 public class Furniture {
     public static final Block TABLE_OAK = new TableBlock();
@@ -249,326 +246,195 @@ public class Furniture {
     public static final Block BRAZIER_METAL = new BrazierMetalBlock();
 
     public static void initialize() {
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_oak"), TABLE_OAK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_oak"), new BlockItem(TABLE_OAK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_stone"), TABLE_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_stone"), new BlockItem(TABLE_STONE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_plaid"), TABLE_PLAID);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_plaid"), new BlockItem(TABLE_PLAID, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_birch"), TABLE_BIRCH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_birch"), new BlockItem(TABLE_BIRCH, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_spruce"), TABLE_SPRUCE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_spruce"), new BlockItem(TABLE_SPRUCE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_jungle"), TABLE_JUNGLE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_jungle"), new BlockItem(TABLE_JUNGLE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_acacia"), TABLE_ACACIA);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_acacia"), new BlockItem(TABLE_ACACIA, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_dark_oak"), TABLE_DARK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_dark_oak"), new BlockItem(TABLE_DARK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_warped"), TABLE_WARPED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_warped"), new BlockItem(TABLE_WARPED, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "table_crimson"), TABLE_CRIMSON);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "table_crimson"), new BlockItem(TABLE_CRIMSON, new Item.Settings().group(FURNITURE_GROUP)));
+        var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
+        var explGroup = new Item.Settings().group(EXPLORATION_GROUP);
+        var cookGroup = new Item.Settings().group(COOKING_GROUP);
+        var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
+        
+        registerWithItem("table_oak", TABLE_OAK, furnGroup);
+        registerWithItem("table_stone", TABLE_STONE, furnGroup);
+        registerWithItem("table_plaid", TABLE_PLAID, furnGroup);
+        registerWithItem("table_birch", TABLE_BIRCH, furnGroup);
+        registerWithItem("table_spruce", TABLE_SPRUCE, furnGroup);
+        registerWithItem("table_jungle", TABLE_JUNGLE, furnGroup);
+        registerWithItem("table_acacia", TABLE_ACACIA, furnGroup);
+        registerWithItem("table_dark_oak", TABLE_DARK, furnGroup);
+        registerWithItem("table_warped", TABLE_WARPED, furnGroup);
+        registerWithItem("table_crimson", TABLE_CRIMSON, furnGroup);
+        
+        registerWithItem("stool_oak", STOOL_OAK, furnGroup);
+        registerWithItem("stool_stone", STOOL_STONE, furnGroup);
+        registerWithItem("stool_plaid", STOOL_PLAID, furnGroup);
+        registerWithItem("stool_birch", STOOL_BIRCH, furnGroup);
+        registerWithItem("stool_spruce", STOOL_SPRUCE, furnGroup);
+        registerWithItem("stool_jungle", STOOL_JUNGLE, furnGroup);
+        registerWithItem("stool_acacia", STOOL_ACACIA, furnGroup);
+        registerWithItem("stool_dark_oak", STOOL_DARK, furnGroup);
+        registerWithItem("stool_warped", STOOL_WARPED, furnGroup);
+        registerWithItem("stool_crimson", STOOL_CRIMSON, furnGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_oak"), STOOL_OAK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_oak"), new BlockItem(STOOL_OAK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_stone"), STOOL_STONE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_stone"), new BlockItem(STOOL_STONE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_plaid"), STOOL_PLAID);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_plaid"), new BlockItem(STOOL_PLAID, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_birch"), STOOL_BIRCH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_birch"), new BlockItem(STOOL_BIRCH, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_spruce"), STOOL_SPRUCE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_spruce"), new BlockItem(STOOL_SPRUCE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_jungle"), STOOL_JUNGLE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_jungle"), new BlockItem(STOOL_JUNGLE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_acacia"), STOOL_ACACIA);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_acacia"), new BlockItem(STOOL_ACACIA, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_dark_oak"), STOOL_DARK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_dark_oak"), new BlockItem(STOOL_DARK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_warped"), STOOL_WARPED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_warped"), new BlockItem(STOOL_WARPED, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stool_crimson"), STOOL_CRIMSON);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stool_crimson"), new BlockItem(STOOL_CRIMSON, new Item.Settings().group(FURNITURE_GROUP)));
+        //registerWithItem("chair_stone", CHAIR_STONE, furnGroup);
 
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "chair_stone"), CHAIR_STONE);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chair_stone"), new BlockItem(CHAIR_STONE, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("iron_ladder", IRON_LADDER, furnGroup);
+        registerWithItem("bamboo_ladder", BAMBOO_LADDER, furnGroup);
+        registerWithItem("ladder_oak", OAK_LADDER, furnGroup);
+        registerWithItem("ladder_birch", BIRCH_LADDER, furnGroup);
+        registerWithItem("ladder_spruce", SPRUCE_LADDER, furnGroup);
+        registerWithItem("ladder_jungle", JUNGLE_LADDER, furnGroup);
+        registerWithItem("ladder_acacia", ACACIA_LADDER, furnGroup);
+        registerWithItem("ladder_dark", DARK_LADDER, furnGroup);
+        registerWithItem("ladder_warped", WARPED_LADDER, furnGroup);
+        registerWithItem("ladder_crimson", CRIMSON_LADDER, furnGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "iron_ladder"), IRON_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "iron_ladder"), new BlockItem(IRON_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bamboo_ladder"), BAMBOO_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bamboo_ladder"), new BlockItem(BAMBOO_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_oak"), OAK_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_oak"), new BlockItem(OAK_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_birch"),  BIRCH_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_birch"), new BlockItem(BIRCH_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_spruce"), SPRUCE_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_spruce"), new BlockItem(SPRUCE_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_jungle"), JUNGLE_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_jungle"), new BlockItem(JUNGLE_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_acacia"), ACACIA_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_acacia"), new BlockItem(ACACIA_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_dark"), DARK_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_dark"), new BlockItem(DARK_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_warped"), WARPED_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_warped"), new BlockItem(WARPED_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ladder_crimson"), CRIMSON_LADDER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ladder_crimson"), new BlockItem(CRIMSON_LADDER, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("scarecrow", SCARE, furnGroup);
+        registerWithItem("scarecrow_target", SCARE_TARGET, furnGroup);
+        registerWithItem("scarecrow_hat", SCARE_HAT, furnGroup);
+        registerWithItem("scarecrow_glow", SCARE_GLOW, furnGroup);
+        registerWithItem("scarecrow_hat_glow", SCARE_HAT_GLOW, furnGroup);
+        registerWithItem("scarecrow_soul", SCARE_SOUL, furnGroup);
+        registerWithItem("scarecrow_hat_soul", SCARE_HAT_SOUL, furnGroup);
+        registerWithItem("scarecrow_copper", SCARE_COPPER, furnGroup);
+        registerWithItem("scarecrow_hat_copper", SCARE_HAT_COPPER, furnGroup);
+        
+        registerWithItem("rarecrow_melon", RARE_MELON, furnGroup);
+        registerWithItem("rarecrow_zombie", RARE_ZOMBIE, furnGroup);
+        registerWithItem("rarecrow_skeleton", RARE_SKELETON, furnGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow"), SCARE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow"), new BlockItem(SCARE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_target"), SCARE_TARGET);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_target"), new BlockItem(SCARE_TARGET, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_hat"), SCARE_HAT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_hat"), new BlockItem(SCARE_HAT, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_glow"), SCARE_GLOW);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_glow"), new BlockItem(SCARE_GLOW, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_hat_glow"), SCARE_HAT_GLOW);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_hat_glow"), new BlockItem(SCARE_HAT_GLOW, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_soul"), SCARE_SOUL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_soul"), new BlockItem(SCARE_SOUL, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_hat_soul"), SCARE_HAT_SOUL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_hat_soul"), new BlockItem(SCARE_HAT_SOUL, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_copper"), SCARE_COPPER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_copper"), new BlockItem(SCARE_COPPER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "scarecrow_hat_copper"), SCARE_HAT_COPPER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "scarecrow_hat_copper"), new BlockItem(SCARE_HAT_COPPER, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rarecrow_melon"), RARE_MELON);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rarecrow_melon"), new BlockItem(RARE_MELON, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rarecrow_zombie"), RARE_ZOMBIE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rarecrow_zombie"), new BlockItem(RARE_ZOMBIE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rarecrow_skeleton"), RARE_SKELETON);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rarecrow_skeleton"), new BlockItem(RARE_SKELETON, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "snow"), SNOW);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snow"), new BlockItem(SNOW, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "spike_wall_block"), SPIKE_WALL_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "spike_wall_block"), new BlockItem(SPIKE_WALL_BLOCK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brazier"), BRAZIER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier"), new BlockItem(BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brazier_soul"), SOUL_BRAZIER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier_soul"), new BlockItem(SOUL_BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brazier_copper"), COPPER_BRAZIER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier_copper"), new BlockItem(COPPER_BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brazier_metal"), BRAZIER_METAL);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brazier_metal"), new BlockItem(BRAZIER_METAL, new Item.Settings().group(FURNITURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "blaze_brazier"), BLAZE_BRAZIER);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "blaze_brazier"), new BlockItem(BLAZE_BRAZIER, new Item.Settings().group(FURNITURE_GROUP)));
-
+        registerWithItem("snow", SNOW, furnGroup);
+        
+        registerWithItem("spike_wall_block", SPIKE_WALL_BLOCK, furnGroup);
+        registerWithItem("brazier", BRAZIER, furnGroup);
+        registerWithItem("brazier_soul", SOUL_BRAZIER, furnGroup);
+        registerWithItem("brazier_copper", COPPER_BRAZIER, furnGroup);
+        
+        //registerWithItem("brazier_metal", BRAZIER_METAL, furnGroup);
+        //registerWithItem("blaze_brazier", BLAZE_BRAZIER, furnGroup);
 
         //Crock Pots *coming soonTM*
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "campfire_pot"), CAMPFIRE_POT);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "campfire_pot"), new BlockItem(CAMPFIRE_POT, new Item.Settings().group(EXPLORATION_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "soul_campfire_pot"), SOUL_CAMPFIRE_POT);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soul_campfire_pot"), new BlockItem(SOUL_CAMPFIRE_POT, new Item.Settings().group(EXPLORATION_GROUP)));
+        //registerWithItem("campfire_pot", CAMPFIRE_POT, explGroup);
+        //registerWithItem("soul_campfire_pot", SOUL_CAMPFIRE_POT, explGroup);
+        
+        registerWithItem("screen", SCREEN, furnGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "screen"), SCREEN);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "screen"), new BlockItem(SCREEN, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("charcoal_block", CHARCOAL_BLOCK, furnGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "charcoal_block"), CHARCOAL_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "charcoal_block"), new BlockItem(CHARCOAL_BLOCK, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
+        //registerWithItem("ameranth_block", AMERANTH_BALE, furnGroup);
+        registerWithItem("fiber_block", FIBER_BALE, furnGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "seaweed_block"), SEAWEED_BALE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "seaweed_block"), new BlockItem(SEAWEED_BALE, new Item.Settings().group(FURNITURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "ameranth_block"), AMERANTH_BALE);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "ameranth_block"), new BlockItem(AMERANTH_BALE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "fiber_block"), FIBER_BALE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "fiber_block"), new BlockItem(FIBER_BALE, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
+        registerWithItem("copper_chain", CHAIN_C, explGroup);
+        registerWithItem("golden_chain", CHAIN_G, explGroup);
+        registerWithItem("netherite_chain", CHAIN_N, explGroup);
 
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "climbable_rope"), CLIMBABLE_ROPE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "climbable_rope"), new BlockItem(CLIMBABLE_ROPE, new Item.Settings().group(EXPLORATION_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "copper_chain"), CHAIN_C);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "copper_chain"), new BlockItem(CHAIN_C, new Item.Settings().group(EXPLORATION_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "golden_chain"), CHAIN_G);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "golden_chain"), new BlockItem(CHAIN_G, new Item.Settings().group(EXPLORATION_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "netherite_chain"), CHAIN_N);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "netherite_chain"), new BlockItem(CHAIN_N, new Item.Settings().group(EXPLORATION_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_bricks"), B_BRICKS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_bricks"), new BlockItem(B_BRICKS, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_cracked_bricks"), B_CRACKED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_cracked_bricks"), new BlockItem(B_CRACKED, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_mossy_bricks"), B_MOSSY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_mossy_bricks"), new BlockItem(B_MOSSY, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_brick_slab"), B_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_brick_slab"), new BlockItem(B_SLAB, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "brown_brick_stairs"), B_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "brown_brick_stairs"), new BlockItem(B_STAIRS, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "smooth_stone"), SMOOTH_STONE_BRICK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "smooth_stone"), new BlockItem(SMOOTH_STONE_BRICK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stone_tiles"), SMOOTH_STONE_TILE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_tiles"), new BlockItem(SMOOTH_STONE_TILE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stone_tile_slab"), SMOOTH_STONE_TILE_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_tile_slab"), new BlockItem(SMOOTH_STONE_TILE_SLAB, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stone_tile_stairs"), SMOOTH_STONE_TILE_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stone_tile_stairs"), new BlockItem(SMOOTH_STONE_TILE_STAIRS, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_brick"), COBBLE_BRICK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_brick"), new BlockItem(COBBLE_BRICK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_mossy_brick"), COBBLE_MOSSY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_mossy_brick"), new BlockItem(COBBLE_MOSSY, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_brick_slab"), COBBLE_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_brick_slab"), new BlockItem(COBBLE_SLAB, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "cobblestone_brick_stairs"), COBBLE_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cobblestone_brick_stairs"), new BlockItem(COBBLE_STAIRS, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_bricks"), C_BRICKS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_bricks"), new BlockItem(C_BRICKS, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_slab"), C_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_slab"), new BlockItem(C_SLAB, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_stairs"), C_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_stairs"), new BlockItem(C_STAIRS, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "chiseled_carmine"), C_CHISELED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chiseled_carmine"), new BlockItem(C_CHISELED, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_cracked"), C_CRACK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_cracked"), new BlockItem(C_CRACK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_mossy"), C_MOSSY);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_mossy"), new BlockItem(C_MOSSY, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "carmine_smooth"), C_SMOOTH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "carmine_smooth"), new BlockItem(C_SMOOTH, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("brown_bricks", B_BRICKS, furnGroup);
+        registerWithItem("brown_cracked_bricks", B_CRACKED, furnGroup);
+        registerWithItem("brown_mossy_bricks", B_MOSSY, furnGroup);
+        registerWithItem("brown_brick_slab", B_SLAB, furnGroup);
+        registerWithItem("brown_brick_stairs", B_STAIRS, furnGroup);
+        registerWithItem("smooth_stone", SMOOTH_STONE_BRICK, furnGroup);
+        registerWithItem("stone_tiles", SMOOTH_STONE_TILE, furnGroup);
+        registerWithItem("stone_tile_slab", SMOOTH_STONE_TILE_SLAB, furnGroup);
+        registerWithItem("stone_tile_stairs", SMOOTH_STONE_TILE_STAIRS, furnGroup);
+        
+        registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
+        registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
+        registerWithItem("cobblestone_brick_slab", COBBLE_SLAB, furnGroup);
+        registerWithItem("cobblestone_brick_stairs", COBBLE_STAIRS, furnGroup);
+        
+        registerWithItem("carmine_bricks", C_BRICKS, furnGroup);
+        registerWithItem("carmine_slab", C_SLAB, furnGroup);
+        registerWithItem("carmine_stairs", C_STAIRS, furnGroup);
+        registerWithItem("chiseled_carmine", C_CHISELED, furnGroup);
+        registerWithItem("carmine_cracked", C_CRACK, furnGroup);
+        registerWithItem("carmine_mossy", C_MOSSY, furnGroup);
+        registerWithItem("carmine_smooth", C_SMOOTH, furnGroup);
 
         //Lanterns & Torches
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "redstone_lantern"), REDSTONE_LANTERN);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "redstone_lantern"), new BlockItem(REDSTONE_LANTERN, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mug_block"), MUG_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mug_block"), new BlockItem(MUG_BLOCK, new Item.Settings().group(COOKING_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "small_mug_block"), SMALL_MUG_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "small_mug_block"), new BlockItem(SMALL_MUG_BLOCK, new Item.Settings().group(COOKING_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "goblet"), GOBLET_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "goblet"), new BlockItem(GOBLET_BLOCK, new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bowl_block"), BOWL_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bowl_block"), new BlockItem(BOWL_BLOCK, new Item.Settings().group(COOKING_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bento_block"), BENTO_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bento_block"), new BlockItem(BENTO_BLOCK, new Item.Settings().group(COOKING_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stew_pot"), STEW_POT);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stew_pot"), new BlockItem(STEW_POT, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stew_campfire_pot"), STEW_POT_CAMPFIRE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stew_campfire_pot"), new BlockItem(STEW_POT_CAMPFIRE, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "anchor"), ANCHOR);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "anchor"), new BlockItem(ANCHOR, new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass"), BEVELED_PANE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass"), new BlockItem(BEVELED_PANE, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_copper"), BEVELED_PANE_COPPER);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_copper"), new BlockItem(BEVELED_PANE_COPPER, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_gold"), BEVELED_PANE_GOLD);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_gold"), new BlockItem(BEVELED_PANE_GOLD, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_netherite"), BEVELED_PANE_NETHERITE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_netherite"), new BlockItem(BEVELED_PANE_NETHERITE, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("redstone_lantern", REDSTONE_LANTERN, furnGroup);
+        
+        registerWithItem("mug_block", MUG_BLOCK, cookGroup);
+        registerWithItem("small_mug_block", SMALL_MUG_BLOCK, cookGroup);
+        registerWithItem("goblet", GOBLET_BLOCK, furnGroupRare);
+        registerWithItem("bowl_block", BOWL_BLOCK, cookGroup);
+        registerWithItem("bento_block", BENTO_BLOCK, cookGroup);
+        registerWithItem("stew_pot", STEW_POT, furnGroup);
+        registerWithItem("stew_campfire_pot", STEW_POT_CAMPFIRE, furnGroup);
+        
+        registerWithItem("anchor", ANCHOR, furnGroupRare);
+        registerWithItem("beveled_glass", BEVELED_PANE, furnGroup);
+        registerWithItem("beveled_glass_copper", BEVELED_PANE_COPPER, furnGroup);
+        registerWithItem("beveled_glass_gold", BEVELED_PANE_GOLD, furnGroup);
+        registerWithItem("beveled_glass_netherite", BEVELED_PANE_NETHERITE, furnGroup);
+        
         //amethyst
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_amethyst"), BEVELED_PANE_A);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_amethyst"), new BlockItem(BEVELED_PANE_A, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_amethyst_copper"), BEVELED_PANE_A_C);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_amethyst_copper"), new BlockItem(BEVELED_PANE_A_C, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_amethyst_gold"), BEVELED_PANE_A_G);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_amethyst_gold"), new BlockItem(BEVELED_PANE_A_G, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "beveled_glass_amethyst_netherite"), BEVELED_PANE_A_N);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "beveled_glass_amethyst_netherite"), new BlockItem(BEVELED_PANE_A_N, new Item.Settings().group(FURNITURE_GROUP)));
+        registerWithItem("beveled_glass_amethyst", BEVELED_PANE_A, furnGroup);
+        registerWithItem("beveled_glass_amethyst_copper", BEVELED_PANE_A_C, furnGroup);
+        registerWithItem("beveled_glass_amethyst_gold", BEVELED_PANE_A_G, furnGroup);
+        registerWithItem("beveled_glass_amethyst_netherite", BEVELED_PANE_A_N, furnGroup);
 
+        registerWithItem("rope_bridge", ROPE_BRIDGE, explGroup);
+        registerWithItem("rope_bridge_anchor", ROPE_BRIDGE_ANCHOR, explGroup);
+        registerWithItem("net_block", NET, explGroup);
+
+        registerWithItem("lantern_hanging", LANTERN_HANGING, furnGroup);
+        registerWithItem("soul_hanging", SOUL_HANGING, furnGroup);
+        registerWithItem("redstone_hanging", RED_HANGING, furnGroup);
+
+        registerWithItem("rounded_barrel", ROUNDED_BARREL, furnGroup);
+
+        registerWithItem("soul_jack_o_lantern", SOUL_JACK, furnGroup);
+        registerWithItem("copper_jack_o_lantern", COPPER_JACK, furnGroup);
+
+        registerWithItem("volc_stone_smooth", VOLCANIC_STONE_SMOOTH, furnGroup);
+        
+        registerWithItem("chimney_cobble", CHIMNEY_COBBLE, furnGroup);
+        
+        registerWithItem("hanging_pot", HANGING, furnGroup);
+
+        //registerWithItem("hanging_redstone", HANGING_R, furnGroup);
+        //registerWithItem("hanging_fluorite", HANGING_F, furnGroup);
+
+        registerWithItem("hanging_diamond", HANGING_D, furnGroup);
+        registerWithItem("hanging_emerald", HANGING_E, furnGroup);
+        registerWithItem("hanging_amethyst", HANGING_A, furnGroup);
+        registerWithItem("hanging_glowstone", HANGING_G, furnGroup);
+
+        registerWithItem("crystal_ball", CRYSTAL, furnGroup);
+        //registerWithItem("crystal_ball_snow", CRYSTAL_FROZEN, furnGroupRare);
+        
+        registerWithItem("bookshelf_cobweb", BOOK_COBWEB, furnGroup);
+        
+        registerWithItem("bookshelf_empty", EMPTY_SHELF, furnGroup);
+        registerWithItem("bookshelf_empty_cobweb", EMPTY_COBWEB, furnGroup);
+        
+        registerWithItem("bookshelf_lantern", LANTERN_SHELF, furnGroup);
+        registerWithItem("bookshelf_lantern_cobweb", LANTERN_COBWEB, furnGroup);
+        
+        registerWithItem("bookshelf_potions", POTION_SHELF, furnGroup);
+        registerWithItem("bookshelf_potions_cobweb", POTION_COBWEB, furnGroup);
+        
+        registerWithItem("bookshelf_anthropology", ANTHRO_SHELF, furnGroup);
+        registerWithItem("bookshelf_anthropology_cobweb", ANTHRO_COBWEB, furnGroup);
+        
+        registerWithItem("bookshelf_dishes", DISH_SHELF, furnGroup);
+        registerWithItem("bookshelf_dishes_cobweb", DISH_COBWEB, furnGroup);
+        
+        registerWithItem("stump_morel", STUMP_MOREL, furnGroup);
+        registerWithItem("stump_red", STUMP_RED, furnGroup);
+        registerWithItem("stump_brown", STUMP_BROWN, furnGroup);
+
+        registerWithItem("keg", KEG, furnGroup);
+
+        registerWithItem("wreath", WREATH, furnGroup);
+        registerWithItem("miners_crest", CREST, furnGroup);
+        
+        registerWithItem("gear", GEAR, furnGroupRare);
+
+        registerWithItem("pet_bed", PET_BED, furnGroup);
+        
         //Fuels
         //same as Coal Block
         FuelRegistry.INSTANCE.add(CHARCOAL_BLOCK, 16000);
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rope_bridge"), ROPE_BRIDGE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rope_bridge"), new BlockItem(ROPE_BRIDGE, new Item.Settings().group(EXPLORATION_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rope_bridge_anchor"), ROPE_BRIDGE_ANCHOR);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rope_bridge_anchor"), new BlockItem(ROPE_BRIDGE_ANCHOR, new Item.Settings().group(EXPLORATION_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "net_block"), NET);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "net_block"), new BlockItem(NET, new Item.Settings().group(EXPLORATION_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "lantern_hanging"), LANTERN_HANGING);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "lantern_hanging"), new BlockItem(LANTERN_HANGING, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "soul_hanging"), SOUL_HANGING);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soul_hanging"), new BlockItem(SOUL_HANGING, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "redstone_hanging"), RED_HANGING);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "redstone_hanging"), new BlockItem(RED_HANGING, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "rounded_barrel"), ROUNDED_BARREL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "rounded_barrel"), new BlockItem(ROUNDED_BARREL, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "soul_jack_o_lantern"), SOUL_JACK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "soul_jack_o_lantern"), new BlockItem(SOUL_JACK, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "copper_jack_o_lantern"), COPPER_JACK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "copper_jack_o_lantern"), new BlockItem(COPPER_JACK, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "volc_stone_smooth"), VOLCANIC_STONE_SMOOTH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "volc_stone_smooth"), new BlockItem(VOLCANIC_STONE_SMOOTH, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "chimney_cobble"), CHIMNEY_COBBLE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "chimney_cobble"), new BlockItem(CHIMNEY_COBBLE, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_pot"), HANGING);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_pot"), new BlockItem(HANGING, new Item.Settings().group(FURNITURE_GROUP)));
-
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_redstone"), HANGING_R);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_redstone"), new BlockItem(HANGING_R, new Item.Settings().group(FURNITURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_fluorite"), HANGING_F);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_fluorite"), new BlockItem(HANGING_F, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_diamond"), HANGING_D);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_diamond"), new BlockItem(HANGING_D, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_emerald"), HANGING_E);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_emerald"), new BlockItem(HANGING_E, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_amethyst"), HANGING_A);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_amethyst"), new BlockItem(HANGING_A, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "hanging_glowstone"), HANGING_G);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "hanging_glowstone"), new BlockItem(HANGING_G, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "crystal_ball"), CRYSTAL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystal_ball"), new BlockItem(CRYSTAL, new Item.Settings().group(FURNITURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "crystal_ball_snow"), CRYSTAL_FROZEN);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystal_ball_snow"), new BlockItem(CRYSTAL_FROZEN, new Item.Settings().group(ARTIFACT_GROUP).rarity(Rarity.RARE)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_cobweb"), BOOK_COBWEB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_cobweb"), new BlockItem(BOOK_COBWEB, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_empty"), EMPTY_SHELF);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_empty"), new BlockItem(EMPTY_SHELF, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_empty_cobweb"), EMPTY_COBWEB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_empty_cobweb"), new BlockItem(EMPTY_COBWEB, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_lantern"), LANTERN_SHELF);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_lantern"), new BlockItem(LANTERN_SHELF, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_lantern_cobweb"), LANTERN_COBWEB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_lantern_cobweb"), new BlockItem(LANTERN_COBWEB, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_potions"), POTION_SHELF);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_potions"), new BlockItem(POTION_SHELF, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_potions_cobweb"), POTION_COBWEB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_potions_cobweb"), new BlockItem(POTION_COBWEB, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_anthropology"), ANTHRO_SHELF);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_anthropology"), new BlockItem(ANTHRO_SHELF, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_anthropology_cobweb"), ANTHRO_COBWEB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_anthropology_cobweb"), new BlockItem(ANTHRO_COBWEB, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_dishes"), DISH_SHELF);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_dishes"), new BlockItem(DISH_SHELF, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "bookshelf_dishes_cobweb"), DISH_COBWEB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "bookshelf_dishes_cobweb"), new BlockItem(DISH_COBWEB, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stump_morel"), STUMP_MOREL);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stump_morel"), new BlockItem(STUMP_MOREL, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stump_red"), STUMP_RED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stump_red"), new BlockItem(STUMP_RED, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "stump_brown"), STUMP_BROWN);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "stump_brown"), new BlockItem(STUMP_BROWN, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "keg"), KEG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "keg"), new BlockItem(KEG, new Item.Settings().group(FURNITURE_GROUP)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "wreath"), WREATH);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "wreath"), new BlockItem(WREATH, new Item.Settings().group(FURNITURE_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "miners_crest"), CREST);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "miners_crest"), new BlockItem(CREST, new Item.Settings().group(FURNITURE_GROUP)));
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "gear"), GEAR);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "gear"), new BlockItem(GEAR, new Item.Settings().group(ARTIFACT_GROUP).rarity(Rarity.RARE)));
-
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "pet_bed"), PET_BED);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "pet_bed"), new BlockItem(PET_BED, new Item.Settings().group(FURNITURE_GROUP)));
     }
 }
