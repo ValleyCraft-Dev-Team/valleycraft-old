@@ -2,28 +2,22 @@ package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.linkle.valley.Registry.Commons.BlockWithWater;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class BrazierMetalBlock extends Block implements Waterloggable {
+public class BrazierMetalBlock extends BlockWithWater {
     protected static final VoxelShape BRAZIER_SHAPE;
 
     public BrazierMetalBlock() {

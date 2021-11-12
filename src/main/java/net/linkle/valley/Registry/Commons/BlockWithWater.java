@@ -15,14 +15,14 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
 /**
- * Commonly used for blocks with horizontal facing and waterlogged. Overriding
- * some method without calling the subclass's method 'super.appendProperties()'
- * is prone to break block's horizontal facing and waterlogged.
+ * Commonly used for blocks with waterloggable. Overriding some method such as
+ * appendProperties without calling the subclass method
+ * 'super.appendProperties()' is prone to break block's waterloggable.
  */
-public class HorizontalWithWaterBlock extends HorizontalBlock implements Waterloggable {
+public class BlockWithWater extends Block implements Waterloggable {
     protected static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    protected HorizontalWithWaterBlock(Settings settings) {
+    public BlockWithWater(Settings settings) {
         super(settings);
     }
 

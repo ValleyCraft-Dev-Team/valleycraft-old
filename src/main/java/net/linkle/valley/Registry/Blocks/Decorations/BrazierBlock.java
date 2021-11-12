@@ -2,29 +2,21 @@ package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
+import net.linkle.valley.Registry.Commons.BlockWithWater;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class BrazierBlock extends Block implements Waterloggable {
-    public static final BooleanProperty WATERLOGGED;
+public class BrazierBlock extends BlockWithWater {
     protected static final VoxelShape BRAZIER_SHAPE;
 
     public BrazierBlock(int luminance) {
@@ -33,23 +25,6 @@ public class BrazierBlock extends Block implements Waterloggable {
                 .sounds(BlockSoundGroup.STONE).luminance(luminance)
                 .strength(1.0f, 1.0f));
         setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
-    }
-
-    @Nullable
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
-        if ((Boolean)state.get(WATERLOGGED)) {
-            world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-        }
-
-        return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
-    }
-
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED);
-    }
-
-    public FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
@@ -73,8 +48,7 @@ public class BrazierBlock extends Block implements Waterloggable {
     }
 
     static {
-        WATERLOGGED = Properties.WATERLOGGED;
-        BRAZIER_SHAPE = Block.createCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 16.0D, 11.0D);
+        BRAZIER_SHAPE = Block.createCuboidShape(5, 0, 5, 11, 16, 11);
     }
 }
 
