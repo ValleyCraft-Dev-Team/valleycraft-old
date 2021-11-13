@@ -1,23 +1,19 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
-import net.minecraft.block.*;
+import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
-public class RopeBridgeBlock extends Block implements Waterloggable {
+public class RopeBridgeBlock extends HorizontalWithWaterBlock {
 
-    public static final BooleanProperty WATERLOGGED;
-    public static final DirectionProperty FACING;
     protected static final VoxelShape BASEPLATE_SHAPE_X_AXIS;
     protected static final VoxelShape BASEPLATE_SHAPE_Z_AXIS;
     protected static final VoxelShape ROPE_LEFT_X_SHAPE;
@@ -29,29 +25,36 @@ public class RopeBridgeBlock extends Block implements Waterloggable {
 
     public RopeBridgeBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.NORTH).with(WATERLOGGED, false));
+        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        Direction direction = (Direction)state.get(FACING);
+        Direction direction = state.get(FACING);
         return direction.getAxis() == Direction.Axis.X ? X_AXIS_SHAPE : Z_AXIS_SHAPE;
-    }
-
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing());
-    }
-
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{FACING, WATERLOGGED});
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return true;
     }
+    
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        var placeState = super.getPlacementState(ctx);
+        var world = ctx.getWorld();
+        var pos = ctx.getBlockPos();
+        for (int i = 0; i < 4; i++) {
+            var face = Direction.fromHorizontal(i);
+            var state = world.getBlockState(pos.offset(face));
+            if (state.getBlock() instanceof RopeBridgeBlock) {
+                if (face.getAxis() == state.get(FACING).getAxis()) {
+                    return placeState.with(FACING, face);
+                }
+            }
+        }
+        return placeState;
+    }
 
     static {
-        WATERLOGGED = Properties.WATERLOGGED;
-        FACING = HorizontalFacingBlock.FACING;
         BASEPLATE_SHAPE_X_AXIS =  Block.createCuboidShape(1,-2,1,15, 1, 15);
         BASEPLATE_SHAPE_Z_AXIS =  Block.createCuboidShape(1,-2,1,15, 1, 15);
         ROPE_LEFT_X_SHAPE = Block.createCuboidShape(0,0,0,1,12,16);

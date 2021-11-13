@@ -12,7 +12,7 @@
     "valley:ladder_acacia","valley:bamboo_ladder","valley:ladder_dark","valley:ladder_oak","valley:ladder_jungle","valley:ladder_spruce",
     "valley:ladder_birch","valley:ladder_crimson","valley:ladder_warped",
     "valley:bookshelf_empty","valley:bookshelf_empty_cobweb", "valley:bookshelf_cobweb", "valley:bookshelf_anthropology"
-  , "valley:bookshelf_anthropology_cobweb", "valley:bookshelf_lantern", "valley:bookshelf_lantern_cobweb", "valley:crystal_ball"
+  , "valley:bookshelf_anthropology_cobweb", "valley:bookshelf_lantern","valley:bookshelf_lantern_cobweb", "valley:crystal_ball"
   , "valley:bookshelf_potions", "valley:bookshelf_potions_cobweb", "valley:bookshelf_dishes", "valley:bookshelf_dishes_cobweb"
   ]
 }

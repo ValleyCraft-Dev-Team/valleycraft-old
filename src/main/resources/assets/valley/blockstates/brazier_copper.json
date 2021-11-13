@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "valley:block/brazier_copper"
-    }
+	"waterlogged=false": {
+	  "model": "valley:block/brazier_copper"
+	},
+	"waterlogged=true": {
+	  "model": "valley:block/brazier_copper_off"
+	}
   }
 }

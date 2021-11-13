@@ -21,7 +21,7 @@ class PistonBlockMixin extends FacingBlock {
     
     @Inject(method = "shouldExtend", at = @At("HEAD"), cancellable = true)
     void pistonFix(World world, BlockPos pos, Direction pistonFace, CallbackInfoReturnable<Boolean> info) {
-        if (world instanceof RedstoneWorldExt ext && ext.emitsPower(pos)) {
+        if (world instanceof RedstoneWorldExt ext && ext.isReceivingPower(pos)) {
             info.setReturnValue(true);
         }
     }

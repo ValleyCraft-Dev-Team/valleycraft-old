@@ -12,12 +12,10 @@ import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.COOKING_GROUP;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.NATURE_GROUP;
-import static net.linkle.valley.ValleyMain.MOD_ID;
+import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Crops {
     //Puff Ball
@@ -42,23 +40,23 @@ public class Crops {
 
     public static void initialize() {
         //Puff Ball
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID,"puff_crop_block"), PUFF_CROP_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID,"puff_seeds"), PUFF_SEEDS);
+        register("puff_crop_block", PUFF_CROP_BLOCK);
+        register("puff_seeds", PUFF_SEEDS);
         //Green Bean
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID,"green_bean_crop_block"), GB_CROP_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID,"green_bean_seeds"), GB_SEEDS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "green_bean"), GREEN_BEAN);
+        register("green_bean_crop_block", GB_CROP_BLOCK);
+        register("green_bean_seeds", GB_SEEDS);
+        register("green_bean", GREEN_BEAN);
         //Mandrake
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID,"mandrake_crop_block"), MANDRAKE_CROP_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID,"mandrake_seeds"), MANDRAKE_SEEDS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mandrake"), MANDRAKE);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "cooked_mandrake"), COOKED_MANDRAKE);
+        register("mandrake_crop_block", MANDRAKE_CROP_BLOCK);
+        register("mandrake_seeds", MANDRAKE_SEEDS);
+        register("mandrake", MANDRAKE);
+        register("cooked_mandrake", COOKED_MANDRAKE);
         //Crystal Fruit
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID,"crystal_crop_block"), CRYSTAL_CROP_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID,"crystal_seeds"), CRYSTAL_SEEDS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "crystal_fruit"), CRYSTAL_FRUIT);
+        register("crystal_crop_block", CRYSTAL_CROP_BLOCK);
+        register("crystal_seeds", CRYSTAL_SEEDS);
+        register("crystal_fruit", CRYSTAL_FRUIT);
         //Foraged Items
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "snow_yam_item"), SNOW_YAM_ITEM);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "winter_root_item"), WINTER_ROOT_ITEM);
+        register("snow_yam_item", SNOW_YAM_ITEM);
+        register("winter_root_item", WINTER_ROOT_ITEM);
     }
 }

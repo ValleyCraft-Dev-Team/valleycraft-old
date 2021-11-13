@@ -12,7 +12,6 @@ public class RedLanternBlock extends LanternBlock {
         super(settings);
     }
 
-
     @Override
     public boolean emitsRedstonePower(BlockState state) {
         return true;
@@ -22,5 +21,4 @@ public class RedLanternBlock extends LanternBlock {
     public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return 15;
     }
-
 }

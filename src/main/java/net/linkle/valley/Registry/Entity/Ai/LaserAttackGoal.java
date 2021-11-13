@@ -20,6 +20,7 @@ public class LaserAttackGoal extends TrackTargetGoal {
         setControls(EnumSet.of(Control.TARGET));
     }
 
+    @Override
     public boolean canStart() {
         if (laserExt.hasEntity()) {
             var entity = laserExt.getLaserHit();
@@ -38,6 +39,7 @@ public class LaserAttackGoal extends TrackTargetGoal {
         return false;
     }
 
+    @Override
     public void start() {
         if (laserExt.hasEntity()) {
             mob.setTarget(laserExt.getLaserHit());

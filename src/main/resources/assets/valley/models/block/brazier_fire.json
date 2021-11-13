@@ -1,0 +1,7 @@
+{
+	"parent": "valley:block/brazier",
+	"textures": {
+		"fire":	 "valley:blocks/campfire_pot_fire",
+		"pot":	 "valley:blocks/polished_stone_bricks"
+	}
+}
