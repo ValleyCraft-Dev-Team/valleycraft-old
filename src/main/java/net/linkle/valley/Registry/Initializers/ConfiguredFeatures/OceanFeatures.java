@@ -18,7 +18,6 @@ import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.HeightmapDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 
-@SuppressWarnings("deprecation")
 public class OceanFeatures {
     /** Custom gen feature to spawn stuffs in ocean. */
     private static final SeaPatchFeature SEA_PATCH = new SeaPatchFeature();

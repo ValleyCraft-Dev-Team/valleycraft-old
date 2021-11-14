@@ -426,5 +426,20 @@
   "entity.valley.bear": "Bear",
   "entity.valley.duck": "Duck",
   "item.valley.duck_egg": "Duck Egg",
-  "item.valley.redstone_wand": "Redstone Wand"
+  "item.valley.redstone_wand": "Redstone Wand",
+  
+  "item.valley.trader_helmet": "Trader Head Wrap",
+  "item.valley.trader_chestplate": "Trader Coat",
+  "item.valley.trader_boots": "Sandals",
+  "item.valley.turtle_chestplate": "Turtle Chestplate",
+  "item.valley.turtle_leggings": "Turtle Leggings",
+  "item.valley.turtle_boots": "Turtle Boots",
+  "item.valley.fur_chestplate": "Fur Coat",
+  "item.valley.quiver_helmet": "Linkle, can you name this item?",
+  "item.valley.quiver_chestplate": "Arrow Quiver",
+  "item.valley.quiver_leggings": "Steam Punk Leggings",
+  "item.valley.quiver_boots": "Steam Punk Boots",
+  "item.valley.chef_helmet": "Chef Headband",
+  "item.valley.chef_chestplate": "Chef Apron",
+  "item.valley.alt_trader_chestplate": "Sleeveless Trader Coat"
 }

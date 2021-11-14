@@ -1,16 +1,16 @@
 package net.linkle.valley.Registry.Armors;
 
-import net.linkle.valley.Registry.Initializers.MiscItems;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class FurArmorMaterial implements ArmorMaterial {
-    public static final ArmorMaterial INSTANCE = new FurArmorMaterial();
-
-    static final int[] PROTECTION_VALUES = new int[] {2, 5, 6, 2};
+public class ChefArmorMaterial implements ArmorMaterial {
+    public static final ArmorMaterial INSTANCE = new ChefArmorMaterial();
     
+    static final int[] PROTECTION_VALUES = new int[] {2, 5, 6, 2};
+
     @Override
     public int getDurability(EquipmentSlot slot) {
         return getDurability(slot, 10);
@@ -33,12 +33,12 @@ public class FurArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(MiscItems.FUR_CLUMP);
+        return Ingredient.ofItems(Items.LEATHER);
     }
 
     @Override
     public String getName() {
-        return "fur";
+        return "chef";
     }
 
 }
