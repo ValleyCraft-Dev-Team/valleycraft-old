@@ -118,7 +118,7 @@ public class Furniture {
 
     public static final Block ANCHOR = new AnchorBlock();
 
-    public static final Block CHARCOAL_BLOCK = new CharcoalBlock(FabricBlockSettings.of(Material.STONE)
+    public static final Block CHARCOAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE)
             .breakByTool(FabricToolTags.PICKAXES)
             .breakByHand(false)
             .sounds(BlockSoundGroup.STONE)
@@ -241,7 +241,6 @@ public class Furniture {
     public static final Block PET_BED = new PetBedBlock();
     public static final Block WREATH = new WreathBlock();
     public static final Block CREST = new CrestBlock();
-    public static final Block GEAR = new GearBlock();
 
     public static final Block BRAZIER_METAL = new BrazierMetalBlock();
 

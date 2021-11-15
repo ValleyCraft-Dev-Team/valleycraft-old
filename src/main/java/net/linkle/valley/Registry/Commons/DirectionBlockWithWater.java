@@ -26,6 +26,7 @@ public class DirectionBlockWithWater extends DirectionBlock implements Waterlogg
         super(settings);
     }
 
+    /** Please call this subclass method to append facing and waterlogged properties: <code>super.appendProperties(builder)</code> */
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return super.getPlacementState(ctx).with(WATERLOGGED, Util.inWater(ctx));

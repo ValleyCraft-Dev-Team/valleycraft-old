@@ -46,11 +46,10 @@ public class KegBlock extends HorizontalWithWaterBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
-
+    
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var state = super.getPlacementState(ctx);
-        return state.with(FACING, state.get(FACING).getOpposite());
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return super.getFacing(ctx).getOpposite();
     }
 
     @Override

@@ -2,21 +2,21 @@ package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.linkle.valley.Registry.Commons.DirectionBlockWithWater;
+import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
-public class WreathBlock extends DirectionBlockWithWater {
+public class WreathBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape EAST_SHAPE;
     protected static final VoxelShape WEST_SHAPE;
     protected static final VoxelShape SOUTH_SHAPE;
     protected static final VoxelShape NORTH_SHAPE;
-    protected static final VoxelShape UP_SHAPE;
-    protected static final VoxelShape DOWN_SHAPE;
 
     public WreathBlock() {
         super(FabricBlockSettings.of(Material.LEAVES)
@@ -37,12 +37,14 @@ public class WreathBlock extends DirectionBlockWithWater {
                 return WEST_SHAPE;
             case EAST:
                 return EAST_SHAPE;
-            case UP:
-                return UP_SHAPE;
-            case DOWN:
             default:
-                return DOWN_SHAPE;
+                return NORTH_SHAPE;
         }
+    }
+    
+    @Override
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return getSideElseUserFacing(ctx, true);
     }
 
     @Override
@@ -51,8 +53,6 @@ public class WreathBlock extends DirectionBlockWithWater {
     }
 
     static {
-        UP_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
-        DOWN_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
         WEST_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 2.0D, 1.0D, 12.0D, 14.0D);
         EAST_SHAPE = Block.createCuboidShape(15.0D, 0.0D, 2.0D, 16.0D, 12.0D, 15.0D);
         NORTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);

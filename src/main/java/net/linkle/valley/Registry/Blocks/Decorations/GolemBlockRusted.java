@@ -32,9 +32,8 @@ public class GolemBlockRusted extends HorizontalWithWaterBlock {
     }
     
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var state = super.getPlacementState(ctx);
-        return state.with(FACING, state.get(FACING).getOpposite());
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return super.getFacing(ctx).getOpposite();
     }
 
     @Override

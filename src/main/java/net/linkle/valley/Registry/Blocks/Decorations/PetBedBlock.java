@@ -26,9 +26,8 @@ public class PetBedBlock extends HorizontalWithWaterBlock {
     }
     
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var state = super.getPlacementState(ctx);
-        return state.with(FACING, state.get(FACING).getOpposite());
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return super.getFacing(ctx).getOpposite();
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

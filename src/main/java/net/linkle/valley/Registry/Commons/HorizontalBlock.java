@@ -18,18 +18,36 @@ public class HorizontalBlock extends HorizontalFacingBlock {
         super(settings);
     }
 
+    /**
+     * Please call this subclass method to append facing property:
+     * <code>super.appendProperties(builder)</code>
+     */
     @Override
     protected void appendProperties(Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
+    /**
+     * Use {@link DirectionBlock#getFacing(ItemPlacementContext)} if you only modify
+     * face direction placement.
+     */
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return super.getPlacementState(ctx).with(FACING, getFacing(ctx));
     }
-    
+
     /** Override this method for custom facing. */
     protected Direction getFacing(ItemPlacementContext ctx) {
         return ctx.getPlayerFacing();
+    }
+
+    /**
+     * Utility method for horizontal side. If the block place on vertical side, then
+     * get the player's yaw facing.
+     */
+    protected static Direction getSideElseUserFacing(ItemPlacementContext ctx, boolean oppositeSide) {
+        final Direction side = ctx.getSide();
+        return side.getAxis().isVertical() ? ctx.getPlayerFacing() :
+               oppositeSide ? side.getOpposite() : side;
     }
 }

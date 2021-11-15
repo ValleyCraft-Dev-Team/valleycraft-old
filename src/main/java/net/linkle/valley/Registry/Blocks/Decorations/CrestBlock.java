@@ -45,15 +45,8 @@ public class CrestBlock extends HorizontalWithWaterBlock {
     }
     
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var state = super.getPlacementState(ctx);
-        var face = ctx.getSide();
-        
-        if (face.getAxis().isHorizontal()) {
-            return state.with(FACING, face.getOpposite());
-        }
-        
-        return state;
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return getSideElseUserFacing(ctx, true);
     }
 
     @Override
