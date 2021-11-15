@@ -24,7 +24,6 @@ public class CaveFeatures {
     private static final ConfiguredFeature<?, ?> GLOW_PATCH_CONFIG = CAVE_PATCH
             .configure(new CavePatchConfig(Blocks.GLOWSTONE.getDefaultState(), 40, 4, 7));
 
-    @SuppressWarnings("deprecation")
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);
 
