@@ -113,7 +113,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(CHAIR_STONE);
         
         cullouts.add(CREST);
-        cullouts.add(GEAR);
 
         cullouts.add(SMALL_CACTUS);
         cullouts.add(ROSEBUSH);
