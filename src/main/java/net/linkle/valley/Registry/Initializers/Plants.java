@@ -154,6 +154,7 @@ public class Plants {
     public static final Block ICE_ROSE = new RoseBush();
     public static final Block ORANGE_FERN = new RoseBush();
     public static final Block ORANGE_BEAUTY = new RoseBush();
+    public static final Block DRIFT = new DriftBlock();
 
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
     public static final Block APPLE_LEAVES = new AppleLeavesBlock();
@@ -230,6 +231,8 @@ public class Plants {
         registerWithItem("tumbleweed", TUMBLE_WEED, natureGroup);
 
         registerWithItem("reeds", REED_BLOCK, natureGroup);
+
+        registerWithItem("driftwood", DRIFT, new Item.Settings().group(NATURE_GROUP).maxCount(64));
 
         registerWithItem("rocks", ROCK_PILE, natureGroup);
         registerWithItem("snow_rocks", SNOW_ROCK_PILE, natureGroup);

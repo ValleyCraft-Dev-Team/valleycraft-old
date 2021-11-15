@@ -202,6 +202,8 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(JUNGLE_LADDER);
         cullouts.add(SPRUCE_LADDER);
 
+        cullouts.add(DRIFT);
+
         cullouts.add(ANCHOR);
 
         cullouts.add(SCARE);

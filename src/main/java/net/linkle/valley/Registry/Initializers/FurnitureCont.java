@@ -36,9 +36,9 @@ public class FurnitureCont {
         registerWithItem("stuffy_brown", STUFFY_BROWN, furnGroup);
         registerWithItem("stuffy_white", STUFFY_WHITE, furnGroup);
 
-        registerWithItem("golem_rusty", GOLEM_R, furnGroupRare);
-        registerWithItem("golem_waxed", GOLEM_W, furnGroupRare);
-        registerWithItem("golem_idling", GOLEM_I, furnGroupEpic);
+        //registerWithItem("golem_rusty", GOLEM_R, furnGroupRare);
+        //registerWithItem("golem_waxed", GOLEM_W, furnGroupRare);
+        //registerWithItem("golem_idling", GOLEM_I, furnGroupEpic);
 
         registerWithItem("log_pile", LOGPILE, furnGroup);
 

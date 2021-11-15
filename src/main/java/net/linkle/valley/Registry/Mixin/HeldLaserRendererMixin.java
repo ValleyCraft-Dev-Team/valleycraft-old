@@ -1,5 +1,6 @@
 package net.linkle.valley.Registry.Mixin;
 
+import net.linkle.valley.Registry.Initializers.WeaponsAndTools;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -30,7 +31,7 @@ class HeldLaserRendererMixin {
 			float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices,
 			VertexConsumerProvider vertexConsumers, int light, CallbackInfo info) {
 		
-	    if (item.isOf(MiscItems.REDSTONE_WAND)) {
+	    if (item.isOf(WeaponsAndTools.REDSTONE_WAND)) {
             float lerp = MathHelper.lerp(equipProgress, -0.02f, -0.9f);
             float xPos = hand == Hand.MAIN_HAND ? 0.7f : -0.7f;
 

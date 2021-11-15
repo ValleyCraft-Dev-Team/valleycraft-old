@@ -1,15 +1,22 @@
 package net.linkle.valley.Registry.Initializers;
 
+import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
+import static net.linkle.valley.Registry.Initializers.ItemGroups.MISC_GROUP;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
+import net.linkle.valley.Registry.Misc.RedstoneWandBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Hatchets.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Knives.*;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.*;
 import net.linkle.valley.Registry.WeaponsAndTools.RGRest.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Sickles.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Viking.*;
+import net.minecraft.item.Item;
+import net.minecraft.util.Rarity;
 
 public class WeaponsAndTools {
+
+    public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(EXPLORATION_GROUP).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
 
@@ -41,22 +48,22 @@ public class WeaponsAndTools {
         //register("rock_breaker", new RockBreakerBase(new RockBreakerToolMaterial()));
 
         //Ladle
-        //register("soup_ladle", new LadleBase(new LadleMaterial()));
+        register("soup_ladle", new LadleBase(new LadleMaterial()));
 
         //Traveler's Sword
         //register("travelers_sword", new TravelerSwordBase(new TravelerToolMaterialSword()));
 
         //Viking Tools
         //register("viking_great_axe", new VikingGreatAxeBase(new VikingToolMaterial()));
-        register("viking_hatchet", new VikingHatchetBase(new VikingToolMaterial()));
-        register("viking_knife", new VikingKnifeBase(new VikingToolMaterial()));
+        //register("viking_hatchet", new VikingHatchetBase(new VikingToolMaterial()));
+        //register("viking_knife", new VikingKnifeBase(new VikingToolMaterial()));
         //register("viking_war_axe", new VikingWarAxeBase(new VikingToolMaterial()));
-        register("viking_hoe", new VikingHoeBase(new VikingToolMaterial()));
-        register("viking_shovel", new VikingShovelBase(new VikingToolMaterial()));
-        register("viking_hammer", new VikingHammerBase(new VikingToolMaterial()));
-        register("viking_pickaxe", new VikingPickBase(new VikingToolMaterial()));
-        register("viking_sword", new VikingSwordBase(new VikingToolMaterial()));
-        register("viking_spear", new VikingSpearBase(new VikingToolMaterial()));
+        //register("viking_hoe", new VikingHoeBase(new VikingToolMaterial()));
+        //register("viking_shovel", new VikingShovelBase(new VikingToolMaterial()));
+        //register("viking_hammer", new VikingHammerBase(new VikingToolMaterial()));
+        //register("viking_pickaxe", new VikingPickBase(new VikingToolMaterial()));
+        //register("viking_sword", new VikingSwordBase(new VikingToolMaterial()));
+        //register("viking_spear", new VikingSpearBase(new VikingToolMaterial()));
 
         //Witch's Tools
         //register("witch_wand", new WitchWandBase(new WitchToolMaterialKnife()));
@@ -65,6 +72,7 @@ public class WeaponsAndTools {
 
         //Druid Staff
         register("druid_staff", new DruidStaffBase(new DruidToolMaterialStaff()));
+        register("redstone_wand", REDSTONE_WAND);
 
         //Knives
         register("wood_knife", new WoodKnifeBase(new WoodToolMaterialKnife()));

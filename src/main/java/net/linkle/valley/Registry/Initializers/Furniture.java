@@ -429,7 +429,7 @@ public class Furniture {
         registerWithItem("wreath", WREATH, furnGroup);
         registerWithItem("miners_crest", CREST, furnGroup);
         
-        registerWithItem("gear", GEAR, furnGroupRare);
+        //registerWithItem("gear", GEAR, furnGroupRare);
 
         registerWithItem("pet_bed", PET_BED, furnGroup);
         

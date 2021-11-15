@@ -48,13 +48,10 @@ public class MiscItems {
     public static final Item HOOK_C = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
     public static final Item HOOK_G = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.RARE));
     public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.EPIC));
-    public static final Item DRIFT = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64));
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
-    public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(MISC_GROUP).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
-        register("redstone_wand", REDSTONE_WAND);
 
         register("stirrup", STIRRUP);
         register("fur_clump", FUR_CLUMP);
@@ -78,8 +75,7 @@ public class MiscItems {
         register("arrow_bundle", ARROW_BUNDLE);
         register("copper_nugget", COPPER_NUGGET);
         register("netherite_nugget", NETHER_NUGGET);
-        register("driftwood", DRIFT);
-        register("spruce_bark_hilt", SPRUCE_STICK);
+        //register("spruce_bark_hilt", SPRUCE_STICK);
 
         //register("fish_hook_iron", HOOK_I);
         //register("fish_hook_copper", HOOK_C);

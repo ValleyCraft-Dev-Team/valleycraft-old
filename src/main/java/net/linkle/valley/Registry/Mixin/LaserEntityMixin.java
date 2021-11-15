@@ -1,5 +1,6 @@
 package net.linkle.valley.Registry.Mixin;
 
+import net.linkle.valley.Registry.Initializers.WeaponsAndTools;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,7 +26,7 @@ abstract class LaserEntityMixin implements SynchronousResourceReloader {
 	
 	@Inject(method = "shouldRender()Z", at = @At("HEAD"), cancellable = true)
 	<E extends Entity> void shouldRender(E entity, Frustum frustum, double x, double y, double z, CallbackInfoReturnable<Boolean> info) {
-		if (entity instanceof LivingEntity living && living.isHolding(MiscItems.REDSTONE_WAND)) {
+		if (entity instanceof LivingEntity living && living.isHolding(WeaponsAndTools.REDSTONE_WAND)) {
 			info.setReturnValue(true);
 		}
 	}
@@ -34,7 +35,7 @@ abstract class LaserEntityMixin implements SynchronousResourceReloader {
 	<E extends Entity> void renderLine(E entity, double x, double y, double z, float yaw, float tickDelta,
 			MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo info) {
 		
-		if (entity instanceof LivingEntity living && living.isHolding(MiscItems.REDSTONE_WAND)) {
+		if (entity instanceof LivingEntity living && living.isHolding(WeaponsAndTools.REDSTONE_WAND)) {
 			matrices.push();
 			matrices.translate(x, y, z);
 			
