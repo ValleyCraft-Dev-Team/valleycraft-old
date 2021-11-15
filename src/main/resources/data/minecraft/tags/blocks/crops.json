@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "valley:tomato_bush", "valley:rice_crop", "valley:bitter_berries", "valley:maize_crop", "valley:onion", "valley:miners_lettuce"
+    "valley:tomato_bush", "valley:rice_crop", "valley:bitter_berries", "valley:maize_crop", "valley:onion_crop_block", "valley:miners_lettuce"
   ]
 }

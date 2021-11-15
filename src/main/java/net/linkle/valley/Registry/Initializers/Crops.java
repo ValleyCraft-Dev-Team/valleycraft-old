@@ -1,9 +1,6 @@
 package net.linkle.valley.Registry.Initializers;
 
-import net.linkle.valley.Registry.Blocks.Plants.CropsSeeds.CrystalCropBlock;
-import net.linkle.valley.Registry.Blocks.Plants.CropsSeeds.GreenBeanCropBlock;
-import net.linkle.valley.Registry.Blocks.Plants.CropsSeeds.MandrakeCropBlock;
-import net.linkle.valley.Registry.Blocks.Plants.CropsSeeds.PuffCropBlock;
+import net.linkle.valley.Registry.Blocks.Plants.CropsSeeds.*;
 import net.linkle.valley.Registry.Cooking.FoodTypeBases.FoodItemBase;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.CropBlock;
@@ -37,6 +34,10 @@ public class Crops {
     public static final Item COOKED_MANDRAKE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build()).maxCount(64));
     public static final Item SNOW_YAM_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item WINTER_ROOT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+    //Onions
+    public static final CropBlock ONION_CROP_BLOCK = new OnionCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Item ONION_SEEDS = new AliasedBlockItem(ONION_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
+    public static final Item ONION = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
     public static void initialize() {
         //Puff Ball
@@ -58,5 +59,9 @@ public class Crops {
         //Foraged Items
         register("snow_yam_item", SNOW_YAM_ITEM);
         register("winter_root_item", WINTER_ROOT_ITEM);
+        //Onion
+        register("onion_crop_block", ONION_CROP_BLOCK);
+        register("onion_seeds", ONION_SEEDS);
+        register("onion", ONION);
     }
 }

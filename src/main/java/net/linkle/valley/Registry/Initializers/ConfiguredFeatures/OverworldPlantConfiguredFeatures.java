@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.BitterBerryBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.MinerBushBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Bushes.OnionBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.TomatoBushBlock;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.ReedPatchFeature;
 import net.minecraft.util.Identifier;
@@ -147,10 +146,6 @@ public class OverworldPlantConfiguredFeatures {
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(MINER_BUSH
                     .getDefaultState().with(MinerBushBlock.AGE, 3)), SimpleBlockPlacer.INSTANCE)).tries(5).build());
 
-    public static final ConfiguredFeature<?, ?> ONION_PATCH = Feature.RANDOM_PATCH
-            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(ONION
-                    .getDefaultState().with(OnionBushBlock.AGE, 1)), SimpleBlockPlacer.INSTANCE)).tries(5).build());
-
     public static final ConfiguredFeature<?, ?> JUNGLE_CAP_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(JUNGLE_CAP
                     .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
@@ -244,12 +239,6 @@ public class OverworldPlantConfiguredFeatures {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, dandelionPatch.getValue(), DANDELION_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.TALL_BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.BIRCH_FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.TALL_BIRCH_HILLS, BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.TAIGA, BiomeKeys.TAIGA_HILLS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS),
                 GenerationStep.Feature.VEGETAL_DECORATION, dandelionPatch);
-
-        RegistryKey<ConfiguredFeature<?, ?>> onionPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-                new Identifier(MOD_ID, "onion_patch"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, onionPatch.getValue(), ONION_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MOUNTAINS, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.WOODED_MOUNTAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, onionPatch);
 
         //found in every biome except snow
         RegistryKey<ConfiguredFeature<?, ?>> bushPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,

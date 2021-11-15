@@ -135,11 +135,6 @@ public class Plants {
 
     public static final Block SNOW_ROCK_PILE = new RockBlock();
 
-    public static final Block ONION = new OnionBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
-
     public static final MossVinesBlock MOSSY_VINE = new MossVinesBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES));
     public static final Block MOSSY_VINE_PLANT = new MossVinesPlantBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES));
     public static final Block JUNGLE_BUSH = new JungleBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
@@ -248,7 +243,6 @@ public class Plants {
 
         registerWithItem("miners_lettuce", MINER_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
         
-        registerWithItem("onion", ONION, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
         //registerWithItem("ameranth_crop", AMERANTH_BLOCK, natureGroup);
 
         registerWithItem("mossy_vines", MOSSY_VINE, natureGroup);

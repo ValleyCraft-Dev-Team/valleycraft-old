@@ -148,6 +148,7 @@
   "block.valley.onion": "Onion",
   "block.valley.miners_lettuce": "Miner's Lettuce",
   "block.valley.stew_campfire_pot": "Campfire Stew Pot",
+  "block.valley.stew_campfire_pot.tooltip": "Place this above a campfire.",
   "block.valley.chimney_cobble": "Cobblestone Chimney",
 
   "item.valley.cocoa": "Hot Cocoa",

@@ -52,13 +52,6 @@ public class GolemBlockWaxed extends HorizontalWithWaterBlock {
     }
 
     @Override
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (random.nextInt(100) == 0) {
-            world.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.ENTITY_IRON_GOLEM_REPAIR, SoundCategory.BLOCKS, 0.5F + random.nextFloat(), random.nextFloat() * 0.7F + 0.6F, false);
-        }
-    }
-
-    @Override
     public void appendTooltip(ItemStack itemStack, BlockView world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add( new TranslatableText("block.valley.golem_waxed.tooltip") );
         tooltip.add( new TranslatableText("block.valley.golem_waxed.tooltip_2") );

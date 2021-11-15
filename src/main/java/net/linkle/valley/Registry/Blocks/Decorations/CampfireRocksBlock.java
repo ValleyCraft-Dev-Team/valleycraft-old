@@ -6,12 +6,18 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+
+import java.util.List;
 
 public class CampfireRocksBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 1, 15);
@@ -30,6 +36,11 @@ public class CampfireRocksBlock extends HorizontalWithWaterBlock {
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack itemStack, BlockView world, List<Text> tooltip, TooltipContext tooltipContext) {
+        tooltip.add( new TranslatableText("block.valley.stew_campfire_pot.tooltip") );
     }
 }
 
