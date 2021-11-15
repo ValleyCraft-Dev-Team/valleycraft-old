@@ -33,6 +33,6 @@ public class CaveFeatures {
 
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, glowPatch.getValue(), GLOW_PATCH_CONFIG.decorate(spread));
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, glowPatch);
+        //BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, glowPatch);
     }
 }

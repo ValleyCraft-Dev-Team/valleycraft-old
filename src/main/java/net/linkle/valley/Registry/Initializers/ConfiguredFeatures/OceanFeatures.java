@@ -33,7 +33,7 @@ public class OceanFeatures {
 
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, glowPatch.getValue(), GLOW_PATCH_CONFIG.decorate(oceanFloor).applyChance(5));
 
-        BiomeModifications.addFeature(OceanFeatures::oceanOnly, GenerationStep.Feature.VEGETAL_DECORATION, glowPatch);
+        //BiomeModifications.addFeature(OceanFeatures::oceanOnly, GenerationStep.Feature.VEGETAL_DECORATION, glowPatch);
     }
 
     private static boolean oceanOnly(BiomeSelectionContext context) {
