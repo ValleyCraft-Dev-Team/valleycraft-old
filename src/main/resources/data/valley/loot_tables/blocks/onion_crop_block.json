@@ -32,7 +32,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "valley:onion",
+          "block": "valley:onion_crop_block",
           "properties": {
             "age": "3"
           }
@@ -70,7 +70,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "valley:onion",
+          "block": "valley:onion_crop_block",
           "properties": {
             "age": "1"
           }
