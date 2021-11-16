@@ -6,11 +6,8 @@ import net.minecraft.item.ToolMaterial;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
 
-public class IronKnifeBase extends SwordItem {
-    public IronKnifeBase(ToolMaterial IronToolMaterialKnife) {
-        super(IronToolMaterialKnife, 3, -2.0f, new Item.Settings().group(EXPLORATION_GROUP
-));
+public class KnifeBase extends SwordItem {
+    public KnifeBase(ToolMaterial material, int attackDamage, float attackSpeed) {
+        super(material, attackDamage, attackSpeed, new Item.Settings().group(EXPLORATION_GROUP));
     }
 }
-
-

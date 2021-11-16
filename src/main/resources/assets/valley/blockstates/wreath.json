@@ -1,4 +1,5 @@
 {
+	"variants": {
     "facing=east,waterlogged=false": {
       "y": 90,
       "model": "valley:block/wreath"
