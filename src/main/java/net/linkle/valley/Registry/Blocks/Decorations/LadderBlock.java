@@ -48,37 +48,29 @@ public class LadderBlock extends HorizontalWithWaterBlock {
             default: return NORTH_SHAPE;
         }
     }
-
-    @Override @Nullable
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
+    
+    @Override
+    protected Direction getFacing(ItemPlacementContext ctx) {
         var pos = ctx.getBlockPos();
         var world = ctx.getWorld();
         var side = ctx.getSide();
-        BlockState state, other;
-        if (!ctx.canReplaceExisting()) {
-            state = world.getBlockState(pos.offset(side.getOpposite()));
-            if (state.getBlock() instanceof LadderBlock && state.get(FACING) == side) {
-                return null;
-            }
-        }
-        
-        state = getDefaultState().with(WATERLOGGED, world.getFluidState(pos).getFluid() == Fluids.WATER);
+        BlockState state;
         
         if (side.getAxis().isVertical()) {
-            other = world.getBlockState(pos.offset(side.getOpposite()));
-            if (other.getBlock() instanceof LadderBlock) {
-                return state.with(FACING, other.get(FACING));
+            state = world.getBlockState(pos.offset(side.getOpposite()));
+            if (state.getBlock() instanceof LadderBlock) {
+                return state.get(FACING);
             }
         }
         
-        if ((other = world.getBlockState(pos.down())).getBlock() instanceof LadderBlock) {
-            return state.with(FACING, other.get(FACING));
+        if ((state = world.getBlockState(pos.down())).getBlock() instanceof LadderBlock) {
+            return state.get(FACING);
         } 
-        if ((other = world.getBlockState(pos.up())).getBlock() instanceof LadderBlock) {
-            return state.with(FACING, other.get(FACING));
+        if ((state = world.getBlockState(pos.up())).getBlock() instanceof LadderBlock) {
+            return state.get(FACING);
         }
         
-        return state.with(FACING, side.getAxis().isHorizontal() ? side.getOpposite() : ctx.getPlayerFacing());
+        return getSideElseUserFacing(ctx, true);
     }
 
     @Override

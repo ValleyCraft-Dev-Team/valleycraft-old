@@ -41,6 +41,7 @@ public class BlockWithWater extends Block implements Waterloggable {
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
 
+    /** Please call this subclass method to append waterlogged property: <code>super.appendProperties(builder)</code> */
     @Override
     protected void appendProperties(Builder<Block, BlockState> builder) {
         super.appendProperties(builder);

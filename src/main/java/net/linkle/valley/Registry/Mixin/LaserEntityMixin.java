@@ -9,7 +9,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.linkle.valley.Registry.Initializers.MiscItems;
 import net.linkle.valley.Registry.Misc.RedstoneWandBase;
 import net.minecraft.client.render.Frustum;
 import net.minecraft.client.render.RenderLayer;
@@ -46,7 +45,6 @@ abstract class LaserEntityMixin implements SynchronousResourceReloader {
 			consumer.vertex(matrix4f, 0, entity.getStandingEyeHeight(), 0).
 			color(RedstoneWandBase.RED, RedstoneWandBase.GREEN, RedstoneWandBase.BLUE, RedstoneWandBase.ALPHA).
 			normal(matrix3f, (float)vec3d.x, (float)vec3d.y, (float)vec3d.z).next();
-			
 			var dist = RedstoneWandBase.DIST;
 			var rawHit = living.raycast(dist, tickDelta, false);
 			if (rawHit != null) {

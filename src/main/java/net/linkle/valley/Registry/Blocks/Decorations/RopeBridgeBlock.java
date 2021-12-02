@@ -38,8 +38,7 @@ public class RopeBridgeBlock extends HorizontalWithWaterBlock {
     }
     
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var placeState = super.getPlacementState(ctx);
+    protected Direction getFacing(ItemPlacementContext ctx) {
         var world = ctx.getWorld();
         var pos = ctx.getBlockPos();
         for (int i = 0; i < 4; i++) {
@@ -47,11 +46,11 @@ public class RopeBridgeBlock extends HorizontalWithWaterBlock {
             var state = world.getBlockState(pos.offset(face));
             if (state.getBlock() instanceof RopeBridgeBlock) {
                 if (face.getAxis() == state.get(FACING).getAxis()) {
-                    return placeState.with(FACING, face);
+                    return face;
                 }
             }
         }
-        return placeState;
+        return super.getFacing(ctx);
     }
 
     static {

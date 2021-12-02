@@ -33,8 +33,7 @@ public class Furnaces {
 	}
 	
 	private static BlockEntityType<BrickFurnaceBlockEntity> createFurnaceEntity(Identifier id, Block block) {
-		var type = Util.getChoiceType(TypeReferences.BLOCK_ENTITY, id.toString());
-		var entity = FabricBlockEntityTypeBuilder.create(BrickFurnaceBlockEntity::new, block).build(type);
+		var entity = FabricBlockEntityTypeBuilder.create(BrickFurnaceBlockEntity::new, block).build();
 		return Registry.register(Registry.BLOCK_ENTITY_TYPE, id, entity);
 	}
 }

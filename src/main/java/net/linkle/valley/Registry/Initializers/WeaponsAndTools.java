@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Initializers;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
-import static net.linkle.valley.Registry.Initializers.ItemGroups.MISC_GROUP;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
 import net.linkle.valley.Registry.Misc.RedstoneWandBase;
@@ -10,14 +9,14 @@ import net.linkle.valley.Registry.WeaponsAndTools.Knives.*;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.*;
 import net.linkle.valley.Registry.WeaponsAndTools.RGRest.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Sickles.*;
-import net.linkle.valley.Registry.WeaponsAndTools.Viking.*;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
 public class WeaponsAndTools {
 
     public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(EXPLORATION_GROUP).rarity(Rarity.UNCOMMON));
-
+    public static final Item TONGS = new TongsBase(new TongsToolMaterial());
+    
     public static void initialize() {
 
         //Branch
@@ -36,7 +35,7 @@ public class WeaponsAndTools {
         //register("rock_pick", new RockPickBase(new RockPickToolMaterial()));
 
         //Ice Tongs
-        register("tongs", new TongsBase(new TongsToolMaterial()));
+        register("tongs", TONGS);
 
         //Lumber Axe
         register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));
@@ -75,29 +74,29 @@ public class WeaponsAndTools {
         //register("redstone_wand", REDSTONE_WAND);
 
         //Knives
-        register("wood_knife", new WoodKnifeBase(new WoodToolMaterialKnife()));
-        register("stone_knife", new StoneKnifeBase(new StoneToolMaterialKnife()));
-        register("golden_knife", new GoldKnifeBase(new GoldenToolMaterialKnife()));
-        register("iron_knife", new IronKnifeBase(new IronToolMaterialKnife()));
-        register("rg_knife", new RGKnifeBase(new RGToolMaterialKnife()));
-        register("diamond_knife", new DiamondKnifeBase(new DiamondToolMaterialKnife()));
-        register("netherite_knife", new NetheriteKnifeBase(new NetheriteToolMaterialKnife()));
+        register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));
+        register("stone_knife", new KnifeBase(new StoneToolMaterialKnife(), 2, -2.0f));
+        register("golden_knife", new KnifeBase(new GoldenToolMaterialKnife(), 2, -2.2f));
+        register("iron_knife", new KnifeBase(new IronToolMaterialKnife(), 3, -2.0f));
+        register("rg_knife", new KnifeBase(new RGToolMaterialKnife(), 3, -2.0f));
+        register("diamond_knife", new KnifeBase(new DiamondToolMaterialKnife(), 4, -2.0f));
+        register("netherite_knife", new KnifeBase(new NetheriteToolMaterialKnife(), 5, -2.0f));
         //Sickles
-        register("wood_sickle", new WoodSickleBase(new WoodToolMaterialSickle()));
-        register("stone_sickle", new StoneSickleBase(new StoneToolMaterialSickle()));
-        register("golden_sickle", new GoldSickleBase(new GoldenToolMaterialSickle()));
-        register("iron_sickle", new IronSickleBase(new IronToolMaterialSickle()));
-        register("rg_sickle", new RGSickleBase(new RGToolMaterialSickle()));
-        register("diamond_sickle", new DiamondSickleBase(new DiamondToolMaterialSickle()));
-        register("netherite_sickle", new NetheriteSickleBase(new NetheriteToolMaterialSickle()));
+        register("wood_sickle", new SickleBase(new WoodToolMaterialSickle(), 2, -3.4f));
+        register("stone_sickle", new SickleBase(new StoneToolMaterialSickle(), 2, -3.3f));
+        register("golden_sickle", new SickleBase(new GoldenToolMaterialSickle(), 2, -3.4f));
+        register("iron_sickle", new SickleBase(new IronToolMaterialSickle(), 2, -3.2f));
+        register("rg_sickle", new SickleBase(new RGToolMaterialSickle(), 2, -3.2f));
+        register("diamond_sickle", new SickleBase(new DiamondToolMaterialSickle(), 2, -3.1f));
+        register("netherite_sickle", new SickleBase(new NetheriteToolMaterialSickle(), 3, -3.0f));
         //Hatchets
-        register("wood_hatchet", new WoodHatchetBase(new WoodToolMaterialHatchet()));
-        register("stone_hatchet", new StoneHatchetBase(new StoneToolMaterialHatchet()));
-        register("golden_hatchet", new GoldHatchetBase(new GoldenToolMaterialHatchet()));
-        register("iron_hatchet", new IronHatchetBase(new IronToolMaterialHatchet()));
-        register("rg_hatchet", new RGHatchetBase(new RGToolMaterialHatchet()));
-        register("diamond_hatchet", new DiamondHatchetBase(new DiamondToolMaterialHatchet()));
-        register("netherite_hatchet", new NetheriteHatchetBase(new NetheriteToolMaterialHatchet()));
+        register("wood_hatchet", new HatchetBase(new WoodToolMaterialHatchet(), 5, -2.6f));
+        register("stone_hatchet", new HatchetBase(new StoneToolMaterialHatchet(), 7, -2.6f));
+        register("golden_hatchet", new HatchetBase(new GoldenToolMaterialHatchet(), 5, -2.4f));
+        register("iron_hatchet", new HatchetBase(new IronToolMaterialHatchet(), 7, -2.5f));
+        register("rg_hatchet", new HatchetBase(new RGToolMaterialHatchet(), 7, -2.5f));
+        register("diamond_hatchet", new HatchetBase(new DiamondToolMaterialHatchet(), 7, -2.4f));
+        register("netherite_hatchet", new HatchetBase(new NetheriteToolMaterialHatchet(), 8, -2.4f));
         //Rose Gold Tools
         register("rg_shovel", new RGShovelBase(new RGToolMaterialShovel()));
         register("rg_pickaxe", new RGPickaxeBase(new RGToolMaterialPickaxe()));

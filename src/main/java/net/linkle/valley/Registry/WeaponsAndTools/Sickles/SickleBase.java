@@ -5,8 +5,8 @@ import net.minecraft.item.ToolMaterial;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
 
-public class DiamondSickleBase extends HoeItem {
-    public DiamondSickleBase(ToolMaterial DiamondToolMaterialSickle) {
-        super(DiamondToolMaterialSickle, 2, -3.1f, new Settings().group(EXPLORATION_GROUP));
+public class SickleBase extends HoeItem {
+    public SickleBase(ToolMaterial material, int attackDamage, float attackSpeed) {
+        super(material, attackDamage, attackSpeed, new Settings().group(EXPLORATION_GROUP));
     }
 }

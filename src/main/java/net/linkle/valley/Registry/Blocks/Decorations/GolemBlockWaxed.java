@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
 import java.util.List;
-import java.util.Random;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
@@ -14,15 +13,12 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 
 public class GolemBlockWaxed extends HorizontalWithWaterBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(4, 0, 4, 12, 12, 12);
@@ -36,9 +32,8 @@ public class GolemBlockWaxed extends HorizontalWithWaterBlock {
     }
     
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var state = super.getPlacementState(ctx);
-        return state.with(FACING, state.get(FACING).getOpposite());
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return super.getFacing(ctx).getOpposite();
     }
 
     @Override
