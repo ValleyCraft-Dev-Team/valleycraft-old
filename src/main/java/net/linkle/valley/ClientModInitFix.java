@@ -268,11 +268,11 @@ public class ClientModInitFix implements ClientModInitializer {
 
         cullouts.add(GIANT_RED);
         cullouts.add(GIANT_BROWN);
+        cullouts.add(SPIDER_EGG_BLOCK);
         translucents.add(BRAZIER_METAL);
-        translucents.add(SPIDER_EGG_BLOCK);
         translucents.add(COIN_STACK);
 
-        // Remapping block's render layer.
+        // Remapping block's render layer. This code should always be last!
         var layerMap = BlockRenderLayerMap.INSTANCE;
         for (var block : cullouts) {
             layerMap.putBlock(block, RenderLayer.getCutout());

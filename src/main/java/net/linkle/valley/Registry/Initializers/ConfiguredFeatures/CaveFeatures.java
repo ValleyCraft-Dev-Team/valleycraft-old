@@ -3,9 +3,9 @@ package net.linkle.valley.Registry.Initializers.ConfiguredFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.ValleyMain;
+import net.linkle.valley.Registry.Initializers.Plants;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.CavePatchConfig;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.CavePatchFeature;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -21,18 +21,25 @@ public class CaveFeatures {
     /** Custom gen feature to spawn stuffs in caves. */
     private static final CavePatchFeature CAVE_PATCH = new CavePatchFeature();
 
-    private static final ConfiguredFeature<?, ?> GLOW_PATCH_CONFIG = CAVE_PATCH
-            .configure(new CavePatchConfig(Blocks.GLOWSTONE.getDefaultState(), 40, 4, 7));
+    private static final ConfiguredFeature<?, ?> RED_PILE_PATCH_CONFIG = CAVE_PATCH
+            .configure(new CavePatchConfig(Plants.RED_PILE.getDefaultState(), 20, 4, 6));
+    
+    private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = CAVE_PATCH
+            .configure(new CavePatchConfig(Plants.SPIDER_EGG_BLOCK.getDefaultState(), 15, 4, 6));
 
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);
 
-        var glowPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "glowstone_patch_cave"));
-        var offset = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(42))); // 42 is maximum height can spawn.
-        var spread = Decorator.RANGE.configure(offset).spreadHorizontally().applyChance(1);
-
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, glowPatch.getValue(), GLOW_PATCH_CONFIG.decorate(spread));
-
-        //BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, glowPatch);
+        var patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "red_pile_patch_cave"));
+        var range = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(20))); // 20 is maximum height can spawn.
+        var decor = Decorator.RANGE.configure(range).spreadHorizontally().applyChance(4);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), RED_PILE_PATCH_CONFIG.decorate(decor));
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, patch);
+    
+        patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "spider_egg_patch_cave"));
+        range = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(30))); // 20 is maximum height can spawn.
+        decor = Decorator.RANGE.configure(range).spreadHorizontally().applyChance(5);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), SPIDER_EGG_PATCH_CONFIG.decorate(decor));
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, patch);
     }
 }

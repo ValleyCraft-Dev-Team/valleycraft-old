@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"valley:wood_knife",
+	"valley:stone_knife",
+	"valley:golden_knife",
+	"valley:rg_knife",
+	"valley:diamond_knife",
+	"valley:netherite_knife"
+  ]
+}

@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Initializers;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
-import static net.linkle.valley.Registry.Initializers.ItemGroups.MISC_GROUP;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
 import net.linkle.valley.Registry.Misc.RedstoneWandBase;
@@ -10,14 +9,14 @@ import net.linkle.valley.Registry.WeaponsAndTools.Knives.*;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.*;
 import net.linkle.valley.Registry.WeaponsAndTools.RGRest.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Sickles.*;
-import net.linkle.valley.Registry.WeaponsAndTools.Viking.*;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
 public class WeaponsAndTools {
 
     public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(EXPLORATION_GROUP).rarity(Rarity.UNCOMMON));
-
+    public static final Item TONGS = new TongsBase(new TongsToolMaterial());
+    
     public static void initialize() {
 
         //Branch
@@ -36,7 +35,7 @@ public class WeaponsAndTools {
         //register("rock_pick", new RockPickBase(new RockPickToolMaterial()));
 
         //Ice Tongs
-        register("tongs", new TongsBase(new TongsToolMaterial()));
+        register("tongs", TONGS);
 
         //Lumber Axe
         register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));
