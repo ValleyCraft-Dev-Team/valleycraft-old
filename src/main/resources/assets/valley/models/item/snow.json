@@ -1,3 +1,6 @@
 {
-  "parent": "valley:block/snow"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:items/snowman"
+  }
 }

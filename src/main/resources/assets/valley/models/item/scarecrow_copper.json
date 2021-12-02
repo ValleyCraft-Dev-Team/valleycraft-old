@@ -1,3 +1,6 @@
 {
-  "parent": "valley:block/scarecrow_copper"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:items/scarecrow_copper"
+  }
 }

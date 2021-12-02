@@ -3,6 +3,7 @@ package net.linkle.valley.Registry.Initializers;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Blocks.Plants.*;
+import net.linkle.valley.Registry.Blocks.Plants.AquaticPlants.ClamBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.*;
 import net.linkle.valley.Registry.Blocks.Plants.Cave.*;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.AmeranthCropBlock;
@@ -154,7 +155,7 @@ public class Plants {
     public static final Block ICE_ROSE = new RoseBush();
     public static final Block ORANGE_FERN = new RoseBush();
     public static final Block ORANGE_BEAUTY = new RoseBush();
-    public static final Block DRIFT = new DriftBlock();
+    public static final Block DRIFT = new ClamBlock();
 
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
     public static final Block APPLE_LEAVES = new AppleLeavesBlock();
@@ -223,7 +224,7 @@ public class Plants {
         registerWithItem("rice_crop", RICE_SEEDLINGS, natureGroup);
         registerWithItem("tomato_bush", TOMATO_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
         registerWithItem("spicy_berries", SPICY_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600), 1.0f).build()).maxCount(64));
-        registerWithItem("bitter_berries", BITTER_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.POISON,200), 1.0f).build()).maxCount(64));
+        registerWithItem("bitter_berries", BITTER_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
         registerWithItem("holly", HOLLY_BUSH, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.POISON,400), 1.0f).build()).maxCount(64));
 
         registerWithItem("maize_crop", MAIZE_CROP, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
@@ -232,7 +233,7 @@ public class Plants {
 
         registerWithItem("reeds", REED_BLOCK, natureGroup);
 
-        registerWithItem("driftwood", DRIFT, new Item.Settings().group(NATURE_GROUP).maxCount(64));
+        //registerWithItem("driftwood", DRIFT, new Item.Settings().group(NATURE_GROUP).maxCount(64));
 
         registerWithItem("rocks", ROCK_PILE, natureGroup);
         registerWithItem("snow_rocks", SNOW_ROCK_PILE, natureGroup);

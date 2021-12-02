@@ -1,9 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Plants.Cave;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.PlantBlock;
+import net.minecraft.block.*;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
@@ -13,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
@@ -23,6 +21,8 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class SpiderEggBlock extends Block {
+
+    private static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 11, 13);
 
     public SpiderEggBlock(Settings settings) {
         super(settings);
@@ -48,5 +48,10 @@ public class SpiderEggBlock extends Block {
             this.spawnCaveSpider((ServerWorld)world, pos);
         }
 
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
     }
 }

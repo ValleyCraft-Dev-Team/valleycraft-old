@@ -329,8 +329,8 @@ public class FoodAndCooking {
         register("worm", WORM);
 
         register("salt", SALT);
-        register("thyme", THYME);
-        register("black_peppercorns", PEPPERCORN);
+        //register("thyme", THYME);
+        //register("black_peppercorns", PEPPERCORN);
 
         register("watermelon_fruit_bowl", B_WATER);
         register("grilled_watermelon", G_WATER);

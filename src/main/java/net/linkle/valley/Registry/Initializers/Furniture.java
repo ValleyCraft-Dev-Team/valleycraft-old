@@ -395,12 +395,12 @@ public class Furniture {
         //registerWithItem("hanging_redstone", HANGING_R, furnGroup);
         //registerWithItem("hanging_fluorite", HANGING_F, furnGroup);
 
-        registerWithItem("hanging_diamond", HANGING_D, furnGroup);
-        registerWithItem("hanging_emerald", HANGING_E, furnGroup);
-        registerWithItem("hanging_amethyst", HANGING_A, furnGroup);
-        registerWithItem("hanging_glowstone", HANGING_G, furnGroup);
+        //registerWithItem("hanging_diamond", HANGING_D, furnGroup);
+        //registerWithItem("hanging_emerald", HANGING_E, furnGroup);
+        //registerWithItem("hanging_amethyst", HANGING_A, furnGroup);
+        //registerWithItem("hanging_glowstone", HANGING_G, furnGroup);
 
-        registerWithItem("crystal_ball", CRYSTAL, furnGroup);
+        //registerWithItem("crystal_ball", CRYSTAL, furnGroup);
         //registerWithItem("crystal_ball_snow", CRYSTAL_FROZEN, furnGroupRare);
         
         registerWithItem("bookshelf_cobweb", BOOK_COBWEB, furnGroup);

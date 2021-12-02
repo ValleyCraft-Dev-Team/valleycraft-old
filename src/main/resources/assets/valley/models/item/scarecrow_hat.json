@@ -1,3 +1,6 @@
 {
-  "parent": "valley:block/scarecrow_hat"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:items/scarecrow_base_hat"
+  }
 }

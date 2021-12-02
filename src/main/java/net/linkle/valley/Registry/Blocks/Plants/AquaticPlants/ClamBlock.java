@@ -33,7 +33,7 @@ public class ClamBlock extends FacingBlock implements Waterloggable {
     public ClamBlock() {
         super(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
                 .breakByHand(true)
-                .sounds(BlockSoundGroup.NETHER_STEM)
+                .sounds(BlockSoundGroup.WOOD)
                 .strength(0,0.1f));
         this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
     }

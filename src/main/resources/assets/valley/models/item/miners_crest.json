@@ -1,3 +1,6 @@
 {
-  "parent": "valley:block/miners_crest"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:items/miners_crest_item"
+  }
 }

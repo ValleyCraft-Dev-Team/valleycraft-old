@@ -53,9 +53,9 @@ public class Crops {
         register("mandrake", MANDRAKE);
         register("cooked_mandrake", COOKED_MANDRAKE);
         //Crystal Fruit
-        register("crystal_crop_block", CRYSTAL_CROP_BLOCK);
-        register("crystal_seeds", CRYSTAL_SEEDS);
-        register("crystal_fruit", CRYSTAL_FRUIT);
+        //register("crystal_crop_block", CRYSTAL_CROP_BLOCK);
+        //register("crystal_seeds", CRYSTAL_SEEDS);
+        //register("crystal_fruit", CRYSTAL_FRUIT);
         //Foraged Items
         register("snow_yam_item", SNOW_YAM_ITEM);
         register("winter_root_item", WINTER_ROOT_ITEM);

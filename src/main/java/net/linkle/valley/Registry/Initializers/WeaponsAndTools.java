@@ -48,7 +48,7 @@ public class WeaponsAndTools {
         //register("rock_breaker", new RockBreakerBase(new RockBreakerToolMaterial()));
 
         //Ladle
-        register("soup_ladle", new LadleBase(new LadleMaterial()));
+        //register("soup_ladle", new LadleBase(new LadleMaterial()));
 
         //Traveler's Sword
         //register("travelers_sword", new TravelerSwordBase(new TravelerToolMaterialSword()));
@@ -72,7 +72,7 @@ public class WeaponsAndTools {
 
         //Druid Staff
         register("druid_staff", new DruidStaffBase(new DruidToolMaterialStaff()));
-        register("redstone_wand", REDSTONE_WAND);
+        //register("redstone_wand", REDSTONE_WAND);
 
         //Knives
         register("wood_knife", new WoodKnifeBase(new WoodToolMaterialKnife()));

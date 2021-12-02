@@ -2,6 +2,6 @@
   "replace": false,
   "values": [
     "valley:tomato_bush", "valley:rice_crop", "valley:bitter_berries", "valley:maize_crop", "valley:onion_crop_block", "valley:miners_lettuce"
-    , "valley:green_bean_crop_block", "valley:puff_crop_block", "valley:crystal_crop_block"
+    , "valley:green_bean_crop_block", "valley:puff_crop_block"
   ]
 }

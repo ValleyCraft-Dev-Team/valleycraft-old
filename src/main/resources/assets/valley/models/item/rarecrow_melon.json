@@ -1,3 +1,6 @@
 {
-  "parent": "valley:block/rarecrow_melon"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:items/rarecrow_melon"
+  }
 }
