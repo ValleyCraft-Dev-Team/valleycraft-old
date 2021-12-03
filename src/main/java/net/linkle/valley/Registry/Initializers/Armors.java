@@ -5,13 +5,11 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 
-import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Armors {
-    private static final Item.Settings settings = new Item.Settings().group(EXPLORATION_GROUP);
+    private static final Item.Settings settings = new Item.Settings().group(ItemGroups.EXPLORATION_GROUP);
     
     //public static final Item TRADER_HELMET = new ArmorItem(TraderArmorMaterial.INSTANCE, EquipmentSlot.HEAD, settings);
     //public static final Item TRADER_CHESTPLATE = new ArmorItem(TraderArmorMaterial.INSTANCE, EquipmentSlot.CHEST, settings);
