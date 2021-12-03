@@ -108,11 +108,6 @@ public class Plants {
     public static final Block SNOW_YAM = new SnowBush();
     public static final Block WINTER_ROOT = new SnowBushHidden();
 
-    public static final Block MINER_BUSH = new MinerBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
-
     public static final Block ROCK_PILE = new RockBlock();
     public static final Block RED_PILE = new RedCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
@@ -144,7 +139,7 @@ public class Plants {
             .strength(0,0.1f));
 
     public static final Block SWAMP_BUSH = new RoseBush();
-    public static final Block JUNGLE_CAP = new RoseBush();
+    public static final Block JUNGLE_CAP = new MorelBlock();
     public static final Block SPROUT = new RoseBush();
 
     public static final Block SWAMP_RIBBON = new RoseBush();
@@ -188,8 +183,8 @@ public class Plants {
         registerWithItem("alive_bush", BUSH_ALIVE, natureGroup);
         //registerWithItem("alive_bush_tall", BUSH_ALIVE_TALL, natureGroup);
         //registerWithItem("dead_bush_tall", BUSH_DEAD_TALL, natureGroup);
-        registerWithItem("herbs", HERBS, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64));
-        registerWithItem("taproots", TAPROOTS, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64));
+        registerWithItem("herbs", HERBS, new Item.Settings().group(NATURE_GROUP));
+        registerWithItem("taproots", TAPROOTS, new Item.Settings().group(NATURE_GROUP));
 
         registerWithItem("weaping_willow", WEAPING_SWAMP_WILLOW, natureGroup);
         registerWithItem("pond_ribbons", SWAMP_RIBBON, natureGroup);
@@ -205,7 +200,7 @@ public class Plants {
         registerWithItem("ice_rose", ICE_ROSE, natureGroup);
         registerWithItem("orange_beauty", ORANGE_BEAUTY, natureGroup);
 
-        registerWithItem("fern_bush", FERNBUSH, natureGroup);
+        //registerWithItem("fern_bush", FERNBUSH, natureGroup);
         //mushrooms
         //registerWithItem("colossal_red_shroom", GIANT_RED, natureGroup);
         //registerWithItem("colossal_brown_shroom", GIANT_BROWN, natureGroup);
@@ -213,7 +208,7 @@ public class Plants {
 
         registerWithItem("orange_fern", ORANGE_FERN, natureGroup);
 
-        registerWithItem("sprout", SPROUT, natureGroup);
+        //registerWithItem("sprout", SPROUT, natureGroup);
 
         registerWithItem("wild_carrot", WILD_CARROT, natureGroup);
         registerWithItem("wild_potato", WILD_POTATO, natureGroup);
@@ -244,9 +239,6 @@ public class Plants {
         registerWithItem("snow_bush", SNOW_BUSH, natureGroup);
         //registerWithItem("snow_yam", SNOW_YAM, natureGroup);
         //registerWithItem("winter_root", WINTER_ROOT, natureGroup);
-
-        registerWithItem("miners_lettuce", MINER_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-        
         //registerWithItem("ameranth_crop", AMERANTH_BLOCK, natureGroup);
 
         registerWithItem("mossy_vines", MOSSY_VINE, natureGroup);

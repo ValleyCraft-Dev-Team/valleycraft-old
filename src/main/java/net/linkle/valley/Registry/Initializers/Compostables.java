@@ -45,10 +45,10 @@ public class Compostables {
         registerItem(Plants.FERNBUSH, levelMed);
         registerItem(Plants.JUNGLE_CAP, levelMed);
         registerItem(Plants.ORANGE_FERN, levelMed);
-        registerItem(Plants.SPROUT, levelMed);
         registerItem(Plants.MAIZE_CROP, levelMed);
         registerItem(Plants.REED_BLOCK, levelMed);
-        registerItem(Plants.MINER_BUSH, levelMed);
+        registerItem(Crops.MINERS_LETTUCE_ITEM, levelMed);
+        registerItem(Crops.SNOW_YAM_ITEM, levelMed);
         registerItem(Crops.ONION, levelMed);
         registerItem(Plants.MOSSY_VINE, levelMed);
         registerItem(Plants.SWAMP_BUSH, levelMed);
@@ -63,7 +63,6 @@ public class Compostables {
         registerItem(Plants.ROSEBUSH, levelHigh);
         registerItem(Plants.LILACBUSH, levelHigh);
         registerItem(Plants.PEONYBUSH, levelHigh);
-        registerItem(Plants.FERNBUSH, levelHigh);
         registerItem(Plants.WEAPING_SWAMP_WILLOW, levelHigh);
         registerItem(Plants.REDWOOD_SORREL, levelHigh);
         registerItem(Plants.CROCUS, levelHigh);

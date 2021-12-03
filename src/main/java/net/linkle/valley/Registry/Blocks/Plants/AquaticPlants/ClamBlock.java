@@ -122,7 +122,7 @@ public class ClamBlock extends FacingBlock implements Waterloggable {
     static {
         WATERLOGGED = Properties.WATERLOGGED;
         FACING = HorizontalFacingBlock.FACING;
-        SHAPE = Block.createCuboidShape(5.0D, 0.0D, 5.0D, 11.0D, 2.0D, 11.0D);
+        SHAPE = Block.createCuboidShape(3.0D, 0.0D, 3.0D, 13.0D, 1.0D, 13.0D);
     }
 }
 

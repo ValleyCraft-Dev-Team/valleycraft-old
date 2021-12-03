@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "valley:rose_bush", "valley:lilac_bush", "valley:peony_bush", "valley:redwood_sorrel", "valley:miners_lettuce", "valley:dandelion_puffs", "valley:reeds", "valley:jungle_bush"
+    "valley:rose_bush", "valley:lilac_bush", "valley:peony_bush", "valley:redwood_sorrel", "valley:miners_lettuce_crop_block", "valley:dandelion_puffs", "valley:reeds", "valley:jungle_bush"
   ]
 }

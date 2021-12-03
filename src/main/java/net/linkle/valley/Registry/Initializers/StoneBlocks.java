@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import static net.linkle.valley.Registry.Initializers.ItemGroups.FURNITURE_GROUP;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.NATURE_GROUP;
 import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
@@ -52,7 +53,8 @@ public class StoneBlocks {
 
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);
-        
+        var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
+
         registerWithItem("brown_clay", B_CLAY, natureGroup);
         //registerWithItem("muddy_reed_roots", B_ROOTS, natureGroup);
         registerWithItem("volc_ash", VOLCANIC_ASH, natureGroup);
@@ -72,7 +74,7 @@ public class StoneBlocks {
         registerWithItem("bleached_gravel", BLEACHED_GRAVEL, natureGroup);
 
         registerWithItem("jungle_stone", JUNGLE, natureGroup);
-        registerWithItem("jungle_cobble", JUNGLE_COBBLE, natureGroup);
+        registerWithItem("jungle_cobble", JUNGLE_COBBLE, furnGroup);
         registerWithItem("jungle_sporey", JUNGLE_SPOREY, natureGroup);
         registerWithItem("jungle_mossy", JUNGLE_MOSSY, natureGroup);
         registerWithItem("stone_mossy", STONE_MOSSY, natureGroup);
@@ -83,7 +85,7 @@ public class StoneBlocks {
         registerWithItem("taigastone", TAIGA_STONE, natureGroup);
         
         registerWithItem("salt_ore", SALT_ORE, natureGroup);
-        registerWithItem("salt_block", SALT_BLOCK, natureGroup);
+        registerWithItem("salt_block", SALT_BLOCK, furnGroup);
         registerWithItem("nether_salt", NETHER_SALT, natureGroup);
         registerWithItem("nether_coal_ore", NETHER_COAL_ORE, natureGroup);
     }

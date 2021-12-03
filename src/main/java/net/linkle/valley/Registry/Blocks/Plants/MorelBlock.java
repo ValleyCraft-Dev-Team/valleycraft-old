@@ -23,7 +23,7 @@ public class MorelBlock extends PlantBlock {
     public MorelBlock() {
         super(FabricBlockSettings.of(Material.LEAVES)
                 .breakByTool(FabricToolTags.SHEARS)
-                .breakByHand(true)
+                .breakByHand(true).ticksRandomly()
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0, 0.5f));
     }

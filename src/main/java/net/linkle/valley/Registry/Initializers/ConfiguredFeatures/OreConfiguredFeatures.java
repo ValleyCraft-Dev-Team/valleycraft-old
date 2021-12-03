@@ -159,6 +159,17 @@ public class OreConfiguredFeatures {
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
+    private static ConfiguredFeature<?, ?> BLEACHED_GRAVEL_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    BLEACHED_GRAVEL.getDefaultState(),
+                    33)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(10); // Number of veins per chunk
+
     private static ConfiguredFeature<?, ?> SCALDING_OW_DESERT = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -452,6 +463,12 @@ public class OreConfiguredFeatures {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, gravel_ow.getValue(), DESERT_GRAVEL_OW);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, gravel_ow);
+
+        RegistryKey<ConfiguredFeature<?, ?>> bleached_gravel_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_bleached_gravel"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, bleached_gravel_ow.getValue(), BLEACHED_GRAVEL_OW);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS, BiomeKeys.GRAVELLY_MOUNTAINS),
+                GenerationStep.Feature.UNDERGROUND_ORES, bleached_gravel_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> scaldingOW_DESERT = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_scalding_overworld_desert"));

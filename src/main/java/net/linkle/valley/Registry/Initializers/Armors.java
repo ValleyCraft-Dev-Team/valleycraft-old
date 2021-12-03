@@ -35,8 +35,8 @@ public class Armors {
     
     //public static final Item ALT_TRADER_CHESTPLATE = new ArmorItem(AltTraderArmorMaterial.INSTANCE, EquipmentSlot.CHEST, settings);
     
-    public static final Item CHEF_HELMET = new ArmorItem(ChefArmorMaterial.INSTANCE, EquipmentSlot.HEAD, settings);
-    public static final Item CHEF_CHESTPLATE = new ArmorItem(ChefArmorMaterial.INSTANCE, EquipmentSlot.CHEST, settings);
+    //public static final Item CHEF_HELMET = new ArmorItem(ChefArmorMaterial.INSTANCE, EquipmentSlot.HEAD, settings);
+    //public static final Item CHEF_CHESTPLATE = new ArmorItem(ChefArmorMaterial.INSTANCE, EquipmentSlot.CHEST, settings);
     
     public static void initialize() {
         //register("trader_helmet", TRADER_HELMET);
@@ -61,7 +61,7 @@ public class Armors {
         
         //register("alt_trader_chestplate", ALT_TRADER_CHESTPLATE);
         
-        register("chef_helmet", CHEF_HELMET);
-        register("chef_chestplate", CHEF_CHESTPLATE);
+        //register("chef_helmet", CHEF_HELMET);
+        //register("chef_chestplate", CHEF_CHESTPLATE);
     }
 }

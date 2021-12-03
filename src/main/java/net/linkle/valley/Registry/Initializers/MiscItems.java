@@ -53,9 +53,9 @@ public class MiscItems {
 
     public static void initialize() {
 
-        register("stirrup", STIRRUP);
+        //register("stirrup", STIRRUP);
         register("fur_clump", FUR_CLUMP);
-        register("rawhide_lashing", RAWHIDE);
+        //register("rawhide_lashing", RAWHIDE);
         register("copper_billet", COPPER_BILLET);
         register("knapped_dripstone_arrowhead", DRIP_ARROWHEAD);
         register("knapped_flint_arrowhead", ARROWHEAD);

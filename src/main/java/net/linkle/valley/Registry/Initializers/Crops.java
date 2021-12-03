@@ -32,12 +32,21 @@ public class Crops {
     public static final Item CRYSTAL_FRUIT = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Foods
     public static final Item COOKED_MANDRAKE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build()).maxCount(64));
-    public static final Item SNOW_YAM_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-    public static final Item WINTER_ROOT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Onions
     public static final CropBlock ONION_CROP_BLOCK = new OnionCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
     public static final Item ONION_SEEDS = new AliasedBlockItem(ONION_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item ONION = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+    //Miners Lettuce
+    public static final CropBlock MINERS_CROP_BLOCK = new MinersLettuceCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Item MINERS_LETTUCE_ITEM = new AliasedBlockItem(MINERS_CROP_BLOCK, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build()).maxCount(64));
+
+    //Snow Yam
+    public static final CropBlock SNOW_CROP_BLOCK = new SnowYamCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Item SNOW_YAM_ITEM = new AliasedBlockItem(SNOW_CROP_BLOCK, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+
+    //Winter Root
+    public static final Item WINTER_ROOT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+
 
     public static void initialize() {
         //Puff Ball
@@ -57,8 +66,15 @@ public class Crops {
         //register("crystal_seeds", CRYSTAL_SEEDS);
         //register("crystal_fruit", CRYSTAL_FRUIT);
         //Foraged Items
+        //Snow Yam
+        register("snow_yam_crop_block", SNOW_CROP_BLOCK);
         register("snow_yam_item", SNOW_YAM_ITEM);
-        register("winter_root_item", WINTER_ROOT_ITEM);
+        //Winter Root
+        //register("winter_root_crop_block", WINTER_CROP_BLOCK);
+        //register("winter_root_item", WINTER_ROOT_ITEM);
+        //Miners Lettuce
+        register("miners_lettuce_crop_block", MINERS_CROP_BLOCK);
+        register("miners_lettuce", MINERS_LETTUCE_ITEM);
         //Onion
         register("onion_crop_block", ONION_CROP_BLOCK);
         register("onion_seeds", ONION_SEEDS);

@@ -136,8 +136,9 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(ROCK_PILE);
         cullouts.add(RED_PILE);
         cullouts.add(BLUE_PILE);
-        cullouts.add(MINER_BUSH);
         cullouts.add(ONION_CROP_BLOCK);
+        cullouts.add(SNOW_CROP_BLOCK);
+        cullouts.add(MINERS_CROP_BLOCK);
         cullouts.add(SNOW_BUSH);
         cullouts.add(SNOW_YAM);
         cullouts.add(WINTER_ROOT);

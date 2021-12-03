@@ -38,6 +38,7 @@ public class FoodAndCooking {
     public static final Item TEA_SB = new DrinkTeaBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,1200), 1.0f).build()).maxCount(1));
     public static final Item TEA_M = new DrinkTeaBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200), 1.0f).build()).maxCount(1));
     public static final Item TEA_D = new DrinkTeaBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).statusEffect(new StatusEffectInstance(StatusEffects.LUCK,1200), 1.0f).build()).maxCount(1));
+    public static final Item TEA_L = new DrinkTeaBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,240), 1.0f).build()).maxCount(1));
 
     public static final Item HONEYCOMB_CHUNK = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(1f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,120), 1.0f).build()).maxCount(1));
     public static final Item SALT = new FoodItemBase(new Item.Settings().group(MISC_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.5f).build()).maxCount(64));
@@ -62,9 +63,10 @@ public class FoodAndCooking {
     public static final Item APPLE_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
     public static final Item PUMPKIN_BOWL = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,300),1.0f).build()).maxCount(1));
 
-    public static final Item BBOX_CLOWNFISH = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,900),1.0f).build()).maxCount(1));
+    public static final Item BBOX_CLOWNFISH = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,900),1.0f).build()).maxCount(1));
     public static final Item BBOX_SALMON = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED,900),1.0f).build()).maxCount(1));
     public static final Item BBOX_UNAGI = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,900),1.0f).build()).maxCount(1));
+    public static final Item BBOX_GH_TAIL = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,1800),1.0f).build()).maxCount(1));
 
     public static final Item CAKE_DOUGH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(1f).build()).maxCount(64));
     public static final Item NETHER_FUNGUS_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.4f).build()).maxCount(1));
@@ -80,6 +82,7 @@ public class FoodAndCooking {
     public static final Item CRAB_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450), 1.0f).build()).maxCount(64));
     public static final Item PERCH_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,450), 1.0f).build()).maxCount(64));
     public static final Item FIRE_EEL_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,450), 1.0f).build()).maxCount(64));
+    public static final Item OCTO_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450), 1.0f).build()).maxCount(64));
 
     public static final Item SKELE_DOUGH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(1f).build()).maxCount(64));
     public static final Item SKELE_COOKIE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.7f).build()).maxCount(64));
@@ -118,6 +121,7 @@ public class FoodAndCooking {
     public static final Item FULL_BREAKFAST_VEGETARIAN = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,900), 1.0f).build()).maxCount(1));
     public static final Item COOKED_PUMPKIN_SEEDS = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item COD_CHOWDER = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,600), 1.0f).build()).maxCount(1));
+    public static final Item CLAM_CHOWDER = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,600), 1.0f).build()).maxCount(1));
     public static final Item SARDINE_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,600), 1.0f).build()).maxCount(1));
     public static final Item SEAWEED_SALAD = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build()).maxCount(1));
     public static final Item MUSHROOM_SALAD = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build()).maxCount(1));
@@ -195,6 +199,7 @@ public class FoodAndCooking {
         register("tea_bb", TEA_BB);
         register("tea_miner", TEA_M);
         register("tea_dandelion", TEA_D);
+        register("tea_lavender", TEA_L);
 
         register("cocoa", COCOA);
 
@@ -225,7 +230,7 @@ public class FoodAndCooking {
         register("grub", GRUB);
         register("pumpkin_bowl", PUMPKIN_BOWL);
         register("tomato_soup", TOMATO_SOUP);
-        register("winter_root_stew", WINTER_ROOT_STEW);
+        //register("winter_root_stew", WINTER_ROOT_STEW);
         register("bone_broth", BONE_BROTH);
         register("nether_fungus_stew", NETHER_FUNGUS_STEW);
         register("carrot_salad", CARROT_SALAD);
@@ -251,10 +256,10 @@ public class FoodAndCooking {
         register("vege_stir_fry", VEGE_STIR_FRY);
         register("pork_stir_fry", PORK_STIR_FRY);
         register("bear_stir_fry", BEAR_STIR_FRY);
-        register("bear_jerky", BEAR_JERKY);
         register("seaweed_salad", SEAWEED_SALAD);
         register("mandrake_soup", MANDRAKE_SOUP);
         register("cod_chowder", COD_CHOWDER);
+        register("clam_chowder", CLAM_CHOWDER);
         register("sardine_soup", SARDINE_SOUP);
         register("worm_bowl", WORM_SOUP);
         register("chicken_curry", CHICKEN_CURRY);
@@ -279,10 +284,12 @@ public class FoodAndCooking {
         register("fire_eel_roll", FIRE_EEL_ROLL);
         register("perch_roll", PERCH_ROLL);
         register("crab_roll", CRAB_ROLL);
+        register("octo_roll", OCTO_ROLL);
 
         register("bbox_unagi", BBOX_UNAGI);
         register("bbox_clownfish", BBOX_CLOWNFISH);
         register("bbox_salmon", BBOX_SALMON);
+        register("bbox_ghost", BBOX_GH_TAIL);
 
         register("cookie_dough", COOKIE_DOUGH);
         register("cake_dough", CAKE_DOUGH);
@@ -326,7 +333,7 @@ public class FoodAndCooking {
         register("raw_egg_bowl", RAW_EGGS);
         register("raw_tenderloin", RAW_TENDER);
         register("cooked_tenderloin", COOKED_TENDER);
-        register("worm", WORM);
+        register("bear_jerky", BEAR_JERKY);
 
         register("salt", SALT);
         //register("thyme", THYME);
@@ -359,5 +366,6 @@ public class FoodAndCooking {
         register("puppy_pumpkin", DOG_PUMPKIN);
         register("fox_food", FOX_FOOD);
         register("fox_treat", FOX_TREAT);
+        register("worm", WORM);
     }
 }

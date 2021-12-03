@@ -430,7 +430,7 @@ public class Furniture {
         
         //registerWithItem("gear", GEAR, furnGroupRare);
 
-        registerWithItem("pet_bed", PET_BED, furnGroup);
+        //registerWithItem("pet_bed", PET_BED, furnGroup);
         
         //Fuels
         //same as Coal Block

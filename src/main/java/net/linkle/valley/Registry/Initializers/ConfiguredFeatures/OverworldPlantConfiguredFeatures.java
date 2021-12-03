@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.BitterBerryBushBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Bushes.MinerBushBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.TomatoBushBlock;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.ReedPatchFeature;
 import net.minecraft.util.Identifier;
@@ -35,27 +34,23 @@ public class OverworldPlantConfiguredFeatures {
     
     public static final ConfiguredFeature<?, ?> BUSH_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(BUSH
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(10).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(7).build());
 
     public static final ConfiguredFeature<?, ?> ROSE_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(ROSEBUSH
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> LILAC_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(LILACBUSH
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> PEONY_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(PEONYBUSH
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
-
-    public static final ConfiguredFeature<?, ?> FERN_PATCH = Feature.RANDOM_PATCH
-            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(FERNBUSH
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(10).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> TUMBLE_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(TUMBLE_WEED
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> CACTUS_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SMALL_CACTUS
@@ -67,7 +62,7 @@ public class OverworldPlantConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> ROCK_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(ROCK_PILE
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(8).build());
 
     public static final ConfiguredFeature<?, ?> SNOW_ROCK_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SNOW_ROCK_PILE
@@ -112,7 +107,7 @@ public class OverworldPlantConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> WILLOW_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(WEAPING_SWAMP_WILLOW
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
 
     public static final ConfiguredFeature<?, ?> RIBBON_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SWAMP_RIBBON
@@ -132,7 +127,7 @@ public class OverworldPlantConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> ORANGE_BEAUTY_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(ORANGE_BEAUTY
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
 
     public static final ConfiguredFeature<?, ?> SORREL_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(REDWOOD_SORREL
@@ -140,23 +135,15 @@ public class OverworldPlantConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> DANDELION_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(DANDELION_PUFF
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
-
-    public static final ConfiguredFeature<?, ?> MINER_PATCH = Feature.RANDOM_PATCH
-            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(MINER_BUSH
-                    .getDefaultState().with(MinerBushBlock.AGE, 3)), SimpleBlockPlacer.INSTANCE)).tries(5).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
 
     public static final ConfiguredFeature<?, ?> JUNGLE_CAP_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(JUNGLE_CAP
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> SWAMP_BUSH_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SWAMP_BUSH
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(10).build());
-
-    public static final ConfiguredFeature<?, ?> SPROUT_PATCH = Feature.RANDOM_PATCH
-            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SPROUT
-                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(5).build());
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(7).build());
 
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
@@ -228,12 +215,6 @@ public class OverworldPlantConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS),
                 GenerationStep.Feature.VEGETAL_DECORATION, sorrelPatch);
 
-        RegistryKey<ConfiguredFeature<?, ?>> minerPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-                new Identifier(MOD_ID, "miner_patch"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, minerPatch.getValue(), MINER_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA, BiomeKeys.TAIGA_HILLS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS),
-                GenerationStep.Feature.VEGETAL_DECORATION, minerPatch);
-
         RegistryKey<ConfiguredFeature<?, ?>> dandelionPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "dandelion_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, dandelionPatch.getValue(), DANDELION_PATCH);
@@ -245,11 +226,6 @@ public class OverworldPlantConfiguredFeatures {
                 new Identifier(MOD_ID, "bush_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, bushPatch.getValue(), BUSH_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE,BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.BEACH, BiomeKeys.DESERT_LAKES, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.ERODED_BADLANDS, BiomeKeys.FLOWER_FOREST, BiomeKeys.FOREST, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS,BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_JUNGLE,BiomeKeys.MODIFIED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS,BiomeKeys.MODIFIED_JUNGLE_EDGE,BiomeKeys.OCEAN,BiomeKeys.PLAINS,BiomeKeys.RIVER,BiomeKeys.SHATTERED_SAVANNA_PLATEAU,BiomeKeys.SHATTERED_SAVANNA,BiomeKeys.SAVANNA_PLATEAU,BiomeKeys.SAVANNA,BiomeKeys.SWAMP_HILLS,BiomeKeys.SWAMP,BiomeKeys.STONE_SHORE,BiomeKeys.SUNFLOWER_PLAINS,BiomeKeys.TAIGA_MOUNTAINS,BiomeKeys.TAIGA_HILLS,BiomeKeys.TAIGA,BiomeKeys.TALL_BIRCH_HILLS,BiomeKeys.TALL_BIRCH_FOREST,BiomeKeys.WOODED_MOUNTAINS,BiomeKeys.WOODED_HILLS), GenerationStep.Feature.VEGETAL_DECORATION, bushPatch);
-
-        RegistryKey<ConfiguredFeature<?, ?>> sproutPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-                new Identifier(MOD_ID, "sprout_patch"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sproutPatch.getValue(), SPROUT_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE,BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.BEACH, BiomeKeys.DESERT_LAKES, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.ERODED_BADLANDS, BiomeKeys.FLOWER_FOREST, BiomeKeys.FOREST, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS,BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_JUNGLE,BiomeKeys.MODIFIED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS,BiomeKeys.MODIFIED_JUNGLE_EDGE,BiomeKeys.OCEAN,BiomeKeys.PLAINS,BiomeKeys.RIVER,BiomeKeys.SHATTERED_SAVANNA_PLATEAU,BiomeKeys.SHATTERED_SAVANNA,BiomeKeys.SAVANNA_PLATEAU,BiomeKeys.SAVANNA,BiomeKeys.SWAMP_HILLS,BiomeKeys.SWAMP,BiomeKeys.STONE_SHORE,BiomeKeys.SUNFLOWER_PLAINS,BiomeKeys.TAIGA_MOUNTAINS,BiomeKeys.TAIGA_HILLS,BiomeKeys.TAIGA,BiomeKeys.TALL_BIRCH_HILLS,BiomeKeys.TALL_BIRCH_FOREST,BiomeKeys.WOODED_MOUNTAINS,BiomeKeys.WOODED_HILLS), GenerationStep.Feature.VEGETAL_DECORATION, sproutPatch);
 
         //found in jungles
         RegistryKey<ConfiguredFeature<?, ?>> junglePatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -302,13 +278,6 @@ public class OverworldPlantConfiguredFeatures {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, peonyPatch.getValue(), PEONY_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.TALL_BIRCH_FOREST, BiomeKeys.TALL_BIRCH_HILLS, BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, peonyPatch);
-
-        //found in cold forests and jungles
-        RegistryKey<ConfiguredFeature<?, ?>> fernPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-                new Identifier(MOD_ID, "fern_patch"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, fernPatch.getValue(), FERN_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.MODIFIED_JUNGLE, BiomeKeys.TAIGA, BiomeKeys.TAIGA_HILLS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.SNOWY_TAIGA_HILLS, BiomeKeys.SNOWY_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS),
-                GenerationStep.Feature.VEGETAL_DECORATION, fernPatch);
 
         //found in deserts
         RegistryKey<ConfiguredFeature<?, ?>> tumblePatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
