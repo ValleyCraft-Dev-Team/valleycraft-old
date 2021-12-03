@@ -76,7 +76,7 @@ public class Plants {
     public static final Block PEONYBUSH = new RoseBush();
     public static final Block FERNBUSH = new RoseBush();
     public static final Block BUSH = new RoseBush();
-    public static final Block MOREL = new MorelBlock();
+    public static final Block MOREL = new MushBlock();
     public static final Block HERBS = new RoseBush();
 
     public static final Block HEDGE = new HedgeBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
@@ -144,7 +144,7 @@ public class Plants {
             .strength(0,0.1f));
 
     public static final Block SWAMP_BUSH = new RoseBush();
-    public static final Block JUNGLE_CAP = new RoseBush();
+    public static final Block JUNGLE_CAP = new MushBlock();
     public static final Block SPROUT = new RoseBush();
 
     public static final Block SWAMP_RIBBON = new RoseBush();

@@ -15,6 +15,8 @@ public class ValleyMain implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        // This should stay first before items and blocks.
+        Tags.initialize();
 
         //Item Initializers
         FoodAndCooking.initialize();
@@ -35,6 +37,7 @@ public class ValleyMain implements ModInitializer {
         PotBlock.initialize();
         
         // Misc Initializers (Recommended put it after the blocks and items initializers)
+        VCLootTables.initialize();
         Sounds.initialize();
         Compostables.initialize();
         Entities.initialize();

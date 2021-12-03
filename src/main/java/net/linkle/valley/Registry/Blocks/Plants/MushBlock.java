@@ -1,8 +1,14 @@
 package net.linkle.valley.Registry.Blocks.Plants;
 
+import java.util.Random;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
+import net.minecraft.block.PlantBlock;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.BlockTags;
@@ -12,28 +18,26 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-import java.util.Iterator;
-import java.util.Random;
+public class MushBlock extends PlantBlock {
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
 
-import static net.linkle.valley.Registry.Initializers.Furniture.HANGING;
-
-public class MorelBlock extends PlantBlock {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
-
-    public MorelBlock() {
+    public MushBlock() {
         super(FabricBlockSettings.of(Material.LEAVES)
                 .breakByTool(FabricToolTags.SHEARS)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
-                .strength(0, 0.5f));
+                .strength(0, 0.5f)
+                .ticksRandomly());
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
     public static final VoxelShape BlockCollisionShape;
 
+    @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return BlockCollisionShape;
     }
@@ -42,50 +46,48 @@ public class MorelBlock extends PlantBlock {
         BlockCollisionShape = VoxelShapes.empty();
     }
 
-    //mushy stuff
+    // mushy stuff
+    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (random.nextInt(25) == 0) {
-            int i = 5;
-            Iterator var7 = BlockPos.iterate(pos.add(-4, -1, -4), pos.add(4, 1, 4)).iterator();
-
-            while(var7.hasNext()) {
-                BlockPos blockPos = (BlockPos)var7.next();
+            int num = 5;
+            for (var blockPos : BlockPos.iterate(pos.add(-4, -1, -4), pos.add(4, 1, 4))) {
                 if (world.getBlockState(blockPos).isOf(this)) {
-                    --i;
-                    if (i <= 0) {
+                    if (--num <= 0) {
                         return;
                     }
                 }
             }
 
-            BlockPos blockPos2 = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+            var blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
 
-            for(int k = 0; k < 4; ++k) {
-                if (world.isAir(blockPos2) && state.canPlaceAt(world, blockPos2)) {
-                    pos = blockPos2;
+            for (int k = 0; k < 4; ++k) {
+                if (world.isAir(blockPos) && state.canPlaceAt(world, blockPos)) {
+                    pos = blockPos;
                 }
 
-                blockPos2 = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+                blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
             }
 
-            if (world.isAir(blockPos2) && state.canPlaceAt(world, blockPos2)) {
-                world.setBlockState(blockPos2, state, 2);
+            if (world.isAir(blockPos) && state.canPlaceAt(world, blockPos)) {
+                world.setBlockState(blockPos, state, 2);
             }
         }
-
     }
 
+    @Override
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isOpaqueFullCube(world, pos);
     }
 
+    @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        BlockPos blockPos = pos.down();
-        BlockState blockState = world.getBlockState(blockPos);
+        var blockPos = pos.down();
+        var blockState = world.getBlockState(blockPos);
         if (blockState.isIn(BlockTags.MUSHROOM_GROW_BLOCK)) {
             return true;
         } else {
-            return world.getBaseLightLevel(pos, 0) > 7 && this.canPlantOnTop(blockState, world, blockPos);
+            return world.getBaseLightLevel(pos, 0) > 7 && canPlantOnTop(blockState, world, blockPos);
         }
     }
 }
