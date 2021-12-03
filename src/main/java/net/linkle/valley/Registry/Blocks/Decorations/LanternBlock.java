@@ -30,7 +30,7 @@ public class LanternBlock extends HorizontalWithWaterBlock {
     
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
-        return ctx.getSide().getOpposite();
+        return getSideElseUserFacing(ctx, true);
     }
     
     @Override

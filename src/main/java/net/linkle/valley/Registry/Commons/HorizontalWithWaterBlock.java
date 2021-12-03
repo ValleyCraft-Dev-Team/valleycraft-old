@@ -26,7 +26,7 @@ public class HorizontalWithWaterBlock extends HorizontalBlock implements Waterlo
         super(settings);
     }
 
-    /** Please call this subclass method to append facing and waterlogged properties: <code>super.appendProperties(builder)</code> */
+    /** Please call this subclass method to append facing and waterlogged properties: <code>super.getPlacementState(ctx)</code> */
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return super.getPlacementState(ctx).with(WATERLOGGED, Util.inWater(ctx));
