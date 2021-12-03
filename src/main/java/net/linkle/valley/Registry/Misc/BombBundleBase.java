@@ -11,7 +11,6 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class BombBundleBase extends Item {
@@ -19,41 +18,35 @@ public class BombBundleBase extends Item {
         super(settings);
     }
 
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
-        if (playerEntity instanceof ServerPlayerEntity) {
-            Criteria.CONSUME_ITEM.trigger((ServerPlayerEntity)playerEntity, stack);
-        }
+        if (user instanceof PlayerEntity player && !player.getAbilities().creativeMode) {
+            if (player instanceof ServerPlayerEntity serverPlayer)
+                Criteria.CONSUME_ITEM.trigger(serverPlayer, stack);
+            player.incrementStat(Stats.USED.getOrCreateStat(this));
 
-        if (playerEntity != null) {
-            playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
-            if (!playerEntity.getAbilities().creativeMode) {
-                stack.decrement(1);
-            }
-        }
+            stack.decrement(1);
+            var inventory = player.getInventory();
 
-        if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
             if (stack.isEmpty()) {
-                return new ItemStack(Items.TNT, 4);
+                inventory.insertStack(new ItemStack(Items.TNT, 4));
+                return new ItemStack(Items.FLINT_AND_STEEL, 1);
             }
 
-            if (playerEntity != null) {
-                playerEntity.getInventory().insertStack(new ItemStack(Items.TNT, 4));
-                playerEntity.getInventory().insertStack(new ItemStack(Items.FLINT_AND_STEEL, 1));
-            }
+            inventory.insertStack(new ItemStack(Items.TNT, 4));
+            inventory.insertStack(new ItemStack(Items.FLINT_AND_STEEL, 1));
+            return stack;
         }
 
-        return stack.isEmpty() ? new ItemStack(Items.TNT, 4) : stack;
+        return stack;
     }
 
+    @Override
     public int getMaxUseTime(ItemStack stack) {
         return 1;
     }
 
-    public UseAction getUseAction(ItemStack stack) {
-        return UseAction.BLOCK;
-    }
-
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return ItemUsage.consumeHeldItem(world, user, hand);
     }
