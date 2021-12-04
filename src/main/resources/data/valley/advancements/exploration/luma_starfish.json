@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Otherworldy"
+		},
+		"icon": {
+			"item": "valley:fossilized_starfish"
+		},
+		"description": {
+			"text": "Catch the Luma Starfish"
+		}
+	},
+	"criteria": {
+		"starfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fossilized_starfish"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"starfish"
+		]
+	]
+}

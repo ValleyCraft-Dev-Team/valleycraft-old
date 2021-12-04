@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "The Gods of Thunder and Lightning"
+		},
+		"icon": {
+			"item": "valley:storm_totem"
+		},
+		"description": {
+			"text": "Summon a thunderstorm"
+		}
+	},
+	"criteria": {
+		"summon_storm": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:storm_totem"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"summon_storm"
+		]
+	]
+}
