@@ -8,7 +8,7 @@
       "item": "valley:squid_sucker"
     },
     {
-      "item": "valley:rice_item"
+      "tag": "c:rice"
     }
   ],
   "result": {

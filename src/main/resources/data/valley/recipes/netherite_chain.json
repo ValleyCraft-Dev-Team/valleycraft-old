@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     "i": {
       "item": "minecraft:netherite_ingot"

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:miners_lettuce"
+      "tag": "c:miners_lettuce"
     },
     {
       "item": "minecraft:red_mushroom"

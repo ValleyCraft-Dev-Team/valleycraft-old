@@ -5,7 +5,7 @@
       "item": "minecraft:wheat"
     },
     {
-      "item": "valley:bitter_berries"
+      "tag": "c:bitter_berries"
     },
     {
       "item": "minecraft:sugar"

@@ -13,7 +13,7 @@
       "item": "minecraft:stick"
     },
     "i": {
-      "item": "minecraft:copper_ingot"
+      "tag": "c:copper_ingot"
     },
     "C": {
       "item": "valley:climbable_rope"

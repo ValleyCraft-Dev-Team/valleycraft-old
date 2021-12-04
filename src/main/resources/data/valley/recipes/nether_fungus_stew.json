@@ -8,7 +8,7 @@
       "item": "minecraft:warped_fungus"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:bowl"

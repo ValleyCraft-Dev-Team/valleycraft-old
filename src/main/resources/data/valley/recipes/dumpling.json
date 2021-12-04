@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:bread_dough"
+      "tag": "c:dough"
     },
     {
       "item": "minecraft:chicken"
@@ -11,7 +11,7 @@
       "tag": "c:eggs"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
       "item": "valley:milk_bottle"

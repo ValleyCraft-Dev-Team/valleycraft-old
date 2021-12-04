@@ -11,7 +11,7 @@
       "item": "valley:milk_bottle"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:potato"

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:tomato_bush"
+      "tag": "c:tomato"
     },
     {
       "item": "valley:milk_bottle"
@@ -11,7 +11,7 @@
       "item": "minecraft:bowl"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     }
   ],
   "result": {

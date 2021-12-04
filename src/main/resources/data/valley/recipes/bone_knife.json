@@ -5,7 +5,7 @@
       "item": "valley:flint_rock"
     },
     {
-      "item": "minecraft:bone"
+      "tag": "c:bones"
     }
   ],
   "result": {

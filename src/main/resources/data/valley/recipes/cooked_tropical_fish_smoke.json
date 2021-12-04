@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "minecraft:tropical_fish"
+    "tag": "c:tropical_fish"
   },
   "result": "valley:cooked_tropical_fish",
   "experience": 0.2,

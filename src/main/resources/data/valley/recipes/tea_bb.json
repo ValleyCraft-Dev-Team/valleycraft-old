@@ -11,7 +11,7 @@
       "item": "valley:small_mug_block"
     },
     {
-      "item": "valley:bitter_berries"
+      "tag": "c:bitter_berries"
     }
   ],
   "result": {

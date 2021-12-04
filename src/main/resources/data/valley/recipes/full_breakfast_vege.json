@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:brown_mushroom"
     },
     {
-      "item": "valley:tomato_bush"
+      "tag": "c:tomato"
     },
     {
       "item": "valley:cooked_egg_bowl"

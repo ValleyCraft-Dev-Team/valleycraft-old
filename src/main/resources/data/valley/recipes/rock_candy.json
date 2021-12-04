@@ -11,7 +11,7 @@
       "item": "minecraft:sugar"
     },
     {
-      "item": "minecraft:light_blue_dye"
+      "tag": "c:light_blue_dyes"
     },
     {
       "item": "minecraft:sugar"

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:flour_bag"
+      "tag": "c:flour"
     },
     {
       "tag": "c:eggs"
@@ -11,7 +11,7 @@
       "item": "valley:milk_bottle"
     },
     {
-      "item": "valley:flour_bag"
+      "tag": "c:flour"
     }
   ],
   "result": {
