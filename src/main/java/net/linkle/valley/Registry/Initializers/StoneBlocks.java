@@ -49,6 +49,20 @@ public class StoneBlocks {
     public static final Block DARK_STONE = new StoneOreBlock();
     public static final Block TAIGA_STONE = new StoneOreBlock();
 
+    public static final Block LIMESTONE = new StoneOreBlock();
+    public static final Block PUMICE = new StoneOreBlock();
+    public static final Block JASPER = new StoneOreBlock();
+    public static final Block GREEN_GRANITE = new StoneOreBlock();
+
+    public static final Block DIABASE_SMOOTH = new StoneOreBlock();
+    public static final Block GRIMESTONE_SMOOTH = new StoneOreBlock();
+    public static final Block VERDANTINE_SMOOTH = new StoneOreBlock();
+    public static final Block MARINITE_SMOOTH = new StoneOreBlock();
+    public static final Block JASPER_SMOOTH = new StoneOreBlock();
+    public static final Block PUMICE_SMOOTH = new StoneOreBlock();
+    public static final Block GREEN_GRANITE_SMOOTH = new StoneOreBlock();
+    public static final Block LIMESTONE_SMOOTH = new StoneOreBlock();
+
     public static final Block CICADA = new CicadaBlock();
 
     public static void initialize() {
@@ -83,7 +97,20 @@ public class StoneBlocks {
         registerWithItem("swampstone", SWAMP_STONE, natureGroup);
         registerWithItem("darkstone", DARK_STONE, natureGroup);
         registerWithItem("taigastone", TAIGA_STONE, natureGroup);
-        
+        registerWithItem("green_granite", GREEN_GRANITE, natureGroup);
+        registerWithItem("pumice", PUMICE, natureGroup);
+        registerWithItem("jasper", JASPER, natureGroup);
+        registerWithItem("limestone", LIMESTONE, natureGroup);
+
+        registerWithItem("diabase_smooth", DIABASE_SMOOTH, furnGroup);
+        registerWithItem("grimestone_smooth", GRIMESTONE_SMOOTH, furnGroup);
+        registerWithItem("marinite_smooth", MARINITE_SMOOTH, furnGroup);
+        registerWithItem("verdantine_smooth", VERDANTINE_SMOOTH, furnGroup);
+        registerWithItem("green_granite_smooth", GREEN_GRANITE_SMOOTH, furnGroup);
+        registerWithItem("pumice_smooth", PUMICE_SMOOTH, furnGroup);
+        registerWithItem("jasper_smooth", JASPER_SMOOTH, furnGroup);
+        registerWithItem("limestone_smooth", LIMESTONE_SMOOTH, furnGroup);
+
         registerWithItem("salt_ore", SALT_ORE, natureGroup);
         registerWithItem("salt_block", SALT_BLOCK, furnGroup);
         registerWithItem("nether_salt", NETHER_SALT, natureGroup);
