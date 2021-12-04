@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/woods",
 	"display": {
 		"title": {
 			"text": "The Path of the Old Ones"
@@ -12,7 +12,7 @@
 		}
 	},
 	"criteria": {
-		"starfish": {
+		"staff": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"starfish"
+			"staff"
 		]
 	]
 }

@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/telescope",
+	"parent": "valley:exploration/root",
 	"display": {
 		"title": {
-			"text": "Beginner Anthropologist"
+			"text": "I Got Yer 4 Basic Food Groups"
 		},
 		"icon": {
-			"item": "valley:climbing_axe"
+			"item": "valley:grub"
 		},
 		"description": {
-			"text": "Craft a Climbing Axe"
+			"text": "Make whatever 'Grub' is."
 		}
 	},
 	"criteria": {
-		"climbing_axe": {
+		"starfish": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:climbing_axe"
+							"valley:grub"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"climbing_axe"
+			"starfish"
 		]
 	]
 }

@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/telescope",
+	"parent": "valley:exploration/improvisor",
 	"display": {
 		"title": {
-			"text": "Beginner Anthropologist"
+			"text": "Survivalist"
 		},
 		"icon": {
-			"item": "valley:climbing_axe"
+			"item": "valley:iron_knife"
 		},
 		"description": {
-			"text": "Craft a Climbing Axe"
+			"text": "Use a Knife to gather Fiber for Rope"
 		}
 	},
 	"criteria": {
-		"climbing_axe": {
+		"fiber": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:climbing_axe"
+							"valley:fiber"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"climbing_axe"
+			"fiber"
 		]
 	]
 }

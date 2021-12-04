@@ -1,0 +1,63 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Improvised Assault"
+		},
+		"icon": {
+			"item": "valley:tree_branch"
+		},
+		"description": {
+			"text": "Create some improvised weapons."
+		}
+	},
+	"criteria": {
+		"branch": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:tree_branch"
+						]
+					}
+				]
+			}
+		},
+		"bone_knife": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bone_knife"
+						]
+					}
+				]
+			}
+		},
+		"flint": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:flint_rock"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"branch"
+		],
+		[
+			"bone_knife"
+		],
+		[
+			"flint"
+		]
+	]
+}

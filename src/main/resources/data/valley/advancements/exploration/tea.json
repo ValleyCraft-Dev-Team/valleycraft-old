@@ -2,72 +2,72 @@
 	"parent": "valley:exploration/foodgroups",
 	"display": {
 		"title": {
-			"text": "Professional Viking"
+			"text": "Tea Specialist"
 		},
 		"icon": {
-			"item": "valley:mead_mug"
+			"item": "valley:tea_lavender"
 		},
 		"description": {
-			"text": "Drink one of every type of Mead and Cyser"
+			"text": "Drink one of every type of Tea"
 		}
 	},
 	"criteria": {
-		"mead_mug": {
+		"tea_lavender": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:mead_mug"
+						"valley:tea_lavender"
 					]
 				}
 			}
 		},
-		"sweet_berry_cyser": {
+		"tea_dandelion": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:sweet_berry_cyser"
+						"valley:tea_dandelion"
 					]
 				}
 			}
 		},
-		"spicy_berry_cyser": {
+		"tea_miner": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:spicy_berry_cyser"
+						"valley:tea_miner"
 					]
 				}
 			}
 		},
-		"bitter_berry_cyser": {
+		"tea_bb": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:bitter_berry_cyser"
+						"valley:tea_bb"
 					]
 				}
 			}
 		},
-		"apple_cyser": {
+		"tea_sb": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:apple_cyser"
+						"valley:tea_sb"
 					]
 				}
 			}
 		},
-		"chocolate_cyser": {
+		"tea": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:chocolate_cyser"
+						"valley:tea"
 					]
 				}
 			}
@@ -75,22 +75,22 @@
 	},
 	"requirements": [
 		[
-			"mead_mug"
+			"tea_lavender"
 		],
 		[
-			"sweet_berry_cyser"
+			"tea_dandelion"
 		],
 		[
-			"spicy_berry_cyser"
+			"tea_miner"
 		],
 		[
-			"bitter_berry_cyser"
+			"tea_bb"
 		],
 		[
-			"apple_cyser"
+			"tea_sb"
 		],
 		[
-			"chocolate_cyser"
+			"tea"
 		]
 	]
 }

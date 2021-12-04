@@ -1,0 +1,80 @@
+{
+	"parent": "valley:exploration/farmsteader",
+	"display": {
+		"title": {
+			"text": "Spooky Scary Scarecrows"
+		},
+		"icon": {
+			"item": "valley:scarecrow_hat"
+		},
+		"description": {
+			"text": "Find all Rarecrow types"
+		},
+		"frame": "challenge",
+		"hidden": false
+	},
+	"criteria": {
+		"scarecrow_target": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:scarecrow_target"
+						]
+					}
+				]
+			}
+		},
+		"rarecrow_zombie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rarecrow_zombie"
+						]
+					}
+				]
+			}
+		},
+		"rarecrow_melon": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rarecrow_melon"
+						]
+					}
+				]
+			}
+		},
+		"rarecrow_skeleton": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rarecrow_skeleton"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"scarecrow_target"
+		],
+		[
+			"rarecrow_melon"
+		],
+		[
+			"rarecrow_skeleton"
+		],
+		[
+			"rarecrow_zombie"
+		]
+	]
+}

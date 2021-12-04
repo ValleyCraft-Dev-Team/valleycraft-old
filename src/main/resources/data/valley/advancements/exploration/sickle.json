@@ -1,0 +1,38 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Forager"
+		},
+		"icon": {
+			"item": "valley:green_bean_seeds"
+		},
+		"description": {
+			"text": "Use a sickle to forage for seeds."
+		}
+	},
+	"criteria": {
+		"seeds": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:green_bean_seeds",
+							"valley:puff_seeds",
+							"valley:miners_lettuce",
+							"valley:onion_seeds",
+							"valley:snow_yam_item",
+							"valley:mandrake_seeds"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"seeds"
+		]
+	]
+}

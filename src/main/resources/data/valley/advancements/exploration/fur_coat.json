@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/telescope",
+	"parent": "valley:exploration/improvisor",
 	"display": {
 		"title": {
-			"text": "Beginner Anthropologist"
+			"text": "Frozen Comfort"
 		},
 		"icon": {
-			"item": "valley:climbing_axe"
+			"item": "valley:fur_chestplate"
 		},
 		"description": {
-			"text": "Craft a Climbing Axe"
+			"text": "Make a Fur Cloak"
 		}
 	},
 	"criteria": {
-		"climbing_axe": {
+		"fur_coat": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:climbing_axe"
+							"valley:fur_chestplate"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"climbing_axe"
+			"fur_coat"
 		]
 	]
 }

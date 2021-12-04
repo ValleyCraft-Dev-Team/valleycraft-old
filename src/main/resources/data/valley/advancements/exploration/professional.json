@@ -1,0 +1,395 @@
+{
+	"parent": "valley:exploration/archaeologist",
+	"display": {
+		"title": {
+			"text": "Archaeologist"
+		},
+		"icon": {
+			"item": "valley:goblet"
+		},
+		"description": {
+			"text": "Find every Artifact"
+		},
+		"frame": "challenge",
+		"hidden": false
+	},
+	"criteria": {
+		"disc_11": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:music_disc_11"
+						]
+					}
+				]
+			}
+		},
+		"heart_of_the_sea": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:heart_of_the_sea"
+						]
+					}
+				]
+			}
+		},
+		"book": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:book"
+						]
+					}
+				]
+			}
+		},
+		"golden_horse_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:golden_horse_armor"
+						]
+					}
+				]
+			}
+		},
+		"diamond_horse_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:diamond_horse_armor"
+						]
+					}
+				]
+			}
+		},
+		"iron_horse_armor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:iron_horse_armor"
+						]
+					}
+				]
+			}
+		},
+		"totem_of_undying": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:totem_of_undying"
+						]
+					}
+				]
+			}
+		},
+		"trident": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:trident"
+						]
+					}
+				]
+			}
+		},
+		"chainmail_helmet": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chainmail_helmet"
+						]
+					}
+				]
+			}
+		},
+		"chainmail_chestplate": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chainmail_chestplate"
+						]
+					}
+				]
+			}
+		},
+		"chainmail_leggings": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chainmail_leggings"
+						]
+					}
+				]
+			}
+		},
+		"chainmail_boots": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:chainmail_boots"
+						]
+					}
+				]
+			}
+		},
+		"bomb_bag": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bomb_bag"
+						]
+					}
+				]
+			}
+		},
+		"rice_crop": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rice_crop"
+						]
+					}
+				]
+			}
+		},
+		"maize_crop": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:maize_crop"
+						]
+					}
+				]
+			}
+		},
+		"spicy_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:spicy_berries"
+						]
+					}
+				]
+			}
+		},
+		"goblet": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:goblet"
+						]
+					}
+				]
+			}
+		},
+		"anchor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anchor"
+						]
+					}
+				]
+			}
+		},
+		"bone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bone"
+						]
+					}
+				]
+			}
+		},
+		"emerald": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:emerald"
+						]
+					}
+				]
+			}
+		},
+		"skeleton_skull": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:skeleton_skull"
+						]
+					}
+				]
+			}
+		},
+		"wither_skeleton_skull": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:wither_skeleton_skull"
+						]
+					}
+				]
+			}
+		},
+		"enchanted_golden_apple": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:enchanted_golden_apple"
+						]
+					}
+				]
+			}
+		},
+		"experience_bottle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:experience_bottle"
+						]
+					}
+				]
+			}
+		},
+		"bell": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bell"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"disc_11"
+		],
+		[
+			"heart_of_the_sea"
+		],
+		[
+			"book"
+		],
+		[
+			"golden_horse_armor"
+		],
+		[
+			"diamond_horse_armor"
+		],
+		[
+			"iron_horse_armor"
+		],
+		[
+			"trident"
+		],
+		[
+			"totem_of_undying"
+		],
+		[
+			"chainmail_helmet"
+		],
+		[
+			"chainmail_chestplate"
+		],
+		[
+			"chainmail_leggings"
+		],
+		[
+			"chainmail_boots"
+		],
+		[
+			"bomb_bag"
+		],
+		[
+			"rice_crop"
+		],
+		[
+			"maize_crop"
+		],
+		[
+			"spicy_berries"
+		],
+		[
+			"goblet"
+		],
+		[
+			"anchor"
+		],
+		[
+			"bone"
+		],
+		[
+			"emerald"
+		],
+		[
+			"wither_skeleton_skull"
+		],
+		[
+			"skeleton_skull"
+		],
+		[
+			"enchanted_golden_apple"
+		],
+		[
+			"experience_bottle"
+		],
+		[
+			"bell"
+		]
+	]
+}

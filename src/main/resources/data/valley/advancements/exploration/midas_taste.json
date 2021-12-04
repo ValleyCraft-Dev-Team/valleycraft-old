@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/goldbutbetter",
 	"display": {
 		"title": {
 			"text": "Mida's Taste"
@@ -9,7 +9,8 @@
 		},
 		"description": {
 			"text": "Eat one of every type of golden food"
-		}
+		},
+		"frame": "challenge"
 	},
 	"criteria": {
 		"golden_apple": {
@@ -152,6 +153,56 @@
 				}
 			}
 		},
+		"glistering_juice": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_juice"
+					]
+				}
+			}
+		},
+		"glistering_snow_yam": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_snow_yam"
+					]
+				}
+			}
+		},
+		"glistering_anglerfish": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_anglerfish"
+					]
+				}
+			}
+		},
+		"glistering_corn": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_corn"
+					]
+				}
+			}
+		},
+		"glistering_mandrake": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_mandrake"
+					]
+				}
+			}
+		},
 		"glistering_glow_berries": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
@@ -211,6 +262,21 @@
 		],
 		[
 			"glistering_glow_berries"
+		],
+		[
+			"glistering_juice"
+		],
+		[
+			"glistering_snow_yam"
+		],
+		[
+			"glistering_anglerfish"
+		],
+		[
+			"glistering_corn"
+		],
+		[
+			"glistering_mandrake"
 		]
 	]
 }

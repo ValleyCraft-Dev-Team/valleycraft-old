@@ -1,0 +1,37 @@
+{
+	"parent": "valley:exploration/explorer",
+	"display": {
+		"title": {
+			"text": "Shovel Bum"
+		},
+		"icon": {
+			"item": "valley:anchor"
+		},
+		"description": {
+			"text": "Find an Artifact"
+		}
+	},
+	"criteria": {
+		"artifact": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anchor",
+							"valley:goblet",
+							"valley:bomb_bag",
+							"minecraft:skeleton_skull",
+							"minecraft:wither_skeleton_skull"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"artifact"
+		]
+	]
+}

@@ -1,0 +1,123 @@
+{
+	"parent": "valley:exploration/lumber_axe",
+	"display": {
+		"title": {
+			"text": "Lumberjack"
+		},
+		"icon": {
+			"item": "valley:lumber_axe"
+		},
+		"description": {
+			"text": "Cut down every tree type and gather their saplings."
+		}
+	},
+	"criteria": {
+		"apple": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:apple_sapling"
+						]
+					}
+				]
+			}
+		},
+		"oak": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:oak_sapling"
+						]
+					}
+				]
+			}
+		},
+		"birch": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:birch_sapling"
+						]
+					}
+				]
+			}
+		},
+		"spruce": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:spruce_sapling"
+						]
+					}
+				]
+			}
+		},
+		"jungle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:jungle_sapling"
+						]
+					}
+				]
+			}
+		},
+		"acacia": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:acacia_sapling"
+						]
+					}
+				]
+			}
+		},
+		"dark": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:dark_oak_sapling"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"apple"
+		],
+		[
+			"oak"
+		],
+		[
+			"birch"
+		],
+		[
+			"spruce"
+		],
+		[
+			"jungle"
+		],
+		[
+			"acacia"
+		],
+		[
+			"dark"
+		]
+	]
+}
