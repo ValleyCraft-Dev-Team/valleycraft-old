@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:mollusks"
+    },
+    {
+      "tag": "c:mollusks"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "valley:salt"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:clam_chowder",
+    "count": 1
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CP",
+    "TTT",
+    "BBB"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:ghost_fish"
+    },
+    "P": {
+      "item": "valley:dried_seaweed"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "T": {
+      "item": "valley:rice_item"
+    },
+    "B": {
+      "item": "valley:bento_block"
+    }
+  },
+  "result": {
+    "item": "valley:bbox_ghost",
+    "count": 3
+  }
+}

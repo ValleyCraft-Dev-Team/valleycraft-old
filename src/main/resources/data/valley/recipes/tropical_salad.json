@@ -5,7 +5,7 @@
       "item": "valley:rice_bowl"
     },
     {
-      "item": "valley:cooked_tropical_fish"
+      "tag": "c:tropical_fish"
     },
     {
       "item": "minecraft:kelp"

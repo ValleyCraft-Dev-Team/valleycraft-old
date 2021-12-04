@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "valley:crab_red"
+  },
+  "result": "valley:crab_red_cooked",
+  "experience": 0.2,
+  "cookingtime": 200
+}

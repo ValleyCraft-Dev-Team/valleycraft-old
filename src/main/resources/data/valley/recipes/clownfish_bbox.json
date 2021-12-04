@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:tropical_fish"
+      "tag": "c:tropical_fish"
     },
     "P": {
-      "item": "minecraft:kelp"
+      "item": "valley:dried_seaweed"
     },
     "C": {
       "item": "minecraft:carrot"

@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:winter_root_item"
+      "item": "valley:sardine"
     },
     {
-      "item": "valley:salt"
+      "item": "valley:mandrake"
     },
     {
-      "item": "minecraft:bowl"
+      "tag": "c:mollusks"
+    },
+    {
+      "item": "minecraft:potato"
     },
     {
       "item": "valley:milk_bottle"
     }
   ],
   "result": {
-    "item": "valley:winter_root_stew",
+    "item": "valley:sardine_soup",
     "count": 1
   }
 }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "valley:maize_crop"
+    }
+  },
+  "result": {
+    "item": "valley:glistering_corn",
+    "count": 1
+  }
+}

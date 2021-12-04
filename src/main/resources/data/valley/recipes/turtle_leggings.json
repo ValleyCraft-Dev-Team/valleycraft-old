@@ -3,18 +3,15 @@
   "pattern": [
     "###",
     "# #",
-    " i "
+    "# #"
   ],
   "key": {
     "#": {
-      "item": "minecraft:iron_nugget"
-    },
-    "i": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:scute"
     }
   },
   "result": {
-    "item": "valley:stirrup",
+    "item": "valley:turtle_leggings",
     "count": 1
   }
 }

@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:driftwood"
+      "item": "valley:crocus"
     }
   ],
   "result": {
-    "item": "minecraft:stick"
+    "item": "minecraft:purple_dye"
   }
 }

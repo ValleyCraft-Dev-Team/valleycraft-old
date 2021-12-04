@@ -140,6 +140,7 @@ public class FoodAndCooking {
     public static final Item PORK_STIR_FRY = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,600), 1.0f).build()).maxCount(1));
     public static final Item SQUID_ROLL = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.7f).build()).maxCount(64));
     public static final Item FROZEN_JELLY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600),1.0f).build()).maxCount(64));
+    public static final Item ROCK_CANDY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED,600),1.0f).build()).maxCount(64));
     public static final Item GRILLED_SUCKER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item MONSTER_JERKY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).meat().build()).maxCount(64));
     public static final Item GLOW_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.7f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING,600), 1.0f).build()).maxCount(1));
@@ -151,6 +152,7 @@ public class FoodAndCooking {
     public static final Item PANCAKE_BREAKFAST_LARGE = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200), 1.0f).build()).maxCount(1));
     public static final Item FULL_BREAKFAST = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,1200), 1.0f).build()).maxCount(1));
     public static final Item BACON_AND_EGGS = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,900), 1.0f).build()).maxCount(1));
+    public static final Item DUMPLING = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200), 1.0f).build()).maxCount(1));
 
     public static final Item GRUB = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(12).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,1800), 1.0f).build()).maxCount(1));
 
@@ -172,6 +174,8 @@ public class FoodAndCooking {
     public static final Item GOLDEN_P = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item GOLDEN_B = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item GOLDEN_O = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
+    public static final Item GOLDEN_C = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
+    public static final Item GOLDEN_SY = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item GOLDEN_T = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item GOLDEN_K = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item GOLDEN_H = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
@@ -185,6 +189,7 @@ public class FoodAndCooking {
     public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,900), 1.0f).build()).maxCount(1));
     public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,900), 1.0f).build()).maxCount(1));
     public static final Item WORM_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,900), 1.0f).build()).maxCount(1));
+    public static final Item SLIME_SOUP = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST,900), 1.0f).build()).maxCount(1));
 
     public static final Item BITTER_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
     public static final Item SWEET_PIE = new PieBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
@@ -262,6 +267,7 @@ public class FoodAndCooking {
         register("clam_chowder", CLAM_CHOWDER);
         register("sardine_soup", SARDINE_SOUP);
         register("worm_bowl", WORM_SOUP);
+        register("slime_soup", SLIME_SOUP);
         register("chicken_curry", CHICKEN_CURRY);
         register("rice_bowl", RICE_BOWL);
         register("poke_bowl", POKE_BOWL);
@@ -317,6 +323,7 @@ public class FoodAndCooking {
         register("honeycomb_chunk", HONEYCOMB_CHUNK);
         register("crystalized_honey", CRYS_HONEY);
         register("frozen_jelly", FROZEN_JELLY);
+        register("rock_candy", ROCK_CANDY);
         register("candied_snow_yams", CANDIED_SNOW_YAM);
 
         register("cooked_apple", COOKED_APPLE);
@@ -326,6 +333,7 @@ public class FoodAndCooking {
         register("drumstick", DRUMSTICK);
         register("stuffed_onion", STUFFED_ONION);
         register("baked_potato", BAKED_POTATO_SPECIAL);
+        register("dumpling", DUMPLING);
 
         register("rice_item", RICE_ITEM);
         register("raw_bacon", RAW_BACON);
@@ -359,6 +367,8 @@ public class FoodAndCooking {
         register("glistering_beet", GOLDEN_B);
         register("glistering_green_bean", GOLDEN_GB);
         register("glistering_mandrake", GOLDEN_M);
+        register("glistering_corn", GOLDEN_C);
+        register("glistering_snow_yam", GOLDEN_SY);
 
         register("dog_biscuit", DOG_BISCUIT);
         register("dog_food", DOG_FOOD);

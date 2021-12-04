@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iiR",
+    " /C",
+    "/  "
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "valley:climbable_rope"
+    }
+  },
+  "result": {
+    "item": "valley:climbing_axe",
+    "count": 1
+  }
+}

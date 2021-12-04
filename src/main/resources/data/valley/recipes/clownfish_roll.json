@@ -5,7 +5,7 @@
       "item": "valley:dried_seaweed"
     },
     {
-      "item": "minecraft:tropical_fish"
+      "tag": "c:tropical_fish"
     },
     {
       "item": "valley:rice_item"

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:fur_clump"
+    }
+  },
+  "result": {
+    "item": "valley:fur_chestplate",
+    "count": 1
+  }
+}

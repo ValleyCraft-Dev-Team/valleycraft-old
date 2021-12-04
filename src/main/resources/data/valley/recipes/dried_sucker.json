@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:flint_rock"
+      "item": "valley:salt"
     },
     {
-      "item": "minecraft:rabbit_hide"
+      "item": "valley:squid_sucker"
     }
   ],
   "result": {
-    "item": "valley:rawhide_lashing",
+    "item": "valley:dried_sucker",
     "count": 1
   }
 }

@@ -16,11 +16,6 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 8,
-          "name": "valley:crystal_ball"
-        },
-        {
-          "type": "minecraft:item",
           "weight": 10,
           "name": "valley:goblet"
         },

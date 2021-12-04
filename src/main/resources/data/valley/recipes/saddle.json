@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "#L#",
-    "CKC",
+    "C#C",
     "I I"
   ],
   "key": {
@@ -13,13 +13,10 @@
       "item": "valley:fur_clump"
     },
     "C": {
-      "item": "valley:rawhide_lashing"
-    },
-    "K": {
       "item": "valley:climbable_rope"
     },
     "I": {
-      "item": "valley:stirrup"
+      "item": "minecraft:iron_ingot"
     }
   },
   "result": {

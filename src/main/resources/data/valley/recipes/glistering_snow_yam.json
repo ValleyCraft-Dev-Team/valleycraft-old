@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "valley:snow_yam_item"
+    }
+  },
+  "result": {
+    "item": "valley:glistering_snow_yam",
+    "count": 1
+  }
+}
