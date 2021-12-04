@@ -24,6 +24,31 @@ public class FurnitureCont {
     public static final Block CAMPFIRE_RING = new CampfireRocksBlock();
     public static final Block LOGPILE = new LogPileBlock();
 
+    public static final Block CRATE_BAMBOO = new CrateBlock();
+    public static final Block CRATE_SUGAR = new CrateBlock();
+    public static final Block CRATE_COCOA = new CrateBlock();
+    public static final Block CRATE_CHORUS = new CrateBlock();
+    public static final Block CRATE_GLOW = new CrateBlock();
+    public static final Block CRATE_SWEET = new CrateBlock();
+    public static final Block CRATE_BITTER = new CrateBlock();
+    public static final Block CRATE_SPICY = new CrateBlock();
+    public static final Block CRATE_GREEN = new CrateBlock();
+    public static final Block CRATE_MANDRAKE = new CrateBlock();
+    public static final Block CRATE_SNOW = new CrateBlock();
+    public static final Block CRATE_HOLLY = new CrateBlock();
+    public static final Block CRATE_RICE = new CrateBlock();
+    public static final Block CRATE_CORN = new CrateBlock();
+    public static final Block CRATE_ONION = new CrateBlock();
+    public static final Block CRATE_TOMATO = new CrateBlock();
+    public static final Block CRATE_PUFF = new CrateBlock();
+    public static final Block CRATE_MINER = new CrateBlock();
+    public static final Block CRATE_DUCK = new CrateBlock();
+    public static final Block CRATE_EGG = new CrateBlock();
+    public static final Block CRATE_BEET = new CrateBlock();
+    public static final Block CRATE_POTATO = new CrateBlock();
+    public static final Block CRATE_CARROT = new CrateBlock();
+    public static final Block CRATE_APPLE = new CrateBlock();
+
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
@@ -43,5 +68,38 @@ public class FurnitureCont {
         registerWithItem("log_pile", LOGPILE, furnGroup);
 
         registerWithItem("campfire_ring", CAMPFIRE_RING, furnGroup);
+
+        registerWithItem("crate_apple", CRATE_APPLE, furnGroup);
+        registerWithItem("crate_carrot", CRATE_CARROT, furnGroup);
+        registerWithItem("crate_potato", CRATE_POTATO, furnGroup);
+        registerWithItem("crate_beet", CRATE_BEET, furnGroup);
+
+        registerWithItem("crate_rice", CRATE_RICE, furnGroup);
+        registerWithItem("crate_corn", CRATE_CORN, furnGroup);
+        registerWithItem("crate_tomato", CRATE_TOMATO, furnGroup);
+
+        registerWithItem("crate_green", CRATE_GREEN, furnGroup);
+        registerWithItem("crate_mandrake", CRATE_MANDRAKE, furnGroup);
+        registerWithItem("crate_snow", CRATE_SNOW, furnGroup);
+
+        registerWithItem("crate_onion", CRATE_ONION, furnGroup);
+        registerWithItem("crate_miner", CRATE_MINER, furnGroup);
+
+        registerWithItem("crate_chorus", CRATE_CHORUS, furnGroup);
+        registerWithItem("crate_sweet", CRATE_SWEET, furnGroup);
+        registerWithItem("crate_glow", CRATE_GLOW, furnGroup);
+        registerWithItem("crate_bitter", CRATE_BITTER, furnGroup);
+        registerWithItem("crate_spicy", CRATE_SPICY, furnGroup);
+        registerWithItem("crate_holly", CRATE_HOLLY, furnGroup);
+        registerWithItem("crate_cocoa", CRATE_COCOA, furnGroup);
+
+        registerWithItem("crate_puff", CRATE_PUFF, furnGroup);
+
+        registerWithItem("crate_duck", CRATE_DUCK, furnGroup);
+        registerWithItem("crate_egg", CRATE_EGG, furnGroup);
+
+        registerWithItem("crate_bamboo", CRATE_BAMBOO, furnGroup);
+        registerWithItem("crate_sugar", CRATE_SUGAR, furnGroup);
+
     }
 }
