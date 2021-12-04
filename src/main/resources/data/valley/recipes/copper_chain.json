@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "valley:copper_nugget"
+      "tag": "c:copper_nuggets"
     },
     "i": {
-      "item": "minecraft:copper_ingot"
+      "tag": "c:copper_ingot"
     }
   },
   "result": {

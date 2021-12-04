@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:salmon"

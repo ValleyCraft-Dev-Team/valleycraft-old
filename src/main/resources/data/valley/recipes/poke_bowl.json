@@ -8,13 +8,13 @@
       "item": "minecraft:salmon"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
       "item": "valley:grilled_sucker"
     },
     {
-      "item": "valley:rice_bowl"
+      "tag": "c:rice"
     }
   ],
   "result": {

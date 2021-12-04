@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:rice_item"
+      "tag": "c:rice"
     },
     {
       "item": "minecraft:bowl"

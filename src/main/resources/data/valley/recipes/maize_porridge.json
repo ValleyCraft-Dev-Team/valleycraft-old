@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:maize_crop"
+      "tag": "c:corn"
     },
     {
       "item": "valley:milk_bottle"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:bowl"

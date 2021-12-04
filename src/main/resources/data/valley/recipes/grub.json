@@ -8,7 +8,7 @@
       "item": "valley:cooked_bacon"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "valley:mead_mug"

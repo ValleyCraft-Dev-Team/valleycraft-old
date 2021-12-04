@@ -5,13 +5,13 @@
       "item": "minecraft:baked_potato"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
-      "item": "valley:tomato_bush"
+      "tag": "c:tomato"
     }
   ],
   "result": {

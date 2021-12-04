@@ -8,7 +8,7 @@
       "item": "minecraft:glass_bottle"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:beetroot"

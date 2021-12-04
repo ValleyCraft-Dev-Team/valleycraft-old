@@ -5,7 +5,7 @@
   ],
   "key": {
     "#": {
-      "item": "valley:flour_bag"
+      "tag": "c:flour"
     },
     "C": {
       "item": "minecraft:cocoa_beans"

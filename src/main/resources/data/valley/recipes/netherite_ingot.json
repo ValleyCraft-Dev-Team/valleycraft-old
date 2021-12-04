@@ -2,31 +2,31 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     },
     {
-      "item": "valley:netherite_nugget"
+      "tag": "c:netherite_nuggets"
     }
   ],
   "result": {

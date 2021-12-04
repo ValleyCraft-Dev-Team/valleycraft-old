@@ -8,7 +8,7 @@
       "item": "valley:octopus"
     },
     {
-      "item": "valley:rice_item"
+      "tag": "c:rice"
     }
   ],
   "result": {

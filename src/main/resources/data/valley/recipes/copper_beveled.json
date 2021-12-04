@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "valley:copper_nugget"
+      "tag": "c:copper_nuggets"
     },
     "G": {
       "item": "minecraft:glass_pane"

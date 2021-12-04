@@ -5,7 +5,7 @@
       "item": "minecraft:pumpkin"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
       "item": "minecraft:bowl"

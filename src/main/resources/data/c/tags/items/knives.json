@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+  	"valley:bone_knife",
 	"valley:wood_knife",
 	"valley:stone_knife",
 	"valley:golden_knife",

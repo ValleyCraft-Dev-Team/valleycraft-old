@@ -16,7 +16,7 @@ public class ValleyMain implements ModInitializer {
     @Override
     public void onInitialize() {
         // This should stay first before items and blocks.
-        Tags.initialize();
+        Object initializer = Tags.KNIVES; // will force the class to load (any static member will do)
 
         //Item Initializers
         FoodAndCooking.initialize();

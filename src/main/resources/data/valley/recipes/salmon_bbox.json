@@ -16,7 +16,7 @@
       "item": "minecraft:carrot"
     },
     "T": {
-      "item": "valley:rice_item"
+      "tag": "c:rice"
     },
     "B": {
       "item": "valley:bento_block"

@@ -8,7 +8,7 @@
       "item": "minecraft:cooked_rabbit"
     },
     {
-      "item": "valley:spicy_berries"
+      "tag": "c:spicy_berries"
     },
     {
       "item": "minecraft:potato"

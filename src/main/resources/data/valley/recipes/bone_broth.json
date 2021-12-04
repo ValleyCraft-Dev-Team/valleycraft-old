@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
-      "item": "minecraft:bone"
+      "tag": "c:bones"
     },
     {
-      "item": "minecraft:bone"
+      "tag": "c:bones"
     },
     {
-      "item": "minecraft:bone"
+      "tag": "c:bones"
     },
     {
       "item": "minecraft:bowl"

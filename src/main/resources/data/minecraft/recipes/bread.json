@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "valley:bread_dough"
+    "tag": "c:dough"
   },
   "result": "minecraft:bread",
   "experience": 0.2,

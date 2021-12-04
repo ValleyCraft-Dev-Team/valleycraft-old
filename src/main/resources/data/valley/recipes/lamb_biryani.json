@@ -5,13 +5,13 @@
       "item": "minecraft:cooked_mutton"
     },
     {
-      "item": "valley:spicy_berries"
+      "tag": "c:spicy_berries"
     },
     {
       "item": "minecraft:potato"
     },
     {
-      "item": "valley:rice_bowl"
+      "tag": "c:rice"
     }
   ],
   "result": {

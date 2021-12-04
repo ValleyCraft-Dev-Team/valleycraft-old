@@ -20,7 +20,7 @@
       "item": "minecraft:water_bucket"
     },
     {
-      "item": "valley:spicy_berries"
+      "tag": "c:spicy_berries"
     }
   ],
   "result": {

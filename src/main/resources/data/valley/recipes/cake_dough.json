@@ -8,7 +8,7 @@
       "item": "minecraft:sugar"
     },
     {
-      "item": "valley:flour_bag"
+      "tag": "c:flour"
     },
     {
       "tag": "c:eggs"

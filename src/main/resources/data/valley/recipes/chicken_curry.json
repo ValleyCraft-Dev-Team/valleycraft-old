@@ -11,13 +11,13 @@
       "item": "valley:bone_broth"
     },
     {
-      "item": "valley:salt"
+      "tag": "c:salt"
     },
     {
-      "item": "valley:tomato_bush"
+      "tag": "c:tomato"
     },
     {
-      "item": "valley:spicy_berries"
+      "tag": "c:spicy_berries"
     }
   ],
   "result": {

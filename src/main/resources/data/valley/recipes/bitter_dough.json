@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:bitter_berries"
+      "tag": "c:bitter_berries"
     },
     {
       "item": "minecraft:sugar"
@@ -11,7 +11,7 @@
       "tag": "c:eggs"
     },
     {
-      "item": "valley:flour_bag"
+      "tag": "c:flour"
     }
   ],
   "result": {

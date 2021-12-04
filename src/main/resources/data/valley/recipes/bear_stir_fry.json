@@ -8,10 +8,10 @@
       "item": "valley:green_bean"
     },
     {
-      "item": "valley:onion"
+      "tag": "c:onion"
     },
     {
-      "item": "valley:miners_lettuce"
+      "tag": "c:miners_lettuce"
     },
     {
       "item": "minecraft:brown_mushroom"

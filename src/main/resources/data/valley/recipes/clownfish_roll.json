@@ -8,7 +8,7 @@
       "tag": "c:tropical_fish"
     },
     {
-      "item": "valley:rice_item"
+      "tag": "c:rice"
     }
   ],
   "result": {
