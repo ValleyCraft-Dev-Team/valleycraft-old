@@ -74,8 +74,8 @@ abstract class LivingEntityMixin extends Entity {
                     var climbing = !onGround && !MathHelper.approximatelyEquals(prevY, getY());
                     
                     if (!world.isClient) {
-                        if (climbing && --durTick < 0) {
-                            durTick = 15;
+                        if (climbing && --durTick <= 0) {
+                            durTick = 12;
                             axe.damage(1, (LivingEntity)(Object)this, e -> {
                                 sendEquipmentBreakStatus(hand == Hand.MAIN_HAND ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
                             });

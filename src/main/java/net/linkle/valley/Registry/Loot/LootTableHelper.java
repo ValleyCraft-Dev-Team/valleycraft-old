@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 /** Loot table helper using fabric's loot API. */
 public class LootTableHelper {
-    private static final Map<Identifier, List<FabricLootPoolBuilder>> POOLSMAP = new HashMap<>(32);
+    private static final Map<Identifier, List<FabricLootPoolBuilder>> POOLSMAP = new HashMap<>(64);
     
     /** Create and append a new pool. */
     public static void appendLoot(Identifier lootID, LootBuilder loot) {
