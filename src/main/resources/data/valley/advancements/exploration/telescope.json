@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/telescope",
+	"parent": "valley:exploration/root",
 	"display": {
 		"title": {
-			"text": "Beginner Anthropologist"
+			"text": "Novice Explorer"
 		},
 		"icon": {
-			"item": "valley:climbing_axe"
+			"item": "minecraft:spyglass"
 		},
 		"description": {
-			"text": "Craft a Climbing Axe"
+			"text": "Craft a Spyglass"
 		}
 	},
 	"criteria": {
-		"climbing_axe": {
+		"spyglass": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:climbing_axe"
+							"minecraft:spyglass"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"climbing_axe"
+			"spyglass"
 		]
 	]
 }

@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/improvisor",
 	"display": {
 		"title": {
 			"text": "Master Fletcher"

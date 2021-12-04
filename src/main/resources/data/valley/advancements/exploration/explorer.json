@@ -1,0 +1,78 @@
+{
+	"parent": "valley:exploration/telescope",
+	"display": {
+		"title": {
+			"text": "Advanced Adventurer"
+		},
+		"icon": {
+			"item": "valley:climbable_rope"
+		},
+		"description": {
+			"text": "Craft Rope, a Rope Bridge, Bridge Anchors, and a Net."
+		}
+	},
+	"criteria": {
+		"rope": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:climbable_rope"
+						]
+					}
+				]
+			}
+		},
+		"bridge": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rope_bridge"
+						]
+					}
+				]
+			}
+		},
+		"anchor": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rope_bridge_anchor"
+						]
+					}
+				]
+			}
+		},
+		"net": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:net_block"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"rope"
+		],
+		[
+			"bridge"
+		],
+		[
+			"anchor"
+		],
+		[
+			"net"
+		]
+	]
+}

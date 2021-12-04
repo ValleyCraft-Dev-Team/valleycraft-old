@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/telescope",
+	"parent": "valley:exploration/root",
 	"display": {
 		"title": {
-			"text": "Beginner Anthropologist"
+			"text": "Spirit of the Woods"
 		},
 		"icon": {
-			"item": "valley:climbing_axe"
+			"item": "valley:null_totem"
 		},
 		"description": {
-			"text": "Craft a Climbing Axe"
+			"text": "Make a Totem"
 		}
 	},
 	"criteria": {
-		"climbing_axe": {
+		"null_totem": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:climbing_axe"
+							"valley:null_totem"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"climbing_axe"
+			"null_totem"
 		]
 	]
 }

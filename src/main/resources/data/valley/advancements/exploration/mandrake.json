@@ -1,14 +1,14 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/sickle",
 	"display": {
 		"title": {
-			"text": "Plant or Mammal"
+			"text": "Plant or mammal?"
 		},
 		"icon": {
 			"item": "valley:mandrake"
 		},
 		"description": {
-			"text": "Find a living mandrake"
+			"text": "Find or grow a Living Mandrake"
 		}
 	},
 	"criteria": {

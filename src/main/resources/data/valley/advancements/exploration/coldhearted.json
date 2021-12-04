@@ -1,0 +1,79 @@
+{
+	"parent": "valley:exploration/fur_coat",
+	"display": {
+		"title": {
+			"text": "Cold Hearted"
+		},
+		"icon": {
+			"item": "valley:tongs"
+		},
+		"description": {
+			"text": "Use Tongs to gather all Ice types"
+		},
+		"frame": "challenge"
+	},
+	"criteria": {
+		"glacial": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:glacial_stone"
+						]
+					}
+				]
+			}
+		},
+		"blue_ice": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:blue_ice"
+						]
+					}
+				]
+			}
+		},
+		"packed_ice": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:packed_ice"
+						]
+					}
+				]
+			}
+		},
+		"ice": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:ice"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"glacial"
+		],
+		[
+			"blue_ice"
+		],
+		[
+			"packed_ice"
+		],
+		[
+			"ice"
+		]
+	]
+}

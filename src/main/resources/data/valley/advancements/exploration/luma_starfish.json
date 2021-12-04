@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/fishing",
 	"display": {
 		"title": {
 			"text": "Otherworldy"
@@ -9,7 +9,8 @@
 		},
 		"description": {
 			"text": "Catch the Luma Starfish"
-		}
+		},
+		"frame": "challenge"
 	},
 	"criteria": {
 		"starfish": {

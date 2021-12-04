@@ -1,0 +1,408 @@
+{
+	"parent": "valley:exploration/sickle",
+	"display": {
+		"title": {
+			"text": "Farmsteader"
+		},
+		"icon": {
+			"item": "valley:diamond_sickle"
+		},
+		"description": {
+			"text": "Grow or forage every crop"
+		}
+	},
+	"criteria": {
+		"apple": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:apple"
+						]
+					}
+				]
+			}
+		},
+		"sweet_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sweet_berries"
+						]
+					}
+				]
+			}
+		},
+		"potato": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:potato"
+						]
+					}
+				]
+			}
+		},
+		"glow_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:glow_berries"
+						]
+					}
+				]
+			}
+		},
+		"melon_slice": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:melon_slice"
+						]
+					}
+				]
+			}
+		},
+		"cocoa_beans": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cocoa_beans"
+						]
+					}
+				]
+			}
+		},
+		"wheat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:wheat"
+						]
+					}
+				]
+			}
+		},
+		"carrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:carrot"
+						]
+					}
+				]
+			}
+		},
+		"pumpkin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pumpkin"
+						]
+					}
+				]
+			}
+		},
+		"nether_wart": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:nether_wart"
+						]
+					}
+				]
+			}
+		},
+		"sugar_cane": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sugar_cane"
+						]
+					}
+				]
+			}
+		},
+		"kelp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:kelp"
+						]
+					}
+				]
+			}
+		},
+		"beetroot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:beetroot"
+						]
+					}
+				]
+			}
+		},
+		"green_bean": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:green_bean"
+						]
+					}
+				]
+			}
+		},
+		"maize_crop": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:maize_crop"
+						]
+					}
+				]
+			}
+		},
+		"bitter_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bitter_berries"
+						]
+					}
+				]
+			}
+		},
+		"spicy_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:spicy_berries"
+						]
+					}
+				]
+			}
+		},
+		"tomato_bush": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:tomato_bush"
+						]
+					}
+				]
+			}
+		},
+		"morel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:morel"
+						]
+					}
+				]
+			}
+		},
+		"holly": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:holly"
+						]
+					}
+				]
+			}
+		},
+		"mandrake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mandrake"
+						]
+					}
+				]
+			}
+		},
+		"snow_yam_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:snow_yam_item"
+						]
+					}
+				]
+			}
+		},
+		"onion": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:onion"
+						]
+					}
+				]
+			}
+		},
+		"miners_lettuce": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:miners_lettuce"
+						]
+					}
+				]
+			}
+		},
+		"rice_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rice_item"
+						]
+					}
+				]
+			}
+		},
+		"puff_ball": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:puff_ball"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"apple"
+		],
+		[
+			"sweet_berries"
+		],
+		[
+			"potato"
+		],
+		[
+			"glow_berries"
+		],
+		[
+			"melon_slice"
+		],
+		[
+			"cocoa_beans"
+		],
+		[
+			"wheat"
+		],
+		[
+			"carrot"
+		],
+		[
+			"pumpkin"
+		],
+		[
+			"nether_wart"
+		],
+		[
+			"sugar_cane"
+		],
+		[
+			"kelp"
+		],
+		[
+			"beetroot"
+		],
+		[
+			"green_bean"
+		],
+		[
+			"maize_crop"
+		],
+		[
+			"bitter_berries"
+		],
+		[
+			"spicy_berries"
+		],
+		[
+			"tomato_bush"
+		],
+		[
+			"morel"
+		],
+		[
+			"holly"
+		],
+		[
+			"mandrake"
+		],
+		[
+			"snow_yam_item"
+		],
+		[
+			"onion"
+		],
+		[
+			"miners_lettuce"
+		],
+		[
+			"rice_item"
+		],
+		[
+			"puff_ball"
+		]
+	]
+}

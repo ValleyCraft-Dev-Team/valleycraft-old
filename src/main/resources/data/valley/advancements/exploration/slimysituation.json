@@ -1,0 +1,35 @@
+{
+	"parent": "valley:exploration/foodgroups",
+	"display": {
+		"title": {
+			"text": "A Slimy Situation"
+		},
+		"icon": {
+			"item": "valley:slime_soup"
+		},
+		"description": {
+			"text": "Eat something made of Slime."
+		}
+	},
+	"criteria": {
+		"rose_gold": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:slime_soup",
+							"valley:frozen_jelly",
+							"valley:slime_fish"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"rose_gold"
+		]
+	]
+}

@@ -1,0 +1,39 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Gold, but better."
+		},
+		"icon": {
+			"item": "valley:rg_sword"
+		},
+		"description": {
+			"text": "Make a Rose Gold tool or weapon"
+		}
+	},
+	"criteria": {
+		"rose_gold": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:rg_sword",
+							"valley:rg_hatchet",
+							"valley:rg_sickle",
+							"valley:rg_hoe",
+							"valley:rg_axe",
+							"valley:rg_pickaxe",
+							"valley:rg_shovel"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"rose_gold"
+		]
+	]
+}
