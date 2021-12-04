@@ -2,19 +2,19 @@
     "display": {
         "title": {
             "text": "The Adventure Begins",
-            "color": "yellow",
+            "color": "white",
             "bold": false
         },
         "description": {
             "text": "\"...where have I woken up?\"",
-            "color": "white"
+            "color": "green"
         },
         "icon": {
             "item": "valley:stone_mossy"
         },
         "frame": "task",
         "show_toast": true,
-        "announce_to_chat": true,
+        "announce_to_chat": false,
         "hidden": false,
         "background": "valley:textures/blocks/farmland.png"
     },

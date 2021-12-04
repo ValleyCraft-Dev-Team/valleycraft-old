@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Novice Anthropologist"
+		},
+		"icon": {
+			"item": "valley:climbing_axe"
+		},
+		"description": {
+			"text": "Craft a climbing axe"
+		}
+	},
+	"criteria": {
+		"climbing_axe": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:climbing_axe"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"climbing_axe"
+		]
+	]
+}

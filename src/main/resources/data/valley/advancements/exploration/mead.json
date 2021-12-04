@@ -1,0 +1,96 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Professional Viking"
+		},
+		"icon": {
+			"item": "valley:mead_mug"
+		},
+		"description": {
+			"text": "Drink one of every type of mead and cyser"
+		}
+	},
+	"criteria": {
+		"mead_mug": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:mead_mug"
+					]
+				}
+			}
+		},
+		"sweet_berry_cyser": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:sweet_berry_cyser"
+					]
+				}
+			}
+		},
+		"spicy_berry_cyser": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:spicy_berry_cyser"
+					]
+				}
+			}
+		},
+		"bitter_berry_cyser": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bitter_berry_cyser"
+					]
+				}
+			}
+		},
+		"apple_cyser": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:apple_cyser"
+					]
+				}
+			}
+		},
+		"chocolate_cyser": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:chocolate_cyser"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"mead_mug"
+		],
+		[
+			"sweet_berry_cyser"
+		],
+		[
+			"spicy_berry_cyser"
+		],
+		[
+			"bitter_berry_cyser"
+		],
+		[
+			"apple_cyser"
+		],
+		[
+			"chocolate_cyser"
+		]
+	]
+}

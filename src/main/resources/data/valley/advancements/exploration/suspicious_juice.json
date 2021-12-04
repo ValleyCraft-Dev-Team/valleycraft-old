@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Inconceivable!"
+		},
+		"icon": {
+			"item": "valley:potato_juice"
+		},
+		"description": {
+			"text": "Drink a Suspicious Juice"
+		}
+	},
+	"criteria": {
+		"suspicious": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:potato_juice"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"suspicious"
+		]
+	]
+}

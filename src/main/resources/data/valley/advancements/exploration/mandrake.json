@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Plant or Mammal"
+		},
+		"icon": {
+			"item": "valley:mandrake"
+		},
+		"description": {
+			"text": "Find a living mandrake"
+		}
+	},
+	"criteria": {
+		"mandrake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mandrake"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"mandrake"
+		]
+	]
+}

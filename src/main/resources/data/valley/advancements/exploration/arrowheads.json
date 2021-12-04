@@ -1,0 +1,34 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Master Fletcher"
+		},
+		"icon": {
+			"item": "valley:knapped_dripstone_arrowhead"
+		},
+		"description": {
+			"text": "Knap your own Arrowheads"
+		}
+	},
+	"criteria": {
+		"arrowhead": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:knapped_dripstone_arrowhead",
+							"valley:knapped_flint_arrowhead"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"arrowhead"
+		]
+	]
+}
