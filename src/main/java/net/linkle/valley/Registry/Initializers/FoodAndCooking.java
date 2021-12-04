@@ -67,6 +67,9 @@ public class FoodAndCooking {
     public static final Item BBOX_SALMON = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.SPEED,900),1.0f).build()).maxCount(1));
     public static final Item BBOX_UNAGI = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,900),1.0f).build()).maxCount(1));
     public static final Item BBOX_GH_TAIL = new BBoxBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,1800),1.0f).build()).maxCount(1));
+    public static final Item STEAMED_COD = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450),1.0f).build()).maxCount(1));
+    public static final Item CARROT_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450),1.0f).saturationModifier(0.5f).build()).maxCount(1));
+    public static final Item CREAMY_HEART_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,450),1.0f).build()).maxCount(1));
 
     public static final Item CAKE_DOUGH = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(1f).build()).maxCount(64));
     public static final Item NETHER_FUNGUS_STEW = new BowlBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.4f).build()).maxCount(1));
@@ -235,6 +238,8 @@ public class FoodAndCooking {
         register("grub", GRUB);
         register("pumpkin_bowl", PUMPKIN_BOWL);
         register("tomato_soup", TOMATO_SOUP);
+        register("carrot_stew", CARROT_STEW);
+        register("creamy_heart_stew", CREAMY_HEART_STEW);
         //register("winter_root_stew", WINTER_ROOT_STEW);
         register("bone_broth", BONE_BROTH);
         register("nether_fungus_stew", NETHER_FUNGUS_STEW);
@@ -274,6 +279,7 @@ public class FoodAndCooking {
         register("dried_seaweed", SEAWEED_ITEM);
 
         register("grilled_sucker", GRILLED_SUCKER);
+        register("steamed_cod", STEAMED_COD);
         register("dried_salmon", DRIED_SALMON);
         register("fire_eel_dried", DRIED_FIRE_EEL);
         register("dried_cod", DRIED_COD);

@@ -168,7 +168,7 @@ public class Plants {
 
     public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.LEAVES)
             .breakByHand(true).nonOpaque().luminance(3)
-            .sounds(BlockSoundGroup.WOOL).breakInstantly()
+            .sounds(BlockSoundGroup.WOOL).breakInstantly().ticksRandomly()
             .strength(0.0f,0.1f));
 
     public static void initialize() {
