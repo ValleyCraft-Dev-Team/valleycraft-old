@@ -1,7 +1,5 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
-import org.jetbrains.annotations.Nullable;
-
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
 import net.minecraft.block.Block;
@@ -9,7 +7,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
@@ -70,7 +67,7 @@ public class LadderBlock extends HorizontalWithWaterBlock {
             return state.get(FACING);
         }
         
-        return getSideElseUserFacing(ctx, true);
+        return getSideElseUserFacing(ctx);
     }
 
     @Override

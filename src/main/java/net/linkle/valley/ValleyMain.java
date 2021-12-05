@@ -2,6 +2,7 @@ package net.linkle.valley;
 
 import net.fabricmc.api.ModInitializer;
 import net.linkle.valley.Registry.Blocks.Decorations.Furnaces.Furnaces;
+import net.linkle.valley.Registry.Criterion.VCriteria;
 import net.linkle.valley.Registry.Initializers.*;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.CaveFeatures;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.OceanFeatures;
@@ -16,7 +17,8 @@ public class ValleyMain implements ModInitializer {
     @Override
     public void onInitialize() {
         // This should stay first before items and blocks.
-        Object initializer = Tags.KNIVES; // will force the class to load (any static member will do)
+        Object initializer1 = Tags.KNIVES; // will force the class to load (any static member will do)
+        Object initializer2 = VCriteria.BROKE_BLOCK;
 
         //Item Initializers
         FoodAndCooking.initialize();

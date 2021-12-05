@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Initializers;
 
 import net.fabricmc.fabric.api.tag.TagFactory;
-import net.linkle.valley.ValleyMain;
 import net.minecraft.item.Item;
 import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
