@@ -39,10 +39,11 @@ public class StoneBlocks {
     public static final Block B_ROOTS = new BrownClayBlock();
 
     public static final Block JUNGLE = new StoneOreBlock();
-    public static final Block JUNGLE_MOSSY = new MossyBlock();
+    public static final Block JUNGLE_MOSSY = new MossBlock();
     public static final Block JUNGLE_SPOREY = new SporeBlock();
     public static final Block JUNGLE_COBBLE = new StoneOreBlock();
-    public static final Block STONE_MOSSY = new MossyBlock();
+    public static final Block STONE_MOSSY = new MossBlock();
+    public static final Block DRY_MOSS_STONE = new DryMossBlock();
 
     public static final Block OCEAN_STONE = new StoneOreBlock();
     public static final Block SWAMP_STONE = new StoneOreBlock();
@@ -92,6 +93,7 @@ public class StoneBlocks {
         registerWithItem("jungle_sporey", JUNGLE_SPOREY, natureGroup);
         registerWithItem("jungle_mossy", JUNGLE_MOSSY, natureGroup);
         registerWithItem("stone_mossy", STONE_MOSSY, natureGroup);
+        registerWithItem("dry_mossy_stone", DRY_MOSS_STONE, natureGroup);
         
         registerWithItem("oceanstone", OCEAN_STONE, natureGroup);
         registerWithItem("swampstone", SWAMP_STONE, natureGroup);

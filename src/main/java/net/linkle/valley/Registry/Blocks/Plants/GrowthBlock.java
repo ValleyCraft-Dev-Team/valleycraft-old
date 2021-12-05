@@ -1,5 +1,8 @@
 package net.linkle.valley.Registry.Blocks.Plants;
 
+
+import java.util.Random;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
@@ -16,16 +19,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
-import java.util.Random;
+public abstract class GrowthBlock extends OreBlock {
 
-import static net.linkle.valley.Registry.Initializers.Plants.MOSSY_VINE;
-import static net.minecraft.block.Blocks.MOSS_CARPET;
-
-public class MossyBlock extends OreBlock {
-    
     public static final BooleanProperty MOSSY = BooleanProperty.of("mossy");
 
-    public MossyBlock() {
+    public GrowthBlock() {
         super(FabricBlockSettings.of(Material.STONE)
                 .requiresTool()
                 .breakByTool(FabricToolTags.PICKAXES, 1)
@@ -34,20 +32,25 @@ public class MossyBlock extends OreBlock {
                 .strength(3, 3f));
         setDefaultState(stateManager.getDefaultState().with(MOSSY, false));
     }
-    
+
+    @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        return direction == Direction.UP ? state.with(MOSSY, isMoss(neighborState)) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+        return direction == Direction.UP ? state.with(MOSSY, isBlockUpper(neighborState)) : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
+    @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos().up());
-        return this.getDefaultState().with(MOSSY, isMoss(blockState));
+        return getDefaultState().with(MOSSY, isBlockUpper(blockState));
     }
 
-    private static boolean isMoss(BlockState state) {
-        return state.isOf(Blocks.MOSS_CARPET) || state.isOf(Blocks.MOSS_BLOCK);
-    }
+    protected abstract boolean isBlockUpper(BlockState state);
+    
+    protected abstract BlockState getBlockUpper();
+    
+    protected abstract BlockState getBlockLower();
 
+    @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(MOSSY);
     }
@@ -56,14 +59,12 @@ public class MossyBlock extends OreBlock {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockPos blockPos = pos.down();
         if (world.isAir(blockPos)) {
-            world.setBlockState(blockPos, MOSSY_VINE.getDefaultState());
+            world.setBlockState(blockPos, getBlockLower());
         }
 
         BlockPos blockPosTop = pos.up();
         if (world.isAir(blockPosTop)) {
-            world.setBlockState(blockPosTop, MOSS_CARPET.getDefaultState());
+            world.setBlockState(blockPosTop, getBlockUpper());
         }
     }
-
-
 }

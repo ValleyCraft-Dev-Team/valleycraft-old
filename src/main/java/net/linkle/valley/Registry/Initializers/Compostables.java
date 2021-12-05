@@ -31,6 +31,7 @@ public class Compostables {
         registerItem(MiscItems.FIBER, levelLow);
         registerItem(MiscItems.MOSS_BALL, levelLow);
         registerItem(MiscItems.TURF_ITEM, levelLow);
+        registerItem(Plants.DRY_VINES, levelLow);
         registerItem(Items.STICK, levelLow);
 
         registerItem(Plants.MOREL, levelMed);
@@ -50,7 +51,7 @@ public class Compostables {
         registerItem(Crops.MINERS_LETTUCE_ITEM, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);
         registerItem(Crops.ONION, levelMed);
-        registerItem(Plants.MOSSY_VINE, levelMed);
+        registerItem(Plants.MOSSY_VINES, levelMed);
         registerItem(Plants.SWAMP_BUSH, levelMed);
         registerItem(Plants.HEDGE, levelMed);
         registerItem(Crops.MANDRAKE, levelMed);
