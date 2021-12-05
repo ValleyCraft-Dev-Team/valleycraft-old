@@ -25,7 +25,7 @@ public class CaveFeatures {
             .configure(new CavePatchConfig(Plants.RED_PILE.getDefaultState(), 20, 4, 6));
     
     private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = CAVE_PATCH
-            .configure(new CavePatchConfig(Plants.SPIDER_EGG_BLOCK.getDefaultState(), 15, 4, 6));
+            .configure(new CavePatchConfig(Plants.SPIDER_EGG_BLOCK.getDefaultState(), 20, 4, 6));
 
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);
@@ -37,7 +37,7 @@ public class CaveFeatures {
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, patch);
     
         patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "spider_egg_patch_cave"));
-        range = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(30))); // 20 is maximum height can spawn.
+        range = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(30)));
         decor = Decorator.RANGE.configure(range).spreadHorizontally().applyChance(5);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), SPIDER_EGG_PATCH_CONFIG.decorate(decor));
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, patch);

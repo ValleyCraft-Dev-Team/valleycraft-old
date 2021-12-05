@@ -264,8 +264,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(GOLEM_I);
         
         cullouts.add(CAMPFIRE_RING);
-        
-        translucents.add(LOGPILE);
 
         cullouts.add(GIANT_RED);
         cullouts.add(GIANT_BROWN);
