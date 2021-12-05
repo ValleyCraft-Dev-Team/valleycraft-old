@@ -46,7 +46,7 @@ public class CrestBlock extends HorizontalWithWaterBlock {
     
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
-        return getSideElseUserFacing(ctx, true);
+        return getSideElseUserFacing(ctx);
     }
 
     @Override

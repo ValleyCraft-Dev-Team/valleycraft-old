@@ -45,9 +45,8 @@ public class HorizontalBlock extends HorizontalFacingBlock {
      * Utility method for horizontal side. If the block place on vertical side, then
      * get the player's yaw facing.
      */
-    protected static Direction getSideElseUserFacing(ItemPlacementContext ctx, boolean oppositeSide) {
+    protected static Direction getSideElseUserFacing(ItemPlacementContext ctx) {
         final Direction side = ctx.getSide();
-        return side.getAxis().isVertical() ? ctx.getPlayerFacing() :
-               oppositeSide ? side.getOpposite() : side;
+        return side.getAxis().isVertical() ? ctx.getPlayerFacing() : side.getOpposite();
     }
 }
