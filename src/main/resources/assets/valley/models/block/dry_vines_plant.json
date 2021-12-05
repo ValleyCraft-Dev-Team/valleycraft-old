@@ -1,0 +1,6 @@
+{
+   "parent": "block/cross",
+   "textures": {
+     "cross": "valley:blocks/dry_vines_plant"
+   }
+}

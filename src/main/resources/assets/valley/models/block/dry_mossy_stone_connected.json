@@ -1,0 +1,9 @@
+{
+   "parent": "block/cube_bottom_top",
+   "textures": {
+	 "top": "valley:blocks/dry_moss",
+     "bottom": "valley:blocks/dry_mossy_stone",
+     "side": "valley:blocks/dry_mossy_stone_connected",
+     "particle": "valley:blocks/dry_mossy_stone"
+   }
+}

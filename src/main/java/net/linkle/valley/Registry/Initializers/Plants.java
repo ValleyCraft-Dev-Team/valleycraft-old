@@ -11,9 +11,12 @@ import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.CarpetBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
+import net.minecraft.block.MossBlock;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -107,7 +110,10 @@ public class Plants {
     public static final Block SNOW_BUSH = new SnowBush();
     public static final Block SNOW_YAM = new SnowBush();
     public static final Block WINTER_ROOT = new SnowBushHidden();
-
+    
+    public static final Block DRY_MOSS_CARPET = new CarpetBlock(Block.Settings.of(Material.PLANT, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_CARPET));
+    public static final Block DRY_MOSS = new MossBlock(Block.Settings.of(Material.MOSS_BLOCK, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_BLOCK));
+    
     public static final Block ROCK_PILE = new RockBlock();
     public static final Block RED_PILE = new RedCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
@@ -131,8 +137,32 @@ public class Plants {
 
     public static final Block SNOW_ROCK_PILE = new RockBlock();
 
-    public static final MossVinesBlock MOSSY_VINE = new MossVinesBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).ticksRandomly().noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES));
-    public static final Block MOSSY_VINE_PLANT = new MossVinesPlantBlock(FabricBlockSettings.of(Material.PLANT, MapColor.GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.WEEPING_VINES));
+    // Mossy vines
+    public static final VinesBlock MOSSY_VINES = new VinesBlock(
+            FabricBlockSettings.of(Material.PLANT, MapColor.GREEN)
+            .ticksRandomly()
+            .noCollision()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.WEEPING_VINES));
+    public static final VinesPlantBlock MOSSY_VINES_PLANT = new VinesPlantBlock(
+            FabricBlockSettings.of(Material.PLANT, MapColor.GREEN)
+            .noCollision()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.WEEPING_VINES));
+    
+    // Dry vines
+    public static final VinesBlock DRY_VINES = new VinesBlock(
+            FabricBlockSettings.of(Material.PLANT, MapColor.YELLOW)
+            .ticksRandomly()
+            .noCollision()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.WEEPING_VINES));
+    public static final VinesPlantBlock DRY_VINES_PLANT = new VinesPlantBlock(
+            FabricBlockSettings.of(Material.PLANT, MapColor.YELLOW)
+            .noCollision()
+            .breakInstantly()
+            .sounds(BlockSoundGroup.WEEPING_VINES));
+    
     public static final Block JUNGLE_BUSH = new JungleBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
@@ -242,8 +272,19 @@ public class Plants {
 
         //registerWithItem("ameranth_crop", AMERANTH_BLOCK, natureGroup);
 
-        registerWithItem("mossy_vines", MOSSY_VINE, natureGroup);
-        register("mossy_vines_plant", MOSSY_VINE_PLANT);
+        MOSSY_VINES.setPlant(MOSSY_VINES_PLANT);
+        MOSSY_VINES_PLANT.setStem(MOSSY_VINES);
+        registerWithItem("mossy_vines", MOSSY_VINES, natureGroup);
+        register("mossy_vines_plant", MOSSY_VINES_PLANT);
+        
+        DRY_VINES.setPlant(DRY_VINES_PLANT);
+        DRY_VINES_PLANT.setStem(DRY_VINES);
+        registerWithItem("dry_vines", DRY_VINES, natureGroup);
+        register("dry_vines_plant", DRY_VINES_PLANT);
+        
+        registerWithItem("dry_moss_carpet", DRY_MOSS_CARPET, natureGroup);
+        registerWithItem("dry_moss", DRY_MOSS, natureGroup);
+        
         registerWithItem("jungle_bush", JUNGLE_BUSH, natureGroup);
         registerWithItem("swamp_bush", SWAMP_BUSH, natureGroup);
         registerWithItem("hedge", HEDGE, natureGroup);
