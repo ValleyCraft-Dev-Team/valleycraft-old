@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "mossy=false": {
+      "model": "valley:block/dry_mossy_stone"
+    },
+    "mossy=true": {
+      "model": "valley:block/dry_mossy_stone_connected"
+    }
+  }
+}
