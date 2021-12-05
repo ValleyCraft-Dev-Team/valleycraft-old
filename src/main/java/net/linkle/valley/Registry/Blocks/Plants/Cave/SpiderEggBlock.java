@@ -1,24 +1,28 @@
 package net.linkle.valley.Registry.Blocks.Plants.Cave;
 
-import net.minecraft.block.*;
+import java.util.Random;
+
+import net.linkle.valley.Registry.Criterion.VCriteria;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.mob.CaveSpiderEntity;
-import net.minecraft.entity.mob.SilverfishEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.explosion.Explosion;
-
-import java.util.Iterator;
-import java.util.Random;
 
 public class SpiderEggBlock extends Block {
 
@@ -29,25 +33,59 @@ public class SpiderEggBlock extends Block {
     }
 
     private void spawnCaveSpider(ServerWorld world, BlockPos pos) {
-        CaveSpiderEntity caveSpiderEntity = (CaveSpiderEntity)EntityType.CAVE_SPIDER.create(world);
-        caveSpiderEntity.refreshPositionAndAngles((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, 0.0F, 0.0F);
-        world.spawnEntity(caveSpiderEntity);
-        caveSpiderEntity.playSpawnEffects();
+        var entity = EntityType.CAVE_SPIDER.create(world);
+        entity.refreshPositionAndAngles(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, 0, 0);
+        world.spawnEntity(entity);
+        entity.playSpawnEffects();
+        
+        var player = world.getClosestPlayer(pos.getX()+0.5, pos.getY()+0.5, pos.getZ()+0.5, 16, false);
+        if (player != null) {
+            VCriteria.SPIDER_SPAWN.trigger((ServerPlayerEntity)player);
+        }
+    }
+    
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (state.canPlaceAt(world, pos)) {
+            return state;
+        }
+        
+        return Blocks.AIR.getDefaultState();
     }
 
+    @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.onStacksDropped(state, world, pos, stack);
         if (world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-            this.spawnCaveSpider(world, pos);
+            spawnCaveSpider(world, pos);
         }
-
     }
 
+    @Override
     public void onDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
-        if (world instanceof ServerWorld) {
-            this.spawnCaveSpider((ServerWorld)world, pos);
+        if (world instanceof ServerWorld server) {
+            spawnCaveSpider(server, pos);
         }
-
+    }
+    
+    @Override
+    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
+        tryBreakEgg(world, pos, entity, 100);
+        super.onSteppedOn(world, pos, state, entity);
+    }
+    @Override
+    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+        tryBreakEgg(world, pos, entity, 3);
+        super.onLandedUpon(world, state, pos, entity, fallDistance);
+    }
+    
+    private void tryBreakEgg(World world, BlockPos pos, Entity entity, int inverseChance) {
+        if (world.random.nextInt(inverseChance) == 0) {
+            if (world instanceof ServerWorld server) {
+                world.breakBlock(pos, false);
+                spawnCaveSpider(server, pos);
+            }
+        }
     }
 
     @Override
@@ -55,10 +93,9 @@ public class SpiderEggBlock extends Block {
         return SHAPE;
     }
 
-    // mushy stuff
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (random.nextInt(25) == 0) {
+        if (random.nextInt(20) == 0) {
             int num = 5;
             for (var blockPos : BlockPos.iterate(pos.add(-4, -1, -4), pos.add(4, 1, 4))) {
                 if (world.getBlockState(blockPos).isOf(this)) {
@@ -84,18 +121,10 @@ public class SpiderEggBlock extends Block {
         }
     }
 
-    public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOpaqueFullCube(world, pos);
-    }
-
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         var blockPos = pos.down();
         var blockState = world.getBlockState(blockPos);
-        if (blockState.isIn(BlockTags.MUSHROOM_GROW_BLOCK)) {
-            return true;
-        } else {
-            return world.getBaseLightLevel(pos, 0) > 7 && canPlantOnTop(blockState, world, blockPos);
-        }
+        return blockState.isFullCube(world, blockPos);
     }
 }

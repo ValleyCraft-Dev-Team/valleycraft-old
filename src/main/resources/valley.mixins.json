@@ -7,7 +7,8 @@
 	"LivingEntityMixin",
 	"CatEntityMixin",
 	"ServerWorldMixin",
-	"PistonBlockMixin"
+	"PistonBlockMixin",
+	"CriteriaInvoker"
   ],
   "client": [
 	"HeldLaserRendererMixin",
