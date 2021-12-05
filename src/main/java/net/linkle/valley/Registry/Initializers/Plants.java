@@ -85,6 +85,7 @@ public class Plants {
             .strength(0,0.1f));
 
     public static final Block SMALL_CACTUS = new CactusBlock();
+    public static final Block FLOWERING_CACTUS = new SmallCactusBlock();
 
     public static final Block REED_BLOCK = new ReedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -171,10 +172,15 @@ public class Plants {
             .sounds(BlockSoundGroup.WOOL).breakInstantly().ticksRandomly()
             .strength(0.0f,0.1f));
 
+    public static final Block PANFLOWER = new RoseBush();
+    public static final Block HONEY_CLUSTER = new RoseBush();
+
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);
 
         registerWithItem("small_cactus", SMALL_CACTUS, natureGroup);
+        registerWithItem("flowering_cactus", FLOWERING_CACTUS, natureGroup);
+        registerWithItem("tumbleweed", TUMBLE_WEED, natureGroup);
         //bushes
         registerWithItem("rose_bush", ROSEBUSH, natureGroup);
         registerWithItem("lilac_bush", LILACBUSH, natureGroup);
@@ -200,6 +206,9 @@ public class Plants {
         registerWithItem("ice_rose", ICE_ROSE, natureGroup);
         registerWithItem("orange_beauty", ORANGE_BEAUTY, natureGroup);
 
+        registerWithItem("panflower", PANFLOWER, natureGroup);
+        registerWithItem("honey_cluster", HONEY_CLUSTER, natureGroup);
+
         //registerWithItem("fern_bush", FERNBUSH, natureGroup);
         //mushrooms
         //registerWithItem("colossal_red_shroom", GIANT_RED, natureGroup);
@@ -224,7 +233,6 @@ public class Plants {
 
         registerWithItem("maize_crop", MAIZE_CROP, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
-        registerWithItem("tumbleweed", TUMBLE_WEED, natureGroup);
 
         registerWithItem("reeds", REED_BLOCK, natureGroup);
 

@@ -133,6 +133,9 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(WEAPING_SWAMP_WILLOW);
         cullouts.add(REDWOOD_SORREL);
         cullouts.add(DANDELION_PUFF);
+        cullouts.add(PANFLOWER);
+        cullouts.add(HONEY_CLUSTER);
+        cullouts.add(FLOWERING_CACTUS);
         cullouts.add(ROCK_PILE);
         cullouts.add(RED_PILE);
         cullouts.add(BLUE_PILE);

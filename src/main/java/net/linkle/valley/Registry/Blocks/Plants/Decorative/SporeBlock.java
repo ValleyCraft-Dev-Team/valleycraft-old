@@ -22,7 +22,7 @@ public class SporeBlock extends OreBlock {
                 .breakByTool(FabricToolTags.PICKAXES, 1)
                 .ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3, 3f));
+                .strength(2, 3f));
     }
 
     @Override
