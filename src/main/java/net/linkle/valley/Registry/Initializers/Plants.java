@@ -74,13 +74,13 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block ROSEBUSH = new RoseBush();
-    public static final Block LILACBUSH = new RoseBush();
-    public static final Block PEONYBUSH = new RoseBush();
-    public static final Block FERNBUSH = new RoseBush();
-    public static final Block BUSH = new RoseBush();
+    public static final Block ROSEBUSH = new Plant();
+    public static final Block LILACBUSH = new Plant();
+    public static final Block PEONYBUSH = new Plant();
+    public static final Block FERNBUSH = new Plant();
+    public static final Block BUSH = new Plant();
     public static final Block MOREL = new MushBlock();
-    public static final Block HERBS = new RoseBush();
+    public static final Block HERBS = new Plant();
 
     public static final Block HEDGE = new HedgeBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -95,15 +95,15 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block WILD_CARROT = new RoseBush();
-    public static final Block WILD_POTATO = new RoseBush();
-    public static final Block WILD_BEET = new RoseBush();
-    public static final Block WILD_WHEAT = new RoseBush();
-    public static final Block DANDELION_PUFF = new RoseBush();
-    public static final Block REDWOOD_SORREL = new RoseBush();
+    public static final Block WILD_CARROT = new Plant();
+    public static final Block WILD_POTATO = new Plant();
+    public static final Block WILD_BEET = new Plant();
+    public static final Block WILD_WHEAT = new Plant();
+    public static final Block DANDELION_PUFF = new Plant();
+    public static final Block REDWOOD_SORREL = new Plant();
     public static final Block WEAPING_SWAMP_WILLOW = new RoseBushGlow();
-    public static final Block CROCUS = new RoseBush();
-    public static final Block TAPROOTS = new RoseBush();
+    public static final Block CROCUS = new Plant();
+    public static final Block TAPROOTS = new Plant();
 
     public static final Block BUSH_ALIVE = new RoseBushTall();
     public static final Block BUSH_ALIVE_TALL = new RoseBushTall();
@@ -169,18 +169,18 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block SWAMP_BUSH = new RoseBush();
+    public static final Block SWAMP_BUSH = new Plant();
     public static final Block JUNGLE_CAP = new MushBlock();
-    public static final Block SPROUT = new RoseBush();
+    public static final Block SPROUT = new Plant();
 
-    public static final Block SWAMP_RIBBON = new RoseBush();
-    public static final Block BLACK_DAHLIA = new RoseBush();
-    public static final Block LAVENDER = new RoseBush();
-    public static final Block LAVENDER_SPRIG = new RoseBush();
-    public static final Block ROSE_SPRIG = new RoseBush();
-    public static final Block ICE_ROSE = new RoseBush();
-    public static final Block ORANGE_FERN = new RoseBush();
-    public static final Block ORANGE_BEAUTY = new RoseBush();
+    public static final Block SWAMP_RIBBON = new Plant();
+    public static final Block BLACK_DAHLIA = new Plant();
+    public static final Block LAVENDER = new Plant();
+    public static final Block LAVENDER_SPRIG = new Plant();
+    public static final Block ROSE_SPRIG = new Plant();
+    public static final Block ICE_ROSE = new Plant();
+    public static final Block ORANGE_FERN = new Plant();
+    public static final Block ORANGE_BEAUTY = new Plant();
     public static final Block DRIFT = new ClamBlock();
 
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
@@ -202,8 +202,8 @@ public class Plants {
             .sounds(BlockSoundGroup.WOOL).breakInstantly().ticksRandomly()
             .strength(0.0f,0.1f));
 
-    public static final Block PANFLOWER = new RoseBush();
-    public static final Block HONEY_CLUSTER = new RoseBush();
+    public static final Block PANFLOWER = new Plant();
+    public static final Block HONEY_CLUSTER = new Plant();
 
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);
