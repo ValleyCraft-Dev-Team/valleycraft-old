@@ -19,6 +19,11 @@ public class DirectionBlock extends FacingBlock {
     protected DirectionBlock(Settings settings) {
         super(settings);
     }
+    
+    /** A common method to set its default state. */
+    protected void setDefaultState() {
+        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));
+    }
 
     /** Please call this subclass method to append facing property: <code>super.appendProperties(builder)</code> */
     @Override
@@ -27,12 +32,12 @@ public class DirectionBlock extends FacingBlock {
     }
     
     @Override
-    public BlockState rotate(BlockState state, BlockRotation rotation) {
+    public final BlockState rotate(BlockState state, BlockRotation rotation) {
         return state.with(FACING, rotation.rotate(state.get(FACING)));
     }
 
     @Override
-    public BlockState mirror(BlockState state, BlockMirror mirror) {
+    public final BlockState mirror(BlockState state, BlockMirror mirror) {
         return state.with(FACING, mirror.apply(state.get(FACING)));
     }
 

@@ -22,8 +22,13 @@ import net.minecraft.world.WorldAccess;
 public class BlockWithWater extends Block implements Waterloggable {
     protected static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 
-    public BlockWithWater(Settings settings) {
+    protected BlockWithWater(Settings settings) {
         super(settings);
+    }
+    
+    /** A common method to set its default state. */
+    protected void setDefaultState() {
+        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
     }
 
     @Override
