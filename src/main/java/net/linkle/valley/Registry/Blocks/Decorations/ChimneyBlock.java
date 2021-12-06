@@ -17,7 +17,7 @@ public class ChimneyBlock extends BlockWithWater {
 
     public ChimneyBlock(Settings settings) {
         super(settings);
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
+        setDefaultState();
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

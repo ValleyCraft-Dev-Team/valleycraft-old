@@ -22,7 +22,7 @@ public class SnowmanBlock extends HorizontalWithWaterBlock {
                 .breakByHand(true).nonOpaque()
                 .sounds(BlockSoundGroup.SNOW)
                 .strength(1f, 1f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
     
     @Override

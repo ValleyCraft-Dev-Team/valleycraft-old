@@ -14,6 +14,6 @@ public class PlanterBlockWater extends BlockWithWater {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque()
                 .strength(2, 2));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
+        setDefaultState();
     }
 }

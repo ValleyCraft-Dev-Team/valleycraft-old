@@ -25,7 +25,7 @@ public class CrestBlock extends HorizontalWithWaterBlock {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1.0f, 0.5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
 
     @Override

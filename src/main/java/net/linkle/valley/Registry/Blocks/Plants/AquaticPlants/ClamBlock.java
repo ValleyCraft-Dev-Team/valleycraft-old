@@ -12,7 +12,6 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
@@ -26,7 +25,7 @@ public class ClamBlock extends HorizontalWithWaterBlock {
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0, 0.1f)
                 .ticksRandomly());
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
 
     @Override

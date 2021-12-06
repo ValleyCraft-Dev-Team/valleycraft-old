@@ -25,6 +25,7 @@ public class BrazierMetalBlock extends BlockWithWater {
                 .breakByHand(true).breakByTool(FabricToolTags.PICKAXES)
                 .sounds(BlockSoundGroup.METAL).luminance(13).nonOpaque()
                 .strength(1.0f, 1.0f));
+        setDefaultState();
     }
 
     @Nullable

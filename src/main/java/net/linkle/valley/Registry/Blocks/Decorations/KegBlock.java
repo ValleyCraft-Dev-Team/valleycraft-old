@@ -39,7 +39,7 @@ public class KegBlock extends HorizontalWithWaterBlock {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1.0f, 1.0f));
-        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));
+        setDefaultState();
     }
 
     @Override

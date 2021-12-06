@@ -10,7 +10,6 @@ import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
@@ -28,7 +27,7 @@ public class AnchorBlock extends DirectionBlockWithWater {
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.CHAIN).nonOpaque()
                 .strength(2f, 2f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.DOWN));
+        setDefaultState();
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

@@ -18,7 +18,7 @@ public class HangingRedstoneCrystalBlock extends BlockWithWater {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.GLASS)
                 .strength(0.5f, 2.5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
+        setDefaultState();
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

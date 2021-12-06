@@ -28,7 +28,7 @@ public class LadderBlock extends HorizontalWithWaterBlock {
 
     public LadderBlock(FabricBlockSettings setting) {
         super(setting.nonOpaque().breakByHand(true));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
 
     @Override
