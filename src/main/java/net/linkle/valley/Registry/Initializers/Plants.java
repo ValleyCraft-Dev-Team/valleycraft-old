@@ -13,10 +13,13 @@ import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.CarpetBlock;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.block.MossBlock;
+import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -184,8 +187,8 @@ public class Plants {
     public static final Block DRIFT = new ClamBlock();
 
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
-    public static final Block APPLE_LEAVES = new AppleLeavesBlock();
-    public static final Block APPLE_LEAVES_EMPTY = new AppleLeavesBlock();
+    public static final Block APPLE_LEAVES = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
+    public static final Block APPLE_LEAVES_EMPTY = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
 
     public static final Block GIANT_RED = new GiantShroomBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)

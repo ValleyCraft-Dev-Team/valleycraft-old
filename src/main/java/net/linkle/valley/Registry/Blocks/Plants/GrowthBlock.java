@@ -1,15 +1,12 @@
 package net.linkle.valley.Registry.Blocks.Plants;
 
-
 import java.util.Random;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
-import net.minecraft.block.OreBlock;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
@@ -19,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.WorldAccess;
 
-public abstract class GrowthBlock extends OreBlock {
+public abstract class GrowthBlock extends Block {
 
     public static final BooleanProperty MOSSY = BooleanProperty.of("mossy");
 
@@ -29,7 +26,7 @@ public abstract class GrowthBlock extends OreBlock {
                 .breakByTool(FabricToolTags.PICKAXES, 1)
                 .ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3, 3f));
+                .strength(3));
         setDefaultState(stateManager.getDefaultState().with(MOSSY, false));
     }
 

@@ -36,14 +36,9 @@ public class Compostables {
 
         registerItem(Plants.MOREL, levelMed);
         registerItem(Plants.BUSH, levelMed);
-        registerItem(Plants.SNOW_YAM, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);
-        registerItem(Crops.WINTER_ROOT_ITEM, levelMed);
         registerItem(Plants.SNOW_BUSH, levelMed);
-        registerItem(Plants.WINTER_ROOT, levelMed);
         registerItem(Plants.BUSH_ALIVE, levelMed);
-        registerItem(Plants.BUSH_ALIVE_TALL, levelMed);
-        registerItem(Plants.FERNBUSH, levelMed);
         registerItem(Plants.JUNGLE_CAP, levelMed);
         registerItem(Plants.ORANGE_FERN, levelMed);
         registerItem(Plants.MAIZE_CROP, levelMed);
@@ -55,7 +50,6 @@ public class Compostables {
         registerItem(Plants.SWAMP_BUSH, levelMed);
         registerItem(Plants.HEDGE, levelMed);
         registerItem(Crops.MANDRAKE, levelMed);
-        registerItem(Plants.BUSH_DEAD_TALL, levelMed);
         registerItem(Plants.TUMBLE_WEED, levelMed);
         registerItem(Plants.APPLE_LEAVES_EMPTY, levelMed);
         registerItem(FoodAndCooking.WORM, levelMed);
@@ -80,7 +74,6 @@ public class Compostables {
         registerItem(Plants.WILD_WHEAT, levelHigh);
         registerItem(Plants.ORANGE_BEAUTY, levelHigh);
         registerItem(Plants.JUNGLE_BUSH, levelHigh);
-        registerItem(Plants.JUNGLE_BUSH, levelHigh);
         registerItem(Crops.COOKED_MANDRAKE, levelHigh);
         registerItem(Items.EGG, levelHigh);
         registerItem(MiscItems.DUCK_EGG, levelHigh);
@@ -88,8 +81,6 @@ public class Compostables {
         registerItem(Items.SALMON, levelHigh);
         registerItem(Items.TROPICAL_FISH, levelHigh);
         registerItem(Furniture.FIBER_BALE, levelHigh);
-
-        registerItem(Plants.AMERANTH_BLOCK, levelVery);
     }
     
     private static void registerItem(ItemConvertible item, float chance) {
