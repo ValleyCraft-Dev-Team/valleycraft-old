@@ -26,35 +26,23 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.tag.BlockTags;
 
-import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Plants {
     //bushes
-    public static final Block BITTER_BERRY_BUSH = new BitterBerryBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block BITTER_BERRY_BUSH = new BerryBushBlock(true);
 
-    public static final Block SPICY_BERRY_BUSH = new SpicyBerryBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.NETHER_WART)
-            .strength(0,0.1f).luminance(5));
+    public static final Block SPICY_BERRY_BUSH = new BerryBushBlock(true, floor -> 
+        floor.isIn(BlockTags.BASE_STONE_NETHER) || floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.MAGMA_BLOCK)
+    );
 
-    public static final Block TOMATO_BUSH = new TomatoBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block TOMATO_BUSH = new BerryBushBlock(false);
 
-    public static final Block HOLLY_BUSH = new HollyBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block HOLLY_BUSH = new BerryBushBlock(true);
 
     public static final Block TUMBLE_WEED = new TumbleWeedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)

@@ -3,8 +3,7 @@ package net.linkle.valley.Registry.Initializers.ConfiguredFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.ValleyMain;
-import net.linkle.valley.Registry.Blocks.Plants.Bushes.BitterBerryBushBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Bushes.TomatoBushBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Bushes.BerryBushBlock;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.ReedPatchFeature;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -28,7 +27,6 @@ import static net.linkle.valley.ValleyMain.MOD_ID;
 
 import static net.linkle.valley.Registry.Initializers.Plants.*;
 
-@SuppressWarnings("deprecation")
 public class OverworldPlantConfiguredFeatures {
     public static final ReedPatchFeature REED_PATCH = new ReedPatchFeature();    
     
@@ -83,11 +81,11 @@ public class OverworldPlantConfiguredFeatures {
 
     public static final ConfiguredFeature<?, ?> BITTER_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(BITTER_BERRY_BUSH
-                    .getDefaultState().with(BitterBerryBushBlock.AGE, 3)), SimpleBlockPlacer.INSTANCE)).tries(2).build());
+                    .getDefaultState().with(BerryBushBlock.AGE, 3)), SimpleBlockPlacer.INSTANCE)).tries(2).build());
 
     public static final ConfiguredFeature<?, ?> TOMATO_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(TOMATO_BUSH
-                    .getDefaultState().with(TomatoBushBlock.AGE, 2)), SimpleBlockPlacer.INSTANCE)).tries(1).build());
+                    .getDefaultState().with(BerryBushBlock.AGE, 2)), SimpleBlockPlacer.INSTANCE)).tries(1).build());
 
     public static final ConfiguredFeature<?, ?> SNOW_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SNOW_BUSH
