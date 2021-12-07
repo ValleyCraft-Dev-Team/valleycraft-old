@@ -162,7 +162,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(ICE_ROSE);
         cullouts.add(ORANGE_FERN);
         cullouts.add(ORANGE_BEAUTY);
-        cullouts.add(AMERANTH_BLOCK);
         cullouts.add(APPLE_LEAVES);
         cullouts.add(APPLE_SAPLING);
         cullouts.add(CROCUS);

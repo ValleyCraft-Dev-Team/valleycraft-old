@@ -6,12 +6,10 @@ import net.linkle.valley.Registry.Blocks.Plants.*;
 import net.linkle.valley.Registry.Blocks.Plants.AquaticPlants.ClamBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.*;
 import net.linkle.valley.Registry.Blocks.Plants.Cave.*;
-import net.linkle.valley.Registry.Blocks.Plants.Crops.AmeranthCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CarpetBlock;
@@ -22,7 +20,6 @@ import net.minecraft.block.MossBlock;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -50,20 +47,9 @@ public class Plants {
             .strength(0.4f,0.1f));
     //crops
 
-    public static final Block RICE_SEEDLINGS = new RiceCropBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block RICE_SEEDLINGS = new RiceCropBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 
-    public static final Block MAIZE_CROP = new MaizeCropBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
-
-    public static final Block AMERANTH_BLOCK = new AmeranthCropBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block MAIZE_CROP = new MaizeCropBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 
     public static final Block ROSEBUSH = new Plant();
     public static final Block LILACBUSH = new Plant();
