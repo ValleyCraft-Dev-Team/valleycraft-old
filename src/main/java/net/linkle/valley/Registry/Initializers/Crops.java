@@ -47,6 +47,10 @@ public class Crops {
     //Winter Root
     public static final Item WINTER_ROOT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
+    //Pepper
+    public static final CropBlock PEPPER_CROP_BLOCK = new PepperCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Item PEPPER_SEEDS = new AliasedBlockItem(PEPPER_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
+    public static final Item PEPPER_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
     public static void initialize() {
         //Puff Ball
@@ -79,5 +83,9 @@ public class Crops {
         register("onion_crop_block", ONION_CROP_BLOCK);
         register("onion_seeds", ONION_SEEDS);
         register("onion", ONION);
+        //Pepper
+        register("pepper_crop_block", PEPPER_CROP_BLOCK);
+        register("pepper_seeds", PEPPER_SEEDS);
+        register("fire_pepper", PEPPER_ITEM);
     }
 }

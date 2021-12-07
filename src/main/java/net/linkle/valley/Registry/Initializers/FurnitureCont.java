@@ -48,6 +48,7 @@ public class FurnitureCont {
     public static final Block CRATE_POTATO = new CrateBlock();
     public static final Block CRATE_CARROT = new CrateBlock();
     public static final Block CRATE_APPLE = new CrateBlock();
+    public static final Block CRATE_PEPPER = new CrateBlock();
 
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
@@ -81,6 +82,7 @@ public class FurnitureCont {
         registerWithItem("crate_green", CRATE_GREEN, furnGroup);
         registerWithItem("crate_mandrake", CRATE_MANDRAKE, furnGroup);
         registerWithItem("crate_snow", CRATE_SNOW, furnGroup);
+        registerWithItem("crate_pepper", CRATE_PEPPER, furnGroup);
 
         registerWithItem("crate_onion", CRATE_ONION, furnGroup);
         registerWithItem("crate_miner", CRATE_MINER, furnGroup);

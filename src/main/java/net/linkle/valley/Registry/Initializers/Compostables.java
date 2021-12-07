@@ -28,6 +28,8 @@ public class Compostables {
         registerItem(Crops.ONION_SEEDS, levelLow);
         registerItem(Crops.MANDRAKE_SEEDS, levelLow);
         registerItem(Crops.GREEN_BEAN, levelLow);
+        registerItem(Crops.PEPPER_SEEDS, levelLow);
+        registerItem(Crops.PEPPER_ITEM, levelLow);
         registerItem(Crops.GB_SEEDS, levelLow);
         registerItem(MiscItems.FIBER, levelLow);
         registerItem(MiscItems.MOSS_BALL, levelLow);

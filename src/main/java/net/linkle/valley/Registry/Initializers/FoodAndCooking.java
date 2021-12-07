@@ -200,6 +200,7 @@ public class FoodAndCooking {
 
     public static final Item G_WATER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.5f).build()).maxCount(64));
     public static final Item B_WATER = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.5f).build()).maxCount(64));
+    public static final Item GOLDEN_PE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(10).saturationModifier(0.6f).build()).maxCount(64));
 
     public static void initialize() {
         register("tea", TEA);
@@ -375,6 +376,7 @@ public class FoodAndCooking {
         register("glistering_mandrake", GOLDEN_M);
         register("glistering_corn", GOLDEN_C);
         register("glistering_snow_yam", GOLDEN_SY);
+        register("glistering_pepper", GOLDEN_PE);
 
         register("dog_biscuit", DOG_BISCUIT);
         register("dog_food", DOG_FOOD);
