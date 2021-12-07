@@ -1,9 +1,10 @@
 package net.linkle.valley.Registry.Initializers;
 
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.Items;
+import static net.linkle.valley.ValleyMain.LOGGER;
 
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 
 /** Registering items for composer block */
 public class Compostables {
@@ -84,6 +85,10 @@ public class Compostables {
     }
     
     private static void registerItem(ItemConvertible item, float chance) {
+        if (item.asItem() == Items.AIR) {
+            // TODO: Add warning logs.
+            return;
+        }
         CompostingChanceRegistry.INSTANCE.add(item, chance);
     }
 }

@@ -1,9 +1,29 @@
 package net.linkle.valley;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.fabricmc.api.ModInitializer;
 import net.linkle.valley.Registry.Blocks.Decorations.Furnaces.Furnaces;
 import net.linkle.valley.Registry.Criterion.VCriteria;
-import net.linkle.valley.Registry.Initializers.*;
+import net.linkle.valley.Registry.Initializers.Aquatic;
+import net.linkle.valley.Registry.Initializers.Armors;
+import net.linkle.valley.Registry.Initializers.Compostables;
+import net.linkle.valley.Registry.Initializers.Crops;
+import net.linkle.valley.Registry.Initializers.Entities;
+import net.linkle.valley.Registry.Initializers.Fishing;
+import net.linkle.valley.Registry.Initializers.FoodAndCooking;
+import net.linkle.valley.Registry.Initializers.Furniture;
+import net.linkle.valley.Registry.Initializers.FurnitureCont;
+import net.linkle.valley.Registry.Initializers.ItemGroups;
+import net.linkle.valley.Registry.Initializers.MiscItems;
+import net.linkle.valley.Registry.Initializers.Plants;
+import net.linkle.valley.Registry.Initializers.PotBlock;
+import net.linkle.valley.Registry.Initializers.Sounds;
+import net.linkle.valley.Registry.Initializers.StoneBlocks;
+import net.linkle.valley.Registry.Initializers.Tags;
+import net.linkle.valley.Registry.Initializers.VCLootTables;
+import net.linkle.valley.Registry.Initializers.WeaponsAndTools;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.CaveFeatures;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.OceanFeatures;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.OreConfiguredFeatures;
@@ -13,6 +33,7 @@ import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Trees;
 public class ValleyMain implements ModInitializer {
 
     public static final String MOD_ID = "valley";
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     @Override
     public void onInitialize() {
