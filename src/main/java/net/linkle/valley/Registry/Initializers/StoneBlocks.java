@@ -5,14 +5,10 @@ import net.linkle.valley.Registry.Blocks.Decorations.*;
 import net.linkle.valley.Registry.Blocks.Plants.*;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.SporeBlock;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 import static net.linkle.valley.Registry.Initializers.ItemGroups.FURNITURE_GROUP;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.NATURE_GROUP;
-import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
 
 public class StoneBlocks {
@@ -36,7 +32,6 @@ public class StoneBlocks {
     public static final Block NETHER_SALT = new StoneOreBlock();
     public static final Block NETHER_COAL_ORE = new StoneOreBlock();
     public static final Block B_CLAY = new MudBlock();
-    public static final Block B_ROOTS = new BrownClayBlock();
 
     public static final Block JUNGLE = new StoneOreBlock();
     public static final Block JUNGLE_MOSSY = new MossBlock();

@@ -14,7 +14,6 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
@@ -22,28 +21,18 @@ public class MushBlock extends PlantBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
 
     public MushBlock() {
-        super(FabricBlockSettings.of(Material.LEAVES)
+        super(FabricBlockSettings.of(Material.PLANT)
                 .breakByTool(FabricToolTags.SHEARS)
-                .breakByHand(true).ticksRandomly()
+                .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0, 0.5f)
-                .ticksRandomly());
+                .ticksRandomly()
+                .noCollision());
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
-    }
-
-    public static final VoxelShape BlockCollisionShape;
-
-    @Override
-    public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return BlockCollisionShape;
-    }
-
-    static {
-        BlockCollisionShape = VoxelShapes.empty();
     }
 
     // mushy stuff
