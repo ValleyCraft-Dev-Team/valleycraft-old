@@ -2,6 +2,7 @@ package net.linkle.valley.Registry.Blocks.Plants.Decorative;
 
 import java.util.Random;
 
+import net.minecraft.block.AbstractPlantBlock;
 import net.minecraft.block.AbstractPlantStemBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,7 +19,7 @@ public class VinesBlock extends AbstractPlantStemBlock {
         super(settings, Direction.DOWN, SHAPE, false, 0.1D);
     }
     
-    public void setPlant(Block plant) {
+    public void setPlant(AbstractPlantBlock plant) {
         this.plant = plant;
     }
 

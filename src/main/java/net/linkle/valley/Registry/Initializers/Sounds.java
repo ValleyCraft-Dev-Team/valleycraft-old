@@ -6,17 +6,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class Sounds {
-    public static final SoundEvent DUCK_QUACK = newSound("duck_quack");
+    public static final SoundEvent DUCK_QUACK = register("duck_quack");
     
     public static void initialize() {
-        register(DUCK_QUACK);
+        System.out.println("initialing the sounds");
     }
     
-    private static SoundEvent newSound(String ID) {
-        return new SoundEvent(new Identifier(ValleyMain.MOD_ID, ID));
-    }
-    
-    private static void register(SoundEvent sound) {
-        Registry.register(Registry.SOUND_EVENT, sound.getId(), sound);
+    private static SoundEvent register(String ID) {
+        var sound = new SoundEvent(new Identifier(ValleyMain.MOD_ID, ID));
+        return Registry.register(Registry.SOUND_EVENT, sound.getId(), sound);
     }
 }

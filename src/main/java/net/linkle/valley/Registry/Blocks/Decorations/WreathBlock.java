@@ -1,9 +1,11 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.linkle.valley.Registry.Commons.DirectionBlockWithWater;
 import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
@@ -23,7 +25,7 @@ public class WreathBlock extends HorizontalWithWaterBlock {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0.5f, 0.5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
 
     @Override

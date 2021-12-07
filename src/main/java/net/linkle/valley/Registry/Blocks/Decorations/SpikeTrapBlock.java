@@ -17,9 +17,9 @@ import net.minecraft.world.World;
 public class SpikeTrapBlock extends DirectionBlockWithWater {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(1, 1, 1, 15, 15, 15);
 
-    public SpikeTrapBlock(AbstractBlock.Settings settings) {
+    public SpikeTrapBlock(Settings settings) {
         super(settings.noCollision());
-        this.setDefaultState(this.stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.DOWN));
+        setDefaultState();
     }
 
     @Override

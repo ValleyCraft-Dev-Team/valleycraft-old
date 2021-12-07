@@ -12,7 +12,6 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -26,7 +25,7 @@ public class CrystalBlock extends HorizontalWithWaterBlock {
                 .breakByHand(true).breakInstantly()
                 .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
                 .strength(0.5f, 2.5f).nonOpaque().luminance(6));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
 
     @Override

@@ -41,7 +41,6 @@ public class Trees {
 	
 	public static ConfiguredFeature<?, ?> APPLE_TREE = Feature.TREE.configure(APPLE_TREE_CONFIG);
 	
-	@SuppressWarnings("deprecation")
 	public static void ints() {
 		RegistryKey<ConfiguredFeature<?, ?>> appleTree = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, "apple_tree"));
 		

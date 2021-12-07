@@ -24,7 +24,7 @@ public class BrazierBlock extends BlockWithWater {
                 .breakByHand(true).breakByTool(FabricToolTags.AXES)
                 .sounds(BlockSoundGroup.STONE).luminance(luminance)
                 .strength(1.0f, 1.0f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
+        setDefaultState();
     }
 
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {

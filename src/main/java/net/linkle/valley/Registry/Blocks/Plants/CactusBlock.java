@@ -1,6 +1,7 @@
 package net.linkle.valley.Registry.Blocks.Plants;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.linkle.valley.Registry.Commons.HorizontalBlock;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -8,7 +9,6 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.state.StateManager;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -20,16 +20,17 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-public class CactusBlock extends HorizontalFacingBlock {
+public class CactusBlock extends HorizontalBlock {
     private static final VoxelShape COLLISION_SHAPE = Block.createCuboidShape(1, 0, 1, 15, 15, 15);
     private static final VoxelShape OUTLINE_SHAPE = Block.createCuboidShape(1, 0, 1, 15, 16, 15);
 
     public CactusBlock() {
-        super(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
+        super(FabricBlockSettings.of(Material.CACTUS)
+                .nonOpaque()
                 .breakByHand(true)
-                .sounds(BlockSoundGroup.BAMBOO_SAPLING)
-                .strength(0.4f, 0.1f));
-        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));
+                .sounds(BlockSoundGroup.WOOL)
+                .strength(0.4f, 0.2f));
+        setDefaultState();
     }
 
     @Override
@@ -38,8 +39,8 @@ public class CactusBlock extends HorizontalFacingBlock {
     }
 
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return (BlockState)super.getPlacementState(ctx).with(FACING, ctx.getPlayerFacing().getOpposite());
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return super.getFacing(ctx).getOpposite();
     }
 
     @Override
@@ -47,11 +48,6 @@ public class CactusBlock extends HorizontalFacingBlock {
         if (!state.canPlaceAt(world, pos)) {
             world.breakBlock(pos, true);
         }
-    }
-
-    @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
     }
 
     @Override
@@ -90,7 +86,7 @@ public class CactusBlock extends HorizontalFacingBlock {
 
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        entity.damage(DamageSource.CACTUS, 2.0F);
+        entity.damage(DamageSource.CACTUS, 1);
     }
 
     @Override

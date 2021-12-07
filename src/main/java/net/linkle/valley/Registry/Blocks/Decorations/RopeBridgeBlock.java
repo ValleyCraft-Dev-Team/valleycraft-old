@@ -25,7 +25,7 @@ public class RopeBridgeBlock extends HorizontalWithWaterBlock {
 
     public RopeBridgeBlock(Settings settings) {
         super(settings);
-        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));
+        setDefaultState();
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

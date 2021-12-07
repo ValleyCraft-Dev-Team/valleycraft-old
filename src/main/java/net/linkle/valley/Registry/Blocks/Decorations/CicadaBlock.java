@@ -19,7 +19,7 @@ public class CicadaBlock extends DirectionBlockWithWater {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.STONE)
                 .strength(0.5f, 2.5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
     
     @Override

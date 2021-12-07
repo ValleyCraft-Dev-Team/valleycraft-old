@@ -6,52 +6,40 @@ import net.linkle.valley.Registry.Blocks.Plants.*;
 import net.linkle.valley.Registry.Blocks.Plants.AquaticPlants.ClamBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.*;
 import net.linkle.valley.Registry.Blocks.Plants.Cave.*;
-import net.linkle.valley.Registry.Blocks.Plants.Crops.AmeranthCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.CarpetBlock;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.block.MossBlock;
+import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.tag.BlockTags;
 
-import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
 import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Plants {
     //bushes
-    public static final Block BITTER_BERRY_BUSH = new BitterBerryBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block BITTER_BERRY_BUSH = new BerryBushBlock(true);
 
-    public static final Block SPICY_BERRY_BUSH = new SpicyBerryBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.NETHER_WART)
-            .strength(0,0.1f).luminance(5));
+    public static final Block SPICY_BERRY_BUSH = new BerryBushBlock(true, floor -> 
+        floor.isIn(BlockTags.BASE_STONE_NETHER) || floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.MAGMA_BLOCK)
+    );
 
-    public static final Block TOMATO_BUSH = new TomatoBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block TOMATO_BUSH = new BerryBushBlock(false);
 
-    public static final Block HOLLY_BUSH = new HollyBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block HOLLY_BUSH = new BerryBushBlock(true);
 
     public static final Block TUMBLE_WEED = new TumbleWeedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -59,28 +47,17 @@ public class Plants {
             .strength(0.4f,0.1f));
     //crops
 
-    public static final Block RICE_SEEDLINGS = new RiceCropBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block RICE_SEEDLINGS = new RiceCropBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 
-    public static final Block MAIZE_CROP = new MaizeCropBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
+    public static final Block MAIZE_CROP = new MaizeCropBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 
-    public static final Block AMERANTH_BLOCK = new AmeranthCropBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0,0.1f));
-
-    public static final Block ROSEBUSH = new RoseBush();
-    public static final Block LILACBUSH = new RoseBush();
-    public static final Block PEONYBUSH = new RoseBush();
-    public static final Block FERNBUSH = new RoseBush();
-    public static final Block BUSH = new RoseBush();
+    public static final Block ROSEBUSH = new Plant();
+    public static final Block LILACBUSH = new Plant();
+    public static final Block PEONYBUSH = new Plant();
+    public static final Block FERNBUSH = new Plant();
+    public static final Block BUSH = new Plant();
     public static final Block MOREL = new MushBlock();
-    public static final Block HERBS = new RoseBush();
+    public static final Block HERBS = new Plant();
 
     public static final Block HEDGE = new HedgeBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -95,15 +72,15 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block WILD_CARROT = new RoseBush();
-    public static final Block WILD_POTATO = new RoseBush();
-    public static final Block WILD_BEET = new RoseBush();
-    public static final Block WILD_WHEAT = new RoseBush();
-    public static final Block DANDELION_PUFF = new RoseBush();
-    public static final Block REDWOOD_SORREL = new RoseBush();
+    public static final Block WILD_CARROT = new Plant();
+    public static final Block WILD_POTATO = new Plant();
+    public static final Block WILD_BEET = new Plant();
+    public static final Block WILD_WHEAT = new Plant();
+    public static final Block DANDELION_PUFF = new Plant();
+    public static final Block REDWOOD_SORREL = new Plant();
     public static final Block WEAPING_SWAMP_WILLOW = new RoseBushGlow();
-    public static final Block CROCUS = new RoseBush();
-    public static final Block TAPROOTS = new RoseBush();
+    public static final Block CROCUS = new Plant();
+    public static final Block TAPROOTS = new Plant();
 
     public static final Block BUSH_ALIVE = new RoseBushTall();
     public static final Block BUSH_ALIVE_TALL = new RoseBushTall();
@@ -169,23 +146,23 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
-    public static final Block SWAMP_BUSH = new RoseBush();
+    public static final Block SWAMP_BUSH = new Plant();
     public static final Block JUNGLE_CAP = new MushBlock();
-    public static final Block SPROUT = new RoseBush();
+    public static final Block SPROUT = new Plant();
 
-    public static final Block SWAMP_RIBBON = new RoseBush();
-    public static final Block BLACK_DAHLIA = new RoseBush();
-    public static final Block LAVENDER = new RoseBush();
-    public static final Block LAVENDER_SPRIG = new RoseBush();
-    public static final Block ROSE_SPRIG = new RoseBush();
-    public static final Block ICE_ROSE = new RoseBush();
-    public static final Block ORANGE_FERN = new RoseBush();
-    public static final Block ORANGE_BEAUTY = new RoseBush();
+    public static final Block SWAMP_RIBBON = new Plant();
+    public static final Block BLACK_DAHLIA = new Plant();
+    public static final Block LAVENDER = new Plant();
+    public static final Block LAVENDER_SPRIG = new Plant();
+    public static final Block ROSE_SPRIG = new Plant();
+    public static final Block ICE_ROSE = new Plant();
+    public static final Block ORANGE_FERN = new Plant();
+    public static final Block ORANGE_BEAUTY = new Plant();
     public static final Block DRIFT = new ClamBlock();
 
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
-    public static final Block APPLE_LEAVES = new AppleLeavesBlock();
-    public static final Block APPLE_LEAVES_EMPTY = new AppleLeavesBlock();
+    public static final Block APPLE_LEAVES = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
+    public static final Block APPLE_LEAVES_EMPTY = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
 
     public static final Block GIANT_RED = new GiantShroomBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
@@ -202,8 +179,8 @@ public class Plants {
             .sounds(BlockSoundGroup.WOOL).breakInstantly().ticksRandomly()
             .strength(0.0f,0.1f));
 
-    public static final Block PANFLOWER = new RoseBush();
-    public static final Block HONEY_CLUSTER = new RoseBush();
+    public static final Block PANFLOWER = new Plant();
+    public static final Block HONEY_CLUSTER = new Plant();
 
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);

@@ -15,10 +15,8 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 
 public class ScreenBlock extends HorizontalWithWaterBlock {
     private static final VoxelShape EAST_SHAPE;
@@ -27,26 +25,24 @@ public class ScreenBlock extends HorizontalWithWaterBlock {
     private static final VoxelShape NORTH_SHAPE;
 
     public ScreenBlock() {
-        super(FabricBlockSettings.of(Material.METAL).nonOpaque()
-                .breakByHand(true)
-                .sounds(BlockSoundGroup.METAL)
-                .strength(1f,5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        super(FabricBlockSettings.of(Material.METAL).nonOpaque().breakByHand(true).sounds(BlockSoundGroup.METAL)
+                .strength(1f, 5f));
+        setDefaultState();
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH:
-                return NORTH_SHAPE;
-            case SOUTH:
-                return SOUTH_SHAPE;
-            case WEST:
-                return WEST_SHAPE;
-            case EAST:
-                return EAST_SHAPE;
-            default:
-                return NORTH_SHAPE;
+        case NORTH:
+            return NORTH_SHAPE;
+        case SOUTH:
+            return SOUTH_SHAPE;
+        case WEST:
+            return WEST_SHAPE;
+        case EAST:
+            return EAST_SHAPE;
+        default:
+            return NORTH_SHAPE;
         }
     }
 
@@ -56,16 +52,16 @@ public class ScreenBlock extends HorizontalWithWaterBlock {
     }
 
     static {
-        EAST_SHAPE = Block.createCuboidShape(15,0,0,16,20,16);
-        NORTH_SHAPE = Block.createCuboidShape(0,0,0,16,20,1);
-        WEST_SHAPE = Block.createCuboidShape(0,0,0,1,20,16);
-        SOUTH_SHAPE = Block.createCuboidShape(0,0,15,16,20,16);
+        EAST_SHAPE = Block.createCuboidShape(15, 0, 0, 16, 20, 16);
+        NORTH_SHAPE = Block.createCuboidShape(0, 0, 0, 16, 20, 1);
+        WEST_SHAPE = Block.createCuboidShape(0, 0, 0, 1, 20, 16);
+        SOUTH_SHAPE = Block.createCuboidShape(0, 0, 15, 16, 20, 16);
     }
 
-    public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        //default white text
+    @Override
+    public void appendTooltip(ItemStack stack, BlockView world, List<Text> tooltip, TooltipContext options) {
+        // default white text
         tooltip.add(new TranslatableText("block.screen.tooltip"));
         tooltip.add(new TranslatableText("block.screen.tooltip_two"));
     }
 }
-

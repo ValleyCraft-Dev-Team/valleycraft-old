@@ -28,7 +28,7 @@ public class GolemBlockRusted extends HorizontalWithWaterBlock {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN)
                 .strength(1.5f, 2.5f));
-        setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.NORTH));
+        setDefaultState();
     }
     
     @Override
