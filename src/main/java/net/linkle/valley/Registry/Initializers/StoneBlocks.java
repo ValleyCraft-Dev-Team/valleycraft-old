@@ -40,24 +40,24 @@ public class StoneBlocks {
     public static final Block STONE_MOSSY = new MossBlock();
     public static final Block DRY_MOSS_STONE = new DryMossBlock();
 
-    public static final Block OCEAN_STONE = new StoneOreBlock();
-    public static final Block SWAMP_STONE = new StoneOreBlock();
-    public static final Block DARK_STONE = new StoneOreBlock();
-    public static final Block TAIGA_STONE = new StoneOreBlock();
+    public static final Block OCEAN_STONE = new StoneBlock();
+    public static final Block SWAMP_STONE = new StoneBlock();
+    public static final Block DARK_STONE = new StoneBlock();
+    public static final Block TAIGA_STONE = new StoneBlock();
 
-    public static final Block LIMESTONE = new StoneOreBlock();
-    public static final Block PUMICE = new StoneOreBlock();
-    public static final Block JASPER = new StoneOreBlock();
-    public static final Block GREEN_GRANITE = new StoneOreBlock();
+    public static final Block LIMESTONE = new StoneBlock();
+    public static final Block PUMICE = new StoneBlock();
+    public static final Block JASPER = new StoneBlock();
+    public static final Block GREEN_GRANITE = new StoneBlock();
 
-    public static final Block DIABASE_SMOOTH = new StoneOreBlock();
-    public static final Block GRIMESTONE_SMOOTH = new StoneOreBlock();
-    public static final Block VERDANTINE_SMOOTH = new StoneOreBlock();
-    public static final Block MARINITE_SMOOTH = new StoneOreBlock();
-    public static final Block JASPER_SMOOTH = new StoneOreBlock();
-    public static final Block PUMICE_SMOOTH = new StoneOreBlock();
-    public static final Block GREEN_GRANITE_SMOOTH = new StoneOreBlock();
-    public static final Block LIMESTONE_SMOOTH = new StoneOreBlock();
+    public static final Block DIABASE_SMOOTH = new StoneBlock();
+    public static final Block GRIMESTONE_SMOOTH = new StoneBlock();
+    public static final Block VERDANTINE_SMOOTH = new StoneBlock();
+    public static final Block MARINITE_SMOOTH = new StoneBlock();
+    public static final Block JASPER_SMOOTH = new StoneBlock();
+    public static final Block PUMICE_SMOOTH = new StoneBlock();
+    public static final Block GREEN_GRANITE_SMOOTH = new StoneBlock();
+    public static final Block LIMESTONE_SMOOTH = new StoneBlock();
 
     public static final Block CICADA = new CicadaBlock();
 
