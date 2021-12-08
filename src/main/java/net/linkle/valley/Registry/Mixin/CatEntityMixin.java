@@ -5,8 +5,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.linkle.valley.Registry.Armors.Extensions.LaserHitExt;
 import net.linkle.valley.Registry.Entity.Ai.LaserAttackGoal;
+import net.linkle.valley.Registry.Extensions.LaserHitExt;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.CatEntity;

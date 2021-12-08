@@ -1,4 +1,4 @@
-package net.linkle.valley.Registry.Armors.Extensions;
+package net.linkle.valley.Registry.Extensions;
 
 import net.minecraft.entity.LivingEntity;
 

@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import net.linkle.valley.Registry.Armors.Extensions.RedstoneWorldExt;
+import net.linkle.valley.Registry.Extensions.RedstoneWorldExt;
 import net.minecraft.block.FacingBlock;
 import net.minecraft.block.PistonBlock;
 import net.minecraft.util.math.BlockPos;
