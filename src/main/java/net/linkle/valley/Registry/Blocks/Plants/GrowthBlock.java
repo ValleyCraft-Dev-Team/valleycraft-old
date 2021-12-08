@@ -26,7 +26,7 @@ public abstract class GrowthBlock extends Block {
                 .breakByTool(FabricToolTags.PICKAXES, 1)
                 .ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3));
+                .strength(2, 5));
         setDefaultState(stateManager.getDefaultState().with(MOSSY, false));
     }
 
@@ -54,6 +54,10 @@ public abstract class GrowthBlock extends Block {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (world.random.nextInt(5) > 0) {
+            return;
+        }
+        
         BlockPos blockPos = pos.down();
         if (world.isAir(blockPos)) {
             world.setBlockState(blockPos, getBlockLower());

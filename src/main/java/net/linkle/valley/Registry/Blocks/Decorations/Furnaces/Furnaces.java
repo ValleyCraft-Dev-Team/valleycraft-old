@@ -1,27 +1,23 @@
 package net.linkle.valley.Registry.Blocks.Decorations.Furnaces;
 
+import static net.linkle.valley.Registry.Initializers.ItemGroups.FURNITURE_GROUP;
+import static net.linkle.valley.ValleyMain.MOD_ID;
+
 import 	net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.datafixer.TypeReferences;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 import net.minecraft.util.registry.Registry;
-
-import static net.linkle.valley.Registry.Initializers.ItemGroups.FURNITURE_GROUP;
-import static net.linkle.valley.ValleyMain.MOD_ID;
 
 public class Furnaces {
 	public static final Block BRICK_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
-			.breakByTool(FabricToolTags.PICKAXES)
-			.breakByHand(false)
+	        .requiresTool()
+			.breakByTool(FabricToolTags.PICKAXES, 1)
 			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS).luminance(7)
 			.strength(1.5f, 2f));
 	

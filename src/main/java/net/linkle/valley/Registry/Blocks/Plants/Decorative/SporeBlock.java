@@ -22,11 +22,15 @@ public class SporeBlock extends OreBlock {
                 .breakByTool(FabricToolTags.PICKAXES, 1)
                 .ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
-                .strength(2, 3f));
+                .strength(2, 5));
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (world.random.nextInt(5) > 0) {
+            return;
+        }
+        
         BlockPos blockPos = pos.down();
         if (world.isAir(blockPos)) {
             world.setBlockState(blockPos, SPORE_BLOSSOM.getDefaultState());

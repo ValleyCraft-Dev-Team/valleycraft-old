@@ -7,12 +7,11 @@ import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class CrateBlock extends Block {
-
     public CrateBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
                 .breakByTool(FabricToolTags.AXES)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
-                .strength(1, 1f));
+                .strength(1.5f));
     }
 }

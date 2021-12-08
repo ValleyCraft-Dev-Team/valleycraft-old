@@ -67,7 +67,7 @@ public class Plants {
     public static final Block SMALL_CACTUS = new CactusBlock();
     public static final Block FLOWERING_CACTUS = new SmallCactusBlock();
 
-    public static final Block REED_BLOCK = new ReedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
+    public static final Block REED_BLOCK = new ReedBlock(FabricBlockSettings.of(Material.UNDERWATER_PLANT).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
@@ -93,20 +93,20 @@ public class Plants {
     public static final Block DRY_MOSS = new MossBlock(Block.Settings.of(Material.MOSS_BLOCK, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_BLOCK));
     
     public static final Block ROCK_PILE = new RockBlock();
-    public static final Block RED_PILE = new RedCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
+    public static final Block RED_PILE = new CrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(1.0f,2.0f).luminance(7));
+            .strength(1.0f,2.0f).luminance(7), true);
 
-    public static final Block BLUE_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
+    public static final Block BLUE_PILE = new CrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(1.0f,2.0f).luminance(13));
+            .strength(1.0f,2.0f).luminance(13), false);
 
-    public static final Block COIN_STACK = new CoinStackBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
+    public static final Block COIN_STACK = new CrystalBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
             .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
             .sounds(BlockSoundGroup.CHAIN).breakInstantly()
-            .strength(1.0f,2.0f));
+            .strength(1.0f,2.0f), false);
 
     //public static final Block GREEN_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             //.breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
@@ -174,7 +174,7 @@ public class Plants {
             .sounds(BlockSoundGroup.GRASS)
             .strength(0.4f,0.1f));
 
-    public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.LEAVES)
+    public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.CACTUS, MapColor.LIGHT_GRAY)
             .breakByHand(true).nonOpaque().luminance(3)
             .sounds(BlockSoundGroup.WOOL).breakInstantly().ticksRandomly()
             .strength(0.0f,0.1f));

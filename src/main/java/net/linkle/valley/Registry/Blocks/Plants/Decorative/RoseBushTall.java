@@ -15,7 +15,7 @@ public class RoseBushTall extends PlantBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
     public RoseBushTall() {
-        super(FabricBlockSettings.of(Material.LEAVES)
+        super(FabricBlockSettings.of(Material.PLANT)
                 .breakByTool(FabricToolTags.SHEARS)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)

@@ -229,13 +229,6 @@ public class Furniture {
     public static final Block STUMP_RED  = new RedStumpBlock();
     public static final Block STUMP_BROWN  = new BrownStumpBlock();
 
-    public static final Block HANGING_R = new HangingRedstoneCrystalBlock();
-    public static final Block HANGING_F = new HangingCrystalBlock();
-    public static final Block HANGING_D = new HangingCrystalAltBlock();
-    public static final Block HANGING_E = new HangingCrystalAltBlock();
-    public static final Block HANGING_A = new HangingCrystalAltBlock();
-    public static final Block HANGING_G = new HangingCrystalBlock();
-
     public static final Block KEG = new KegBlock();
 
     public static final Block PET_BED = new PetBedBlock();

@@ -34,7 +34,6 @@ public class Entities {
         .specificSpawnBlocks(Blocks.GRASS_BLOCK).build()
     );
 
-    @SuppressWarnings("deprecation")
     public static void initialize() {
         FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
         FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
