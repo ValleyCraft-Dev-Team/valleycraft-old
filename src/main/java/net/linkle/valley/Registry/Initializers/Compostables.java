@@ -5,6 +5,7 @@ import static net.linkle.valley.ValleyMain.LOGGER;
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.util.registry.Registry;
 
 /** Registering items for composer block */
 public class Compostables {
@@ -87,7 +88,7 @@ public class Compostables {
     }
     
     private static void registerItem(ItemConvertible item, float chance) {
-        if (item.asItem() == Items.AIR) {
+        if (Registry.ITEM.getId(item.asItem()).equals(Registry.ITEM.getDefaultId())) {
             // TODO: Add warning logs.
             return;
         }

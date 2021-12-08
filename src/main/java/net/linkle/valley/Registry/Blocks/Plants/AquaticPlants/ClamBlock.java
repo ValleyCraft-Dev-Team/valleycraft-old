@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
@@ -19,18 +18,13 @@ public class ClamBlock extends HorizontalWithWaterBlock {
     public static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 1, 13);
 
     public ClamBlock() {
-        super(FabricBlockSettings.of(Material.NETHER_WOOD)
+        super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0, 0.1f)
                 .ticksRandomly());
         setDefaultState();
-    }
-
-    @Override
-    public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
-        return true;
     }
 
     @Override

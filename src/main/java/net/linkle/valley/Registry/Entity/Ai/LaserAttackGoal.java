@@ -2,7 +2,7 @@ package net.linkle.valley.Registry.Entity.Ai;
 
 import java.util.EnumSet;
 
-import net.linkle.valley.Registry.Armors.Extensions.LaserHitExt;
+import net.linkle.valley.Registry.Extensions.LaserHitExt;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.TrackTargetGoal;

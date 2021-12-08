@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import it.unimi.dsi.fastutil.objects.ObjectArraySet;
-import net.linkle.valley.Registry.Armors.Extensions.RedstoneWorldExt;
+import net.linkle.valley.Registry.Extensions.RedstoneWorldExt;
 import net.minecraft.block.Blocks;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;

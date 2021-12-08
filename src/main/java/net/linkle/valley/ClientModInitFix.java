@@ -27,21 +27,21 @@ public class ClientModInitFix implements ClientModInitializer {
         Entities.initializeClient();
         renderLayer();
 
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1;
-        }, APPLE_LEAVES);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
+            tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1
+        , APPLE_LEAVES);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            return tintIndex == 1 ? 4764952 : -1;
-        }, APPLE_LEAVES);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+            tintIndex == 1 ? 4764952 : -1
+        , APPLE_LEAVES);
 
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) -> {
-            return tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1;
-        }, APPLE_LEAVES_EMPTY);
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
+            tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1
+        , APPLE_LEAVES_EMPTY);
 
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) -> {
-            return tintIndex == 1 ? 4764952 : -1;
-        }, APPLE_LEAVES_EMPTY);
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+            tintIndex == 1 ? 4764952 : -1
+        , APPLE_LEAVES_EMPTY);
     }
     
     private static void renderLayer() {
@@ -180,15 +180,9 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(MANDRAKE_CROP_BLOCK);
         cullouts.add(CRYSTAL_CROP_BLOCK);
 
-        translucents.add(HANGING);
-        translucents.add(HANGING_F);
-        translucents.add(HANGING_R);
-        cullouts.add(HANGING_D);
-        cullouts.add(HANGING_A);
-        cullouts.add(HANGING_E);
+        cullouts.add(HANGING);
 
         translucents.add(CRYSTAL);
-        translucents.add(FROZEN_FOSSIL);
 
         cullouts.add(ROPE_BRIDGE);
         cullouts.add(ROPE_BRIDGE_ANCHOR);
@@ -255,18 +249,10 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(STUMP_MOREL);
 
         cullouts.add(APPLE_LEAVES_EMPTY);
-        cullouts.add(KEG);
-
-        cullouts.add(STUFFY_BROWN);
-        cullouts.add(STUFFY_WHITE);
 
         cullouts.add(CHAIN_C);
         cullouts.add(CHAIN_G);
         cullouts.add(CHAIN_N);
-        
-        cullouts.add(GOLEM_R);
-        cullouts.add(GOLEM_W);
-        cullouts.add(GOLEM_I);
         
         cullouts.add(CAMPFIRE_RING);
 
@@ -274,7 +260,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(GIANT_BROWN);
         cullouts.add(SPIDER_EGG_BLOCK);
         translucents.add(BRAZIER_METAL);
-        translucents.add(COIN_STACK);
 
         // Remapping block's render layer. This code should always be last!
         var layerMap = BlockRenderLayerMap.INSTANCE;

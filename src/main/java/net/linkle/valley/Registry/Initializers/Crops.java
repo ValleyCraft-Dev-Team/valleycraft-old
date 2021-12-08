@@ -16,39 +16,39 @@ import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Crops {
     //Puff Ball
-    public static final CropBlock PUFF_CROP_BLOCK = new PuffCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock PUFF_CROP_BLOCK = new VCropBlock();
     public static final Item PUFF_SEEDS = new AliasedBlockItem(PUFF_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     //Green Bean
-    public static final CropBlock GB_CROP_BLOCK = new GreenBeanCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock GB_CROP_BLOCK = new VCropBlock();
     public static final Item GB_SEEDS = new AliasedBlockItem(GB_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item GREEN_BEAN = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Mandrake
-    public static final CropBlock MANDRAKE_CROP_BLOCK = new MandrakeCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock MANDRAKE_CROP_BLOCK = new VCropBlock();
     public static final Item MANDRAKE_SEEDS = new AliasedBlockItem(MANDRAKE_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item MANDRAKE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Crystal Fruit
-    public static final CropBlock CRYSTAL_CROP_BLOCK = new CrystalCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock CRYSTAL_CROP_BLOCK = new VCropBlock();
     public static final Item CRYSTAL_SEEDS = new AliasedBlockItem(CRYSTAL_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item CRYSTAL_FRUIT = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Foods
     public static final Item COOKED_MANDRAKE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build()).maxCount(64));
     //Onions
-    public static final CropBlock ONION_CROP_BLOCK = new OnionCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock ONION_CROP_BLOCK = new VCropBlock();
     public static final Item ONION_SEEDS = new AliasedBlockItem(ONION_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item ONION = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Miners Lettuce
-    public static final CropBlock MINERS_CROP_BLOCK = new MinersLettuceCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock MINERS_CROP_BLOCK = new VCropBlock();
     public static final Item MINERS_LETTUCE_ITEM = new AliasedBlockItem(MINERS_CROP_BLOCK, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f).build()).maxCount(64));
 
     //Snow Yam
-    public static final CropBlock SNOW_CROP_BLOCK = new SnowYamCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock SNOW_CROP_BLOCK = new VCropBlock();
     public static final Item SNOW_YAM_ITEM = new AliasedBlockItem(SNOW_CROP_BLOCK, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
     //Winter Root
     public static final Item WINTER_ROOT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
     //Pepper
-    public static final CropBlock PEPPER_CROP_BLOCK = new PepperCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final CropBlock PEPPER_CROP_BLOCK = new VCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
     public static final Item PEPPER_SEEDS = new AliasedBlockItem(PEPPER_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item PEPPER_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 

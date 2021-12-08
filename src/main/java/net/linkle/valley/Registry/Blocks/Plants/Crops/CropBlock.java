@@ -1,7 +1,5 @@
 package net.linkle.valley.Registry.Blocks.Plants.Crops;
 
-import static net.linkle.valley.Registry.Initializers.FoodAndCooking.RICE_ITEM;
-
 import java.util.Random;
 
 import net.minecraft.block.Block;
@@ -58,7 +56,7 @@ public abstract class CropBlock extends PlantBlock implements Fertilizable {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        int i = Math.min(getMaxAge(), MathHelper.nextInt(world.random, 2, 5));
+        int i = Math.min(getMaxAge(), state.get(ageProp)+MathHelper.nextInt(world.random, 2, 3));
         world.setBlockState(pos, state.with(ageProp, i), 2);
     }
     

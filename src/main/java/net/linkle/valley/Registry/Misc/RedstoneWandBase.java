@@ -2,8 +2,8 @@ package net.linkle.valley.Registry.Misc;
 
 import java.util.List;
 
-import net.linkle.valley.Registry.Armors.Extensions.LaserHitExt;
-import net.linkle.valley.Registry.Armors.Extensions.RedstoneWorldExt;
+import net.linkle.valley.Registry.Extensions.LaserHitExt;
+import net.linkle.valley.Registry.Extensions.RedstoneWorldExt;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.CatEntity;

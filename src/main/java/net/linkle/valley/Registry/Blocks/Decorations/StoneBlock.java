@@ -6,12 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
 
-public class CrateBlock extends Block {
-    public CrateBlock() {
-        super(FabricBlockSettings.of(Material.WOOD)
-                .breakByTool(FabricToolTags.AXES)
-                .breakByHand(true)
-                .sounds(BlockSoundGroup.WOOD)
-                .strength(1.5f));
+public class StoneBlock extends Block {
+    public StoneBlock() {
+        super(FabricBlockSettings.of(Material.STONE)
+                .requiresTool()
+                .breakByTool(FabricToolTags.PICKAXES, 1)
+                .sounds(BlockSoundGroup.STONE)
+                .strength(1.5f, 5.0f));
     }
 }
