@@ -13,6 +13,7 @@ public class SeaPatchFeature extends Feature<SeaPatchConfig> {
         super(SeaPatchConfig.CODEC);
     }
 
+    @Override
     public boolean generate(FeatureContext<SeaPatchConfig> context) {
         int spawned = 0;
         var random = context.getRandom();
@@ -25,8 +26,8 @@ public class SeaPatchFeature extends Feature<SeaPatchConfig> {
         for (int i = 0; i < loops; ++i) {
             int xPos = random.nextInt(size) - random.nextInt(size);
             int zPos = random.nextInt(size) - random.nextInt(size);
-            int n = world.getTopY(Type.OCEAN_FLOOR, origin.getX() + xPos, origin.getZ() + xPos);
-            var blockPos = new BlockPos(origin.getX() + zPos, n, origin.getZ() + xPos);
+            int topY = world.getTopY(Type.OCEAN_FLOOR, origin.getX() + xPos, origin.getZ() + xPos);
+            var blockPos = new BlockPos(origin.getX() + zPos, topY, origin.getZ() + xPos);
             var blockState = stateProvider.getBlockState(random, blockPos);
             if (world.getBlockState(blockPos).isOf(Blocks.WATER) && blockState.canPlaceAt(world, blockPos)) {
                 world.setBlockState(blockPos, blockState, Block.NOTIFY_LISTENERS);
