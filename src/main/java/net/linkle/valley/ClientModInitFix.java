@@ -11,6 +11,7 @@ import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
 
 import static net.linkle.valley.Registry.Initializers.Plants.*;
+import static net.linkle.valley.Registry.Initializers.Aquatic.*;
 import static net.linkle.valley.Registry.Initializers.StoneBlocks.*;
 import static net.linkle.valley.Registry.Initializers.Crops.*;
 import static net.linkle.valley.Registry.Initializers.Furniture.*;
@@ -259,6 +260,7 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(GIANT_RED);
         cullouts.add(GIANT_BROWN);
         cullouts.add(SPIDER_EGG_BLOCK);
+        cullouts.add(RED_SEAGRASS);
         translucents.add(BRAZIER_METAL);
 
         // Remapping block's render layer. This code should always be last!
