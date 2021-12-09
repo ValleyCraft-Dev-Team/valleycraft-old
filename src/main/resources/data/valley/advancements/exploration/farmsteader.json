@@ -312,6 +312,30 @@
 				]
 			}
 		},
+		"pepper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fire_pepper"
+						]
+					}
+				]
+			}
+		},
+		"eggplant": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:eggplant"
+						]
+					}
+				]
+			}
+		},
 		"puff_ball": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -403,6 +427,12 @@
 		],
 		[
 			"puff_ball"
+		],
+		[
+			"pepper"
+		],
+		[
+			"eggplant"
 		]
 	]
 }

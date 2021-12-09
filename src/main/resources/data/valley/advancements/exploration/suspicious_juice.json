@@ -1,14 +1,14 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/mead",
 	"display": {
 		"title": {
-			"text": "Inconceivable!"
+			"text": "'Inconceivable!'"
 		},
 		"icon": {
 			"item": "valley:potato_juice"
 		},
 		"description": {
-			"text": "Drink some Suspicious Juice"
+			"text": "Make & drink some Suspicious Juice"
 		}
 	},
 	"criteria": {

@@ -1,16 +1,15 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/commis",
 	"display": {
 		"title": {
-			"text": "Marine Biologist"
+			"text": "Fishmonger"
 		},
 		"icon": {
 			"item": "valley:lionfish"
 		},
 		"description": {
 			"text": "Catch every type of fish"
-		},
-		"frame": "challenge"
+		}
 	},
 	"criteria": {
 		"lionfish": {

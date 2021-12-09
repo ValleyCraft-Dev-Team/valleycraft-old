@@ -126,6 +126,7 @@ public class FoodAndCooking {
     public static final Item POKE_BOWL = new BowlBase(new Item.Settings(), 8, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.REGENERATION,120)));
 
     public static final Item TOMATO_JUICE = new DrinkBottleBase(new Item.Settings(), 4, 0.5f);
+    public static final Item JUICE_EG = new DrinkBottleBase(new Item.Settings(), 4, 0.5f);
     public static final Item COCOA = new DrinkTeaBase(new Item.Settings(), 2, 0.5f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.REGENERATION,120)));
     public static final Item CLOWNFISH_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,450)));
     public static final Item CRYS_HONEY = new FoodItemBase(new Item.Settings(), 4, 0.5f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.REGENERATION,240)));
@@ -179,14 +180,19 @@ public class FoodAndCooking {
     public static final Item GOLDEN_J = new DrinkBottleBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_GB = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_M = new FoodItemBase(new Item.Settings(), 10, 0.6f);
+    public static final Item GOLDEN_EP = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_GB_2 = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item VEGE_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.RESISTANCE,600)));
+    public static final Item EGG_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.STRENGTH,600)));
     public static final Item BEAR_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.STRENGTH,600)));
     public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings(), 9, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.REGENERATION,900)));
     public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings(), 9, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,900)));
     public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings(), 9, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.RESISTANCE,900)));
     public static final Item WORM_SOUP = new BowlBase(new Item.Settings(), 8, 0.8f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.NAUSEA,900)));
     public static final Item SLIME_SOUP = new BowlBase(new Item.Settings(), 5, 0.4f, new FoodStatusEffects(new StatusEffectInstance(StatusEffects.JUMP_BOOST,900)));
+
+    public static final Item VEGE_BOWL = new BowlBase(new Item.Settings(), 8, 0.4f);
+    public static final Item FRUIT_BOWL = new BowlBase(new Item.Settings(), 8, 0.4f);
 
     public static final Item BITTER_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item SWEET_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
@@ -227,6 +233,7 @@ public class FoodAndCooking {
         register("carrot_juice", CARROT_JUICE);
         register("potato_juice", POTATO_JUICE);
         register("gb_juice", GB_JUICE);
+        register("eggplant_juice", JUICE_EG);
         register("pumpkin_bottle", PUMPKIN_BOTTLE);
         register("morel_oil", MOREL_OIL);
 
@@ -259,6 +266,7 @@ public class FoodAndCooking {
         register("rabbit_bigo", SPICY_RABBIT_BIGO);
         register("lamb_biryani", LAMB_BIRYANI);
         register("vege_stir_fry", VEGE_STIR_FRY);
+        register("eggplant_stir_fry", EGG_STIR_FRY);
         register("pork_stir_fry", PORK_STIR_FRY);
         register("bear_stir_fry", BEAR_STIR_FRY);
         register("seaweed_salad", SEAWEED_SALAD);
@@ -270,6 +278,9 @@ public class FoodAndCooking {
         register("slime_soup", SLIME_SOUP);
         register("chicken_curry", CHICKEN_CURRY);
         register("rice_bowl", RICE_BOWL);
+        register("vege_bowl", VEGE_BOWL);
+        register("fruit_bowl", FRUIT_BOWL);
+
         register("poke_bowl", POKE_BOWL);
         register("dried_seaweed", SEAWEED_ITEM);
 
@@ -371,6 +382,7 @@ public class FoodAndCooking {
         register("glistering_corn", GOLDEN_C);
         register("glistering_snow_yam", GOLDEN_SY);
         register("glistering_pepper", GOLDEN_PE);
+        register("glistering_eggplant", GOLDEN_EP);
 
         register("dog_biscuit", DOG_BISCUIT);
         register("dog_food", DOG_FOOD);

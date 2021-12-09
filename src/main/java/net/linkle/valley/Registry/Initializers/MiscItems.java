@@ -52,6 +52,7 @@ public class MiscItems {
     public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(FISHING_GROUP).maxCount(64).rarity(Rarity.EPIC));
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
+    public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(MISC_GROUP).maxCount(64));
 
     public static void initialize() {
 
@@ -67,6 +68,7 @@ public class MiscItems {
         //register("ameranth", AMERANTH);
         register("saltpeter", SALTPETER);
         register("fiber", FIBER);
+        register("book_cover", BOOK_COVER);
         register("moss_ball", MOSS_BALL);
         register("null_totem", E_TOTEM);
         register("sunshine_totem", S_TOTEM);

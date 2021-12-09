@@ -5,11 +5,12 @@
 			"text": "Lumberjack"
 		},
 		"icon": {
-			"item": "valley:lumber_axe"
+			"item": "minecraft:spruce_sapling"
 		},
 		"description": {
 			"text": "Cut down every tree type and gather their saplings."
-		}
+		},
+		"frame": "challenge"
 	},
 	"criteria": {
 		"apple": {

@@ -13,6 +13,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldView;
 
 public class ClamBlock extends HorizontalWithWaterBlock {
     public static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 1, 13);
@@ -22,8 +23,7 @@ public class ClamBlock extends HorizontalWithWaterBlock {
                 .nonOpaque()
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
-                .strength(0, 0.1f)
-                .ticksRandomly());
+                .strength(0, 0.1f));
         setDefaultState();
     }
 
@@ -59,5 +59,12 @@ public class ClamBlock extends HorizontalWithWaterBlock {
                 world.setBlockState(blockPos, state, 2);
             }
         }
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        var blockPos = pos.down();
+        var blockState = world.getBlockState(blockPos);
+        return blockState.isFullCube(world, blockPos);
     }
 }

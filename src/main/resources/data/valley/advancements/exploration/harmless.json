@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/knife",
 	"display": {
 		"title": {
-			"text": "Novice Explorer"
+			"text": "A Harmless Alternative"
 		},
 		"icon": {
-			"item": "minecraft:spyglass"
+			"item": "valley:book_cover"
 		},
 		"description": {
-			"text": "Craft a Spyglass"
+			"text": "Craft a Book Cover out of Plant Fiber."
 		}
 	},
 	"criteria": {
-		"spyglass": {
+		"starfish": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"minecraft:spyglass"
+							"valley:book_cover"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"spyglass"
+			"starfish"
 		]
 	]
 }

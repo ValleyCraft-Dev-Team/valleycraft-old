@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/telescope",
+	"parent": "valley:exploration/knife",
 	"display": {
 		"title": {
 			"text": "Beginner Anthropologist"

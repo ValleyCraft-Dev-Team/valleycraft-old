@@ -4,7 +4,7 @@
     "valley:climbable_rope", "minecraft:chain", "valley:iron_ladder", "valley:bamboo_ladder", "valley:ladder_oak"
   , "valley:ladder_dark", "valley:ladder_spruce", "valley:ladder_jungle", "valley:ladder_acacia", "valley:ladder_birch"
   , "valley:ladder_warped", "valley:ladder_crimson", "valley:chimney_cobble", "valley:mossy_vines",
-    "valley:golden_chain", "valley:netherite_chain", "valley:copper_chain"
+    "valley:golden_chain", "valley:netherite_chain", "valley:copper_chain", "valley:dry_vines"
 
   ]
 }

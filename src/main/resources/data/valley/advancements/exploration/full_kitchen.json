@@ -1,0 +1,93 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Full Kitchen"
+		},
+		"icon": {
+			"item": "valley:stew_pot"
+		},
+		"description": {
+			"text": "Make a Bottle, Mug, Tea Mug, Bowl, & Bento Box for your dishes."
+		}
+	},
+	"criteria": {
+		"bowl": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bowl"
+						]
+					}
+				]
+			}
+		},
+		"glass": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:glass_bottle"
+						]
+					}
+				]
+			}
+		},
+		"bento": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bento_block"
+						]
+					}
+				]
+			}
+		},
+		"tea": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:small_mug_block"
+						]
+					}
+				]
+			}
+		},
+		"mead": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mug_block"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"glass"
+		],
+		[
+			"tea"
+		],
+		[
+			"mead"
+		],
+		[
+			"bento"
+		],
+		[
+			"bowl"
+		]
+	]
+}

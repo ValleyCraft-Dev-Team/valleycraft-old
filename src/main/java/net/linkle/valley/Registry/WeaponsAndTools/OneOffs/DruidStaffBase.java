@@ -23,7 +23,7 @@ import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GRO
 
 public class DruidStaffBase extends SwordItem {
     public DruidStaffBase(ToolMaterial DruidToolMaterialStaff) {
-        super(DruidToolMaterialStaff, 3, -3.2f, new Settings().group(EXPLORATION_GROUP
+        super(DruidToolMaterialStaff, 4, -2.9f, new Settings().group(EXPLORATION_GROUP
 ));
     }
 

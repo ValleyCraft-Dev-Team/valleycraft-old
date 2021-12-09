@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/foodgroups",
+	"parent": "valley:exploration/tea",
 	"display": {
 		"title": {
 			"text": "Professional Viking"

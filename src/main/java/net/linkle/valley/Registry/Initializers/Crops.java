@@ -52,6 +52,12 @@ public class Crops {
     public static final Item PEPPER_SEEDS = new AliasedBlockItem(PEPPER_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item PEPPER_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
+    //Eggplant
+    //Pepper
+    public static final CropBlock EGGPLANT_CROP_BLOCK = new VCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+    public static final Item EGGPLANT_SEEDS = new AliasedBlockItem(EGGPLANT_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
+    public static final Item EGGPLANT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+
     public static void initialize() {
         //Puff Ball
         register("puff_crop_block", PUFF_CROP_BLOCK);
@@ -87,5 +93,9 @@ public class Crops {
         register("pepper_crop_block", PEPPER_CROP_BLOCK);
         register("pepper_seeds", PEPPER_SEEDS);
         register("fire_pepper", PEPPER_ITEM);
+        //Eggplant
+        register("eggplant_crop_block", EGGPLANT_CROP_BLOCK);
+        register("eggplant_seeds", EGGPLANT_SEEDS);
+        register("eggplant", EGGPLANT_ITEM);
     }
 }

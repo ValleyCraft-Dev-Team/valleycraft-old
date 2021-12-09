@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/foodgroups",
+	"parent": "valley:exploration/commis",
 	"display": {
 		"title": {
 			"text": "Tea Specialist"

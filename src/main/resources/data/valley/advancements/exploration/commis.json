@@ -1,0 +1,42 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Commis Chef"
+		},
+		"icon": {
+			"item": "valley:flour_bag"
+		},
+		"description": {
+			"text": "Make some Dough from Flour"
+		}
+	},
+	"criteria": {
+		"seeds": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:cookie_dough",
+							"valley:bread_dough",
+							"valley:cake_dough",
+							"valley:apple_dough",
+							"valley:pumpkin_dough",
+							"valley:bitter_dough",
+							"valley:glow_dough",
+							"valley:sweet_dough",
+							"valley:pancake_dough",
+							"valley:skeleton_cookie_dough"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"seeds"
+		]
+	]
+}

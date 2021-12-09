@@ -1,0 +1,380 @@
+{
+	"parent": "valley:exploration/farmsteader",
+	"display": {
+		"title": {
+			"text": "Expert Agronomist"
+		},
+		"icon": {
+			"item": "valley:crate_apple"
+		},
+		"description": {
+			"text": "Make every Crate type including Egg Crates."
+		},
+		"frame": "challenge",
+		"hidden": false
+	},
+	"criteria": {
+		"apple": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_apple"
+						]
+					}
+				]
+			}
+		},
+		"sweet_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_sweet"
+						]
+					}
+				]
+			}
+		},
+		"potato": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_potato"
+						]
+					}
+				]
+			}
+		},
+		"glow_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_glow"
+						]
+					}
+				]
+			}
+		},
+		"cocoa_beans": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_cocoa"
+						]
+					}
+				]
+			}
+		},
+		"carrot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_carrot"
+						]
+					}
+				]
+			}
+		},
+		"beetroot": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_beet"
+						]
+					}
+				]
+			}
+		},
+		"green_bean": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_green"
+						]
+					}
+				]
+			}
+		},
+		"maize_crop": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_corn"
+						]
+					}
+				]
+			}
+		},
+		"bitter_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_bitter"
+						]
+					}
+				]
+			}
+		},
+		"spicy_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_spicy"
+						]
+					}
+				]
+			}
+		},
+		"tomato_bush": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_tomato"
+						]
+					}
+				]
+			}
+		},
+		"holly": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_holly"
+						]
+					}
+				]
+			}
+		},
+		"mandrake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_mandrake"
+						]
+					}
+				]
+			}
+		},
+		"snow_yam_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_snow"
+						]
+					}
+				]
+			}
+		},
+		"onion": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_onion"
+						]
+					}
+				]
+			}
+		},
+		"miners_lettuce": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_miner"
+						]
+					}
+				]
+			}
+		},
+		"rice_item": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_rice"
+						]
+					}
+				]
+			}
+		},
+		"pepper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_pepper"
+						]
+					}
+				]
+			}
+		},
+		"eggplant": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_eggplant"
+						]
+					}
+				]
+			}
+		},
+		"chorus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_chorus"
+						]
+					}
+				]
+			}
+		},
+		"egg": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_egg"
+						]
+					}
+				]
+			}
+		},
+		"duck": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_duck"
+						]
+					}
+				]
+			}
+		},
+		"puff_ball": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_puff"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"apple"
+		],
+		[
+			"sweet_berries"
+		],
+		[
+			"potato"
+		],
+		[
+			"glow_berries"
+		],
+		[
+			"cocoa_beans"
+		],
+		[
+			"carrot"
+		],
+		[
+			"beetroot"
+		],
+		[
+			"green_bean"
+		],
+		[
+			"maize_crop"
+		],
+		[
+			"bitter_berries"
+		],
+		[
+			"spicy_berries"
+		],
+		[
+			"tomato_bush"
+		],
+		[
+			"holly"
+		],
+		[
+			"mandrake"
+		],
+		[
+			"snow_yam_item"
+		],
+		[
+			"onion"
+		],
+		[
+			"miners_lettuce"
+		],
+		[
+			"rice_item"
+		],
+		[
+			"puff_ball"
+		],
+		[
+			"pepper"
+		],
+		[
+			"eggplant"
+		],
+		[
+			"egg"
+		],
+		[
+			"duck"
+		],
+		[
+			"chorus"
+		]
+	]
+}

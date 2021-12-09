@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:fiber"
+    }
+  },
+  "result": {
+    "item": "valley:book_cover",
+    "count": 1
+  }
+}

@@ -203,6 +203,26 @@
 				}
 			}
 		},
+		"glistering_pepper": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_pepper"
+					]
+				}
+			}
+		},
+		"glistering_eggplant": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_eggplant"
+					]
+				}
+			}
+		},
 		"glistering_glow_berries": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
@@ -277,6 +297,12 @@
 		],
 		[
 			"glistering_mandrake"
+		],
+		[
+			"glistering_pepper"
+		],
+		[
+			"glistering_eggplant"
 		]
 	]
 }

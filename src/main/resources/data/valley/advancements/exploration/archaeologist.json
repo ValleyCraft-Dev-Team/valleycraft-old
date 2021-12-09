@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/explorer",
+	"parent": "valley:exploration/climbing_axe",
 	"display": {
 		"title": {
 			"text": "Shovel Bum"

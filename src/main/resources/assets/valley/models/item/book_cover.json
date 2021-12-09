@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "valley:items/plant_fiber_book_cover_alt"
+  }
+}

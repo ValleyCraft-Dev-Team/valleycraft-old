@@ -1,25 +1,24 @@
 {
-	"parent": "valley:exploration/fishing",
+	"parent": "valley:exploration/commis",
 	"display": {
 		"title": {
-			"text": "Otherworldy"
+			"text": "Baker"
 		},
 		"icon": {
-			"item": "valley:fossilized_starfish"
+			"item": "valley:brick_furnace"
 		},
 		"description": {
-			"text": "Catch the Luma Starfish"
-		},
-		"frame": "challenge"
+			"text": "Craft a Brick Stove for your kitchen"
+		}
 	},
 	"criteria": {
-		"starfish": {
+		"stove": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:fossilized_starfish"
+							"valley:brick_stove"
 						]
 					}
 				]
@@ -28,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"starfish"
+			"stove"
 		]
 	]
 }

@@ -1,11 +1,11 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/sickle",
 	"display": {
 		"title": {
 			"text": "Grab Your Flannel"
 		},
 		"icon": {
-			"item": "minecraft:spruce_sapling"
+			"item": "valley:lumber_axe"
 		},
 		"description": {
 			"text": "Make a Lumber Axe"
