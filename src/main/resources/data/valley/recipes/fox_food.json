@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:holly"
+      "tag": "c:holly"
     },
     {
       "tag": "c:bitter_berries"
