@@ -301,8 +301,8 @@
   "item.valley.fur_clump": "Fur Tuft",
   "item.valley.netherite_nugget": "Netherite Nugget",
   "item.valley.mulch": "Mulch",
-  "item.valley.null_totem": "Totem Base",
-  "item.valley.growth_totem": "Growth Totem",
+  "item.valley.null_totem": "Effigy Base",
+  "item.valley.growth_totem": "Growth Effigy",
   "item.valley.druid_rune.tooltip": "It hums with a strange energy and",
   "item.valley.druid_rune.tooltip_2": "it's branches move on their own.",
 
@@ -404,9 +404,9 @@
   "item.valley.witch_dagger": "Witch Dagger",
   "item.valley.tongs": "Tongs",
 
-  "item.valley.sunshine_totem": "Sunshine Totem",
-  "item.valley.rain_totem": "Rain & Snow Totem",
-  "item.valley.storm_totem": "Storm Totem",
+  "item.valley.sunshine_totem": "Sunshine Effigy",
+  "item.valley.rain_totem": "Rain & Snow Effigy",
+  "item.valley.storm_totem": "Storm Effigy",
 
   "item.valley.wood_spear": "Wooden Spear",
   "item.valley.stone_spear": "Stone Spear",

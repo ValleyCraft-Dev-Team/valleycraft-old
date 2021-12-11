@@ -1,5 +1,5 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/baker",
 	"display": {
 		"title": {
 			"text": "Commis Chef"
