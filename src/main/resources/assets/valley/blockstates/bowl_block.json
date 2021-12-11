@@ -1,13 +1,5 @@
 {
   "variants": {
-    "facing=down,waterlogged=false": {
-      "y": 0,
-      "model": "valley:block/bowl_block"
-    },
-    "facing=down,waterlogged=true": {
-      "y": 0,
-      "model": "valley:block/bowl_block"
-    },
     "facing=east,waterlogged=false": {
       "y": 90,
       "model": "valley:block/bowl_block"
@@ -30,14 +22,6 @@
     },
     "facing=south,waterlogged=true": {
       "y": 180,
-      "model": "valley:block/bowl_block"
-    },
-    "facing=up,waterlogged=false": {
-      "y": 0,
-      "model": "valley:block/bowl_block"
-    },
-    "facing=up,waterlogged=true": {
-      "y": 0,
       "model": "valley:block/bowl_block"
     },
     "facing=west,waterlogged=false": {

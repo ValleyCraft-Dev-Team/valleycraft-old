@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "&&&",
+    "&&&",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "&": {
+      "tag": "c:miners_lettuce"
+    }
+  },
+  "result": {
+    "item": "valley:crate_miner"
+  }
+}

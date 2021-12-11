@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "valley",
-  "version": "1.3.2",
+  "version": "2.0",
 
   "name": "ValleyCraft",
   "description": "",
@@ -30,7 +30,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.12.11",
     "fabric": "*",
     "minecraft": "1.17.x",
     "java": ">=16"

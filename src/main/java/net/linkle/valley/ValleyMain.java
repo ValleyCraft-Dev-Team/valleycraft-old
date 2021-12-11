@@ -17,7 +17,7 @@ public class ValleyMain implements ModInitializer {
     @Override
     public void onInitialize() {
         // This should stay first before items and blocks.
-        Object initializer1 = Tags.KNIVES; // will force the class to load (any static member will do)
+        Object initializer1 = VItemTags.KNIVES; // will force the class to load (any static member will do)
         Object initializer2 = VCriteria.BROKE_BLOCK;
 
         //Item Initializers
@@ -39,7 +39,7 @@ public class ValleyMain implements ModInitializer {
         PotBlock.initialize();
         
         // Misc Initializers (Recommended put it after the blocks and items initializers)
-        VCLootTables.initialize();
+        VLootTables.initialize();
         Sounds.initialize();
         Compostables.initialize();
         Entities.initialize();

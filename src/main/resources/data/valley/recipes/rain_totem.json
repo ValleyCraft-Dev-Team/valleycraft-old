@@ -16,7 +16,7 @@
       "item": "minecraft:snowball"
     },
     "=": {
-      "item": "valley:holly"
+      "tag": "c:holly"
     }
   },
 

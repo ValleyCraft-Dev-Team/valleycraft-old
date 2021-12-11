@@ -54,6 +54,7 @@
   "block.valley.hanging_pot": "Hanging Glass Planter",
 
   "block.valley.small_cactus": "Small Cactus",
+  "block.valley.flowering_cactus": "Flowering Cactus",
   "block.valley.rose_bush": "Small Rose Bush",
   "block.valley.lilac_bush": "Small Lilac Bush",
   "block.valley.peony_bush": "Small Peony Bush",
@@ -99,8 +100,9 @@
   "block.valley.oceanstone": "Marinite",
   "block.valley.swampstone": "Grimestone",
   "block.valley.taigastone": "Verdantine",
-  "block.valley.darkstone": "Diabase",
-
+  "block.valley.jasper": "Jasper",
+  "block.valley.pumice": "Pumice",
+  "block.valley.limestone": "Limestone",
 
   "block.valley.mixed_ore": "Mixed Ore",
   "block.valley.saltpeter_ore": "Saltpeter Ore",
@@ -180,6 +182,8 @@
   "block.valley.crate_puff": "Puff Ball Crate",
   "block.valley.crate_duck": "Duck Egg Crate",
   "block.valley.crate_egg": "Chicken Egg Crate",
+  "block.valley.crate_pepper": "Fire Pepper Crate",
+  "block.valley.crate_eggplant": "Eggplant Crate",
   "block.valley.crate_bamboo": "Bamboo Bale",
   "block.valley.crate_sugar": "Sugarcane Bale",
 
@@ -242,6 +246,8 @@
   "item.valley.rice_item": "Rice",
   "item.valley.monster_jerky": "Monster Jerky",
   "item.valley.flour_bag": "Flour",
+  "item.valley.pepper_seeds": "Fire Pepper Seeds",
+  "item.valley.eggplant_seeds": "Eggplant Seeds",
   "block.valley.tomato_bush": "Tomato",
   "block.valley.spicy_berries": "Spicy Berries",
   "block.valley.bitter_berries": "Bitter Berries",
@@ -290,6 +296,7 @@
   "item.valley.slime_fish": "Gelafin",
   "item.valley.glistering_anglerfish": "Glistering Anglerfish",
   "item.valley.octopus": "Octorok",
+  "item.valley.book_cover": "Book Cover",
 
   "item.valley.fur_clump": "Fur Tuft",
   "item.valley.netherite_nugget": "Netherite Nugget",
@@ -368,6 +375,8 @@
   "item.valley.mandrake_soup": "Mandrake Soup",
   "item.valley.glistering_mandrake": "Golden Mandrake",
   "item.valley.vege_stir_fry": "Mixed Vegetable Stir Fry",
+  "item.valley.eggplant_stir_fry": "Eggplant Stir Fry",
+  "item.valley.fruit_bowl": "Fruit Bowl",
 
   "block.valley.stone_tiles": "Stone Tiles",
   "block.valley.stone_tile_stairs": "Stone Tile Stairs",
@@ -474,9 +483,9 @@
   "block.valley.beveled_glass_gold": "Golden Beveled Glass",
   "block.valley.beveled_glass_netherite": "Netherite Beveled Glass",
   "block.valley.beveled_glass_amethyst": "Iron Beveled Amethyst Glass",
-  "block.valley.beveled_glass_copper_amethyst": "Copper Beveled Amethyst Glass",
-  "block.valley.beveled_glass_gold_amethyst": "Golden Beveled Amethyst Glass",
-  "block.valley.beveled_glass_netherite_amethyst": "Netherite Beveled Amethyst Glass",
+  "block.valley.beveled_glass_amethyst_copper": "Copper Beveled Amethyst Glass",
+  "block.valley.beveled_glass_amethyst_gold": "Golden Beveled Amethyst Glass",
+  "block.valley.beveled_glass_amethyst_netherite": "Netherite Beveled Amethyst Glass",
 
   "block.valley.volc_smooth_stone": "Polished Volcanic Stone",
   "block.valley.salt_block": "Block of Salt",
@@ -564,6 +573,8 @@
   "item.valley.glistering_sweet_berries": "Golden Sweet Berries",
   "item.valley.glistering_bitter_berries": "Golden Bitter Berries",
   "item.valley.glistering_honeycomb": "Golden Honeycomb",
+  "item.valley.glistering_eggplant": "Golden Eggplant",
+  "item.valley.glistering_pepper": "Golden Pepper",
 
   "item.valley.bear_spawn_egg": "Bear Spawn Egg",
   "item.valley.duck_spawn_egg": "Duck Spawn Egg",
@@ -602,5 +613,7 @@
   "block.valley.dry_moss": "Dry Moss Block",
   "block.valley.dry_moss_carpet": "Dry Moss Carpet",
   
-  "block.valley.red_seagrass": "Red Seagrass"
+  "block.valley.red_seagrass": "Red Seagrass",
+  "item.valley.fire_pepper": "Fire Pepper",
+  "item.valley.eggplant": "Eggplant"
 }

@@ -15,7 +15,7 @@ import net.minecraft.loot.function.LootingEnchantLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
-public class VCLootTables {
+public class VLootTables {
     public static void initialize() {
         blocks();
         entities();
@@ -59,7 +59,7 @@ public class VCLootTables {
     private static void blocks() {
         LootBuilder builder = LootBuilder.create()
             .rolls(1).with(MiscItems.FIBER)
-            .withCondition(new MatchToolLootCondition(LootUtils.tag(Tags.KNIVES))
+            .withCondition(new MatchToolLootCondition(LootUtils.tag(VItemTags.KNIVES))
         );
 
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
