@@ -16,13 +16,11 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 import static net.linkle.valley.Registry.Initializers.Plants.ROCK_PILE;
+import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.StoneBlocks.*;
 import static net.minecraft.block.Blocks.*;
 
 public class OreConfiguredFeatures {
-
-    public static final String MOD_ID = "valley";
-
     //rock pile ore
     private static ConfiguredFeature<?, ?> ORE_ROCK_OW = Feature.ORE
             .configure(new OreFeatureConfig(
