@@ -8,6 +8,7 @@ import net.linkle.valley.Registry.Blocks.Decorations.Furnaces.Furnaces;
 import net.linkle.valley.Registry.Criterion.VCriteria;
 import net.linkle.valley.Registry.Initializers.*;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.*;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 
 public class ValleyMain implements ModInitializer {
 
@@ -19,6 +20,9 @@ public class ValleyMain implements ModInitializer {
         // This should stay first before items and blocks.
         Object initializer1 = VItemTags.KNIVES; // will force the class to load (any static member will do)
         Object initializer2 = VCriteria.BROKE_BLOCK;
+        
+        // Simple config system.
+        var config = new SimpleConfig(MOD_ID, 1);
 
         //Item Initializers
         FoodAndCooking.initialize();
@@ -43,13 +47,13 @@ public class ValleyMain implements ModInitializer {
         Sounds.initialize();
         Compostables.initialize();
         Entities.initialize();
-
+        
         //Configured Feature Initializers
-        OreConfiguredFeatures.initialize();
-        OverworldPlantConfiguredFeatures.initialize();
-        CaveFeatures.initialize();
-        OceanFeatures.initialize();
-        Trees.ints();
+        OreConfiguredFeatures.initialize(config);
+        OverworldPlantConfiguredFeatures.initialize(config);
+        CaveFeatures.initialize(config);
+        OceanFeatures.initialize(config);
+        Trees.initialize(config);
 
         //Future Updates ;)
         //NetherPlantConfiguredFeatures.initialize();
@@ -58,5 +62,6 @@ public class ValleyMain implements ModInitializer {
 
         //Tells you if this shit actually worked
         System.out.println("The main mod initialization sections loaded fine somehow.");
+        config.flush();
     }
 }

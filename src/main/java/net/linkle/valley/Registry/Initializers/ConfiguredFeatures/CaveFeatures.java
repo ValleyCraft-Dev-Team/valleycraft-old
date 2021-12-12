@@ -6,6 +6,7 @@ import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Initializers.Plants;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.CavePatchConfig;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.CavePatchFeature;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -27,19 +28,23 @@ public class CaveFeatures {
     private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = CAVE_PATCH
             .configure(new CavePatchConfig(Plants.SPIDER_EGG_BLOCK.getDefaultState(), 20, 4, 6));
 
-    public static void initialize() {
+    public static void initialize(SimpleConfig config) {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);
 
+        boolean enableGen = !config.get("disable-features-gen", false);
+        
         var patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "red_pile_patch_cave"));
         var range = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(20))); // 20 is maximum height can spawn.
         var decor = Decorator.RANGE.configure(range).spreadHorizontally().applyChance(4);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), RED_PILE_PATCH_CONFIG.decorate(decor));
+        if (enableGen)
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, patch);
     
         patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "spider_egg_patch_cave"));
         range = new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(5), YOffset.fixed(30)));
         decor = Decorator.RANGE.configure(range).spreadHorizontally().applyChance(5);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), SPIDER_EGG_PATCH_CONFIG.decorate(decor));
+        if (enableGen)
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_DECORATION, patch);
     }
 }

@@ -2,6 +2,7 @@ package net.linkle.valley.Registry.Initializers.ConfiguredFeatures;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
@@ -41,7 +42,7 @@ public class Trees {
 	
 	public static ConfiguredFeature<?, ?> APPLE_TREE = Feature.TREE.configure(APPLE_TREE_CONFIG);
 	
-	public static void ints() {
+	public static void initialize(SimpleConfig config) {
 		RegistryKey<ConfiguredFeature<?, ?>> appleTree = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, "apple_tree"));
 		
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, appleTree.getValue(), Feature.TREE

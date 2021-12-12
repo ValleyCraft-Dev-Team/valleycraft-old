@@ -7,6 +7,7 @@ import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Initializers.Aquatic;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.SeaPatchConfig;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.SeaPatchFeature;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
@@ -28,11 +29,14 @@ public class OceanFeatures {
     private static final ConfiguredFeature<?, ?> RED_SEAGRASS_PATCH_CONFIG = SEA_PATCH
             .configure(new SeaPatchConfig(Aquatic.RED_SEAGRASS.getDefaultState(), UniformIntProvider.create(10, 16), 9));
 
-    public static void initialize() {
+    public static void initialize(SimpleConfig config) {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "sea_patch"), SEA_PATCH);
+        
+        boolean enableGen = !config.get("disable-features-gen", false);
 
         var patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "red_seagrass_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), RED_SEAGRASS_PATCH_CONFIG.decorate(OCEAN_FLOOR).applyChance(3));
+        if (enableGen)
         BiomeModifications.addFeature(BiomeSelectors.categories(Category.RIVER, Category.OCEAN, Category.SWAMP), GenerationStep.Feature.VEGETAL_DECORATION, patch);
     }
 

@@ -1,4 +1,4 @@
-package net.linkle.valley;
+    package net.linkle.valley;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;

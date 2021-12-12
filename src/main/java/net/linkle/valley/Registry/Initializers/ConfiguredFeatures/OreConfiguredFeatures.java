@@ -2,6 +2,7 @@ package net.linkle.valley.Registry.Initializers.ConfiguredFeatures;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -377,30 +378,38 @@ public class OreConfiguredFeatures {
             .spreadHorizontally()
             .repeat(5); // Number of veins per chunk
 
-    public static void initialize() {
+    public static void initialize(SimpleConfig config) {
+        boolean blobsEnable = !config.get("disable-blobs-gen", false);
+        config.script("disable-blobs-gen", 
+            "Disable blobs feature gens like stones, mud, sandstone, and biome-specific blobs, but not ores."
+        );
 
         //jungle ores
         RegistryKey<ConfiguredFeature<?, ?>> scaldingJungle = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_jungle_scalding_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, scaldingJungle.getValue(), SCALDING_JUNGLE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, scaldingJungle);
 
         RegistryKey<ConfiguredFeature<?, ?>> stoneJungle = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_jungle_stone_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, stoneJungle.getValue(), JUNGLE_STONE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, stoneJungle);
 
         RegistryKey<ConfiguredFeature<?, ?>> mossyJungle = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_jungle_mossy_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, mossyJungle.getValue(), JUNGLE_MOSSY_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, mossyJungle);
 
         RegistryKey<ConfiguredFeature<?, ?>> sporeyJungle = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_jungle_sporey_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sporeyJungle.getValue(), JUNGLE_SPOREY_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, sporeyJungle);
 
@@ -408,6 +417,7 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> mossyStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_mossy_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, mossyStone.getValue(), MOSSY_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.SWAMP_HILLS, BiomeKeys.SWAMP, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.TAIGA, BiomeKeys.TAIGA_HILLS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.WOODED_MOUNTAINS, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.PLAINS, BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.TALL_BIRCH_HILLS, BiomeKeys.TALL_BIRCH_FOREST, BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.RIVER, BiomeKeys.MOUNTAINS, BiomeKeys.MOUNTAIN_EDGE),
                 GenerationStep.Feature.UNDERGROUND_ORES, mossyStone);
         //just the one above ^-^
@@ -415,18 +425,21 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> oceanStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_ocean_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oceanStone.getValue(), OCEANSTONE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.COLD_OCEAN),
                 GenerationStep.Feature.UNDERGROUND_ORES, oceanStone);
 
         RegistryKey<ConfiguredFeature<?, ?>> swampStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_swamp_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, swampStone.getValue(), SWAMPSTONE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP, BiomeKeys.SWAMP_HILLS),
                 GenerationStep.Feature.UNDERGROUND_ORES, swampStone);
 
         RegistryKey<ConfiguredFeature<?, ?>> darkStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_dark_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, darkStone.getValue(), DARKSTONE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS),
                 GenerationStep.Feature.UNDERGROUND_ORES, darkStone);
 
@@ -434,30 +447,36 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> sand_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_sand"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sand_ow.getValue(), SAND_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, sand_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> sandstone_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_sandstone"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sandstone_ow.getValue(), SANDSTONE_OW);
+        
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, sandstone_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> gravel_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_desert_gravel"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, gravel_ow.getValue(), DESERT_GRAVEL_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, gravel_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> bleached_gravel_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_bleached_gravel"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, bleached_gravel_ow.getValue(), BLEACHED_GRAVEL_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS, BiomeKeys.GRAVELLY_MOUNTAINS),
                 GenerationStep.Feature.UNDERGROUND_ORES, bleached_gravel_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> scaldingOW_DESERT = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_scalding_overworld_desert"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, scaldingOW_DESERT.getValue(), SCALDING_OW_DESERT);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, scaldingOW_DESERT);
 
@@ -465,12 +484,14 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> redsand_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_redsand"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, redsand_ow.getValue(), REDSAND_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, redsand_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> redsandstone_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_redsandstone"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, redsandstone_ow.getValue(), RED_SANDSTONE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, redsandstone_ow);
 
@@ -485,6 +506,7 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> scaldingOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_scalding_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, scaldingOW.getValue(), SCALDING_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, scaldingOW);
 
@@ -492,30 +514,35 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> oreIceOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_ice_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreIceOW.getValue(), ICE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ICE_SPIKES,BiomeKeys.SNOWY_TAIGA,BiomeKeys.SNOWY_TAIGA_HILLS,BiomeKeys.SNOWY_BEACH,BiomeKeys.SNOWY_TAIGA_MOUNTAINS,BiomeKeys.SNOWY_MOUNTAINS,BiomeKeys.SNOWY_TUNDRA, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, oreIceOW);
 
         RegistryKey<ConfiguredFeature<?, ?>> orePackedIceOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_packed_ice_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePackedIceOW.getValue(), PACKED_ICE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ICE_SPIKES,BiomeKeys.SNOWY_TAIGA,BiomeKeys.SNOWY_TAIGA_HILLS,BiomeKeys.SNOWY_BEACH,BiomeKeys.SNOWY_TAIGA_MOUNTAINS,BiomeKeys.SNOWY_MOUNTAINS,BiomeKeys.SNOWY_TUNDRA, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, orePackedIceOW);
 
         RegistryKey<ConfiguredFeature<?, ?>> oreSnowOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_snow_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSnowOW.getValue(), SNOW_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ICE_SPIKES,BiomeKeys.SNOWY_TAIGA,BiomeKeys.SNOWY_TAIGA_HILLS,BiomeKeys.SNOWY_BEACH,BiomeKeys.SNOWY_TAIGA_MOUNTAINS,BiomeKeys.SNOWY_MOUNTAINS,BiomeKeys.SNOWY_TUNDRA, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, oreSnowOW);
 
         RegistryKey<ConfiguredFeature<?, ?>> oreBLUEICE = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_blue_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreBLUEICE.getValue(), BLUE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ICE_SPIKES,BiomeKeys.SNOWY_TAIGA,BiomeKeys.SNOWY_TAIGA_HILLS,BiomeKeys.SNOWY_BEACH,BiomeKeys.SNOWY_TAIGA_MOUNTAINS,BiomeKeys.SNOWY_MOUNTAINS,BiomeKeys.SNOWY_TUNDRA, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, oreBLUEICE);
 
         RegistryKey<ConfiguredFeature<?, ?>> orePowderSnowOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_powder_snow_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePowderSnowOW.getValue(), POWDER_SNOW_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.ICE_SPIKES,BiomeKeys.SNOWY_TAIGA,BiomeKeys.SNOWY_TAIGA_HILLS,BiomeKeys.SNOWY_BEACH,BiomeKeys.SNOWY_TAIGA_MOUNTAINS,BiomeKeys.SNOWY_MOUNTAINS,BiomeKeys.SNOWY_TUNDRA, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, orePowderSnowOW);
 
@@ -523,6 +550,7 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> oreGlacialOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_glacial_stone_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreGlacialOW.getValue(), GLACIAL_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MOUNTAINS, BiomeKeys.MOUNTAIN_EDGE, BiomeKeys.WOODED_MOUNTAINS, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.SNOWY_TAIGA_MOUNTAINS, BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS, BiomeKeys.ICE_SPIKES),
                 GenerationStep.Feature.UNDERGROUND_ORES, oreGlacialOW);
 
@@ -545,16 +573,19 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> mudOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "mud_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, mudOverworld.getValue(), MUD_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, mudOverworld);
 
         RegistryKey<ConfiguredFeature<?, ?>> volcSandOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "volcanic_sand_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, volcSandOverworld.getValue(), VOLC_SAND_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.JUNGLE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.MODIFIED_JUNGLE), GenerationStep.Feature.UNDERGROUND_ORES, volcSandOverworld);
 
         RegistryKey<ConfiguredFeature<?, ?>> volcStoneOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "volcanic_stone_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, volcStoneOverworld.getValue(), VOLC_ROCK_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.JUNGLE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.MODIFIED_JUNGLE), GenerationStep.Feature.UNDERGROUND_ORES, volcStoneOverworld);
 
         //nether ores
@@ -572,6 +603,7 @@ public class OreConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> oreTaigaOW = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_taiga_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTaigaOW.getValue(), TAIGASTONE_OW);
+        if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA,BiomeKeys.TAIGA_HILLS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.SNOWY_TAIGA_HILLS, BiomeKeys.SNOWY_TAIGA_MOUNTAINS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.SNOWY_TAIGA,BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA),
                 GenerationStep.Feature.UNDERGROUND_ORES, oreTaigaOW);
     }
