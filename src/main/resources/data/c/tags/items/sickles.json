@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+	"valley:wood_sickle",
+	"valley:stone_sickle",
+	"valley:iron_sickle",
+	"valley:golden_sickle",
+	"valley:rg_sickle",
+	"valley:diamond_sickle",
+	"valley:netherite_sickle"
+  ]
+}
