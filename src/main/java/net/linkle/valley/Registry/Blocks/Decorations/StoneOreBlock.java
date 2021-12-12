@@ -9,6 +9,6 @@ public class StoneOreBlock extends OreBlock {
         super(Settings.of(Material.STONE)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3, 3));
+                .strength(2, 3));
     }
 }

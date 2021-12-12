@@ -1,11 +1,13 @@
 package net.linkle.valley.Registry.Initializers;
 
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Loot.LootBuilder;
 import net.linkle.valley.Registry.Loot.LootTableHelper;
 import net.linkle.valley.Registry.Loot.LootUtils;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
+import net.minecraft.item.ShovelItem;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -60,6 +62,14 @@ public class VLootTables {
         LootBuilder builder = LootBuilder.create()
             .rolls(1).with(MiscItems.FIBER)
             .withCondition(new MatchToolLootCondition(LootUtils.tag(VItemTags.KNIVES))
+        );
+
+        LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
+        LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
+
+        builder = LootBuilder.create()
+                .rolls(1).with(FoodAndCooking.WORM)
+                .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS))
         );
 
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);

@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:jungle_cobble"
+          "name": "valley:golden_chain"
         }
       ],
       "conditions": [

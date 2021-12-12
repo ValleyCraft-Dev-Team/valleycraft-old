@@ -2,40 +2,21 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
-      "bonus_rolls": 0,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:item",
-              "name": "valley:onion",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "valley:onion_crop_block",
-                  "properties": {
-                    "age": "7"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "minecraft:item",
-              "name": "valley:onion_seeds"
-            }
-          ]
+          "type": "minecraft:item",
+          "name": "valley:snow_yam_item"
         }
       ]
     },
     {
-      "rolls": 1,
-      "bonus_rolls": 0,
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:onion_seeds",
           "functions": [
             {
               "function": "minecraft:apply_bonus",
@@ -46,13 +27,14 @@
                 "probability": 0.5714286
               }
             }
-          ]
+          ],
+          "name": "valley:snow_yam_item"
         }
       ],
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "valley:onion_crop_block",
+          "block": "valley:snow_yam_crop_block",
           "properties": {
             "age": "7"
           }

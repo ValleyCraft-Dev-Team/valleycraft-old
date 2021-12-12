@@ -9,6 +9,6 @@ public class StoneBlock extends Block {
         super(Settings.of(Material.STONE)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
-                .strength(1.5f, 5.0f));
+                .strength(1.5f, 2.0f));
     }
 }

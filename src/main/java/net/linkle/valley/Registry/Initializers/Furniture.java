@@ -133,15 +133,15 @@ public class Furniture {
     public static final Block CHAIN_C = new ClimbableChainBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.CHAIN)
-            .strength(1,1.1f));
+            .strength(1.5f,1.1f));
     public static final Block CHAIN_G = new ClimbableChainBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.CHAIN)
-            .strength(1,1.1f));
+            .strength(1.5f,1.1f));
     public static final Block CHAIN_N = new ClimbableChainBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.CHAIN)
-            .strength(1,1.1f));
+            .strength(1.5f,1.1f));
 
     //lantern
 
