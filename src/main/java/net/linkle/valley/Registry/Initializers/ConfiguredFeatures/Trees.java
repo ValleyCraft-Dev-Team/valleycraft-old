@@ -45,12 +45,15 @@ public class Trees {
 	public static void initialize(SimpleConfig config) {
 		RegistryKey<ConfiguredFeature<?, ?>> appleTree = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, "apple_tree"));
 		
+		boolean enableGen = !config.get("disable-features-gen", false);
+		
 		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, appleTree.getValue(), Feature.TREE
 		.configure(APPLE_TREE_CONFIG)
 		.decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
 		.spreadHorizontally()
 		.applyChance(2));
 		
+		if (enableGen)
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, appleTree);
 	}
 }
