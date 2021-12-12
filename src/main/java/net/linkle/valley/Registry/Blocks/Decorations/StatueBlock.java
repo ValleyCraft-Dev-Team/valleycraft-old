@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -20,7 +19,6 @@ public class StatueBlock extends HorizontalWithWaterBlock {
 
     public StatueBlock(boolean isGlowing) {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByTool(FabricToolTags.AXES)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque()
                 .strength(1f, 2f).luminance(isGlowing ? 13 : 0));

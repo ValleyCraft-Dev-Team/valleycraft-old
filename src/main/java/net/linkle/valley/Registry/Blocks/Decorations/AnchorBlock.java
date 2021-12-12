@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Commons.DirectionBlockWithWater;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,7 +22,6 @@ public class AnchorBlock extends DirectionBlockWithWater {
 
     public AnchorBlock() {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByTool(FabricToolTags.PICKAXES)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.CHAIN).nonOpaque()
                 .strength(2f, 2f));

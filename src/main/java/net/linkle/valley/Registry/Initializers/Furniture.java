@@ -95,7 +95,7 @@ public class Furniture {
     public static final Block NET = new NetBlock();
     public static final Block B_BRICKS = new BrownBlock();
     public static final Block B_CRACKED = new BrownBlock();
-    public static final Block B_MOSSY = new BrownMossyBlock();
+    public static final Block B_MOSSY = new BrownBlock();
     public static final Block B_STAIRS = new BrownStairsBlock();
     public static final Block B_SLAB = new BrownSlabBlock();
     public static final Block SCREEN = new ScreenBlock();
@@ -115,10 +115,9 @@ public class Furniture {
     public static final Block ANCHOR = new AnchorBlock();
 
     public static final Block CHARCOAL_BLOCK = new Block(FabricBlockSettings.of(Material.STONE)
-            .breakByTool(FabricToolTags.PICKAXES)
-            .breakByHand(false)
+            .requiresTool()
             .sounds(BlockSoundGroup.STONE)
-            .strength(1, 2.0f));
+            .strength(1.5f, 2.0f));
 
     public static final Block FIBER_BALE = new BaleBlock();
     public static final Block AMERANTH_BALE = new BaleBlock();
@@ -171,7 +170,6 @@ public class Furniture {
     public static final Block GOBLET_BLOCK = new DishBlock();
 
     public static final Block SPIKE_WALL_BLOCK = new SpikeTrapBlock(FabricBlockSettings.of(Material.WOOD)
-            .breakByTool(FabricToolTags.AXES)
             .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
             .strength(1.5f, 1.5f));
@@ -179,7 +177,7 @@ public class Furniture {
     public static final Block ROUNDED_BARREL = new RoundedBarrelBlock();
     public static final Block SOUL_JACK = new JackBlock();
     public static final Block COPPER_JACK = new JackBlock();
-    public static final Block VOLCANIC_STONE_SMOOTH = new StoneOreBlock();
+    public static final Block VOLCANIC_STONE_SMOOTH = new StoneBlock();
 
     public static final Block LANTERN_HANGING = new LanternBlock(15, false);
     public static final Block SOUL_HANGING = new LanternBlock(10, false);
@@ -187,10 +185,9 @@ public class Furniture {
     public static final Block RED_HANGING = new LanternBlock(7, true);
 
     public static final Block CHIMNEY_COBBLE = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
-            .breakByTool(FabricToolTags.PICKAXES)
-            .breakByHand(false)
+            .requiresTool()
             .sounds(BlockSoundGroup.STONE)
-            .strength(1, 2.0f));
+            .strength(1.5f, 2.0f));
 
     public static final Block HANGING = new HangingBlock();
     public static final Block CRYSTAL = new CrystalBlock();
