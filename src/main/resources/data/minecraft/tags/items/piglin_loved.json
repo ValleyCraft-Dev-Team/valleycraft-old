@@ -4,6 +4,9 @@
     "valley:golden_sickle", "valley:golden_knife", "valley:golden_hatchet","valley:glistering_honeycomb",
     "valley:glistering_bitter_berries","valley:glistering_sweet_berries","valley:glistering_spicy_berries",
     "valley:glistering_kelp","valley:glistering_tomato","valley:glistering_onion","valley:glistering_potato",
-    "valley:glistering_beet","valley:glistering_juice"
+    "valley:glistering_beet","valley:glistering_juice","valley:glistering_green_bean",
+    "valley:glistering_mandrake","valley:glistering_corn","valley:glistering_snow_yam",
+    "valley:glistering_pepper","valley:glistering_eggplant","valley:glistering_glow_berries",
+    "valley:goblet","valley:golden_chain"
   ]
 }

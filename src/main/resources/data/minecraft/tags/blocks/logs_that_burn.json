@@ -3,6 +3,7 @@
   "values": [
     "valley:charcoal_block", "valley:rope_bridge_anchor", "valley:rope_bridge",
     "valley:climbable_rope", "valley:bush", "valley:rose_bush",
-    "valley:lilac_bush", "valley:peony_bush", "valley:mossy_vines"
+    "valley:lilac_bush", "valley:peony_bush", "valley:mossy_vines",
+    "valley:dry_vines","valley:dry_moss_carpet","valley:dry_moss","valley:log_pile"
   ]
 }

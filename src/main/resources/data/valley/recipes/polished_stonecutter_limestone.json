@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:limestone"
+  },
+  "result": "valley:limestone_smooth",
+  "count": 1
+}

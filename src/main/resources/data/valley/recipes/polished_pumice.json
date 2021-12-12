@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:pumice"
+    }
+  },
+  "result": {
+    "item": "valley:pumice_smooth",
+    "count": 4
+  }
+}

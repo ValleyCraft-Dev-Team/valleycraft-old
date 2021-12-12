@@ -2,7 +2,7 @@
 	"parent": "valley:exploration/commis",
 	"display": {
 		"title": {
-			"text": "I Got Yer Four Basic Food Groups"
+			"text": "'Yer Four Basic Food Groups'"
 		},
 		"icon": {
 			"item": "valley:grub"

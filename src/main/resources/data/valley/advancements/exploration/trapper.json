@@ -1,24 +1,24 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/explorer",
 	"display": {
 		"title": {
-			"text": "Heart of the Woods"
+			"text": "Trapper"
 		},
 		"icon": {
-			"item": "valley:null_totem"
+			"item": "valley:spike_wall_block"
 		},
 		"description": {
-			"text": "Make an Effigy"
+			"text": "Craft a Spike Trap"
 		}
 	},
 	"criteria": {
-		"null_totem": {
+		"trap": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:null_totem"
+							"valley:spike_wall_block"
 						]
 					}
 				]
@@ -27,7 +27,7 @@
 	},
 	"requirements": [
 		[
-			"null_totem"
+			"trap"
 		]
 	]
 }

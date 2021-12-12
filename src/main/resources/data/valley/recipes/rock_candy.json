@@ -1,28 +1,21 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "tag": "c:light_blue_dyes"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:stick"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ##",
+    "#L#",
+    "/# "
   ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "L": {
+      "item": "minecraft:light_blue_dye"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
   "result": {
     "item": "valley:rock_candy",
     "count": 1
