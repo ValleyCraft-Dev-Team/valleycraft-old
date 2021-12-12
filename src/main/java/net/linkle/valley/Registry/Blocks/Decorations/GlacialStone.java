@@ -8,9 +8,9 @@ import net.minecraft.sound.BlockSoundGroup;
 public class GlacialStone extends SoulSandBlock {
     public GlacialStone() {
         super(FabricBlockSettings.of(Material.STONE)
-                .breakByTool(FabricToolTags.PICKAXES, 1)
+                .requiresTool().breakByTool(FabricToolTags.PICKAXES, 1)
                 .breakByHand(true).ticksRandomly()
                 .sounds(BlockSoundGroup.DRIPSTONE_BLOCK)
-                .strength(1f, 2.5f));
+                .strength(1.5f, 5f));
     }
 }

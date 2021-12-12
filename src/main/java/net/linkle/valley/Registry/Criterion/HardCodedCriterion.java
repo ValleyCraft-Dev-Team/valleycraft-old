@@ -1,5 +1,6 @@
 package net.linkle.valley.Registry.Criterion;
 
+import com.google.common.base.Predicates;
 import com.google.gson.JsonObject;
 
 import net.linkle.valley.ValleyMain;
@@ -29,7 +30,7 @@ public class HardCodedCriterion extends AbstractCriterion<HardCodedCriterion.Con
     }
 
     public void trigger(ServerPlayerEntity player) {
-        trigger(player, c -> true);
+        trigger(player, Predicates.alwaysTrue());
     }
 
     @Override

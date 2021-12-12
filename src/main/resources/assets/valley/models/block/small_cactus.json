@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"1": "valley:blocks/cactus_small_arm",
-		"particle": "valley:blocks/cactus_small_arm"
+		"particle": "minecraft:block/cactus_side"
 	},
 	"elements": [
 		{

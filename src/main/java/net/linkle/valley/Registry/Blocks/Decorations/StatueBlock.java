@@ -1,6 +1,7 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Commons.HorizontalWithWaterBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,6 +11,7 @@ import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
@@ -18,6 +20,7 @@ public class StatueBlock extends HorizontalWithWaterBlock {
 
     public StatueBlock(boolean isGlowing) {
         super(FabricBlockSettings.of(Material.WOOD)
+                .breakByTool(FabricToolTags.AXES)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque()
                 .strength(1f, 2f).luminance(isGlowing ? 13 : 0));
@@ -30,9 +33,8 @@ public class StatueBlock extends HorizontalWithWaterBlock {
     }
     
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        var state = super.getPlacementState(ctx);
-        return state.with(FACING, state.get(FACING).getOpposite());
+    protected Direction getFacing(ItemPlacementContext ctx) {
+        return super.getFacing(ctx).getOpposite();
     }
 
     @Override

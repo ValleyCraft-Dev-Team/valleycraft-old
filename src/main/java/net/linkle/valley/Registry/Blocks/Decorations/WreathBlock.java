@@ -21,10 +21,10 @@ public class WreathBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape NORTH_SHAPE;
 
     public WreathBlock() {
-        super(FabricBlockSettings.of(Material.LEAVES)
+        super(FabricBlockSettings.of(Material.DECORATION)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
-                .strength(0.5f, 0.5f));
+                .strength(0.2f, 0.5f));
         setDefaultState();
     }
 
@@ -55,10 +55,10 @@ public class WreathBlock extends HorizontalWithWaterBlock {
     }
 
     static {
-        WEST_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 2.0D, 1.0D, 12.0D, 14.0D);
-        EAST_SHAPE = Block.createCuboidShape(15.0D, 0.0D, 2.0D, 16.0D, 12.0D, 15.0D);
-        NORTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
-        SOUTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 15.0D, 14.0D, 12.0D, 16.0D);
+        WEST_SHAPE = Block.createCuboidShape(0, 0, 2, 1, 12, 14);
+        EAST_SHAPE = Block.createCuboidShape(15, 0, 2, 16, 12, 14);
+        NORTH_SHAPE = Block.createCuboidShape(2, 0, 0, 14, 12, 1);
+        SOUTH_SHAPE = Block.createCuboidShape(2, 0, 15, 14, 12, 16);
     }
 }
 

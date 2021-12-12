@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.ValleyMain;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.BerryBushBlock;
 import net.linkle.valley.Registry.Initializers.ConfiguredFeatures.Gen.ReedPatchFeature;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -148,7 +149,12 @@ public class OverworldPlantConfiguredFeatures {
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SWAMP_BUSH
                     .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(7).build());
 
-    public static void initialize() {
+    public static void initialize(SimpleConfig config) {
+        config.script("disable-features-gen", "Disable world gen features like plants, flowers, crops, and rocks.");
+        if (config.get("disable-features-gen", false)) {
+            return;
+        }
+        
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
         
         //wild patches

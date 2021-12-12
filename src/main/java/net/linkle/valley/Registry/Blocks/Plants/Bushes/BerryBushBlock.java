@@ -36,6 +36,11 @@ public class BerryBushBlock extends SweetBerryBushBlock {
     }
     
     @Override
+    public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
+        return new ItemStack(this);
+    }
+    
+    @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (damageEntity) {
             super.onEntityCollision(state, world, pos, entity);
