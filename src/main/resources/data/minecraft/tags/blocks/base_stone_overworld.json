@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "valley:scalding_sandstone",
+    "valley:scalding_stone",
+    "valley:glacial_stone",
+    "valley:volc_stone",
+    "valley:oceanstone",
+    "valley:swampstone",
+    "valley:darkstone",
+    "valley:scalding_volc_stone",
+    "valley:jungle_stone",
+    "valley:jungle_sporey",
+    "valley:stone_mossy",
+    "valley:taigastone"
+  ]
+}

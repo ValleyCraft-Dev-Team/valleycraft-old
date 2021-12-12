@@ -15,24 +15,11 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
-import static net.linkle.valley.Registry.Initializers.Plants.ROCK_PILE;
 import static net.linkle.valley.ValleyMain.MOD_ID;
 import static net.linkle.valley.Registry.Initializers.StoneBlocks.*;
 import static net.minecraft.block.Blocks.*;
 
 public class OreConfiguredFeatures {
-    //rock pile ore
-    private static ConfiguredFeature<?, ?> ORE_ROCK_OW = Feature.ORE
-            .configure(new OreFeatureConfig(
-                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
-                    ROCK_PILE.getDefaultState(),
-                    3)) // Vein size
-            .range(new RangeDecoratorConfig(
-                    // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64)))) // Inclusive min and max height
-            .spreadHorizontally()
-            .repeat(33); // Number of veins per chunk
-
     //overworld ores
     private static ConfiguredFeature<?, ?> ORE_SALT_OW = Feature.ORE
             .configure(new OreFeatureConfig(
@@ -41,7 +28,7 @@ public class OreConfiguredFeatures {
                     6)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(64)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -52,7 +39,7 @@ public class OreConfiguredFeatures {
                     6)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(32)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(32)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -63,7 +50,7 @@ public class OreConfiguredFeatures {
                     6)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(32)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(32)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(6); // Number of veins per chunk
 
@@ -74,7 +61,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -85,7 +72,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -97,7 +84,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -109,7 +96,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -120,7 +107,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -131,7 +118,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -142,7 +129,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -153,7 +140,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -164,7 +151,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -175,7 +162,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(64)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -186,7 +173,7 @@ public class OreConfiguredFeatures {
                     20)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(32)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(32)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -198,7 +185,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -209,7 +196,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -220,7 +207,7 @@ public class OreConfiguredFeatures {
                     16)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -231,7 +218,7 @@ public class OreConfiguredFeatures {
                     16)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(5); // Number of veins per chunk
 
@@ -242,7 +229,7 @@ public class OreConfiguredFeatures {
                     5)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(48)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(48)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(5); // Number of veins per chunk
 
@@ -253,7 +240,7 @@ public class OreConfiguredFeatures {
                     20)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -265,7 +252,7 @@ public class OreConfiguredFeatures {
                     12)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -276,7 +263,7 @@ public class OreConfiguredFeatures {
                     12)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -287,7 +274,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -298,7 +285,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
@@ -309,7 +296,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -320,7 +307,7 @@ public class OreConfiguredFeatures {
                     20)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(64)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
 
@@ -331,7 +318,7 @@ public class OreConfiguredFeatures {
                     20)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -342,7 +329,7 @@ public class OreConfiguredFeatures {
                     20)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -353,7 +340,7 @@ public class OreConfiguredFeatures {
                     5)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -364,7 +351,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -375,7 +362,7 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(15); // Number of veins per chunk
 
@@ -386,7 +373,7 @@ public class OreConfiguredFeatures {
                     3)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(5); // Number of veins per chunk
 
