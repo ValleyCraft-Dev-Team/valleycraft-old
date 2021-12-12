@@ -94,19 +94,19 @@ public class Plants {
     
     public static final Block ROCK_PILE = new RockBlock();
     public static final Block RED_PILE = new CrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
-            .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
+            .requiresTool().breakByTool(FabricToolTags.PICKAXES, 1)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(1.0f,2.0f).luminance(7), true);
+            .strength(1.5f,2.0f).luminance(7), true);
 
     public static final Block BLUE_PILE = new CrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
-            .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
+            .requiresTool().breakByTool(FabricToolTags.PICKAXES, 1)
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(1.0f,2.0f).luminance(13), false);
+            .strength(1.5f,2.0f).luminance(13), false);
 
     public static final Block COIN_STACK = new CrystalBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
-            .breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
+            .requiresTool().breakByTool(FabricToolTags.PICKAXES, 1)
             .sounds(BlockSoundGroup.CHAIN).breakInstantly()
-            .strength(1.0f,2.0f), false);
+            .strength(1.5f,2.0f), false);
 
     //public static final Block GREEN_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             //.breakByHand(false).breakByTool(FabricToolTags.PICKAXES)

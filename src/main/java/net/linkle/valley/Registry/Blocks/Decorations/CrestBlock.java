@@ -21,10 +21,10 @@ public class CrestBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape NORTH_SHAPE;
 
     public CrestBlock() {
-        super(FabricBlockSettings.of(Material.WOOD)
+        super(FabricBlockSettings.of(Material.DECORATION)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
-                .strength(1.0f, 0.5f));
+                .strength(0.5f, 0.5f));
         setDefaultState();
     }
 
@@ -55,10 +55,10 @@ public class CrestBlock extends HorizontalWithWaterBlock {
     }
 
     static {
-        WEST_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 2.0D, 1.0D, 12.0D, 14.0D);
-        EAST_SHAPE = Block.createCuboidShape(15.0D, 0.0D, 2.0D, 16.0D, 12.0D, 15.0D);
-        NORTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 0.0D, 14.0D, 12.0D, 1.0D);
-        SOUTH_SHAPE = Block.createCuboidShape(2.0D, 0.0D, 15.0D, 14.0D, 12.0D, 16.0D);
+        WEST_SHAPE = Block.createCuboidShape(0, 0, 0, 1, 13, 16);
+        EAST_SHAPE = Block.createCuboidShape(15, 0, 0, 16, 13, 16);
+        NORTH_SHAPE = Block.createCuboidShape(0, 0, 0, 16, 13, 1);
+        SOUTH_SHAPE = Block.createCuboidShape(0, 0.0D, 15, 16, 13, 16);
     }
 }
 

@@ -91,7 +91,7 @@ public abstract class CropBlock extends PlantBlock implements Fertilizable {
     
     protected final void growTick(ServerWorld world, BlockState state, BlockPos pos, int chance) {
         int age = state.get(ageProp);
-        if (age < 6 && world.random.nextInt(chance) == 0 && world.getBaseLightLevel(pos, 0) >= 8) {
+        if (age < getMaxAge() && world.random.nextInt(chance) == 0 && world.getBaseLightLevel(pos, 0) >= 8) {
             world.setBlockState(pos, state.with(ageProp, age + 1), 2);
         }
     }

@@ -5,13 +5,9 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Blocks.Decorations.*;
 import net.linkle.valley.Registry.Blocks.Plants.Hanging.HangingBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Hanging.HangingCrystalAltBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Hanging.HangingCrystalBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Hanging.HangingRedstoneCrystalBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Stumps.BrownStumpBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Stumps.MorelStumpBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Stumps.RedStumpBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Stumps.StumpBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -124,23 +120,9 @@ public class Furniture {
             .sounds(BlockSoundGroup.STONE)
             .strength(1, 2.0f));
 
-    public static final Block FIBER_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
-            .breakByTool(FabricToolTags.HOES)
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(1, 1.0f));
-
-    public static final Block AMERANTH_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
-            .breakByTool(FabricToolTags.HOES)
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(1, 1.0f));
-
-    public static final Block SEAWEED_BALE = new BaleBlock(FabricBlockSettings.of(Material.STONE)
-            .breakByTool(FabricToolTags.HOES)
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(1, 1.0f));
+    public static final Block FIBER_BALE = new BaleBlock();
+    public static final Block AMERANTH_BALE = new BaleBlock();
+    public static final Block SEAWEED_BALE = new BaleBlock();
 
     //rope
     public static final Block CLIMBABLE_ROPE = new ClimbableRopeBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
@@ -225,9 +207,9 @@ public class Furniture {
     public static final Block ANTHRO_SHELF = new BookshelfBlock();
     public static final Block ANTHRO_COBWEB  = new BookshelfBlock();
 
-    public static final Block STUMP_MOREL  = new MorelStumpBlock();
-    public static final Block STUMP_RED  = new RedStumpBlock();
-    public static final Block STUMP_BROWN  = new BrownStumpBlock();
+    public static final Block STUMP_MOREL  = new StumpBlock(Plants.MOREL.getDefaultState());
+    public static final Block STUMP_RED  = new StumpBlock(Blocks.RED_MUSHROOM.getDefaultState());
+    public static final Block STUMP_BROWN  = new StumpBlock(Blocks.BROWN_MUSHROOM.getDefaultState());
 
     public static final Block KEG = new KegBlock();
 
