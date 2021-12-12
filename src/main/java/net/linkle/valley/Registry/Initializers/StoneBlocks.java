@@ -33,7 +33,7 @@ public class StoneBlocks {
     public static final Block NETHER_COAL_ORE = new StoneOreBlock();
     public static final Block B_CLAY = new MudBlock();
 
-    public static final Block JUNGLE = new StoneOreBlock();
+    public static final Block JUNGLE = new StoneBlock();
     public static final Block JUNGLE_MOSSY = new MossBlock();
     public static final Block JUNGLE_SPOREY = new SporeBlock();
     public static final Block JUNGLE_COBBLE = new StoneOreBlock();

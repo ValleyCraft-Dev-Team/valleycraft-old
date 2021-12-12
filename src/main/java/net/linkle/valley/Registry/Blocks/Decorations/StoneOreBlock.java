@@ -12,6 +12,6 @@ public class StoneOreBlock extends OreBlock {
                 .requiresTool()
                 .breakByTool(FabricToolTags.PICKAXES, 1)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3, 3));
+                .strength(2, 3));
     }
 }

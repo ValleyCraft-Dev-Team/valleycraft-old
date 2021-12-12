@@ -8,5 +8,7 @@
     "valley:goblet","valley:brazier","valley:brazier_soul","valley:screen","valley:redstone_lantern","valley:glacial_stone",
     "valley:lantern_hanging","valley:soul_hanging","valley:redstone_hanging","valley:beveled_glass", "valley:hanging_pot",
     "valley:saltpeter_ore","valley:iron_ladder", "valley:darkstone", "valley:oceanstone", "valley:taigastone", "valley:swampstone", "valley:scalding_volc_stone", "valley:scalding_stone", "valley:scalding_sandstone", "valley:jungle_stone", "valley:jungle_cobble", "valley:jungle_mossy", "valley:stone_mossy"
+    ,"valley:dry_stone_mossy", "valley:green_granite", "valley:pumice", "valley:jasper", "valley:limestone"
+    ,
   ]
 }

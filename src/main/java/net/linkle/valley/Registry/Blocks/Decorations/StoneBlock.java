@@ -12,6 +12,6 @@ public class StoneBlock extends Block {
                 .requiresTool()
                 .breakByTool(FabricToolTags.PICKAXES, 1)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(1.5f, 5.0f));
+                .strength(1.5f, 2.0f));
     }
 }
