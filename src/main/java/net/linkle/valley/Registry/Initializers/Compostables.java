@@ -25,6 +25,12 @@ public class Compostables {
         registerItem(Plants.APPLE_LEAVES, levelLow);
         registerItem(Plants.APPLE_LEAVES_EMPTY, levelLow);
         registerItem(Plants.SMALL_CACTUS, levelLow);
+        registerItem(Plants.FLOWERING_CACTUS, levelLow);
+        registerItem(Plants.HERBS, levelLow);
+        registerItem(Plants.TAPROOTS, levelLow);
+        registerItem(Plants.DRY_MOSS_CARPET, levelLow);
+        registerItem(Plants.HONEY_CLUSTER, levelLow);
+        registerItem(Plants.PANFLOWER, levelLow);
         registerItem(Crops.PUFF_SEEDS, levelLow);
         registerItem(Crops.ONION_SEEDS, levelLow);
         registerItem(Crops.EGGPLANT_SEEDS, levelLow);
@@ -40,6 +46,7 @@ public class Compostables {
         registerItem(Plants.DRY_VINES, levelLow);
         registerItem(Items.STICK, levelLow);
 
+        registerItem(Plants.DRY_MOSS, levelMed);
         registerItem(Plants.MOREL, levelMed);
         registerItem(Plants.BUSH, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);

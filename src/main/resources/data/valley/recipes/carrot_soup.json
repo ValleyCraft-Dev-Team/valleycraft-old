@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "c:salt"
+    }
+  ],
+  "result": {
+    "item": "valley:carrot_stew",
+    "count": 1
+  }
+}

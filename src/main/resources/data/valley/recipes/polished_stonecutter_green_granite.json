@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:green_granite"
+  },
+  "result": "valley:green_granite_smooth",
+  "count": 1
+}

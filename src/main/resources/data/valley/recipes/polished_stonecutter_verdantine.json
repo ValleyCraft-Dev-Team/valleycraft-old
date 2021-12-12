@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:taigastone"
+  },
+  "result": "valley:verdantine_smooth",
+  "count": 1
+}

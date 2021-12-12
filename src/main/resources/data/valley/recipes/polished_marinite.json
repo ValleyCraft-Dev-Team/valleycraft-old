@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:oceanstone"
+    }
+  },
+  "result": {
+    "item": "valley:marinite_smooth",
+    "count": 4
+  }
+}

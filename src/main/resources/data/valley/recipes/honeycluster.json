@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:honey_cluster"
+    }
+  ],
+  "result": {
+    "item": "minecraft:yellow_dye"
+  }
+}

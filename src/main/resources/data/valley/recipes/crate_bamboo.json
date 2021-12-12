@@ -3,12 +3,9 @@
   "pattern": [
     "&&&",
     "&&&",
-    "###"
+    "&&&"
   ],
   "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
     "&": {
       "item": "minecraft:bamboo"
     }

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:darkstone"
+  },
+  "result": "valley:diabase_smooth",
+  "count": 1
+}

@@ -376,11 +376,16 @@
   "item.valley.glistering_mandrake": "Golden Mandrake",
   "item.valley.vege_stir_fry": "Mixed Vegetable Stir Fry",
   "item.valley.eggplant_stir_fry": "Eggplant Stir Fry",
-  "item.valley.fruit_bowl": "Fruit Bowl",
+  "item.valley.fruit_bowl": "Mixed Fruit Bowl",
+  "item.valley.vege_bowl": "Mixed Vegetable Bowl",
+  "item.valley.eggplant_juic": "Eggplant Juice",
 
   "block.valley.stone_tiles": "Stone Tiles",
   "block.valley.stone_tile_stairs": "Stone Tile Stairs",
   "block.valley.stone_tile_slab": "Stone Tile Slab",
+
+  "block.valley.panflower": "Panflowers",
+  "block.valley.honey_cluster": "Honeycluster",
 
   "block.valley.cobblestone_brick": "Cobblestone Bricks",
   "block.valley.cobblestone_mossy_brick": "Mossy Cobblestone Bricks",
@@ -614,6 +619,17 @@
   "block.valley.dry_moss_carpet": "Dry Moss Carpet",
   
   "block.valley.red_seagrass": "Red Seagrass",
-  "item.valley.fire_pepper": "Fire Pepper",
-  "item.valley.eggplant": "Eggplant"
+  "item.valley.fire_pepper": "Prairie Fire Pepper",
+  "item.valley.eggplant": "Eggplant",
+
+  "block.valley.darkstone": "Diabase",
+  "block.valley.green_granite": "Green Granite",
+  "block.valley.diabase_smooth": "Polished Diabase",
+  "block.valley.grimestone_smooth": "Smooth Grimestone",
+  "block.valley.marinite_smooth": "Polished Marinite",
+  "block.valley.verdantine_smooth": "Polished Verdantine",
+  "block.valley.green_granite_smooth": "Polished Green Granite",
+  "block.valley.pumice_smooth": "Polished Pumice",
+  "block.valley.jasper_smooth": "Polished Jasper",
+  "block.valley.limestone_smooth": "Polished Limestone"
 }
