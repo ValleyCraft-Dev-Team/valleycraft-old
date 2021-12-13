@@ -62,9 +62,20 @@ public class OreConfiguredFeatures {
                     33)) // Vein size
             .range(new RangeDecoratorConfig(
                     // You can also use one of the other height providers if you don't want a uniform distribution
-                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(64)))) // Inclusive min and max height
             .spreadHorizontally()
             .repeat(10); // Number of veins per chunk
+
+    private static ConfiguredFeature<?, ?> MUD_JUNGLES_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    B_CLAY.getDefaultState(),
+                    33)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(128)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(3); // Number of veins per chunk
 
     private static ConfiguredFeature<?, ?> VOLC_SAND_OW = Feature.ORE
             .configure(new OreFeatureConfig(
@@ -460,6 +471,13 @@ public class OreConfiguredFeatures {
         if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_ORES, mossyJungle);
+
+        RegistryKey<ConfiguredFeature<?, ?>> mudJungle = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_mud_jungle_overworld"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, mudJungle.getValue(), MUD_JUNGLES_OW);
+        if (blobsEnable)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE_EDGE,BiomeKeys.JUNGLE_HILLS, BiomeKeys.JUNGLE, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE),
+                    GenerationStep.Feature.UNDERGROUND_ORES, mudJungle);
 
         RegistryKey<ConfiguredFeature<?, ?>> sporeyJungle = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_jungle_sporey_overworld"));
