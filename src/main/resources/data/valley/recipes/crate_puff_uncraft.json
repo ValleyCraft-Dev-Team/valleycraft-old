@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:crate_puff"
+    }
+  ],
+  "result": {
+    "item": "valley:puff_ball",
+    "count": 6
+  }
+}
