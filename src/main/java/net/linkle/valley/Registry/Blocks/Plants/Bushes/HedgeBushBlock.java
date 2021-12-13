@@ -13,6 +13,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
+import static net.linkle.valley.Registry.Initializers.Plants.HEDGE;
+import static net.linkle.valley.Registry.Initializers.StoneBlocks.B_CLAY;
+
 public class HedgeBushBlock extends PlantBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 1.0D, 1.0D, 15.0D, 15.0D, 15.0D);
 
@@ -61,8 +64,9 @@ public class HedgeBushBlock extends PlantBlock {
         return  floor.isIn(BlockTags.DIRT) ||
                 floor.isIn(BlockTags.SAND) ||
                 block == Blocks.GRAVEL ||
-                block == Blocks.NETHERRACK ||
-                block == Blocks.SOUL_SAND ||
-                block == Blocks.SOUL_SOIL;
+                block == Blocks.GRASS_BLOCK ||
+                block == B_CLAY ||
+                block == HEDGE ||
+                block == Blocks.CLAY;
     }
 }

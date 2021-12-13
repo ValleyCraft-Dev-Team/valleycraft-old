@@ -35,9 +35,9 @@ public class OceanFeatures {
         boolean enableGen = !config.get("disable-features-gen", false);
 
         var patch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(ValleyMain.MOD_ID, "red_seagrass_patch"));
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), RED_SEAGRASS_PATCH_CONFIG.decorate(OCEAN_FLOOR).applyChance(3));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, patch.getValue(), RED_SEAGRASS_PATCH_CONFIG.decorate(OCEAN_FLOOR).applyChance(1));
         if (enableGen)
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.RIVER, Category.OCEAN, Category.SWAMP), GenerationStep.Feature.VEGETAL_DECORATION, patch);
+        BiomeModifications.addFeature(BiomeSelectors.categories(Category.RIVER, Category.OCEAN, Category.SWAMP, Category.BEACH, Category.UNDERGROUND), GenerationStep.Feature.VEGETAL_DECORATION, patch);
     }
 
     private static boolean oceanOnly(BiomeSelectionContext context) {
