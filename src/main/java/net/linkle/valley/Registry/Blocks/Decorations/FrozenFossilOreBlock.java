@@ -11,7 +11,7 @@ public class FrozenFossilOreBlock extends OreBlock {
     public FrozenFossilOreBlock() {
         super(FabricBlockSettings.of(Material.DENSE_ICE)
                 .requiresTool()
-                .breakByTool(FabricToolTags.PICKAXES, 1)
+                .breakByTool(FabricToolTags.PICKAXES)
                 .sounds(BlockSoundGroup.GLASS).nonOpaque()
                 .strength(1, 1f));
     }

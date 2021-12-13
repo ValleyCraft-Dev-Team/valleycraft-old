@@ -17,7 +17,6 @@ import net.minecraft.util.registry.Registry;
 public class Furnaces {
 	public static final Block BRICK_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
 	        .requiresTool()
-			.breakByTool(FabricToolTags.PICKAXES, 1)
 			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS).luminance(7)
 			.strength(1.5f, 2f));
 	

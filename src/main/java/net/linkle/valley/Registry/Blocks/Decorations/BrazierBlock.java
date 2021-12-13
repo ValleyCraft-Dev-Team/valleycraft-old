@@ -3,7 +3,6 @@ package net.linkle.valley.Registry.Blocks.Decorations;
 import java.util.Random;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Commons.BlockWithWater;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -29,7 +28,7 @@ public class BrazierBlock extends BlockWithWater {
 
     public BrazierBlock(int luminance, float fireDamage) {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true).breakByTool(FabricToolTags.AXES)
+                .breakByHand(true)
                 .sounds(BlockSoundGroup.STONE)
                 .luminance(state -> state.get(WATERLOGGED) ? 0 : luminance)
                 .strength(1.0f, 1.0f));

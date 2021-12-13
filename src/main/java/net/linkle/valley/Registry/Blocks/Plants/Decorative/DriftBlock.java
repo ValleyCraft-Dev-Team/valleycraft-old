@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Plants.Decorative;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
@@ -17,7 +16,6 @@ public class DriftBlock extends PlantBlock {
 
     public DriftBlock() {
         super(FabricBlockSettings.of(Material.LEAVES)
-                .breakByTool(FabricToolTags.AXES)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0, 0.5f));

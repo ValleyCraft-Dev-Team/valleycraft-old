@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Plants.Stumps;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
@@ -14,8 +13,8 @@ public class StumpBlock extends Block {
 
     public StumpBlock(BlockState mushroom) {
         super(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)
-                .breakByTool(FabricToolTags.AXES)
-                .breakByHand(true).ticksRandomly()
+                .breakByHand(true)
+                .ticksRandomly()
                 .nonOpaque());
         this.mushroom = mushroom;
     }

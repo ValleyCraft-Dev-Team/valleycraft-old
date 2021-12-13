@@ -16,6 +16,11 @@ public class Armors {
     //public static final Item TRADER_LEGGINGS = new ArmorItem(TraderArmorMaterial.INSTANCE, EquipmentSlot.LEGS, settings);
     //public static final Item TRADER_BOOTS = new ArmorItem(TraderArmorMaterial.INSTANCE, EquipmentSlot.FEET, settings);
     
+    public static final Item RG_HELMET = new ArmorItem(RoseGoldArmorMaterial.INSTANCE, EquipmentSlot.HEAD, settings);
+    public static final Item RG_CHESTPLATE = new ArmorItem(RoseGoldArmorMaterial.INSTANCE, EquipmentSlot.CHEST, settings);
+    public static final Item RG_LEGGINGS = new ArmorItem(RoseGoldArmorMaterial.INSTANCE, EquipmentSlot.LEGS, settings);
+    public static final Item RG_BOOTS = new ArmorItem(RoseGoldArmorMaterial.INSTANCE, EquipmentSlot.FEET, settings);
+    
     public static final Item TURTLE_CHESTPLATE = new ArmorItem(ArmorMaterials.TURTLE, EquipmentSlot.CHEST, settings);
     public static final Item TURTLE_LEGGINGS = new ArmorItem(ArmorMaterials.TURTLE, EquipmentSlot.LEGS, settings);
     public static final Item TURTLE_BOOTS = new ArmorItem(ArmorMaterials.TURTLE, EquipmentSlot.FEET, settings);
@@ -41,6 +46,11 @@ public class Armors {
         //register("trader_chestplate", TRADER_CHESTPLATE);
         //register("trader_leggings", TRADER_LEGGINGS);
         //register("trader_boots", TRADER_BOOTS);
+        
+        register("rg_helmet", RG_HELMET);
+        register("rg_chestplate", RG_CHESTPLATE);
+        register("rg_leggings", RG_LEGGINGS);
+        register("rg_boots", RG_BOOTS);
         
         register("turtle_chestplate", TURTLE_CHESTPLATE);
         register("turtle_leggings", TURTLE_LEGGINGS);

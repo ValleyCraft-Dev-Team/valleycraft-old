@@ -2,8 +2,6 @@ package net.linkle.valley.Registry.Blocks.Plants;
 
 import java.util.Random;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -21,9 +19,8 @@ public abstract class GrowthBlock extends Block {
     public static final BooleanProperty MOSSY = BooleanProperty.of("mossy");
 
     public GrowthBlock() {
-        super(FabricBlockSettings.of(Material.STONE)
+        super(Settings.of(Material.STONE)
                 .requiresTool()
-                .breakByTool(FabricToolTags.PICKAXES, 1)
                 .ticksRandomly()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(2, 5));
