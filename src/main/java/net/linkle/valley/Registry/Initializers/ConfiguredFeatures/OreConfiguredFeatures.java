@@ -145,6 +145,61 @@ public class OreConfiguredFeatures {
             .spreadHorizontally()
             .repeat(20); // Number of veins per chunk
 
+    private static ConfiguredFeature<?, ?> DRY_MOSSY_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    DRY_MOSS_STONE.getDefaultState(),
+                    20)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(50)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(10); // Number of veins per chunk
+
+    private static ConfiguredFeature<?, ?> PUMICE_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    PUMICE.getDefaultState(),
+                    15)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(50)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(10); // Number of veins per chunk
+
+    private static ConfiguredFeature<?, ?> JASPER_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    JASPER.getDefaultState(),
+                    15)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(50)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(5); // Number of veins per chunk
+
+    private static ConfiguredFeature<?, ?> GRANITE_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    GREEN_GRANITE.getDefaultState(),
+                    15)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(50)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(5); // Number of veins per chunk
+
+    private static ConfiguredFeature<?, ?> LIMESTONE_OW = Feature.ORE
+            .configure(new OreFeatureConfig(
+                    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+                    LIMESTONE.getDefaultState(),
+                    15)) // Vein size
+            .range(new RangeDecoratorConfig(
+                    // You can also use one of the other height providers if you don't want a uniform distribution
+                    UniformHeightProvider.create(YOffset.getBottom(), YOffset.fixed(50)))) // Inclusive min and max height
+            .spreadHorizontally()
+            .repeat(15); // Number of veins per chunk
+
     private static ConfiguredFeature<?, ?> BLEACHED_GRAVEL_OW = Feature.ORE
             .configure(new OreFeatureConfig(
                     OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
@@ -429,6 +484,13 @@ public class OreConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.COLD_OCEAN),
                 GenerationStep.Feature.UNDERGROUND_ORES, oceanStone);
 
+        RegistryKey<ConfiguredFeature<?, ?>> graniteStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_granite"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, graniteStone.getValue(), GRANITE_OW);
+        if (blobsEnable)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.COLD_OCEAN),
+                    GenerationStep.Feature.UNDERGROUND_ORES, graniteStone);
+
         RegistryKey<ConfiguredFeature<?, ?>> swampStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_swamp_overworld"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, swampStone.getValue(), SWAMPSTONE_OW);
@@ -443,7 +505,31 @@ public class OreConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS),
                 GenerationStep.Feature.UNDERGROUND_ORES, darkStone);
 
-        //desert ores
+        //plains and forests
+        RegistryKey<ConfiguredFeature<?, ?>> limeStone = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_limestone"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, limeStone.getValue(), LIMESTONE_OW);
+        if (blobsEnable)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.PLAINS, BiomeKeys.FOREST),
+                    GenerationStep.Feature.UNDERGROUND_ORES, limeStone);
+
+        //desert only ores
+        RegistryKey<ConfiguredFeature<?, ?>> pumice_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_pumice"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, pumice_ow.getValue(), PUMICE_OW);
+        if (blobsEnable)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES),
+                    GenerationStep.Feature.UNDERGROUND_ORES, pumice_ow);
+
+        //badlands only ores
+        RegistryKey<ConfiguredFeature<?, ?>> jasper_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_jasper"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, jasper_ow.getValue(), JASPER_OW);
+        if (blobsEnable)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BADLANDS, BiomeKeys.MODIFIED_BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU),
+                    GenerationStep.Feature.UNDERGROUND_ORES, jasper_ow);
+
+        //desert ores and badlands
         RegistryKey<ConfiguredFeature<?, ?>> sand_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_sand"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sand_ow.getValue(), SAND_OW);
@@ -458,6 +544,14 @@ public class OreConfiguredFeatures {
         if (blobsEnable)
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
                 GenerationStep.Feature.UNDERGROUND_ORES, sandstone_ow);
+
+        RegistryKey<ConfiguredFeature<?, ?>> dry_mossy_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "ore_dry_mossy"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, dry_mossy_ow.getValue(), DRY_MOSSY_OW);
+
+        if (blobsEnable)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU),
+                    GenerationStep.Feature.UNDERGROUND_ORES, dry_mossy_ow);
 
         RegistryKey<ConfiguredFeature<?, ?>> gravel_ow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "ore_desert_gravel"));

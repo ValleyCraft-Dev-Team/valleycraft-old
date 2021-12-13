@@ -35,6 +35,44 @@ public class OverworldPlantConfiguredFeatures {
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(BUSH
                     .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(7).build());
 
+    //new
+    public static final ConfiguredFeature<?, ?> BOX_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(HEDGE
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(3).build());
+
+    public static final ConfiguredFeature<?, ?> HOLLY_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(HOLLY_BUSH
+                    .getDefaultState().with(BerryBushBlock.AGE, 2)), SimpleBlockPlacer.INSTANCE)).tries(1).build());
+
+    public static final ConfiguredFeature<?, ?> MOREL_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(MOREL
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(3).build());
+
+    public static final ConfiguredFeature<?, ?> HONEYCLUSTER_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(HONEY_CLUSTER
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(2).build());
+
+    public static final ConfiguredFeature<?, ?> PAN_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(PANFLOWER
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
+
+    public static final ConfiguredFeature<?, ?> CROCUS_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(CROCUS
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(3).build());
+
+    public static final ConfiguredFeature<?, ?> TAPROOT_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(TAPROOTS
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
+
+    public static final ConfiguredFeature<?, ?> HERB_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(HERBS
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(1).build());
+
+    public static final ConfiguredFeature<?, ?> FLOWERING_CACTUS_PATCH = Feature.RANDOM_PATCH
+            .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(FLOWERING_CACTUS
+                    .getDefaultState()), SimpleBlockPlacer.INSTANCE)).tries(3).build());
+
+    //
 
     public static final ConfiguredFeature<?, ?> SPROUT_PATCH = Feature.RANDOM_PATCH
             .configure((new RandomPatchFeatureConfig.Builder (new SimpleBlockStateProvider(SPROUT
@@ -230,6 +268,46 @@ public class OverworldPlantConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST, BiomeKeys.TALL_BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.BIRCH_FOREST, BiomeKeys.DARK_FOREST, BiomeKeys.TALL_BIRCH_HILLS, BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.TAIGA, BiomeKeys.TAIGA_HILLS, BiomeKeys.TAIGA_MOUNTAINS, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS),
                 GenerationStep.Feature.VEGETAL_DECORATION, dandelionPatch);
 
+        //herbs and taproots
+        RegistryKey<ConfiguredFeature<?, ?>> herbsPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "herbs_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, herbsPatch.getValue(), HERB_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.VEGETAL_DECORATION, herbsPatch);
+
+        RegistryKey<ConfiguredFeature<?, ?>> taprootsPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "taproots_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, taprootsPatch.getValue(), TAPROOT_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.VEGETAL_DECORATION, taprootsPatch);
+
+        //found in redwoods
+        RegistryKey<ConfiguredFeature<?, ?>> hedgePatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "boxwood_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, hedgePatch.getValue(), BOX_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA),
+                GenerationStep.Feature.VEGETAL_DECORATION, hedgePatch);
+
+        RegistryKey<ConfiguredFeature<?, ?>> crocusPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "crocus_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, crocusPatch.getValue(), CROCUS_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA),
+                GenerationStep.Feature.VEGETAL_DECORATION, crocusPatch);
+
+
+        RegistryKey<ConfiguredFeature<?, ?>> hollyPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "holly_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, hollyPatch.getValue(), HOLLY_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA),
+                GenerationStep.Feature.VEGETAL_DECORATION, hollyPatch);
+
+        //found in dark woods
+        RegistryKey<ConfiguredFeature<?, ?>> morelPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "morel_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, morelPatch.getValue(), MOREL_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS),
+                GenerationStep.Feature.VEGETAL_DECORATION, morelPatch);
+
         //found in every biome except snow
         RegistryKey<ConfiguredFeature<?, ?>> bushPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "bush_patch"));
@@ -239,7 +317,7 @@ public class OverworldPlantConfiguredFeatures {
         RegistryKey<ConfiguredFeature<?, ?>> sproutPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "sprout_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, sproutPatch.getValue(), SPROUT_PATCH);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE,BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.BEACH, BiomeKeys.DESERT_LAKES, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.ERODED_BADLANDS, BiomeKeys.FLOWER_FOREST, BiomeKeys.FOREST, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS,BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_JUNGLE,BiomeKeys.MODIFIED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS,BiomeKeys.MODIFIED_JUNGLE_EDGE,BiomeKeys.OCEAN,BiomeKeys.PLAINS,BiomeKeys.RIVER,BiomeKeys.SHATTERED_SAVANNA_PLATEAU,BiomeKeys.SHATTERED_SAVANNA,BiomeKeys.SAVANNA_PLATEAU,BiomeKeys.SAVANNA,BiomeKeys.SWAMP_HILLS,BiomeKeys.SWAMP,BiomeKeys.STONE_SHORE,BiomeKeys.SUNFLOWER_PLAINS,BiomeKeys.TAIGA_MOUNTAINS,BiomeKeys.TAIGA_HILLS,BiomeKeys.TAIGA,BiomeKeys.TALL_BIRCH_HILLS,BiomeKeys.TALL_BIRCH_FOREST,BiomeKeys.WOODED_MOUNTAINS,BiomeKeys.WOODED_HILLS), GenerationStep.Feature.VEGETAL_DECORATION, sproutPatch);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.PLAINS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE,BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.BEACH, BiomeKeys.DESERT_LAKES, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.ERODED_BADLANDS, BiomeKeys.FLOWER_FOREST, BiomeKeys.FOREST, BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS, BiomeKeys.GIANT_TREE_TAIGA_HILLS, BiomeKeys.GIANT_SPRUCE_TAIGA, BiomeKeys.GIANT_TREE_TAIGA, BiomeKeys.GRAVELLY_MOUNTAINS, BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS,BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_JUNGLE,BiomeKeys.MODIFIED_BADLANDS_PLATEAU,BiomeKeys.MODIFIED_GRAVELLY_MOUNTAINS,BiomeKeys.MODIFIED_JUNGLE_EDGE,BiomeKeys.OCEAN,BiomeKeys.PLAINS,BiomeKeys.RIVER,BiomeKeys.SHATTERED_SAVANNA_PLATEAU,BiomeKeys.SHATTERED_SAVANNA,BiomeKeys.SAVANNA_PLATEAU,BiomeKeys.SAVANNA,BiomeKeys.SWAMP_HILLS,BiomeKeys.SWAMP,BiomeKeys.STONE_SHORE,BiomeKeys.SUNFLOWER_PLAINS,BiomeKeys.TAIGA_MOUNTAINS,BiomeKeys.TAIGA_HILLS,BiomeKeys.TAIGA,BiomeKeys.TALL_BIRCH_HILLS,BiomeKeys.TALL_BIRCH_FOREST,BiomeKeys.WOODED_MOUNTAINS,BiomeKeys.WOODED_HILLS), GenerationStep.Feature.VEGETAL_DECORATION, sproutPatch);
 
         //found in jungles
         RegistryKey<ConfiguredFeature<?, ?>> junglePatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -247,6 +325,12 @@ public class OverworldPlantConfiguredFeatures {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, junglePatch.getValue(), JUNGLE_CAP_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.MODIFIED_JUNGLE),
                 GenerationStep.Feature.VEGETAL_DECORATION, junglePatch);
+
+        RegistryKey<ConfiguredFeature<?, ?>> panPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "panflower_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, panPatch.getValue(), PAN_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.JUNGLE_EDGE, BiomeKeys.JUNGLE_HILLS, BiomeKeys.BAMBOO_JUNGLE_HILLS, BiomeKeys.MODIFIED_JUNGLE_EDGE, BiomeKeys.BAMBOO_JUNGLE, BiomeKeys.MODIFIED_JUNGLE),
+                GenerationStep.Feature.VEGETAL_DECORATION, panPatch);
 
         //found in jungles and swamps
         RegistryKey<ConfiguredFeature<?, ?>> jsbushPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -281,6 +365,12 @@ public class OverworldPlantConfiguredFeatures {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.TALL_BIRCH_FOREST, BiomeKeys.TALL_BIRCH_HILLS, BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST),
                 GenerationStep.Feature.VEGETAL_DECORATION, rosePatch);
 
+        RegistryKey<ConfiguredFeature<?, ?>> honeyPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "honey_cluster_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, honeyPatch.getValue(), HONEYCLUSTER_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.DARK_FOREST_HILLS, BiomeKeys.BIRCH_FOREST, BiomeKeys.BIRCH_FOREST_HILLS, BiomeKeys.TALL_BIRCH_FOREST, BiomeKeys.TALL_BIRCH_HILLS, BiomeKeys.FOREST, BiomeKeys.FLOWER_FOREST),
+                GenerationStep.Feature.VEGETAL_DECORATION, honeyPatch);
+
         RegistryKey<ConfiguredFeature<?, ?>> lilacPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "lilac_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, lilacPatch.getValue(), LILAC_PATCH);
@@ -298,6 +388,11 @@ public class OverworldPlantConfiguredFeatures {
                 new Identifier(MOD_ID, "tumbleweed_patch"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tumblePatch.getValue(), TUMBLE_PATCH);
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU), GenerationStep.Feature.VEGETAL_DECORATION, tumblePatch);
+
+        RegistryKey<ConfiguredFeature<?, ?>> floweringPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+                new Identifier(MOD_ID, "flowering_cactus_patch"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, floweringPatch.getValue(), FLOWERING_CACTUS_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DESERT, BiomeKeys.DESERT_HILLS, BiomeKeys.DESERT_LAKES, BiomeKeys.BADLANDS, BiomeKeys.BADLANDS_PLATEAU, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS_PLATEAU, BiomeKeys.MODIFIED_WOODED_BADLANDS_PLATEAU), GenerationStep.Feature.VEGETAL_DECORATION, floweringPatch);
 
         RegistryKey<ConfiguredFeature<?, ?>> smallPatch = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier(MOD_ID, "small_patch"));
