@@ -1,13 +1,14 @@
 package net.linkle.valley.Registry.Initializers;
 
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Loot.LootBuilder;
 import net.linkle.valley.Registry.Loot.LootTableHelper;
 import net.linkle.valley.Registry.Loot.LootUtils;
+import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -18,10 +19,39 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
 public class VLootTables {
-    public static void initialize() {
+    public static void initialize(SimpleConfig config) {
         blocks();
         entities();
-        // chests();
+        
+        // You might have to improve this config description. Otherwise, remove this comment.
+        config.script("disable-fishing", "Disables fishing loots for vallycraft items");
+        if (!config.get("disable-fishing", false)) {
+            LootTableHelper.injectLoot(LootTables.FISHING_FISH_GAMEPLAY, VLootTables::fishingFishLoot);
+            LootTableHelper.injectLoot(LootTables.FISHING_JUNK_GAMEPLAY, VLootTables::fishingJunkLoot);
+        }
+    }
+    
+    private static void fishingFishLoot(FabricLootPoolBuilder pool) {
+        pool.with(ItemEntry.builder(Fishing.CRAB).weight(13));
+        pool.with(ItemEntry.builder(Fishing.MUSSEL).weight(13));
+        pool.with(ItemEntry.builder(Fishing.BROWN_MUSSEL).weight(13));
+        pool.with(ItemEntry.builder(Fishing.CERITH_SNAIL).weight(13));
+        pool.with(ItemEntry.builder(Aquatic.CLAM).weight(24));
+        pool.with(ItemEntry.builder(Fishing.SARDINE).weight(43));
+        pool.with(ItemEntry.builder(Fishing.LIONFISH).weight(6));
+        pool.with(ItemEntry.builder(Fishing.SLIMEFISH).weight(20));
+        pool.with(ItemEntry.builder(Fishing.PERCH).weight(40));
+        pool.with(ItemEntry.builder(Aquatic.SAND_DOLLAR).weight(10));
+        pool.with(ItemEntry.builder(Aquatic.STARFISH).weight(2));
+        pool.with(ItemEntry.builder(Fishing.FIRE_EEL).weight(7));
+        pool.with(ItemEntry.builder(Fishing.OCTO).weight(9));
+        pool.with(ItemEntry.builder(Fishing.GLISTERING_ANGLER).weight(7));
+        pool.with(ItemEntry.builder(Fishing.GHOST_FISH).weight(5));
+    }
+    
+    private static void fishingJunkLoot(FabricLootPoolBuilder pool) {
+        pool.with(ItemEntry.builder(Aquatic.RED_SEAGRASS).weight(17));
+        pool.with(ItemEntry.builder(Aquatic.GLOW_KELP).weight(10));
     }
 
     private static void entities() {
