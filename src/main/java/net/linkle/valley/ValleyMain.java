@@ -47,6 +47,7 @@ public class ValleyMain implements ModInitializer {
         Sounds.initialize();
         Compostables.initialize();
         Entities.initialize();
+        WanderingTraderOffers.initialize(config);
         
         //Configured Feature Initializers
         OreConfiguredFeatures.initialize(config);
