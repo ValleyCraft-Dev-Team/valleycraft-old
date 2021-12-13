@@ -44,7 +44,13 @@ public class Entities {
             BiomeKeys.GIANT_TREE_TAIGA,
             BiomeKeys.GIANT_TREE_TAIGA_HILLS
         );
-        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 2, 1, 2);
+        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 3, 1, 2);
+        
+        keys = BiomeSelectors.includeByKey(
+            BiomeKeys.TALL_BIRCH_FOREST,
+            BiomeKeys.TALL_BIRCH_HILLS
+        );
+        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, DUCK, 8, 3, 4);
     }
 
     public static void initializeClient() {
