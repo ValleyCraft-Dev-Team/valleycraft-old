@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "valley:blocks/glow_kelp_plant"
+  }
+}
