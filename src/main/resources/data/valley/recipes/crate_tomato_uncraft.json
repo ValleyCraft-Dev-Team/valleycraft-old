@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:crate_tomato"
+    }
+  ],
+  "result": {
+    "item": "valley:tomato_bush",
+    "count": 6
+  }
+}

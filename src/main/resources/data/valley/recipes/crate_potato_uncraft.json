@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:crate_potato"
+    }
+  ],
+  "result": {
+    "item": "minecraft:potato",
+    "count": 6
+  }
+}
