@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "valley",
-  "version": "2.0",
+  "version": "${version}",
 
   "name": "ValleyCraft",
   "description": "ValleyCraft is a nature, farming, and cooking overhaul with a focus on exploration and discovery.",
   "authors": [
-    "Linkle#2933",
+    "Linkle",
     "AndEditor7"
   ],
   "contact": {
