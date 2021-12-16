@@ -23,7 +23,7 @@
       "net.linkle.valley.ValleyMain"
     ],
     "client": [
-      "net.linkle.valley.ClientModInitFix"
+      "net.linkle.valley.ValleyClient"
     ]
   },
   "mixins": [

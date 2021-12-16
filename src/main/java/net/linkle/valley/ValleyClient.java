@@ -21,7 +21,7 @@ import static net.linkle.valley.Registry.Initializers.PotBlock.POTTED_ROSE_SPRIG
 import java.util.ArrayList;
 
 @Environment(EnvType.CLIENT)
-public class ClientModInitFix implements ClientModInitializer {
+public class ValleyClient implements ClientModInitializer {
     
     @Override
     public void onInitializeClient() {
