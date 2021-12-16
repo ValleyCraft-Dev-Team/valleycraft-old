@@ -3,7 +3,6 @@ package net.linkle.valley.Registry.Blocks.Plants;
 import java.util.Random;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -22,7 +21,7 @@ public class MushBlock extends PlantBlock {
 
     public MushBlock() {
         super(FabricBlockSettings.of(Material.PLANT)
-                .breakByTool(FabricToolTags.SHEARS)
+                //.breakByTool(FabricToolTags.SHEARS)
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0, 0.5f)

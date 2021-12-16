@@ -60,9 +60,6 @@ public class ClientModInitFix implements ClientModInitializer {
 
         cullouts.add(REDSTONE_LANTERN);
         cullouts.add(WREATH);
-
-        cullouts.add(PLANTER);
-        cullouts.add(PLANTER_WATER);
         
         cullouts.add(PET_BED);
 
@@ -143,7 +140,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(SNOW_CROP_BLOCK);
         cullouts.add(MINERS_CROP_BLOCK);
         cullouts.add(SNOW_BUSH);
-        cullouts.add(WINTER_ROOT);
         cullouts.add(SNOW_ROCK_PILE);
         cullouts.add(MOSSY_VINES);
         cullouts.add(MOSSY_VINES_PLANT);
@@ -249,9 +245,7 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(CHAIN_N);
         
         cullouts.add(CAMPFIRE_RING);
-
-        cullouts.add(GIANT_RED);
-        cullouts.add(GIANT_BROWN);
+        
         cullouts.add(SPIDER_EGG_BLOCK);
         cullouts.add(RED_SEAGRASS);
         cullouts.add(GLOW_KELP_PLANT);

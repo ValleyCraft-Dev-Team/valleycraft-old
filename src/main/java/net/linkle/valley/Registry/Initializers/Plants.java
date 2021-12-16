@@ -81,7 +81,6 @@ public class Plants {
 
     public static final Block BUSH_ALIVE = new RoseBushTall();
     public static final Block SNOW_BUSH = new SnowBush();
-    public static final Block WINTER_ROOT = new SnowBushHidden();
     
     public static final Block DRY_MOSS_CARPET = new CarpetBlock(Block.Settings.of(Material.PLANT, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_CARPET));
     public static final Block DRY_MOSS = new MossBlock(Block.Settings.of(Material.MOSS_BLOCK, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_BLOCK));
@@ -146,16 +145,6 @@ public class Plants {
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
     public static final Block APPLE_LEAVES = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
     public static final Block APPLE_LEAVES_EMPTY = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
-
-    public static final Block GIANT_RED = new GiantShroomBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.WOOD)
-            .strength(0.4f,0.1f));
-
-    public static final Block GIANT_BROWN = new GiantShroomBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.GRASS)
-            .strength(0.4f,0.1f));
 
     public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.CACTUS, MapColor.LIGHT_GRAY)
             .breakByHand(true).nonOpaque().luminance(3)

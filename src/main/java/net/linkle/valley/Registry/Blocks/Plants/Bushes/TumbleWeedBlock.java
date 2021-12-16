@@ -1,7 +1,5 @@
 package net.linkle.valley.Registry.Blocks.Plants.Bushes;
 
-import static net.linkle.valley.Registry.Initializers.Furniture.HANGING;
-
 import java.util.Random;
 
 import net.minecraft.block.Block;

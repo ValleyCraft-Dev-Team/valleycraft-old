@@ -1,11 +1,9 @@
 package net.linkle.valley.Registry.WeaponsAndTools.OneOffs;
 
-import net.minecraft.item.Items;
+import static net.linkle.valley.Registry.Initializers.Furniture.NET;
+
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-
-import static net.linkle.valley.Registry.Initializers.Furniture.CLIMBABLE_ROPE;
-import static net.linkle.valley.Registry.Initializers.Furniture.NET;
 
 public class SieveToolMaterial implements ToolMaterial {
     @Override

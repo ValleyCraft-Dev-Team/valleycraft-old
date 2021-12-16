@@ -16,6 +16,7 @@ public class ValleyMain implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     @Override
+    @SuppressWarnings("unused")
     public void onInitialize() {
         // This should stay first before items and blocks.
         Object initializer1 = VItemTags.KNIVES; // will force the class to load (any static member will do)
