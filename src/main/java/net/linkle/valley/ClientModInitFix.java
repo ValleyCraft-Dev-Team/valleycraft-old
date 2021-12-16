@@ -123,10 +123,8 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(FERNBUSH);
         cullouts.add(TAPROOTS);
         cullouts.add(REED_BLOCK);
-        cullouts.add(BUSH_DEAD_TALL);
         cullouts.add(BUSH_ALIVE);
         cullouts.add(HERBS);
-        cullouts.add(BUSH_ALIVE_TALL);
         cullouts.add(WILD_BEET);
         cullouts.add(WILD_POTATO);
         cullouts.add(WILD_CARROT);
@@ -141,12 +139,10 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(EGGPLANT_CROP_BLOCK);
         cullouts.add(ROCK_PILE);
         cullouts.add(RED_PILE);
-        cullouts.add(BLUE_PILE);
         cullouts.add(ONION_CROP_BLOCK);
         cullouts.add(SNOW_CROP_BLOCK);
         cullouts.add(MINERS_CROP_BLOCK);
         cullouts.add(SNOW_BUSH);
-        cullouts.add(SNOW_YAM);
         cullouts.add(WINTER_ROOT);
         cullouts.add(SNOW_ROCK_PILE);
         cullouts.add(MOSSY_VINES);
@@ -184,8 +180,6 @@ public class ClientModInitFix implements ClientModInitializer {
 
         cullouts.add(HANGING);
 
-        translucents.add(CRYSTAL);
-
         cullouts.add(ROPE_BRIDGE);
         cullouts.add(ROPE_BRIDGE_ANCHOR);
 
@@ -202,8 +196,6 @@ public class ClientModInitFix implements ClientModInitializer {
         cullouts.add(ACACIA_LADDER);
         cullouts.add(JUNGLE_LADDER);
         cullouts.add(SPRUCE_LADDER);
-
-        cullouts.add(DRIFT);
 
         cullouts.add(ANCHOR);
 

@@ -190,7 +190,6 @@ public class Furniture {
             .strength(1.5f, 2.0f));
 
     public static final Block HANGING = new HangingBlock();
-    public static final Block CRYSTAL = new CrystalBlock();
 
     public static final Block BOOK_COBWEB = new BookshelfBlock();
     public static final Block EMPTY_SHELF = new BookshelfBlock();

@@ -1,15 +1,17 @@
 package net.linkle.valley.Registry.Initializers;
 
+import static net.linkle.valley.Registry.Initializers.ItemGroups.COOKING_GROUP;
+import static net.linkle.valley.Registry.Initializers.ItemGroups.NATURE_GROUP;
+import static net.linkle.valley.Registry.Utils.Util.register;
+import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Blocks.Plants.*;
-import net.linkle.valley.Registry.Blocks.Plants.AquaticPlants.ClamBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Bushes.*;
 import net.linkle.valley.Registry.Blocks.Plants.Cave.*;
-import net.linkle.valley.Registry.Blocks.Plants.CactusBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Crops.MaizeCropBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Crops.RiceCropBlock;
+import net.linkle.valley.Registry.Blocks.Plants.Crops.*;
 import net.linkle.valley.Registry.Blocks.Plants.Decorative.*;
+import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CarpetBlock;
@@ -17,17 +19,12 @@ import net.minecraft.block.LeavesBlock;
 import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.block.MossBlock;
-import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.BlockTags;
-
-import static net.linkle.valley.Registry.Initializers.ItemGroups.*;
-import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
-import static net.linkle.valley.Registry.Utils.Util.register;
 
 public class Plants {
     //bushes
@@ -83,10 +80,7 @@ public class Plants {
     public static final Block TAPROOTS = new Plant();
 
     public static final Block BUSH_ALIVE = new RoseBushTall();
-    public static final Block BUSH_ALIVE_TALL = new RoseBushTall();
-    public static final Block BUSH_DEAD_TALL = new RoseBushTall();
     public static final Block SNOW_BUSH = new SnowBush();
-    public static final Block SNOW_YAM = new SnowBush();
     public static final Block WINTER_ROOT = new SnowBushHidden();
     
     public static final Block DRY_MOSS_CARPET = new CarpetBlock(Block.Settings.of(Material.PLANT, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_CARPET));
@@ -97,16 +91,6 @@ public class Plants {
             .requiresTool()
             .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
             .strength(1.5f,2.0f).luminance(7), true);
-
-    public static final Block BLUE_PILE = new CrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
-            .requiresTool()
-            .sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(1.5f,2.0f).luminance(13), false);
-
-    public static final Block COIN_STACK = new CrystalBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
-            .requiresTool()
-            .sounds(BlockSoundGroup.CHAIN).breakInstantly()
-            .strength(1.5f,2.0f), false);
 
     //public static final Block GREEN_PILE = new BlueCrystalBlock(FabricBlockSettings.of(Material.STONE).nonOpaque()
             //.breakByHand(false).breakByTool(FabricToolTags.PICKAXES)
@@ -158,7 +142,6 @@ public class Plants {
     public static final Block ICE_ROSE = new Plant();
     public static final Block ORANGE_FERN = new Plant();
     public static final Block ORANGE_BEAUTY = new Plant();
-    public static final Block DRIFT = new ClamBlock();
 
     public static final SaplingBlock APPLE_SAPLING = new SaplingBlock(new AppleSaplingGen());
     public static final Block APPLE_LEAVES = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));

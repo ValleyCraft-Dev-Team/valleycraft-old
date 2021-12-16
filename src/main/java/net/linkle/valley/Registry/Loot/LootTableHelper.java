@@ -54,10 +54,9 @@ public class LootTableHelper {
             if (pools.isEmpty()) {
                 LOGGER.warn("Unable inject loot for " + id);
             } else {
-                var pool = pools.get(0);
-                var loot = FabricLootPoolBuilder.of(pool);
-                inject.forEach(c->c.accept(loot));
-                pools.set(0, loot.build());
+                var pool = FabricLootPoolBuilder.of(pools.get(0));
+                inject.forEach(c->c.accept(pool));
+                pools.set(0, pool.build());
             }
         }
         
