@@ -6,17 +6,15 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
-import net.minecraft.world.gen.decorator.DecoratorConfig;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
 
 /**
  * The <code>count</code> is amount of blocks can spawn in patch. The
  * <code>size</code> is the size of the patch.
  */
 public record SeaPatchConfig(BlockStateProvider state, IntProvider count, IntProvider size)
-        implements FeatureConfig, DecoratorConfig {
+        implements FeatureConfig {
 
     public static final Codec<SeaPatchConfig> CODEC = RecordCodecBuilder.create(instance -> instance
             .group(BlockStateProvider.TYPE_CODEC.fieldOf("state").forGetter(SeaPatchConfig::state),
@@ -25,11 +23,11 @@ public record SeaPatchConfig(BlockStateProvider state, IntProvider count, IntPro
             .apply(instance, instance.stable(SeaPatchConfig::new)));
 
     public SeaPatchConfig(BlockState state, int count, int size) {
-        this(new SimpleBlockStateProvider(state), ConstantIntProvider.create(count), size);
+        this(BlockStateProvider.of(state), ConstantIntProvider.create(count), size);
     }
 
     public SeaPatchConfig(BlockState state, IntProvider count, int size) {
-        this(new SimpleBlockStateProvider(state), count, size);
+        this(BlockStateProvider.of(state), count, size);
     }
 
     public SeaPatchConfig(BlockStateProvider state, int count, int size) {

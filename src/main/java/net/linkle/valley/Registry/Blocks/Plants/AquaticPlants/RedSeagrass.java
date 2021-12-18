@@ -51,7 +51,7 @@ public class RedSeagrass extends PlantBlock implements FluidFillable {
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         var blockState = super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
         if (!blockState.isAir()) {
-            world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
+            world.createAndScheduleFluidTick(neighborPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         }
 
         return blockState;

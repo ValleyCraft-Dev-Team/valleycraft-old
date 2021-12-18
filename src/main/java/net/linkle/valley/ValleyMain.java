@@ -23,7 +23,7 @@ public class ValleyMain implements ModInitializer {
         Object initializer2 = VCriteria.BROKE_BLOCK;
         
         // Simple config system.
-        var config = new SimpleConfig(MOD_ID, 1);
+        var config = new SimpleConfig("valleycraft", 1);
 
         //Item Initializers
         FoodAndCooking.initialize();
@@ -51,8 +51,8 @@ public class ValleyMain implements ModInitializer {
         WanderingTraderOffers.initialize(config);
         
         //Configured Feature Initializers
-        OreConfiguredFeatures.initialize(config);
-        OverworldPlantConfiguredFeatures.initialize(config);
+        OreFeatures.initialize(config);
+        PlantFeatures.initialize(config);
         CaveFeatures.initialize(config);
         OceanFeatures.initialize(config);
         Trees.initialize(config);

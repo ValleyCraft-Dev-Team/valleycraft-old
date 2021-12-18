@@ -5,8 +5,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.KelpBlock;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
@@ -25,14 +23,16 @@ public class GlowKelpFeature extends Feature<DefaultFeatureConfig> {
         var random = context.getRandom();
         var kelp = Aquatic.GLOW_KELP.getDefaultState();
         var plant = Aquatic.GLOW_KELP_PLANT.getDefaultState();
-        var loops = MathHelper.nextInt(random, 3, 7);
-        
-        for (int i = 0; i < loops; i++) {
-            int xPos = random.nextInt(7) - random.nextInt(7);
-            int zPos = random.nextInt(7) - random.nextInt(7);
-            var top = world.getTopY(Heightmap.Type.OCEAN_FLOOR, origin.getX() + xPos, origin.getZ() + zPos);
-            var surface = new BlockPos(origin.getX() + xPos, top, origin.getZ() + zPos);
-            if (world.getBlockState(surface).isOf(Blocks.WATER)) {
+        var mutable = new BlockPos.Mutable();
+
+        for (int i = 0; i < 60; ++i) {
+            int xOffset = random.nextInt(7) - random.nextInt(7);
+            int yOffset = random.nextInt(4) - random.nextInt(4);
+            int zOffset = random.nextInt(7) - random.nextInt(7);
+            mutable.set(origin, xOffset, yOffset, zOffset);
+            
+            if (world.getBlockState(mutable).isOf(Blocks.WATER) && world.getBlockState(mutable.down()).isOpaque()) {
+                var surface = mutable.toImmutable();
                 int height = 1 + random.nextInt(8);
                 for (int h = 0; h <= height; ++h) {
                     if (world.getBlockState(surface).isOf(Blocks.WATER) && world.getBlockState(surface.up()).isOf(Blocks.WATER) && plant.canPlaceAt(world, surface)) {
@@ -53,7 +53,7 @@ public class GlowKelpFeature extends Feature<DefaultFeatureConfig> {
                 }
             }
         }
-        
+
         return spawned > 0;
     }
 }

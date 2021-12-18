@@ -11,6 +11,7 @@ public class CavePatchFeature extends Feature<CavePatchConfig> {
         super(CavePatchConfig.CODEC);
     }
 
+    @Override
     public boolean generate(FeatureContext<CavePatchConfig> context) {
         var config = context.getConfig();
         var random = context.getRandom();

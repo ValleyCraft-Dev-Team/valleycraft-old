@@ -58,7 +58,7 @@ public class CactusBlock extends HorizontalBlock {
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
         if (!state.canPlaceAt(world, pos)) {
-            world.getBlockTickScheduler().schedule(pos, this, 1);
+            world.createAndScheduleBlockTick(pos, this, 1);
         }
 
         return super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);

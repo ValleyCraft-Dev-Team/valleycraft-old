@@ -17,7 +17,6 @@ public class StoneBlocks {
 
     public static final Block MIXED_ORE = new StoneOreBlock();
     public static final Block SALTPETER_ORE = new StoneOreBlock();
-    public static final Block FOSSIL_ORE = new StoneOreBlock();
     public static final Block FROZEN_FOSSIL = new FrozenFossilOreBlock();
 
     public static final Block SCALDING_STONE = new ScaldingBlock();

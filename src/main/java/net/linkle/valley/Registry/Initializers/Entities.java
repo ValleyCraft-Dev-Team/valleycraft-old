@@ -39,16 +39,13 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
 
         var keys = BiomeSelectors.includeByKey(
-            BiomeKeys.GIANT_SPRUCE_TAIGA,
-            BiomeKeys.GIANT_SPRUCE_TAIGA_HILLS,
-            BiomeKeys.GIANT_TREE_TAIGA,
-            BiomeKeys.GIANT_TREE_TAIGA_HILLS
+            BiomeKeys.OLD_GROWTH_PINE_TAIGA,
+            BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
         );
         BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 3, 1, 2);
         
         keys = BiomeSelectors.includeByKey(
-            BiomeKeys.TALL_BIRCH_FOREST,
-            BiomeKeys.TALL_BIRCH_HILLS
+            BiomeKeys.OLD_GROWTH_BIRCH_FOREST
         );
         BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, DUCK, 8, 3, 4);
     }
