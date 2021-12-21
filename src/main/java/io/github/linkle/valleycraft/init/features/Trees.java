@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.init.ConfiguredFeatures;
+package io.github.linkle.valleycraft.init.features;
 
 import static io.github.linkle.valleycraft.utils.Util.register;
 

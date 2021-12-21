@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.init.ConfiguredFeatures;
+package io.github.linkle.valleycraft.init.features;
 
 import java.util.function.Predicate;
 
@@ -10,7 +10,7 @@ import io.github.linkle.valleycraft.ValleyMain;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import io.github.linkle.valleycraft.init.ConfiguredFeatures.Gen.ReedPatchFeature;
+import io.github.linkle.valleycraft.world.gen.features.ReedPatchFeature;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Identifier;

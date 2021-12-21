@@ -103,6 +103,5 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect WINTER_ROOT_STEW = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,900));
 	public static final FoodStatusEffect WORM_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,900));
 	public static final FoodStatusEffect SLIME_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST,900));
-	
-	
+
 }

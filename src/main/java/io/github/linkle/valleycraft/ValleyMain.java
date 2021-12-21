@@ -3,7 +3,7 @@ package io.github.linkle.valleycraft;
 import io.github.linkle.valleycraft.blocks.decorations.Furnaces.Furnaces;
 import io.github.linkle.valleycraft.criterions.VCriteria;
 import io.github.linkle.valleycraft.init.*;
-import io.github.linkle.valleycraft.init.ConfiguredFeatures.*;
+import io.github.linkle.valleycraft.init.features.*;
 import io.github.linkle.valleycraft.utils.SimpleConfig;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;

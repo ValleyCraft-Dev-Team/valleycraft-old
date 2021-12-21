@@ -11,33 +11,18 @@ import org.jetbrains.annotations.Nullable;
 import static io.github.linkle.valleycraft.init.Furniture.SMALL_MUG_BLOCK;
 
 public class DrinkTeaBase extends FoodItemBase {
-    
-    public DrinkTeaBase(Settings settings) {
-        super(settings);
-    }
-
-    public DrinkTeaBase(Settings settings, int hunger, float saturationModifier, boolean isMeat,
-            @Nullable FoodStatusEffect effects) {
-        super(settings, hunger, saturationModifier, isMeat, effects);
-    }
-
-    public DrinkTeaBase(Settings settings, int hunger, float saturationModifier, boolean isMeat) {
-        super(settings, hunger, saturationModifier, isMeat);
-    }
 
     public DrinkTeaBase(Settings settings, int hunger, float saturationModifier, @Nullable FoodStatusEffect effects) {
         super(settings, hunger, saturationModifier, effects);
     }
 
-    public DrinkTeaBase(Settings settings, int hunger, float saturationModifier) {
-        super(settings, hunger, saturationModifier);
-    }
-
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity && ((PlayerEntity)user).getAbilities().creativeMode ? itemStack : new ItemStack(SMALL_MUG_BLOCK);
+        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(SMALL_MUG_BLOCK);
     }
 
+    @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
     }

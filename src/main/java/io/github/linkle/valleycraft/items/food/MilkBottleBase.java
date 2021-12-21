@@ -1,8 +1,5 @@
 package io.github.linkle.valleycraft.items.food;
 
-import io.github.linkle.valleycraft.utils.FoodStatusEffect;
-import org.jetbrains.annotations.Nullable;
-
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -17,32 +14,16 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class MilkBottleBase extends FoodItemBase {
-    
-    public MilkBottleBase(Settings settings) {
-        super(settings);
-    }
-    
-    public MilkBottleBase(Settings settings, int hunger, float saturationModifier, boolean isMeat,
-            @Nullable FoodStatusEffect effects) {
-        super(settings, hunger, saturationModifier, isMeat, effects);
-    }
-
-    public MilkBottleBase(Settings settings, int hunger, float saturationModifier, boolean isMeat) {
-        super(settings, hunger, saturationModifier, isMeat);
-    }
-
-    public MilkBottleBase(Settings settings, int hunger, float saturationModifier, @Nullable FoodStatusEffect effects) {
-        super(settings, hunger, saturationModifier, effects);
-    }
 
     public MilkBottleBase(Settings settings, int hunger, float saturationModifier) {
         super(settings, hunger, saturationModifier);
     }
 
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
-        if (playerEntity instanceof ServerPlayerEntity) {
-            Criteria.CONSUME_ITEM.trigger((ServerPlayerEntity)playerEntity, stack);
+        PlayerEntity playerEntity = user instanceof PlayerEntity player ? player : null;
+        if (playerEntity instanceof ServerPlayerEntity serverPlayerEntity) {
+            Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
         }
 
         if (!world.isClient) {
@@ -69,14 +50,17 @@ public class MilkBottleBase extends FoodItemBase {
         return stack.isEmpty() ? new ItemStack(Items.GLASS_BOTTLE) : stack;
     }
 
+    @Override
     public int getMaxUseTime(ItemStack stack) {
         return 32;
     }
 
+    @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
     }
 
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return ItemUsage.consumeHeldItem(world, user, hand);
     }

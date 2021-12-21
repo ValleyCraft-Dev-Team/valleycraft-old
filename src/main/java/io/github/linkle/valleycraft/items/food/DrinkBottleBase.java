@@ -11,15 +11,6 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class DrinkBottleBase extends FoodItemBase {
-    public DrinkBottleBase(Settings settings, int hunger, float saturationModifier, boolean isMeat,
-            @Nullable FoodStatusEffect effects) {
-        super(settings, hunger, saturationModifier, isMeat, effects);
-    }
-
-    public DrinkBottleBase(Settings settings, int hunger, float saturationModifier, boolean isMeat) {
-        super(settings, hunger, saturationModifier, isMeat);
-    }
-
     public DrinkBottleBase(Settings settings, int hunger, float saturationModifier,
             @Nullable FoodStatusEffect effects) {
         super(settings, hunger, saturationModifier, effects);
@@ -29,16 +20,15 @@ public class DrinkBottleBase extends FoodItemBase {
         super(settings, hunger, saturationModifier);
     }
 
-    public DrinkBottleBase(Settings settings) {
-        super(settings);
-    }
-
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity && ((PlayerEntity)user).getAbilities().creativeMode ? itemStack : new ItemStack(Items.GLASS_BOTTLE);
+        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(Items.GLASS_BOTTLE);
     }
 
+    @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
     }
+
 }

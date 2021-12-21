@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.init.ConfiguredFeatures.Gen;
+package io.github.linkle.valleycraft.world.gen.features;
 
 import io.github.linkle.valleycraft.init.Plants;
 import net.minecraft.block.Block;

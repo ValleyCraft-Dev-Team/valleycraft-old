@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.init.ConfiguredFeatures;
+package io.github.linkle.valleycraft.init.features;
 
 import io.github.linkle.valleycraft.init.StoneBlocks;
 import io.github.linkle.valleycraft.utils.SimpleConfig;

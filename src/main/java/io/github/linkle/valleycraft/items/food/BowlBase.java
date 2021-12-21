@@ -28,12 +28,9 @@ public class BowlBase extends FoodItemBase {
         super(settings, hunger, saturationModifier);
     }
 
-    public BowlBase(Settings settings) {
-        super(settings);
-    }
-
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity && ((PlayerEntity)user).getAbilities().creativeMode ? itemStack : new ItemStack(Items.BOWL);
+        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(Items.BOWL);
     }
 }

@@ -2,7 +2,7 @@ package io.github.linkle.valleycraft.blocks.sapling;
 
 import java.util.Random;
 
-import io.github.linkle.valleycraft.init.ConfiguredFeatures.Trees;
+import io.github.linkle.valleycraft.init.features.Trees;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;

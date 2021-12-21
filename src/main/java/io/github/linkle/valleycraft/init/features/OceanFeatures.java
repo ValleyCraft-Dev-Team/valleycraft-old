@@ -1,16 +1,11 @@
-package io.github.linkle.valleycraft.init.ConfiguredFeatures;
+package io.github.linkle.valleycraft.init.features;
 
-import static io.github.linkle.valleycraft.utils.Util.register;
-
-import java.util.ArrayList;
-import java.util.function.Predicate;
-
+import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Aquatic;
-import io.github.linkle.valleycraft.init.ConfiguredFeatures.Gen.SeaPatchConfig;
-import io.github.linkle.valleycraft.init.ConfiguredFeatures.Gen.SeaPatchFeature;
 import io.github.linkle.valleycraft.utils.SimpleConfig;
 import io.github.linkle.valleycraft.utils.Util;
-import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.world.gen.features.SeaPatchConfig;
+import io.github.linkle.valleycraft.world.gen.features.SeaPatchFeature;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -27,6 +22,9 @@ import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
+
+import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class OceanFeatures {
     /** Custom gen feature to spawn stuffs in ocean. */

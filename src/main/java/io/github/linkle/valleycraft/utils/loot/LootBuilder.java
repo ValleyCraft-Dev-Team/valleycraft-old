@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.registry.Loot;
+package io.github.linkle.valleycraft.utils.loot;
 
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.minecraft.item.ItemConvertible;

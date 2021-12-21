@@ -1,25 +1,25 @@
-    package io.github.linkle.valleycraft.client;
+package io.github.linkle.valleycraft.client;
 
-    import io.github.linkle.valleycraft.init.Entities;
-    import net.fabricmc.api.ClientModInitializer;
-    import net.fabricmc.api.EnvType;
-    import net.fabricmc.api.Environment;
-    import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-    import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-    import net.minecraft.block.Block;
-    import net.minecraft.client.color.world.BiomeColors;
-    import net.minecraft.client.render.RenderLayer;
+import io.github.linkle.valleycraft.init.Entities;
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.client.color.world.BiomeColors;
+import net.minecraft.client.render.RenderLayer;
 
-    import java.util.ArrayList;
+import java.util.ArrayList;
 
-    import static io.github.linkle.valleycraft.init.Aquatic.*;
-    import static io.github.linkle.valleycraft.init.Crops.*;
-    import static io.github.linkle.valleycraft.init.Furniture.*;
-    import static io.github.linkle.valleycraft.init.FurnitureCont.CAMPFIRE_RING;
-    import static io.github.linkle.valleycraft.init.Plants.*;
-    import static io.github.linkle.valleycraft.init.PotBlock.POTTED_ROSE_SPRIG;
-    import static io.github.linkle.valleycraft.init.StoneBlocks.CICADA;
-    import static io.github.linkle.valleycraft.init.StoneBlocks.FROZEN_FOSSIL;
+import static io.github.linkle.valleycraft.init.Aquatic.*;
+import static io.github.linkle.valleycraft.init.Crops.*;
+import static io.github.linkle.valleycraft.init.Furniture.*;
+import static io.github.linkle.valleycraft.init.FurnitureCont.CAMPFIRE_RING;
+import static io.github.linkle.valleycraft.init.Plants.*;
+import static io.github.linkle.valleycraft.init.PotBlock.POTTED_ROSE_SPRIG;
+import static io.github.linkle.valleycraft.init.StoneBlocks.CICADA;
+import static io.github.linkle.valleycraft.init.StoneBlocks.FROZEN_FOSSIL;
 
 @Environment(EnvType.CLIENT)
 public class ValleyClient implements ClientModInitializer {

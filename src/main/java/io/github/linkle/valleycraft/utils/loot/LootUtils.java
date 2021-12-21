@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.registry.Loot;
+package io.github.linkle.valleycraft.utils.loot;
 
 import net.minecraft.item.Item;
 import net.minecraft.predicate.item.ItemPredicate;
