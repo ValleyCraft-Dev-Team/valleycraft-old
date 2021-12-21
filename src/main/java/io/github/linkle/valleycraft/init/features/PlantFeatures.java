@@ -79,7 +79,7 @@ public class PlantFeatures {
         
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
         
-        var vegetal = GenerationStep.Feature.UNDERGROUND_ORES;
+        var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
         Predicate<BiomeSelectionContext> snowOnly;
         snowOnly = context -> context.getBiome().getPrecipitation() == Precipitation.SNOW;
         

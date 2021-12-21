@@ -37,7 +37,7 @@ public class OceanFeatures {
             .configure(new SeaPatchConfig(Aquatic.CLAM.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(3, 5), 7));
     
     private static final ConfiguredFeature<?, ?> SAND_DOllAR_CONFIG = SEA_PATCH
-            .configure(new SeaPatchConfig(Aquatic.CLAM.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(1, 3), 5));
+            .configure(new SeaPatchConfig(Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(1, 3), 5));
 
     public static void initialize(SimpleConfig config) {
         if (config.get("disable-features-gen", false)) {
