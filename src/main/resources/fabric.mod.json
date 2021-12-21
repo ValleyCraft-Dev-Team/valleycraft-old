@@ -7,7 +7,8 @@
   "description": "ValleyCraft is a nature, farming, and cooking overhaul with a focus on exploration and discovery.",
   "authors": [
     "Linkle",
-    "AndEditor7"
+    "AndEditor7",
+    "OliviaTheVampire/Janetyqua"
   ],
   "contact": {
     "homepage": "https://github.com/l1nkl3/ValleyCraft-Wiki",
@@ -20,10 +21,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.linkle.valley.ValleyMain"
+	  "io.github.linkle.valleycraft.ValleyMain"
     ],
     "client": [
-      "net.linkle.valley.ValleyClient"
+      "io.github.linkle.valleycraft.client.ValleyClient"
     ]
   },
   "mixins": [
@@ -35,8 +36,5 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
