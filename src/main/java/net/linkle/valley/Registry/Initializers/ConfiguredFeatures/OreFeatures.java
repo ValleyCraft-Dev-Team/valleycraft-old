@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.linkle.valley.Registry.Utils.SimpleConfig;
 import net.minecraft.block.Block;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
@@ -271,6 +272,8 @@ public class OreFeatures {
                         UniformHeightProvider.create(yMinOffset, yMaxOffset))) // Inclusive min and max height
                 .spreadHorizontally()
                 .repeat(repeat);
-        return  RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, id));
+        var key = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier(MOD_ID, id));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, key.getValue(), config);
+        return key;
     }
 }
