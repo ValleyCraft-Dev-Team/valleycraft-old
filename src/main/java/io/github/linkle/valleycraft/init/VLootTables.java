@@ -49,7 +49,7 @@ public class VLootTables {
     }
     
     private static void fishingJunkLoot(FabricLootPoolBuilder pool) {
-        pool.with(ItemEntry.builder(Aquatic.RED_SEAGRASS).weight(17));
+        pool.with(ItemEntry.builder(Aquatic.RED_SEA_GRASS).weight(17));
         pool.with(ItemEntry.builder(Aquatic.GLOW_KELP).weight(10));
     }
 
