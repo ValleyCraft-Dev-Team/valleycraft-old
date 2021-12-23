@@ -25,7 +25,7 @@ public class Compostables {
         registerItem(Plants.SMALL_CACTUS, levelLow);
         registerItem(Plants.FLOWERING_CACTUS, levelLow);
         registerItem(Plants.HERBS, levelLow);
-        registerItem(Aquatic.RED_SEAGRASS, levelLow);
+        registerItem(Aquatic.RED_SEA_GRASS, levelLow);
         registerItem(Plants.TAPROOTS, levelLow);
         registerItem(Plants.DRY_MOSS_CARPET, levelLow);
         registerItem(Plants.HONEY_CLUSTER, levelLow);

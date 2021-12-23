@@ -1,16 +1,13 @@
 package io.github.linkle.valleycraft.init.features;
 
-import java.util.function.Predicate;
-
+import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
 import io.github.linkle.valleycraft.init.Plants;
-import io.github.linkle.valleycraft.utils.SimpleConfig;
 import io.github.linkle.valleycraft.utils.Util;
-import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.world.gen.features.ReedPatchFeature;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import io.github.linkle.valleycraft.world.gen.features.ReedPatchFeature;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.Identifier;
@@ -23,14 +20,11 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.ConstantHeightProvider;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+
+import java.util.function.Predicate;
 
 public class PlantFeatures {
     public static final ReedPatchFeature REED_PATCH = new ReedPatchFeature();    
@@ -71,12 +65,7 @@ public class PlantFeatures {
     private static final RegistryKey<PlacedFeature> SWAMP_BUSH_PATCH = create("js_bush_patch", Plants.SWAMP_BUSH, 7);
     private static final RegistryKey<PlacedFeature> HERB_PATCH = create("herbs_patch", Plants.HERBS, 1);
 
-    public static void initialize(SimpleConfig config) {
-        config.script("disable-features-gen", "Disable world gen features like plants, flowers, crops, and rocks.");
-        if (config.get("disable-features-gen", false)) {
-            return;
-        }
-        
+    public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
         
         var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
@@ -84,93 +73,130 @@ public class PlantFeatures {
         snowOnly = context -> context.getBiome().getPrecipitation() == Precipitation.SNOW;
         
         //wild patches
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.PLAINS), vegetal, WHEAT_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.wheatPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.PLAINS), vegetal, WHEAT_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, CARROT_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.carrotPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, CARROT_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), vegetal, BEET_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.beetPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), vegetal, BEET_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.SAVANNA), vegetal, POTATO_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.potatoPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.SAVANNA), vegetal, POTATO_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, WILLOW_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.willowPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, WILLOW_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, RIBBON_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.ribbonPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, RIBBON_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, ORANGE_FERN_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.orangeFernPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, ORANGE_FERN_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, ORANGE_BEAUTY_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.orangeBeautyPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, ORANGE_BEAUTY_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), vegetal, DAHLIA_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.dahliaPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), vegetal, DAHLIA_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), vegetal, LAVENDER_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.lavenderPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), vegetal, LAVENDER_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, SORREL_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.sorrelPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, SORREL_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS, Category.TAIGA), vegetal, DANDELION_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.dandelionPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS, Category.TAIGA), vegetal, DANDELION_PATCH);
 
         //herbs and taproots
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), vegetal, HERB_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.herbPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), vegetal, HERB_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), vegetal, TAPROOT_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.taprootPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), vegetal, TAPROOT_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, CROCUS_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.crocusPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, CROCUS_PATCH);
 
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, HOLLY_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.hollyPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, HOLLY_PATCH);
 
         //found in dark woods
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, MOREL_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.morelPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, MOREL_PATCH);
 
         //found in every biome except snow
-        BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, BUSH_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.bushPatchEnabled)
+            BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, BUSH_PATCH);
 
-        BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, SPROUT_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.sproutPatchEnabled)
+            BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, SPROUT_PATCH);
 
         //found in jungles
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, JUNGLE_CAP_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.jungleCapPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, JUNGLE_CAP_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, PAN_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.panPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, PAN_PATCH);
 
         //found in jungles and swamps
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.SWAMP), vegetal, SWAMP_BUSH_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.swampBushPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.SWAMP), vegetal, SWAMP_BUSH_PATCH);
 
-        BiomeModifications.addFeature(c -> !snowOnly.test(c), GenerationStep.Feature.VEGETAL_DECORATION, ROCK_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.rockPatchEnabled)
+            BiomeModifications.addFeature(c -> !snowOnly.test(c), GenerationStep.Feature.VEGETAL_DECORATION, ROCK_PATCH);
 
         //found in snowy biomes
-        BiomeModifications.addFeature(snowOnly, vegetal, SNOW_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.snowPatchEnabled)
+            BiomeModifications.addFeature(snowOnly, vegetal, SNOW_PATCH);
 
-        BiomeModifications.addFeature(snowOnly, vegetal, SNOW_ROCK_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.snowRockPatchEnabled)
+            BiomeModifications.addFeature(snowOnly, vegetal, SNOW_ROCK_PATCH);
 
         //these three share the same biomes, keep the values low so they don't overpopulate them!
         //found in forests
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, ROSE_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.rosePatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, ROSE_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, HONEYCLUSTER_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.honeyClusterPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, HONEYCLUSTER_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, LILAC_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.lilacPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, LILAC_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, PEONY_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.peonyPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, PEONY_PATCH);
 
         //found in deserts
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, TUMBLE_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.tumblePatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, TUMBLE_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, FLOWERING_CACTUS_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.floweringCactusPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, FLOWERING_CACTUS_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, CACTUS_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.cactusPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, CACTUS_PATCH);
 
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.SAVANNA), vegetal, ALIVE_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.alivePatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.SAVANNA), vegetal, ALIVE_PATCH);
 
         //found in podzol
-        BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, BITTER_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.bitterPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, BITTER_PATCH);
 
         //found in shattered savannas
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_SAVANNA), vegetal, TOMATO_PATCH);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.tomatoPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_SAVANNA), vegetal, TOMATO_PATCH);
         
         // 62 is where a sea level with water block inside.
         // If you want to config reeds counts or something, check the ReedPatchFeature class.
-        var key = Util.register("reed_patch", REED_PATCH.configure(DefaultFeatureConfig.INSTANCE), HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
+        RegistryKey<PlacedFeature> key = Util.register("reed_patch", REED_PATCH.configure(DefaultFeatureConfig.INSTANCE), 
+                HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
         var categories = BiomeSelectors.categories(Category.RIVER, Category.PLAINS, Category.SWAMP, Category.FOREST, Category.JUNGLE, Category.TAIGA);
-        BiomeModifications.addFeature(categories, vegetal, key);
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.reedPatchEnabled)
+            BiomeModifications.addFeature(categories, vegetal, key);
     }
     
     /** Create the random patch feature config. */

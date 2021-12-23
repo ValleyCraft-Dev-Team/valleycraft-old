@@ -1,11 +1,7 @@
 package io.github.linkle.valleycraft.init.features;
 
-import static io.github.linkle.valleycraft.utils.Util.register;
-
-import java.util.ArrayList;
-
+import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
-import io.github.linkle.valleycraft.utils.SimpleConfig;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -22,16 +18,14 @@ import net.minecraft.world.gen.decorator.BlockFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.PlacementModifier;
 import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+
+import java.util.ArrayList;
 
 public class Trees {
 
@@ -46,21 +40,14 @@ public class Trees {
 	
 	public static ConfiguredFeature<TreeFeatureConfig, ?> APPLE_TREE = Feature.TREE.configure(APPLE_TREE_CONFIG);
 	
-	public static void initialize(SimpleConfig config) {
-	    if (config.get("disable-features-gen", false)) {
-	        return;
-	    }
-	    
-		var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
-        ArrayList<PlacementModifier> list;
-        RegistryKey<PlacedFeature> place;
-		
-		list = new ArrayList<>();
+	public static void initialize() {
+        ArrayList<PlacementModifier> list = new ArrayList<>();
 		list.add(RarityFilterPlacementModifier.of(10));
 		list.add(SquarePlacementModifier.of());
         list.add(PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
         list.add(BlockFilterPlacementModifier.of(BlockPredicate.wouldSurvive(Plants.APPLE_SAPLING.getDefaultState(), BlockPos.ORIGIN)));
-        place = Util.register("apple_tree", Feature.TREE.configure(APPLE_TREE_CONFIG), list);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MEADOW), vegetal, place);
+        RegistryKey<PlacedFeature> appleTreeKey = Util.register("apple_tree", Feature.TREE.configure(APPLE_TREE_CONFIG), list);
+		if (ValleyMain.CONFIG.featureGenerations.trees.appleTreeEnabled)
+			BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MEADOW), GenerationStep.Feature.VEGETAL_DECORATION, appleTreeKey);
 	}
 }
