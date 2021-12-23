@@ -15,7 +15,6 @@ public class WeaponsAndTools {
     public static final Item TONGS = new TongsBase(new TongsToolMaterial());
 
     public static void initialize() {
-
         //Branch
         Util.register("tree_branch", new BranchBase(new BranchMaterial()));
 
@@ -28,35 +27,14 @@ public class WeaponsAndTools {
         //Climbing Axe
         Util.register("climbing_axe", new ClimbingAxeBase(new ClimingAxeToolMaterial()));
 
-        //Rock Pick
-        //register("rock_pick", new RockPickBase(new RockPickToolMaterial()));
-
         //Ice Tongs
         Util.register("tongs", TONGS);
 
         //Lumber Axe
         Util.register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));
 
-        //Sieve
-        //register("hand_sieve", new SieveBase(new SieveToolMaterial()));
-
-        //Rock Breaker
-        //register("rock_breaker", new RockBreakerBase(new RockBreakerToolMaterial()));
-
-        //Ladle
-        //register("soup_ladle", new LadleBase(new LadleMaterial()));
-
-        //Traveler's Sword
-        //register("travelers_sword", new TravelerSwordBase(new TravelerToolMaterialSword()));
-
-        //Witch's Tools
-        //register("witch_wand", new WitchWandBase(new WitchToolMaterialKnife()));
-        //register("witch_staff", new WitchStaffBase(new WitchToolMaterialKnife()));
-        //register("witch_dagger", new WitchKnifeBase(new WitchToolMaterialKnife()));
-
         //Druid Staff
         Util.register("druid_staff", new DruidStaffBase(new DruidToolMaterialStaff()));
-        //register("redstone_wand", REDSTONE_WAND);
 
         //Knives
         register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));
@@ -88,11 +66,5 @@ public class WeaponsAndTools {
         register("rg_axe", new RGAxeBase(new RoseGoldToolMaterialAxe()));
         register("rg_hoe", new RGHoeBase(new RoseGoldToolMaterialHoe()));
         register("rg_sword", new RGSwordBase(new RoseGoldToolMaterialSword()));
-
-        //Artifacts
-        //register("royal_sword", new RoyalSwordBase(new ToolMaterialSoldiersSpear()));
-        //register("soldiers_spear", new SoldiersSpearBase(new ToolMaterialSoldiersSpear()));
-        //register("diamond_cutlass", new DiamondCutlassBase(new DiamondToolMaterialCutlass()));
-        //register("rusty_sword", new RustySwordBase(new ToolMaterialSoldiersSpear()));
     }
 }

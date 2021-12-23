@@ -210,8 +210,6 @@ public class Plants {
         Util.registerWithItem("redstone_crystal", REDSTONE_CRYSTAL, natureGroup);
         Util.registerWithItem("snow_bush", SNOW_BUSH, natureGroup);
 
-        //registerWithItem("ameranth_crop", AMERANTH_BLOCK, natureGroup);
-
         MOSSY_VINES.setPlant(MOSSY_VINES_PLANT);
         MOSSY_VINES_PLANT.setStem(MOSSY_VINES);
         Util.registerWithItem("mossy_vines", MOSSY_VINES, natureGroup);

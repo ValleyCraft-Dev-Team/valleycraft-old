@@ -67,16 +67,12 @@ public class StoneBlocks {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
 
         Util.registerWithItem("brown_clay", B_CLAY, natureGroup);
-        //registerWithItem("muddy_reed_roots", B_ROOTS, natureGroup);
         Util.registerWithItem("volc_ash", VOLCANIC_ASH, natureGroup);
         Util.registerWithItem("volc_stone", VOLCANIC_STONE, natureGroup);
         Util.registerWithItem("scalding_volc_stone", SCALDING_VOLC, natureGroup);
 
         Util.registerWithItem("mixed_ore", MIXED_ORE, natureGroup);
         Util.registerWithItem("saltpeter_ore", SALTPETER_ORE, natureGroup);
-        //registerWithItem("fossil_ore", FOSSIL_ORE, natureGroup);
-        //registerWithItem("frozen_fossil_ore", FROZEN_FOSSIL, natureGroup);
-        //registerWithItem("fossilized_sand_cicada", CICADA, natureGroup);
 
         Util.registerWithItem("glacial_stone", GLACIAL_STONE, natureGroup);
         Util.registerWithItem("scalding_stone", SCALDING_STONE, natureGroup);

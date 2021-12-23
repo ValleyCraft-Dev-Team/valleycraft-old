@@ -56,17 +56,13 @@ public class MiscItems {
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
 
     public static void initialize() {
-
-        //register("stirrup", STIRRUP);
         Util.register("fur_clump", FUR_CLUMP);
-        //register("rawhide_lashing", RAWHIDE);
         Util.register("copper_billet", COPPER_BILLET);
         Util.register("knapped_dripstone_arrowhead", DRIP_ARROWHEAD);
         Util.register("knapped_flint_arrowhead", ARROWHEAD);
         Util.register("mud_brick", MUD_BRICK);
         Util.register("flour_bag", FLOUR_BAG);
         Util.register("puff_ball", PUFF_BALL);
-        //register("ameranth", AMERANTH);
         Util.register("saltpeter", SALTPETER);
         Util.register("fiber", FIBER);
         Util.register("book_cover", BOOK_COVER);
@@ -80,14 +76,6 @@ public class MiscItems {
         Util.register("arrow_bundle", ARROW_BUNDLE);
         Util.register("copper_nugget", COPPER_NUGGET);
         Util.register("netherite_nugget", NETHER_NUGGET);
-        //register("spruce_bark_hilt", SPRUCE_STICK);
-
-        //register("fish_hook_iron", HOOK_I);
-        //register("fish_hook_copper", HOOK_C);
-        //register("fish_hook_gold", HOOK_G);
-        //register("fish_hook_netherite", HOOK_N);
-
-        //register("coin", COIN);
 
         Util.register("mud", MUD);
         Util.register("mulch", MULCH);

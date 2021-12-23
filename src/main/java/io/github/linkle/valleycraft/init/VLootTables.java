@@ -1,9 +1,9 @@
 package io.github.linkle.valleycraft.init;
 
+import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.utils.loot.LootBuilder;
 import io.github.linkle.valleycraft.utils.loot.LootTableHelper;
 import io.github.linkle.valleycraft.utils.loot.LootUtils;
-import io.github.linkle.valleycraft.utils.SimpleConfig;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Blocks;
@@ -19,13 +19,12 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
 public class VLootTables {
-    public static void initialize(SimpleConfig config) {
+    public static void initialize() {
         blocks();
         entities();
         
         // You might have to improve this config description. Otherwise, remove this comment.
-        config.script("disable-fishing", "Disables fishing loots for valleycraft items");
-        if (!config.get("disable-fishing", false)) {
+        if (ValleyMain.CONFIG.fishing.fishingLootEnabled) {
             LootTableHelper.injectLoot(LootTables.FISHING_FISH_GAMEPLAY, VLootTables::fishingFishLoot);
             LootTableHelper.injectLoot(LootTables.FISHING_JUNK_GAMEPLAY, VLootTables::fishingJunkLoot);
         }
