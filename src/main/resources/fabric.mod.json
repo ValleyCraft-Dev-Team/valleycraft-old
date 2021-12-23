@@ -14,6 +14,13 @@
     "homepage": "https://github.com/l1nkl3/ValleyCraft-Wiki",
     "sources": "https://github.com/l1nkl3/Calamity"
   },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/kfpmJ5PtnF"
+      }
+    }
+  },
 
   "license": "CC-BY-NC-SA",
   "icon": "assets/valley/icon/icon.png",
@@ -25,6 +32,9 @@
     ],
     "client": [
       "io.github.linkle.valleycraft.client.ValleyClient"
+    ],
+    "modmenu": [
+      "io.github.linkle.valleycraft.config.ModMenuCompat"
     ]
   },
   "mixins": [

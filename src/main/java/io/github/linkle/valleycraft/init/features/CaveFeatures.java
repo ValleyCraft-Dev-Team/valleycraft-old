@@ -2,7 +2,6 @@ package io.github.linkle.valleycraft.init.features;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
-import io.github.linkle.valleycraft.utils.SimpleConfig;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.CavePatchConfig;
 import io.github.linkle.valleycraft.world.gen.features.CavePatchFeature;
@@ -38,36 +37,34 @@ public class CaveFeatures {
             .configure(new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(20),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6)));
 
-    public static void initialize(SimpleConfig config) {
-        if (config.get("disable-features-gen", false)) {
-            return;
-        }
-        
+    public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "glow_kelp"), GLOW_KELP);
         var underground = GenerationStep.Feature.UNDERGROUND_DECORATION;
         ArrayList<PlacementModifier> list;
-        RegistryKey<PlacedFeature> place;
-        
+
         list = new ArrayList<>();
         list.add(RarityFilterPlacementModifier.of(3));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(0)));
-        place = Util.register("redstone_crystal_patch_cave", REDSTONE_CRYSTAL_PATCH_CONFIG, list);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, place);
+        RegistryKey<PlacedFeature> redstoneCrystalPatchKey = Util.register("redstone_crystal_patch_cave", REDSTONE_CRYSTAL_PATCH_CONFIG, list);
+        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.redstoneCrystalPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, redstoneCrystalPatchKey);
         
         list = new ArrayList<>();
         list.add(RarityFilterPlacementModifier.of(4));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(24), YOffset.fixed(24)));
-        place = Util.register("spider_egg_patch_cave", SPIDER_EGG_PATCH_CONFIG, list);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, place);
+        RegistryKey<PlacedFeature> spiderEggPatchKey = Util.register("spider_egg_patch_cave", SPIDER_EGG_PATCH_CONFIG, list);
+        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.spiderSackPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, spiderEggPatchKey);
         
         list = new ArrayList<>();
         list.add(CountPlacementModifier.of(10));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.fixed(32)));
-        place = register("glow_kelp_patch_cave", GLOW_KELP.configure(FeatureConfig.DEFAULT), list);
-        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, place);
+        RegistryKey<PlacedFeature> glowKelpPatchKey = register("glow_kelp_patch_cave", GLOW_KELP.configure(FeatureConfig.DEFAULT), list);
+        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.glowKelpPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, glowKelpPatchKey);
     }
 }
