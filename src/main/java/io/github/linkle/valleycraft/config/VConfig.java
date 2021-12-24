@@ -20,6 +20,14 @@ public class VConfig implements ConfigData {
 	@Comment("Disables generate of features like plants, flowers, crops, and rocks.")
 	@ConfigEntry.Gui.CollapsibleObject
 	public FeatureGenerations featureGenerations = new FeatureGenerations();
+	
+	@Comment("Disables mob spawns")
+	@ConfigEntry.Gui.CollapsibleObject
+	public Mobs mobs = new Mobs();
+	
+	@Comment("Other miscellaneous options")
+    @ConfigEntry.Gui.CollapsibleObject
+    public Misc misc = new Misc();
 
 	public static class Fishing implements ConfigData {
 		public boolean fishingLootEnabled = true;
@@ -132,5 +140,14 @@ public class VConfig implements ConfigData {
 			public boolean appleTreeEnabled = true;
 		}
 	}
-
+	
+	public static class Mobs implements ConfigData {
+	    public boolean bearSpawnEnabled = true;
+	    public boolean duckSpawnEnabled = true;
+	}
+	
+	public static class Misc implements ConfigData {
+	    @Comment("Disables food's special status effects when eaten")
+        public boolean foodEffectsEnabled = true;
+    }
 }

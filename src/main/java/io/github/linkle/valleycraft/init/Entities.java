@@ -38,16 +38,20 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
         FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
 
-        var keys = BiomeSelectors.includeByKey(
-            BiomeKeys.OLD_GROWTH_PINE_TAIGA,
-            BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
-        );
-        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 3, 1, 2);
+        if (ValleyMain.CONFIG.mobs.bearSpawnEnabled) {
+            var keys = BiomeSelectors.includeByKey(
+                BiomeKeys.OLD_GROWTH_PINE_TAIGA,
+                BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
+            );
+            BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 3, 1, 2);
+        }
         
-        keys = BiomeSelectors.includeByKey(
-            BiomeKeys.OLD_GROWTH_BIRCH_FOREST
-        );
-        BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, DUCK, 8, 3, 4);
+        if (ValleyMain.CONFIG.mobs.duckSpawnEnabled) {
+            var keys = BiomeSelectors.includeByKey(
+                BiomeKeys.OLD_GROWTH_BIRCH_FOREST
+            );
+            BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, DUCK, 8, 3, 4);
+        }
     }
 
     public static void initializeClient() {
