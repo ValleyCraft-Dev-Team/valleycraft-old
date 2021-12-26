@@ -30,11 +30,11 @@ public class CaveFeatures {
     private static final GlowKelpFeature GLOW_KELP = new GlowKelpFeature();
 
     private static final ConfiguredFeature<?, ?> REDSTONE_CRYSTAL_PATCH_CONFIG = CAVE_PATCH
-            .configure(new CavePatchConfig(BlockStateProvider.of(Plants.REDSTONE_CRYSTAL.getDefaultState()), ConstantIntProvider.create(20),
+            .configure(new CavePatchConfig(BlockStateProvider.of(Plants.REDSTONE_CRYSTAL.getDefaultState()), ConstantIntProvider.create(30),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6)));
     
     private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = CAVE_PATCH
-            .configure(new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(20),
+            .configure(new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(30),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6)));
 
     public static void initialize() {
@@ -44,7 +44,6 @@ public class CaveFeatures {
         ArrayList<PlacementModifier> list;
 
         list = new ArrayList<>();
-        list.add(RarityFilterPlacementModifier.of(3));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(0)));
         RegistryKey<PlacedFeature> redstoneCrystalPatchKey = Util.register("redstone_crystal_patch_cave", REDSTONE_CRYSTAL_PATCH_CONFIG, list);
@@ -52,7 +51,7 @@ public class CaveFeatures {
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, redstoneCrystalPatchKey);
         
         list = new ArrayList<>();
-        list.add(RarityFilterPlacementModifier.of(4));
+        list.add(RarityFilterPlacementModifier.of(2));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(24), YOffset.fixed(24)));
         RegistryKey<PlacedFeature> spiderEggPatchKey = Util.register("spider_egg_patch_cave", SPIDER_EGG_PATCH_CONFIG, list);
@@ -60,7 +59,7 @@ public class CaveFeatures {
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, spiderEggPatchKey);
         
         list = new ArrayList<>();
-        list.add(CountPlacementModifier.of(10));
+        list.add(CountPlacementModifier.of(9));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.fixed(32)));
         RegistryKey<PlacedFeature> glowKelpPatchKey = register("glow_kelp_patch_cave", GLOW_KELP.configure(FeatureConfig.DEFAULT), list);

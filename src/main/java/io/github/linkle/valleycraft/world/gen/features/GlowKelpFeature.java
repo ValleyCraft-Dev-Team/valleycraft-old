@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.KelpBlock;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.Heightmap.Type;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
@@ -25,13 +26,17 @@ public class GlowKelpFeature extends Feature<DefaultFeatureConfig> {
         var plant = Aquatic.GLOW_KELP_PLANT.getDefaultState();
         var mutable = new BlockPos.Mutable();
 
-        for (int i = 0; i < 60; ++i) {
+        for (int i = 0; i < 50; ++i) {
             int xOffset = random.nextInt(7) - random.nextInt(7);
             int yOffset = random.nextInt(4) - random.nextInt(4);
             int zOffset = random.nextInt(7) - random.nextInt(7);
             mutable.set(origin, xOffset, yOffset, zOffset);
             
             if (world.getBlockState(mutable).isOf(Blocks.WATER) && world.getBlockState(mutable.down()).isOpaque()) {
+                int topY = world.getTopY(Type.WORLD_SURFACE_WG, mutable.getX(), mutable.getZ());
+                if (topY <= mutable.getY()) {
+                    continue;
+                }
                 var surface = mutable.toImmutable();
                 int height = 1 + random.nextInt(8);
                 for (int h = 0; h <= height; ++h) {
