@@ -726,5 +726,10 @@
   "text.autoconfig.valleycraft.option.featureGenerations.plantFeatures.tomatoPatchEnabled": "Tomato Patch Enabled",
   "text.autoconfig.valleycraft.option.featureGenerations.plantFeatures.reedPatchEnabled": "Reeds Patch Enabled",
   "text.autoconfig.valleycraft.option.featureGenerations.trees": "Trees",
-  "text.autoconfig.valleycraft.option.featureGenerations.trees.appleTreeEnabled": "Apple Tree Enabled"
+  "text.autoconfig.valleycraft.option.featureGenerations.trees.appleTreeEnabled": "Apple Tree Enabled",
+  "text.autoconfig.valleycraft.option.mobs": "Mob Spawns",
+  "text.autoconfig.valleycraft.option.mobs.bearSpawnEnabled": "Bear Spawn",
+  "text.autoconfig.valleycraft.option.mobs.duckSpawnEnabled": "Duck Spawn",
+  "text.autoconfig.valleycraft.option.misc": "Miscellaneous",
+  "text.autoconfig.valleycraft.option.misc.foodEffectsEnabled": "Food's Status Effects"
 }

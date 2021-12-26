@@ -1,6 +1,8 @@
 package io.github.linkle.valleycraft.utils;
 
 import com.mojang.datafixers.util.Pair;
+
+import io.github.linkle.valleycraft.ValleyMain;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.FoodComponent;
 
@@ -21,6 +23,7 @@ public class FoodStatusEffect {
     }
     
     public FoodStatusEffect addEffect(StatusEffectInstance effect, float chance) {
+        if (ValleyMain.CONFIG.misc.foodEffectsEnabled)
         statusEffects.add(new Pair<>(effect, chance));
         return this;
     }
