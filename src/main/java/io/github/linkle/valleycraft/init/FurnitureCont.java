@@ -51,17 +51,9 @@ public class FurnitureCont {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
         var furnGroupEpic = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.EPIC);
-        
-        //registerWithItem("planter_box", PLANTER, furnGroup);
-        //registerWithItem("planter_box_water", PLANTER_WATER, furnGroup);
-        //registerWithItem("planter_box_mycelium", PLANTER_MYCELIUM, furnGroup);
 
         Util.registerWithItem("stuffy_brown", STUFFY_BROWN, furnGroup);
         Util.registerWithItem("stuffy_white", STUFFY_WHITE, furnGroup);
-
-        //registerWithItem("golem_rusty", GOLEM_R, furnGroupRare);
-        //registerWithItem("golem_waxed", GOLEM_W, furnGroupRare);
-        //registerWithItem("golem_idling", GOLEM_I, furnGroupEpic);
 
         Util.registerWithItem("log_pile", LOGPILE, furnGroup);
 

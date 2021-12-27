@@ -17,7 +17,7 @@ public class PotBlock {
         register("potted_single_rose", POTTED_ROSE_SPRIG);
     }
     
-    private static void register(String ID, Block flower) {
-        Registry.register(Registry.BLOCK, new Identifier(ValleyMain.MOD_ID, ID), flower);
+    private static void register(String name, Block flower) {
+        Registry.register(Registry.BLOCK, new Identifier(ValleyMain.MOD_ID, name), flower);
     }
 }
