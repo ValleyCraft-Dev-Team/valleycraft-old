@@ -160,7 +160,7 @@ public class Furniture {
     public static final Block BEVELED_PANE_A_N = new BeveledGlassBlock();
 
     public static final Block MUG_BLOCK = new DishBlock();
-    public static final Block JAR_BLOCK = new DishBlock();
+    //public static final Block JAR_BLOCK = new DishBlock();
     public static final Block BENTO_BLOCK = new BentoBlock();
     public static final Block BOWL_BLOCK = new BowlBlock();
     public static final Block STEW_POT = new StewPotBlock();
@@ -180,7 +180,7 @@ public class Furniture {
 
     public static final Block LANTERN_HANGING = new LanternBlock(15, false);
     public static final Block SOUL_HANGING = new LanternBlock(10, false);
-    public static final Block FAIRY_HANGING = new LanternBlock(15, false);
+    //public static final Block FAIRY_HANGING = new LanternBlock(15, false);
     public static final Block RED_HANGING = new LanternBlock(7, true);
 
     public static final Block CHIMNEY_COBBLE = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
@@ -208,7 +208,7 @@ public class Furniture {
 
     public static final Block KEG = new KegBlock();
 
-    public static final Block PET_BED = new PetBedBlock();
+    //public static final Block PET_BED = new PetBedBlock();
     public static final Block WREATH = new WreathBlock();
     public static final Block CREST = new CrestBlock();
 

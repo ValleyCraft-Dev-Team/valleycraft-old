@@ -19,7 +19,7 @@ public class StoneBlocks {
 
     public static final Block MIXED_ORE = new StoneOreBlock();
     public static final Block SALTPETER_ORE = new StoneOreBlock();
-    public static final Block FROZEN_FOSSIL = new FrozenFossilOreBlock();
+    //public static final Block FROZEN_FOSSIL = new FrozenFossilOreBlock();
 
     public static final Block SCALDING_STONE = new ScaldingBlock();
     public static final Block SCALDING_SANDSTONE = new ScaldingBlock();
@@ -60,7 +60,7 @@ public class StoneBlocks {
     public static final Block GREEN_GRANITE_SMOOTH = new StoneBlock();
     public static final Block LIMESTONE_SMOOTH = new StoneBlock();
 
-    public static final Block CICADA = new CicadaBlock();
+    //public static final Block CICADA = new CicadaBlock();
 
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);

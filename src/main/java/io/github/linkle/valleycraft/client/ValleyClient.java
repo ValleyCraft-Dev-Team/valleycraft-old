@@ -18,8 +18,6 @@ import static io.github.linkle.valleycraft.init.Furniture.*;
 import static io.github.linkle.valleycraft.init.FurnitureCont.CAMPFIRE_RING;
 import static io.github.linkle.valleycraft.init.Plants.*;
 import static io.github.linkle.valleycraft.init.PotBlock.POTTED_ROSE_SPRIG;
-import static io.github.linkle.valleycraft.init.StoneBlocks.CICADA;
-import static io.github.linkle.valleycraft.init.StoneBlocks.FROZEN_FOSSIL;
 
 @Environment(EnvType.CLIENT)
 public class ValleyClient implements ClientModInitializer {
@@ -63,12 +61,9 @@ public class ValleyClient implements ClientModInitializer {
 
         culloutBlocks.add(REDSTONE_LANTERN);
         culloutBlocks.add(WREATH);
-        
-        culloutBlocks.add(PET_BED);
 
         culloutBlocks.add(SOUL_HANGING);
         culloutBlocks.add(LANTERN_HANGING);
-        culloutBlocks.add(FAIRY_HANGING);
         culloutBlocks.add(RED_HANGING);
 
         culloutBlocks.add(ROUNDED_BARREL);
@@ -86,34 +81,10 @@ public class ValleyClient implements ClientModInitializer {
         //bushes
         culloutBlocks.add(TUMBLE_WEED);
 
-        culloutBlocks.add(JAR_BLOCK);
-        culloutBlocks.add(BOWL_BLOCK);
-        culloutBlocks.add(MUG_BLOCK);
-        culloutBlocks.add(BENTO_BLOCK);
-        culloutBlocks.add(STEW_POT);
-        culloutBlocks.add(TABLE_OAK);
-        culloutBlocks.add(TABLE_SPRUCE);
-        culloutBlocks.add(TABLE_BIRCH);
-        culloutBlocks.add(TABLE_ACACIA);
-        culloutBlocks.add(TABLE_JUNGLE);
-        culloutBlocks.add(TABLE_DARK);
-        culloutBlocks.add(TABLE_CRIMSON);
-        culloutBlocks.add(TABLE_WARPED);
-        culloutBlocks.add(TABLE_STONE);
-        culloutBlocks.add(STOOL_OAK);
-        culloutBlocks.add(STOOL_SPRUCE);
-        culloutBlocks.add(STOOL_JUNGLE);
-        culloutBlocks.add(STOOL_ACACIA);
-        culloutBlocks.add(STOOL_BIRCH);
-        culloutBlocks.add(STOOL_DARK);
-        culloutBlocks.add(STOOL_CRIMSON);
-        culloutBlocks.add(STOOL_WARPED);
-        culloutBlocks.add(SMALL_MUG_BLOCK);
-        culloutBlocks.add(STOOL_PLAID);
-        culloutBlocks.add(TABLE_PLAID);
-        culloutBlocks.add(CHAIR_STONE);
-        
-        culloutBlocks.add(CREST);
+        //culloutBlocks.add(BOWL_BLOCK);
+        //culloutBlocks.add(MUG_BLOCK);
+        //culloutBlocks.add(BENTO_BLOCK);
+        //culloutBlocks.add(STEW_POT);
 
         culloutBlocks.add(SMALL_CACTUS);
         culloutBlocks.add(ROSEBUSH);
@@ -137,13 +108,13 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(FLOWERING_CACTUS);
         culloutBlocks.add(PEPPER_CROP_BLOCK);
         culloutBlocks.add(EGGPLANT_CROP_BLOCK);
-        culloutBlocks.add(ROCK_PILE);
+        //culloutBlocks.add(ROCK_PILE);
         culloutBlocks.add(REDSTONE_CRYSTAL);
         culloutBlocks.add(ONION_CROP_BLOCK);
         culloutBlocks.add(SNOW_CROP_BLOCK);
         culloutBlocks.add(MINERS_CROP_BLOCK);
         culloutBlocks.add(SNOW_BUSH);
-        culloutBlocks.add(SNOW_ROCK_PILE);
+        //culloutBlocks.add(SNOW_ROCK_PILE);
         culloutBlocks.add(MOSSY_VINES);
         culloutBlocks.add(MOSSY_VINES_PLANT);
         culloutBlocks.add(DRY_VINES);
@@ -168,8 +139,8 @@ public class ValleyClient implements ClientModInitializer {
 
         culloutBlocks.add(POTTED_ROSE_SPRIG);
 
-        culloutBlocks.add(FROZEN_FOSSIL);
-        culloutBlocks.add(CICADA);
+        //culloutBlocks.add(FROZEN_FOSSIL);
+        //culloutBlocks.add(CICADA);
         
         //Seed Type Crops
         culloutBlocks.add(PUFF_CROP_BLOCK);
