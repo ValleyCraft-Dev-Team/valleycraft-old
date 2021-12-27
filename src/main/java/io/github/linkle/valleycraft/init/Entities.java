@@ -5,6 +5,8 @@ import io.github.linkle.valleycraft.client.entity.renderer.BearEntityRenderer;
 import io.github.linkle.valleycraft.entities.DuckEntity;
 import io.github.linkle.valleycraft.client.entity.renderer.DuckEntityRenderer;
 import io.github.linkle.valleycraft.ValleyMain;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -54,6 +56,7 @@ public class Entities {
         }
     }
 
+    @Environment(EnvType.CLIENT)
     public static void initializeClient() {
         EntityRendererRegistry.register(BEAR, BearEntityRenderer::new);
         EntityRendererRegistry.register(DUCK, DuckEntityRenderer::new);

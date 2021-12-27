@@ -23,7 +23,6 @@ public class VLootTables {
         blocks();
         entities();
         
-        // You might have to improve this config description. Otherwise, remove this comment.
         if (ValleyMain.CONFIG.fishing.fishingLootEnabled) {
             LootTableHelper.injectLoot(LootTables.FISHING_FISH_GAMEPLAY, VLootTables::fishingFishLoot);
             LootTableHelper.injectLoot(LootTables.FISHING_JUNK_GAMEPLAY, VLootTables::fishingJunkLoot);
