@@ -1,44 +1,29 @@
 {
-	"credit": "Made with Blockbench",
-	"texture_size": [32, 32],
-	"textures": {
-		"1": "valley:blocks/netherite_chain_block",
-		"particle": "minecraft:block/netherite_block"
-
-	},
-	"elements": [
-		{
-			"from": [6.5, 0, 8],
-			"to": [9.5, 16, 8],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
-			"faces": {
-				"north": {"uv": [0, 0, 3, 16], "texture": "#1"},
-				"east": {"uv": [0, 0, 0, 8], "texture": "#1"},
-				"south": {"uv": [0, 0, 3, 16], "texture": "#1"},
-				"west": {"uv": [0, 0, 0, 8], "texture": "#1"},
-				"up": {"uv": [1.5, 0, 0, 0], "texture": "#1"},
-				"down": {"uv": [1.5, 0, 0, 0], "texture": "#1"}
-			}
-		},
-		{
-			"from": [8, 0, 6.5],
-			"to": [8, 16, 9.5],
-			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
-			"faces": {
-				"north": {"uv": [0, 0, 0, 8], "texture": "#1"},
-				"east": {"uv": [3, 0, 6, 16], "texture": "#1"},
-				"south": {"uv": [0, 0, 3, 16], "texture": "#1"},
-				"west": {"uv": [3, 0, 6, 16], "texture": "#1"},
-				"up": {"uv": [0, 1.5, 0, 0], "texture": "#1"},
-				"down": {"uv": [0, 0, 0, 1.5], "texture": "#1"}
-			}
-		}
-	],
-	"groups": [
-		{
-			"name": "group",
-			"origin": [8, 8, 8],
-			"children": [0, 1]
-		}
-	]
+    "parent": "block/block",
+    "textures": {
+        "particle": "valley:blocks/netherite_chain_block",
+        "all": "valley:blocks/netherite_chain_block"
+    },
+    "elements": [
+        {
+            "from": [ 6.5, 0, 8 ],
+            "to": [ 9.5, 16, 8 ],
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45},
+            "shade": false,
+            "faces": {
+                "north": { "uv": [ 3, 0, 0, 16 ], "texture": "#all" },
+                "south": { "uv": [ 0, 0, 3, 16 ], "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 8, 0, 6.5 ],
+            "to": [ 8, 16, 9.5 ],
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45},
+            "shade": false,
+            "faces": {
+                "west": { "uv": [ 6, 0, 3, 16 ], "texture": "#all" },
+                "east": { "uv": [ 3, 0, 6, 16 ], "texture": "#all" }
+            }
+        }
+    ]
 }

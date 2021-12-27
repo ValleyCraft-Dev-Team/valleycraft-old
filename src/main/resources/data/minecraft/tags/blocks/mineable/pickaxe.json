@@ -68,6 +68,9 @@
 		"valley:charcoal_block",
 		"valley:chimney_cobble",
 		"valley:redstone_crystal",
-		"valley:brick_furnace"
+		"valley:brick_furnace",
+		"valley:copper_chain",
+		"valley:golden_chain",
+		"valley:netherite_chain"
 	]
 }
