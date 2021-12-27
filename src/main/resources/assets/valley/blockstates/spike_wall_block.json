@@ -1,48 +1,30 @@
 {
   "variants": {
-    "facing=east,waterlogged=true": {
-      "model": "valley:block/spike_wall_block"
+    "facing=down": {
+      "model": "valley:block/spike_block",
+      "x": 180
     },
-    "facing=east,waterlogged=false": {
-      "model": "valley:block/spike_wall_block"
-    },
-    "facing=north,waterlogged=true": {
-      "model": "valley:block/spike_wall_block",
-      "y": 270
-    },
-    "facing=north,waterlogged=false": {
-      "model": "valley:block/spike_wall_block",
-      "y": 270
-    },
-    "facing=south,waterlogged=true": {
-      "model": "valley:block/spike_wall_block",
+    "facing=east": {
+      "model": "valley:block/spike_block",
+      "x": 90,
       "y": 90
     },
-    "facing=south,waterlogged=false": {
-      "model": "valley:block/spike_wall_block",
-      "y": 90
+    "facing=north": {
+      "model": "valley:block/spike_block",
+      "x": 90
     },
-    "facing=west,waterlogged=true": {
-      "model": "valley:block/spike_wall_block",
+    "facing=south": {
+      "model": "valley:block/spike_block",
+      "x": 90,
       "y": 180
     },
-    "facing=west,waterlogged=false": {
-      "model": "valley:block/spike_wall_block",
-      "y": 180
-    },
-    "facing=up,waterlogged=true": {
+    "facing=up": {
       "model": "valley:block/spike_block"
     },
-    "facing=up,waterlogged=false": {
-      "model": "valley:block/spike_block"
-    },
-    "facing=down,waterlogged=true": {
-      "model": "valley:block/spike_block_down",
-      "y": 180
-    },
-    "facing=down,waterlogged=false": {
-      "model": "valley:block/spike_block_down",
-      "y": 180
+    "facing=west": {
+      "model": "valley:block/spike_block",
+      "x": 90,
+      "y": 270
     }
   }
 }

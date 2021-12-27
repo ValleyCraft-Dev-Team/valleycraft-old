@@ -23,7 +23,7 @@ public class LadderBlock extends HorizontalWithWaterBlock {
     public LadderBlock() {
         this(FabricBlockSettings.of(Material.WOOD)
                 .sounds(BlockSoundGroup.WOOD)
-                .strength(0.7f));
+                .strength(0.6f));
     }
 
     public LadderBlock(FabricBlockSettings setting) {

@@ -22,7 +22,12 @@ public class DirectionBlock extends FacingBlock {
     
     /** A common method to set its default state. */
     protected void setDefaultState() {
-        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));
+        setDefaultState(Direction.NORTH);
+    }
+    
+    /** A common method to set its default state. */
+    protected void setDefaultState(Direction facing) {
+        setDefaultState(stateManager.getDefaultState().with(FACING, facing));
     }
 
     /** Please call this subclass method to append facing property: <code>super.appendProperties(builder)</code> */
