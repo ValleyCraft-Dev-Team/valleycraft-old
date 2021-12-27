@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+     "all": "valley:blocks/mixed_ore_deep"
+   }
+}

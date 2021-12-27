@@ -8,6 +8,7 @@ import io.github.linkle.valleycraft.blocks.plants.MossBlock;
 import io.github.linkle.valleycraft.blocks.plants.MudBlock;
 import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
@@ -15,10 +16,12 @@ import static io.github.linkle.valleycraft.init.ItemGroups.NATURE_GROUP;
 
 public class StoneBlocks {
     public static final Block VOLCANIC_ASH = new VolcanicAshBlock();
-    public static final Block VOLCANIC_STONE = new StoneOreBlock();
+    public static final Block VOLCANIC_STONE = new StoneBlock();
 
-    public static final Block MIXED_ORE = new StoneOreBlock();
-    public static final Block SALTPETER_ORE = new StoneOreBlock();
+    public static final Block MIXED_ORE = new BaseOreBlock(Blocks.STONE);
+    public static final Block DEEPSLATE_MIXED_ORE = new BaseOreBlock(Blocks.DEEPSLATE);
+    public static final Block SALTPETER_ORE = new BaseOreBlock(Blocks.STONE);
+    public static final Block DEEPSLATE_SALTPETER_ORE = new BaseOreBlock(Blocks.DEEPSLATE);
     public static final Block FROZEN_FOSSIL = new FrozenFossilOreBlock();
 
     public static final Block SCALDING_STONE = new ScaldingBlock();
@@ -28,16 +31,16 @@ public class StoneBlocks {
     public static final Block SCALDING_VOLC = new ScaldingBlock();
     public static final Block GLACIAL_STONE = new GlacialStone();
 
-    public static final Block SALT_ORE = new StoneOreBlock();
-    public static final Block SALT_BLOCK = new StoneOreBlock();
-    public static final Block NETHER_SALT = new StoneOreBlock();
-    public static final Block NETHER_COAL_ORE = new StoneOreBlock();
+    public static final Block SALT_ORE = new BaseOreBlock(Blocks.STONE);
+    public static final Block SALT_BLOCK = new StoneBlock();
+    public static final Block NETHER_SALT = new BaseOreBlock(Blocks.NETHER_GOLD_ORE);
+    public static final Block NETHER_COAL_ORE = new BaseOreBlock(Blocks.NETHER_GOLD_ORE);
     public static final Block B_CLAY = new MudBlock();
 
     public static final Block JUNGLE = new StoneBlock();
     public static final Block JUNGLE_MOSSY = new MossBlock();
     public static final Block JUNGLE_SPOREY = new SporeBlock();
-    public static final Block JUNGLE_COBBLE = new StoneOreBlock();
+    public static final Block JUNGLE_COBBLE = new BaseOreBlock(Blocks.STONE);
     public static final Block STONE_MOSSY = new MossBlock();
     public static final Block DRY_MOSS_STONE = new DryMossBlock();
 
@@ -72,7 +75,9 @@ public class StoneBlocks {
         Util.registerWithItem("scalding_volc_stone", SCALDING_VOLC, natureGroup);
 
         Util.registerWithItem("mixed_ore", MIXED_ORE, natureGroup);
+        Util.registerWithItem("deepslate_mixed_ore", DEEPSLATE_MIXED_ORE, natureGroup);
         Util.registerWithItem("saltpeter_ore", SALTPETER_ORE, natureGroup);
+        Util.registerWithItem("deepslate_saltpeter_ore", DEEPSLATE_SALTPETER_ORE, natureGroup);
 
         Util.registerWithItem("glacial_stone", GLACIAL_STONE, natureGroup);
         Util.registerWithItem("scalding_stone", SCALDING_STONE, natureGroup);
@@ -86,7 +91,7 @@ public class StoneBlocks {
         Util.registerWithItem("jungle_mossy", JUNGLE_MOSSY, natureGroup);
         Util.registerWithItem("stone_mossy", STONE_MOSSY, natureGroup);
         Util.registerWithItem("dry_mossy_stone", DRY_MOSS_STONE, natureGroup);
-        
+
         Util.registerWithItem("oceanstone", OCEAN_STONE, natureGroup);
         Util.registerWithItem("swampstone", SWAMP_STONE, natureGroup);
         Util.registerWithItem("darkstone", DARK_STONE, natureGroup);
