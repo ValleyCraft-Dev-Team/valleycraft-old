@@ -9,7 +9,7 @@ public class Sounds {
     public static final SoundEvent DUCK_QUACK = register("duck_quack");
     
     public static void initialize() {
-        System.out.println("initialing the sounds");
+        ValleyMain.LOGGER.info("initialing the sounds");
     }
     
     private static SoundEvent register(String ID) {

@@ -8,6 +8,7 @@ import io.github.linkle.valleycraft.world.gen.features.CavePatchFeature;
 import io.github.linkle.valleycraft.world.gen.features.GlowKelpFeature;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.block.Blocks;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.Registry;
@@ -30,12 +31,12 @@ public class CaveFeatures {
     private static final GlowKelpFeature GLOW_KELP = new GlowKelpFeature();
 
     private static final ConfiguredFeature<?, ?> REDSTONE_CRYSTAL_PATCH_CONFIG = CAVE_PATCH
-            .configure(new CavePatchConfig(BlockStateProvider.of(Plants.REDSTONE_CRYSTAL.getDefaultState()), ConstantIntProvider.create(30),
-                    ConstantIntProvider.create(4), ConstantIntProvider.create(6)));
+            .configure(new CavePatchConfig(BlockStateProvider.of(Plants.REDSTONE_CRYSTAL.getDefaultState()), ConstantIntProvider.create(15),
+                    ConstantIntProvider.create(4), ConstantIntProvider.create(6), 0.03F, Blocks.DEEPSLATE_REDSTONE_ORE.getDefaultState()));
     
     private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = CAVE_PATCH
             .configure(new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(30),
-                    ConstantIntProvider.create(4), ConstantIntProvider.create(6)));
+                    ConstantIntProvider.create(4), ConstantIntProvider.create(6), 1.0F, Blocks.COBWEB.getDefaultState()));
 
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);

@@ -105,7 +105,9 @@
   "block.valley.limestone": "Limestone",
 
   "block.valley.mixed_ore": "Mixed Ore",
+  "block.valley.deepslate_mixed_ore": "Deepslate Mixed Ore",
   "block.valley.saltpeter_ore": "Saltpeter Ore",
+  "block.valley.deepslate_saltpeter_ore": "Deepslate Saltpeter Ore",
   "block.valley.salt_ore": "Rock Salt Ore",
   "block.valley.nether_salt": "Nether Rock Salt Ore",
   "block.valley.nether_coal_ore": "Nether Coal Ore",

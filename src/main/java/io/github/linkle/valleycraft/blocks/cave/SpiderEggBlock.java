@@ -14,6 +14,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.*;
 import net.minecraft.world.explosion.Explosion;
@@ -30,12 +31,15 @@ public class SpiderEggBlock extends Block {
     }
 
     private void spawnCaveSpider(ServerWorld world, BlockPos pos) {
-        var entity = EntityType.CAVE_SPIDER.create(world);
-        Objects.requireNonNull(entity).refreshPositionAndAngles(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, 0, 0);
-        world.spawnEntity(entity);
-        entity.playSpawnEffects();
-        
-        var player = world.getClosestPlayer(pos.getX()+0.5, pos.getY()+0.5, pos.getZ()+0.5, 16, false);
+        int randomSpiderAmount = MathHelper.nextBetween(world.random, 1, 3);
+        for (int i = 0; i < randomSpiderAmount; i++) {
+            var entity = EntityType.CAVE_SPIDER.create(world);
+            Objects.requireNonNull(entity).refreshPositionAndAngles(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, 0, 0);
+            world.spawnEntity(entity);
+            entity.playSpawnEffects();
+        }
+
+        var player = world.getClosestPlayer(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 16, false);
         if (player != null) {
             VCriteria.SPIDER_SPAWN.trigger((ServerPlayerEntity)player);
         }
