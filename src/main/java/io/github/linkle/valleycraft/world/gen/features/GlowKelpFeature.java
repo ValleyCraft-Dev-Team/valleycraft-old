@@ -33,7 +33,7 @@ public class GlowKelpFeature extends Feature<DefaultFeatureConfig> {
             mutable.set(origin, xOffset, yOffset, zOffset);
             
             if (world.getBlockState(mutable).isOf(Blocks.WATER) && world.getBlockState(mutable.down()).isOpaque()) {
-                int topY = world.getTopY(Type.WORLD_SURFACE_WG, mutable.getX(), mutable.getZ());
+                int topY = world.getTopY(Type.OCEAN_FLOOR_WG, mutable.getX(), mutable.getZ());
                 if (topY <= mutable.getY()) {
                     continue;
                 }

@@ -8,7 +8,8 @@ import net.minecraft.block.KelpPlantBlock;
 public class GlowKelpPlant extends KelpPlantBlock {
 
     public GlowKelpPlant() {
-        super(Settings.copy(Blocks.KELP_PLANT).luminance(s -> 10));
+        super(Settings.copy(Blocks.KELP_PLANT).luminance(s -> 10)
+                .emissiveLighting((blockState, pos, view) -> true));
     }
 
     @Override
