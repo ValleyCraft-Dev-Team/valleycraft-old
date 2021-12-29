@@ -43,6 +43,7 @@ public class OceanFeatures {
 
         Predicate<BiomeSelectionContext> selection;
         ArrayList<PlacementModifier> list;
+        var step = GenerationStep.Feature.TOP_LAYER_MODIFICATION; // Fix  random hole patches on ice layer
 
         list = new ArrayList<>();
         list.add(SquarePlacementModifier.of());
@@ -50,7 +51,7 @@ public class OceanFeatures {
         RegistryKey<PlacedFeature> redSeaGrassPatchKey = Util.register("red_seagrass_patch", RED_SEAGRASS_PATCH_CONFIG, list);
         selection = BiomeSelectors.categories(Category.RIVER, Category.OCEAN, Category.SWAMP, Category.BEACH);
         if (ValleyMain.CONFIG.featureGenerations.oceanFeatures.redSeaGrassPatchEnabled)
-            BiomeModifications.addFeature(selection, GenerationStep.Feature.VEGETAL_DECORATION, redSeaGrassPatchKey);
+            BiomeModifications.addFeature(selection, step, redSeaGrassPatchKey);
         
         list = new ArrayList<>();
         list.add(RarityFilterPlacementModifier.of(3));
@@ -58,7 +59,7 @@ public class OceanFeatures {
         RegistryKey<PlacedFeature> clamPatchKey = Util.register("clam_patch", CLAM_PATCH_CONFIG, list);
         selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
         if (ValleyMain.CONFIG.featureGenerations.oceanFeatures.clamPatchEnabled)
-            BiomeModifications.addFeature(selection, GenerationStep.Feature.VEGETAL_DECORATION, clamPatchKey);
+            BiomeModifications.addFeature(selection, step, clamPatchKey);
         
         list = new ArrayList<>();
         list.add(RarityFilterPlacementModifier.of(6));
@@ -67,7 +68,7 @@ public class OceanFeatures {
         RegistryKey<PlacedFeature> sandDollarPatchKey = Util.register("sand_dollar_patch", SAND_DOllAR_CONFIG, list);
         selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
         if (ValleyMain.CONFIG.featureGenerations.oceanFeatures.sandDollarPatchEnabled)
-            BiomeModifications.addFeature(selection, GenerationStep.Feature.VEGETAL_DECORATION, sandDollarPatchKey);
+            BiomeModifications.addFeature(selection, step, sandDollarPatchKey);
     }
 
 }

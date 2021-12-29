@@ -69,6 +69,7 @@ public class PlantFeatures {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
         
         var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
+        var topLayer = GenerationStep.Feature.TOP_LAYER_MODIFICATION;
         Predicate<BiomeSelectionContext> snowOnly;
         snowOnly = context -> context.getBiome().getPrecipitation() == Precipitation.SNOW;
         
@@ -196,7 +197,7 @@ public class PlantFeatures {
                 HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
         var categories = BiomeSelectors.categories(Category.RIVER, Category.PLAINS, Category.SWAMP, Category.FOREST, Category.JUNGLE, Category.TAIGA);
         if (ValleyMain.CONFIG.featureGenerations.plantFeatures.reedPatchEnabled)
-            BiomeModifications.addFeature(categories, vegetal, key);
+            BiomeModifications.addFeature(categories, topLayer, key);
     }
     
     /** Create the random patch feature config. */
@@ -206,7 +207,12 @@ public class PlantFeatures {
     
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockState block, int tries) {
-        var simple = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(BlockStateProvider.of(block))).withInAirFilter();
+        return create(id, BlockStateProvider.of(block), tries);
+    }
+    
+    /** Create the random patch feature config. */
+    private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries) {
+        var simple = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(block)).withInAirFilter();
         var config = ConfiguredFeatures.createRandomPatchFeatureConfig(tries, simple);
         return Util.register(id, Feature.RANDOM_PATCH.configure(config), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
     }
