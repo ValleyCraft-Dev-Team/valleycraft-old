@@ -35,7 +35,7 @@ public class FoodAndCooking {
 
     public static final Item HONEYCOMB_CHUNK = new FoodItemBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.HONEYCOMB_CHUNK);
     public static final Item SALT = new FoodItemBase(new Item.Settings().group(MISC_GROUP), 1, 0.5f);
-    public static final Item CLOWN_SALAD = new BowlBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.CLOWN_SALAD);
+    public static final Item CLOWN_SALAD = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, FoodStatusEffects.CLOWN_SALAD);
     public static final Item CAKE_SLICE = new FoodItemBase(new Item.Settings(), 2, 0.4f);
 
     public static final Item RAW_EGGS = new BowlBase(new Item.Settings().maxCount(1), 1, 1.2f, FoodStatusEffects.RAW_EGGS);
@@ -60,7 +60,7 @@ public class FoodAndCooking {
     public static final Item BBOX_SALMON = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_SALMON);
     public static final Item BBOX_UNAGI = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_UNAGI);
     public static final Item BBOX_GH_TAIL = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_GH_TAIL);
-    public static final Item STEAMED_COD = new FoodItemBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.STEAMED_COD);
+    public static final Item STEAMED_COD = new FoodItemBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.STEAMED_COD);
     public static final Item CARROT_STEW = new BowlBase(new Item.Settings().maxCount(1), 6, 0.5f, FoodStatusEffects.CARROT_STEW);
     public static final Item CREAMY_HEART_STEW = new BowlBase(new Item.Settings().maxCount(1), 6, 0.5f, FoodStatusEffects.CREAMY_HEART_STEW);
 
@@ -111,42 +111,42 @@ public class FoodAndCooking {
     public static final Item SPICY_BERRY_WINE = new DrinkBottleBase(new Item.Settings(), 2, 1f, FoodStatusEffects.SPICY_BERRY_WINE);
     public static final Item CHORUS_WINE = new DrinkBottleBase(new Item.Settings(), 2, 1f, FoodStatusEffects.CHORUS_WINE);
 
-    public static final Item CHICKEN_CURRY = new BowlBase(new Item.Settings(), 10, 0.7f, FoodStatusEffects.CHICKEN_CURRY);
-    public static final Item FULL_BREAKFAST_VEGETARIAN = new BowlBase(new Item.Settings(), 9, 0.6f, FoodStatusEffects.FULL_BREAKFAST_VEGETARIAN);
+    public static final Item CHICKEN_CURRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.7f, FoodStatusEffects.CHICKEN_CURRY);
+    public static final Item FULL_BREAKFAST_VEGETARIAN = new BowlBase(new Item.Settings().maxCount(1), 9, 0.6f, FoodStatusEffects.FULL_BREAKFAST_VEGETARIAN);
     public static final Item COOKED_PUMPKIN_SEEDS = new FoodItemBase(new Item.Settings(), 2, 0.4f);
-    public static final Item COD_CHOWDER = new BowlBase(new Item.Settings(), 10, 0.7f, FoodStatusEffects.COD_CHOWDER);
-    public static final Item CLAM_CHOWDER = new BowlBase(new Item.Settings(), 10, 0.7f, FoodStatusEffects.CLAM_CHOWDER);
-    public static final Item SARDINE_SOUP = new BowlBase(new Item.Settings(), 10, 0.7f, FoodStatusEffects.SARDINE_SOUP);
-    public static final Item SEAWEED_SALAD = new BowlBase(new Item.Settings(), 4, 0.5f);
-    public static final Item MUSHROOM_SALAD = new BowlBase(new Item.Settings(), 4, 0.5f);
-    public static final Item MINER_SALAD = new BowlBase(new Item.Settings(), 4, 0.4f);
-    public static final Item POKE_BOWL = new BowlBase(new Item.Settings(), 8, 0.4f, FoodStatusEffects.POKE_BOWL);
+    public static final Item COD_CHOWDER = new BowlBase(new Item.Settings().maxCount(1), 10, 0.7f, FoodStatusEffects.COD_CHOWDER);
+    public static final Item CLAM_CHOWDER = new BowlBase(new Item.Settings().maxCount(1), 10, 0.7f, FoodStatusEffects.CLAM_CHOWDER);
+    public static final Item SARDINE_SOUP = new BowlBase(new Item.Settings().maxCount(1), 10, 0.7f, FoodStatusEffects.SARDINE_SOUP);
+    public static final Item SEAWEED_SALAD = new BowlBase(new Item.Settings().maxCount(1), 4, 0.5f);
+    public static final Item MUSHROOM_SALAD = new BowlBase(new Item.Settings().maxCount(1), 4, 0.5f);
+    public static final Item MINER_SALAD = new BowlBase(new Item.Settings().maxCount(1), 4, 0.4f);
+    public static final Item POKE_BOWL = new BowlBase(new Item.Settings().maxCount(1), 8, 0.4f, FoodStatusEffects.POKE_BOWL);
 
     public static final Item TOMATO_JUICE = new DrinkBottleBase(new Item.Settings(), 4, 0.5f);
     public static final Item JUICE_EG = new DrinkBottleBase(new Item.Settings(), 4, 0.5f);
     public static final Item COCOA = new DrinkTeaBase(new Item.Settings(), 2, 0.5f, FoodStatusEffects.COCOA);
     public static final Item CLOWNFISH_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.CLOWNFISH_ROLL);
     public static final Item CRYS_HONEY = new FoodItemBase(new Item.Settings(), 4, 0.5f, FoodStatusEffects.CRYS_HONEY);
-    public static final Item MAIZE_PORRIDGE = new BowlBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.MAIZE_PORRIDGE);
-    public static final Item BEEF_STEW = new BowlBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.BEEF_STEW);
-    public static final Item BEAR_STEW = new BowlBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.BEAR_STEW);
-    public static final Item SPICY_RABBIT_BIGO = new BowlBase(new Item.Settings(), 10, 0.4f, FoodStatusEffects.SPICY_RABBIT_BIGO);
-    public static final Item LAMB_BIRYANI = new BowlBase(new Item.Settings(), 9, 0.4f,FoodStatusEffects.LAMB_BIRYANI);
-    public static final Item PORK_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, FoodStatusEffects.PORK_STIR_FRY);
+    public static final Item MAIZE_PORRIDGE = new BowlBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.MAIZE_PORRIDGE);
+    public static final Item BEEF_STEW = new BowlBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BEEF_STEW);
+    public static final Item BEAR_STEW = new BowlBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BEAR_STEW);
+    public static final Item SPICY_RABBIT_BIGO = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.SPICY_RABBIT_BIGO);
+    public static final Item LAMB_BIRYANI = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f,FoodStatusEffects.LAMB_BIRYANI);
+    public static final Item PORK_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.PORK_STIR_FRY);
     public static final Item SQUID_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.7f);
     public static final Item FROZEN_JELLY = new FoodItemBase(new Item.Settings(), 4, 0.6f, FoodStatusEffects.FROZEN_JELLY);
     public static final Item ROCK_CANDY = new FoodItemBase(new Item.Settings(), 4, 0.6f, FoodStatusEffects.ROCK_CANDY);
     public static final Item GRILLED_SUCKER = new FoodItemBase(new Item.Settings(), 6, 0.6f);
     public static final Item MONSTER_JERKY = new FoodItemBase(new Item.Settings(), 4, 0.4f, true);
-    public static final Item GLOW_SOUP = new BowlBase(new Item.Settings(), 8, 0.7f, FoodStatusEffects.GLOW_SOUP);
+    public static final Item GLOW_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.7f, FoodStatusEffects.GLOW_SOUP);
     public static final Item BEAR_JERKY = new FoodItemBase(new Item.Settings(), 10, 0.4f, true);
     public static final Item RAW_TENDER = new FoodItemBase(new Item.Settings(), 5, 0.4f, true);
     public static final Item COOKED_TENDER = new FoodItemBase(new Item.Settings(), 8, 0.4f, true);
 
-    public static final Item PANCAKE_BREAKFAST = new BowlBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.PANCAKE_BREAKFAST);
-    public static final Item PANCAKE_BREAKFAST_LARGE = new BowlBase(new Item.Settings(), 10, 0.6f, FoodStatusEffects.PANCAKE_BREAKFAST_LARGE);
-    public static final Item FULL_BREAKFAST = new BowlBase(new Item.Settings(), 10, 0.6f, FoodStatusEffects.FULL_BREAKFAST);
-    public static final Item BACON_AND_EGGS = new BowlBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.BACON_AND_EGGS);
+    public static final Item PANCAKE_BREAKFAST = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, FoodStatusEffects.PANCAKE_BREAKFAST);
+    public static final Item PANCAKE_BREAKFAST_LARGE = new BowlBase(new Item.Settings().maxCount(1), 10, 0.6f, FoodStatusEffects.PANCAKE_BREAKFAST_LARGE);
+    public static final Item FULL_BREAKFAST = new BowlBase(new Item.Settings().maxCount(1), 10, 0.6f, FoodStatusEffects.FULL_BREAKFAST);
+    public static final Item BACON_AND_EGGS = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, FoodStatusEffects.BACON_AND_EGGS);
     public static final Item DUMPLING = new FoodItemBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.DUMPLING);
 
     public static final Item GRUB = new BowlBase(new Item.Settings(), 12, 0.6f, FoodStatusEffects.GRUB);
@@ -179,17 +179,17 @@ public class FoodAndCooking {
     public static final Item GOLDEN_M = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_EP = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_GB_2 = new FoodItemBase(new Item.Settings(), 10, 0.6f);
-    public static final Item VEGE_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, FoodStatusEffects.VEGE_STIR_FRY);
-    public static final Item EGG_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, FoodStatusEffects.EGG_STIR_FRY);
-    public static final Item BEAR_STIR_FRY = new BowlBase(new Item.Settings(), 10, 0.4f, FoodStatusEffects.BEAR_STIR_FRY);
-    public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings(), 9, 0.4f, FoodStatusEffects.MANDRAKE_SOUP);
+    public static final Item VEGE_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.VEGE_STIR_FRY);
+    public static final Item EGG_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.EGG_STIR_FRY);
+    public static final Item BEAR_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.BEAR_STIR_FRY);
+    public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.MANDRAKE_SOUP);
     public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings(), 9, 0.4f, FoodStatusEffects.CANDIED_SNOW_YAM);
     public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings(), 9, 0.4f, FoodStatusEffects.WINTER_ROOT_STEW);
-    public static final Item WORM_SOUP = new BowlBase(new Item.Settings(), 8, 0.8f, FoodStatusEffects.WORM_SOUP);
-    public static final Item SLIME_SOUP = new BowlBase(new Item.Settings(), 5, 0.4f, FoodStatusEffects.SLIME_SOUP);
+    public static final Item WORM_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.8f, FoodStatusEffects.WORM_SOUP);
+    public static final Item SLIME_SOUP = new BowlBase(new Item.Settings().maxCount(1), 5, 0.4f, FoodStatusEffects.SLIME_SOUP);
 
-    public static final Item VEGE_BOWL = new BowlBase(new Item.Settings(), 8, 0.4f);
-    public static final Item FRUIT_BOWL = new BowlBase(new Item.Settings(), 8, 0.4f);
+    public static final Item VEGE_BOWL = new BowlBase(new Item.Settings().maxCount(1), 8, 0.4f);
+    public static final Item FRUIT_BOWL = new BowlBase(new Item.Settings().maxCount(1), 8, 0.4f);
 
     public static final Item BITTER_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item SWEET_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
