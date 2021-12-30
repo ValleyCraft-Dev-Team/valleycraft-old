@@ -2,7 +2,6 @@ package net.linkle.valley.Registry.Initializers;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Blocks.Decorations.*;
 import net.linkle.valley.Registry.Blocks.Plants.Hanging.HangingBlock;
 import net.linkle.valley.Registry.Blocks.Plants.Stumps.StumpBlock;
@@ -190,7 +189,6 @@ public class Furniture {
             .strength(1.5f, 2.0f));
 
     public static final Block HANGING = new HangingBlock();
-    public static final Block CRYSTAL = new CrystalBlock();
 
     public static final Block BOOK_COBWEB = new BookshelfBlock();
     public static final Block EMPTY_SHELF = new BookshelfBlock();

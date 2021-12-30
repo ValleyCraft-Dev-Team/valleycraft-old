@@ -1,19 +1,14 @@
 package net.linkle.valley.Registry.Initializers;
 
+import static net.linkle.valley.Registry.Initializers.ItemGroups.FURNITURE_GROUP;
+import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
+
 import net.linkle.valley.Registry.Blocks.Decorations.*;
-import net.linkle.valley.Registry.Blocks.Plants.Hanging.PlanterBlock;
-import net.linkle.valley.Registry.Blocks.Plants.Hanging.PlanterBlockWater;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
-import static net.linkle.valley.Registry.Initializers.ItemGroups.FURNITURE_GROUP;
-import static net.linkle.valley.Registry.Utils.Util.registerWithItem;
-
 public class FurnitureCont {
-    public static final Block PLANTER = new PlanterBlock();
-    public static final Block PLANTER_WATER = new PlanterBlockWater();
-    public static final Block PLANTER_MYCELIUM = new PlanterBlock();
     public static final Block STUFFY_BROWN = new StuffyBlock();
     public static final Block STUFFY_WHITE = new StuffyBlock();
 
@@ -51,6 +46,7 @@ public class FurnitureCont {
     public static final Block CRATE_PEPPER = new CrateBlock();
     public static final Block CRATE_EGGPLANT = new CrateBlock();
 
+    @SuppressWarnings("unused")
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);

@@ -1,7 +1,6 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Commons.DirectionBlockWithWater;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -28,7 +27,7 @@ public class NetBlock extends DirectionBlockWithWater {
 
     public NetBlock() {
         super(FabricBlockSettings.of(Material.CARPET)
-                .breakByTool(FabricToolTags.SWORDS)
+                //.breakByTool(FabricToolTags.SWORDS)
                 .breakByHand(false)
                 .sounds(BlockSoundGroup.BAMBOO_SAPLING).nonOpaque()
                 .strength(0.5f, 0.5f));

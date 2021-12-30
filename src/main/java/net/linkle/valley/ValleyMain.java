@@ -16,6 +16,7 @@ public class ValleyMain implements ModInitializer {
     public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     @Override
+    @SuppressWarnings("unused")
     public void onInitialize() {
         // This should stay first before items and blocks.
         Object initializer1 = VItemTags.KNIVES; // will force the class to load (any static member will do)
@@ -50,8 +51,8 @@ public class ValleyMain implements ModInitializer {
         WanderingTraderOffers.initialize(config);
         
         //Configured Feature Initializers
-        OreConfiguredFeatures.initialize(config);
-        OverworldPlantConfiguredFeatures.initialize(config);
+        OreFeatures.initialize(config);
+        PlantFeatures.initialize(config);
         CaveFeatures.initialize(config);
         OceanFeatures.initialize(config);
         Trees.initialize(config);

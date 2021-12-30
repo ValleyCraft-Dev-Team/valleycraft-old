@@ -5,15 +5,10 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
 	"LivingEntityMixin",
-	"CatEntityMixin",
-	"ServerWorldMixin",
-	"PistonBlockMixin",
 	"CriteriaInvoker",
 	"ItemSettingsAccessor"
   ],
   "client": [
-	"HeldLaserRendererMixin",
-	"LaserEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

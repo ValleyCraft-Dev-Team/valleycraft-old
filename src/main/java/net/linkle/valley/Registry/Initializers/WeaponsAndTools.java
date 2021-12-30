@@ -1,20 +1,16 @@
 package net.linkle.valley.Registry.Initializers;
 
-import static net.linkle.valley.Registry.Initializers.ItemGroups.EXPLORATION_GROUP;
 import static net.linkle.valley.Registry.Utils.Util.register;
 
-import net.linkle.valley.Registry.Misc.RedstoneWandBase;
 import net.linkle.valley.Registry.WeaponsAndTools.Hatchets.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Knives.*;
 import net.linkle.valley.Registry.WeaponsAndTools.OneOffs.*;
 import net.linkle.valley.Registry.WeaponsAndTools.RGRest.*;
 import net.linkle.valley.Registry.WeaponsAndTools.Sickles.*;
 import net.minecraft.item.Item;
-import net.minecraft.util.Rarity;
 
 public class WeaponsAndTools {
 
-    public static final Item REDSTONE_WAND = new RedstoneWandBase(new Item.Settings().group(EXPLORATION_GROUP).rarity(Rarity.UNCOMMON));
     public static final Item TONGS = new TongsBase(new TongsToolMaterial());
     
     public static void initialize() {

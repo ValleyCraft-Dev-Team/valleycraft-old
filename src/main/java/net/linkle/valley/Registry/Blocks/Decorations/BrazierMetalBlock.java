@@ -1,9 +1,15 @@
 package net.linkle.valley.Registry.Blocks.Decorations;
 
+import java.util.Random;
+
+import org.jetbrains.annotations.Nullable;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.linkle.valley.Registry.Commons.BlockWithWater;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
@@ -13,16 +19,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.Random;
 
 public class BrazierMetalBlock extends BlockWithWater {
     protected static final VoxelShape BRAZIER_SHAPE;
 
     public BrazierMetalBlock() {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByHand(true).breakByTool(FabricToolTags.PICKAXES)
+                .breakByHand(true)
+                //.breakByTool(FabricToolTags.PICKAXES)
                 .sounds(BlockSoundGroup.METAL).luminance(13).nonOpaque()
                 .strength(1.0f, 1.0f));
         setDefaultState();

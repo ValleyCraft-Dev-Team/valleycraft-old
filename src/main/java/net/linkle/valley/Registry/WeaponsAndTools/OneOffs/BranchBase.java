@@ -1,6 +1,5 @@
 package net.linkle.valley.Registry.WeaponsAndTools.OneOffs;
 
-import net.minecraft.block.GrassBlock;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
