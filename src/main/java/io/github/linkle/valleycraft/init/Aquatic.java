@@ -1,6 +1,7 @@
 package io.github.linkle.valleycraft.init;
 
-import io.github.linkle.valleycraft.blocks.decorations.ClamBlock;
+import io.github.linkle.valleycraft.blocks.plants.aquatic.AquaticBlock;
+import io.github.linkle.valleycraft.blocks.plants.aquatic.ClamBlock;
 import io.github.linkle.valleycraft.blocks.plants.aquatic.GlowKelp;
 import io.github.linkle.valleycraft.blocks.plants.aquatic.GlowKelpPlant;
 import io.github.linkle.valleycraft.blocks.plants.aquatic.RedSeagrass;
@@ -15,8 +16,8 @@ import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 public class Aquatic {
 
     public static final Block CLAM = new ClamBlock();
-    public static final Block STARFISH = new ClamBlock();
-    public static final Block SAND_DOLLAR = new ClamBlock();
+    public static final Block STARFISH = new AquaticBlock();
+    public static final Block SAND_DOLLAR = new AquaticBlock();
     public static final Block RED_SEA_GRASS = new RedSeagrass();
     
     public static final GlowKelp GLOW_KELP = new GlowKelp();

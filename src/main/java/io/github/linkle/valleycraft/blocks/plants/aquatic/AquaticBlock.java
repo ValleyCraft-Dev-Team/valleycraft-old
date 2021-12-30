@@ -1,29 +1,34 @@
-package io.github.linkle.valleycraft.blocks.decorations;
+package io.github.linkle.valleycraft.blocks.plants.aquatic;
 
 import java.util.Random;
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import io.github.linkle.valleycraft.blocks.HorizontalWithWaterBlock;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class ClamBlock extends HorizontalWithWaterBlock {
+public class AquaticBlock extends HorizontalWithWaterBlock {
     public static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 1, 13);
 
-    public ClamBlock() {
+    public AquaticBlock() {
         super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.CALCITE)
-                .strength(0, 0.1f));
+                .strength(0, 0.1f)
+                .ticksRandomly()
+                .noCollision());
         setDefaultState();
     }
 
@@ -54,9 +59,17 @@ public class ClamBlock extends HorizontalWithWaterBlock {
             }
 
             if (world.isAir(blockPos) && state.canPlaceAt(world, blockPos)) {
-                world.setBlockState(blockPos, state, 2);
+                world.setBlockState(blockPos, state, Block.NOTIFY_LISTENERS);
             }
         }
+    }
+    
+    @Override
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+        if (!state.canPlaceAt(world, pos)) {
+            return Blocks.AIR.getDefaultState();
+        }
+        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
     @Override
@@ -65,5 +78,4 @@ public class ClamBlock extends HorizontalWithWaterBlock {
         var blockState = world.getBlockState(blockPos);
         return blockState.isFullCube(world, blockPos);
     }
-
 }
