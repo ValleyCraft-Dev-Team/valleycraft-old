@@ -9,7 +9,9 @@ import io.github.linkle.valleycraft.blocks.plants.MudBlock;
 import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.OreBlock;
 import net.minecraft.item.Item;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 import static io.github.linkle.valleycraft.init.ItemGroups.NATURE_GROUP;
@@ -18,10 +20,10 @@ public class StoneBlocks {
     public static final Block VOLCANIC_ASH = new VolcanicAshBlock();
     public static final Block VOLCANIC_STONE = new StoneBlock();
 
-    public static final Block MIXED_ORE = new BaseOreBlock(Blocks.STONE);
-    public static final Block DEEPSLATE_MIXED_ORE = new BaseOreBlock(Blocks.DEEPSLATE);
-    public static final Block SALTPETER_ORE = new BaseOreBlock(Blocks.STONE);
-    public static final Block DEEPSLATE_SALTPETER_ORE = new BaseOreBlock(Blocks.DEEPSLATE);
+    public static final Block MIXED_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(0, 2));
+    public static final Block DEEPSLATE_MIXED_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(0, 2));
+    public static final Block SALTPETER_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(1, 3));
+    public static final Block DEEPSLATE_SALTPETER_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(1, 3));
     //public static final Block FROZEN_FOSSIL = new FrozenFossilOreBlock();
 
     public static final Block SCALDING_STONE = new ScaldingBlock();
@@ -31,16 +33,16 @@ public class StoneBlocks {
     public static final Block SCALDING_VOLC = new ScaldingBlock();
     public static final Block GLACIAL_STONE = new GlacialStone();
 
-    public static final Block SALT_ORE = new BaseOreBlock(Blocks.STONE);
+    public static final Block SALT_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(0, 2));
     public static final Block SALT_BLOCK = new StoneBlock();
-    public static final Block NETHER_SALT = new BaseOreBlock(Blocks.NETHER_GOLD_ORE);
-    public static final Block NETHER_COAL_ORE = new BaseOreBlock(Blocks.NETHER_GOLD_ORE);
+    public static final Block NETHER_SALT = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
+    public static final Block NETHER_COAL_ORE = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
     public static final Block B_CLAY = new MudBlock();
 
     public static final Block JUNGLE = new StoneBlock();
     public static final Block JUNGLE_MOSSY = new MossBlock();
     public static final Block JUNGLE_SPOREY = new SporeBlock();
-    public static final Block JUNGLE_COBBLE = new BaseOreBlock(Blocks.STONE);
+    public static final Block JUNGLE_COBBLE = new Block(Block.Settings.copy(Blocks.COBBLESTONE));
     public static final Block STONE_MOSSY = new MossBlock();
     public static final Block DRY_MOSS_STONE = new DryMossBlock();
 
