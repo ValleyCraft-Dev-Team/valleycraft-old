@@ -13,6 +13,7 @@ import static io.github.linkle.valleycraft.utils.Util.register;
 public class WeaponsAndTools {
 
     public static final Item TONGS = new TongsBase(new TongsToolMaterial());
+    public static final Item DRUID = new DruidStaffBase();
 
     public static void initialize() {
         //Branch
@@ -34,7 +35,7 @@ public class WeaponsAndTools {
         Util.register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));
 
         //Druid Staff
-        Util.register("druid_staff", new DruidStaffBase(new DruidToolMaterialStaff()));
+        Util.register("druid_staff", DRUID);
 
         //Knives
         register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));

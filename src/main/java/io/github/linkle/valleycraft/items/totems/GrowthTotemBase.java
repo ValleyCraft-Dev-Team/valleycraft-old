@@ -3,6 +3,7 @@ package io.github.linkle.valleycraft.items.totems;
 import java.util.List;
 
 import io.github.linkle.valleycraft.init.MiscItems;
+import io.github.linkle.valleycraft.init.WeaponsAndTools;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
@@ -14,8 +15,6 @@ import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 public class GrowthTotemBase extends AbstractTotemBase {
@@ -25,7 +24,7 @@ public class GrowthTotemBase extends AbstractTotemBase {
 
     @Override
     public boolean canSetWeather(World world) {
-        return !world.isRaining() || !world.isThundering();
+        return true;
     }
 
     @Override
@@ -49,18 +48,12 @@ public class GrowthTotemBase extends AbstractTotemBase {
         showFloatingItem(world, user);
 
         if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
-            if (stack.isEmpty()) {
-                var item = Registry.ITEM.getOrEmpty(new Identifier("valley:druid_staff"));
-                return new ItemStack(item.get(), 1);
-            }
-
-            if (playerEntity != null) {
-                var item = Registry.ITEM.getOrEmpty(new Identifier("valley:druid_staff"));
-                return new ItemStack(item.get(), 1);
+            if (stack.isEmpty() || playerEntity != null) {
+                return new ItemStack(WeaponsAndTools.DRUID);
             }
         }
 
-        return stack.isEmpty() ? new ItemStack(MiscItems.G_TOTEM, 1) : stack;
+        return stack.isEmpty() ? new ItemStack(MiscItems.G_TOTEM) : stack;
     }
 
     @Override
