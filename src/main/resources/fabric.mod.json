@@ -1,16 +1,25 @@
 {
   "schemaVersion": 1,
   "id": "valley",
-  "version": "2.0",
+  "version": "${version}",
 
   "name": "ValleyCraft",
   "description": "ValleyCraft is a nature, farming, and cooking overhaul with a focus on exploration and discovery.",
   "authors": [
-    "Linkle#2933"
+    "Linkle",
+    "AndEditor7",
+    "OliviaTheVampire/Janetyqua"
   ],
   "contact": {
     "homepage": "https://github.com/l1nkl3/ValleyCraft-Wiki",
     "sources": "https://github.com/l1nkl3/Calamity"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/kfpmJ5PtnF"
+      }
+    }
   },
 
   "license": "CC-BY-NC-SA",
@@ -19,10 +28,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.linkle.valley.ValleyMain"
+	  "io.github.linkle.valleycraft.ValleyMain"
     ],
     "client": [
-      "net.linkle.valley.ClientModInitFix"
+      "io.github.linkle.valleycraft.client.ValleyClient"
+    ],
+    "modmenu": [
+      "io.github.linkle.valleycraft.config.ModMenuCompat"
     ]
   },
   "mixins": [
@@ -30,12 +42,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.11",
+    "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "1.18.x",
+    "java": ">=17"
   }
 }

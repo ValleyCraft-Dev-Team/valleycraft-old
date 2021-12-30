@@ -1,36 +1,36 @@
 {
   "variants": {
-    "facing=east,waterlogged=false": {
+    "facing=east,open=false": {
       "y": 90,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_close"
     },
-    "facing=east,waterlogged=true": {
+    "facing=east,open=true": {
       "y": 90,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_open"
     },
-    "facing=north,waterlogged=false": {
+    "facing=north,open=false": {
       "y": 0,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_close"
     },
-    "facing=north,waterlogged=true": {
+    "facing=north,open=true": {
       "y": 0,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_open"
     },
-    "facing=south,waterlogged=false": {
+    "facing=south,open=false": {
       "y": 180,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_close"
     },
-    "facing=south,waterlogged=true": {
+    "facing=south,open=true": {
       "y": 180,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_open"
     },
-    "facing=west,waterlogged=false": {
+    "facing=west,open=false": {
       "y": 270,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_close"
     },
-    "facing=west,waterlogged=true": {
+    "facing=west,open=true": {
       "y": 270,
-      "model": "valley:block/clam"
+      "model": "valley:block/clam_open"
     }
   }
 }

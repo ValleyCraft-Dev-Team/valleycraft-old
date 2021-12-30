@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:coal"
+      "tag": "minecraft:coals"
     },
     "/": {
       "item": "minecraft:stick"

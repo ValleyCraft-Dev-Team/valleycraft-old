@@ -1,14 +1,13 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.linkle.valley.Registry.Mixin",
+  "package": "io.github.linkle.valleycraft.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
 	"LivingEntityMixin",
 	"CriteriaInvoker",
+	"ItemUsageContextAccessor",
 	"ItemSettingsAccessor"
-  ],
-  "client": [
   ],
   "injectors": {
     "defaultRequire": 1
