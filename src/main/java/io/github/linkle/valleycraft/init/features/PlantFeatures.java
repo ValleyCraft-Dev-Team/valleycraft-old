@@ -42,7 +42,7 @@ public class PlantFeatures {
     private static final RegistryKey<PlacedFeature> LILAC_PATCH = create("lilac_patch", Plants.LILACBUSH, 1);
     private static final RegistryKey<PlacedFeature> PEONY_PATCH = create("peony_patch", Plants.PEONYBUSH, 1);
     private static final RegistryKey<PlacedFeature> TUMBLE_PATCH = create("tumbleweed_patch", Plants.TUMBLE_WEED, 1);
-    private static final RegistryKey<PlacedFeature> CACTUS_PATCH = create("small_patch", Plants.SMALL_CACTUS, 2);
+    private static final RegistryKey<PlacedFeature> CACTUS_PATCH = create("small_patch", Util.randomHoriFacing(Plants.SMALL_CACTUS.getDefaultState()), 2);
     private static final RegistryKey<PlacedFeature> ROCK_PATCH = create("rock_patch", Plants.ROCK_PILE, 8);
     private static final RegistryKey<PlacedFeature> SNOW_ROCK_PATCH = create("noname", Plants.SNOW_ROCK_PILE, 10);
     private static final RegistryKey<PlacedFeature> ALIVE_PATCH = create("alive_patch", Plants.BUSH_ALIVE, 10);

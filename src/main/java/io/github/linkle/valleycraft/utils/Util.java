@@ -4,17 +4,23 @@ import java.util.List;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.decorator.PlacementModifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 public class Util {
     public static Item register(String ID, Item item) {
@@ -46,5 +52,14 @@ public class Util {
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, identifier, config);
         Registry.register(BuiltinRegistries.PLACED_FEATURE, identifier, place);
         return RegistryKey.of(Registry.PLACED_FEATURE_KEY, identifier);
+    }
+    
+    public static BlockStateProvider randomHoriFacing(BlockState state) {
+        var builder = new DataPool.Builder<BlockState>();
+        builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.NORTH), 1);
+        builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.EAST), 1);
+        builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.SOUTH), 1);
+        builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.WEST), 1);
+        return new WeightedBlockStateProvider(builder);
     }
 }

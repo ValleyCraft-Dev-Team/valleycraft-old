@@ -33,7 +33,7 @@ public class OceanFeatures {
             .configure(new SeaPatchConfig(Aquatic.RED_SEA_GRASS.getDefaultState(), UniformIntProvider.create(10, 16), 9));
     
     private static final ConfiguredFeature<?, ?> CLAM_PATCH_CONFIG = SEA_PATCH
-            .configure(new SeaPatchConfig(Aquatic.CLAM.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(3, 5), 7));
+            .configure(new SeaPatchConfig(Util.randomHoriFacing(Aquatic.CLAM.getDefaultState().with(Properties.WATERLOGGED, true)), UniformIntProvider.create(3, 5), 7));
     
     private static final ConfiguredFeature<?, ?> SAND_DOllAR_CONFIG = SEA_PATCH
             .configure(new SeaPatchConfig(Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(1, 3), 5));
