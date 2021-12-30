@@ -3,7 +3,7 @@ package io.github.linkle.valleycraft.blocks.decorations.Furnaces;
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 import io.github.linkle.valleycraft.ValleyMain;
-import 	net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
