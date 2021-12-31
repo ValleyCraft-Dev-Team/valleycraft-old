@@ -52,6 +52,7 @@ public class ValleyClient implements ClientModInitializer {
         
         //bush texture fix
         culloutBlocks.add(BITTER_BERRY_BUSH);
+        culloutBlocks.add(SOUR_BERRY_BUSH);
         culloutBlocks.add(SPICY_BERRY_BUSH);
         culloutBlocks.add(TOMATO_BUSH);
         culloutBlocks.add(HOLLY_BUSH);

@@ -1,0 +1,21 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "valley:blocks/sour_bush_stage0",
+		"particle": "valley:blocks/sour_bush_stage0"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 7, 12],
+			"faces": {
+				"north": {"uv": [4, 9, 12, 16], "texture": "#0"},
+				"east": {"uv": [4, 9, 12, 16], "texture": "#0"},
+				"south": {"uv": [4, 9, 12, 16], "texture": "#0"},
+				"west": {"uv": [4, 9, 12, 16], "texture": "#0"},
+				"up": {"uv": [4, 8, 12, 16], "texture": "#0"},
+				"down": {"uv": [4, 8, 12, 16], "texture": "#0"}
+			}
+		}
+	]
+}
