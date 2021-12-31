@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bone"
+    },
+    "X": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "result": {
+    "item": "valley:bone_torch",
+    "count": 4
+  }
+}

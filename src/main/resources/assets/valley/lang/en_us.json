@@ -640,6 +640,10 @@
   "block.valley.pumice_smooth": "Polished Pumice",
   "block.valley.jasper_smooth": "Polished Jasper",
   "block.valley.limestone_smooth": "Polished Limestone",
+  
+  "block.valley.bone_torch": "Bone Torch",
+  "block.valley.soul_bone_torch": "Soul Bone Torch",
+  "block.valley.redstone_bone_torch": "Redstone Bone Torch",
 
   "text.autoconfig.valleycraft.title": "ValleyCraft Config",
   "text.autoconfig.valleycraft.option.fishing": "Fishing",

@@ -1,6 +1,12 @@
 {
-  "replace": false,
-  "values": [
-    "valley:brazier_soul", "valley:soul_hanging", "valley:soul_jack_o_lantern", "valley:scarecrow_soul", "valley:scarecrow_hat_soul"
-  ]
+	"replace": false,
+	"values": [
+		"valley:brazier_soul",
+		"valley:soul_hanging",
+		"valley:soul_jack_o_lantern",
+		"valley:scarecrow_soul",
+		"valley:scarecrow_hat_soul",
+		"valley:soul_bone_torch",
+		"valley:soul_wall_bone_torch"
+	]
 }
