@@ -1,6 +1,21 @@
 {
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "valley:blocks/sour_berry_bush_stage3"
-  }
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "valley:blocks/sour_berry_bush_stage3",
+		"particle": "valley:blocks/sour_berry_bush_stage3"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 2],
+			"to": [14, 12, 14],
+			"faces": {
+				"north": {"uv": [2, 2, 14, 14], "texture": "#0"},
+				"east": {"uv": [2, 2, 14, 14], "texture": "#0"},
+				"south": {"uv": [2, 2, 14, 14], "texture": "#0"},
+				"west": {"uv": [2, 2, 14, 14], "texture": "#0"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#0"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#0"}
+			}
+		}
+	]
 }

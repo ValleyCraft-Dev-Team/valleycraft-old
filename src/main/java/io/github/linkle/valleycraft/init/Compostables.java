@@ -18,6 +18,7 @@ public class Compostables {
         registerItem(Plants.TOMATO_BUSH, levelLow);
         registerItem(Plants.SPICY_BERRY_BUSH, levelLow);
         registerItem(Plants.BITTER_BERRY_BUSH, levelLow);
+        registerItem(Plants.SOUR_BERRY_BUSH, levelLow);
         registerItem(Plants.HOLLY_BUSH, levelLow);
         registerItem(Plants.APPLE_SAPLING, levelLow);
         registerItem(Plants.APPLE_LEAVES, levelLow);
