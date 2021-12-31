@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_torch",
+  "textures": {
+    "torch": "valley:blocks/soul_bone_torch"
+  }
+}

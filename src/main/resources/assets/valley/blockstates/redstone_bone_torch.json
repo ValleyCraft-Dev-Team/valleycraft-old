@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "valley:block/redstone_bone_torch_off"
+    },
+    "lit=true": {
+      "model": "valley:block/redstone_bone_torch"
+    }
+  }
+}

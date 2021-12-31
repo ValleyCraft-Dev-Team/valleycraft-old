@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "valley:block/wall_bone_torch"
+    },
+    "facing=north": {
+      "model": "valley:block/wall_bone_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "valley:block/wall_bone_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "valley:block/wall_bone_torch",
+      "y": 180
+    }
+  }
+}

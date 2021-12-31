@@ -223,6 +223,14 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(RED_SEA_GRASS);
         culloutBlocks.add(GLOW_KELP_PLANT);
         culloutBlocks.add(GLOW_KELP);
+        
+        culloutBlocks.add(BONE_TORCH);
+        culloutBlocks.add(WALL_BONE_TORCH);
+        culloutBlocks.add(SOUL_BONE_TORCH);
+        culloutBlocks.add(SOUL_WALL_BONE_TORCH);
+        culloutBlocks.add(REDSTONE_BONE_TORCH);
+        culloutBlocks.add(REDSTONE_WALL_BONE_TORCH);
+        
         translucentBlocks.add(BRAZIER_METAL);
 
         // Remapping block's render layer. This code should always be last!

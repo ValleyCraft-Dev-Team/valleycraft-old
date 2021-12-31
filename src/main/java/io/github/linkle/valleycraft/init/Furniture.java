@@ -10,6 +10,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.WallStandingBlockItem;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Rarity;
 
@@ -203,7 +205,16 @@ public class Furniture {
     public static final Block CREST = new CrestBlock();
 
     public static final Block BRAZIER_METAL = new BrazierMetalBlock();
+    
+    public static final Block BONE_TORCH = new TorchBlock(Block.Settings.copy(Blocks.TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.FLAME);
+    public static final Block WALL_BONE_TORCH = new WallTorchBlock(Block.Settings.copy(Blocks.WALL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.FLAME);
 
+    public static final Block SOUL_BONE_TORCH = new TorchBlock(Block.Settings.copy(Blocks.SOUL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.SOUL_FIRE_FLAME);
+    public static final Block SOUL_WALL_BONE_TORCH = new WallTorchBlock(Block.Settings.copy(Blocks.SOUL_WALL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.SOUL_FIRE_FLAME);
+    
+    public static final Block REDSTONE_BONE_TORCH = new RedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_TORCH).sounds(BlockSoundGroup.BONE));
+    public static final Block REDSTONE_WALL_BONE_TORCH = new WallRedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_WALL_TORCH).sounds(BlockSoundGroup.BONE));
+    
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var explGroup = new Item.Settings().group(EXPLORATION_GROUP);
@@ -387,6 +398,15 @@ public class Furniture {
 
         Util.registerWithItem("wreath", WREATH, furnGroup);
         Util.registerWithItem("miners_crest", CREST, furnGroup);
+        
+        Util.register("bone_torch", new WallStandingBlockItem(BONE_TORCH, WALL_BONE_TORCH, furnGroup));
+        Util.register("wall_bone_torch", WALL_BONE_TORCH);
+        
+        Util.register("soul_bone_torch", new WallStandingBlockItem(SOUL_BONE_TORCH, SOUL_WALL_BONE_TORCH, furnGroup));
+        Util.register("soul_wall_bone_torch", SOUL_WALL_BONE_TORCH);
+        
+        Util.register("redstone_bone_torch", new WallStandingBlockItem(REDSTONE_BONE_TORCH, REDSTONE_WALL_BONE_TORCH, furnGroup));
+        Util.register("redstone_wall_bone_torch", REDSTONE_WALL_BONE_TORCH);
         
         //registerWithItem("gear", GEAR, furnGroupRare);
 
