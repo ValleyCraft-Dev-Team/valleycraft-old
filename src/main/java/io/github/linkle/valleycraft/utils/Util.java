@@ -31,6 +31,12 @@ public class Util {
         return Registry.register(Registry.BLOCK, new Identifier(ValleyMain.MOD_ID, ID), block);
     }
     
+    public static void register(String ID, BlockItem item) {
+        var id = new Identifier(ValleyMain.MOD_ID, ID);
+        Registry.register(Registry.BLOCK, id, item.getBlock());
+        Registry.register(Registry.ITEM, id, item);
+    }
+    
     public static void registerWithItem(String ID, Block block, Item.Settings settings) {
         var id = new Identifier(ValleyMain.MOD_ID, ID);
         Registry.register(Registry.BLOCK, id, block);
