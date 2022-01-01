@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:sweet_dough"
+  },
+  "result": "valley:sweet_pie",
+  "experience": 0.2,
+  "cookingtime": 200
+}

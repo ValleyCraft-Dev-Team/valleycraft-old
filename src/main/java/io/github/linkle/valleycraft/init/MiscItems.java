@@ -47,6 +47,7 @@ public class MiscItems {
     public static final Item COPPER_BILLET = new BilletItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64).recipeRemainder(COPPER_NUGGET));
     public static final Item ARROWHEAD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item DRIP_ARROWHEAD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
+    public static final Item OBSIDIAN_ARROWHEAD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item HOOK_I = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64));
     public static final Item HOOK_C = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
     public static final Item HOOK_G = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64).rarity(Rarity.RARE));
@@ -58,8 +59,9 @@ public class MiscItems {
     public static void initialize() {
         Util.register("fur_clump", FUR_CLUMP);
         Util.register("copper_billet", COPPER_BILLET);
-        Util.register("knapped_dripstone_arrowhead", DRIP_ARROWHEAD);
         Util.register("knapped_flint_arrowhead", ARROWHEAD);
+        Util.register("knapped_obsidian_arrowhead", OBSIDIAN_ARROWHEAD);
+        Util.register("knapped_dripstone_arrowhead", DRIP_ARROWHEAD);
         Util.register("mud_brick", MUD_BRICK);
         Util.register("flour_bag", FLOUR_BAG);
         Util.register("puff_ball", PUFF_BALL);

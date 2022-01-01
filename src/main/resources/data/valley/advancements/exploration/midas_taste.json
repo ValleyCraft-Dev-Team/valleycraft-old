@@ -23,6 +23,16 @@
 				}
 			}
 		},
+		"glistering_sour_berries": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:glistering_sour_berries"
+					]
+				}
+			}
+		},
 		"enchanted_golden_apple": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
@@ -237,6 +247,9 @@
 	"requirements": [
 		[
 			"golden_apple"
+		],
+		[
+			"glistering_sour_berries"
 		],
 		[
 			"golden_apple"

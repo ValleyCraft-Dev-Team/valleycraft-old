@@ -45,6 +45,7 @@ public class FurnitureCont {
     public static final Block CRATE_APPLE = new CrateBlock();
     public static final Block CRATE_PEPPER = new CrateBlock();
     public static final Block CRATE_EGGPLANT = new CrateBlock();
+    public static final Block CRATE_SOUR = new CrateBlock();
 
     @SuppressWarnings("unused")
     public static void initialize() {
@@ -81,6 +82,7 @@ public class FurnitureCont {
         Util.registerWithItem("crate_sweet", CRATE_SWEET, furnGroup);
         Util.registerWithItem("crate_glow", CRATE_GLOW, furnGroup);
         Util.registerWithItem("crate_bitter", CRATE_BITTER, furnGroup);
+        Util.registerWithItem("crate_sour", CRATE_SOUR, furnGroup);
         Util.registerWithItem("crate_spicy", CRATE_SPICY, furnGroup);
         Util.registerWithItem("crate_holly", CRATE_HOLLY, furnGroup);
         Util.registerWithItem("crate_cocoa", CRATE_COCOA, furnGroup);

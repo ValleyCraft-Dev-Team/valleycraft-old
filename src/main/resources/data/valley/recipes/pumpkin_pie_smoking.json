@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:pumpkin_dough"
+  },
+  "result": "minecraft:pumpkin_pie",
+  "experience": 0.2,
+  "cookingtime": 200
+}

@@ -24,7 +24,11 @@
 							"valley:rg_hoe",
 							"valley:rg_axe",
 							"valley:rg_pickaxe",
-							"valley:rg_shovel"
+							"valley:rg_shovel",
+							"valley:rg_helmet",
+							"valley:rg_chestplate",
+							"valley:rg_leggings",
+							"valley:rg_boots"
 						]
 					}
 				]

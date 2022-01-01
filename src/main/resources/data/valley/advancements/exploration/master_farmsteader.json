@@ -26,6 +26,18 @@
 				]
 			}
 		},
+		"sour_berries": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_sour"
+						]
+					}
+				]
+			}
+		},
 		"sweet_berries": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -306,6 +318,9 @@
 	"requirements": [
 		[
 			"apple"
+		],
+		[
+			"sour_berries"
 		],
 		[
 			"sweet_berries"

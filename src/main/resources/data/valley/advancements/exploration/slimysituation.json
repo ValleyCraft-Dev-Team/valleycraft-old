@@ -12,8 +12,8 @@
 		}
 	},
 	"criteria": {
-		"rose_gold": {
-			"trigger": "minecraft:inventory_changed",
+		"slime": {
+			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"items": [
 					{
@@ -29,7 +29,7 @@
 	},
 	"requirements": [
 		[
-			"rose_gold"
+			"slime"
 		]
 	]
 }
