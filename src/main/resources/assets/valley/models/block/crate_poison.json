@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "valley:blocks/poisonous_potato_crate_top",
+    "bottom": "valley:blocks/crate_bottom",
+    "side": "valley:blocks/poisonous_potato_crate_side"
+  }
+}

@@ -54,6 +54,7 @@ public class FoodAndCooking {
     public static final Item GB_JUICE_2 = new DrinkBottleBase(new Item.Settings().maxCount(1), 4, 0.5f, FoodStatusEffects.GB_JUICE_2);
 
     public static final Item APPLE_DOUGH = new FoodItemBase(new Item.Settings(), 1, 0.5f);
+    public static final Item CRAB_DOUGH = new FoodItemBase(new Item.Settings(), 1, 0.5f);
     public static final Item CARROT_SALAD = new BowlBase(new Item.Settings().maxCount(1), 6, 0.5f);
     public static final Item APPLE_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item PUMPKIN_BOWL = new BowlBase(new Item.Settings().maxCount(1), 7, 0.5f, FoodStatusEffects.PUMPKIN_BOWL);
@@ -201,10 +202,21 @@ public class FoodAndCooking {
     public static final Item SWEET_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item GLOW_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item SOUR_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
+    public static final Item CRAB_CAKE = new FoodItemBase(new Item.Settings(), 8, 0.5f, FoodStatusEffects.CRAB_CAKE);
 
     public static final Item G_WATER = new FoodItemBase(new Item.Settings(), 4, 0.5f);
     public static final Item B_WATER = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item GOLDEN_PE = new FoodItemBase(new Item.Settings(), 10, 0.6f);
+
+    public static final Item SANDWICH_CHEESE = new FoodItemBase(new Item.Settings(), 10, 0.7f);
+    public static final Item SANDWICH_BLT = new FoodItemBase(new Item.Settings(), 10, 0.7f);
+    public static final Item SANDWICH_BEEF = new FoodItemBase(new Item.Settings(), 11, 0.8f);
+    public static final Item SANDWICH_PORK = new FoodItemBase(new Item.Settings(), 11, 0.8f);
+    public static final Item SANDWICH_MUTTON = new FoodItemBase(new Item.Settings(), 11, 0.8f);
+    public static final Item SANDWICH_TENDERLOIN = new FoodItemBase(new Item.Settings(), 11, 0.8f);
+    public static final Item CHICKEN_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.7f);
+    public static final Item FISH_PLATTER = new BowlBase(new Item.Settings().maxCount(1), 8, 0.5f);
+
 
     public static void initialize() {
         Util.register("tea", TEA);
@@ -247,6 +259,7 @@ public class FoodAndCooking {
         Util.register("grub", GRUB);
         Util.register("pumpkin_bowl", PUMPKIN_BOWL);
         Util.register("tomato_soup", TOMATO_SOUP);
+        Util.register("chicken_soup", CHICKEN_SOUP);
         Util.register("carrot_stew", CARROT_STEW);
         Util.register("creamy_heart_stew", CREAMY_HEART_STEW);
         //register("winter_root_stew", WINTER_ROOT_STEW);
@@ -264,6 +277,7 @@ public class FoodAndCooking {
         //register("ameranth_pancake_breakfast", AMERANTH_PANCAKE_BREAKFAST);
         Util.register("large_pancake_breakfast", PANCAKE_BREAKFAST_LARGE);
 
+        Util.register("fish_platter", FISH_PLATTER);
         Util.register("glow_soup", GLOW_SOUP);
         Util.register("clownfish_salad", CLOWN_SALAD);
         Util.register("maize_porridge", MAIZE_PORRIDGE);
@@ -316,6 +330,13 @@ public class FoodAndCooking {
         Util.register("bbox_salmon", BBOX_SALMON);
         Util.register("bbox_ghost", BBOX_GH_TAIL);
 
+        Util.register("grilled_cheese", SANDWICH_CHEESE);
+        Util.register("blt", SANDWICH_BLT);
+        Util.register("steak_sandwich", SANDWICH_BEEF);
+        Util.register("pork_sandwich", SANDWICH_PORK);
+        Util.register("mutton_sandwich", SANDWICH_MUTTON);
+        Util.register("tenderloin_sandwich", SANDWICH_TENDERLOIN);
+
         Util.register("cookie_dough", COOKIE_DOUGH);
         Util.register("cake_dough", CAKE_DOUGH);
         Util.register("apple_dough", APPLE_DOUGH);
@@ -328,6 +349,7 @@ public class FoodAndCooking {
         Util.register("pancake_dough", PANCAKE_DOUGH);
         //register("ameranth_pancake_dough", AMERANTH_PANCAKE_DOUGH);
         Util.register("skeleton_cookie_dough", SKELE_DOUGH);
+        Util.register("crabcake_dough", CRAB_DOUGH);
 
         Util.register("pancake", PANCAKE);
         //register("ameranth_pancake", AMERANTH_PANCAKE);
@@ -339,6 +361,7 @@ public class FoodAndCooking {
 
         Util.register("cake_slice", CAKE_SLICE);
         Util.register("skeleton_cookie", SKELE_COOKIE);
+        Util.register("crabcake", CRAB_CAKE);
 
 
         Util.register("honeycomb_chunk", HONEYCOMB_CHUNK);

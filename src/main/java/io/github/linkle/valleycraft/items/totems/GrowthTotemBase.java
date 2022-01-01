@@ -58,7 +58,7 @@ public class GrowthTotemBase extends AbstractTotemBase {
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add( new TranslatableText("item.valley.druid_rune.tooltip").formatted(Formatting.YELLOW) );
-        tooltip.add( new TranslatableText("item.valley.druid_rune.tooltip_2").formatted(Formatting.YELLOW) );
+        tooltip.add( new TranslatableText("item.valley.druid_rune.tooltip").formatted(Formatting.GREEN) );
+        tooltip.add( new TranslatableText("item.valley.druid_rune.tooltip_2").formatted(Formatting.GREEN) );
     }
 }

@@ -15,7 +15,7 @@ public class BilletItemBase extends Item {
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add( new TranslatableText("item.valley.copper_billet.tooltip").formatted(Formatting.YELLOW) );
-        tooltip.add( new TranslatableText("item.valley.copper_billet.tooltip_2").formatted(Formatting.YELLOW) );
+        tooltip.add( new TranslatableText("item.valley.copper_billet.tooltip").formatted(Formatting.GRAY) );
+        tooltip.add( new TranslatableText("item.valley.copper_billet.tooltip_2").formatted(Formatting.GRAY) );
     }
 }

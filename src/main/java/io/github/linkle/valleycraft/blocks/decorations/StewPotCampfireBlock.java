@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -42,7 +43,7 @@ public class StewPotCampfireBlock extends HorizontalWithWaterBlock {
 
     @Override
     public void appendTooltip(ItemStack itemStack, BlockView world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add( new TranslatableText("block.valley.stew_campfire_pot.tooltip") );
+        tooltip.add( new TranslatableText("block.valley.stew_campfire_pot.tooltip").formatted(Formatting.DARK_GREEN) );
     }
 }
 

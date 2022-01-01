@@ -38,6 +38,18 @@
 				]
 			}
 		},
+		"poison": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crate_poison"
+						]
+					}
+				]
+			}
+		},
 		"sweet_berries": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -321,6 +333,9 @@
 		],
 		[
 			"sour_berries"
+		],
+		[
+			"poison"
 		],
 		[
 			"sweet_berries"

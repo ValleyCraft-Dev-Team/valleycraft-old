@@ -10,26 +10,23 @@
 		"description": {
 			"text": "Eat something made of Slime."
 		}
-	},
-	"criteria": {
-		"slime": {
-			"trigger": "minecraft:consume_item",
-			"conditions": {
+	},"criteria": {
+	"suspicious": {
+		"trigger": "minecraft:consume_item",
+		"conditions": {
+			"item": {
 				"items": [
-					{
-						"items": [
-							"valley:slime_soup",
-							"valley:frozen_jelly",
-							"valley:slime_fish"
-						]
-					}
+					"valley:frozen_jelly",
+					"valley:slime_soup",
+					"valley:slime_fish"
 				]
 			}
 		}
-	},
+	}
+},
 	"requirements": [
 		[
-			"slime"
+			"suspicious"
 		]
 	]
 }

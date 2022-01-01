@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
@@ -61,7 +62,7 @@ public class ScreenBlock extends HorizontalWithWaterBlock {
     @Override
     public void appendTooltip(ItemStack stack, BlockView world, List<Text> tooltip, TooltipContext options) {
         // default white text
-        tooltip.add(new TranslatableText("block.screen.tooltip"));
-        tooltip.add(new TranslatableText("block.screen.tooltip_two"));
+        tooltip.add(new TranslatableText("block.valley.screen.tooltip").formatted(Formatting.GOLD));
+        tooltip.add(new TranslatableText("block.valley.screen.tooltip_2").formatted(Formatting.GOLD));
     }
 }

@@ -35,6 +35,7 @@ public class StoneBlocks {
 
     public static final Block SALT_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(0, 2));
     public static final Block SALT_BLOCK = new StoneBlock();
+    public static final Block SALTPETER_BLOCK = new StoneBlock();
     public static final Block NETHER_SALT = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
     public static final Block NETHER_COAL_ORE = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
     public static final Block B_CLAY = new MudBlock();
@@ -64,6 +65,8 @@ public class StoneBlocks {
     public static final Block PUMICE_SMOOTH = new StoneBlock();
     public static final Block GREEN_GRANITE_SMOOTH = new StoneBlock();
     public static final Block LIMESTONE_SMOOTH = new StoneBlock();
+
+    public static final Block FLESH_BLOCK = new FleshBlock();
 
     //public static final Block CICADA = new CicadaBlock();
 
@@ -114,6 +117,8 @@ public class StoneBlocks {
 
         Util.registerWithItem("salt_ore", SALT_ORE, natureGroup);
         Util.registerWithItem("salt_block", SALT_BLOCK, furnGroup);
+        Util.registerWithItem("saltpeter_block", SALTPETER_BLOCK, furnGroup);
+        Util.registerWithItem("flesh_block", FLESH_BLOCK, furnGroup);
         Util.registerWithItem("nether_salt", NETHER_SALT, natureGroup);
         Util.registerWithItem("nether_coal_ore", NETHER_COAL_ORE, natureGroup);
     }

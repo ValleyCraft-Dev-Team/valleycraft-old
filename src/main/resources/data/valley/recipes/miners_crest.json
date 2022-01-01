@@ -1,13 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##"
-  ],
-  "key": {
-    "#": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:iron_pickaxe"
+    },
+    {
+      "item": "minecraft:iron_pickaxe"
+    },
+    {
+      "item": "valley:climbable_rope"
     }
-  },
+  ],
   "result": {
     "item": "valley:miners_crest",
     "count": 1

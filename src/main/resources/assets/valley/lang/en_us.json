@@ -15,6 +15,9 @@
   "block.valley.gear.tooltip": "It must have been used",
   "block.valley.gear.tooltip_2": "by some ancient civilization.",
 
+  "block.valley.screen.tooltip": "Pets cannot jump over this,",
+  "block.valley.screen.tooltip_2": "protecting them from burning.",
+
   "block.valley.fossilized_starfish": "Luma Starfish",
   "block.valley.fossilized_starfish.tooltip": "Some say these are from",
   "block.valley.fossilized_starfish.tooltip_2": "another galaxy entirely.",
@@ -26,8 +29,8 @@
   "block.valley.coin_stack.tooltip": "An ancient currency",
   "block.valley.coin_stack.tooltip_2": "devalued by emeralds.",
 
-  "item.valley.copper_billet.tooltip": "Used to knap arrowheads",
-  "item.valley.copper_billet.tooltip_2": "with flint or dripstone.",
+  "item.valley.copper_billet.tooltip": "Used to knap Arrowheads",
+  "item.valley.copper_billet.tooltip_2": "with Flint, Obsidian or Dripstone",
 
   "block.valley.golem_waxed": "Waxed Broken Golem",
   "block.valley.golem_idling": "Idling Broken Golem",
@@ -71,7 +74,7 @@
   "block.valley.alive_bush": "Bush",
   "block.valley.alive_bush_tall": "Large Bush",
   "block.valley.dead_bush_tall": "Large Dead Bush",
-  "block.valley.weaping_willow": "Weaping Swamp Willow",
+  "block.valley.weaping_willow": "Weeping Swamp Willow",
   "block.valley.redwood_sorrel": "Redwood Sorrel",
   "block.valley.dandelion_puffs": "Dandelion Puff Balls",
   "block.valley.jungle_cap": "Orange Gilled Waxing Cap",
@@ -115,8 +118,19 @@
   "item.valley.copper_billet": "Copper Billet",
   "item.valley.knapped_flint_arrowhead": "Knapped Flint Arrowhead",
   "item.valley.knapped_dripstone_arrowhead": "Knapped Dripstone Arrowhead",
+  "item.valley.knapped_obsidian_arrowhead": "Knapped Obsidian Arrowhead",
+
+  "block.valley.sour_berries": "Sour Berry",
+  "block.valley.crate_sour": "Sour Berry Crate",
+  "item.valley.glistering_sour_berries": "Golden Sour Berry",
+  "item.valley.tea_sour_berry": "Sour Berry Tea",
+  "item.valley.sour_berry_cyser": "Sour Berry Cyser",
+  "item.valley.sour_berry_wine": "Sour Berry Wine",
+  "item.valley.sour_dough": "Sour Berry Pie Dough",
+  "item.valley.sour_pie": "Sour Berry Pie",
 
   "item.valley.moss_ball": "Moss Clump",
+  "item.valley.moss_ball_dry": "Dry Moss Clump",
   "item.valley.salt": "Rock Salt",
   "item.valley.lingering_powder": "Lingering Powder",
   "item.valley.bomb_bag": "Bomb Bag",
@@ -166,6 +180,7 @@
   "block.valley.crate_carrot": "Carrot Crate",
   "block.valley.crate_beet": "Beetroot Crate",
   "block.valley.crate_potato": "Potato Crate",
+  "block.valley.crate_poison": "Poisonous Potato Crate",
   "block.valley.crate_rice": "Rice Crate",
   "block.valley.crate_corn": "Corn Crate",
   "block.valley.crate_tomato": "Tomato Crate",
@@ -298,7 +313,10 @@
   "item.valley.slime_fish": "Gelafin",
   "item.valley.glistering_anglerfish": "Glistering Anglerfish",
   "item.valley.octopus": "Octorok",
-  "item.valley.book_cover": "Book Cover",
+  "item.valley.book_cover": "Canvas",
+
+  "item.valley.crabcake_dough": "Crab Cake Dough",
+  "item.valley.crabcake": "Crab Cake",
 
   "item.valley.fur_clump": "Fur Tuft",
   "item.valley.netherite_nugget": "Netherite Nugget",
@@ -307,6 +325,11 @@
   "item.valley.growth_totem": "Growth Effigy",
   "item.valley.druid_rune.tooltip": "It hums with a strange energy and",
   "item.valley.druid_rune.tooltip_2": "it's branches move on their own.",
+
+  "item.valley.sickle.tooltip": "Use this on Wild Herbs & Taproots",
+  "item.valley.sickle.tooltip_2": "to forage for seeds and vegetables",
+
+  "item.valley.knife.tooltip": "Use this on Grass to harvest Fiber",
 
   "block.valley.herbs": "Wild Herbs",
   "block.valley.taproots": "Wild Taproots",
@@ -480,12 +503,15 @@
   "item.valley.power_crystal_shards": "Hyalite Crystal Shards",
   "block.valley.glow_kelp": "Glow Kelp",
 
+  "block.valley.saltpeter_block": "Block of Saltpeter",
+  "block.valley.flesh_block": "Block of Rotten Flesh",
+
   "block.valley.charcoal_block": "Charcoal Block",
-  "block.valley.brown_bricks": "Mud Bricks",
-  "block.valley.brown_cracked_bricks": "Cracked Mud Bricks",
-  "block.valley.brown_mossy_bricks": "Mossy Mud Bricks",
-  "block.valley.brown_brick_slab": "Mud Brick Slab",
-  "block.valley.brown_brick_stairs": "Mud Brick Stairs",
+  "block.valley.brown_bricks": "Mixed Bricks",
+  "block.valley.brown_cracked_bricks": "Cracked Mixed Bricks",
+  "block.valley.brown_mossy_bricks": "Mossy Mixed Bricks",
+  "block.valley.brown_brick_slab": "Mixed Brick Slab",
+  "block.valley.brown_brick_stairs": "Mixed Brick Stairs",
   "block.valley.smooth_stone": "Smooth Stone",
   "block.valley.redstone_lantern": "Redstone Lantern",
   "block.valley.goblet": "Golden Chalice",

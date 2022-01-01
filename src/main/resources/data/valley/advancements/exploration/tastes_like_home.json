@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/mead",
+	"display": {
+		"title": {
+			"text": "The Skyloft Special"
+		},
+		"icon": {
+			"item": "valley:pumpkin_bottle"
+		},
+		"description": {
+			"text": "Make & drink some hot Bottled Pumpkin Soup"
+		}
+	},
+	"criteria": {
+		"pumpkin_bottle": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:pumpkin_bottle"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"pumpkin_bottle"
+		]
+	]
+}

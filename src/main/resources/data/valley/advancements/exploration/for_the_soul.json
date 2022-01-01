@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/mead",
+	"display": {
+		"title": {
+			"text": "For The Soul"
+		},
+		"icon": {
+			"item": "minecraft:cooked_chicken"
+		},
+		"description": {
+			"text": "Make & eat some Chicken Soup"
+		}
+	},
+	"criteria": {
+		"chicken_soup": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:chicken_soup"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"chicken_soup"
+		]
+	]
+}

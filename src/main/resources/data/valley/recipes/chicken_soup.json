@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cooked_chicken"
+    },
+    {
+      "item": "valley:bone_broth"
+    }
+  ],
+  "result": {
+    "item": "valley:chicken_soup",
+    "count": 1
+  }
+}

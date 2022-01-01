@@ -1,0 +1,18 @@
+  {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "tag": "c:salt"
+    }
+  ],
+  "result": {
+    "item": "valley:grilled_cheese",
+    "count": 1
+  }
+}

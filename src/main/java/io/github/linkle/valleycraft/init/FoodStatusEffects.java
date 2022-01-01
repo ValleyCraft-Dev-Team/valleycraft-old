@@ -38,6 +38,7 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect STEAMED_COD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450));
 	public static final FoodStatusEffect CARROT_STEW = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450),1.0f);
 	public static final FoodStatusEffect CREAMY_HEART_STEW = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,450),1.0f);
+	public static final FoodStatusEffect CRAB_CAKE = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.STRENGTH,900),1.0f);
 
 	public static final FoodStatusEffect SALMON_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,450));
 	public static final FoodStatusEffect CRAB_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450));

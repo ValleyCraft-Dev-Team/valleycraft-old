@@ -1,11 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "###",
+    "#X#",
     "###"
   ],
   "key": {
     "#": {
       "item": "valley:fiber"
+    },
+    "X": {
+      "item": "minecraft:brown_dye"
     }
   },
   "result": {

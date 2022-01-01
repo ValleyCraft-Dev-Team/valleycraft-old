@@ -32,6 +32,7 @@ public class MiscItems {
     public static final Item SQUID_SUCKER = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER,600), 0.9f).build()).maxCount(64));
     public static final Item FIBER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item MOSS_BALL = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
+    public static final Item MOSS_BALL_DRY = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item PUFF_BALL = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item E_TOTEM = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(1));
     public static final Item S_TOTEM = new SunshineTotemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(1));
@@ -55,6 +56,7 @@ public class MiscItems {
     public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
+    public static final Item FRAME_BACKING = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
 
     public static void initialize() {
         Util.register("fur_clump", FUR_CLUMP);
@@ -68,7 +70,9 @@ public class MiscItems {
         Util.register("saltpeter", SALTPETER);
         Util.register("fiber", FIBER);
         Util.register("book_cover", BOOK_COVER);
+        //Util.register("frame_backing", FRAME_BACKING);
         Util.register("moss_ball", MOSS_BALL);
+        Util.register("moss_ball_dry", MOSS_BALL_DRY);
         Util.register("null_totem", E_TOTEM);
         Util.register("sunshine_totem", S_TOTEM);
         Util.register("rain_totem", R_TOTEM);

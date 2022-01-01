@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "valley:fire_eel_cooked", "valley:cooked_tropical_fish","valley:sardine_cooked",
+    "minecraft:cooked_salmon","minecraft:cooked_cod","valley:glistering_anglerfish",
+    "valley:perch"
+  ]
+}
