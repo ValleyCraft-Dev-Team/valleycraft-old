@@ -2,6 +2,7 @@ package io.github.linkle.valleycraft.blocks.crops;
 
 import static io.github.linkle.valleycraft.init.FoodAndCooking.RICE_ITEM;
 
+import java.util.List;
 import java.util.Random;
 
 import net.fabricmc.api.EnvType;
@@ -10,12 +11,16 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.tag.FluidTags;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
@@ -91,5 +96,11 @@ public class RiceCropBlock extends CropBlock {
     @Override
     protected int getMaxAge() {
         return 6;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, BlockView world, List<Text> tooltip, TooltipContext options) {
+        // default white text
+        tooltip.add(new TranslatableText("block.valley.rice_crop.tooltip").formatted(Formatting.GREEN));
     }
 }
