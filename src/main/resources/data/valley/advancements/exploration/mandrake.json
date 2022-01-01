@@ -2,7 +2,7 @@
 	"parent": "valley:exploration/sickle",
 	"display": {
 		"title": {
-			"text": "Plant or mammal?"
+			"text": "Plant or Mammal?"
 		},
 		"icon": {
 			"item": "valley:mandrake"

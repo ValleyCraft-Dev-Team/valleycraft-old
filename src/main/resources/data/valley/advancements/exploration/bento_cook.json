@@ -1,0 +1,70 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Bento Cook"
+		},
+		"icon": {
+			"item": "valley:bbox_unagi"
+		},
+		"description": {
+			"text": "Make & eat one of every Bento Box type"
+		}
+	},
+	"criteria": {
+		"bbox_unagi": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bbox_unagi"
+					]
+				}
+			}
+		},
+		"bbox_clownfish": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bbox_clownfish"
+					]
+				}
+			}
+		},
+		"bbox_salmon": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bbox_salmon"
+					]
+				}
+			}
+		},
+		"bbox_ghost": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bbox_ghost"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"bbox_unagi"
+		],
+		[
+			"bbox_clownfish"
+		],
+		[
+			"bbox_salmon"
+		],
+		[
+			"bbox_ghost"
+		]
+	]
+}

@@ -1,0 +1,244 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Bodacious Baker"
+		},
+		"icon": {
+			"item": "valley:sour_pie"
+		},
+		"description": {
+			"text": "Bake every possible pastry"
+		},
+		"hidden": false
+	},
+	"criteria": {
+		"bread": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bread"
+						]
+					}
+				]
+			}
+		},
+		"cake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cake"
+						]
+					}
+				]
+			}
+		},
+		"cookie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cookie"
+						]
+					}
+				]
+			}
+		},
+		"pumpkin_pie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pumpkin_pie"
+						]
+					}
+				]
+			}
+		},
+		"apple_pie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:apple_pie"
+						]
+					}
+				]
+			}
+		},
+		"sweet_pie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:sweet_pie"
+						]
+					}
+				]
+			}
+		},
+		"bitter_pie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bitter_pie"
+						]
+					}
+				]
+			}
+		},
+		"sour_pie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:sour_pie"
+						]
+					}
+				]
+			}
+		},
+		"glow_pie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:glow_pie"
+						]
+					}
+				]
+			}
+		},
+		"pancake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:pancake"
+						]
+					}
+				]
+			}
+		},
+		"crabcake": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crabcake"
+						]
+					}
+				]
+			}
+		},
+		"skeleton_cookie": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:skeleton_cookie"
+						]
+					}
+				]
+			}
+		},
+		"dog_biscuit": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:dog_biscuit"
+						]
+					}
+				]
+			}
+		},
+		"puppy_pumpkin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:puppy_pumpkin"
+						]
+					}
+				]
+			}
+		},
+		"fox_treat": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fox_treat"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"bread"
+		],
+		[
+			"cake"
+		],
+		[
+			"cookie"
+		],
+		[
+			"pumpkin_pie"
+		],
+		[
+			"apple_pie"
+		],
+		[
+			"sweet_pie"
+		],
+		[
+			"bitter_pie"
+		],
+		[
+			"sour_pie"
+		],
+		[
+			"glow_pie"
+		],
+		[
+			"pancake"
+		],
+		[
+			"crabcake"
+		],
+		[
+			"skeleton_cookie"
+		],
+		[
+			"dog_biscuit"
+		],
+		[
+			"puppy_pumpkin"
+		],
+		[
+			"fox_treat"
+		]
+	]
+}

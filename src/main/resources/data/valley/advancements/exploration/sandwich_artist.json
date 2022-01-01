@@ -1,0 +1,96 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Sandwich Artist"
+		},
+		"icon": {
+			"item": "valley:blt"
+		},
+		"description": {
+			"text": "Make & eat one of every Sandwich"
+		}
+	},
+	"criteria": {
+		"blt": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:blt"
+					]
+				}
+			}
+		},
+		"grilled_cheese": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:grilled_cheese"
+					]
+				}
+			}
+		},
+		"steak_sandwich": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:steak_sandwich"
+					]
+				}
+			}
+		},
+		"pork_sandwich": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:pork_sandwich"
+					]
+				}
+			}
+		},
+		"mutton_sandwich": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:mutton_sandwich"
+					]
+				}
+			}
+		},
+		"tenderloin_sandwich": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tenderloin_sandwich"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"blt"
+		],
+		[
+			"grilled_cheese"
+		],
+		[
+			"steak_sandwich"
+		],
+		[
+			"pork_sandwich"
+		],
+		[
+			"mutton_sandwich"
+		],
+		[
+			"tenderloin_sandwich"
+		]
+	]
+}
