@@ -9,11 +9,11 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-            	"type": "minecraft:item",
+              "type": "minecraft:item",
               "name": "valley:mixed_ore",
               "conditions": [
               	{
-                	"condition": "minecraft:match_tool",
+                  "condition": "minecraft:match_tool",
                   "predicate": {
                     "enchantments": [
                       {
@@ -44,11 +44,11 @@
           "type": "minecraft:alternatives",
           "children": [
             {
-            	"type": "minecraft:item",
+              "type": "minecraft:item",
               "name": "valley:mixed_ore",
               "conditions": [
               	{
-                	"condition": "minecraft:match_tool",
+                  "condition": "minecraft:match_tool",
                   "predicate": {
                     "enchantments": [
                       {
