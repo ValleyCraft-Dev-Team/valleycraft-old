@@ -1,0 +1,50 @@
+{
+	"parent": "valley:exploration/interdimensionalforager",
+	"display": {
+		"title": {
+			"text": "Expert Forager"
+		},
+		"icon": {
+			"item": "valley:netherite_knife"
+		},
+		"description": {
+			"text": "Craft a Netherite Knife & Sickle"
+		},
+		"frame": "challenge",
+		"hidden": false
+	},
+	"criteria": {
+		"netherite_sickle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:netherite_sickle"
+						]
+					}
+				]
+			}
+		},
+		"netherite_knife": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:netherite_knife"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"netherite_sickle"
+		],
+		[
+			"netherite_knife"
+		]
+	]
+}

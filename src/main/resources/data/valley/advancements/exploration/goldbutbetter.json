@@ -2,7 +2,7 @@
 	"parent": "valley:exploration/improvisor",
 	"display": {
 		"title": {
-			"text": "Gold, but better."
+			"text": "Gold, but better"
 		},
 		"icon": {
 			"item": "valley:rg_sword"

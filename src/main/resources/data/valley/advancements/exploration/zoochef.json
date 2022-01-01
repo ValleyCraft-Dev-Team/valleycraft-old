@@ -1,0 +1,37 @@
+{
+	"parent": "valley:exploration/commis",
+	"display": {
+		"title": {
+			"text": "Zoo Chef"
+		},
+		"icon": {
+			"item": "valley:dog_biscuit"
+		},
+		"description": {
+			"text": "Make food for your pets"
+		}
+	},
+	"criteria": {
+		"zoo": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:dog_biscuit",
+							"valley:dog_food",
+							"valley:puppy_pumpkin",
+							"valley:fox_food",
+							"valley:fox_treat"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"zoo"
+		]
+	]
+}

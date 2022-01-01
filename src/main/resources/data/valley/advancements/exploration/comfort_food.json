@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/for_the_soul",
+	"display": {
+		"title": {
+			"text": "Romantic Comfort Food"
+		},
+		"icon": {
+			"item": "valley:creamy_heart_stew"
+		},
+		"description": {
+			"text": "Find an edible use for Roses"
+		}
+	},
+	"criteria": {
+		"creamy_heart_stew": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:creamy_heart_stew"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"creamy_heart_stew"
+		]
+	]
+}

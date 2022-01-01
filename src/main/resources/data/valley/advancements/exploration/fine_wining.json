@@ -1,0 +1,83 @@
+{
+	"parent": "valley:exploration/mead",
+	"display": {
+		"title": {
+			"text": "Fine Wining"
+		},
+		"icon": {
+			"item": "valley:bitter_berry_wine"
+		},
+		"description": {
+			"text": "Drink one of every type of Wine"
+		}
+	},
+	"criteria": {
+		"bitter_berry_wine": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bitter_berry_wine"
+					]
+				}
+			}
+		},
+		"sweet_berry_wine": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:sweet_berry_wine"
+					]
+				}
+			}
+		},
+		"sour_berry_wine": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:sour_berry_wine"
+					]
+				}
+			}
+		},
+		"spicy_berry_wine": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:spicy_berry_wine"
+					]
+				}
+			}
+		},
+		"chorus_wine": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:chorus_wine"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"bitter_berry_wine"
+		],
+		[
+			"sweet_berry_wine"
+		],
+		[
+			"sour_berry_wine"
+		],
+		[
+			"spicy_berry_wine"
+		],
+		[
+			"chorus_wine"
+		]
+	]
+}

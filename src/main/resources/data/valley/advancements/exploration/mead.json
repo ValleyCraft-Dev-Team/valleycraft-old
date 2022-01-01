@@ -32,6 +32,16 @@
 				}
 			}
 		},
+		"sour_berry_cyser": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:sour_berry_cyser"
+					]
+				}
+			}
+		},
 		"spicy_berry_cyser": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
@@ -79,6 +89,9 @@
 		],
 		[
 			"sweet_berry_cyser"
+		],
+		[
+			"sour_berry_cyser"
 		],
 		[
 			"spicy_berry_cyser"

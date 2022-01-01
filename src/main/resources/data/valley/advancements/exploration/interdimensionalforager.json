@@ -1,0 +1,31 @@
+{
+	"parent": "valley:exploration/shroomseeker",
+	"display": {
+		"title": {
+			"text": "Interdimensional Forager"
+		},
+		"icon": {
+			"item": "valley:nether_fungus_stew"
+		},
+		"description": {
+			"text": "It doesn't taste great, but it's better than cooked Hoglin."
+		}
+	},
+	"criteria": {
+		"nether_fungus_stew": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:nether_fungus_stew"
+					]
+				}
+			}
+		}
+	},
+	"requirements": [
+		[
+			"nether_fungus_stew"
+		]
+	]
+}

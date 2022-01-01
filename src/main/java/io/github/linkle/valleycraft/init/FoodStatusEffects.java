@@ -21,13 +21,13 @@ public class FoodStatusEffects {
 
 	public static final FoodStatusEffect RAW_EGGS = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.HUNGER, 600), 0.7f);
 
-	public static final FoodStatusEffect APPLE_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,200));
-	public static final FoodStatusEffect BEET_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING,200));
-	public static final FoodStatusEffect CARROT_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION,200), new StatusEffectInstance(StatusEffects.GLOWING,200));
-	public static final FoodStatusEffect POTATO_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.POISON,200));
-	public static final FoodStatusEffect MOREL_OIL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,200));
-	public static final FoodStatusEffect GB_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.LUCK,200));
-	public static final FoodStatusEffect GB_JUICE_2 = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING,200));
+	public static final FoodStatusEffect APPLE_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,600));
+	public static final FoodStatusEffect BEET_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING,600));
+	public static final FoodStatusEffect CARROT_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION,600), new StatusEffectInstance(StatusEffects.GLOWING,600));
+	public static final FoodStatusEffect POTATO_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.POISON,600));
+	public static final FoodStatusEffect MOREL_OIL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,600));
+	public static final FoodStatusEffect GB_JUICE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.LUCK,600));
+	public static final FoodStatusEffect GB_JUICE_2 = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING,600));
 
 	public static final FoodStatusEffect PUMPKIN_BOWL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,300));
 
@@ -83,7 +83,7 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect PORK_STIR_FRY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,600));
 	public static final FoodStatusEffect FROZEN_JELLY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600));
 	public static final FoodStatusEffect ROCK_CANDY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,600));
-	public static final FoodStatusEffect GLOW_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING,600));
+	public static final FoodStatusEffect GLOW_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,600), new StatusEffectInstance(StatusEffects.GLOWING,600));
 
 	public static final FoodStatusEffect PANCAKE_BREAKFAST = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HASTE,900));
 	public static final FoodStatusEffect PANCAKE_BREAKFAST_LARGE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200));

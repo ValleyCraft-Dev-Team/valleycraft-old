@@ -1,24 +1,26 @@
 {
-	"parent": "valley:exploration/diet",
+	"parent": "valley:exploration/sickle",
 	"display": {
 		"title": {
-			"text": "'Yer Four Basic Food Groups'"
+			"text": "Mycologist"
 		},
 		"icon": {
-			"item": "valley:grub"
+			"item": "valley:stump_red"
 		},
 		"description": {
-			"text": "Make whatever 'Grub' is."
+			"text": "Create a log pile for growing mushrooms"
 		}
 	},
 	"criteria": {
-		"grub": {
+		"log": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:grub"
+							"valley:stump_morel",
+							"valley:stump_red",
+							"valley:stump_brown"
 						]
 					}
 				]
@@ -27,7 +29,7 @@
 	},
 	"requirements": [
 		[
-			"grub"
+			"log"
 		]
 	]
 }

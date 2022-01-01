@@ -1,0 +1,305 @@
+{
+	"parent": "valley:exploration/aquatic_forager",
+	"display": {
+		"title": {
+			"text": "Oceanologist"
+		},
+		"icon": {
+			"item": "valley:octopus"
+		},
+		"description": {
+			"text": "Catch one of every sea creature"
+		},
+		"frame": "challenge",
+		"hidden": false
+	},
+	"criteria": {
+		"cod": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cod"
+						]
+					}
+				]
+			}
+		},
+		"salmon": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:salmon"
+						]
+					}
+				]
+			}
+		},
+		"tropical_fish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tropical_fish"
+						]
+					}
+				]
+			}
+		},
+		"pufferfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pufferfish"
+						]
+					}
+				]
+			}
+		},
+		"fire_eel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fire_eel"
+						]
+					}
+				]
+			}
+		},
+		"ghost_fish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:ghost_fish"
+						]
+					}
+				]
+			}
+		},
+		"perch": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:perch"
+						]
+					}
+				]
+			}
+		},
+		"crab_red": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crab_red"
+						]
+					}
+				]
+			}
+		},
+		"mussel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mussel"
+						]
+					}
+				]
+			}
+		},
+		"brown_mussel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:brown_mussel"
+						]
+					}
+				]
+			}
+		},
+		"cerith_snail": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:cerith_snail"
+						]
+					}
+				]
+			}
+		},
+		"lionfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:lionfish"
+						]
+					}
+				]
+			}
+		},
+		"sardine": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:sardine"
+						]
+					}
+				]
+			}
+		},
+		"slime_fish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:slime_fish"
+						]
+					}
+				]
+			}
+		},
+		"glistering_anglerfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:glistering_anglerfish"
+						]
+					}
+				]
+			}
+		},
+		"octopus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:octopus"
+						]
+					}
+				]
+			}
+		},
+		"clam": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:clam"
+						]
+					}
+				]
+			}
+		},
+		"fossilized_starfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:fossilized_starfish"
+						]
+					}
+				]
+			}
+		},
+		"sand_dollar": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:sand_dollar"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"cod"
+		],
+		[
+			"salmon"
+		],
+		[
+			"tropical_fish"
+		],
+		[
+			"pufferfish"
+		],
+		[
+			"fire_eel"
+		],
+		[
+			"ghost_fish"
+		],
+		[
+			"perch"
+		],
+		[
+			"crab_red"
+		],
+		[
+			"mussel"
+		],
+		[
+			"brown_mussel"
+		],
+		[
+			"cerith_snail"
+		],
+		[
+			"lionfish"
+		],
+		[
+			"sardine"
+		],
+		[
+			"slime_fish"
+		],
+		[
+			"glistering_anglerfish"
+		],
+		[
+			"octopus"
+		],
+		[
+			"clam"
+		],
+		[
+			"fossilized_starfish"
+		],
+		[
+			"sand_dollar"
+		]
+	]
+}

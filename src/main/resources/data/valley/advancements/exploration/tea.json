@@ -22,6 +22,16 @@
 				}
 			}
 		},
+		"tea_sour_berry": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:tea_sour_berry"
+					]
+				}
+			}
+		},
 		"tea_dandelion": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
@@ -91,6 +101,9 @@
 		],
 		[
 			"tea"
+		],
+		[
+			"tea_sour_berry"
 		]
 	]
 }

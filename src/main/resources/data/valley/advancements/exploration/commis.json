@@ -1,35 +1,35 @@
 {
-	"parent": "valley:exploration/root",
+	"parent": "valley:exploration/baker",
 	"display": {
 		"title": {
 			"text": "Commis Chef"
 		},
 		"icon": {
-			"item": "valley:flour_bag"
+			"item": "minecraft:bread"
 		},
 		"description": {
-			"text": "Make some Dough from Flour"
+			"text": "Use a Stove or Campfire to bake your dough"
 		}
 	},
 	"criteria": {
-		"seeds": {
+		"bread": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:cookie_dough",
-							"valley:bread_dough",
-							"valley:cake_dough",
-							"valley:apple_dough",
-							"valley:pumpkin_dough",
-							"valley:bitter_dough",
-							"valley:glow_dough",
-							"valley:sweet_dough",
-							"valley:pancake_dough",
-							"valley:skeleton_cookie_dough",
-							"valley:sour_dough",
-							"valley:crabcake_dough"
+							"minecraft:bread",
+							"minecraft:cookie",
+							"minecraft:cake",
+							"minecraft:pumpkin_pie",
+							"valley:apple_pie",
+							"valley:bitter_pie",
+							"valley:glow_pie",
+							"valley:sweet_pie",
+							"valley:pancake",
+							"valley:skeleton_cookie",
+							"valley:sour_pie",
+							"valley:crabcake"
 						]
 					}
 				]
@@ -38,7 +38,7 @@
 	},
 	"requirements": [
 		[
-			"seeds"
+			"bread"
 		]
 	]
 }

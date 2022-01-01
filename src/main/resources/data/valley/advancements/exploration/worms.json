@@ -1,0 +1,30 @@
+{
+	"parent": "valley:exploration/slimysituation",
+	"display": {
+		"title": {
+			"text": "Banned From The Kitchen"
+		},
+		"icon": {
+			"item": "valley:worm_bowl"
+		},
+		"description": {
+			"text": "Why would you even eat that?"
+		}
+	},"criteria": {
+	"worm_bowl": {
+		"trigger": "minecraft:consume_item",
+		"conditions": {
+			"item": {
+				"items": [
+					"valley:worm_bowl"
+				]
+			}
+		}
+	}
+},
+	"requirements": [
+		[
+			"worm_bowl"
+		]
+	]
+}

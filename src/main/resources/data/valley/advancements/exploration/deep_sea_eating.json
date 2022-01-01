@@ -1,23 +1,23 @@
 {
-	"parent": "valley:exploration/commis",
+	"parent": "valley:exploration/comfort_food",
 	"display": {
 		"title": {
-			"text": "For The Soul"
+			"text": "Deep Sea Dining"
 		},
 		"icon": {
-			"item": "valley:chicken_soup"
+			"item": "valley:glow_soup"
 		},
 		"description": {
-			"text": "Make & eat some Chicken Soup"
+			"text": "Eat some Glow Squid Soup"
 		}
 	},
 	"criteria": {
-		"chicken_soup": {
+		"glow_soup": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:chicken_soup"
+						"valley:glow_soup"
 					]
 				}
 			}
@@ -25,7 +25,7 @@
 	},
 	"requirements": [
 		[
-			"chicken_soup"
+			"glow_soup"
 		]
 	]
 }

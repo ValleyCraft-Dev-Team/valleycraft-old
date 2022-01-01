@@ -1,72 +1,73 @@
 {
-	"parent": "valley:exploration/baker",
+	"parent": "valley:exploration/deep_sea_eating",
 	"display": {
 		"title": {
-			"text": "Full Kitchen"
+			"text": "Salt Chuck Curer"
 		},
 		"icon": {
-			"item": "valley:stew_pot"
+			"item": "valley:dried_sucker"
 		},
 		"description": {
-			"text": "Make Bottles, Mugs, Tea Mugs, Bowls, & Bento Boxes for your dishes"
-		}
+			"text": "Cure some seafood"
+		},
+		"hidden": false
 	},
 	"criteria": {
-		"bowl": {
+		"dried_sucker": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"minecraft:bowl"
+							"valley:dried_sucker"
 						]
 					}
 				]
 			}
 		},
-		"glass": {
+		"dried_tropical_fish": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"minecraft:glass_bottle"
+							"valley:dried_tropical_fish"
 						]
 					}
 				]
 			}
 		},
-		"bento": {
+		"dried_cod": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:bento_block"
+							"valley:dried_cod"
 						]
 					}
 				]
 			}
 		},
-		"tea": {
+		"fire_eel_dried": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:small_mug_block"
+							"valley:fire_eel_dried"
 						]
 					}
 				]
 			}
 		},
-		"mead": {
+		"dried_salmon": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:mug_block"
+							"valley:dried_salmon"
 						]
 					}
 				]
@@ -75,19 +76,19 @@
 	},
 	"requirements": [
 		[
-			"glass"
+			"dried_sucker"
 		],
 		[
-			"tea"
+			"dried_tropical_fish"
 		],
 		[
-			"mead"
+			"dried_cod"
 		],
 		[
-			"bento"
+			"dried_salmon"
 		],
 		[
-			"bowl"
+			"fire_eel_dried"
 		]
 	]
 }

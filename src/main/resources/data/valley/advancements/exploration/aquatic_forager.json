@@ -1,0 +1,64 @@
+{
+	"parent": "valley:exploration/sickle",
+	"display": {
+		"title": {
+			"text": "Aquatic Forager"
+		},
+		"icon": {
+			"item": "valley:clam"
+		},
+		"description": {
+			"text": "Go diving for Clams, Kelp & Glow Kelp"
+		},
+		"hidden": false
+	},
+	"criteria": {
+		"kelp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:kelp"
+						]
+					}
+				]
+			}
+		},
+		"glow_kelp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:glow_kelp"
+						]
+					}
+				]
+			}
+		},
+		"clam": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:clam"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"kelp"
+		],
+		[
+			"glow_kelp"
+		],
+		[
+			"clam"
+		]
+	]
+}

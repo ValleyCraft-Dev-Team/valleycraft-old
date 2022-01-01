@@ -2,22 +2,22 @@
 	"parent": "valley:exploration/commis",
 	"display": {
 		"title": {
-			"text": "For The Soul"
+			"text": "A Questionable Food Source"
 		},
 		"icon": {
-			"item": "valley:chicken_soup"
+			"item": "valley:monster_jerky"
 		},
 		"description": {
-			"text": "Make & eat some Chicken Soup"
+			"text": "Eat some homemade Monster Jerky"
 		}
 	},
 	"criteria": {
-		"chicken_soup": {
+		"monster_jerky": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:chicken_soup"
+						"valley:monster_jerky"
 					]
 				}
 			}
@@ -25,7 +25,7 @@
 	},
 	"requirements": [
 		[
-			"chicken_soup"
+			"monster_jerky"
 		]
 	]
 }

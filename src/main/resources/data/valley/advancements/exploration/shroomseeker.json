@@ -1,72 +1,85 @@
 {
-	"parent": "valley:exploration/baker",
+	"parent": "valley:exploration/aquatic_forager",
 	"display": {
 		"title": {
-			"text": "Full Kitchen"
+			"text": "'Shroom Seeker'"
 		},
 		"icon": {
-			"item": "valley:stew_pot"
+			"item": "valley:morel"
 		},
 		"description": {
-			"text": "Make Bottles, Mugs, Tea Mugs, Bowls, & Bento Boxes for your dishes"
-		}
+			"text": "Forage every type of mushrooom"
+		},
+		"hidden": false
 	},
 	"criteria": {
-		"bowl": {
+		"morel": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"minecraft:bowl"
+							"valley:morel"
 						]
 					}
 				]
 			}
 		},
-		"glass": {
+		"jungle_cap": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"minecraft:glass_bottle"
+							"valley:jungle_cap"
 						]
 					}
 				]
 			}
 		},
-		"bento": {
+		"red_mushroom": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:bento_block"
+							"minecraft:red_mushroom"
 						]
 					}
 				]
 			}
 		},
-		"tea": {
+		"brown_mushroom": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:small_mug_block"
+							"minecraft:brown_mushroom"
 						]
 					}
 				]
 			}
 		},
-		"mead": {
+		"crimson_fungus": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:mug_block"
+							"minecraft:crimson_fungus"
+						]
+					}
+				]
+			}
+		},
+		"warped_fungus": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:warped_fungus"
 						]
 					}
 				]
@@ -75,19 +88,22 @@
 	},
 	"requirements": [
 		[
-			"glass"
+			"morel"
 		],
 		[
-			"tea"
+			"jungle_cap"
 		],
 		[
-			"mead"
+			"red_mushroom"
 		],
 		[
-			"bento"
+			"brown_mushroom"
 		],
 		[
-			"bowl"
+			"crimson_fungus"
+		],
+		[
+			"warped_fungus"
 		]
 	]
 }
