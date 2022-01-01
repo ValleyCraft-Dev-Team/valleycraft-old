@@ -89,6 +89,7 @@ public class VConfig implements ConfigData {
 			public boolean redstoneCrystalPatchEnabled = true;
 			public boolean spiderSackPatchEnabled = true;
 			public boolean glowKelpPatchEnabled = true;
+			public boolean rocksPatchEnabled = true;
 		}
 
 		public static class OceanFeatures implements ConfigData {
