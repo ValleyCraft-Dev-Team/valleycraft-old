@@ -1,12 +1,34 @@
 package io.github.linkle.valleycraft.items.food;
 
-import io.github.linkle.valleycraft.mixins.ItemSettingsAccessor;
-import io.github.linkle.valleycraft.utils.FoodStatusEffect;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.jetbrains.annotations.Nullable;
 
+import com.google.common.collect.Lists;
+import com.mojang.datafixers.util.Pair;
+
 import io.github.linkle.valleycraft.init.ItemGroups;
+import io.github.linkle.valleycraft.mixins.ItemSettingsAccessor;
+import io.github.linkle.valleycraft.utils.FoodStatusEffect;
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.attribute.EntityAttribute;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.BaseText;
+import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
+import net.minecraft.world.World;
 
 public class FoodItemBase extends Item {
     
@@ -52,5 +74,34 @@ public class FoodItemBase extends Item {
         }
         
         return builder.build();
+    }
+    
+    @Override
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
+        if (getFoodComponent() == null) return;
+        var list = getFoodComponent().getStatusEffects();
+        
+        for (var pair : list) {
+            var effect = pair.getFirst();
+            var name = effect.getEffectType().getName();
+            if (name instanceof BaseText text) {
+                var color = effect.getEffectType().isBeneficial() ? Formatting.BLUE : Formatting.RED;
+                var build = new StringBuilder();
+                
+                /* Won't work
+                if (effect.getAmplifier() > 0) {
+                    build.append(' ');
+                    build.append(new TranslatableText("potion.withAmplifier" + effect.getAmplifier()));
+                } */
+
+                if (effect.getDuration() > 20) {
+                    build.append(" (");
+                    build.append(StatusEffectUtil.durationToString(effect, 1));
+                    build.append(')');
+                }
+                
+                tooltip.add(text.formatted(color).append(build.toString()));
+            }
+        }
     }
 }
