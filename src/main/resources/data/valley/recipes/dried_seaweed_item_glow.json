@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:salt"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    }
+  ],
+  "result": {
+    "item": "valley:dried_seaweed",
+    "count": 8
+  }
+}

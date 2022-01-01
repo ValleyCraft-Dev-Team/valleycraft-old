@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:flint"
+      "tag": "c:pointy_things"
     },
     "C": {
       "item": "valley:climbable_rope"

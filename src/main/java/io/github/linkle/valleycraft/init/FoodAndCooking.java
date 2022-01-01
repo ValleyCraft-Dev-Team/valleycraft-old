@@ -5,6 +5,7 @@ import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.item.Item;
 
 import static io.github.linkle.valleycraft.init.ItemGroups.MISC_GROUP;
+import static net.minecraft.item.Items.GLASS_BOTTLE;
 
 public class FoodAndCooking {
     public static final Item DRIED_SALMON = new FoodItemBase(new Item.Settings(), 4, 0.4f);
@@ -23,7 +24,7 @@ public class FoodAndCooking {
     public static final Item DRIED_SUCKER = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item RICE_ITEM = new FoodItemBase(new Item.Settings(), 3, 0.6f);
     public static final Item SEAWEED_ITEM = new FoodItemBase(new Item.Settings(), 4, 0.6f);
-    public static final Item MILK_BOTTLE = new MilkBottleBase(new Item.Settings().maxCount(16), 2, 0.5f);
+    public static final Item MILK_BOTTLE = new MilkBottleBase(new Item.Settings().maxCount(16).recipeRemainder(GLASS_BOTTLE), 2, 0.5f);
     public static final Item CHOCO_MILK = new DrinkBottleBase(new Item.Settings().maxCount(1), 5, 0.5f, FoodStatusEffects.CHOCO_MILK);
     public static final Item PUMPKIN_BOTTLE = new DrinkBottleBase(new Item.Settings().maxCount(1), 7, 0.5f, FoodStatusEffects.PUMPKIN_BOTTLE);
     public static final Item TEA = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 1, FoodStatusEffects.TEA);
@@ -32,8 +33,9 @@ public class FoodAndCooking {
     public static final Item TEA_M = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 1, FoodStatusEffects.TEA_M);
     public static final Item TEA_D = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 1, FoodStatusEffects.TEA_D);
     public static final Item TEA_L = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 1, FoodStatusEffects.TEA_L);
+    public static final Item TEA_SR = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 1, FoodStatusEffects.TEA_SR);
 
-    public static final Item HONEYCOMB_CHUNK = new FoodItemBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.HONEYCOMB_CHUNK);
+    public static final Item HONEYCOMB_CHUNK = new FoodItemBase(new Item.Settings(), 2, 1f, FoodStatusEffects.HONEYCOMB_CHUNK);
     public static final Item SALT = new FoodItemBase(new Item.Settings().group(MISC_GROUP), 1, 0.5f);
     public static final Item CLOWN_SALAD = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, FoodStatusEffects.CLOWN_SALAD);
     public static final Item CAKE_SLICE = new FoodItemBase(new Item.Settings(), 2, 0.4f);
@@ -93,23 +95,26 @@ public class FoodAndCooking {
     public static final Item BB_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
     public static final Item SB_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
     public static final Item GB_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
+    public static final Item SR_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
 
     public static final Item AMERANTH_PANCAKE_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f, FoodStatusEffects.AMERANTH_PANCAKE_DOUGH);
     public static final Item AMERANTH_PANCAKE = new FoodItemBase(new Item.Settings(), 5, 0.5f, FoodStatusEffects.AMERANTH_PANCAKE);
     public static final Item AMERANTH_PORRIDGE = new BowlBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.AMERANTH_PORRIDGE);
     public static final Item AMERANTH_PANCAKE_BREAKFAST = new BowlBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.AMERANTH_PANCAKE_BREAKFAST);
 
-    public static final Item APPLE_CYSER = new MeadBase(new Item.Settings(), 3, 1f, FoodStatusEffects.APPLE_CYSER);
-    public static final Item BITTER_BERRY_CYSER = new MeadBase(new Item.Settings(), 3, 1f, FoodStatusEffects.BITTER_BERRY_CYSER);
-    public static final Item SPICY_BERRY_CYSER = new MeadBase(new Item.Settings(), 3, 1f, FoodStatusEffects.SPICY_BERRY_CYSER);
-    public static final Item SWEET_BERRY_CYSER = new MeadBase(new Item.Settings(), 3, 1f, FoodStatusEffects.SWEET_BERRY_CYSER);
-    public static final Item MEAD_MUG = new MeadBase(new Item.Settings().maxCount(16), 3, 1f, FoodStatusEffects.MEAD_MUG);
-    public static final Item CHOCO_CYSER = new MeadBase(new Item.Settings(), 3, 1f, FoodStatusEffects.CHOCO_CYSER);
+    public static final Item APPLE_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.APPLE_CYSER);
+    public static final Item BITTER_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.BITTER_BERRY_CYSER);
+    public static final Item SPICY_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.SPICY_BERRY_CYSER);
+    public static final Item SWEET_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.SWEET_BERRY_CYSER);
+    public static final Item SOUR_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.SOUR_BERRY_CYSER);
+    public static final Item MEAD_MUG = new MeadBase(new Item.Settings().maxCount(64), 3, 1f, FoodStatusEffects.MEAD_MUG);
+    public static final Item CHOCO_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.CHOCO_CYSER);
 
-    public static final Item SWEET_BERRY_WINE = new DrinkBottleBase(new Item.Settings(), 2, 1f, FoodStatusEffects.SWEET_BERRY_WINE);
-    public static final Item BITTER_BERRY_WINE = new DrinkBottleBase(new Item.Settings(), 2, 1f, FoodStatusEffects.BITTER_BERRY_WINE);
-    public static final Item SPICY_BERRY_WINE = new DrinkBottleBase(new Item.Settings(), 2, 1f, FoodStatusEffects.SPICY_BERRY_WINE);
-    public static final Item CHORUS_WINE = new DrinkBottleBase(new Item.Settings(), 2, 1f, FoodStatusEffects.CHORUS_WINE);
+    public static final Item SWEET_BERRY_WINE = new DrinkBottleBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.SWEET_BERRY_WINE);
+    public static final Item BITTER_BERRY_WINE = new DrinkBottleBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.BITTER_BERRY_WINE);
+    public static final Item SOUR_BERRY_WINE = new DrinkBottleBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.SOUR_BERRY_WINE);
+    public static final Item SPICY_BERRY_WINE = new DrinkBottleBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.SPICY_BERRY_WINE);
+    public static final Item CHORUS_WINE = new DrinkBottleBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.CHORUS_WINE);
 
     public static final Item CHICKEN_CURRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.7f, FoodStatusEffects.CHICKEN_CURRY);
     public static final Item FULL_BREAKFAST_VEGETARIAN = new BowlBase(new Item.Settings().maxCount(1), 9, 0.6f, FoodStatusEffects.FULL_BREAKFAST_VEGETARIAN);
@@ -122,9 +127,9 @@ public class FoodAndCooking {
     public static final Item MINER_SALAD = new BowlBase(new Item.Settings().maxCount(1), 4, 0.4f);
     public static final Item POKE_BOWL = new BowlBase(new Item.Settings().maxCount(1), 8, 0.4f, FoodStatusEffects.POKE_BOWL);
 
-    public static final Item TOMATO_JUICE = new DrinkBottleBase(new Item.Settings(), 4, 0.5f);
-    public static final Item JUICE_EG = new DrinkBottleBase(new Item.Settings(), 4, 0.5f);
-    public static final Item COCOA = new DrinkTeaBase(new Item.Settings(), 2, 0.5f, FoodStatusEffects.COCOA);
+    public static final Item TOMATO_JUICE = new DrinkBottleBase(new Item.Settings().maxCount(1), 4, 0.5f);
+    public static final Item JUICE_EG = new DrinkBottleBase(new Item.Settings().maxCount(1), 4, 0.5f);
+    public static final Item COCOA = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 0.5f, FoodStatusEffects.COCOA);
     public static final Item CLOWNFISH_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.CLOWNFISH_ROLL);
     public static final Item CRYS_HONEY = new FoodItemBase(new Item.Settings(), 4, 0.5f, FoodStatusEffects.CRYS_HONEY);
     public static final Item MAIZE_PORRIDGE = new BowlBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.MAIZE_PORRIDGE);
@@ -149,7 +154,7 @@ public class FoodAndCooking {
     public static final Item BACON_AND_EGGS = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, FoodStatusEffects.BACON_AND_EGGS);
     public static final Item DUMPLING = new FoodItemBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.DUMPLING);
 
-    public static final Item GRUB = new BowlBase(new Item.Settings(), 12, 0.6f, FoodStatusEffects.GRUB);
+    public static final Item GRUB = new BowlBase(new Item.Settings().maxCount(1), 12, 0.6f, FoodStatusEffects.GRUB);
 
     public static final Item DRUMSTICK = new FoodItemBase(new Item.Settings(), 4, 0.6f);
     public static final Item COOKED_APPLE = new FoodItemBase(new Item.Settings(), 6, 0.5f);
@@ -158,13 +163,14 @@ public class FoodAndCooking {
     public static final Item WORM = new FoodItemBase(new Item.Settings(), 2, 0.6f);
 
     public static final Item DOG_BISCUIT= new FoodItemBase(new Item.Settings(), 8, 0.5f, true);
-    public static final Item DOG_FOOD = new BowlBase(new Item.Settings(), 8, 0.6f, true, FoodStatusEffects.DOG_FOOD);
+    public static final Item DOG_FOOD = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, true, FoodStatusEffects.DOG_FOOD);
     public static final Item DOG_PUMPKIN= new FoodItemBase(new Item.Settings(), 8, 0.5f, true);
-    public static final Item FOX_FOOD = new BowlBase(new Item.Settings(), 8, 0.6f, true, FoodStatusEffects.FOX_FOOD);
+    public static final Item FOX_FOOD = new BowlBase(new Item.Settings().maxCount(1), 8, 0.6f, true, FoodStatusEffects.FOX_FOOD);
     public static final Item FOX_TREAT= new FoodItemBase(new Item.Settings(), 8, 0.5f, true);
 
     public static final Item GOLDEN_BB = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_SB = new FoodItemBase(new Item.Settings(), 10, 0.6f);
+    public static final Item GOLDEN_SRB = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_SPB = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_P = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_B = new FoodItemBase(new Item.Settings(), 10, 0.6f);
@@ -174,7 +180,7 @@ public class FoodAndCooking {
     public static final Item GOLDEN_T = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_K = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_H = new FoodItemBase(new Item.Settings(), 10, 0.6f);
-    public static final Item GOLDEN_J = new DrinkBottleBase(new Item.Settings(), 10, 0.6f);
+    public static final Item GOLDEN_J = new DrinkBottleBase(new Item.Settings().maxCount(1), 10, 0.6f);
     public static final Item GOLDEN_GB = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_M = new FoodItemBase(new Item.Settings(), 10, 0.6f);
     public static final Item GOLDEN_EP = new FoodItemBase(new Item.Settings(), 10, 0.6f);
@@ -183,8 +189,8 @@ public class FoodAndCooking {
     public static final Item EGG_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.EGG_STIR_FRY);
     public static final Item BEAR_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.BEAR_STIR_FRY);
     public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.MANDRAKE_SOUP);
-    public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings(), 9, 0.4f, FoodStatusEffects.CANDIED_SNOW_YAM);
-    public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings(), 9, 0.4f, FoodStatusEffects.WINTER_ROOT_STEW);
+    public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.CANDIED_SNOW_YAM);
+    public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.WINTER_ROOT_STEW);
     public static final Item WORM_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.8f, FoodStatusEffects.WORM_SOUP);
     public static final Item SLIME_SOUP = new BowlBase(new Item.Settings().maxCount(1), 5, 0.4f, FoodStatusEffects.SLIME_SOUP);
 
@@ -194,6 +200,7 @@ public class FoodAndCooking {
     public static final Item BITTER_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item SWEET_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item GLOW_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
+    public static final Item SOUR_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
 
     public static final Item G_WATER = new FoodItemBase(new Item.Settings(), 4, 0.5f);
     public static final Item B_WATER = new FoodItemBase(new Item.Settings(), 8, 0.5f);
@@ -206,6 +213,7 @@ public class FoodAndCooking {
         Util.register("tea_miner", TEA_M);
         Util.register("tea_dandelion", TEA_D);
         Util.register("tea_lavender", TEA_L);
+        Util.register("tea_sour_berry", TEA_SR);
 
         Util.register("cocoa", COCOA);
 
@@ -213,12 +221,14 @@ public class FoodAndCooking {
         Util.register("sweet_berry_cyser", SWEET_BERRY_CYSER);
         Util.register("spicy_berry_cyser", SPICY_BERRY_CYSER);
         Util.register("bitter_berry_cyser", BITTER_BERRY_CYSER);
+        Util.register("sour_berry_cyser", SOUR_BERRY_CYSER);
         Util.register("apple_cyser", APPLE_CYSER);
         Util.register("chocolate_cyser", CHOCO_CYSER);
 
-        Util.register("bitter_berry_wine", BITTER_BERRY_WINE);
-        Util.register("spicy_berry_wine", SPICY_BERRY_WINE);
         Util.register("sweet_berry_wine", SWEET_BERRY_WINE);
+        Util.register("spicy_berry_wine", SPICY_BERRY_WINE);
+        Util.register("bitter_berry_wine", BITTER_BERRY_WINE);
+        Util.register("sour_berry_wine", SOUR_BERRY_WINE);
         Util.register("chorus_wine", CHORUS_WINE);
 
         Util.register("milk_bottle", MILK_BOTTLE);
@@ -310,9 +320,10 @@ public class FoodAndCooking {
         Util.register("cake_dough", CAKE_DOUGH);
         Util.register("apple_dough", APPLE_DOUGH);
         Util.register("pumpkin_dough", PUMPKIN_DOUGH);
-        Util.register("bitter_dough", BB_DOUGH);
-        Util.register("glow_dough", GB_DOUGH);
         Util.register("sweet_dough", SB_DOUGH);
+        Util.register("bitter_dough", BB_DOUGH);
+        Util.register("sour_dough", SR_DOUGH);
+        Util.register("glow_dough", GB_DOUGH);
         Util.register("bread_dough", BREAD_DOUGH);
         Util.register("pancake_dough", PANCAKE_DOUGH);
         //register("ameranth_pancake_dough", AMERANTH_PANCAKE_DOUGH);
@@ -321,8 +332,9 @@ public class FoodAndCooking {
         Util.register("pancake", PANCAKE);
         //register("ameranth_pancake", AMERANTH_PANCAKE);
         Util.register("apple_pie", APPLE_PIE);
-        Util.register("bitter_pie", BITTER_PIE);
         Util.register("sweet_pie", SWEET_PIE);
+        Util.register("bitter_pie", BITTER_PIE);
+        Util.register("sour_pie", SOUR_PIE);
         Util.register("glow_pie", GLOW_PIE);
 
         Util.register("cake_slice", CAKE_SLICE);
@@ -365,9 +377,10 @@ public class FoodAndCooking {
 
         Util.register("glistering_juice", GOLDEN_J);
         Util.register("glistering_honeycomb", GOLDEN_H);
-        Util.register("glistering_bitter_berries", GOLDEN_BB);
         Util.register("glistering_sweet_berries", GOLDEN_SB);
         Util.register("glistering_spicy_berries", GOLDEN_SPB);
+        Util.register("glistering_bitter_berries", GOLDEN_BB);
+        Util.register("glistering_sour_berries", GOLDEN_SRB);
         Util.register("glistering_glow_berries", GOLDEN_GB_2);
         Util.register("glistering_kelp", GOLDEN_K);
         Util.register("glistering_tomato", GOLDEN_T);

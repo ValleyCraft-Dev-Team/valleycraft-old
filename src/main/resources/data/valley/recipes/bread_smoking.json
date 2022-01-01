@@ -1,9 +1,9 @@
 {
-  "type": "minecraft:campfire_cooking",
+  "type": "minecraft:smoking",
   "ingredient": {
     "tag": "c:dough"
   },
   "result": "minecraft:bread",
   "experience": 0.2,
-  "cookingtime": 200
+  "cookingtime": 50
 }

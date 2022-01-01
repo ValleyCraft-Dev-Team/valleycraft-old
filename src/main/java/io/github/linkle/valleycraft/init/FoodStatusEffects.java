@@ -14,6 +14,7 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect TEA_M = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HASTE,1200));
 	public static final FoodStatusEffect TEA_D = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.LUCK,1200));
 	public static final FoodStatusEffect TEA_L = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 240));
+	public static final FoodStatusEffect TEA_SR = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 240));
 
 	public static final FoodStatusEffect HONEYCOMB_CHUNK = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,120));
 	public static final FoodStatusEffect CLOWN_SALAD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,600));
@@ -53,11 +54,13 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect BITTER_BERRY_CYSER = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,300), new StatusEffectInstance(StatusEffects.RESISTANCE,600), new StatusEffectInstance(StatusEffects.STRENGTH,600));
 	public static final FoodStatusEffect SPICY_BERRY_CYSER = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,300), new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600), new StatusEffectInstance(StatusEffects.SLOW_FALLING,600));
 	public static final FoodStatusEffect SWEET_BERRY_CYSER = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,300), new StatusEffectInstance(StatusEffects.HEALTH_BOOST,600), new StatusEffectInstance(StatusEffects.STRENGTH,600));
+	public static final FoodStatusEffect SOUR_BERRY_CYSER = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,300), new StatusEffectInstance(StatusEffects.HEALTH_BOOST,600), new StatusEffectInstance(StatusEffects.REGENERATION,600));
 	public static final FoodStatusEffect MEAD_MUG = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,300), new StatusEffectInstance(StatusEffects.STRENGTH,600), new StatusEffectInstance(StatusEffects.SPEED,600));
 	public static final FoodStatusEffect CHOCO_CYSER = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,300), new StatusEffectInstance(StatusEffects.NIGHT_VISION,600), new StatusEffectInstance(StatusEffects.SPEED,600));
 
 	public static final FoodStatusEffect SWEET_BERRY_WINE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,200), new StatusEffectInstance(StatusEffects.REGENERATION,500), new StatusEffectInstance(StatusEffects.STRENGTH,600));
 	public static final FoodStatusEffect BITTER_BERRY_WINE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,200), new StatusEffectInstance(StatusEffects.SLOW_FALLING,500), new StatusEffectInstance(StatusEffects.STRENGTH,600));
+	public static final FoodStatusEffect SOUR_BERRY_WINE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,200), new StatusEffectInstance(StatusEffects.HEALTH_BOOST,500), new StatusEffectInstance(StatusEffects.STRENGTH,600));
 	public static final FoodStatusEffect SPICY_BERRY_WINE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,200), new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,500), new StatusEffectInstance(StatusEffects.SPEED,600));
 	public static final FoodStatusEffect CHORUS_WINE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,400), new StatusEffectInstance(StatusEffects.INVISIBILITY,600), new StatusEffectInstance(StatusEffects.RESISTANCE,600));
 

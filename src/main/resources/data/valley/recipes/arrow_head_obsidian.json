@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "valley:copper_billet"
+    }
+  ],
+  "result": {
+    "item": "valley:knapped_obsidian_arrowhead",
+    "count": 4
+  }
+}

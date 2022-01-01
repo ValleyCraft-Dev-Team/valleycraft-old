@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "valley:sour_berries"
+    }
+  },
+  "result": {
+    "item": "valley:glistering_sour_berries",
+    "count": 1
+  }
+}
