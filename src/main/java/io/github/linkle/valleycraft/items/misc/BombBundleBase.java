@@ -11,6 +11,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 public class BombBundleBase extends Item {
@@ -33,7 +34,7 @@ public class BombBundleBase extends Item {
                 return new ItemStack(Items.FLINT_AND_STEEL, 1);
             }
 
-            inventory.insertStack(new ItemStack(Items.TNT, 4));
+            inventory.insertStack(new ItemStack(Items.TNT, MathHelper.nextInt(world.random, 3, 6)));
             inventory.insertStack(new ItemStack(Items.FLINT_AND_STEEL, 1));
             return stack;
         }
