@@ -118,7 +118,7 @@ public class Plants {
             .ticksRandomly()
             .noCollision()
             .breakInstantly()
-            .sounds(BlockSoundGroup.WEEPING_VINES));
+            .sounds(BlockSoundGroup.WEEPING_VINES), Block.createCuboidShape(2, 9, 2, 14, 16, 14));
     public static final VinesPlantBlock DRY_VINES_PLANT = new VinesPlantBlock(
             FabricBlockSettings.of(Material.PLANT, MapColor.YELLOW)
             .noCollision()

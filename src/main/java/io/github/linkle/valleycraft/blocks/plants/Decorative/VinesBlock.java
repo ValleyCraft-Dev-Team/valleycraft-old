@@ -15,7 +15,6 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.WorldAccess;
 
 public class VinesBlock extends AbstractPlantStemBlock {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(4.0D, 9.0D, 4.0D, 12.0D, 16.0D, 12.0D);
 
     public static final int MAX_AGE = 5;
 
@@ -23,7 +22,11 @@ public class VinesBlock extends AbstractPlantStemBlock {
     private final double growthChance;
 
     public VinesBlock(Settings settings) {
-        super(settings, Direction.DOWN, SHAPE, false, 0.1);
+        this(settings, createCuboidShape(4, 9, 4, 12, 16, 12));
+    }
+    
+    public VinesBlock(Settings settings, VoxelShape shape) {
+        super(settings, Direction.DOWN, shape, false, 0.1);
         growthChance = 0.1;
     }
 
