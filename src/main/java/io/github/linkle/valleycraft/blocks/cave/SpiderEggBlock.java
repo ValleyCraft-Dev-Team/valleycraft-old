@@ -9,6 +9,9 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.CaveSpiderEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -70,20 +73,9 @@ public class SpiderEggBlock extends Block {
     }
     
     @Override
-    public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        tryBreakEgg(world, pos, 100);
-        super.onSteppedOn(world, pos, state, entity);
-    }
-    @Override
-    public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
-        tryBreakEgg(world, pos, 3);
-        super.onLandedUpon(world, state, pos, entity, fallDistance);
-    }
-    
-    private void tryBreakEgg(World world, BlockPos pos, int inverseChance) {
-        if (world.random.nextInt(inverseChance) == 0 && world instanceof ServerWorld server) {
-            world.breakBlock(pos, false);
-            spawnCaveSpider(server, pos);
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (entity instanceof PlayerEntity || entity instanceof CaveSpiderEntity) {
+            world.breakBlock(pos, true);
         }
     }
 
