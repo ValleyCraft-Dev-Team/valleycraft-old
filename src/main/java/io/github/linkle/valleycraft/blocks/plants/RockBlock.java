@@ -31,12 +31,14 @@ public class RockBlock extends BlockWithWater {
         return SHAPE;
     }
     
+    @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         return !state.canPlaceAt(world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
 
+    @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return world.getBlockState(pos.down()).isOpaqueFullCube(world, pos);
+        return world.getBlockState(pos.down()).isSideSolidFullSquare(world, pos, Direction.UP);
     }
 }
 
