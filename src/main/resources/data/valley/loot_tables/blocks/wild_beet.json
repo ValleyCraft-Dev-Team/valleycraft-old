@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:beetroot",
+              "name": "minecraft:beetroot_seeds",
               "functions": [
                 {
                   "function": "minecraft:set_count",

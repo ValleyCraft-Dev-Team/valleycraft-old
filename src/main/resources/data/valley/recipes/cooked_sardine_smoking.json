@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:sardine"
+  },
+  "result": "valley:sardine_cooked",
+  "experience": 0.2,
+  "cookingtime": 200
+}
