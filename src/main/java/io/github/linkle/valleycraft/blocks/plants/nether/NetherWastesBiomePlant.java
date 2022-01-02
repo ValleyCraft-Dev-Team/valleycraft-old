@@ -2,13 +2,17 @@ package io.github.linkle.valleycraft.blocks.plants.nether;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 public class NetherWastesBiomePlant extends PlantBlock {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 12, 13);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
 
     public NetherWastesBiomePlant() {
         super(FabricBlockSettings.of(Material.NETHER_SHOOTS)
@@ -30,5 +34,20 @@ public class NetherWastesBiomePlant extends PlantBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    public static final VoxelShape BlockCollisionShape;
+
+    public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+        return BlockCollisionShape;
+    }
+
+    @Override
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        entity.damage(DamageSource.IN_FIRE, 1);
+    }
+
+    static {
+        BlockCollisionShape = VoxelShapes.empty();
     }
 }

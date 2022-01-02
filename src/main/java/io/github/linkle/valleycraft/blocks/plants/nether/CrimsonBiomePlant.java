@@ -6,10 +6,11 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 public class CrimsonBiomePlant extends PlantBlock {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(3, 0, 3, 13, 12, 13);
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
 
     public CrimsonBiomePlant() {
         super(FabricBlockSettings.of(Material.NETHER_SHOOTS)
@@ -32,5 +33,15 @@ public class CrimsonBiomePlant extends PlantBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    public static final VoxelShape BlockCollisionShape;
+
+    public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
+        return BlockCollisionShape;
+    }
+
+    static {
+        BlockCollisionShape = VoxelShapes.empty();
     }
 }
