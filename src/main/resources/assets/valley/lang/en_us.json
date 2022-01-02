@@ -784,5 +784,6 @@
   "text.autoconfig.valleycraft.option.mobs.bearSpawnEnabled": "Bear Spawn",
   "text.autoconfig.valleycraft.option.mobs.duckSpawnEnabled": "Duck Spawn",
   "text.autoconfig.valleycraft.option.misc": "Miscellaneous",
-  "text.autoconfig.valleycraft.option.misc.foodEffectsEnabled": "Food's Status Effects"
+  "text.autoconfig.valleycraft.option.misc.foodEffectsEnabled": "Food's Status Effects",
+  "text.autoconfig.valleycraft.option.misc.spiderEggWebGenEnabled": "Spider Egg Web Gen"
 }

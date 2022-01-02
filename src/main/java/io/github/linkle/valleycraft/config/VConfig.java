@@ -151,5 +151,7 @@ public class VConfig implements ConfigData {
 	public static class Misc implements ConfigData {
 	    @Comment("Disables food's special status effects when eaten")
         public boolean foodEffectsEnabled = true;
+	    @Comment("Disables Cave Spider Egg's web cluster cover around the egg")
+        public boolean spiderEggWebGenEnabled = true;
     }
 }

@@ -1,5 +1,6 @@
 package io.github.linkle.valleycraft.world.gen.features;
 
+import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
 import net.minecraft.block.Block;
 import net.minecraft.tag.BlockTags;
@@ -41,6 +42,7 @@ public class CavePatchFeature extends Feature<CavePatchConfig> {
                 ++spawned;
 
                 if (!state.isOf(Plants.SPIDER_EGG_BLOCK)) {
+                    if (ValleyMain.CONFIG.misc.spiderEggWebGenEnabled) 
                     for (BlockPos pos : BlockPos.iterate(mutable.getX() - 3, mutable.getY() - 3, mutable.getZ() - 3,
                             mutable.getX() + 3, mutable.getY() + 3, mutable.getZ() + 3)) {
                         if (random.nextFloat(1) < config.extraBlockChance()) {
