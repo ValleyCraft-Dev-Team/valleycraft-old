@@ -12,6 +12,9 @@ import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
 import io.github.linkle.valleycraft.blocks.plants.bushes.HedgeBushBlock;
 import io.github.linkle.valleycraft.blocks.plants.bushes.JungleBushBlock;
 import io.github.linkle.valleycraft.blocks.plants.bushes.TumbleWeedBlock;
+import io.github.linkle.valleycraft.blocks.plants.nether.CrimsonBiomePlant;
+import io.github.linkle.valleycraft.blocks.plants.nether.NetherWastesBiomePlant;
+import io.github.linkle.valleycraft.blocks.plants.nether.SoulSandValleyBiomePlant;
 import io.github.linkle.valleycraft.blocks.sapling.AppleSaplingGen;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -152,6 +155,10 @@ public class Plants {
     public static final Block PANFLOWER = new Plant();
     public static final Block HONEY_CLUSTER = new Plant();
 
+    public static final Block ROOTED_WATCHER = new CrimsonBiomePlant();
+    public static final Block SOUL_SPORECAP = new SoulSandValleyBiomePlant();
+    public static final Block TAINTED_WART = new NetherWastesBiomePlant();
+
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);
 
@@ -236,5 +243,9 @@ public class Plants {
         Util.registerWithItem("apple_leaves_empty", APPLE_LEAVES_EMPTY, natureGroup);
 
         Util.registerWithItem("spider_egg", SPIDER_EGG_BLOCK, natureGroup);
+
+        Util.registerWithItem("rooted_watcher", ROOTED_WATCHER, natureGroup);
+        Util.registerWithItem("tainted_nether_wart", TAINTED_WART, natureGroup);
+        Util.registerWithItem("soul_sporecap", SOUL_SPORECAP, natureGroup);
     }
 }

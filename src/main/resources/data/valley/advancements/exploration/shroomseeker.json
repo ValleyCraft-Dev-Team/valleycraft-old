@@ -84,6 +84,18 @@
 					}
 				]
 			}
+		},
+		"soul_sporecap": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:soul_sporecap"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
@@ -104,6 +116,9 @@
 		],
 		[
 			"warped_fungus"
+		],
+		[
+			"soul_sporecap"
 		]
 	]
 }

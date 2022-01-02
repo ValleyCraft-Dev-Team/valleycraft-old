@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    },
+    {
+      "item": "valley:glow_kelp"
+    }
+  ],
+  "result": {
+    "item": "valley:glow_kelp_block",
+    "count": 1
+  }
+}

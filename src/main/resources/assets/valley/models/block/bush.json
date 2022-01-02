@@ -2,7 +2,7 @@
     "ambientocclusion": false,
     "textures": {
 		"cross": "valley:blocks/bush",
-        "particle": "#cross"
+        "particle": "valley:blocks/bush_particles"
     },
     "elements": [
         {   "from": [ 0.8, 0, 8 ],

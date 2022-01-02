@@ -31,6 +31,7 @@ public class VLootTables {
     
     private static void fishingFishLoot(FabricLootPoolBuilder pool) {
         pool.with(ItemEntry.builder(Fishing.CRAB).weight(13));
+        pool.with(ItemEntry.builder(Fishing.LOBSTER).weight(13));
         pool.with(ItemEntry.builder(Fishing.MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.BROWN_MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.CERITH_SNAIL).weight(13));

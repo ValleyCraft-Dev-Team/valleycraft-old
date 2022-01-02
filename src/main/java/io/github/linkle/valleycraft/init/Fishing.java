@@ -23,12 +23,14 @@ public class Fishing {
     public static final Item SARDINE = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item SLIMEFISH = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).rarity(Rarity.COMMON).maxCount(64));
     public static final Item GLISTERING_ANGLER = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).build()).rarity(Rarity.RARE).maxCount(64));
+    public static final Item LOBSTER = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 900),0.8f).build()).maxCount(64));
 
     public static void initialize() {
         Util.register("fire_eel", FIRE_EEL);
         Util.register("ghost_fish", GHOST_FISH);
         Util.register("perch", PERCH);
         Util.register("crab_red", CRAB);
+        Util.register("lobster", LOBSTER);
         Util.register("mussel", MUSSEL);
         Util.register("brown_mussel", BROWN_MUSSEL);
         Util.register("cerith_snail", CERITH_SNAIL);

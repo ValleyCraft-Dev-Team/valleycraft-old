@@ -48,6 +48,7 @@ public class PlantFeatures {
     private static final RegistryKey<PlacedFeature> ALIVE_PATCH = create("alive_patch", Plants.BUSH_ALIVE, 10);
     private static final RegistryKey<PlacedFeature> BITTER_PATCH = create("bitter_patch", Plants.BITTER_BERRY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 3), 2);
     private static final RegistryKey<PlacedFeature> TOMATO_PATCH = create("tomato_patch", Plants.TOMATO_BUSH.getDefaultState().with(BerryBushBlock.AGE, 2), 1);
+    private static final RegistryKey<PlacedFeature> SOUR_PATCH = create("sour_patch", Plants.SOUR_BERRY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 2), 2);
     private static final RegistryKey<PlacedFeature> SNOW_PATCH = create("snow_bush_patch", Plants.SNOW_BUSH, 10);
     private static final RegistryKey<PlacedFeature> WHEAT_PATCH = create("wheat_patch", Plants.WILD_WHEAT, 1);
     private static final RegistryKey<PlacedFeature> CARROT_PATCH = create("carrot_patch", Plants.WILD_CARROT, 1);
@@ -127,6 +128,9 @@ public class PlantFeatures {
         //found in dark woods
         if (ValleyMain.CONFIG.featureGenerations.plantFeatures.morelPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, MOREL_PATCH);
+
+        if (ValleyMain.CONFIG.featureGenerations.plantFeatures.sourPatchEnabled)
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, SOUR_PATCH);
 
         //found in every biome except snow
         if (ValleyMain.CONFIG.featureGenerations.plantFeatures.bushPatchEnabled)

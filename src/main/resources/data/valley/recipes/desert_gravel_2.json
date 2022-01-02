@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "G#",
+    "#G"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sand"
+    },
+    "G": {
+      "item": "valley:bleached_gravel"
+    }
+  },
+  "result": {
+    "item": "valley:desert_gravel",
+    "count": 4
+  }
+}

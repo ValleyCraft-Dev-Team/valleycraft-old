@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone"
+    },
+    {
+      "item": "valley:dry_vines"
+    }
+  ],
+  "result": {
+    "item": "valley:dry_mossy_stone",
+    "count": 1
+  }
+}

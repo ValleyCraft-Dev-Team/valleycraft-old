@@ -5,10 +5,13 @@
       "item": "valley:dried_seaweed"
     },
     {
-      "item": "valley:crab_red"
+      "tag": "c:crustaceans"
     },
     {
       "tag": "c:rice"
+    },
+    {
+      "tag": "c:spicy_crops"
     }
   ],
   "result": {

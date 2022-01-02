@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "valley:block/glow_kelp_block_horizontal",
+      "y": 90
+    },
+    "axis=y": {
+      "model": "valley:block/glow_kelp_block"
+    },
+    "axis=z": {
+      "model": "valley:block/glow_kelp_block_horizontal"
+    }
+  }
+}

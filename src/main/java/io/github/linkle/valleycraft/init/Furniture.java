@@ -123,6 +123,7 @@ public class Furniture {
     public static final Block FIBER_BALE = new BaleBlock();
     public static final Block AMERANTH_BALE = new BaleBlock();
     public static final Block SEAWEED_BALE = new BaleBlock();
+    public static final Block GLOW_KELP_BALE = new GlowingBaleBlock();
 
     //rope
     public static final Block CLIMBABLE_ROPE = new VChainBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
@@ -288,9 +289,10 @@ public class Furniture {
 
         Util.registerWithItem("charcoal_block", CHARCOAL_BLOCK, furnGroup);
 
+        Util.registerWithItem("fiber_block", FIBER_BALE, furnGroup);
+        Util.registerWithItem("glow_kelp_block", GLOW_KELP_BALE, furnGroup);
         Util.registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
         //registerWithItem("ameranth_block", AMERANTH_BALE, furnGroup);
-        Util.registerWithItem("fiber_block", FIBER_BALE, furnGroup);
 
         Util.registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
         Util.registerWithItem("copper_chain", CHAIN_C, explGroup);

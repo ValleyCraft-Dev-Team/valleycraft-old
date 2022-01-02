@@ -94,6 +94,11 @@ public class ValleyClient implements ClientModInitializer {
         //bushes
         culloutBlocks.add(TUMBLE_WEED);
 
+        //nether plants
+        culloutBlocks.add(ROOTED_WATCHER);
+        culloutBlocks.add(SOUL_SPORECAP);
+        culloutBlocks.add(TAINTED_WART);
+
         //culloutBlocks.add(BOWL_BLOCK);
         //culloutBlocks.add(MUG_BLOCK);
         //culloutBlocks.add(BENTO_BLOCK);

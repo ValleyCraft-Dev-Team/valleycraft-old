@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "___",
-    "_#_",
-    "___"
+    "###",
+    "S#S",
+    "###"
   ],
   "key": {
-    "_": {
-      "item": "valley:tree_branch"
-    },
     "#": {
-      "tag": "minecraft:logs"
+      "item": "minecraft:oak_log"
+    },
+    "S": {
+      "item": "minecraft:stripped_oak_log"
     }
   },
 

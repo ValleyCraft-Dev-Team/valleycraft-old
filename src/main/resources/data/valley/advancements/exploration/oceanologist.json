@@ -241,11 +241,26 @@
 					}
 				]
 			}
+		},
+		"lobster": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:lobster"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
 		[
 			"cod"
+		],
+		[
+			"lobster"
 		],
 		[
 			"salmon"

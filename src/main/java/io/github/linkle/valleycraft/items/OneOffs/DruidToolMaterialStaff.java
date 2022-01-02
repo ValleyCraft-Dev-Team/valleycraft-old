@@ -39,7 +39,7 @@ public class DruidToolMaterialStaff implements ToolMaterial {
         //Diamond: 3.0f
         //Gold: 0.0f
         //Netherite: 4.0f?
-        return 0.0f;
+        return 2.0f;
     }
 
     @Override

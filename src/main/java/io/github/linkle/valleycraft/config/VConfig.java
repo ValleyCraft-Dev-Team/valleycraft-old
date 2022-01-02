@@ -133,6 +133,7 @@ public class VConfig implements ConfigData {
 			public boolean alivePatchEnabled = true;
 			public boolean bitterPatchEnabled = true;
 			public boolean tomatoPatchEnabled = true;
+			public boolean sourPatchEnabled = true;
 			public boolean reedPatchEnabled = true;
 		}
 
