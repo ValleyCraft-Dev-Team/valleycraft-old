@@ -148,9 +148,9 @@ public class Plants {
     public static final Block APPLE_LEAVES_EMPTY = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
 
     public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.CACTUS, MapColor.LIGHT_GRAY)
-            .breakByHand(true).nonOpaque().luminance(3)
-            .sounds(BlockSoundGroup.WOOL).breakInstantly().ticksRandomly()
-            .strength(0.0f,0.1f));
+            .breakByHand(true).nonOpaque()
+            .sounds(BlockSoundGroup.WOOL).breakInstantly()
+            .strength(0.0f,0.1f).ticksRandomly());
 
     public static final Block PANFLOWER = new Plant();
     public static final Block HONEY_CLUSTER = new Plant();
