@@ -51,15 +51,15 @@ public class AquaticBlock extends HorizontalWithWaterBlock {
             var blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
 
             for (int i = 0; i < 4; ++i) {
-                if (world.isWater(blockPos) && state.canPlaceAt(world, blockPos)) {
+                if (world.getBlockState(blockPos).isOf(Blocks.WATER) && state.canPlaceAt(world, blockPos)) {
                     pos = blockPos;
                 }
 
                 blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
             }
 
-            if (world.isAir(blockPos) && state.canPlaceAt(world, blockPos)) {
-                world.setBlockState(blockPos, state, Block.NOTIFY_LISTENERS);
+            if (world.getBlockState(blockPos).isOf(Blocks.WATER) && state.canPlaceAt(world, blockPos)) {
+                world.setBlockState(blockPos, state.with(FACING, Direction.fromHorizontal(random.nextInt(4))), Block.NOTIFY_LISTENERS);
             }
         }
     }
