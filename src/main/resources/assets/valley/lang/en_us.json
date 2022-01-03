@@ -346,6 +346,10 @@
 
   "item.valley.knife.tooltip": "Use this on Grass to harvest Fiber",
 
+  "item.valley.bait": "Bait",
+  "item.valley.bait.tooltip": "Used to catch sea creatures in",
+  "item.valley.bait.tooltip_2": "Crab Traps. It smells terrible.",
+
   "block.valley.herbs": "Wild Herbs",
   "block.valley.taproots": "Wild Taproots",
   "block.valley.crocus": "Crocus",
@@ -445,6 +449,9 @@
   "block.valley.fiber_block": "Fiber Bale",
 
   "block.valley.crab_trap": "Crab Trap",
+
+  "block.valley.mossy_vines_plant": "Moss Vines",
+  "block.valley.dry_vines_plant": "Dry Vines",
 
   "item.valley.witch_wand": "Witch Wand",
   "item.valley.witch_staff": "Witch Staff",

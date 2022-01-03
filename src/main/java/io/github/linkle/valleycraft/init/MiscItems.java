@@ -1,10 +1,7 @@
 package io.github.linkle.valleycraft.init;
 
 
-import io.github.linkle.valleycraft.items.misc.ArrowBundleBase;
-import io.github.linkle.valleycraft.items.misc.BilletItemBase;
-import io.github.linkle.valleycraft.items.misc.BombBundleBase;
-import io.github.linkle.valleycraft.items.misc.MiscItemBase;
+import io.github.linkle.valleycraft.items.misc.*;
 import io.github.linkle.valleycraft.items.totems.GrowthTotemBase;
 import io.github.linkle.valleycraft.items.totems.RainTotemBase;
 import io.github.linkle.valleycraft.items.totems.StormTotemBase;
@@ -57,6 +54,7 @@ public class MiscItems {
     public static final Item COIN = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item FRAME_BACKING = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
+    public static final Item BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64));
 
     public static void initialize() {
         Util.register("fur_clump", FUR_CLUMP);
@@ -70,6 +68,7 @@ public class MiscItems {
         Util.register("saltpeter", SALTPETER);
         Util.register("fiber", FIBER);
         Util.register("book_cover", BOOK_COVER);
+        Util.register("bait", BAIT);
         //Util.register("frame_backing", FRAME_BACKING);
         Util.register("moss_ball", MOSS_BALL);
         Util.register("moss_ball_dry", MOSS_BALL_DRY);

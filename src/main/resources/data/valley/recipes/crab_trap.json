@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#I#",
+    "IBI",
+    "#I#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:orange_dye"
+    },
+    "I": {
+      "item": "minecraft:iron_bars"
+    },
+    "B": {
+      "item": "minecraft:barrel"
+    }
+  },
+  "result": {
+    "item": "valley:crab_trap",
+    "count": 1
+  }
+}
