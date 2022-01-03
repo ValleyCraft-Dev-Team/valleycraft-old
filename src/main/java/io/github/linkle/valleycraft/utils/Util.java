@@ -60,6 +60,13 @@ public class Util {
         return RegistryKey.of(Registry.PLACED_FEATURE_KEY, identifier);
     }
     
+    public static RegistryKey<PlacedFeature> registerPlace(String id, ConfiguredFeature<?, ?> config, List<PlacementModifier> mods) {
+        var place = config.withPlacement(mods);
+        var identifier = new Identifier(ValleyMain.MOD_ID, id);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, identifier, place);
+        return RegistryKey.of(Registry.PLACED_FEATURE_KEY, identifier);
+    }
+    
     public static BlockStateProvider randomHoriFacing(BlockState state) {
         var builder = new DataPool.Builder<BlockState>();
         builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.NORTH), 1);

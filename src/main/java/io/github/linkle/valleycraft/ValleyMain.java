@@ -57,6 +57,7 @@ public class ValleyMain implements ModInitializer {
         OreFeatures.initialize();
         PlantFeatures.initialize();
         CaveFeatures.initialize();
+        NetherFeatures.initialize();
         OceanFeatures.initialize();
         Trees.initialize();
 

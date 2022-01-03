@@ -78,6 +78,9 @@ public class VConfig implements ConfigData {
 
 		@ConfigEntry.Gui.CollapsibleObject
 		public OceanFeatures oceanFeatures = new OceanFeatures();
+		
+		@ConfigEntry.Gui.CollapsibleObject
+        public NetherFeatures netherFeatures = new NetherFeatures();
 
 		@ConfigEntry.Gui.CollapsibleObject
 		public PlantFeatures plantFeatures = new PlantFeatures();
@@ -91,6 +94,12 @@ public class VConfig implements ConfigData {
 			public boolean glowKelpPatchEnabled = true;
 			public boolean rocksPatchEnabled = true;
 		}
+		
+		public static class NetherFeatures implements ConfigData {
+            public boolean soulSporecapPatchEnabled = true;
+            public boolean rootedWatcherPatchEnabled = true;
+            public boolean taintedWartPatchEnabled = true;
+        }
 
 		public static class OceanFeatures implements ConfigData {
 			public boolean redSeaGrassPatchEnabled = true;

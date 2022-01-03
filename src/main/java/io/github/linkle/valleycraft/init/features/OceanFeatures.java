@@ -43,7 +43,7 @@ public class OceanFeatures {
 
         Predicate<BiomeSelectionContext> selection;
         ArrayList<PlacementModifier> list;
-        var step = GenerationStep.Feature.TOP_LAYER_MODIFICATION; // Fix  random hole patches on ice layer
+        var step = GenerationStep.Feature.TOP_LAYER_MODIFICATION; // Fix random hole patches on ice layer
 
         list = new ArrayList<>();
         list.add(SquarePlacementModifier.of());

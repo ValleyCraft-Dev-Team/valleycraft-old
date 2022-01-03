@@ -21,7 +21,7 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
         var mutable = new BlockPos.Mutable();
 
         int height = config.height().get(random);
-        int size = config.size().get(random);
+        int size = config.size().get(random) * 2;
         int tries = config.tries().get(random);
         int spawned = 0;
 

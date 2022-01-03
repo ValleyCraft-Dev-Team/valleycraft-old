@@ -8,6 +8,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -38,7 +39,9 @@ public class RockBlock extends BlockWithWater {
 
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return world.getBlockState(pos.down()).isSideSolidFullSquare(world, pos, Direction.UP);
+        pos = pos.down();
+        state = world.getBlockState(pos);
+        return state.isSideSolidFullSquare(world, pos, Direction.UP) && !state.isIn(BlockTags.ICE);
     }
 }
 

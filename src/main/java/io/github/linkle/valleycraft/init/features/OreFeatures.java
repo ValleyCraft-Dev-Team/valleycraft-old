@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
@@ -59,8 +60,8 @@ public class OreFeatures {
     private static final ConfiguredFeature<?, ?> POWDER_SNOW_OW = create(POWDER_SNOW, 20);
 
     //nether ores
-    private static final ConfiguredFeature<?, ?> NETHER_SALT_ORE = create(StoneBlocks.NETHER_SALT, 12);
-    private static final ConfiguredFeature<?, ?> NETHER_COAL_ORE = create(StoneBlocks.NETHER_COAL_ORE, 12);
+    private static final ConfiguredFeature<?, ?> NETHER_SALT_ORE = create(OreConfiguredFeatures.NETHERRACK, StoneBlocks.NETHER_SALT, 12);
+    private static final ConfiguredFeature<?, ?> NETHER_COAL_ORE = create(OreConfiguredFeatures.NETHERRACK, StoneBlocks.NETHER_COAL_ORE, 12);
     
     private static final ConfiguredFeature<?, ?> OCEAN_STONE = create(StoneBlocks.OCEAN_STONE, 33);
     private static final ConfiguredFeature<?, ?> SWAMP_STONE = create(StoneBlocks.SWAMP_STONE, 33);
@@ -294,6 +295,10 @@ public class OreFeatures {
     }
     
     private static ConfiguredFeature<OreFeatureConfig, ?> create(Block block, int size) {
-        return Feature.ORE.configure(new OreFeatureConfig(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, block.getDefaultState(), size));
+        return create(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, block, size);
+    }
+    
+    private static ConfiguredFeature<OreFeatureConfig, ?> create(RuleTest test, Block block, int size) {
+        return Feature.ORE.configure(new OreFeatureConfig(test, block.getDefaultState(), size));
     }
 }

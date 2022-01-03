@@ -1,37 +1,40 @@
 package io.github.linkle.valleycraft.blocks.plants.nether;
 
+import java.util.Random;
+
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
+import net.minecraft.block.PlantBlock;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class SoulSandValleyBiomePlant extends PlantBlock {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
+    protected static final VoxelShape SHAPE = createCuboidShape(2, 0, 2, 14, 13, 14);
 
     public SoulSandValleyBiomePlant() {
         super(FabricBlockSettings.of(Material.NETHER_SHOOTS)
-                .nonOpaque()
+                .nonOpaque().luminance(7)
                 .breakByHand(true).ticksRandomly()
-                .sounds(BlockSoundGroup.NYLIUM).luminance(7)
-                .strength(0.4f, 0.2f));
+                .sounds(BlockSoundGroup.FUNGUS)
+                .strength(0, 0.2f)
+                .noCollision());
     }
 
     public SoulSandValleyBiomePlant(Settings settings) {
         super(settings);
     }
 
+    @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        Block block = floor.getBlock();
-        return  block == Blocks.SOUL_SOIL ||
-                block == Blocks.SOUL_SAND;
+        return floor.isIn(BlockTags.SOUL_SPEED_BLOCKS);
     }
 
     @Override
@@ -44,22 +47,12 @@ public class SoulSandValleyBiomePlant extends PlantBlock {
         if (random.nextInt(10) != 0)
             return;
 
-        double x = pos.getX() + 0.5;
-        double y = pos.getY() + 0.1;
-        double z = pos.getZ() + 0.5;
-        double xRand = MathHelper.nextDouble(random, -0.1, 0.1);
-        double yRand = MathHelper.nextDouble(random, -0.1, 0.1);
-        double zRand = MathHelper.nextDouble(random, -0.1, 0.1);
-        world.addParticle(ParticleTypes.SOUL, x, y, z, xRand, 0.05 + yRand, zRand);
-    }
-
-    public static final VoxelShape BlockCollisionShape;
-
-    public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
-        return BlockCollisionShape;
-    }
-
-    static {
-        BlockCollisionShape = VoxelShapes.empty();
+        double x = pos.getX() + MathHelper.nextDouble(random, 0.2, 0.8);
+        double y = pos.getY() + MathHelper.nextDouble(random, 0.2, 0.8);
+        double z = pos.getZ() + MathHelper.nextDouble(random, 0.2, 0.8);
+        double xRand = MathHelper.nextDouble(random, -0.05, 0.05);
+        double yRand = MathHelper.nextDouble(random, -0.05, 0.05) + 0.03;
+        double zRand = MathHelper.nextDouble(random, -0.05, 0.05);
+        world.addParticle(ParticleTypes.SOUL, x, y, z, xRand, yRand, zRand);
     }
 }
