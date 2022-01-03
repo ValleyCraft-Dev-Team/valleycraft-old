@@ -69,6 +69,8 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(TOMATO_BUSH);
         culloutBlocks.add(HOLLY_BUSH);
 
+        culloutBlocks.add(CRAB_TRAP);
+
         culloutBlocks.add(RICE_SEEDLINGS);
         culloutBlocks.add(MAIZE_CROP);
 

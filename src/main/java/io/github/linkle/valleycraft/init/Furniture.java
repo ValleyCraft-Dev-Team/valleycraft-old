@@ -215,7 +215,9 @@ public class Furniture {
     
     public static final Block REDSTONE_BONE_TORCH = new RedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_TORCH).sounds(BlockSoundGroup.BONE));
     public static final Block REDSTONE_WALL_BONE_TORCH = new WallRedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_WALL_TORCH).sounds(BlockSoundGroup.BONE));
-    
+
+    public static final Block CRAB_TRAP = new CrabTrapBlock();
+
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var explGroup = new Item.Settings().group(EXPLORATION_GROUP);
@@ -353,7 +355,11 @@ public class Furniture {
         Util.registerWithItem("soul_hanging", SOUL_HANGING, furnGroup);
         Util.registerWithItem("redstone_hanging", RED_HANGING, furnGroup);
 
+        Util.registerWithItem("keg", KEG, furnGroup);
+
         Util.registerWithItem("rounded_barrel", ROUNDED_BARREL, furnGroup);
+
+        Util.registerWithItem("crab_trap", CRAB_TRAP, furnGroup);
 
         Util.registerWithItem("soul_jack_o_lantern", SOUL_JACK, furnGroup);
         Util.registerWithItem("copper_jack_o_lantern", COPPER_JACK, furnGroup);
@@ -395,8 +401,6 @@ public class Furniture {
         Util.registerWithItem("stump_morel", STUMP_MOREL, furnGroup);
         Util.registerWithItem("stump_red", STUMP_RED, furnGroup);
         Util.registerWithItem("stump_brown", STUMP_BROWN, furnGroup);
-
-        Util.registerWithItem("keg", KEG, furnGroup);
 
         Util.registerWithItem("wreath", WREATH, furnGroup);
         Util.registerWithItem("miners_crest", CREST, furnGroup);
