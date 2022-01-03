@@ -1,5 +1,8 @@
 package io.github.linkle.valleycraft.blocks.cave;
 
+import java.util.Objects;
+import java.util.Random;
+
 import io.github.linkle.valleycraft.criterions.VCriteria;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -9,7 +12,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.CaveSpiderEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -19,11 +21,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.*;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.GameRules;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
+import net.minecraft.world.WorldView;
 import net.minecraft.world.explosion.Explosion;
-
-import java.util.Objects;
-import java.util.Random;
 
 public class SpiderEggBlock extends Block {
 

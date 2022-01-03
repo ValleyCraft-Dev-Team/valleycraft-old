@@ -11,7 +11,10 @@ import net.minecraft.entity.ai.goal.LookAroundGoal;
 import net.minecraft.entity.ai.goal.LookAtEntityGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.TemptGoal;
-import net.minecraft.entity.ai.goal.WanderAroundFarGoal;
+import net.minecraft.entity.ai.goal.WanderAroundGoal;
+import net.minecraft.entity.ai.pathing.EntityNavigation;
+import net.minecraft.entity.ai.pathing.MobNavigation;
+import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PassiveEntity;
@@ -23,6 +26,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class DuckEntity extends ChickenEntity {
@@ -46,7 +50,7 @@ public class DuckEntity extends ChickenEntity {
         goalSelector.add(2, new AnimalMateGoal(this, 1.0D));
         goalSelector.add(3, new TemptGoal(this, 1.0D, BREEDING_INGREDIENT, false));
         goalSelector.add(4, new FollowParentGoal(this, 1.1D));
-        goalSelector.add(5, new WanderAroundFarGoal(this, 1.0D));
+        goalSelector.add(5, new WanderAroundGoal(this, 1.0D));
         goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
         goalSelector.add(7, new LookAroundGoal(this));
     }
@@ -72,6 +76,12 @@ public class DuckEntity extends ChickenEntity {
                 dropItem(Items.FEATHER);
             }
         }
+        
+        if (isTouchingWater()) {
+            prevFlapProgress = 80;
+            flapProgress = 80;
+        }
+        
     }
     
     @Override
@@ -106,6 +116,22 @@ public class DuckEntity extends ChickenEntity {
         super.writeCustomDataToNbt(nbt);
         nbt.putInt("DropFeatherTime", dropFeatherTime);
         nbt.putInt("DuckEggLayTime", duckEggLayTime);
+    }
+    
+    @Override
+    public void setPathfindingPenalty(PathNodeType nodeType, float penalty) {
+        // Remove water penalty.
+    }
+    
+    @Override
+    protected EntityNavigation createNavigation(World world) {
+        return new MobNavigation(this, world) {
+            @Override
+            public boolean isValidPosition(BlockPos pos) {
+                pos = pos.down();
+                return world.getBlockState(pos).isOpaqueFullCube(world, pos) || world.isWater(pos);
+            }
+        };
     }
     
     private int getRandomTime() {

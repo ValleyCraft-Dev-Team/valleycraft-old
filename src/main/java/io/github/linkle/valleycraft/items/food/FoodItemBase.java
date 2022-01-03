@@ -1,32 +1,19 @@
 package io.github.linkle.valleycraft.items.food;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import org.jetbrains.annotations.Nullable;
-
-import com.google.common.collect.Lists;
-import com.mojang.datafixers.util.Pair;
 
 import io.github.linkle.valleycraft.init.ItemGroups;
 import io.github.linkle.valleycraft.mixins.ItemSettingsAccessor;
 import io.github.linkle.valleycraft.utils.FoodStatusEffect;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.BaseText;
-import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 

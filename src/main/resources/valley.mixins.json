@@ -7,7 +7,8 @@
 	"LivingEntityMixin",
 	"CriteriaInvoker",
 	"ItemUsageContextAccessor",
-	"ItemSettingsAccessor"
+	"ItemSettingsAccessor",
+	"EnchantmentMixin"
   ],
   "injectors": {
     "defaultRequire": 1
