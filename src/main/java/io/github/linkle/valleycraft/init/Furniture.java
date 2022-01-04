@@ -90,6 +90,7 @@ public class Furniture {
 
     public static final Block COBBLE_BRICK = new PolishedStoneBlock();
     public static final Block COBBLE_MOSSY = new PolishedStoneBlock();
+    public static final Block COBBLE_CHISELED = new PolishedStoneBlock();
     public static final Block COBBLE_SLAB = new TileSlabBlock();
     public static final Block COBBLE_STAIRS = new TileStairsBlock();
 
@@ -330,6 +331,7 @@ public class Furniture {
         
         Util.registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
         Util.registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
+        Util.registerWithItem("cobblestone_chiseled", COBBLE_CHISELED, furnGroup);
         Util.registerWithItem("cobblestone_brick_stairs", COBBLE_STAIRS, furnGroup);
         Util.registerWithItem("cobblestone_brick_slab", COBBLE_SLAB, furnGroup);
 
