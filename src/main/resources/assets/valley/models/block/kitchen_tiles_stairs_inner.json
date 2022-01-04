@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "valley:blocks/kitchen_tiles",
+    "top": "valley:blocks/kitchen_tiles",
+    "side": "valley:blocks/kitchen_tiles"
+  }
+}

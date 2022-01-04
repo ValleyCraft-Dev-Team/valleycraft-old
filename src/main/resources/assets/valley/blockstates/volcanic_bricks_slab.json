@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "valley:block/volcanic_bricks_slab"
+    },
+    "type=double": {
+      "model": "valley:block/volcanic_bricks"
+    },
+    "type=top": {
+      "model": "valley:block/volcanic_bricks_slab_top"
+    }
+  }
+}

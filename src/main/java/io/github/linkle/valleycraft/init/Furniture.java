@@ -93,6 +93,26 @@ public class Furniture {
     public static final Block COBBLE_SLAB = new TileSlabBlock();
     public static final Block COBBLE_STAIRS = new TileStairsBlock();
 
+    public static final Block SMOOTHER_STONE_TILE = new PolishedStoneBlock();
+    public static final Block SMOOTHER_STONE_TILE_SLAB = new TileSlabBlock();
+    public static final Block SMOOTHER_STONE_TILE_STAIRS = new TileStairsBlock();
+
+    public static final Block QUARTZ_TILE = new PolishedStoneBlock();
+    public static final Block QUARTZ_TILE_SLAB = new TileSlabBlock();
+    public static final Block QUARTZ_TILE_STAIRS = new TileStairsBlock();
+
+    public static final Block KITCHEN_TILE = new PolishedStoneBlock();
+    public static final Block KITCHEN_TILE_SLAB = new TileSlabBlock();
+    public static final Block KITCHEN_TILE_STAIRS = new TileStairsBlock();
+
+    public static final Block VOLCANIC_TILE = new PolishedStoneBlock();
+    public static final Block VOLCANIC_TILE_SLAB = new TileSlabBlock();
+    public static final Block VOLCANIC_TILE_STAIRS = new TileStairsBlock();
+
+    public static final Block VOLCANIC_BRICKS = new PolishedStoneBlock();
+    public static final Block VOLCANIC_SLAB = new TileSlabBlock();
+    public static final Block VOLCANIC_STAIRS = new TileStairsBlock();
+
     public static final Block NET = new NetBlock();
     public static final Block B_BRICKS = new BrownBlock();
     public static final Block B_CRACKED = new BrownBlock();
@@ -307,19 +327,40 @@ public class Furniture {
         Util.registerWithItem("brown_mossy_bricks", B_MOSSY, furnGroup);
         Util.registerWithItem("brown_brick_slab", B_SLAB, furnGroup);
         Util.registerWithItem("brown_brick_stairs", B_STAIRS, furnGroup);
-        Util.registerWithItem("smooth_stone", SMOOTH_STONE_BRICK, furnGroup);
-        Util.registerWithItem("stone_tiles", SMOOTH_STONE_TILE, furnGroup);
-        Util.registerWithItem("stone_tile_slab", SMOOTH_STONE_TILE_SLAB, furnGroup);
-        Util.registerWithItem("stone_tile_stairs", SMOOTH_STONE_TILE_STAIRS, furnGroup);
         
         Util.registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
         Util.registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
-        Util.registerWithItem("cobblestone_brick_slab", COBBLE_SLAB, furnGroup);
         Util.registerWithItem("cobblestone_brick_stairs", COBBLE_STAIRS, furnGroup);
-        
+        Util.registerWithItem("cobblestone_brick_slab", COBBLE_SLAB, furnGroup);
+
+        Util.registerWithItem("smooth_stone", SMOOTH_STONE_BRICK, furnGroup);
+        Util.registerWithItem("stone_tiles", SMOOTH_STONE_TILE, furnGroup);
+        Util.registerWithItem("stone_tile_stairs", SMOOTH_STONE_TILE_STAIRS, furnGroup);
+        Util.registerWithItem("stone_tile_slab", SMOOTH_STONE_TILE_SLAB, furnGroup);
+
+        Util.registerWithItem("smooth_stone_tiles", SMOOTHER_STONE_TILE, furnGroup);
+        Util.registerWithItem("smooth_stone_tiles_slab", SMOOTHER_STONE_TILE_SLAB, furnGroup);
+        Util.registerWithItem("smooth_stone_tiles_stairs", SMOOTHER_STONE_TILE_STAIRS, furnGroup);
+
+        Util.registerWithItem("quartz_tiles", QUARTZ_TILE, furnGroup);
+        Util.registerWithItem("quartz_tiles_stairs", QUARTZ_TILE_STAIRS, furnGroup);
+        Util.registerWithItem("quartz_tiles_slab", QUARTZ_TILE_SLAB, furnGroup);
+
+        Util.registerWithItem("kitchen_tiles", KITCHEN_TILE, furnGroup);
+        Util.registerWithItem("kitchen_tiles_stairs", KITCHEN_TILE_STAIRS, furnGroup);
+        Util.registerWithItem("kitchen_tiles_slab", KITCHEN_TILE_SLAB, furnGroup);
+
+        Util.registerWithItem("volcanic_tiles", VOLCANIC_TILE, furnGroup);
+        Util.registerWithItem("volcanic_tiles_stairs", VOLCANIC_TILE_STAIRS, furnGroup);
+        Util.registerWithItem("volcanic_tiles_slab", VOLCANIC_TILE_SLAB, furnGroup);
+
+        Util.registerWithItem("volcanic_bricks", VOLCANIC_BRICKS, furnGroup);
+        Util.registerWithItem("volcanic_bricks_stairs", VOLCANIC_STAIRS, furnGroup);
+        Util.registerWithItem("volcanic_bricks_slab", VOLCANIC_SLAB, furnGroup);
+
         Util.registerWithItem("carmine_bricks", C_BRICKS, furnGroup);
-        Util.registerWithItem("carmine_slab", C_SLAB, furnGroup);
         Util.registerWithItem("carmine_stairs", C_STAIRS, furnGroup);
+        Util.registerWithItem("carmine_slab", C_SLAB, furnGroup);
         Util.registerWithItem("chiseled_carmine", C_CHISELED, furnGroup);
         Util.registerWithItem("carmine_cracked", C_CRACK, furnGroup);
         Util.registerWithItem("carmine_mossy", C_MOSSY, furnGroup);

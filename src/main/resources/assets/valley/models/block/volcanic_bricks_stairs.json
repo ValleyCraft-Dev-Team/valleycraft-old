@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "valley:blocks/volanic_bricks",
+    "top": "valley:blocks/volanic_bricks",
+    "side": "valley:blocks/volanic_bricks"
+  }
+}
