@@ -78,7 +78,7 @@
   "block.valley.dead_bush_tall": "Large Dead Bush",
   "block.valley.weaping_willow": "Weeping Swamp Willow",
   "block.valley.redwood_sorrel": "Redwood Sorrel",
-  "block.valley.dandelion_puffs": "Dandelion Puff Balls",
+  "block.valley.dandelion_puffs": "Dandelions",
   "block.valley.jungle_cap": "Orange Gilled Waxing Cap",
   "block.valley.sprout": "Sprout",
   "block.valley.wild_carrot": "Wild Carrot",
@@ -350,6 +350,11 @@
   "item.valley.bait.tooltip": "Used to catch sea creatures in",
   "item.valley.bait.tooltip_2": "Crab Traps. It smells terrible.",
 
+  "item.valley.lingering_powder": "Lingering Powder",
+  "item.valley.lingering_powder.tooltip_1": "It sparkles before slowly dissipating when",
+  "item.valley.lingering_powder.tooltip_2": "poured out. Combining this with something",
+  "item.valley.lingering_powder.tooltip_3": "spicy might produce a more useful item...",
+
   "block.valley.herbs": "Wild Herbs",
   "block.valley.taproots": "Wild Taproots",
   "block.valley.crocus": "Crocus",
@@ -556,6 +561,7 @@
   "block.valley.soul_hanging": "Hanging Soul Lantern",
   "block.valley.redstone_hanging": "Hanging Redstone Lantern",
   "block.valley.rounded_barrel": "Rounded Barrel",
+  "block.valley.ice_box": "Ice Box",
   "block.valley.stool_oak": "Oak Stool",
   "block.valley.stool_spruce": "Spruce Stool",
   "block.valley.stool_stone": "Stone Stool",

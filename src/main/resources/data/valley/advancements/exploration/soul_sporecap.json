@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/mandrake",
+	"display": {
+		"title": {
+			"text": "Anthopomorphistic Mycology"
+		},
+		"icon": {
+			"item": "valley:soul_sporecap"
+		},
+		"description": {
+			"text": "Harvest a Soul Sporecap"
+		}
+	},
+	"criteria": {
+		"soul_sporecap": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:soul_sporecap"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"soul_sporecap"
+		]
+	]
+}

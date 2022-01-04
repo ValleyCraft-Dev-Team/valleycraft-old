@@ -1,0 +1,50 @@
+{
+	"parent": "valley:exploration/baker",
+	"display": {
+		"title": {
+			"text": "Final Touches"
+		},
+		"icon": {
+			"item": "valley:keg"
+		},
+		"description": {
+			"text": "Make a Keg & Ice Box for your Kitchen"
+		},
+		"frame": "challenge",
+		"hidden": "false"
+	},
+	"criteria": {
+		"keg": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:keg"
+						]
+					}
+				]
+			}
+		},
+		"ice_box": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:ice_box"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"keg"
+		],
+		[
+			"ice_box"
+		]
+	]
+}

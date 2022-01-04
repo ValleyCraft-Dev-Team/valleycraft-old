@@ -1,23 +1,23 @@
 {
-	"parent": "valley:exploration/rain",
+	"parent": "valley:exploration/druids_staff",
 	"display": {
 		"title": {
-			"text": "Sonata of Storms"
+			"text": "Bolero of Light"
 		},
 		"icon": {
-			"item": "valley:storm_totem"
+			"item": "valley:sunshine_totem"
 		},
 		"description": {
-			"text": "Summon a thunderstorm"
+			"text": "Summon the sun"
 		}
 	},
 	"criteria": {
-		"summon_storm": {
+		"summon_sun": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:storm_totem"
+						"valley:sunshine_totem"
 					]
 				}
 			}
@@ -25,7 +25,7 @@
 	},
 	"requirements": [
 		[
-			"summon_storm"
+			"summon_sun"
 		]
 	]
 }

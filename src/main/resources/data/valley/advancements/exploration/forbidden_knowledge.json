@@ -1,0 +1,35 @@
+{
+	"parent": "valley:exploration/science",
+	"display": {
+		"title": {
+			"text": "Forbidden Knowledge"
+		},
+		"icon": {
+			"item": "minecraft:lingering_potion"
+		},
+		"description": {
+			"text": "'Tastes horrible!'"
+		},
+		"frame": "challenge",
+		"hidden": "false"
+	},
+	"criteria": {
+		"lingering_potion": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:lingering_potion"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"lingering_potion"
+		]
+	]
+}

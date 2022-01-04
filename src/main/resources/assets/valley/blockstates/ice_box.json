@@ -1,0 +1,56 @@
+{
+  "variants": {
+    "facing=down,open=false": {
+      "x": 180,
+      "model": "valley:block/ice_box"
+    },
+    "facing=down,open=true": {
+      "x": 180,
+      "model": "valley:block/ice_box_open_alt"
+    },
+    "facing=east,open=false": {
+      "x": 90,
+      "y": 90,
+      "model": "valley:block/ice_box"
+    },
+    "facing=east,open=true": {
+      "x": 90,
+      "y": 90,
+      "model": "valley:block/ice_box_open_alt"
+    },
+    "facing=north,open=false": {
+      "x": 90,
+      "model": "valley:block/ice_box"
+    },
+    "facing=north,open=true": {
+      "x": 90,
+      "model": "valley:block/ice_box_open_alt"
+    },
+    "facing=south,open=false": {
+      "x": 90,
+      "y": 180,
+      "model": "valley:block/ice_box"
+    },
+    "facing=south,open=true": {
+      "x": 90,
+      "y": 180,
+      "model": "valley:block/ice_box_open_alt"
+    },
+    "facing=up,open=false": {
+      "model": "valley:block/ice_box"
+    },
+    "facing=up,open=true": {
+      "model": "valley:block/ice_box_open_alt"
+    },
+    "facing=west,open=false": {
+      "x": 90,
+      "y": 270,
+      "model": "valley:block/ice_box"
+    },
+    "facing=west,open=true": {
+      "x": 90,
+      "y": 270,
+      "model": "valley:block/ice_box_open_alt"
+    }
+  }
+}

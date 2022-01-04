@@ -217,6 +217,7 @@ public class Furniture {
     public static final Block REDSTONE_WALL_BONE_TORCH = new WallRedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_WALL_TORCH).sounds(BlockSoundGroup.BONE));
 
     public static final Block CRAB_TRAP = new CrabTrapBlock();
+    public static final Block ICE_BOX = new IceBoxBarrelBlock();
 
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
@@ -358,6 +359,7 @@ public class Furniture {
         Util.registerWithItem("keg", KEG, furnGroup);
 
         Util.registerWithItem("rounded_barrel", ROUNDED_BARREL, furnGroup);
+        Util.registerWithItem("ice_box", ICE_BOX, furnGroup);
 
         Util.registerWithItem("crab_trap", CRAB_TRAP, furnGroup);
 

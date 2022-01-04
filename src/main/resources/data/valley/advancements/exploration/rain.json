@@ -1,23 +1,23 @@
 {
-	"parent": "valley:exploration/rain",
+	"parent": "valley:exploration/sunshine",
 	"display": {
 		"title": {
-			"text": "Sonata of Storms"
+			"text": "Medley of Snow"
 		},
 		"icon": {
-			"item": "valley:storm_totem"
+			"item": "valley:rain_totem"
 		},
 		"description": {
-			"text": "Summon a thunderstorm"
+			"text": "Summon the snow or rain"
 		}
 	},
 	"criteria": {
-		"summon_storm": {
+		"rain_totem": {
 			"trigger": "minecraft:consume_item",
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:storm_totem"
+						"valley:rain_totem"
 					]
 				}
 			}
@@ -25,7 +25,7 @@
 	},
 	"requirements": [
 		[
-			"summon_storm"
+			"rain_totem"
 		]
 	]
 }

@@ -55,6 +55,7 @@ public class MiscItems {
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item FRAME_BACKING = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64));
+    public static final Item LINGERING_POWDER = new LingeringItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(16).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
         Util.register("fur_clump", FUR_CLUMP);
@@ -81,7 +82,7 @@ public class MiscItems {
         Util.register("arrow_bundle", ARROW_BUNDLE);
         Util.register("copper_nugget", COPPER_NUGGET);
         Util.register("netherite_nugget", NETHER_NUGGET);
-
+        Util.register("lingering_powder", LINGERING_POWDER);
         Util.register("mud", MUD);
         Util.register("mulch", MULCH);
         Util.register("turf", TURF_ITEM);

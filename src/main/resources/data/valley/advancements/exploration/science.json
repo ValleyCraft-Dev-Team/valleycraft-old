@@ -1,0 +1,33 @@
+{
+	"parent": "valley:exploration/soul_sporecap",
+	"display": {
+		"title": {
+			"text": "The Gentleman Scientist"
+		},
+		"icon": {
+			"item": "valley:lingering_powder"
+		},
+		"description": {
+			"text": "'Do you like science?'"
+		}
+	},
+	"criteria": {
+		"lingering_powder": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:lingering_powder"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"lingering_powder"
+		]
+	]
+}

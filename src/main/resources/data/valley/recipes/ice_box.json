@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "RIR",
+    "#i#"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "S": {
+      "tag": "minecraft:wooden_trapdoors"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "I": {
+      "item": "minecraft:packed_ice"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "valley:ice_box",
+    "count": 1
+  }
+}

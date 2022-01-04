@@ -1,0 +1,48 @@
+{
+	"parent": "valley:exploration/aquatic_forager",
+	"display": {
+		"title": {
+			"text": "A Crabber's Life For Me"
+		},
+		"icon": {
+			"item": "valley:crab_red"
+		},
+		"description": {
+			"text": "Make a Crab Trap and some Bait"
+		}
+	},
+	"criteria": {
+		"crab_trap": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:crab_trap"
+						]
+					}
+				]
+			}
+		},
+		"bait": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bait"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"crab_trap"
+		],
+		[
+			"bait"
+		]
+	]
+}
