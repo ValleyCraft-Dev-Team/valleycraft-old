@@ -1,8 +1,7 @@
 package io.github.linkle.valleycraft.client;
 
+import io.github.linkle.valleycraft.client.screen.HandledScreens;
 import io.github.linkle.valleycraft.init.Entities;
-import io.github.linkle.valleycraft.utils.Util;
-import me.shedaniel.math.Color;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -11,7 +10,6 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.util.math.MathHelper;
 
 import java.util.ArrayList;
 
@@ -28,6 +26,7 @@ public class ValleyClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         Entities.initializeClient();
+        HandledScreens.initialize();
         renderLayer();
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
@@ -68,8 +67,6 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(SPICY_BERRY_BUSH);
         culloutBlocks.add(TOMATO_BUSH);
         culloutBlocks.add(HOLLY_BUSH);
-
-        culloutBlocks.add(CRAB_TRAP);
 
         culloutBlocks.add(RICE_SEEDLINGS);
         culloutBlocks.add(MAIZE_CROP);

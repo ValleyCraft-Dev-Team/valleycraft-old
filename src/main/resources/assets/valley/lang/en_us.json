@@ -820,5 +820,8 @@
   "text.autoconfig.valleycraft.option.mobs.duckSpawnEnabled": "Duck Spawn",
   "text.autoconfig.valleycraft.option.misc": "Miscellaneous",
   "text.autoconfig.valleycraft.option.misc.foodEffectsEnabled": "Food's Status Effects",
-  "text.autoconfig.valleycraft.option.misc.spiderEggWebGenEnabled": "Spider Egg Web Gen"
+  "text.autoconfig.valleycraft.option.misc.spiderEggWebGenEnabled": "Spider Egg Web Gen",
+  
+  "text.valley.crab_trap.not_waterlogged": "Not Waterlogged",
+  "text.valley.crab_trap.invaild_biome": "Invaild Biome"
 }

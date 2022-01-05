@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.blocks.decorations.Furnaces;
+package io.github.linkle.valleycraft.blocks.entity;
 
 import java.util.Random;
 
@@ -20,14 +20,14 @@ import net.minecraft.world.World;
 
 public class BrickFurnace extends AbstractFurnaceBlock {
 	
-	public static BlockEntityType<BrickFurnaceBlockEntity> BLOCK_ENTITY;
+	public static BlockEntityType<BrickFurnaceEntity> BLOCK_ENTITY;
 
 	public BrickFurnace(Settings settings) {
 		super(settings);
 	}
 
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-		return new BrickFurnaceBlockEntity(pos, state);
+		return new BrickFurnaceEntity(pos, state);
 	}
 
 	@Nullable
@@ -37,7 +37,7 @@ public class BrickFurnace extends AbstractFurnaceBlock {
 
 	protected void openScreen(World world, BlockPos pos, PlayerEntity player) {
 		BlockEntity blockEntity = world.getBlockEntity(pos);
-		if (blockEntity instanceof BrickFurnaceBlockEntity) {
+		if (blockEntity instanceof BrickFurnaceEntity) {
 			player.openHandledScreen((NamedScreenHandlerFactory)blockEntity);
 		}
 
