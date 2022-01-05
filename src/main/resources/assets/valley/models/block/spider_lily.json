@@ -1,0 +1,7 @@
+{
+  "parent": "valley:block/partly_tinted_cross",
+  "textures": {
+    "tinted_cross": "valley:blocks/spider_lily_stem",
+    "untinted_cross": "valley:blocks/spider_lily_head"
+  }
+}

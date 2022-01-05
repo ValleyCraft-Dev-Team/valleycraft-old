@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "valley:blocks/lupine_stem",
+        "layer1": "valley:blocks/lupine_head"
+    }
+}
