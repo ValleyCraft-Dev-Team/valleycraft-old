@@ -17,8 +17,12 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.LootingEnchantLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.util.Identifier;
 
 public class VLootTables {
+    
+    public static final Identifier BAITING = register("crabtrap/baiting");
+    
     public static void initialize() {
         blocks();
         entities();
@@ -111,5 +115,9 @@ public class VLootTables {
         LootTableHelper.appendLoot(Blocks.ICE.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.BLUE_ICE.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.PACKED_ICE.getLootTableId(), builder);
+    }
+    
+    private static Identifier register(String id) {
+        return new Identifier(ValleyMain.MOD_ID, id);
     }
 }

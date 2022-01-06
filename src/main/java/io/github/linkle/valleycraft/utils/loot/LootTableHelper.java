@@ -13,13 +13,12 @@ import net.minecraft.util.Identifier;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Consumer;
 
 /** Loot table helper using fabric's loot API. */
 public class LootTableHelper {
-    private static final Map<Identifier, List<FabricLootPoolBuilder>> APPEND_MAP = new HashMap<>(64);
-    private static final Map<Identifier, List<Consumer<FabricLootPoolBuilder>>> INJECT_MAP = new HashMap<>(64);
+    private static final HashMap<Identifier, List<FabricLootPoolBuilder>> APPEND_MAP = new HashMap<>(64);
+    private static final HashMap<Identifier, List<Consumer<FabricLootPoolBuilder>>> INJECT_MAP = new HashMap<>(64);
     
     /** Create and append a new pool. */
     public static void appendLoot(Identifier lootID, LootBuilder loot) {
@@ -50,6 +49,10 @@ public class LootTableHelper {
         var append = APPEND_MAP.get(id);
         if (append != null) {
             append.forEach(supplier::pool);
+        }
+        
+        if (id.getPath().equals("crabtrap/baiting")) {
+            ValleyMain.LOGGER.info("Hello! If you see this message, it means loot table " + id + " is loaded and ready to go!");
         }
     }
     

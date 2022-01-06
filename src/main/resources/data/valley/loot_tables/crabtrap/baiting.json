@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "weight": 1,
+          "quality": -2,
+          "name": "valley:crabtrap/junk"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "weight": 8,
+          "quality": -1,
+          "name": "valley:crabtrap/fish"
+        }
+      ]
+    }
+  ]
+}

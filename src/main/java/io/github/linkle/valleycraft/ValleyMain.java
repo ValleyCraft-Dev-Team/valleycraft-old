@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 public class ValleyMain implements ModInitializer {
 
     public static final String MOD_ID = "valley";
-    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
+    public static final Logger LOGGER = LogManager.getLogger("ValleyCraft");
 
     public static VConfig CONFIG;
 
