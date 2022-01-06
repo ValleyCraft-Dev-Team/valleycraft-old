@@ -34,6 +34,9 @@ public class WeaponsAndTools {
         //Lumber Axe
         Util.register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));
 
+        //Prismarine Scalpel
+        Util.register("prismarine_scalpel", new ScalpelBase(new PrismarineToolMaterialScalpel(), 2, -2.0f));
+
         //Druid Staff
         Util.register("druid_staff", DRUID);
 
