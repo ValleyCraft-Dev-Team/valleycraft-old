@@ -13,7 +13,7 @@ public class CrabTrapBaits {
     
     public static void initialize() {
         add(MiscItems.BAIT, 210, 300); // 3.5 to 5 minutes, or 3:30 to 5:00 minutes.
-        //add(MiscItems.BAIT, 180, 240); // 3 to 4 minutes. Golden Bait.
+        add(MiscItems.GOLDEN_BAIT, 180, 240); // 3 to 4 minutes. Golden Bait.
     }
     
     /** min and max seconds */

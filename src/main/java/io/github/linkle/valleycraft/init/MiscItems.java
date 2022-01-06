@@ -55,6 +55,7 @@ public class MiscItems {
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item FRAME_BACKING = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_2");
+    public static final Item GOLDEN_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_3");
     public static final Item LINGERING_POWDER = new LingeringItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(16).rarity(Rarity.UNCOMMON));
 
     public static void initialize() {
@@ -70,6 +71,7 @@ public class MiscItems {
         Util.register("fiber", FIBER);
         Util.register("book_cover", BOOK_COVER);
         Util.register("bait", BAIT);
+        Util.register("glistering_bait", GOLDEN_BAIT);
         //Util.register("frame_backing", FRAME_BACKING);
         Util.register("moss_ball", MOSS_BALL);
         Util.register("moss_ball_dry", MOSS_BALL_DRY);

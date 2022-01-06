@@ -349,6 +349,7 @@
   "item.valley.bait": "Bait",
   "item.valley.bait.tooltip": "Used to catch sea creatures in",
   "item.valley.bait.tooltip_2": "Crab Traps. It smells terrible.",
+  "item.valley.bait.tooltip_3": "Crab Traps with minor improvement.",
 
   "item.valley.lingering_powder": "Lingering Powder",
   "item.valley.lingering_powder.tooltip_1": "It sparkles before slowly dissipating when",
@@ -660,7 +661,8 @@
   "item.valley.glistering_bitter_berries": "Golden Bitter Berries",
   "item.valley.glistering_honeycomb": "Golden Honeycomb",
   "item.valley.glistering_eggplant": "Golden Eggplant",
-  "item.valley.glistering_pepper": "Golden Pepper",
+  "item.valley.glistering_pepper": "Golden Pepper", 
+  "item.valley.glistering_bait": "Golden Bait",
 
   "item.valley.bear_spawn_egg": "Bear Spawn Egg",
   "item.valley.duck_spawn_egg": "Duck Spawn Egg",

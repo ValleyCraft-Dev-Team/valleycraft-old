@@ -12,6 +12,7 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
@@ -89,5 +90,18 @@ public class Util {
     public static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(
             BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
+    }
+    
+    public static boolean canMergeItems(ItemStack first, ItemStack second) {
+        if (!first.isOf(second.getItem())) {
+            return false;
+        }
+        if (first.getDamage() != second.getDamage()) {
+            return false;
+        }
+        if (first.getCount() > first.getMaxCount()) {
+            return false;
+        }
+        return ItemStack.areNbtEqual(first, second);
     }
 }

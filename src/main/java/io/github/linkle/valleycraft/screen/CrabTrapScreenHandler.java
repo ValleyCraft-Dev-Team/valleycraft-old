@@ -15,7 +15,6 @@ public class CrabTrapScreenHandler extends ScreenHandler {
 
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
-    private final Slot inputSlot;
 
     public CrabTrapScreenHandler(int syncId, PlayerInventory playerInventory) {
         this(syncId, playerInventory, new SimpleInventory(10), new ArrayPropertyDelegate(1));
@@ -26,7 +25,7 @@ public class CrabTrapScreenHandler extends ScreenHandler {
         super(Screens.CRAB_TRAP, syncId);
         this.inventory = inventory;
         this.propertyDelegate = propertyDelegate;
-        this.inputSlot = addSlot(new InputSlot(inventory, 0, 38, 35));
+        addSlot(new InputSlot(inventory, 0, 38, 35));
         addProperties(propertyDelegate);
 
         int i;
@@ -53,6 +52,8 @@ public class CrabTrapScreenHandler extends ScreenHandler {
     }
 
     @Override
+    // This method is where shift-click item transfer is implemented. I gave up on
+    // it - AndEditor7
     public ItemStack transferSlot(PlayerEntity player, int index) {
         return ItemStack.EMPTY;
     }
@@ -84,7 +85,7 @@ public class CrabTrapScreenHandler extends ScreenHandler {
 
         @Override
         public int getMaxItemCount() {
-            return 1;
+            return 16;
         }
     }
 }

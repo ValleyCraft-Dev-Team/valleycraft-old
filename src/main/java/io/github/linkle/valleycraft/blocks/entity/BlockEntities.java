@@ -3,6 +3,8 @@ package io.github.linkle.valleycraft.blocks.entity;
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.init.ItemGroups;
+import io.github.linkle.valleycraft.init.MiscItems;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -31,7 +33,7 @@ public class BlockEntities {
 	    Util.register("brick_furnace", new BlockItem(BRICK_FURNACE, furnGroup));
 	    BrickFurnace.BLOCK_ENTITY = createBlockEntity("brick_furnace", BRICK_FURNACE, BrickFurnaceEntity::new);
 	    
-	    Util.register("crab_trap", new BlockItem(CRAB_TRAP, furnGroup));
+	    Util.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
 	    CrabTrap.BLOCK_ENTITY = createBlockEntity("crab_trap", CRAB_TRAP, CrabTrapEntity::new);	    
 	}
 	
