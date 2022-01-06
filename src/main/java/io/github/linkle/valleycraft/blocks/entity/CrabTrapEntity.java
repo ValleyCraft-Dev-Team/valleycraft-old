@@ -241,6 +241,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         timer = nbt.getInt("Timer");
         maxTimer = nbt.getInt("MaxTimer");
         isInProgress = nbt.getBoolean("IsInProgress");
+        condition = Condition.fromId(nbt.getByte("Condition"));
     }
 
     @Override // Done?
@@ -250,6 +251,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         nbt.putInt("Timer", timer);
         nbt.putInt("MaxTimer", maxTimer);
         nbt.putBoolean("IsInProgress", isInProgress);
+        nbt.putByte("Condition", condition.getId());
     }
     
     private static final int[] BAIT_SLOTS = {0};
@@ -278,6 +280,8 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     static enum Condition {
         PERFECT(null), NOT_WATERLOGGED("text.valley.crab_trap.not_waterlogged"),
         INVAILD_BIOME("text.valley.crab_trap.invaild_biome");
+        
+        static final Condition[] CONDITIONS = Condition.values();
 
         String key;
 
@@ -287,6 +291,14 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
 
         boolean isInvaild() {
             return this != PERFECT;
+        }
+        
+        byte getId() {
+            return (byte) ordinal();
+        }
+        
+        static Condition fromId(byte id) {
+            return CONDITIONS[id];
         }
     }
 }
