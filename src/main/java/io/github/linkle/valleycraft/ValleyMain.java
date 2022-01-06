@@ -1,10 +1,11 @@
 package io.github.linkle.valleycraft;
 
-import io.github.linkle.valleycraft.blocks.decorations.Furnaces.Furnaces;
+import io.github.linkle.valleycraft.blocks.entity.BlockEntities;
 import io.github.linkle.valleycraft.config.VConfig;
 import io.github.linkle.valleycraft.criterions.VCriteria;
 import io.github.linkle.valleycraft.init.*;
 import io.github.linkle.valleycraft.init.features.*;
+import io.github.linkle.valleycraft.screen.Screens;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
@@ -43,15 +44,17 @@ public class ValleyMain implements ModInitializer {
         Aquatic.initialize();
         Crops.initialize();
         StoneBlocks.initialize();
-        Furnaces.ints();
+        BlockEntities.ints();
         PotBlock.initialize();
         
         // Misc Initializers (Recommended put it after the blocks and items initializers)
+        Screens.initialize();
         VLootTables.initialize();
         Sounds.initialize();
         Compostables.initialize();
         Entities.initialize();
         WanderingTraderOffers.initialize();
+        CrabTrapBaits.initialize();
         
         //Configured Feature Initializers
         OreFeatures.initialize();

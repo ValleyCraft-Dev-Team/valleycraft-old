@@ -11,12 +11,17 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class BaitItemBase extends Item {
-    public BaitItemBase(Settings settings) { super(settings); }
-
+    
+    private final String tooltip;
+    
+    public BaitItemBase(Settings settings, String tooltip) {
+        super(settings);
+        this.tooltip = tooltip;
+    }
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add( new TranslatableText("item.valley.bait.tooltip").formatted(Formatting.GREEN) );
-        tooltip.add( new TranslatableText("item.valley.bait.tooltip_2").formatted(Formatting.GREEN) );
+        tooltip.add(new TranslatableText("item.valley.bait.tooltip").formatted(Formatting.GREEN));
+        tooltip.add(new TranslatableText(this.tooltip).formatted(Formatting.GREEN));
     }
 }

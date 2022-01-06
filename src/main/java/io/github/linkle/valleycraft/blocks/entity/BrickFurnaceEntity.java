@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.blocks.decorations.Furnaces;
+package io.github.linkle.valleycraft.blocks.entity;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
@@ -11,9 +11,9 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.math.BlockPos;
 
-public class BrickFurnaceBlockEntity extends AbstractFurnaceBlockEntity {
+public class BrickFurnaceEntity extends AbstractFurnaceBlockEntity {
 
-	public BrickFurnaceBlockEntity(BlockPos pos, BlockState state) {
+	public BrickFurnaceEntity(BlockPos pos, BlockState state) {
 		// RecipeType.SMELTING to include all smeltable items like furnace. 
 		super(BrickFurnace.BLOCK_ENTITY, pos, state, RecipeType.SMOKING); 
 	}
