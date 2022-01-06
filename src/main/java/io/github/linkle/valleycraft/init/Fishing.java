@@ -24,12 +24,15 @@ public class Fishing {
     public static final Item SLIMEFISH = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).rarity(Rarity.COMMON).maxCount(64));
     public static final Item GLISTERING_ANGLER = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).build()).rarity(Rarity.RARE).maxCount(64));
     public static final Item LOBSTER = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 900),0.8f).build()).maxCount(64));
+    public static final Item PRIDEFIN = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).build()).rarity(Rarity.RARE).maxCount(64));
+    public static final Item MASKING_CRAB = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 900),0.8f).build()).maxCount(64));
+    public static final Item BONEFIN = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 300),0.8f).build()).maxCount(64));
+    public static final Item ABYSS_WATCHER = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).build()).rarity(Rarity.RARE).maxCount(64));
 
     public static void initialize() {
-        Util.register("fire_eel", FIRE_EEL);
-        Util.register("ghost_fish", GHOST_FISH);
         Util.register("perch", PERCH);
         Util.register("crab_red", CRAB);
+        Util.register("masking_crab", MASKING_CRAB);
         Util.register("lobster", LOBSTER);
         Util.register("mussel", MUSSEL);
         Util.register("brown_mussel", BROWN_MUSSEL);
@@ -37,7 +40,12 @@ public class Fishing {
         Util.register("lionfish", LIONFISH);
         Util.register("sardine", SARDINE);
         Util.register("slime_fish", SLIMEFISH);
+        Util.register("pridefin", PRIDEFIN);
         Util.register("glistering_anglerfish", GLISTERING_ANGLER);
         Util.register("octopus", OCTO);
+        Util.register("fire_eel", FIRE_EEL);
+        Util.register("ghost_fish", GHOST_FISH);
+        Util.register("abyss_watcher", ABYSS_WATCHER);
+        Util.register("bonefin", BONEFIN);
     }
 }

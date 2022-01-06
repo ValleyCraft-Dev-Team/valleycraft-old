@@ -9,14 +9,14 @@ import static net.minecraft.item.Items.GLASS_BOTTLE;
 
 public class FoodAndCooking {
     public static final Item DRIED_SALMON = new FoodItemBase(new Item.Settings(), 4, 0.4f);
-    public static final Item DRIED_SARDINE = new FoodItemBase(new Item.Settings(), 3, 0.4f);
+    //public static final Item DRIED_SARDINE = new FoodItemBase(new Item.Settings(), 3, 0.4f);
     public static final Item COOKED_SARDINE = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item COOKED_CRAB = new FoodItemBase(new Item.Settings(), 7, 0.4f);
     public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 3, 0.4f);
     public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
-    public static final Item PEPPERCORN = new FoodItemBase(new Item.Settings(), 1, 0.6f);
-    public static final Item THYME = new FoodItemBase(new Item.Settings(), 1, 0.6f);
+    //public static final Item PEPPERCORN = new FoodItemBase(new Item.Settings(), 1, 0.6f);
+    //public static final Item THYME = new FoodItemBase(new Item.Settings(), 1, 0.6f);
 
     public static final Item DRIED_COD = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item DRIED_TROPICAL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
@@ -98,10 +98,10 @@ public class FoodAndCooking {
     public static final Item GB_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
     public static final Item SR_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
 
-    public static final Item AMERANTH_PANCAKE_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f, FoodStatusEffects.AMERANTH_PANCAKE_DOUGH);
-    public static final Item AMERANTH_PANCAKE = new FoodItemBase(new Item.Settings(), 5, 0.5f, FoodStatusEffects.AMERANTH_PANCAKE);
-    public static final Item AMERANTH_PORRIDGE = new BowlBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.AMERANTH_PORRIDGE);
-    public static final Item AMERANTH_PANCAKE_BREAKFAST = new BowlBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.AMERANTH_PANCAKE_BREAKFAST);
+    //public static final Item AMERANTH_PANCAKE_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f, FoodStatusEffects.AMERANTH_PANCAKE_DOUGH);
+    //public static final Item AMERANTH_PANCAKE = new FoodItemBase(new Item.Settings(), 5, 0.5f, FoodStatusEffects.AMERANTH_PANCAKE);
+    //public static final Item AMERANTH_PORRIDGE = new BowlBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.AMERANTH_PORRIDGE);
+    //public static final Item AMERANTH_PANCAKE_BREAKFAST = new BowlBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.AMERANTH_PANCAKE_BREAKFAST);
 
     public static final Item APPLE_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.APPLE_CYSER);
     public static final Item BITTER_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.BITTER_BERRY_CYSER);
@@ -191,7 +191,7 @@ public class FoodAndCooking {
     public static final Item BEAR_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.BEAR_STIR_FRY);
     public static final Item MANDRAKE_SOUP = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.MANDRAKE_SOUP);
     public static final Item CANDIED_SNOW_YAM = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.CANDIED_SNOW_YAM);
-    public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.WINTER_ROOT_STEW);
+    //public static final Item WINTER_ROOT_STEW = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f, FoodStatusEffects.WINTER_ROOT_STEW);
     public static final Item WORM_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.8f, FoodStatusEffects.WORM_SOUP);
     public static final Item SLIME_SOUP = new BowlBase(new Item.Settings().maxCount(1), 5, 0.4f, FoodStatusEffects.SLIME_SOUP);
 
@@ -313,6 +313,7 @@ public class FoodAndCooking {
         Util.register("dried_sucker", DRIED_SUCKER);
         Util.register("dried_tropical_fish", DRIED_TROPICAL);
         Util.register("cooked_tropical_fish", COOKED_TROPICAL);
+        Util.register("cooked_perch", COOKED_PERCH);
         Util.register("sardine_cooked", COOKED_SARDINE);
         Util.register("fire_eel_cooked", COOKED_FIRE_EEL);
         Util.register("crab_red_cooked", COOKED_CRAB);
