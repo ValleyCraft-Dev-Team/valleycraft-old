@@ -1,5 +1,6 @@
 package io.github.linkle.valleycraft.blocks.entity;
 
+import java.util.Collections;
 import java.util.function.Supplier;
 
 import org.spongepowered.include.com.google.common.collect.ImmutableSet;
@@ -17,6 +18,7 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.nbt.NbtCompound;
@@ -41,11 +43,12 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     private static final ImmutableSet<Category> BIOMES = ImmutableSet.of(Category.OCEAN, Category.RIVER, Category.BEACH,
             Category.SWAMP);
 
-    private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
     private final Object2IntArrayMap<Item> rememberList = new Object2IntArrayMap<>(CrabTrapBaits.size());
     private int timer, maxTimer;
     private boolean isInProgress = false;
     private Condition condition = Condition.PERFECT;
+    private Item lastBait = Items.AIR;
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override
@@ -102,6 +105,8 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             entity.isInProgress = true;
             entity.setBaitTimer();
         }
+        
+        entity.checkBait();
 
         if (--entity.timer <= 0) {
             entity.setBaitTimer();
@@ -121,10 +126,17 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             if (rememberList.containsKey(item)) {
                 timer = rememberList.getInt(item);
             } else {
-                timer = CrabTrapBaits.get(getBait().getItem(), world.random);
+                timer = CrabTrapBaits.get(getBait().getItem(), world.random) >> 5;
                 rememberList.put(item, timer);
                 maxTimer = timer;
             }
+            lastBait = item;
+        }
+    }
+    
+    private void checkBait() {
+        if (getBait().getItem() != lastBait) {
+            setBaitTimer();
         }
     }
 
@@ -147,7 +159,6 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     }
     
     private void addLoot() {
-        // TODO: Use loot table.
         var builder = new LootContext.Builder((ServerWorld)world);
         var lootTable = world.getServer().getLootManager().getTable(VLootTables.BAITING);
         var list = lootTable.generateLoot(builder.build(LootContextTypes.EMPTY));
@@ -259,12 +270,13 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     @Override // Done?
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
-        inventory = DefaultedList.ofSize(size(), ItemStack.EMPTY);
+        Collections.fill(inventory, ItemStack.EMPTY);
         Inventories.readNbt(nbt, inventory);
         timer = nbt.getInt("Timer");
         maxTimer = nbt.getInt("MaxTimer");
         isInProgress = nbt.getBoolean("IsInProgress");
         condition = Condition.fromId(nbt.getByte("Condition"));
+        lastBait = Registry.ITEM.get(new Identifier(nbt.getString("LastBait")));
         
         rememberList.clear();
         var list = nbt.getList("Remember", 10);
@@ -272,8 +284,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             var compound = list.getCompound(i);
             var item = Registry.ITEM.get(new Identifier(compound.getString("id")));
             if (CrabTrapBaits.contains(item)) {
-                var timer = compound.getInt("Timer");
-                rememberList.put(item, timer);
+                rememberList.put(item, compound.getInt("Timer"));
             }
         }
     }
@@ -286,6 +297,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         nbt.putInt("MaxTimer", maxTimer);
         nbt.putBoolean("IsInProgress", isInProgress);
         nbt.putByte("Condition", condition.getId());
+        nbt.putString("LastBait", Registry.ITEM.getId(lastBait).toString());
         
         var list = new NbtList();
         for (var entry : rememberList.object2IntEntrySet()) {
