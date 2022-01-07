@@ -202,6 +202,26 @@ public class Furniture {
             .sounds(BlockSoundGroup.STONE)
             .strength(1.5f, 2.0f));
 
+    public static final Block CHIMNEY_COBBLE_BRICK = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
+            .requiresTool()
+            .sounds(BlockSoundGroup.STONE)
+            .strength(1.5f, 2.0f));
+
+    public static final Block CHIMNEY_BRICK = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
+            .requiresTool()
+            .sounds(BlockSoundGroup.STONE)
+            .strength(1.5f, 2.0f));
+
+    public static final Block CHIMNEY_VOLCANIC = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
+            .requiresTool()
+            .sounds(BlockSoundGroup.STONE)
+            .strength(1.5f, 2.0f));
+
+    public static final Block CHIMNEY_CARMINE = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
+            .requiresTool()
+            .sounds(BlockSoundGroup.STONE)
+            .strength(1.5f, 2.0f));
+
     public static final Block HANGING = new HangingBlock();
 
     public static final Block BOOK_COBWEB = new BookshelfBlock();
@@ -238,6 +258,9 @@ public class Furniture {
     public static final Block REDSTONE_WALL_BONE_TORCH = new WallRedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_WALL_TORCH).sounds(BlockSoundGroup.BONE));
 
     public static final Block ICE_BOX = new IceBoxBarrelBlock();
+
+    public static final Block VOLCANIC_CHISELED = new PolishedStoneBlock();
+    public static final Block MIXED_CHISELED = new PolishedStoneBlock();
 
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
@@ -328,7 +351,8 @@ public class Furniture {
         Util.registerWithItem("brown_mossy_bricks", B_MOSSY, furnGroup);
         Util.registerWithItem("brown_brick_slab", B_SLAB, furnGroup);
         Util.registerWithItem("brown_brick_stairs", B_STAIRS, furnGroup);
-        
+        //Util.registerWithItem("chiseled_brown_bricks", MIXED_CHISELED, furnGroup);
+
         Util.registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
         Util.registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
         Util.registerWithItem("cobblestone_chiseled", COBBLE_CHISELED, furnGroup);
@@ -359,6 +383,7 @@ public class Furniture {
         Util.registerWithItem("volcanic_bricks", VOLCANIC_BRICKS, furnGroup);
         Util.registerWithItem("volcanic_bricks_stairs", VOLCANIC_STAIRS, furnGroup);
         Util.registerWithItem("volcanic_bricks_slab", VOLCANIC_SLAB, furnGroup);
+        Util.registerWithItem("chiseled_volcanic_bricks", VOLCANIC_CHISELED, furnGroup);
 
         Util.registerWithItem("carmine_bricks", C_BRICKS, furnGroup);
         Util.registerWithItem("carmine_stairs", C_STAIRS, furnGroup);
@@ -410,7 +435,11 @@ public class Furniture {
         Util.registerWithItem("volc_stone_smooth", VOLCANIC_STONE_SMOOTH, furnGroup);
         
         Util.registerWithItem("chimney_cobble", CHIMNEY_COBBLE, furnGroup);
-        
+        Util.registerWithItem("chimney_cobblestone_brick", CHIMNEY_COBBLE_BRICK, furnGroup);
+        Util.registerWithItem("chimney_brick", CHIMNEY_BRICK, furnGroup);
+        Util.registerWithItem("chimney_carmine", CHIMNEY_CARMINE, furnGroup);
+        Util.registerWithItem("chimney_volcanic", CHIMNEY_VOLCANIC, furnGroup);
+
         Util.registerWithItem("hanging_pot", HANGING, furnGroup);
 
         //registerWithItem("hanging_redstone", HANGING_R, furnGroup);

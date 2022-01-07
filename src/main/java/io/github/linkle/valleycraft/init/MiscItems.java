@@ -58,7 +58,7 @@ public class MiscItems {
     public static final Item PIG_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_4");
     public static final Item GOLDEN_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_3");
     public static final Item LINGERING_POWDER = new LingeringItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(16).rarity(Rarity.UNCOMMON));
-    public static final Item MESSAGE_BOTTLE = new BottleBundleBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.EPIC));
+    public static final Item MESSAGE_BOTTLE = new BottleBundleBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.RARE));
     public static final Item SEA_EYE = new EyeItemBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.EPIC));
 
     public static void initialize() {

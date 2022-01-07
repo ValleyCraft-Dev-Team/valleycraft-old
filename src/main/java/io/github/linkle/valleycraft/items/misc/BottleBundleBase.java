@@ -55,6 +55,6 @@ public class BottleBundleBase extends Item {
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("item.valley.message_bottle.tooltip").formatted(Formatting.YELLOW));
+        tooltip.add(new TranslatableText("item.valley.message_bottle.tooltip").formatted(Formatting.GOLD));
     }
 }

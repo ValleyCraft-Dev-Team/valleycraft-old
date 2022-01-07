@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/fire_eel_roll"
+    "layer0": "valley:items/fire_eel_roll_new"
   }
 }

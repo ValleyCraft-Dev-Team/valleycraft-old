@@ -35,7 +35,7 @@ public class ItemGroups {
             new Identifier(ValleyMain.MOD_ID, "misc")).icon(() -> new ItemStack(FIBER)).build();
 
     public static final ItemGroup FISHING_GROUP = FabricItemGroupBuilder.create(
-            new Identifier(ValleyMain.MOD_ID, "fishing")).icon(() -> new ItemStack(Fishing.LIONFISH)).build();
+            new Identifier(ValleyMain.MOD_ID, "fishing")).icon(() -> new ItemStack(Fishing.PRIDEFIN)).build();
 
     public static final ItemGroup ARTEFACT_GROUP = FabricItemGroupBuilder.create(
             new Identifier(ValleyMain.MOD_ID, "artefacts")).icon(() -> new ItemStack(ANCHOR)).build();

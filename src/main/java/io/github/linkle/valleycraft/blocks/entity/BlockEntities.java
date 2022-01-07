@@ -24,7 +24,25 @@ public class BlockEntities {
 			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
 			.luminance(7)
 			.strength(1.5f, 2f));
-	
+
+	public static final Block COBBLE_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
+			.requiresTool()
+			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
+			.luminance(7)
+			.strength(1.5f, 2f));
+
+	public static final Block VOLCANIC_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
+			.requiresTool()
+			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
+			.luminance(7)
+			.strength(1.5f, 2f));
+
+	public static final Block CARMINE_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
+			.requiresTool()
+			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
+			.luminance(7)
+			.strength(1.5f, 2f));
+
 	public static final Block CRAB_TRAP = new CrabTrap();
 	
 	public static void ints() {
@@ -32,8 +50,17 @@ public class BlockEntities {
 	    
 	    Util.register("brick_furnace", new BlockItem(BRICK_FURNACE, furnGroup));
 	    BrickFurnace.BLOCK_ENTITY = createBlockEntity("brick_furnace", BRICK_FURNACE, BrickFurnaceEntity::new);
-	    
-	    Util.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
+
+		Util.register("cobble_furnace", new BlockItem(COBBLE_FURNACE, furnGroup));
+		BrickFurnace.BLOCK_ENTITY = createBlockEntity("cobble_furnace", COBBLE_FURNACE, BrickFurnaceEntity::new);
+
+		Util.register("carmine_furnace", new BlockItem(CARMINE_FURNACE, furnGroup));
+		BrickFurnace.BLOCK_ENTITY = createBlockEntity("carmine_furnace", CARMINE_FURNACE, BrickFurnaceEntity::new);
+
+		Util.register("volcanic_furnace", new BlockItem(VOLCANIC_FURNACE, furnGroup));
+		BrickFurnace.BLOCK_ENTITY = createBlockEntity("volcanic_furnace", VOLCANIC_FURNACE, BrickFurnaceEntity::new);
+
+		Util.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
 	    CrabTrap.BLOCK_ENTITY = createBlockEntity("crab_trap", CRAB_TRAP, CrabTrapEntity::new);	    
 	}
 	

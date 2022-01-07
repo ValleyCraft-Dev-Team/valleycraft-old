@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "minecraft:block/template_seagrass",
   "textures": {
-    "cross": "valley:blocks/angel_fern"
+    "texture": "valley:blocks/dancing_sea_fern"
   }
 }

@@ -31,20 +31,25 @@ public class FoodStatusEffects {
 
 	public static final FoodStatusEffect PUMPKIN_BOWL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,300));
 
-	public static final FoodStatusEffect BBOX_CLOWNFISH = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,900));
-	public static final FoodStatusEffect BBOX_SALMON = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,900));
-	public static final FoodStatusEffect BBOX_UNAGI = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,900));
-	public static final FoodStatusEffect BBOX_GH_TAIL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,1800));
+	public static final FoodStatusEffect BBOX_CLOWNFISH = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,12900));
+	public static final FoodStatusEffect BBOX_SALMON = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,1200));
+	public static final FoodStatusEffect BBOX_UNAGI = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,1200));
+	public static final FoodStatusEffect BBOX_GH_TAIL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,1200));
+	public static final FoodStatusEffect BBOX_ABYSS = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,1200));
 	public static final FoodStatusEffect STEAMED_COD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450));
 	public static final FoodStatusEffect CARROT_STEW = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450),1.0f);
 	public static final FoodStatusEffect CREAMY_HEART_STEW = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,450),1.0f);
 	public static final FoodStatusEffect CRAB_CAKE = new FoodStatusEffect().addEffect(new StatusEffectInstance(StatusEffects.STRENGTH,900),1.0f);
 
 	public static final FoodStatusEffect SALMON_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,450));
-	public static final FoodStatusEffect CRAB_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450));
+	public static final FoodStatusEffect CRAB_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,450));
 	public static final FoodStatusEffect PERCH_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,450));
-	public static final FoodStatusEffect FIRE_EEL_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,450));
-	public static final FoodStatusEffect OCTO_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,450));
+	public static final FoodStatusEffect FIRE_EEL_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600));
+	public static final FoodStatusEffect OCTO_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY,450));
+	public static final FoodStatusEffect SQUID_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450));
+	public static final FoodStatusEffect RAINBOW_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING,650));
+	public static final FoodStatusEffect PRIDEFIN_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,650));
+	public static final FoodStatusEffect CLOWNFISH_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.SPEED,450));
 
 	public static final FoodStatusEffect AMERANTH_PANCAKE_DOUGH = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,200));
 	public static final FoodStatusEffect AMERANTH_PANCAKE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450));
@@ -73,7 +78,6 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect POKE_BOWL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,120));
 
 	public static final FoodStatusEffect COCOA = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,120));
-	public static final FoodStatusEffect CLOWNFISH_ROLL = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE,450));
 	public static final FoodStatusEffect CRYS_HONEY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,240));
 	public static final FoodStatusEffect MAIZE_PORRIDGE = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HASTE,450));
 	public static final FoodStatusEffect BEEF_STEW = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION,60));
@@ -94,18 +98,18 @@ public class FoodStatusEffects {
 	public static final FoodStatusEffect GRUB = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,1800));
 
 	public static final FoodStatusEffect STUFFED_ONION = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST,900));
-	public static final FoodStatusEffect BAKED_POTATO_SPECIAL= new FoodStatusEffect(new StatusEffectInstance(StatusEffects.LUCK,900));
+	public static final FoodStatusEffect BAKED_POTATO_SPECIAL= new FoodStatusEffect(new StatusEffectInstance(StatusEffects.LUCK,1200));
 
-	public static final FoodStatusEffect DOG_FOOD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,900));
-	public static final FoodStatusEffect FOX_FOOD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,900));
+	public static final FoodStatusEffect DOG_FOOD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450));
+	public static final FoodStatusEffect FOX_FOOD = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,450));
 
 	public static final FoodStatusEffect VEGE_STIR_FRY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,600));
-	public static final FoodStatusEffect EGG_STIR_FRY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,600));
-	public static final FoodStatusEffect BEAR_STIR_FRY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,600));
+	public static final FoodStatusEffect EGG_STIR_FRY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,900));
+	public static final FoodStatusEffect BEAR_STIR_FRY = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH,900));
 	public static final FoodStatusEffect MANDRAKE_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION,900));
 	public static final FoodStatusEffect CANDIED_SNOW_YAM = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,900));
 	public static final FoodStatusEffect WINTER_ROOT_STEW = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,900));
 	public static final FoodStatusEffect WORM_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA,900));
-	public static final FoodStatusEffect SLIME_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST,900));
+	public static final FoodStatusEffect SLIME_SOUP = new FoodStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST,1400));
 
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/perch_roll"
+    "layer0": "valley:items/perch_roll_new"
   }
 }

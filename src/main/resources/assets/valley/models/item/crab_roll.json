@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/crab_roll"
+    "layer0": "valley:items/crab_roll_new"
   }
 }

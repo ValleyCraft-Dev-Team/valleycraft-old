@@ -30,6 +30,12 @@
   "item.valley.sea_urchin_soup": "Sea Urchin Soup",
   "item.valley.cooked_perch": "Cooked Perch",
   "item.valley.cooked_lobster": "Cooked Lobster",
+  "item.valley.cooked_stonespinner_minnow": "Cooked Stonespinner Minnow",
+  "item.valley.cooked_pridefin": "Cooked Pridefin",
+  "item.valley.bbox_abyss_watcher": "Abyss Watcher Bento Box",
+  "item.valley.pridefin_roll": "Pridefin Roll",
+  "item.valley.rainbow_roll": "Rainbow Roll",
+
   "item.valley.cooked_sea_urchin": "Cooked Sea Urchin",
   "item.valley.masking_crab": "Masking Crab",
   "item.valley.marlin_spike_seashell": "Marlin Spike",
@@ -41,9 +47,11 @@
   "item.valley.bonefin": "Bonefin",
   "item.valley.prismarine_scalpel": "Prismarine Scalpel",
   "item.valley.prismarine_scalpel.tooltip": "Used to cut Coral without killing it.",
-  "item.valley.coral_knife": "Coral Knife",
+  "item.valley.coral_knife": "Coral Dagger",
+  "item.valley.coral_knife.tooltip": "How does it still have it's color?",
   "item.valley.mermaids_spear": "Mermaid's Spear",
-  "item.valley.mermaids_spear.tooltip": "Somehow pristine despite being underwater for centuries.",
+  "item.valley.mermaids_spear.tooltip": "Somehow pristine despite being",
+  "item.valley.mermaids_spear.tooltip_2": "underwater for centuries.",
   "item.valley.mermaids_sword": "Mermaid's Sword",
   "item.valley.mermaids_sword.tooltip": "Made out of a Guardian's spine.",
   "item.valley.message_bottle": "Message In A Bottle",
@@ -51,6 +59,8 @@
   "item.valley.sea_creature_eye": "Sea Creature Eye",
   "item.valley.sea_creature_eye.tooltip_1": "Whatever creature this belonged to",
   "item.valley.sea_creature_eye.tooltip_2": "had to have been massive...",
+
+  "container.valley.stove": "Stove",
 
   "block.valley.giant_scallop": "Giant Scallop",
   "block.valley.sea_fern": "Dancing Sea Fern",
@@ -210,7 +220,8 @@
   "block.valley.miners_lettuce": "Miner's Lettuce",
   "block.valley.stew_campfire_pot": "Campfire Stew Pot",
   "block.valley.stew_campfire_pot.tooltip": "Place this above a campfire.",
-  "block.valley.chimney_cobble": "Cobblestone Chimney",
+
+
 
   "item.valley.steamed_cod": "Steamed Cod",
   "item.valley.creamy_heart_stew": "Creamy Heart Stew",
@@ -730,7 +741,20 @@
   "block.valley.miners_crest": "Miner's Crest",
   "block.valley.stuffy_brown": "Brown Bear Stuffy",
   "block.valley.stuffy_white": "Polar Bear Stuffy",
+
   "block.valley.brick_furnace": "Brick Stove",
+  "block.valley.cobble_furnace": "Cobblestone Stove",
+  "block.valley.carmine_furnace": "Carmine Brick Stove",
+  "block.valley.volcanic_furnace": "Volcanic Brick Stove",
+  "block.valley.chimney_cobble": "Cobblestone Chimney",
+  "block.valley.chimney_cobblestone_brick": "Cobblestone Brick Chimney",
+  "block.valley.chimney_brick": "Mixed Brick Chimney",
+  "block.valley.chimney_carmine": "Carmine Brick Chimney",
+  "block.valley.chimney_volcanic": "Volcanic Brick Chimney",
+
+  "block.valley.chiseled_brown_bricks": "Chiseled Mixed Bricks",
+  "block.valley.chiseled_volcanic_bricks": "Chiseled Volcanic Bricks",
+
   "block.valley.log_pile": "Log Pile",
   "block.valley.campfire_ring": "Campfire Ring",
   

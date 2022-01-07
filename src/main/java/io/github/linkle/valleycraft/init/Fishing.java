@@ -44,7 +44,6 @@ public class Fishing {
         Util.register("cerith_snail", CERITH_SNAIL);
         Util.register("marlin_spike_seashell", MARLIN_SPIKE);
         Util.register("lionfish", LIONFISH);
-        Util.register("hairy_frog_fish", FROG_FISH);
         Util.register("sardine", SARDINE);
         Util.register("stoneroller_minnow", STONEROLLER);
         Util.register("slime_fish", SLIMEFISH);
@@ -52,6 +51,7 @@ public class Fishing {
         Util.register("rainbow_wrasse", WRASSE);
         Util.register("glistering_anglerfish", GLISTERING_ANGLER);
         Util.register("octopus", OCTO);
+        Util.register("hairy_frog_fish", FROG_FISH);
         Util.register("fire_eel", FIRE_EEL);
         Util.register("ghost_fish", GHOST_FISH);
         Util.register("abyss_watcher", ABYSS_WATCHER);

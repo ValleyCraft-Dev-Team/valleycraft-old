@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/angel_fern"
+    "layer0": "valley:items/dancing_sea_fern"
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "valley:block/chimney_brick"
+      "model": "valley:block/brick_chimney"
     }
   }
 }

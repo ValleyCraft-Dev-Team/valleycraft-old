@@ -21,7 +21,7 @@ public class BrickFurnaceEntity extends AbstractFurnaceBlockEntity {
 	/** The title of the furnace user interface. Usually use your furnace's block name. */
 	@Override 
 	protected Text getContainerName() {
-		return new TranslatableText("block.valley.brick_furnace");
+		return new TranslatableText("container.valley.stove");
 	}
 	
 	@Override 

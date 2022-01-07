@@ -14,11 +14,13 @@ public class FoodAndCooking {
     public static final Item COOKED_CRAB = new FoodItemBase(new Item.Settings(), 7, 0.4f);
     public static final Item COOKED_LOBSTER = new FoodItemBase(new Item.Settings(), 7, 0.4f);
     public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings(), 4, 0.4f);
-    public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 3, 0.4f);
-    public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
+    public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
+    public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 5, 0.4f);
     public static final Item COOKED_SEA_URCHIN = new FoodItemBase(new Item.Settings(), 6, 0.5f);
     //public static final Item PEPPERCORN = new FoodItemBase(new Item.Settings(), 1, 0.6f);
     //public static final Item THYME = new FoodItemBase(new Item.Settings(), 1, 0.6f);
+    public static final Item COOKED_PRIDEFIN = new FoodItemBase(new Item.Settings(), 8, 0.5f);
+    public static final Item COOKED_STONESPINNER_MINNOW = new FoodItemBase(new Item.Settings(), 3, 0.3f);
 
     public static final Item DRIED_COD = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item DRIED_TROPICAL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
@@ -65,6 +67,7 @@ public class FoodAndCooking {
     public static final Item BBOX_SALMON = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_SALMON);
     public static final Item BBOX_UNAGI = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_UNAGI);
     public static final Item BBOX_GH_TAIL = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_GH_TAIL);
+    public static final Item BBOX_ABYSS = new BBoxBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BBOX_ABYSS);
     public static final Item STEAMED_COD = new FoodItemBase(new Item.Settings(), 10, 0.5f, FoodStatusEffects.STEAMED_COD);
     public static final Item CARROT_STEW = new BowlBase(new Item.Settings().maxCount(1), 6, 0.5f, FoodStatusEffects.CARROT_STEW);
     public static final Item CREAMY_HEART_STEW = new BowlBase(new Item.Settings().maxCount(1), 6, 0.5f, FoodStatusEffects.CREAMY_HEART_STEW);
@@ -84,6 +87,10 @@ public class FoodAndCooking {
     public static final Item PERCH_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.PERCH_ROLL);
     public static final Item FIRE_EEL_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.FIRE_EEL_ROLL);
     public static final Item OCTO_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.OCTO_ROLL);
+    public static final Item CLOWNFISH_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.CLOWNFISH_ROLL);
+    public static final Item PRIDEFIN_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.PRIDEFIN_ROLL);
+    public static final Item RAINBOW_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.RAINBOW_ROLL);
+    public static final Item SQUID_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.SQUID_ROLL);
 
     public static final Item SKELE_DOUGH = new FoodItemBase(new Item.Settings(), 1, 1f);
     public static final Item SKELE_COOKIE = new FoodItemBase(new Item.Settings(), 4, 0.7f);
@@ -133,7 +140,6 @@ public class FoodAndCooking {
     public static final Item TOMATO_JUICE = new DrinkBottleBase(new Item.Settings().maxCount(1), 4, 0.5f);
     public static final Item JUICE_EG = new DrinkBottleBase(new Item.Settings().maxCount(1), 4, 0.5f);
     public static final Item COCOA = new DrinkTeaBase(new Item.Settings().maxCount(1), 2, 0.5f, FoodStatusEffects.COCOA);
-    public static final Item CLOWNFISH_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.5f, FoodStatusEffects.CLOWNFISH_ROLL);
     public static final Item CRYS_HONEY = new FoodItemBase(new Item.Settings(), 4, 0.5f, FoodStatusEffects.CRYS_HONEY);
     public static final Item MAIZE_PORRIDGE = new BowlBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.MAIZE_PORRIDGE);
     public static final Item BEEF_STEW = new BowlBase(new Item.Settings().maxCount(1), 10, 0.5f, FoodStatusEffects.BEEF_STEW);
@@ -141,7 +147,6 @@ public class FoodAndCooking {
     public static final Item SPICY_RABBIT_BIGO = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.SPICY_RABBIT_BIGO);
     public static final Item LAMB_BIRYANI = new BowlBase(new Item.Settings().maxCount(1), 9, 0.4f,FoodStatusEffects.LAMB_BIRYANI);
     public static final Item PORK_STIR_FRY = new BowlBase(new Item.Settings().maxCount(1), 10, 0.4f, FoodStatusEffects.PORK_STIR_FRY);
-    public static final Item SQUID_ROLL = new FoodItemBase(new Item.Settings(), 6, 0.7f);
     public static final Item FROZEN_JELLY = new FoodItemBase(new Item.Settings(), 4, 0.6f, FoodStatusEffects.FROZEN_JELLY);
     public static final Item ROCK_CANDY = new FoodItemBase(new Item.Settings(), 4, 0.6f, FoodStatusEffects.ROCK_CANDY);
     public static final Item GRILLED_SUCKER = new FoodItemBase(new Item.Settings(), 6, 0.6f);
@@ -318,6 +323,9 @@ public class FoodAndCooking {
         Util.register("dried_tropical_fish", DRIED_TROPICAL);
         Util.register("cooked_tropical_fish", COOKED_TROPICAL);
         Util.register("cooked_perch", COOKED_PERCH);
+        Util.register("cooked_stonespinner_minnow", COOKED_STONESPINNER_MINNOW);
+        Util.register("cooked_pridefin", COOKED_PRIDEFIN);
+
         Util.register("sardine_cooked", COOKED_SARDINE);
         Util.register("fire_eel_cooked", COOKED_FIRE_EEL);
         Util.register("crab_red_cooked", COOKED_CRAB);
@@ -331,11 +339,14 @@ public class FoodAndCooking {
         Util.register("perch_roll", PERCH_ROLL);
         Util.register("crab_roll", CRAB_ROLL);
         Util.register("octo_roll", OCTO_ROLL);
+        Util.register("pridefin_roll", PRIDEFIN_ROLL);
+        Util.register("rainbow_roll", RAINBOW_ROLL);
 
         Util.register("bbox_unagi", BBOX_UNAGI);
         Util.register("bbox_clownfish", BBOX_CLOWNFISH);
         Util.register("bbox_salmon", BBOX_SALMON);
         Util.register("bbox_ghost", BBOX_GH_TAIL);
+        Util.register("bbox_abyss_watcher", BBOX_ABYSS);
 
         Util.register("grilled_cheese", SANDWICH_CHEESE);
         Util.register("blt", SANDWICH_BLT);
