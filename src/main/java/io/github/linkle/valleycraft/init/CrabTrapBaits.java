@@ -29,4 +29,8 @@ public class CrabTrapBaits {
     public static int get(ItemConvertible item, Random random) {
         return BAITS.get(item.asItem()).get(random) * 20;
     }
+
+    public static int size() {
+        return BAITS.size();
+    }
 }

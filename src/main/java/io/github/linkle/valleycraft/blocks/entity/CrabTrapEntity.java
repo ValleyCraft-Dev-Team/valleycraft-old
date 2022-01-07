@@ -8,8 +8,7 @@ import io.github.linkle.valleycraft.init.CrabTrapBaits;
 import io.github.linkle.valleycraft.init.VLootTables;
 import io.github.linkle.valleycraft.screen.CrabTrapScreenHandler;
 import io.github.linkle.valleycraft.utils.Util;
-import it.unimi.dsi.fastutil.objects.Object2IntMap;
-import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LockableContainerBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -43,10 +42,10 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             Category.SWAMP);
 
     private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
+    private final Object2IntArrayMap<Item> rememberList = new Object2IntArrayMap<>(CrabTrapBaits.size());
     private int timer, maxTimer;
     private boolean isInProgress = false;
     private Condition condition = Condition.PERFECT;
-    private Object2IntMap<Item> rememberList = new Object2IntOpenHashMap<>();
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override
@@ -272,8 +271,10 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         for (int i = 0; i < list.size(); ++i) {
             var compound = list.getCompound(i);
             var item = Registry.ITEM.get(new Identifier(compound.getString("id")));
-            var timer = compound.getInt("Timer");
-            rememberList.put(item, timer);
+            if (CrabTrapBaits.contains(item)) {
+                var timer = compound.getInt("Timer");
+                rememberList.put(item, timer);
+            }
         }
     }
 
@@ -287,12 +288,12 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         nbt.putByte("Condition", condition.getId());
         
         var list = new NbtList();
-        rememberList.forEach((item, timer) -> {
+        for (var entry : rememberList.object2IntEntrySet()) {
             var compound = new NbtCompound();
-            compound.putString("id", Registry.ITEM.getId(item).toString());
-            compound.putInt("Timer", timer);
+            compound.putString("id", Registry.ITEM.getId(entry.getKey()).toString());
+            compound.putInt("Timer", entry.getIntValue());
             list.add(compound);
-        });
+        }
         nbt.put("Remember", list);
     }
     
