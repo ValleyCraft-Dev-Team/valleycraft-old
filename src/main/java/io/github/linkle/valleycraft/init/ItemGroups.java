@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import static io.github.linkle.valleycraft.init.Furniture.ANCHOR;
 import static io.github.linkle.valleycraft.init.MiscItems.FIBER;
 
 public class ItemGroups {
@@ -35,6 +36,9 @@ public class ItemGroups {
 
     public static final ItemGroup FISHING_GROUP = FabricItemGroupBuilder.create(
             new Identifier(ValleyMain.MOD_ID, "fishing")).icon(() -> new ItemStack(Fishing.LIONFISH)).build();
+
+    public static final ItemGroup ARTEFACT_GROUP = FabricItemGroupBuilder.create(
+            new Identifier(ValleyMain.MOD_ID, "artefacts")).icon(() -> new ItemStack(ANCHOR)).build();
 
     public static void initialize() {
         //icons

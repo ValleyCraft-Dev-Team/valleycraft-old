@@ -57,6 +57,8 @@ public class MiscItems {
     public static final Item BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_2");
     public static final Item GOLDEN_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_3");
     public static final Item LINGERING_POWDER = new LingeringItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(16).rarity(Rarity.UNCOMMON));
+    public static final Item MESSAGE_BOTTLE = new BottleBundleBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.EPIC));
+    public static final Item SEA_EYE = new EyeItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(1).rarity(Rarity.EPIC));
 
     public static void initialize() {
         Util.register("fur_clump", FUR_CLUMP);
@@ -85,6 +87,8 @@ public class MiscItems {
         Util.register("copper_nugget", COPPER_NUGGET);
         Util.register("netherite_nugget", NETHER_NUGGET);
         Util.register("lingering_powder", LINGERING_POWDER);
+        Util.register("message_bottle", MESSAGE_BOTTLE);
+        Util.register("sea_creature_eye", SEA_EYE);
         Util.register("mud", MUD);
         Util.register("mulch", MULCH);
         Util.register("turf", TURF_ITEM);

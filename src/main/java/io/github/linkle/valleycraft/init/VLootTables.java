@@ -34,8 +34,9 @@ public class VLootTables {
     }
     
     private static void fishingFishLoot(FabricLootPoolBuilder pool) {
-        pool.with(ItemEntry.builder(Fishing.CRAB).weight(13));
-        pool.with(ItemEntry.builder(Fishing.LOBSTER).weight(13));
+        pool.with(ItemEntry.builder(Fishing.CRAB).weight(20));
+        pool.with(ItemEntry.builder(Fishing.MASKING_CRAB).weight(10));
+        pool.with(ItemEntry.builder(Fishing.LOBSTER).weight(20));
         pool.with(ItemEntry.builder(Fishing.MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.BROWN_MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.CERITH_SNAIL).weight(13));
@@ -48,8 +49,18 @@ public class VLootTables {
         pool.with(ItemEntry.builder(Aquatic.STARFISH).weight(2));
         pool.with(ItemEntry.builder(Fishing.FIRE_EEL).weight(7));
         pool.with(ItemEntry.builder(Fishing.OCTO).weight(9));
-        pool.with(ItemEntry.builder(Fishing.GLISTERING_ANGLER).weight(7));
+        pool.with(ItemEntry.builder(Fishing.GLISTERING_ANGLER).weight(3));
         pool.with(ItemEntry.builder(Fishing.GHOST_FISH).weight(5));
+        pool.with(ItemEntry.builder(Fishing.PRIDEFIN).weight(5));
+        pool.with(ItemEntry.builder(Fishing.WRASSE).weight(5));
+        pool.with(ItemEntry.builder(Fishing.FROG_FISH).weight(7));
+        pool.with(ItemEntry.builder(Aquatic.SEA_URCHIN).weight(13));
+        pool.with(ItemEntry.builder(Fishing.MARLIN_SPIKE).weight(10));
+        pool.with(ItemEntry.builder(Fishing.STONEROLLER).weight(43));
+        pool.with(ItemEntry.builder(Fishing.ABYSS_WATCHER).weight(15));
+        pool.with(ItemEntry.builder(Fishing.BONEFIN).weight(13));
+        pool.with(ItemEntry.builder(MiscItems.SEA_EYE).weight(2));
+        pool.with(ItemEntry.builder(MiscItems.MESSAGE_BOTTLE).weight(5));
     }
     
     private static void fishingJunkLoot(FabricLootPoolBuilder pool) {

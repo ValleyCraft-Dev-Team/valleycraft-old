@@ -26,6 +26,10 @@ public class Aquatic {
     public static final Block ANEMONE_PURPLE = new AnenomeBlock();
     public static final Block ANEMONE_YELLOW = new AnenomeBlock();
 
+    public static final Block TUBE_WORMS = new AnenomeBlock();
+
+    public static final Block PRISMARINE_CLUSTER = new PrismarineClusterBlock();
+
     public static void initialize() {
         Util.registerWithItem("clam", CLAM, new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()));
         Util.registerWithItem("giant_scallop", GIANT_SCALLOP, new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(16));
@@ -42,5 +46,8 @@ public class Aquatic {
         Util.registerWithItem("anemone_purple", ANEMONE_PURPLE, new Item.Settings().group(FISHING_GROUP));
         Util.registerWithItem("anemone_yellow", ANEMONE_YELLOW, new Item.Settings().group(FISHING_GROUP));
 
+        Util.registerWithItem("tube_worms", TUBE_WORMS, new Item.Settings().group(FISHING_GROUP));
+
+        Util.registerWithItem("prismarine_cluster", PRISMARINE_CLUSTER, new Item.Settings().group(FISHING_GROUP));
     }
 }

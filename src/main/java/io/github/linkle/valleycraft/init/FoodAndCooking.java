@@ -12,6 +12,7 @@ public class FoodAndCooking {
     //public static final Item DRIED_SARDINE = new FoodItemBase(new Item.Settings(), 3, 0.4f);
     public static final Item COOKED_SARDINE = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item COOKED_CRAB = new FoodItemBase(new Item.Settings(), 7, 0.4f);
+    public static final Item COOKED_LOBSTER = new FoodItemBase(new Item.Settings(), 7, 0.4f);
     public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 3, 0.4f);
     public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
@@ -208,13 +209,13 @@ public class FoodAndCooking {
     public static final Item B_WATER = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item GOLDEN_PE = new FoodItemBase(new Item.Settings(), 10, 0.6f);
 
-    public static final Item SANDWICH_CHEESE = new FoodItemBase(new Item.Settings(), 10, 0.7f);
-    public static final Item SANDWICH_BLT = new FoodItemBase(new Item.Settings(), 10, 0.7f);
-    public static final Item SANDWICH_BEEF = new FoodItemBase(new Item.Settings(), 11, 0.8f);
-    public static final Item SANDWICH_PORK = new FoodItemBase(new Item.Settings(), 11, 0.8f);
-    public static final Item SANDWICH_MUTTON = new FoodItemBase(new Item.Settings(), 11, 0.8f);
-    public static final Item SANDWICH_TENDERLOIN = new FoodItemBase(new Item.Settings(), 11, 0.8f);
-    public static final Item CHICKEN_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.7f);
+    public static final Item SANDWICH_CHEESE = new FoodItemBase(new Item.Settings(), 9, 0.4f);
+    public static final Item SANDWICH_BLT = new FoodItemBase(new Item.Settings(), 9, 0.4f);
+    public static final Item SANDWICH_BEEF = new FoodItemBase(new Item.Settings(), 10, 0.3f);
+    public static final Item SANDWICH_PORK = new FoodItemBase(new Item.Settings(), 10, 0.3f);
+    public static final Item SANDWICH_MUTTON = new FoodItemBase(new Item.Settings(), 10, 0.3f);
+    public static final Item SANDWICH_TENDERLOIN = new FoodItemBase(new Item.Settings(), 10, 0.3f);
+    public static final Item CHICKEN_SOUP = new BowlBase(new Item.Settings().maxCount(1), 8, 0.5f);
     public static final Item FISH_PLATTER = new BowlBase(new Item.Settings().maxCount(1), 8, 0.5f);
 
 
@@ -317,6 +318,7 @@ public class FoodAndCooking {
         Util.register("sardine_cooked", COOKED_SARDINE);
         Util.register("fire_eel_cooked", COOKED_FIRE_EEL);
         Util.register("crab_red_cooked", COOKED_CRAB);
+        Util.register("cooked_lobster", COOKED_LOBSTER);
 
         Util.register("salmon_roll", SALMON_ROLL);
         Util.register("clownfish_roll", CLOWNFISH_ROLL);

@@ -243,6 +243,7 @@ public class Furniture {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var explGroup = new Item.Settings().group(EXPLORATION_GROUP);
         var cookGroup = new Item.Settings().group(COOKING_GROUP);
+        var artGroup = new Item.Settings().group(ARTEFACT_GROUP).rarity(Rarity.RARE);
         var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
         
         Util.registerWithItem("table_oak", TABLE_OAK, furnGroup);
@@ -372,13 +373,13 @@ public class Furniture {
         
         Util.registerWithItem("mug_block", MUG_BLOCK, cookGroup);
         Util.registerWithItem("small_mug_block", SMALL_MUG_BLOCK, cookGroup);
-        Util.registerWithItem("goblet", GOBLET_BLOCK, furnGroupRare);
+        Util.registerWithItem("goblet", GOBLET_BLOCK, artGroup);
         Util.registerWithItem("bowl_block", BOWL_BLOCK, cookGroup);
         Util.registerWithItem("bento_block", BENTO_BLOCK, cookGroup);
         Util.registerWithItem("stew_pot", STEW_POT, furnGroup);
         Util.registerWithItem("stew_campfire_pot", STEW_POT_CAMPFIRE, furnGroup);
         
-        Util.registerWithItem("anchor", ANCHOR, furnGroupRare);
+        Util.registerWithItem("anchor", ANCHOR, artGroup);
         Util.registerWithItem("beveled_glass", BEVELED_PANE, furnGroup);
         Util.registerWithItem("beveled_glass_copper", BEVELED_PANE_COPPER, furnGroup);
         Util.registerWithItem("beveled_glass_gold", BEVELED_PANE_GOLD, furnGroup);
