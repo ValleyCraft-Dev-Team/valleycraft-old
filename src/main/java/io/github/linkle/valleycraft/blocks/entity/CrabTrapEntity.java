@@ -1,5 +1,6 @@
 package io.github.linkle.valleycraft.blocks.entity;
 
+import java.util.Collections;
 import java.util.function.Supplier;
 
 import org.spongepowered.include.com.google.common.collect.ImmutableSet;
@@ -8,16 +9,20 @@ import io.github.linkle.valleycraft.init.CrabTrapBaits;
 import io.github.linkle.valleycraft.init.VLootTables;
 import io.github.linkle.valleycraft.screen.CrabTrapScreenHandler;
 import io.github.linkle.valleycraft.utils.Util;
+import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.LockableContainerBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.loot.context.LootContext;
 import net.minecraft.loot.context.LootContextTypes;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtList;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.world.ServerWorld;
@@ -25,9 +30,11 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome.Category;
 
@@ -36,26 +43,37 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     private static final ImmutableSet<Category> BIOMES = ImmutableSet.of(Category.OCEAN, Category.RIVER, Category.BEACH,
             Category.SWAMP);
 
-    private DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
+    private final Object2IntArrayMap<Item> rememberList = new Object2IntArrayMap<>(CrabTrapBaits.size());
     private int timer, maxTimer;
     private boolean isInProgress = false;
     private Condition condition = Condition.PERFECT;
+    private Item lastBait = Items.AIR;
 
     protected final PropertyDelegate propertyDelegate = new PropertyDelegate() {
         @Override
         public int get(int index) {
-            return index == 0 ? (isInProgress ? 1 : 0) : 0;
+            return switch (index) {
+            case 0 -> (isInProgress ? 1 : 0);
+            case 1 -> timer;
+            case 2 -> maxTimer;
+            default ->
+            throw new IllegalArgumentException("Unexpected value: " + index);
+            };
         }
 
         @Override
         public void set(int index, int value) {
-            if (index == 0)
-                isInProgress = value == 1;
+            switch (index) {
+            case 0 -> isInProgress = value == 1;
+            case 1 -> timer = value;
+            case 2 -> maxTimer = value;
+            };
         }
 
         @Override
         public int size() {
-            return 1;
+            return 3;
         }
     };
 
@@ -87,8 +105,10 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             entity.isInProgress = true;
             entity.setBaitTimer();
         }
+        
+        entity.checkBait();
 
-        if (entity.timer-- <= 0) {
+        if (--entity.timer <= 0) {
             entity.setBaitTimer();
             entity.addLoot();
         }
@@ -101,8 +121,23 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     }
 
     private void setBaitTimer() {
-        timer = CrabTrapBaits.get(getBait().getItem(), world.random);
-        maxTimer = timer;
+        var item = getBait().getItem();
+        if (CrabTrapBaits.contains(item)) {
+            if (rememberList.containsKey(item)) {
+                timer = rememberList.getInt(item);
+            } else {
+                timer = CrabTrapBaits.get(getBait().getItem(), world.random) >> 5;
+                rememberList.put(item, timer);
+                maxTimer = timer;
+            }
+            lastBait = item;
+        }
+    }
+    
+    private void checkBait() {
+        if (getBait().getItem() != lastBait) {
+            setBaitTimer();
+        }
     }
 
     public void checkValidation() {
@@ -124,7 +159,6 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     }
     
     private void addLoot() {
-        // TODO: Use loot table.
         var builder = new LootContext.Builder((ServerWorld)world);
         var lootTable = world.getServer().getLootManager().getTable(VLootTables.BAITING);
         var list = lootTable.generateLoot(builder.build(LootContextTypes.EMPTY));
@@ -146,6 +180,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             }
             
             if (added) {
+                rememberList.removeInt(getBait().getItem());
                 getBait().decrement(1);
                 markDirty();
             }
@@ -235,12 +270,23 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     @Override // Done?
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
-        inventory = DefaultedList.ofSize(size(), ItemStack.EMPTY);
+        Collections.fill(inventory, ItemStack.EMPTY);
         Inventories.readNbt(nbt, inventory);
         timer = nbt.getInt("Timer");
         maxTimer = nbt.getInt("MaxTimer");
         isInProgress = nbt.getBoolean("IsInProgress");
         condition = Condition.fromId(nbt.getByte("Condition"));
+        lastBait = Registry.ITEM.get(new Identifier(nbt.getString("LastBait")));
+        
+        rememberList.clear();
+        var list = nbt.getList("Remember", 10);
+        for (int i = 0; i < list.size(); ++i) {
+            var compound = list.getCompound(i);
+            var item = Registry.ITEM.get(new Identifier(compound.getString("id")));
+            if (CrabTrapBaits.contains(item)) {
+                rememberList.put(item, compound.getInt("Timer"));
+            }
+        }
     }
 
     @Override // Done?
@@ -251,6 +297,16 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         nbt.putInt("MaxTimer", maxTimer);
         nbt.putBoolean("IsInProgress", isInProgress);
         nbt.putByte("Condition", condition.getId());
+        nbt.putString("LastBait", Registry.ITEM.getId(lastBait).toString());
+        
+        var list = new NbtList();
+        for (var entry : rememberList.object2IntEntrySet()) {
+            var compound = new NbtCompound();
+            compound.putString("id", Registry.ITEM.getId(entry.getKey()).toString());
+            compound.putInt("Timer", entry.getIntValue());
+            list.add(compound);
+        }
+        nbt.put("Remember", list);
     }
     
     private static final int[] BAIT_SLOTS = {0};
