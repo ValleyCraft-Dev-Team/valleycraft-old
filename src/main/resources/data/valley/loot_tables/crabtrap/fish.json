@@ -7,22 +7,47 @@
         {
           "type": "minecraft:item",
           "weight": 60,
-          "name": "minecraft:cod"
+          "name": "valley:crab_red"
         },
         {
           "type": "minecraft:item",
-          "weight": 25,
-          "name": "minecraft:salmon"
+          "weight": 10,
+          "name": "valley:masking_crab"
         },
         {
           "type": "minecraft:item",
-          "weight": 2,
-          "name": "minecraft:tropical_fish"
+          "weight": 30,
+          "name": "valley:lobster"
         },
         {
           "type": "minecraft:item",
-          "weight": 13,
-          "name": "minecraft:pufferfish"
+          "weight": 15,
+          "name": "valley:sea_urchin"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "valley:clam"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "valley:marlin_spike_seashell"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "valley:cerith_snail"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 7,
+          "name": "valley:mussel"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 8,
+          "name": "valley:brown_mussel"
         }
       ]
     }
