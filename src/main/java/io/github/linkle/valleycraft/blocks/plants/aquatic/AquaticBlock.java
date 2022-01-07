@@ -59,7 +59,7 @@ public class AquaticBlock extends HorizontalWithWaterBlock {
             }
 
             if (world.getBlockState(blockPos).isOf(Blocks.WATER) && state.canPlaceAt(world, blockPos)) {
-                world.setBlockState(blockPos, state.with(FACING, Direction.fromHorizontal(random.nextInt(4))), Block.NOTIFY_LISTENERS);
+                world.setBlockState(blockPos, getDefaultState().with(WATERLOGGED, true).with(FACING, Direction.fromHorizontal(random.nextInt(4))), Block.NOTIFY_LISTENERS);
             }
         }
     }
