@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_seagrass",
+  "textures": {
+    "texture": "valley:blocks/dancing_sea_fern"
+  }
+}

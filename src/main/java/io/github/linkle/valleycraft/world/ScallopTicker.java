@@ -8,7 +8,6 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction.Axis;
 import net.minecraft.util.math.Direction.AxisDirection;
-import net.minecraft.util.math.MathHelper;
 
 import static net.minecraft.util.math.MathHelper.nextDouble;
 
@@ -16,14 +15,11 @@ public class ScallopTicker extends WorldTicker {
     
     private final ClientWorld world;
     private final BlockPos pos;
-    private int timer;
-    private double power;
 
     public ScallopTicker(ClientWorld world, BlockPos pos) {
-        super(GiantClamBlock.MAX_TICK);
+        super(Integer.MAX_VALUE);
         this.world = world;
         this.pos = pos.toImmutable();
-        power = 2;
     }
 
     @Override
@@ -33,7 +29,12 @@ public class ScallopTicker extends WorldTicker {
             return Reason.DELETE;
         }
         
-        if ((tick&1) == 0 && tick > 7) {
+        if (!state.get(Properties.OPEN)) {
+            return Reason.STOP;
+        }
+        
+        if ((tick&1) == 0) {
+            if (tick < 6) 
             return Reason.CONTINUE;
         }
         
