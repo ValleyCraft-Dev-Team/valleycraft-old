@@ -48,12 +48,10 @@ public class CrabTrapScreen extends HandledScreen<CrabTrapScreenHandler> {
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
         
         if (handler.isInProgress()) {
-            progress += delta * 0.03f;
-            if (progress > 1f) {
-                progress = 0;
-            }
+            var progress = handler.getTimer() / (float)handler.getMaxTimer();
+            progress = 1f - progress;
             int bar = (int)(progress * 24f);
-            this.drawTexture(matrices, x + 61, y + 35, 176, 0, bar + 1, 16);
+            drawTexture(matrices, x + 61, y + 35, 176, 0, bar + 1, 16);
         } else {
             progress = 0;
         }

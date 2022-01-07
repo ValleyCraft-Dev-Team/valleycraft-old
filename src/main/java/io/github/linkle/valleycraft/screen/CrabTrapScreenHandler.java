@@ -17,7 +17,7 @@ public class CrabTrapScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
 
     public CrabTrapScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(10), new ArrayPropertyDelegate(1));
+        this(syncId, playerInventory, new SimpleInventory(10), new ArrayPropertyDelegate(3));
     }
 
     public CrabTrapScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory,
@@ -60,6 +60,14 @@ public class CrabTrapScreenHandler extends ScreenHandler {
 
     public boolean isInProgress() {
         return propertyDelegate.get(0) != 0;
+    }
+    
+    public int getTimer() {
+        return propertyDelegate.get(1);
+    }
+    
+    public int getMaxTimer() {
+        return propertyDelegate.get(2);
     }
 
     private static class InputSlot extends Slot {
