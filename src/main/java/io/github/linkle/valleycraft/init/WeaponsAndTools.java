@@ -3,10 +3,7 @@ package io.github.linkle.valleycraft.init;
 import io.github.linkle.valleycraft.items.OneOffs.*;
 import io.github.linkle.valleycraft.items.hatchets.*;
 import io.github.linkle.valleycraft.items.knives.*;
-import io.github.linkle.valleycraft.items.ocean_relics.CoralKnifeBase;
-import io.github.linkle.valleycraft.items.ocean_relics.CoralToolMaterialKnife;
-import io.github.linkle.valleycraft.items.ocean_relics.MermaidBase;
-import io.github.linkle.valleycraft.items.ocean_relics.MermaidToolMaterialKnife;
+import io.github.linkle.valleycraft.items.ocean_relics.*;
 import io.github.linkle.valleycraft.items.roseGold.*;
 import io.github.linkle.valleycraft.items.sickles.*;
 import io.github.linkle.valleycraft.utils.Util;
@@ -48,8 +45,8 @@ public class WeaponsAndTools {
         Util.register("coral_knife", new CoralKnifeBase(new CoralToolMaterialKnife(), 4, -1.5f));
 
         //Mermaid Weapons
-        Util.register("mermaids_spear", new MermaidBase(new MermaidToolMaterialKnife(), 6, -1.8f));
-        Util.register("mermaids_sword", new MermaidBase(new MermaidToolMaterialKnife(), 5, -1.5f));
+        Util.register("mermaids_spear", new MermaidSpearBase(new MermaidToolMaterialKnife(), 6, -1.8f));
+        Util.register("mermaids_sword", new MermaidSwordBase(new MermaidToolMaterialKnife(), 5, -1.5f));
 
         //Knives
         register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));

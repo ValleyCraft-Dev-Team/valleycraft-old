@@ -14,15 +14,15 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-public class PrismarineClusterBlock extends HorizontalWithWaterBlock {
+public class SeaPlantBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
 
-    public PrismarineClusterBlock() {
+    public SeaPlantBlock() {
         super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()
                 .breakByHand(false)
-                .sounds(BlockSoundGroup.GLASS).luminance(7)
-                .strength(1, 0.5f)
+                .sounds(BlockSoundGroup.CALCITE)
+                .strength(0, 0.1f)
                 .noCollision());
         setDefaultState();
     }

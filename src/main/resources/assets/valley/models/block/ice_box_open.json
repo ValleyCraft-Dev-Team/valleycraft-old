@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "valley:blocks/fridge",
-		"particle": "valley:blocks/fridge"
+		"particle": "valley:blocks/fridge_particles"
 	},
 	"elements": [
 		{

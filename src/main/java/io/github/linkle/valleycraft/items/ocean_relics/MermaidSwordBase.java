@@ -12,13 +12,13 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class MermaidBase extends SwordItem {
-    public MermaidBase(ToolMaterial material, int attackDamage, float attackSpeed) {
+public class MermaidSwordBase extends SwordItem {
+    public MermaidSwordBase(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material, attackDamage, attackSpeed, new Settings().group(ItemGroups.ARTEFACT_GROUP));
     }
 
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add( new TranslatableText("item.valley.mermaid_tool.tooltip").formatted(Formatting.AQUA) );
+        tooltip.add( new TranslatableText("item.valley.mermaids_sword.tooltip").formatted(Formatting.AQUA) );
     }
 }

@@ -7,6 +7,7 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
+import static io.github.linkle.valleycraft.init.ItemGroups.ARTEFACT_GROUP;
 import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 
 public class Aquatic {
@@ -21,6 +22,7 @@ public class Aquatic {
     public static final Block GLOW_KELP_PLANT = new GlowKelpPlant();
 
     public static final Block SEA_URCHIN = new UrchinBlock();
+    public static final Block BARNACLE = new BarnacleBlock();
 
     public static final Block ANEMONE_PINK = new AnenomeBlock();
     public static final Block ANEMONE_PURPLE = new AnenomeBlock();
@@ -30,12 +32,15 @@ public class Aquatic {
 
     public static final Block PRISMARINE_CLUSTER = new PrismarineClusterBlock();
 
+    public static final Block SEA_FERN = new SeaPlantBlock();
+
     public static void initialize() {
         Util.registerWithItem("clam", CLAM, new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()));
         Util.registerWithItem("giant_scallop", GIANT_SCALLOP, new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(16));
-        Util.registerWithItem("fossilized_starfish", STARFISH, new Item.Settings().group(FISHING_GROUP).rarity(Rarity.EPIC));
+        Util.registerWithItem("fossilized_starfish", STARFISH, new Item.Settings().group(ARTEFACT_GROUP).rarity(Rarity.EPIC));
         Util.registerWithItem("sand_dollar", SAND_DOLLAR, new Item.Settings().group(FISHING_GROUP).rarity(Rarity.UNCOMMON));
         Util.registerWithItem("red_seagrass", RED_SEA_GRASS, new Item.Settings().group(FISHING_GROUP));
+        Util.registerWithItem("sea_fern", SEA_FERN, new Item.Settings().group(FISHING_GROUP));
 
         Util.registerWithItem("glow_kelp", GLOW_KELP, new Item.Settings().group(FISHING_GROUP));
         Util.register("glow_kelp_plant", GLOW_KELP_PLANT);
@@ -47,6 +52,8 @@ public class Aquatic {
         Util.registerWithItem("anemone_yellow", ANEMONE_YELLOW, new Item.Settings().group(FISHING_GROUP));
 
         Util.registerWithItem("tube_worms", TUBE_WORMS, new Item.Settings().group(FISHING_GROUP));
+
+        Util.registerWithItem("barnacle", BARNACLE, new Item.Settings().group(FISHING_GROUP));
 
         Util.registerWithItem("prismarine_cluster", PRISMARINE_CLUSTER, new Item.Settings().group(FISHING_GROUP));
     }

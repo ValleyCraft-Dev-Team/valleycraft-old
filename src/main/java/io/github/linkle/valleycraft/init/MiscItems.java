@@ -55,10 +55,11 @@ public class MiscItems {
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item FRAME_BACKING = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_2");
+    public static final Item PIG_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_4");
     public static final Item GOLDEN_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_3");
     public static final Item LINGERING_POWDER = new LingeringItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(16).rarity(Rarity.UNCOMMON));
     public static final Item MESSAGE_BOTTLE = new BottleBundleBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.EPIC));
-    public static final Item SEA_EYE = new EyeItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(1).rarity(Rarity.EPIC));
+    public static final Item SEA_EYE = new EyeItemBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.EPIC));
 
     public static void initialize() {
         Util.register("fur_clump", FUR_CLUMP);
@@ -74,6 +75,7 @@ public class MiscItems {
         Util.register("book_cover", BOOK_COVER);
         Util.register("bait", BAIT);
         Util.register("glistering_bait", GOLDEN_BAIT);
+        //Util.register("pork_bait", PIG_BAIT);
         //Util.register("frame_backing", FRAME_BACKING);
         Util.register("moss_ball", MOSS_BALL);
         Util.register("moss_ball_dry", MOSS_BALL_DRY);

@@ -14,15 +14,16 @@ import net.minecraft.world.WorldView;
 
 import java.util.Random;
 
-public class PrismarineClusterBlock extends HorizontalWithWaterBlock {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
+public class BarnacleBlock extends HorizontalWithWaterBlock {
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 15, 14);
 
-    public PrismarineClusterBlock() {
+    public BarnacleBlock() {
         super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()
                 .breakByHand(false)
-                .sounds(BlockSoundGroup.GLASS).luminance(7)
-                .strength(1, 0.5f)
+                .sounds(BlockSoundGroup.CALCITE)
+                .strength(0, 0.1f)
+                .ticksRandomly()
                 .noCollision());
         setDefaultState();
     }
@@ -30,6 +31,38 @@ public class PrismarineClusterBlock extends HorizontalWithWaterBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
+    }
+
+    @Override
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        if (random.nextInt(25) == 0) {
+            int num = 5;
+
+            for (var blockPos : BlockPos.iterate(pos.add(-4, -1, -4), pos.add(4, 1, 4))) {
+                if (world.getBlockState(blockPos).isOf(this) && --num <= 0) {
+                    return;
+                }
+            }
+
+            var blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+
+            for (int i = 0; i < 4; ++i) {
+                if (world.getBlockState(blockPos).isOf(Blocks.WATER) && state.canPlaceAt(world, blockPos)) {
+                    pos = blockPos;
+                }
+
+                blockPos = pos.add(random.nextInt(3) - 1, random.nextInt(2) - random.nextInt(2), random.nextInt(3) - 1);
+            }
+
+            if (world.getBlockState(blockPos).isOf(Blocks.WATER) && state.canPlaceAt(world, blockPos)) {
+                world.setBlockState(blockPos, state.with(FACING, Direction.fromHorizontal(random.nextInt(4))), Block.NOTIFY_LISTENERS);
+            }
+        }
     }
     
     @Override

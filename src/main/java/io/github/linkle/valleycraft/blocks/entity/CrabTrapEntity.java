@@ -101,8 +101,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     }
 
     private void setBaitTimer() {
-        //timer = CrabTrapBaits.get(getBait().getItem(), world.random);
-        timer = 1 * 20;
+        timer = CrabTrapBaits.get(getBait().getItem(), world.random);
         maxTimer = timer;
     }
 
