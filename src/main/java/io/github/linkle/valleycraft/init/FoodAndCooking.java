@@ -16,6 +16,7 @@ public class FoodAndCooking {
     public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item DRIED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 3, 0.4f);
     public static final Item COOKED_FIRE_EEL = new FoodItemBase(new Item.Settings(), 4, 0.4f);
+    public static final Item COOKED_SEA_URCHIN = new FoodItemBase(new Item.Settings(), 6, 0.5f);
     //public static final Item PEPPERCORN = new FoodItemBase(new Item.Settings(), 1, 0.6f);
     //public static final Item THYME = new FoodItemBase(new Item.Settings(), 1, 0.6f);
 
@@ -204,6 +205,7 @@ public class FoodAndCooking {
     public static final Item GLOW_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item SOUR_PIE = new FoodItemBase(new Item.Settings(), 8, 0.5f);
     public static final Item CRAB_CAKE = new FoodItemBase(new Item.Settings(), 8, 0.5f, FoodStatusEffects.CRAB_CAKE);
+    public static final Item SEA_URCHIN_SOUP = new FoodItemBase(new Item.Settings(), 8, 0.6f, FoodStatusEffects.CRAB_CAKE);
 
     public static final Item G_WATER = new FoodItemBase(new Item.Settings(), 4, 0.5f);
     public static final Item B_WATER = new FoodItemBase(new Item.Settings(), 8, 0.5f);
@@ -280,6 +282,7 @@ public class FoodAndCooking {
 
         Util.register("fish_platter", FISH_PLATTER);
         Util.register("glow_soup", GLOW_SOUP);
+        Util.register("sea_urchin_soup", SEA_URCHIN_SOUP);
         Util.register("clownfish_salad", CLOWN_SALAD);
         Util.register("maize_porridge", MAIZE_PORRIDGE);
         //register("ameranth_porridge", AMERANTH_PORRIDGE);
@@ -319,6 +322,7 @@ public class FoodAndCooking {
         Util.register("fire_eel_cooked", COOKED_FIRE_EEL);
         Util.register("crab_red_cooked", COOKED_CRAB);
         Util.register("cooked_lobster", COOKED_LOBSTER);
+        Util.register("cooked_sea_urchin", COOKED_SEA_URCHIN);
 
         Util.register("salmon_roll", SALMON_ROLL);
         Util.register("clownfish_roll", CLOWNFISH_ROLL);

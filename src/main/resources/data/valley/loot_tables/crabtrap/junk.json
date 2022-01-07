@@ -11,13 +11,58 @@
         },
         {
           "type": "minecraft:item",
-          "weight": 25,
+          "weight": 40,
           "name": "minecraft:seagrass"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 40,
+          "name": "valley:red_seagrass"
         },
         {
           "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:string"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 20,
+          "name": "minecraft:stick"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:bamboo"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:bowl"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "minecraft:sea_pickle"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "name": "valley:glow_kelp"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "name": "valley:bonefin"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "name": "minecraft:scute"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 2,
+          "name": "minecraft:nautilus_shell"
         }
       ]
     }
