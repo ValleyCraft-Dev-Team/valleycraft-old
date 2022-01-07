@@ -5,6 +5,7 @@ import io.github.linkle.valleycraft.config.VConfig;
 import io.github.linkle.valleycraft.criterions.VCriteria;
 import io.github.linkle.valleycraft.init.*;
 import io.github.linkle.valleycraft.init.features.*;
+import io.github.linkle.valleycraft.network.ServerNetwork;
 import io.github.linkle.valleycraft.screen.Screens;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
@@ -55,6 +56,7 @@ public class ValleyMain implements ModInitializer {
         Entities.initialize();
         WanderingTraderOffers.initialize();
         CrabTrapBaits.initialize();
+        ServerNetwork.initialize();
         
         //Configured Feature Initializers
         OreFeatures.initialize();
