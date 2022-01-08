@@ -51,6 +51,16 @@
 					]
 				}
 			}
+		},
+		"bbox_abyss_watcher": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"valley:bbox_abyss_watcher"
+					]
+				}
+			}
 		}
 	},
 	"requirements": [
@@ -65,6 +75,9 @@
 		],
 		[
 			"bbox_ghost"
+		],
+		[
+			"bbox_abyss_watcher"
 		]
 	]
 }

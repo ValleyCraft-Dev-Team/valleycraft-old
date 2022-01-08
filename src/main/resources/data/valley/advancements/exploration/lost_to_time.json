@@ -1,0 +1,36 @@
+{
+	"parent": "valley:exploration/archaeologist",
+	"display": {
+		"title": {
+			"text": "\"...and in a single night..."
+		},
+		"icon": {
+			"item": "valley:mermaids_sword"
+		},
+		"description": {
+			"text": "What happened to these people?"
+		}
+	},
+	"criteria": {
+		"artifact": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:coral_knife",
+							"valley:mermaids_sword",
+							"valley:mermaids_spear",
+							"minecraft:trident"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"artifact"
+		]
+	]
+}

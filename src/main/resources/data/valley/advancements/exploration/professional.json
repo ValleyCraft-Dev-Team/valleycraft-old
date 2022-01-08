@@ -313,11 +313,86 @@
 					}
 				]
 			}
+		},
+		"coral_knife": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:coral_knife"
+						]
+					}
+				]
+			}
+		},
+		"mermaids_spear": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mermaids_spear"
+						]
+					}
+				]
+			}
+		},
+		"mermaids_sword": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mermaids_sword"
+						]
+					}
+				]
+			}
+		},
+		"message_bottle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:message_bottle"
+						]
+					}
+				]
+			}
+		},
+		"sea_creature_eye": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:sea_creature_eye"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
 		[
 			"disc_11"
+		],
+		[
+			"message_bottle"
+		],
+		[
+			"coral_knife"
+		],
+		[
+			"sea_creature_eye"
+		],
+		[
+			"mermaids_sword"
+		],
+		[
+			"mermaids_spear"
 		],
 		[
 			"heart_of_the_sea"

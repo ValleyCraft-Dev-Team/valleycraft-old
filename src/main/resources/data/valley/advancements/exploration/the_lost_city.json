@@ -1,0 +1,113 @@
+{
+	"parent": "valley:exploration/lost_to_time",
+	"display": {
+		"title": {
+			"text": "The Lost City"
+		},
+		"icon": {
+			"item": "valley:coral_knife"
+		},
+		"description": {
+			"text": "Find remains of the Lost City"
+		},
+		"frame": "challenge",
+		"hidden": "false"
+	},
+	"criteria": {
+		"coral_knife": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:coral_knife"
+						]
+					}
+				]
+			}
+		},
+		"mermaids_sword": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mermaids_sword"
+						]
+					}
+				]
+			}
+		},
+		"mermaids_spear": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:mermaids_spear"
+						]
+					}
+				]
+			}
+		},
+		"nautilus_shell": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:nautilus_shell"
+						]
+					}
+				]
+			}
+		},
+		"heart_of_the_sea": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:heart_of_the_sea"
+						]
+					}
+				]
+			}
+		},
+		"trident": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:trident"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"trident"
+		],
+		[
+			"heart_of_the_sea"
+		],
+		[
+			"coral_knife"
+		],
+		[
+			"trident"
+		],
+		[
+			"mermaids_sword"
+		],
+		[
+			"mermaids_spear"
+		],
+		[
+			"nautilus_shell"
+		]
+	]
+}

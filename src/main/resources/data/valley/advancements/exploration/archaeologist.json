@@ -22,7 +22,13 @@
 							"valley:goblet",
 							"valley:bomb_bag",
 							"minecraft:skeleton_skull",
-							"minecraft:wither_skeleton_skull"
+							"minecraft:wither_skeleton_skull",
+							"valley:coral_knife",
+							"valley:mermaids_spear",
+							"valley:mermaids_sword",
+							"valley:message_bottle",
+							"valley:sea_creature_eye",
+							"valley:fossilized_starfish"
 						]
 					}
 				]
