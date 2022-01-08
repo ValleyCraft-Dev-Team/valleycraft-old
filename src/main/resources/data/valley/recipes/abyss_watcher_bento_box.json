@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CP",
+    "TTT",
+    "BBB"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:abyss_watcher"
+    },
+    "C": {
+      "item": "valley:dried_seaweed"
+    },
+    "P": {
+      "item": "valley:fire_pepper"
+    },
+    "T": {
+      "tag": "c:rice"
+    },
+    "B": {
+      "item": "valley:bento_block"
+    }
+  },
+  "result": {
+    "item": "valley:bbox_abyss_watcher",
+    "count": 3
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:sea_urchin"
+  },
+  "result": "valley:cooked_sea_urchin",
+  "experience": 0.1,
+  "cookingtime": 100
+}

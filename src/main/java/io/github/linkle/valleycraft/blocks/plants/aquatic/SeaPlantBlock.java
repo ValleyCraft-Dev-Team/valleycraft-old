@@ -18,7 +18,13 @@ public class SeaPlantBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
 
     public SeaPlantBlock() {
-        super(Settings.copy(Blocks.SEAGRASS));
+        super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
+                .nonOpaque()
+                .breakByHand(true)
+                .sounds(BlockSoundGroup.CALCITE)
+                .strength(1, 0.1f)
+                .ticksRandomly()
+                .noCollision());
         setDefaultState();
     }
 

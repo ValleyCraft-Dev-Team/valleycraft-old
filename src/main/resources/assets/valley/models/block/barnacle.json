@@ -3,7 +3,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "valley:blocks/barnacle",
-		"particle": "valley:blocks/barnacle"
+		"particle": "valley:blocks/barnacle_particles"
 	},
 	"elements": [
 		{
