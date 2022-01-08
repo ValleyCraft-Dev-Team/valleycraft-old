@@ -77,6 +77,7 @@ public class FoodAndCooking {
 
     public static final Item BONE_BROTH = new BowlBase(new Item.Settings().maxCount(1), 4, 0.5f);
     public static final Item TOMATO_SOUP = new BowlBase(new Item.Settings().maxCount(1), 5, 0.5f);
+    public static final Item ORANGE_GILL_SOUP = new BowlBase(new Item.Settings().maxCount(1), 5, 0.5f);
 
     public static final Item RICE_BOWL = new BowlBase(new Item.Settings().maxCount(1), 4, 0.5f);
 
@@ -267,6 +268,7 @@ public class FoodAndCooking {
         Util.register("grub", GRUB);
         Util.register("pumpkin_bowl", PUMPKIN_BOWL);
         Util.register("tomato_soup", TOMATO_SOUP);
+        Util.register("orange_gilled_waxing_cap_soup", ORANGE_GILL_SOUP);
         Util.register("chicken_soup", CHICKEN_SOUP);
         Util.register("carrot_stew", CARROT_STEW);
         Util.register("creamy_heart_stew", CREAMY_HEART_STEW);
