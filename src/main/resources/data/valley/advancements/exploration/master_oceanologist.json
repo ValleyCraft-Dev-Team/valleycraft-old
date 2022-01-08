@@ -1,15 +1,16 @@
 {
-	"parent": "valley:exploration/trans_rights",
+	"parent": "valley:exploration/oceanologist",
 	"display": {
 		"title": {
-			"text": "Ichthyologist"
+			"text": "Master Oceanologist"
 		},
 		"icon": {
-			"item": "valley:octopus"
+			"item": "valley:anemone_yellow"
 		},
 		"description": {
-			"text": "Catch one of every sea creature"
+			"text": "Find one of every living organism in the Oceans"
 		},
+		"frame": "challenge",
 		"hidden": false
 	},
 	"criteria": {
@@ -372,6 +373,330 @@
 					}
 				]
 			}
+		},
+		"red_seagrass": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:red_seagrass"
+						]
+					}
+				]
+			}
+		},
+		"sea_fern": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:sea_fern"
+						]
+					}
+				]
+			}
+		},
+		"glow_kelp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:glow_kelp"
+						]
+					}
+				]
+			}
+		},
+		"anemone_pink": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anemone_pink"
+						]
+					}
+				]
+			}
+		},
+		"anemone_purple": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anemone_purple"
+						]
+					}
+				]
+			}
+		},
+		"anemone_yellow": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anemone_yellow"
+						]
+					}
+				]
+			}
+		},
+		"tube_worms": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:tube_worms"
+						]
+					}
+				]
+			}
+		},
+		"barnacle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:barnacle"
+						]
+					}
+				]
+			}
+		},
+		"seagrass": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:seagrass"
+						]
+					}
+				]
+			}
+		},
+		"kelp": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:kelp"
+						]
+					}
+				]
+			}
+		},
+		"sea_pickle": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:sea_pickle"
+						]
+					}
+				]
+			}
+		},
+		"lily_pad": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:lily_pad"
+						]
+					}
+				]
+			}
+		},
+		"tube_coral": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tube_coral"
+						]
+					}
+				]
+			}
+		},
+		"brain_coral": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:brain_coral"
+						]
+					}
+				]
+			}
+		},
+		"bubble_coral": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bubble_coral"
+						]
+					}
+				]
+			}
+		},
+		"fire_coral": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:fire_coral"
+						]
+					}
+				]
+			}
+		},
+		"horn_coral": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:horn_coral"
+						]
+					}
+				]
+			}
+		},
+		"tube_coral_fan": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tube_coral_fan"
+						]
+					}
+				]
+			}
+		},
+		"brain_coral_fan": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:brain_coral_fan"
+						]
+					}
+				]
+			}
+		},
+		"bubble_coral_fan": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bubble_coral_fan"
+						]
+					}
+				]
+			}
+		},
+		"fire_coral_fan": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:fire_coral_fan"
+						]
+					}
+				]
+			}
+		},
+		"horn_coral_fan": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:horn_coral_fan"
+						]
+					}
+				]
+			}
+		},
+		"tube_coral_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tube_coral_block"
+						]
+					}
+				]
+			}
+		},
+		"brain_coral_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:brain_coral_block"
+						]
+					}
+				]
+			}
+		},
+		"bubble_coral_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:bubble_coral_block"
+						]
+					}
+				]
+			}
+		},
+		"fire_coral_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:fire_coral_block"
+						]
+					}
+				]
+			}
+		},
+		"horn_coral_block": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:horn_coral_block"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
@@ -464,6 +789,87 @@
 		],
 		[
 			"sea_urchin"
+		],
+		[
+			"red_seagrass"
+		],
+		[
+			"sea_fern"
+		],
+		[
+			"glow_kelp"
+		],
+		[
+			"anemone_pink"
+		],
+		[
+			"anemone_yellow"
+		],
+		[
+			"anemone_purple"
+		],
+		[
+			"tube_worms"
+		],
+		[
+			"barnacle"
+		],
+		[
+			"seagrass"
+		],
+		[
+			"kelp"
+		],
+		[
+			"sea_pickle"
+		],
+		[
+			"lily_pad"
+		],
+		[
+			"tube_coral"
+		],
+		[
+			"brain_coral"
+		],
+		[
+			"bubble_coral"
+		],
+		[
+			"fire_coral"
+		],
+		[
+			"horn_coral"
+		],
+		[
+			"tube_coral_fan"
+		],
+		[
+			"brain_coral_fan"
+		],
+		[
+			"bubble_coral_fan"
+		],
+		[
+			"fire_coral_fan"
+		],
+		[
+			"horn_coral_fan"
+		],
+		[
+			"tube_coral_block"
+		],
+		[
+			"brain_coral_block"
+		],
+		[
+			"bubble_coral_block"
+		],
+		[
+			"fire_coral_block"
+		],
+		[
+			"horn_coral_block"
 		]
 	]
 }

@@ -102,6 +102,11 @@
 		"valley:stump_morel",
 		"valley:stump_red",
 		"valley:stump_brown",
-		"valley:spike_wall_block"
+		"valley:spike_wall_block",
+		"valley:ice_box",
+		"valley:crate_sour",
+		"valley:glow_kelp_block",
+		"valley:crab_trap",
+		"valley:sea_urchin"
 	]
 }

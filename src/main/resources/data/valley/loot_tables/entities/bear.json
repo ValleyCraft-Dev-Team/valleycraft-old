@@ -36,7 +36,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:tenderloin",
+          "name": "valley:raw_tenderloin",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -46,20 +46,6 @@
                 "max": 3
               },
               "add": false
-            },
-            {
-              "function": "minecraft:furnace_smelt",
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "flags": {
-                      "is_on_fire": true
-                    }
-                  }
-                }
-              ]
             },
             {
               "function": "minecraft:looting_enchant",

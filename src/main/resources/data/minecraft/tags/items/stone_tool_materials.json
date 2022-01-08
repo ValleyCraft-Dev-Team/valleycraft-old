@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "valley:jungle_cobble", "valley:rocks"
+    "valley:jungle_cobble", "valley:rocks", "valley:volc_stone"
   ]
 }

@@ -1,0 +1,34 @@
+{
+	"parent": "valley:exploration/schrodingers_fish",
+	"display": {
+		"title": {
+			"text": "Tastes Like Trans* Rights"
+		},
+		"icon": {
+			"item": "valley:pridefin"
+		},
+		"description": {
+			"text": "Catch the rare and illusive Pridefin"
+		},
+		"hidden": false
+	},
+	"criteria": {
+		"pridefin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:pridefin"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"pridefin"
+		]
+	]
+}

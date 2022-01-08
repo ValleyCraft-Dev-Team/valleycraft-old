@@ -1,0 +1,34 @@
+{
+	"parent": "valley:exploration/intrepid_marine_biologist",
+	"display": {
+		"title": {
+			"text": "Schrodinger's Fish"
+		},
+		"icon": {
+			"item": "valley:bonefin"
+		},
+		"description": {
+			"text": "How is it still alive?"
+		},
+		"hidden": false
+	},
+	"criteria": {
+		"bonefin": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bonefin"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"bonefin"
+		]
+	]
+}

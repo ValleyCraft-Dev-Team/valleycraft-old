@@ -1,0 +1,34 @@
+{
+	"parent": "valley:exploration/aquatic_forager",
+	"display": {
+		"title": {
+			"text": "Intrepid Marine Biologist"
+		},
+		"icon": {
+			"item": "valley:prismarine_scalpel"
+		},
+		"description": {
+			"text": "Craft a Prismarine Scalpel for gathering Coral"
+		},
+		"hidden": false
+	},
+	"criteria": {
+		"scalpel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:prismarine_scalpel"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"scalpel"
+		]
+	]
+}
