@@ -40,6 +40,8 @@ public class VLootTables {
         pool.with(ItemEntry.builder(Fishing.MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.BROWN_MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.CERITH_SNAIL).weight(13));
+        pool.with(ItemEntry.builder(Fishing.MARLIN_SPIKE).weight(13));
+        pool.with(ItemEntry.builder(MiscItems.SQUID_SUCKER).weight(4));
         pool.with(ItemEntry.builder(Aquatic.CLAM).weight(24));
         pool.with(ItemEntry.builder(Fishing.SARDINE).weight(43));
         pool.with(ItemEntry.builder(Fishing.LIONFISH).weight(6));
@@ -66,6 +68,8 @@ public class VLootTables {
     private static void fishingJunkLoot(FabricLootPoolBuilder pool) {
         pool.with(ItemEntry.builder(Aquatic.RED_SEA_GRASS).weight(17));
         pool.with(ItemEntry.builder(Aquatic.GLOW_KELP).weight(10));
+        pool.with(ItemEntry.builder(Items.BONE).weight(4));
+        pool.with(ItemEntry.builder(Items.SKELETON_SKULL).weight(1));
     }
 
     private static void entities() {

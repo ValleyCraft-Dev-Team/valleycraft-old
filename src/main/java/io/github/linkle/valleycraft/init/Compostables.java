@@ -45,8 +45,14 @@ public class Compostables {
         registerItem(MiscItems.TURF_ITEM, levelLow);
         registerItem(Plants.DRY_VINES, levelLow);
         registerItem(Items.STICK, levelLow);
+        registerItem(Aquatic.SEA_FERN, levelLow);
+        registerItem(Aquatic.RED_SEA_GRASS, levelLow);
+        registerItem(MiscItems.MOSS_BALL_DRY, levelLow);
 
         registerItem(Plants.DRY_MOSS, levelMed);
+        registerItem(MiscItems.DUCK_EGG, levelMed);
+        registerItem(Items.EGG, levelMed);
+
         registerItem(Plants.MOREL, levelMed);
         registerItem(Plants.BUSH, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);
