@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:fern"
+      "tag": "c:ferns"
     },
     {
       "item": "minecraft:water_bucket"

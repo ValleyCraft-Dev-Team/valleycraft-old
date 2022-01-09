@@ -2,17 +2,17 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "c:ferns"
+      "item": "valley:dried_seaweed"
     },
     {
-      "item": "minecraft:water_bucket"
+      "item": "valley:pridefin"
     },
     {
-      "item": "valley:small_mug_block"
+      "tag": "c:rice"
     }
   ],
   "result": {
-    "item": "valley:tea",
+    "item": "valley:pridefin_roll",
     "count": 1
   }
 }

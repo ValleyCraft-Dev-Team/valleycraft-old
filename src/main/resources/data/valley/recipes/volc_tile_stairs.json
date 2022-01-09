@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:volcanic_bricks"
+    }
+  },
+  "result": {
+    "item": "valley:volcanic_bricks_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "_ _",
+    "_ _",
+    "_ _"
+  ],
+  "key": {
+    "_": {
+      "item": "valley:volcanic_bricks_slab"
+    }
+  },
+  "result": {
+    "item": "valley:chimney_volcanic",
+    "count": 3
+  }
+}

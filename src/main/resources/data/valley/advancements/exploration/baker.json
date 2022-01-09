@@ -8,7 +8,7 @@
 			"item": "valley:brick_furnace"
 		},
 		"description": {
-			"text": "Craft a Brick Stove for your kitchen"
+			"text": "Craft a Stove for your kitchen"
 		}
 	},
 	"criteria": {
@@ -18,7 +18,10 @@
 				"items": [
 					{
 						"items": [
-							"valley:brick_furnace"
+							"valley:brick_furnace",
+							"valley:volcanic_furnace",
+							"valley:cobble_furnace",
+							"valley:carmine_furnace"
 						]
 					}
 				]

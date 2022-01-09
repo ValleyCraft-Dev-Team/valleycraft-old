@@ -30,7 +30,7 @@
   "item.valley.sea_urchin_soup": "Sea Urchin Soup",
   "item.valley.cooked_perch": "Cooked Perch",
   "item.valley.cooked_lobster": "Cooked Lobster",
-  "item.valley.cooked_stonespinner_minnow": "Cooked Stonespinner Minnow",
+  "item.valley.cooked_stonespinner_minnow": "Cooked Stoneroller Minnow",
   "item.valley.cooked_pridefin": "Cooked Pridefin",
   "item.valley.bbox_abyss_watcher": "Abyss Watcher Bento Box",
   "item.valley.pridefin_roll": "Pridefin Roll",
@@ -413,7 +413,7 @@
   "block.valley.apple_leaves_empty": "Apple Leaves",
   "block.valley.hedge": "Boxwood Bush",
 
-  "item.valley.green_bean": "Green Bean",
+  "item.valley.green_bean": "Green Beans",
   "item.valley.green_bean_seeds": "Green Bean Seeds",
   "block.valley.green_bean_crop_block": "Green Bean Crop Block",
   "item.valley.glistering_green_bean": "Golden Green Bean",

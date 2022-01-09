@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:kitchen_tiles"
+  },
+  "result": "valley:kitchen_tiles_slab",
+  "count": 2
+}

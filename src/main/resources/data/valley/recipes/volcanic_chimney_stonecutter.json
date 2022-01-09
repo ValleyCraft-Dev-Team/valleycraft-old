@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:volcanic_bricks"
+  },
+  "result": "valley:chimney_volcanic",
+  "count": 1
+}
