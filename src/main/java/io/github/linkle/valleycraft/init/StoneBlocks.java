@@ -20,7 +20,7 @@ public class StoneBlocks {
     public static final Block VOLCANIC_ASH = new VolcanicAshBlock();
     public static final Block VOLCANIC_STONE = new StoneBlock();
 
-    public static final Block MIXED_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(0, 2));
+    public static final Block MIXED_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE));
     public static final Block DEEPSLATE_MIXED_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(0, 2));
     public static final Block SALTPETER_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(1, 3));
     public static final Block DEEPSLATE_SALTPETER_ORE = new OreBlock(Block.Settings.copy(Blocks.COAL_ORE), UniformIntProvider.create(1, 3));

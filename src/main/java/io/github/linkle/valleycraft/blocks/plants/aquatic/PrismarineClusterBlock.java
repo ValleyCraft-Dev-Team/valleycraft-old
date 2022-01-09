@@ -1,49 +1,33 @@
 package io.github.linkle.valleycraft.blocks.plants.aquatic;
 
-import io.github.linkle.valleycraft.blocks.HorizontalWithWaterBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.AmethystClusterBlock;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Material;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
+import net.minecraft.util.math.MathHelper;
 
-import java.util.Random;
-
-public class PrismarineClusterBlock extends HorizontalWithWaterBlock {
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 13, 14);
-
+public class PrismarineClusterBlock extends AmethystClusterBlock {
+    
     public PrismarineClusterBlock() {
-        super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
-                .nonOpaque()
+        super(6, 3, FabricBlockSettings.of(Material.UNDERWATER_PLANT)
+                .nonOpaque().luminance(7)
                 .breakByHand(false)
-                .sounds(BlockSoundGroup.GLASS).luminance(7)
+                .sounds(BlockSoundGroup.GLASS)
                 .strength(1, 0.5f)
                 .noCollision());
-        setDefaultState();
-    }
-
-    @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
     }
     
     @Override
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
-        if (!state.canPlaceAt(world, pos)) {
-            return Blocks.AIR.getDefaultState();
+    public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
+        super.onStacksDropped(state, world, pos, stack);
+        if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
+            dropExperience(world, pos, MathHelper.nextInt(world.random, 2, 5));
         }
-        return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
-    }
-
-    @Override
-    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        var blockPos = pos.down();
-        var blockState = world.getBlockState(blockPos);
-        return blockState.isFullCube(world, blockPos);
     }
 }

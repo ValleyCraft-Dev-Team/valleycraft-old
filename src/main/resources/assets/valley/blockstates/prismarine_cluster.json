@@ -1,7 +1,30 @@
 {
   "variants": {
-    "": {
+    "facing=down": {
+      "model": "valley:block/prismarine_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "valley:block/prismarine_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "valley:block/prismarine_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "valley:block/prismarine_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
       "model": "valley:block/prismarine_cluster"
+    },
+    "facing=west": {
+      "model": "valley:block/prismarine_cluster",
+      "x": 90,
+      "y": 270
     }
   }
 }

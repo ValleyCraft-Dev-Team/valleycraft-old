@@ -251,11 +251,9 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     @Override // Done
     protected Text getContainerName() {
         var text = new TranslatableText("block.valley.crab_trap");
-
         if (condition.isInvaild()) {
-            text.append(" ").append(new TranslatableText(condition.key).formatted(Formatting.DARK_RED));
+            text.append(" - ").append(new TranslatableText(condition.key).formatted(Formatting.DARK_RED));
         }
-
         return text;
     }
 

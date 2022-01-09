@@ -57,6 +57,7 @@ public class ValleyMain implements ModInitializer {
         WanderingTraderOffers.initialize();
         CrabTrapBaits.initialize();
         ServerNetwork.initialize();
+        WanderingTraderOffers.initialize();
         
         //Configured Feature Initializers
         OreFeatures.initialize();

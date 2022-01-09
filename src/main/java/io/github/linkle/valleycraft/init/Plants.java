@@ -1,13 +1,24 @@
 package io.github.linkle.valleycraft.init;
 
+import static io.github.linkle.valleycraft.init.ItemGroups.COOKING_GROUP;
+import static io.github.linkle.valleycraft.init.ItemGroups.NATURE_GROUP;
+
 import io.github.linkle.valleycraft.blocks.cave.CrystalBlock;
 import io.github.linkle.valleycraft.blocks.cave.SpiderEggBlock;
-import io.github.linkle.valleycraft.blocks.plants.CactusBlock;
 import io.github.linkle.valleycraft.blocks.crops.MaizeCropBlock;
 import io.github.linkle.valleycraft.blocks.crops.RiceCropBlock;
-import io.github.linkle.valleycraft.blocks.plants.Decorative.*;
+import io.github.linkle.valleycraft.blocks.plants.CactusBlock;
+import io.github.linkle.valleycraft.blocks.plants.MushBlock;
+import io.github.linkle.valleycraft.blocks.plants.ReedBlock;
+import io.github.linkle.valleycraft.blocks.plants.RockBlock;
 import io.github.linkle.valleycraft.blocks.plants.SaplingBlock;
-import io.github.linkle.valleycraft.blocks.plants.*;
+import io.github.linkle.valleycraft.blocks.plants.SmallCactusBlock;
+import io.github.linkle.valleycraft.blocks.plants.Decorative.Plant;
+import io.github.linkle.valleycraft.blocks.plants.Decorative.RoseBushGlow;
+import io.github.linkle.valleycraft.blocks.plants.Decorative.RoseBushTall;
+import io.github.linkle.valleycraft.blocks.plants.Decorative.SnowBush;
+import io.github.linkle.valleycraft.blocks.plants.Decorative.VinesBlock;
+import io.github.linkle.valleycraft.blocks.plants.Decorative.VinesPlantBlock;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
 import io.github.linkle.valleycraft.blocks.plants.bushes.HedgeBushBlock;
 import io.github.linkle.valleycraft.blocks.plants.bushes.JungleBushBlock;
@@ -19,17 +30,20 @@ import io.github.linkle.valleycraft.blocks.sapling.AppleSaplingGen;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock.Settings;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.CarpetBlock;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
 import net.minecraft.block.MossBlock;
-import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.tag.BlockTags;
-
-import static io.github.linkle.valleycraft.init.ItemGroups.COOKING_GROUP;
-import static io.github.linkle.valleycraft.init.ItemGroups.NATURE_GROUP;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class Plants {
     //bushes
@@ -95,7 +109,7 @@ public class Plants {
     public static final Block ROCK_PILE = new RockBlock();
     public static final Block REDSTONE_CRYSTAL = new CrystalBlock(FabricBlockSettings.of(Material.AMETHYST)
             .nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)
-            .strength(1.5f,2.0f).luminance(7), true);
+            .strength(1.5f,2.0f).luminance(7), true, UniformIntProvider.create(2, 5));
 
     public static final Block SNOW_ROCK_PILE = new RockBlock();
 

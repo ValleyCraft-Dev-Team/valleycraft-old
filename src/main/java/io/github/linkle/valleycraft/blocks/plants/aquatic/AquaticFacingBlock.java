@@ -2,7 +2,7 @@ package io.github.linkle.valleycraft.blocks.plants.aquatic;
 
 import java.util.Random;
 
-import io.github.linkle.valleycraft.blocks.BlockWithWater;
+import io.github.linkle.valleycraft.blocks.HorizontalWithWaterBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,15 +18,15 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class AquaticBlock extends BlockWithWater {
+public class AquaticFacingBlock extends HorizontalWithWaterBlock {
     
     protected final VoxelShape shape;
-    
-    public AquaticBlock(VoxelShape shape) {
+
+    public AquaticFacingBlock(VoxelShape shape) {
         this(getSettings(), shape);
     }
-
-    public AquaticBlock(Settings settings, VoxelShape shape) {
+    
+    public AquaticFacingBlock(Settings settings, VoxelShape shape) {
         super(settings);
         setDefaultState();
         this.shape = shape;
@@ -59,7 +59,7 @@ public class AquaticBlock extends BlockWithWater {
             }
 
             if (world.getBlockState(blockPos).isOf(Blocks.WATER) && state.canPlaceAt(world, blockPos)) {
-                world.setBlockState(blockPos, getDefaultState(), Block.NOTIFY_LISTENERS);
+                world.setBlockState(blockPos, getDefaultState().with(WATERLOGGED, true).with(FACING, Direction.fromHorizontal(random.nextInt(4))), Block.NOTIFY_LISTENERS);
             }
         }
     }
@@ -81,11 +81,11 @@ public class AquaticBlock extends BlockWithWater {
     
     public static FabricBlockSettings getSettings() {
         return FabricBlockSettings.of(Material.UNDERWATER_PLANT)
-                .nonOpaque()
-                .breakByHand(true)
-                .sounds(BlockSoundGroup.CALCITE)
-                .strength(0.0f, 0.1f)
-                .ticksRandomly()
-                .noCollision();
+            .nonOpaque()
+            .breakByHand(true)
+            .sounds(BlockSoundGroup.CALCITE)
+            .strength(0, 0.1f)
+            .ticksRandomly()
+            .noCollision();
     }
 }

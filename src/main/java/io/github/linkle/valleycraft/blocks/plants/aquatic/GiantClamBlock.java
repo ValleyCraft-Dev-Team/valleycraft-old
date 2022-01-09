@@ -20,13 +20,14 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class GiantClamBlock extends AquaticBlock {
+public class GiantClamBlock extends AquaticFacingBlock {
     protected static final BooleanProperty OPEN = Properties.OPEN;
     public static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 4, 15);
     
     public static final int MAX_TICK = 50;
 
     public GiantClamBlock() {
+        super(getSettings().strength(0.3f, 0.5f), SHAPE);
         setDefaultState(stateManager.getDefaultState()
                 .with(FACING, Direction.NORTH)
                 .with(WATERLOGGED, false)
@@ -38,12 +39,7 @@ public class GiantClamBlock extends AquaticBlock {
         super.appendProperties(builder);
         builder.add(OPEN);
     }
-
-    @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
-    }
-
+    
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         super.randomTick(state, world, pos, random);
@@ -56,6 +52,7 @@ public class GiantClamBlock extends AquaticBlock {
         ServerNetwork.sendScallopOpen(world, pos);
     }
 
+    
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!state.get(OPEN).booleanValue()) {

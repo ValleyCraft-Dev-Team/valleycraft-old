@@ -18,12 +18,15 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class ClamBlock extends AquaticBlock {
+public class ClamBlock extends AquaticFacingBlock {
     protected static final BooleanProperty OPEN = Properties.OPEN;
 
     public ClamBlock() {
-        setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, false).with(OPEN,
-                false));
+        super(createCuboidShape(3, 0, 3, 13, 1, 13));
+        setDefaultState(stateManager.getDefaultState()
+                .with(FACING, Direction.NORTH)
+                .with(WATERLOGGED, false)
+                .with(OPEN, false));
     }
 
     @Override

@@ -19,10 +19,10 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 
-public class RedSeagrass extends PlantBlock implements FluidFillable {
+public class RedSeagrassBlock extends PlantBlock implements FluidFillable {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 12.0D, 14.0D);
 
-    public RedSeagrass() {
+    public RedSeagrassBlock() {
         super(Settings.copy(Blocks.SEAGRASS));
     }
 
