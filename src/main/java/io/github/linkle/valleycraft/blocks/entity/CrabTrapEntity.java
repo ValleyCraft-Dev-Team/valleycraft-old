@@ -40,8 +40,8 @@ import net.minecraft.world.biome.Biome.Category;
 
 public class CrabTrapEntity extends LockableContainerBlockEntity implements SidedInventory {
 
-    private static final ImmutableSet<Category> BIOMES = ImmutableSet.of(Category.OCEAN, Category.RIVER, Category.BEACH,
-            Category.SWAMP);
+    private static final ImmutableSet<Category> BIOMES = 
+    ImmutableSet.of(Category.OCEAN, Category.RIVER, Category.BEACH, Category.SWAMP);
 
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
     private final Object2IntArrayMap<Item> rememberList = new Object2IntArrayMap<>(CrabTrapBaits.size());
@@ -57,8 +57,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             case 0 -> (isInProgress ? 1 : 0);
             case 1 -> timer;
             case 2 -> maxTimer;
-            default ->
-            throw new IllegalArgumentException("Unexpected value: " + index);
+            default -> 0;
             };
         }
 
@@ -126,7 +125,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             if (rememberList.containsKey(item)) {
                 timer = rememberList.getInt(item);
             } else {
-                timer = CrabTrapBaits.get(getBait().getItem(), world.random) >> 5;
+                timer = CrabTrapBaits.get(getBait().getItem(), world.random);
                 rememberList.put(item, timer);
                 maxTimer = timer;
             }
@@ -333,7 +332,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     }
     
     static enum Condition {
-        PERFECT(null), NOT_WATERLOGGED("text.valley.crab_trap.not_waterlogged"),
+        PERFECT("MISSINGNO."), NOT_WATERLOGGED("text.valley.crab_trap.not_waterlogged"),
         INVAILD_BIOME("text.valley.crab_trap.invaild_biome");
         
         static final Condition[] CONDITIONS = Condition.values();
