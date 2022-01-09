@@ -2,6 +2,7 @@ package io.github.linkle.valleycraft.init.features;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
+import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.init.Plants;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.ReedPatchFeature;
@@ -10,6 +11,7 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
@@ -65,15 +67,24 @@ public class PlantFeatures {
     private static final RegistryKey<PlacedFeature> JUNGLE_CAP_PATCH = create("jungle_cap_patch", Plants.JUNGLE_CAP, 1);
     private static final RegistryKey<PlacedFeature> SWAMP_BUSH_PATCH = create("js_bush_patch", Plants.SWAMP_BUSH, 7);
     private static final RegistryKey<PlacedFeature> HERB_PATCH = create("herbs_patch", Plants.HERBS, 1);
+    private static final RegistryKey<PlacedFeature> BOXWOOD = create("boxwood_patch", Plants.HEDGE, 7);
+
+    //Beach Features
+    private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Aquatic.CLAM, 3);
+    private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, false), 1);
 
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
-        
+
         var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
         var topLayer = GenerationStep.Feature.TOP_LAYER_MODIFICATION;
         Predicate<BiomeSelectionContext> snowOnly;
         snowOnly = context -> context.getBiome().getPrecipitation() == Precipitation.SNOW;
-        
+
+        //found on beaches
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BEACH, BiomeKeys.SNOWY_BEACH), vegetal, CLAM_BEACH_PATCH);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BEACH, BiomeKeys.SNOWY_BEACH), vegetal, SAND_DOLLAR_BEACH_PATCH);
+
         //wild patches
         if (ValleyMain.CONFIG.featureGenerations.plantFeatures.wheatPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.PLAINS), vegetal, WHEAT_PATCH);
@@ -138,6 +149,9 @@ public class PlantFeatures {
 
         if (ValleyMain.CONFIG.featureGenerations.plantFeatures.sproutPatchEnabled)
             BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, SPROUT_PATCH);
+
+        //found in old growth biomes
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, BOXWOOD);
 
         //found in jungles
         if (ValleyMain.CONFIG.featureGenerations.plantFeatures.jungleCapPatchEnabled)
