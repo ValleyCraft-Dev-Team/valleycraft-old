@@ -51,7 +51,7 @@ public class PrismarineToolMaterialScalpel implements ToolMaterial {
         //Diamond: 3
         //Gold: 0
         //Netherite: 3
-        return 2;
+        return 1;
     }
 
     @Override

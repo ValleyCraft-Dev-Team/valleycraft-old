@@ -248,10 +248,8 @@ public class OreFeatures {
         }
 
         if (ValleyMain.CONFIG.blobsGenerations.generateMud) {
-            var key = register(MUD, 5, 32, 64, "mud_overworld");
-            Predicate<BiomeSelectionContext> select 
-            = c -> (BiomeSelectors.foundInOverworld().test(c) && c.getBiome().getCategory() != Category.DESERT && !snowOnly.test(c));
-            BiomeModifications.addFeature(select, underground, key);
+            var key  = register(MUD, 5, 32, 64, "mud_overworld");
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.BEACH, Category.UNDERGROUND, Category.RIVER, Category.PLAINS, Category.FOREST), underground, key);
         }
 
         if (ValleyMain.CONFIG.blobsGenerations.generateVolcanicAsh) {

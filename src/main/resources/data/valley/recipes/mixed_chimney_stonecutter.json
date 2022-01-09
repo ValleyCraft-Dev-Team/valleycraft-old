@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "valley:brown_brick"
+    "item": "valley:brown_bricks"
   },
   "result": "valley:chimney_brick",
   "count": 1

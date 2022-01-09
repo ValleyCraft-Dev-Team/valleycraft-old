@@ -261,6 +261,7 @@ public class Furniture {
 
     public static final Block VOLCANIC_CHISELED = new PolishedStoneBlock();
     public static final Block MIXED_CHISELED = new PolishedStoneBlock();
+    public static final Block ENCRUSTED = new EncrustedBlock();
 
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
@@ -392,6 +393,8 @@ public class Furniture {
         Util.registerWithItem("carmine_cracked", C_CRACK, furnGroup);
         Util.registerWithItem("carmine_mossy", C_MOSSY, furnGroup);
         Util.registerWithItem("carmine_smooth", C_SMOOTH, furnGroup);
+
+        Util.registerWithItem("encrusted_sandstone", ENCRUSTED, furnGroup);
 
         //Lanterns & Torches
         Util.registerWithItem("redstone_lantern", REDSTONE_LANTERN, furnGroup);

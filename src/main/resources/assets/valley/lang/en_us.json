@@ -16,6 +16,8 @@
   "block.valley.gear.tooltip": "It must have been used",
   "block.valley.gear.tooltip_2": "by some ancient civilization.",
 
+  "block.valley.encrusted_sandstone": "Encrusted Sandstone",
+
   "block.valley.screen.tooltip": "Pets cannot jump over this,",
   "block.valley.screen.tooltip_2": "protecting them from burning.",
 
@@ -408,7 +410,7 @@
   "block.valley.crocus": "Crocus",
   "block.valley.morel": "Morel",
   "block.valley.holly": "Holly",
-  "block.valley.redstone_crystal": "Crystalized Redstone",
+  "block.valley.redstone_crystal": "Crystallized Redstone",
   "block.valley.spider_egg": "Cave Spider Egg",
   "block.valley.apple_leaves_empty": "Apple Leaves",
   "block.valley.hedge": "Boxwood Bush",

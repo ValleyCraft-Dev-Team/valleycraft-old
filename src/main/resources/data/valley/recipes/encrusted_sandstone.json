@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "N#N",
+    "#N#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cut_sandstone"
+    },
+    "N": {
+      "item": "minecraft:nautilus_shell"
+    }
+  },
+  "result": {
+    "item": "valley:encrusted_sandstone",
+    "count": 8
+  }
+}

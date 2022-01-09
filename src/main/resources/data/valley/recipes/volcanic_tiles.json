@@ -1,7 +1,7 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "valley:volcanic_stone"
+    "item": "valley:volc_stone"
   },
   "result": "valley:volcanic_tiles",
   "count": 1

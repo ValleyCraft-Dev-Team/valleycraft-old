@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "valley:block/encrusted_sandstone",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "valley:block/encrusted_sandstone"
+    },
+    "axis=z": {
+      "model": "valley:block/encrusted_sandstone",
+      "x": 90
+    }
+  }
+}
