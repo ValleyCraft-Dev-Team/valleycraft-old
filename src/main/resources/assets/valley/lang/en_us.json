@@ -48,7 +48,7 @@
   "item.valley.prismarine_scalpel": "Prismarine Scalpel",
   "item.valley.prismarine_scalpel.tooltip": "Used to cut Coral without killing it.",
   "item.valley.coral_knife": "Coral Dagger",
-  "item.valley.coral_knife.tooltip": "How does it still have it's color?",
+  "item.valley.coral_knife.tooltip": "How does it still have its color?",
   "item.valley.mermaids_spear": "Mermaid's Spear",
   "item.valley.mermaids_spear.tooltip": "Somehow pristine despite being",
   "item.valley.mermaids_spear.tooltip_2": "underwater for centuries.",
@@ -716,7 +716,6 @@
   "entity.valley.bear": "Bear",
   "entity.valley.duck": "Duck",
   "item.valley.duck_egg": "Duck Egg",
-  "item.valley.redstone_wand": "Redstone Wand",
   
   "item.valley.trader_helmet": "Trader Head Wrap",
   "item.valley.trader_chestplate": "Trader Coat",
