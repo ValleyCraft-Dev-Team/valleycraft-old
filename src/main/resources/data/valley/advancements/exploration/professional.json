@@ -373,11 +373,26 @@
 					}
 				]
 			}
+		},
+		"encrusted_pickaxe": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:encrusted_pickaxe"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
 		[
 			"disc_11"
+		],
+		[
+			"encrusted_pickaxe"
 		],
 		[
 			"message_bottle"

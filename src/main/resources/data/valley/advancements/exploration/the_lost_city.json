@@ -26,6 +26,18 @@
 				]
 			}
 		},
+		"encrusted_pickaxe": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:encrusted_pickaxe"
+						]
+					}
+				]
+			}
+		},
 		"mermaids_sword": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -96,6 +108,9 @@
 		],
 		[
 			"coral_knife"
+		],
+		[
+			"encrusted_pickaxe"
 		],
 		[
 			"trident"

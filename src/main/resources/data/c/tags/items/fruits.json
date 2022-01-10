@@ -3,6 +3,6 @@
   "values": [
     "valley:spicy_berries","valley:bitter_berries",
     "minecraft:sweet_berries","minecraft:glow_berries",
-    "minecraft:apple","minecraft:melon_slice"
+    "minecraft:apple","minecraft:melon_slice", "valley:sour_berries"
   ]
 }

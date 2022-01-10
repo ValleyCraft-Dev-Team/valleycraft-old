@@ -22,5 +22,6 @@ public class EncrustedPickaxeBase extends PickaxeItem {
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add( new TranslatableText("item.valley.encrusted_pickaxe.tooltip").formatted(Formatting.YELLOW) );
+        tooltip.add( new TranslatableText("item.valley.encrusted_pickaxe.tooltip_2").formatted(Formatting.YELLOW) );
     }
 }
