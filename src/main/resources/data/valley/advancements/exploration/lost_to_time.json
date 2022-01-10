@@ -2,7 +2,7 @@
 	"parent": "valley:exploration/archaeologist",
 	"display": {
 		"title": {
-			"text": "\"...and in a single night..."
+			"text": "\"...and in a single night...\""
 		},
 		"icon": {
 			"item": "valley:mermaids_sword"

@@ -47,6 +47,7 @@ public class WeaponsAndTools {
         //Mermaid Weapons
         Util.register("mermaids_spear", new MermaidSpearBase(new MermaidToolMaterialKnife(), 6, -1.8f));
         Util.register("mermaids_sword", new MermaidSwordBase(new MermaidToolMaterialKnife(), 5, -1.5f));
+        Util.register("encrusted_pickaxe", new EncrustedPickaxeBase(new EncrustedToolMaterialPickaxe(), 2, -2.5f));
 
         //Knives
         register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));

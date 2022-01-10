@@ -118,7 +118,7 @@ public class FoodAndCooking {
     public static final Item SPICY_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.SPICY_BERRY_CYSER);
     public static final Item SWEET_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.SWEET_BERRY_CYSER);
     public static final Item SOUR_BERRY_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.SOUR_BERRY_CYSER);
-    public static final Item MEAD_MUG = new MeadBase(new Item.Settings().maxCount(64), 3, 1f, FoodStatusEffects.MEAD_MUG);
+    public static final Item MEAD_MUG = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.MEAD_MUG);
     public static final Item CHOCO_CYSER = new MeadBase(new Item.Settings().maxCount(1), 3, 1f, FoodStatusEffects.CHOCO_CYSER);
 
     public static final Item SWEET_BERRY_WINE = new DrinkBottleBase(new Item.Settings().maxCount(1), 2, 1f, FoodStatusEffects.SWEET_BERRY_WINE);
