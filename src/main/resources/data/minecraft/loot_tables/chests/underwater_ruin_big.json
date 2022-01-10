@@ -38,6 +38,17 @@
         },
         {
           "type": "minecraft:item",
+          "weight": 1,
+          "name": "valley:encrusted_pickaxe",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
           "weight": 10,
           "name": "minecraft:coal",
           "functions": [
