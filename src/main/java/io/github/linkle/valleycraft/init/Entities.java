@@ -3,8 +3,10 @@ package io.github.linkle.valleycraft.init;
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.client.entity.renderer.BearEntityRenderer;
 import io.github.linkle.valleycraft.client.entity.renderer.DuckEntityRenderer;
+import io.github.linkle.valleycraft.client.entity.renderer.SalmonEntityRenderer;
 import io.github.linkle.valleycraft.entities.BearEntity;
 import io.github.linkle.valleycraft.entities.DuckEntity;
+import io.github.linkle.valleycraft.entities.EelEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -18,6 +20,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.BiomeKeys;
 
@@ -35,21 +38,36 @@ public class Entities {
         .trackRangeBlocks(10).dimensions(EntityDimensions.fixed(0.4F, 0.7F))
         .specificSpawnBlocks(Blocks.WATER).build()
     );
+    
+    public static final EntityType<EelEntity> FIRE_EEL = Registry.register(Registry.ENTITY_TYPE,
+        new Identifier(ValleyMain.MOD_ID, "fire_eel"),
+        FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, EelEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.7f, 0.4f)).build()
+    );
 
     public static void initialize() {
+        var config = ValleyMain.CONFIG.mobs;
         FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
         FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
+        FabricDefaultAttributeRegistry.register(FIRE_EEL, EelEntity.createFishAttributes());
 
-        if (ValleyMain.CONFIG.mobs.bearSpawnEnabled) {
+        if (config.bear.enable) {
             var keys = BiomeSelectors.includeByKey(
                 BiomeKeys.OLD_GROWTH_PINE_TAIGA,
                 BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
             );
-            BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, 5, 1, 2);
+            var spawn = config.bear;
+            BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
         }
         
-        if (ValleyMain.CONFIG.mobs.duckSpawnEnabled) {
-            BiomeModifications.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK, 8, 3, 4);
+        if (config.duck.enable) {
+            var spawn = config.duck;
+            BiomeModifications.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+        }
+        
+        if (config.fireEel.enable) {
+            var spawn = config.fireEel;
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
         }
     }
 
@@ -57,5 +75,6 @@ public class Entities {
     public static void initializeClient() {
         EntityRendererRegistry.register(BEAR, BearEntityRenderer::new);
         EntityRendererRegistry.register(DUCK, DuckEntityRenderer::new);
+        EntityRendererRegistry.register(FIRE_EEL, SalmonEntityRenderer.create("fire_eel_salmon"));
     }
 }

@@ -1,11 +1,12 @@
 package io.github.linkle.valleycraft.config;
 
+import io.github.linkle.valleycraft.ValleyMain;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
-@Config(name = "valleycraft")
+@Config(name = ValleyMain.MOD_ID)
 @Config.Gui.Background("valley:textures/blocks/brown_bricks.png")
 public class VConfig implements ConfigData {
 
@@ -153,8 +154,14 @@ public class VConfig implements ConfigData {
 	}
 	
 	public static class Mobs implements ConfigData {
-	    public boolean bearSpawnEnabled = true;
-	    public boolean duckSpawnEnabled = true;
+	    @ConfigEntry.Gui.CollapsibleObject
+        public EntityConfig bear = new EntityConfig(5, 1, 2);
+	    
+	    @ConfigEntry.Gui.CollapsibleObject
+        public EntityConfig duck = new EntityConfig(7, 3, 4);
+	    
+	    @ConfigEntry.Gui.CollapsibleObject
+        public EntityConfig fireEel = new EntityConfig(6, 1, 2);
 	}
 	
 	public static class Misc implements ConfigData {

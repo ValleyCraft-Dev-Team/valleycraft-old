@@ -1,14 +1,19 @@
-package io.github.linkle.valleycraft.init;
+
+	package io.github.linkle.valleycraft.init;
+
+import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 
 import io.github.linkle.valleycraft.items.food.FoodItemBase;
 import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.EntityBucketItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Rarity;
-
-import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 
 public class Fishing {
     public static final Item FIRE_EEL = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()).rarity(Rarity.RARE).maxCount(64));
@@ -33,8 +38,11 @@ public class Fishing {
     public static final Item FROG_FISH = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item MARLIN_SPIKE = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
 
+	public static final Item BUCKET_FIRE_EEL = new EntityBucketItem(Entities.FIRE_EEL, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP));
 
     public static void initialize() {
+	    Items.COD_BUCKET.asItem();
+	    
         Util.register("perch", PERCH);
         Util.register("crab_red", CRAB);
         Util.register("masking_crab", MASKING_CRAB);
@@ -56,5 +64,6 @@ public class Fishing {
         Util.register("ghost_fish", GHOST_FISH);
         Util.register("abyss_watcher", ABYSS_WATCHER);
         Util.register("bonefin", BONEFIN);
+        Util.register("bucket_fire_eel", BUCKET_FIRE_EEL);
     }
 }
