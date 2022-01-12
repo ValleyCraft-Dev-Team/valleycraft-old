@@ -40,6 +40,8 @@ public class Fishing {
 
     public static final Item BUCKET_FIRE_EEL = new EntityBucketItem(Entities.FIRE_EEL, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
     public static final Item BUCKET_PERCH = new EntityBucketItem(Entities.PERCH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
+    public static final Item BUCKET_SARDINE = new EntityBucketItem(Entities.SARDINE, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
+    public static final Item BUCKET_MINNOW = new EntityBucketItem(Entities.MINNOW, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
 
     public static void initialize() {
         Util.register("perch", PERCH);
@@ -65,5 +67,8 @@ public class Fishing {
         Util.register("bonefin", BONEFIN);
         Util.register("bucket_fire_eel", BUCKET_FIRE_EEL);
         Util.register("bucket_perch", BUCKET_PERCH);
+        Util.register("bucket_sardine", BUCKET_SARDINE);
+        Util.register("bucket_minnow", BUCKET_MINNOW);
+
     }
 }
