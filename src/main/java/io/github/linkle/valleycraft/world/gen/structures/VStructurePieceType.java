@@ -9,6 +9,7 @@ import net.minecraft.util.registry.Registry;
 
 public class VStructurePieceType {
     public static final StructurePieceType SHIPWRECK = register(ShipwreckGenerator.Piece::new, "shipwreck");
+    public static final StructurePieceType RESEARCH_STATION = register(ResearchStationGenerator.Piece::new, "research_station");
 
     private static StructurePieceType register(StructurePieceType type, String id) {
         return Registry.register(Registry.STRUCTURE_PIECE, new Identifier(ValleyMain.MOD_ID, id), type);

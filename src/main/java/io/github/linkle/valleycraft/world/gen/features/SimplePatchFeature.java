@@ -1,6 +1,5 @@
 package io.github.linkle.valleycraft.world.gen.features;
 
-import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
@@ -34,8 +33,9 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
             var surface = mutable.down();
             var surState = world.getBlockState(surface);
             if (surState.isOpaque() && world.isAir(mutable) && state.canPlaceAt(world, mutable)) {
-                world.setBlockState(mutable, state, Block.NOTIFY_LISTENERS);
-                ++spawned;
+                if (config.placer().place(world, mutable, state)) {
+                    ++spawned;
+                }
             }
         }
 

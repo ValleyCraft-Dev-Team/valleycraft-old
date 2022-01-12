@@ -4,8 +4,12 @@ import static io.github.linkle.valleycraft.utils.Util.register;
 
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.compare.ComparableUtils;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
+import io.github.linkle.valleycraft.utils.HeightMapBlockPlacer;
+import io.github.linkle.valleycraft.utils.IntPredicates;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.CavePatchConfig;
 import io.github.linkle.valleycraft.world.gen.features.CavePatchFeature;
@@ -19,6 +23,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.CountPlacementModifier;
@@ -45,9 +50,14 @@ public class CaveFeatures {
             .configure(new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(30),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6), 1.0F, Blocks.COBWEB.getDefaultState()));
     
-    private static final ConfiguredFeature<?, ?> ROCKS_PATCH_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROCK_PILE, 30, 7, 5));
+    private static final ConfiguredFeature<?, ?> ROCKS_PATCH_CONFIG = 
+    SIMPLE_PATCH.configure(new SimplePatchConfig(
+        Plants.ROCK_PILE.getDefaultState(), 30, 7, 5, 
+        new HeightMapBlockPlacer(Heightmap.Type.WORLD_SURFACE_WG, IntPredicates.LESS)
+    ));
 
     public static void initialize() {
+        var config = ValleyMain.CONFIG.featureGenerations.caveFeatures;
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "cave_patch"), CAVE_PATCH);
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "glow_kelp"), GLOW_KELP);
         var underground = GenerationStep.Feature.UNDERGROUND_DECORATION;
@@ -58,7 +68,7 @@ public class CaveFeatures {
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(0)));
         key = Util.register("redstone_crystal_patch_cave", REDSTONE_CRYSTAL_PATCH_CONFIG, list);
-        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.redstoneCrystalPatchEnabled)
+        if (config.redstoneCrystalPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
         
         list = new ArrayList<>();
@@ -66,7 +76,7 @@ public class CaveFeatures {
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(24), YOffset.fixed(24)));
         key = Util.register("spider_egg_patch_cave", SPIDER_EGG_PATCH_CONFIG, list);
-        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.spiderSackPatchEnabled)
+        if (config.spiderSackPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
         
         list = new ArrayList<>();
@@ -74,7 +84,7 @@ public class CaveFeatures {
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.getBottom(), YOffset.fixed(50)));
         key = Util.register("rocks_patch_cave", ROCKS_PATCH_CONFIG, list);
-        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.rocksPatchEnabled)
+        if (config.rocksPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
         
         list = new ArrayList<>();
@@ -82,7 +92,7 @@ public class CaveFeatures {
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.fixed(32)));
         key = register("glow_kelp_patch_cave", GLOW_KELP.configure(FeatureConfig.DEFAULT), list);
-        if (ValleyMain.CONFIG.featureGenerations.caveFeatures.glowKelpPatchEnabled)
+        if (config.glowKelpPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
     }
     

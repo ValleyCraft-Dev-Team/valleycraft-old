@@ -16,19 +16,15 @@ import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.ServerWorldAccess;
-import net.minecraft.world.StructureWorldAccess;
-import net.minecraft.world.gen.StructureAccessor;
-import net.minecraft.world.gen.chunk.ChunkGenerator;
 
-public class ShipwreckGenerator {
-    private static final Identifier SHIPWRECK = new Identifier(MOD_ID, "underwater/shipwreck");
+public class ResearchStationGenerator {
+    private static final Identifier RESEARCH_STATION = new Identifier(MOD_ID, "ocean/research_station");
+    private static final Identifier RESEARCH_STATION_AB = new Identifier(MOD_ID, "ocean/research_station_abandoned");
     
     public static void addParts(StructurePiecesHolder holder, Context<?> context, BlockPos pos) {
         var rotation = BlockRotation.random(context.random());
-        holder.addPiece(new Piece(context.structureManager(), SHIPWRECK, pos, rotation));
+        holder.addPiece(new Piece(context.structureManager(), context.random().nextInt(5) == 0 ? RESEARCH_STATION_AB : RESEARCH_STATION, pos, rotation));
     }
     
     public static class Piece
@@ -57,12 +53,6 @@ public class ShipwreckGenerator {
             data.setRotation(rotation);
             data.addProcessor(BlockIgnoreStructureProcessor.IGNORE_AIR_AND_STRUCTURE_BLOCKS);
             return data;
-        }
-        
-        @Override
-        public void generate(StructureWorldAccess world, StructureAccessor structureAccessor, ChunkGenerator chunkGenerator, Random random, BlockBox chunkBox, ChunkPos chunkPos, BlockPos pos) {
-            this.pos = this.pos.down();
-            super.generate(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos, pos);
         }
     }
 }

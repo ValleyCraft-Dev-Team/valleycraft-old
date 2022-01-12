@@ -25,10 +25,10 @@ import net.minecraft.world.gen.feature.PlacedFeatures;
 
 public class NetherFeatures {
     
-    private static final ConfiguredFeature<?, ?> SOUL_SPORECAP_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.SOUL_SPORECAP, 35, 7, 5));
-    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG1 = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER, 35, 7, 5));
-    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG2 = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER, 35, 7, 5));
-    private static final ConfiguredFeature<?, ?> TAINTED_WART_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.TAINTED_WART, 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> SOUL_SPORECAP_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.SOUL_SPORECAP.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG1 = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG2 = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> TAINTED_WART_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.TAINTED_WART.getDefaultState(), 35, 7, 5));
     
     public static void initialize() {
         var features = ValleyMain.CONFIG.featureGenerations.netherFeatures;
