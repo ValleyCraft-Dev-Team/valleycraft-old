@@ -18,27 +18,33 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
-public class BrickFurnace extends AbstractFurnaceBlock {
+public class BrickFurnace extends AbstractFurnaceBlock implements MultiBlockEntity {
 	
-	public static BlockEntityType<BrickFurnaceEntity> BLOCK_ENTITY;
+	public BlockEntityType<BrickFurnaceEntity> blockEntity;
 
 	public BrickFurnace(Settings settings) {
 		super(settings);
 	}
+	
+    @Override
+    @SuppressWarnings("unchecked")
+    public void setType(BlockEntityType<?> type) {
+        this.blockEntity = (BlockEntityType<BrickFurnaceEntity>)type;
+    }
 
 	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-		return new BrickFurnaceEntity(pos, state);
+		return new BrickFurnaceEntity(blockEntity, pos, state);
 	}
 
 	@Nullable
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-		return checkType(world, type, BLOCK_ENTITY);
+		return checkType(world, type, blockEntity);
 	}
 
 	protected void openScreen(World world, BlockPos pos, PlayerEntity player) {
-		BlockEntity blockEntity = world.getBlockEntity(pos);
-		if (blockEntity instanceof BrickFurnaceEntity) {
-			player.openHandledScreen((NamedScreenHandlerFactory)blockEntity);
+		var entity = world.getBlockEntity(pos);
+		if (entity instanceof BrickFurnaceEntity) {
+			player.openHandledScreen((NamedScreenHandlerFactory)entity);
 		}
 
 	}
@@ -52,12 +58,12 @@ public class BrickFurnace extends AbstractFurnaceBlock {
 				world.playSound(xPos, yPos, zPos, SoundEvents.BLOCK_SMOKER_SMOKE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
 			}
 
-			Direction direction = state.get(FACING);
-			Direction.Axis axis = direction.getAxis();
+			var face = state.get(FACING);
+			var axis = face.getAxis();
 			double rand = random.nextDouble() * 0.6D - 0.3D;
-			double xRand = axis == Direction.Axis.X ? direction.getOffsetX() * 0.52D : rand;
+			double xRand = axis == Direction.Axis.X ? face.getOffsetX() * 0.52D : rand;
 			double yRand = random.nextDouble() * 6.0D / 16.0D;
-			double zRand = axis == Direction.Axis.Z ? direction.getOffsetZ() * 0.52D : rand;
+			double zRand = axis == Direction.Axis.Z ? face.getOffsetZ() * 0.52D : rand;
 			world.addParticle(ParticleTypes.SMOKE, xPos + xRand, yPos + yRand, zPos + zRand, 0.0D, 0.0D, 0.0D);
 			world.addParticle(ParticleTypes.FLAME, xPos + xRand, yPos + yRand, zPos + zRand, 0.0D, 0.0D, 0.0D);
 	}

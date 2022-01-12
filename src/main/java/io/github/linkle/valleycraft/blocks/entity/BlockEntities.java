@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityT
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder.Factory;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -49,24 +50,28 @@ public class BlockEntities {
 	    var furnGroup = new BlockItem.Settings().group(FURNITURE_GROUP);
 	    
 	    Util.register("brick_furnace", new BlockItem(BRICK_FURNACE, furnGroup));
-	    BrickFurnace.BLOCK_ENTITY = createBlockEntity("brick_furnace", BRICK_FURNACE, BrickFurnaceEntity::new);
+	    createBlockEntity("brick_furnace", BRICK_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
 		Util.register("cobble_furnace", new BlockItem(COBBLE_FURNACE, furnGroup));
-		BrickFurnace.BLOCK_ENTITY = createBlockEntity("cobble_furnace", COBBLE_FURNACE, BrickFurnaceEntity::new);
+		createBlockEntity("cobble_furnace", COBBLE_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
 		Util.register("carmine_furnace", new BlockItem(CARMINE_FURNACE, furnGroup));
-		BrickFurnace.BLOCK_ENTITY = createBlockEntity("carmine_furnace", CARMINE_FURNACE, BrickFurnaceEntity::new);
+		createBlockEntity("carmine_furnace", CARMINE_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
 		Util.register("volcanic_furnace", new BlockItem(VOLCANIC_FURNACE, furnGroup));
-		BrickFurnace.BLOCK_ENTITY = createBlockEntity("volcanic_furnace", VOLCANIC_FURNACE, BrickFurnaceEntity::new);
+		createBlockEntity("volcanic_furnace", VOLCANIC_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
 		Util.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
 	    CrabTrap.BLOCK_ENTITY = createBlockEntity("crab_trap", CRAB_TRAP, CrabTrapEntity::new);	    
 	}
 	
-	@SuppressWarnings("unchecked")
-    private static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(String id, Block block, Factory<BlockEntity> factory) {
+    private static <T extends BlockEntity> BlockEntityType<T> createBlockEntity(String id, Block block, Factory<T> factory) {
 		var entity = FabricBlockEntityTypeBuilder.create(factory, block).build();
-		return (BlockEntityType<T>)Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(ValleyMain.MOD_ID, id), entity);
+		if (factory instanceof BlockEntityFactory fact) {
+		    fact.type = entity;
+		} if (block instanceof MultiBlockEntity multi) {
+		    multi.setType(entity);
+		}
+		return Registry.register(Registry.BLOCK_ENTITY_TYPE, new Identifier(ValleyMain.MOD_ID, id), entity);
 	}
 }
