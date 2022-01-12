@@ -1,5 +1,6 @@
 package io.github.linkle.valleycraft.entities;
 
+import io.github.linkle.valleycraft.init.Fishing;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.SchoolingFishEntity;
 import net.minecraft.item.ItemStack;
@@ -15,7 +16,7 @@ public class PerchEntity extends SchoolingFishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return null;
+        return new ItemStack(Fishing.BUCKET_PERCH);
     }
 
     @Override
