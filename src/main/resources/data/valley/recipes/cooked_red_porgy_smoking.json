@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:red_porgy"
+  },
+  "result": "valley:cooked_red_porgy",
+  "experience": 0.2,
+  "cookingtime": 100
+}

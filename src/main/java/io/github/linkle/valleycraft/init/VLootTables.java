@@ -48,7 +48,7 @@ public class VLootTables {
         pool.with(ItemEntry.builder(Fishing.SLIMEFISH).weight(20));
         pool.with(ItemEntry.builder(Fishing.PERCH).weight(40));
         pool.with(ItemEntry.builder(Aquatic.SAND_DOLLAR).weight(10));
-        pool.with(ItemEntry.builder(Aquatic.STARFISH).weight(2));
+        pool.with(ItemEntry.builder(Aquatic.STARFISH_ORANGE).weight(10));
         pool.with(ItemEntry.builder(Fishing.FIRE_EEL).weight(7));
         pool.with(ItemEntry.builder(Fishing.OCTO).weight(9));
         pool.with(ItemEntry.builder(Fishing.GLISTERING_ANGLER).weight(3));

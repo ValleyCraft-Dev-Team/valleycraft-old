@@ -158,6 +158,18 @@
 				]
 			}
 		},
+		"red_porgy": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:red_porgy"
+						]
+					}
+				]
+			}
+		},
 		"sardine": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
@@ -218,13 +230,13 @@
 				]
 			}
 		},
-		"fossilized_starfish": {
+		"starfish": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:fossilized_starfish"
+							"valley:starfish"
 						]
 					}
 				]
@@ -441,6 +453,30 @@
 					{
 						"items": [
 							"valley:anemone_yellow"
+						]
+					}
+				]
+			}
+		},
+		"anemone_green": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anemone_green"
+						]
+					}
+				]
+			}
+		},
+		"anemone_orange": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:anemone_orange"
 						]
 					}
 				]
@@ -755,7 +791,10 @@
 			"clam"
 		],
 		[
-			"fossilized_starfish"
+			"starfish"
+		],
+		[
+			"red_porgy"
 		],
 		[
 			"sand_dollar"
@@ -807,6 +846,12 @@
 		],
 		[
 			"anemone_purple"
+		],
+		[
+			"anemone_green"
+		],
+		[
+			"anemone_orange"
 		],
 		[
 			"tube_worms"

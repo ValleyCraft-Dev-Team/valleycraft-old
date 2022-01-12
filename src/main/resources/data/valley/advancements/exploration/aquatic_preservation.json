@@ -1,0 +1,156 @@
+{
+	"parent": "valley:exploration/oceanologist",
+	"display": {
+		"title": {
+			"text": "Aquatic Preservation"
+		},
+		"icon": {
+			"item": "valley:bucket_red_porgy"
+		},
+		"description": {
+			"text": "Get a bucket of every fish & eel type."
+		}
+	},
+	"criteria": {
+		"red_porgy": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bucket_red_porgy"
+						]
+					}
+				]
+			}
+		},
+		"perch": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bucket_perch"
+						]
+					}
+				]
+			}
+		},
+		"fire_eel": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bucket_fire_eel"
+						]
+					}
+				]
+			}
+		},
+		"sardine": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bucket_sardine"
+						]
+					}
+				]
+			}
+		},
+		"minnow": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:bucket_minnow"
+						]
+					}
+				]
+			}
+		},
+		"pufferfish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:pufferfish_bucket"
+						]
+					}
+				]
+			}
+		},
+		"salmon": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:salmon_bucket"
+						]
+					}
+				]
+			}
+		},
+		"cod": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:cod_bucket"
+						]
+					}
+				]
+			}
+		},
+		"tropical_fish": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"minecraft:tropical_fish_bucket"
+						]
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"red_porgy"
+		],
+		[
+			"perch"
+		],
+		[
+			"fire_eel"
+		],
+		[
+			"sardine"
+		],
+		[
+			"minnow"
+		],
+		[
+			"pufferfish"
+		],
+		[
+			"salmon"
+		],
+		[
+			"cod"
+		],
+		[
+			"salmon"
+		],
+		[
+			"tropical_fish"
+		]
+	]
+}

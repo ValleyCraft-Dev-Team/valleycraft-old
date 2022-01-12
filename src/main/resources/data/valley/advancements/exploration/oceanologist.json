@@ -217,13 +217,13 @@
 				]
 			}
 		},
-		"fossilized_starfish": {
+		"starfish": {
 			"trigger": "minecraft:inventory_changed",
 			"conditions": {
 				"items": [
 					{
 						"items": [
-							"valley:fossilized_starfish"
+							"valley:starfish"
 						]
 					}
 				]
@@ -372,6 +372,18 @@
 					}
 				]
 			}
+		},
+		"red_porgy": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"valley:red_porgy"
+						]
+					}
+				]
+			}
 		}
 	},
 	"requirements": [
@@ -430,7 +442,7 @@
 			"clam"
 		],
 		[
-			"fossilized_starfish"
+			"starfish"
 		],
 		[
 			"sand_dollar"
@@ -464,6 +476,9 @@
 		],
 		[
 			"sea_urchin"
+		],
+		[
+			"red_porgy"
 		]
 	]
 }
