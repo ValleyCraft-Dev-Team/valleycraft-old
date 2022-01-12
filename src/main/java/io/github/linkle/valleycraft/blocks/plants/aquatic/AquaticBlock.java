@@ -85,7 +85,6 @@ public class AquaticBlock extends BlockWithWater {
                 .breakByHand(true)
                 .sounds(BlockSoundGroup.CALCITE)
                 .strength(0.0f, 0.1f)
-                .ticksRandomly()
-                .noCollision();
+                .ticksRandomly();
     }
 }
