@@ -66,6 +66,30 @@ public class BarnacleBlock extends DirectionBlockWithWater {
             }
         }
     }
+
+    @Override
+    public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        switch (state.get(FACING)) {
+            case NORTH: {
+                return northShape;
+            }
+            case SOUTH: {
+                return southShape;
+            }
+            case EAST: {
+                return eastShape;
+            }
+            case WEST: {
+                return westShape;
+            }
+            case DOWN: {
+                return downShape;
+            }
+            default: {
+                return upShape;
+            }
+        }
+    }
     
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {

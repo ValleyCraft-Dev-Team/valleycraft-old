@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:stone_smooth_tiles_stairs"
+          "name": "valley:smooth_stone_tiles"
         }
       ],
       "conditions": [

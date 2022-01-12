@@ -64,6 +64,12 @@ public class Entities {
                     .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
     );
 
+    public static final EntityType<RedPorgyEntity> RED_PORGY = Registry.register(Registry.ENTITY_TYPE,
+            new Identifier(ValleyMain.MOD_ID, "red_porgy"),
+            FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, RedPorgyEntity::new)
+                    .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+    );
+
     public static void initialize() {
         var config = ValleyMain.CONFIG.mobs;
         FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
@@ -72,6 +78,7 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(PERCH, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(MINNOW, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(SARDINE, FishEntity.createFishAttributes());
+        FabricDefaultAttributeRegistry.register(RED_PORGY, FishEntity.createFishAttributes());
 
         if (config.bear.enable) {
             var keys = BiomeSelectors.includeByKey(
@@ -94,7 +101,7 @@ public class Entities {
         
         if (config.perch.enable) {
             var spawn = config.perch;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, PERCH, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_OCEAN), SpawnGroup.WATER_AMBIENT, PERCH, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
         }
 
         if (config.minnow.enable) {
@@ -104,6 +111,11 @@ public class Entities {
 
         if (config.sardine.enable) {
             var spawn = config.sardine;
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.COLD_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+        }
+
+        if (config.red_porgy.enable) {
+            var spawn = config.red_porgy;
             BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
         }
     }
@@ -116,5 +128,6 @@ public class Entities {
         EntityRendererRegistry.register(PERCH, CodEntityRenderer.create("perch_cod"));
         EntityRendererRegistry.register(MINNOW, CodEntityRenderer.create("minnow_cod"));
         EntityRendererRegistry.register(SARDINE, CodEntityRenderer.create("sardine_cod"));
+        EntityRendererRegistry.register(RED_PORGY, CodEntityRenderer.create("red_porgy_cod"));
     }
 }

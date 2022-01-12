@@ -105,6 +105,8 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(ANEMONE_PURPLE);
         culloutBlocks.add(ANEMONE_PINK);
         culloutBlocks.add(ANEMONE_YELLOW);
+        culloutBlocks.add(ANEMONE_GREEN);
+        culloutBlocks.add(ANEMONE_ORANGE);
         culloutBlocks.add(GIANT_SCALLOP);
         culloutBlocks.add(BARNACLE);
         culloutBlocks.add(SEA_FERN);

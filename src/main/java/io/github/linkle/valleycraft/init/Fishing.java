@@ -37,11 +37,13 @@ public class Fishing {
     public static final Item WRASSE = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64).rarity(Rarity.RARE));
     public static final Item FROG_FISH = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item MARLIN_SPIKE = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
+    public static final Item RED_PORGY = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
 
     public static final Item BUCKET_FIRE_EEL = new EntityBucketItem(Entities.FIRE_EEL, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
     public static final Item BUCKET_PERCH = new EntityBucketItem(Entities.PERCH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
     public static final Item BUCKET_SARDINE = new EntityBucketItem(Entities.SARDINE, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
     public static final Item BUCKET_MINNOW = new EntityBucketItem(Entities.MINNOW, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
+    public static final Item BUCKET_RED_PORGY = new EntityBucketItem(Entities.RED_PORGY, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
 
     public static void initialize() {
         Util.register("perch", PERCH);
@@ -54,6 +56,7 @@ public class Fishing {
         Util.register("marlin_spike_seashell", MARLIN_SPIKE);
         Util.register("lionfish", LIONFISH);
         Util.register("sardine", SARDINE);
+        Util.register("red_porgy", RED_PORGY);
         Util.register("stoneroller_minnow", STONEROLLER);
         Util.register("slime_fish", SLIMEFISH);
         Util.register("pridefin", PRIDEFIN);
@@ -69,6 +72,7 @@ public class Fishing {
         Util.register("bucket_perch", BUCKET_PERCH);
         Util.register("bucket_sardine", BUCKET_SARDINE);
         Util.register("bucket_minnow", BUCKET_MINNOW);
+        Util.register("bucket_red_porgy", BUCKET_RED_PORGY);
 
     }
 }

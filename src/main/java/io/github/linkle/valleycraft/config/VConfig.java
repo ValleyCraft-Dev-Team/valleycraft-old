@@ -171,6 +171,9 @@ public class VConfig implements ConfigData {
 
 		@ConfigEntry.Gui.CollapsibleObject
 		public EntityConfig sardine = new EntityConfig(6, 3, 6);
+
+		@ConfigEntry.Gui.CollapsibleObject
+		public EntityConfig red_porgy = new EntityConfig(6, 3, 6);
 	}
 	
 	public static class Misc implements ConfigData {

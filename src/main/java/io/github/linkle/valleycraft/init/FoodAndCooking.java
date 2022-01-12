@@ -11,6 +11,7 @@ public class FoodAndCooking {
     public static final Item DRIED_SALMON = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     //public static final Item DRIED_SARDINE = new FoodItemBase(new Item.Settings(), 3, 0.4f);
     public static final Item COOKED_SARDINE = new FoodItemBase(new Item.Settings(), 4, 0.4f);
+    public static final Item COOKED_RED_PORGY = new FoodItemBase(new Item.Settings(), 4, 0.4f);
     public static final Item COOKED_CRAB = new FoodItemBase(new Item.Settings(), 7, 0.4f);
     public static final Item COOKED_LOBSTER = new FoodItemBase(new Item.Settings(), 7, 0.4f);
     public static final Item COOKED_PERCH = new FoodItemBase(new Item.Settings(), 4, 0.4f);
@@ -329,6 +330,7 @@ public class FoodAndCooking {
         Util.register("cooked_pridefin", COOKED_PRIDEFIN);
 
         Util.register("sardine_cooked", COOKED_SARDINE);
+        Util.register("cooked_red_porgy", COOKED_RED_PORGY);
         Util.register("fire_eel_cooked", COOKED_FIRE_EEL);
         Util.register("crab_red_cooked", COOKED_CRAB);
         Util.register("cooked_lobster", COOKED_LOBSTER);

@@ -27,6 +27,8 @@ public class Aquatic {
     public static final Block ANEMONE_PINK = new AnenomeBlock();
     public static final Block ANEMONE_PURPLE = new AnenomeBlock();
     public static final Block ANEMONE_YELLOW = new AnenomeBlock();
+    public static final Block ANEMONE_GREEN = new AnenomeBlock();
+    public static final Block ANEMONE_ORANGE = new AnenomeBlock();
 
     public static final Block TUBE_WORMS = new AnenomeBlock();
 
@@ -50,6 +52,8 @@ public class Aquatic {
         Util.registerWithItem("anemone_pink", ANEMONE_PINK, new Item.Settings().group(FISHING_GROUP));
         Util.registerWithItem("anemone_purple", ANEMONE_PURPLE, new Item.Settings().group(FISHING_GROUP));
         Util.registerWithItem("anemone_yellow", ANEMONE_YELLOW, new Item.Settings().group(FISHING_GROUP));
+        Util.registerWithItem("anemone_green", ANEMONE_GREEN, new Item.Settings().group(FISHING_GROUP));
+        Util.registerWithItem("anemone_orange", ANEMONE_ORANGE, new Item.Settings().group(FISHING_GROUP));
 
         Util.registerWithItem("tube_worms", TUBE_WORMS, new Item.Settings().group(FISHING_GROUP));
 
