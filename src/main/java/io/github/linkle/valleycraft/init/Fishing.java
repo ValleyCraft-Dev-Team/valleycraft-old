@@ -38,8 +38,13 @@ public class Fishing {
     public static final Item FROG_FISH = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()).maxCount(64));
     public static final Item MARLIN_SPIKE = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
 
+<<<<<<< Updated upstream
 	public static final Item BUCKET_FIRE_EEL = new EntityBucketItem(Entities.FIRE_EEL, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP));
 	public static final Item BUCKET_PERCH = new EntityBucketItem(Entities.PERCH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP));
+=======
+	public static final Item BUCKET_FIRE_EEL = new EntityBucketItem(Entities.FIRE_EEL, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
+    
+>>>>>>> Stashed changes
 
     public static void initialize() {
         Util.register("perch", PERCH);
