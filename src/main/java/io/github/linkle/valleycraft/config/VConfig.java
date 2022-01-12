@@ -165,6 +165,12 @@ public class VConfig implements ConfigData {
 	    
 	    @ConfigEntry.Gui.CollapsibleObject
         public EntityConfig perch = new EntityConfig(6, 3, 6);
+
+		@ConfigEntry.Gui.CollapsibleObject
+		public EntityConfig minnow = new EntityConfig(6, 3, 6);
+
+		@ConfigEntry.Gui.CollapsibleObject
+		public EntityConfig sardine = new EntityConfig(6, 3, 6);
 	}
 	
 	public static class Misc implements ConfigData {

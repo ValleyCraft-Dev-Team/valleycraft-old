@@ -5,10 +5,7 @@ import io.github.linkle.valleycraft.client.entity.renderer.BearEntityRenderer;
 import io.github.linkle.valleycraft.client.entity.renderer.CodEntityRenderer;
 import io.github.linkle.valleycraft.client.entity.renderer.DuckEntityRenderer;
 import io.github.linkle.valleycraft.client.entity.renderer.SalmonEntityRenderer;
-import io.github.linkle.valleycraft.entities.BearEntity;
-import io.github.linkle.valleycraft.entities.DuckEntity;
-import io.github.linkle.valleycraft.entities.EelEntity;
-import io.github.linkle.valleycraft.entities.PerchEntity;
+import io.github.linkle.valleycraft.entities.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -55,12 +52,26 @@ public class Entities {
         .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
     );
 
+    public static final EntityType<MinnowEntity> MINNOW = Registry.register(Registry.ENTITY_TYPE,
+            new Identifier(ValleyMain.MOD_ID, "minnow"),
+            FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, MinnowEntity::new)
+                    .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+    );
+
+    public static final EntityType<SardineEntity> SARDINE = Registry.register(Registry.ENTITY_TYPE,
+            new Identifier(ValleyMain.MOD_ID, "sardine"),
+            FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, SardineEntity::new)
+                    .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+    );
+
     public static void initialize() {
         var config = ValleyMain.CONFIG.mobs;
         FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
         FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
         FabricDefaultAttributeRegistry.register(FIRE_EEL, MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8)); // 8 heath point
         FabricDefaultAttributeRegistry.register(PERCH, FishEntity.createFishAttributes());
+        FabricDefaultAttributeRegistry.register(MINNOW, FishEntity.createFishAttributes());
+        FabricDefaultAttributeRegistry.register(SARDINE, FishEntity.createFishAttributes());
 
         if (config.bear.enable) {
             var keys = BiomeSelectors.includeByKey(
@@ -83,7 +94,17 @@ public class Entities {
         
         if (config.perch.enable) {
             var spawn = config.perch;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, PERCH, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+        }
+
+        if (config.minnow.enable) {
+            var spawn = config.minnow;
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+        }
+
+        if (config.sardine.enable) {
+            var spawn = config.sardine;
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
         }
     }
 
@@ -93,5 +114,7 @@ public class Entities {
         EntityRendererRegistry.register(DUCK, DuckEntityRenderer::new);
         EntityRendererRegistry.register(FIRE_EEL, SalmonEntityRenderer.create("fire_eel_salmon"));
         EntityRendererRegistry.register(PERCH, CodEntityRenderer.create("perch_cod"));
+        EntityRendererRegistry.register(MINNOW, CodEntityRenderer.create("minnow_cod"));
+        EntityRendererRegistry.register(SARDINE, CodEntityRenderer.create("sardine_cod"));
     }
 }
