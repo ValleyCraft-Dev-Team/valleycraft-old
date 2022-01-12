@@ -162,6 +162,9 @@ public class VConfig implements ConfigData {
 	    
 	    @ConfigEntry.Gui.CollapsibleObject
         public EntityConfig fireEel = new EntityConfig(6, 1, 2);
+	    
+	    @ConfigEntry.Gui.CollapsibleObject
+        public EntityConfig perch = new EntityConfig(6, 3, 6);
 	}
 	
 	public static class Misc implements ConfigData {

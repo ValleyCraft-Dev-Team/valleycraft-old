@@ -39,10 +39,9 @@ public class Fishing {
     public static final Item MARLIN_SPIKE = new FoodItemBase(new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(64));
 
 	public static final Item BUCKET_FIRE_EEL = new EntityBucketItem(Entities.FIRE_EEL, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP));
+	public static final Item BUCKET_PERCH = new EntityBucketItem(Entities.PERCH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP));
 
     public static void initialize() {
-	    Items.COD_BUCKET.asItem();
-	    
         Util.register("perch", PERCH);
         Util.register("crab_red", CRAB);
         Util.register("masking_crab", MASKING_CRAB);
@@ -65,5 +64,6 @@ public class Fishing {
         Util.register("abyss_watcher", ABYSS_WATCHER);
         Util.register("bonefin", BONEFIN);
         Util.register("bucket_fire_eel", BUCKET_FIRE_EEL);
+        Util.register("bucket_perch", BUCKET_PERCH);
     }
 }

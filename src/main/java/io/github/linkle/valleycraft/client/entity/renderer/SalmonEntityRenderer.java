@@ -18,7 +18,7 @@ public class SalmonEntityRenderer extends MobEntityRenderer<FishEntity, SalmonEn
     private final Identifier texture;
 
     private SalmonEntityRenderer(EntityRendererFactory.Context context, Identifier texture) {
-        super(context, new SalmonEntityModel<FishEntity>(context.getPart(EntityModelLayers.SALMON)), 0.4f);
+        super(context, new SalmonEntityModel<>(context.getPart(EntityModelLayers.SALMON)), 0.4f);
         this.texture = texture;
     }
 

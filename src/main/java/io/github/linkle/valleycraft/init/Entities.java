@@ -2,11 +2,13 @@ package io.github.linkle.valleycraft.init;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.client.entity.renderer.BearEntityRenderer;
+import io.github.linkle.valleycraft.client.entity.renderer.CodEntityRenderer;
 import io.github.linkle.valleycraft.client.entity.renderer.DuckEntityRenderer;
 import io.github.linkle.valleycraft.client.entity.renderer.SalmonEntityRenderer;
 import io.github.linkle.valleycraft.entities.BearEntity;
 import io.github.linkle.valleycraft.entities.DuckEntity;
 import io.github.linkle.valleycraft.entities.EelEntity;
+import io.github.linkle.valleycraft.entities.PerchEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -18,9 +20,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.FishEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.BiomeKeys;
 
@@ -44,12 +48,19 @@ public class Entities {
         FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, EelEntity::new)
         .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.7f, 0.4f)).build()
     );
+    
+    public static final EntityType<PerchEntity> PERCH = Registry.register(Registry.ENTITY_TYPE,
+        new Identifier(ValleyMain.MOD_ID, "perch"),
+        FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, PerchEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+    );
 
     public static void initialize() {
         var config = ValleyMain.CONFIG.mobs;
         FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
         FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
-        FabricDefaultAttributeRegistry.register(FIRE_EEL, EelEntity.createFishAttributes());
+        FabricDefaultAttributeRegistry.register(FIRE_EEL, MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8)); // 8 heath point
+        FabricDefaultAttributeRegistry.register(PERCH, FishEntity.createFishAttributes());
 
         if (config.bear.enable) {
             var keys = BiomeSelectors.includeByKey(
@@ -69,6 +80,11 @@ public class Entities {
             var spawn = config.fireEel;
             BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
         }
+        
+        if (config.perch.enable) {
+            var spawn = config.perch;
+            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
+        }
     }
 
     @Environment(EnvType.CLIENT)
@@ -76,5 +92,6 @@ public class Entities {
         EntityRendererRegistry.register(BEAR, BearEntityRenderer::new);
         EntityRendererRegistry.register(DUCK, DuckEntityRenderer::new);
         EntityRendererRegistry.register(FIRE_EEL, SalmonEntityRenderer.create("fire_eel_salmon"));
+        EntityRendererRegistry.register(PERCH, CodEntityRenderer.create("perch_cod"));
     }
 }
