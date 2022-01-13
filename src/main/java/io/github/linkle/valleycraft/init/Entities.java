@@ -80,44 +80,34 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(SARDINE, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(RED_PORGY, FishEntity.createFishAttributes());
 
-        if (config.bear.enable) {
-            var keys = BiomeSelectors.includeByKey(
-                BiomeKeys.OLD_GROWTH_PINE_TAIGA,
-                BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
-            );
-            var spawn = config.bear;
-            BiomeModifications.addSpawn(keys, SpawnGroup.CREATURE, BEAR, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
         
-        if (config.duck.enable) {
-            var spawn = config.duck;
-            BiomeModifications.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
+        var keys = BiomeSelectors.includeByKey(
+            BiomeKeys.OLD_GROWTH_PINE_TAIGA,
+            BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
+        );
+        config.bear.addSpawn(keys, SpawnGroup.CREATURE, BEAR);
+        config.duck.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK);
+        config.fireEel.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL);
         
-        if (config.fireEel.enable) {
-            var spawn = config.fireEel;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
+        keys = BiomeSelectors.includeByKey(
+            BiomeKeys.LUKEWARM_OCEAN,
+            BiomeKeys.DEEP_LUKEWARM_OCEAN,
+            BiomeKeys.WARM_OCEAN,
+            BiomeKeys.DEEP_OCEAN
+        );
+        config.perch.addSpawn(keys, SpawnGroup.WATER_AMBIENT, PERCH);
+        config.minnow.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW);
         
-        if (config.perch.enable) {
-            var spawn = config.perch;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_OCEAN), SpawnGroup.WATER_AMBIENT, PERCH, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
-
-        if (config.minnow.enable) {
-            var spawn = config.minnow;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
-
-        if (config.sardine.enable) {
-            var spawn = config.sardine;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.COLD_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
-
-        if (config.red_porgy.enable) {
-            var spawn = config.red_porgy;
-            BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE, spawn.weight, spawn.minGroupSize, spawn.maxGroupSize);
-        }
+        keys = BiomeSelectors.includeByKey(
+            BiomeKeys.COLD_OCEAN,
+            BiomeKeys.DEEP_COLD_OCEAN,
+            BiomeKeys.FROZEN_OCEAN,
+            BiomeKeys.DEEP_LUKEWARM_OCEAN,
+            BiomeKeys.DEEP_OCEAN,
+            BiomeKeys.DEEP_FROZEN_OCEAN
+        );
+        config.sardine.addSpawn(keys, SpawnGroup.WATER_AMBIENT, MINNOW);
+        config.red_porgy.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE);
     }
 
     @Environment(EnvType.CLIENT)
