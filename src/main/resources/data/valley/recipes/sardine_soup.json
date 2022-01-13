@@ -15,6 +15,9 @@
     },
     {
       "item": "valley:milk_bottle"
+    },
+    {
+      "item:": "minecraft:bowl"
     }
   ],
   "result": {

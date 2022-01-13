@@ -14,7 +14,7 @@
       "item": "minecraft:potato"
     },
     {
-      "item": "valley:bone_broth"
+      "tag": "c:player_choice_base"
     }
   ],
   "result": {
