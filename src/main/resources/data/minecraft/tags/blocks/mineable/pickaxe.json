@@ -99,6 +99,7 @@
 		"valley:cobblestone_chiseled",
 		"valley:glow_kelp_block",
 		"valley:prismarine_cluster",
-		"valley:sea_urchin"
+		"valley:sea_urchin",
+		"valley:bone_joint_block"
 	]
 }

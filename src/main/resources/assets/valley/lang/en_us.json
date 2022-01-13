@@ -93,6 +93,8 @@
   "block.valley.coin_stack.tooltip": "An ancient currency",
   "block.valley.coin_stack.tooltip_2": "devalued by emeralds.",
 
+  "block.valley.bone_joint_block": "Joint Bone Block",
+
   "item.valley.copper_billet.tooltip": "Used to knap Arrowheads",
   "item.valley.copper_billet.tooltip_2": "with Flint, Obsidian or Dripstone",
 

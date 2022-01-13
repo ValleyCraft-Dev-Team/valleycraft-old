@@ -41,6 +41,9 @@ public class OceanFeatures {
     private static final ConfiguredFeature<?, ?> SAND_DOllAR_CONFIG = SEA_PATCH
             .configure(new SeaPatchConfig(Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(1, 3), 5));
 
+    private static final ConfiguredFeature<?, ?> STARFISH_CONFIG = SEA_PATCH
+            .configure(new SeaPatchConfig(Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(1, 1), 5));
+
     private static final ConfiguredFeature<?, ?> SEA_URCHIN_CONFIG = SEA_PATCH
             .configure(new SeaPatchConfig(Aquatic.SEA_URCHIN.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(1, 5), 5));
 
@@ -61,6 +64,12 @@ public class OceanFeatures {
 
     private static final ConfiguredFeature<?, ?> ANEMONE_YELLOW_CONFIG = SEA_PATCH
             .configure(new SeaPatchConfig(Aquatic.ANEMONE_YELLOW.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(3, 6), 6));
+
+    private static final ConfiguredFeature<?, ?> ANEMONE_GREEN_CONFIG = SEA_PATCH
+            .configure(new SeaPatchConfig(Aquatic.ANEMONE_GREEN.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(3, 6), 6));
+
+    private static final ConfiguredFeature<?, ?> ANEMONE_ORANGE_CONFIG = SEA_PATCH
+            .configure(new SeaPatchConfig(Aquatic.ANEMONE_ORANGE.getDefaultState().with(Properties.WATERLOGGED, true), UniformIntProvider.create(3, 6), 6));
 
     public static void initialize() {
         Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "sea_patch"), SEA_PATCH);
@@ -125,6 +134,22 @@ public class OceanFeatures {
         BiomeModifications.addFeature(selection, step, anYellowPatchKey);
 
         list = new ArrayList<>();
+        list.add(RarityFilterPlacementModifier.of(15));
+        list.add(SquarePlacementModifier.of());
+        list.add(PlacedFeatures.OCEAN_FLOOR_WG_HEIGHTMAP);
+        RegistryKey<PlacedFeature> anGreenPatchKey = Util.register("an_green_patch", ANEMONE_GREEN_CONFIG, list);
+        selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
+        BiomeModifications.addFeature(selection, step, anGreenPatchKey);
+
+        list = new ArrayList<>();
+        list.add(RarityFilterPlacementModifier.of(15));
+        list.add(SquarePlacementModifier.of());
+        list.add(PlacedFeatures.OCEAN_FLOOR_WG_HEIGHTMAP);
+        RegistryKey<PlacedFeature> anOrangePatchKey = Util.register("an_orange_patch", ANEMONE_ORANGE_CONFIG, list);
+        selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
+        BiomeModifications.addFeature(selection, step, anOrangePatchKey);
+
+        list = new ArrayList<>();
         list.add(RarityFilterPlacementModifier.of(3));
         list.add(SquarePlacementModifier.of());
         list.add(PlacedFeatures.OCEAN_FLOOR_WG_HEIGHTMAP);
@@ -148,6 +173,15 @@ public class OceanFeatures {
         selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
         if (ValleyMain.CONFIG.featureGenerations.oceanFeatures.sandDollarPatchEnabled)
             BiomeModifications.addFeature(selection, step, sandDollarPatchKey);
+
+        list = new ArrayList<>();
+        list.add(RarityFilterPlacementModifier.of(8));
+        list.add(SquarePlacementModifier.of());
+        list.add(PlacedFeatures.OCEAN_FLOOR_WG_HEIGHTMAP);
+        RegistryKey<PlacedFeature> starfishOrangePatchKey = Util.register("starfish_orange_patch", STARFISH_CONFIG, list);
+        selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
+        if (ValleyMain.CONFIG.featureGenerations.oceanFeatures.starfishPatchEnabled)
+            BiomeModifications.addFeature(selection, step, starfishOrangePatchKey);
     }
 
 }

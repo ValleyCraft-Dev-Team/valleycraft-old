@@ -106,6 +106,7 @@ public class VConfig implements ConfigData {
 			public boolean redSeaGrassPatchEnabled = true;
 			public boolean clamPatchEnabled = true;
 			public boolean sandDollarPatchEnabled = true;
+			public boolean starfishPatchEnabled = true;
 		}
 
 		public static class PlantFeatures implements ConfigData {

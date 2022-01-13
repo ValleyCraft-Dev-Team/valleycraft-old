@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
+import static io.github.linkle.valleycraft.init.ItemGroups.ARTEFACT_GROUP;
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 public class FurnitureCont {
@@ -48,11 +49,14 @@ public class FurnitureCont {
     public static final Block CRATE_SOUR = new CrateBlock();
     public static final Block CRATE_POISON = new CrateBlock();
 
+    public static final Block BONE_JOINT = new BoneJointBlock();
+
     @SuppressWarnings("unused")
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
         var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
         var furnGroupEpic = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.EPIC);
+        var arteGroup = new Item.Settings().group(ARTEFACT_GROUP);
 
         Util.registerWithItem("stuffy_brown", STUFFY_BROWN, furnGroup);
         Util.registerWithItem("stuffy_white", STUFFY_WHITE, furnGroup);
@@ -96,6 +100,8 @@ public class FurnitureCont {
 
         Util.registerWithItem("crate_bamboo", CRATE_BAMBOO, furnGroup);
         Util.registerWithItem("crate_sugar", CRATE_SUGAR, furnGroup);
+
+        Util.registerWithItem("bone_joint_block", BONE_JOINT, furnGroup);
 
     }
 }
