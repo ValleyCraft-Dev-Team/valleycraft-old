@@ -33,7 +33,7 @@ public class OreConfig implements ConfigData {
     }
     
     public YOffset getMaxOffset() {
-        return maxAboveBottom ? YOffset.aboveBottom(minOffset) : YOffset.fixed(minOffset);
+        return maxAboveBottom ? YOffset.aboveBottom(maxOffset) : YOffset.fixed(maxOffset);
     }
     
     static void getLang(Map<String, String> map) {

@@ -1,5 +1,7 @@
 package io.github.linkle.valleycraft.init.features;
 
+import java.util.function.Predicate;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
 import io.github.linkle.valleycraft.init.Aquatic;
@@ -23,11 +25,14 @@ import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
 import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.ConfiguredFeatures;
+import net.minecraft.world.gen.feature.DefaultFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 import net.minecraft.world.gen.heightprovider.ConstantHeightProvider;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-
-import java.util.function.Predicate;
 
 public class PlantFeatures {
     public static final ReedPatchFeature REED_PATCH = new ReedPatchFeature();
@@ -191,9 +196,10 @@ public class PlantFeatures {
             BiomeModifications.addFeature(snowOnly, vegetal, create("snow_bush_patch", Plants.SNOW_BUSH, set.tries, set.rarity));
         }
             
+        // This will crash the game, and I don't know why.
         if (config.snowRockPatch.enable) {
             var set = config.snowRockPatch;
-            BiomeModifications.addFeature(snowOnly, vegetal, create("noname", Plants.SNOW_ROCK_PILE, set.tries, set.rarity));
+            //BiomeModifications.addFeature(snowOnly, vegetal, create("snow_rock_patch", Plants.SNOW_ROCK_PILE, set.tries, set.rarity));
         }
             
         //these three share the same biomes, keep the values low so they don't overpopulate them!
