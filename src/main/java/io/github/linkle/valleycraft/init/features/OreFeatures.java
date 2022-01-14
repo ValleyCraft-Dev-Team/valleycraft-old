@@ -74,8 +74,8 @@ public class OreFeatures {
 
         //just the one above ^-^
 
-        if (config.oceanStone.enable) {
-            var set = config.oceanStone;
+        if (config.mariniteStone.enable) {
+            var set = config.mariniteStone;
             var key = register(create(StoneBlocks.OCEAN_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_ocean_overworld");
             addFeature(BiomeSelectors.categories(Category.OCEAN), key, false);
         }

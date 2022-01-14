@@ -1,8 +1,8 @@
 package io.github.linkle.valleycraft.config;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -16,7 +16,6 @@ import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.minecraft.util.Pair;
 
 /** Lang generator to generate translation from valleycraft autoconfig and output logs. Open the mod menu to output the log */
 @Environment(EnvType.CLIENT)
@@ -25,24 +24,26 @@ public class ConfigLangGen {
     private static final boolean isEnable = false;
     
     private static final HashMap<Class<?>, Map<String, String>> MAP = new HashMap<>();;
-    private static final ArrayList<Pair<String, String>> LIST = new ArrayList<>(100);
+    private static final LinkedHashSet<Trans> LIST = new LinkedHashSet<>(100);
     
     public static void initialize() {
         if (!isEnable) return;
         
         // This is where it class registered for lang generate
-        register(EntityConfig.class, EntityConfig::getLang);
-        register(OreConfig.class, OreConfig::getLang);
+        //register(EntityConfig.class, EntityConfig::getLang);
+        //register(OreConfig.class, OreConfig::getLang);
+        //register(PlantConfig.class, PlantConfig::getLang);
+        register(FishingConfig.class, FishingConfig::getLang);
         
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (!LIST.isEmpty()) {
                 var build = new StringBuilder(500).append('\n');
                 
-                for (var pair : LIST) {
+                for (var tran : LIST) {
                     build.append("  ").append('\"');
-                    build.append(pair.getLeft());
+                    build.append(tran.key);
                     build.append("\": \"");
-                    build.append(pair.getRight());
+                    build.append(tran.val);
                     build.append("\",\n");
                 }
                 
@@ -65,7 +66,7 @@ public class ConfigLangGen {
         
         var map = MAP.get(defaults.getClass());
         if (map != null) {
-            LIST.add(new Pair<>(i13n, map.get(field.getName())));
+            LIST.add(new Trans(i13n, map.get(field.getName())));
         }
         
         return guis;
@@ -75,5 +76,25 @@ public class ConfigLangGen {
         var map = new HashMap<String, String>(32);
         consumer.accept(map);
         MAP.put(type, map);
+    }
+    
+    /** Trans Right! */
+    private static class Trans {
+        final String key, val;
+        
+        Trans(String key, String value) {
+            this.key = key;
+            this.val = value;
+        }
+        
+        @Override
+        public int hashCode() {
+            return key.hashCode();
+        }
+        
+        @Override
+        public boolean equals(Object obj) {
+            return key.equals(obj);
+        }
     }
 }

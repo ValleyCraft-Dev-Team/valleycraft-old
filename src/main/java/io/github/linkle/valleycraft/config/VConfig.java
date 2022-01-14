@@ -13,7 +13,7 @@ public class VConfig implements ConfigData {
 
 	@Comment("Disables fishing loots for valleycraft items")
 	@ConfigEntry.Gui.CollapsibleObject
-	public Fishing fishing = new Fishing();
+	public FishingConfig fishing = new FishingConfig();
 
 	@Comment("Disables generation of features like stones, mud, sandstone, \nand biome-specific blobs, but not ores.")
 	@ConfigEntry.Gui.CollapsibleObject
@@ -31,10 +31,6 @@ public class VConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public Misc misc = new Misc();
 
-	public static class Fishing implements ConfigData {
-		public boolean fishingLootEnabled = true;
-	}
-
 	public static class BlobsGenerations implements ConfigData {
 	    @Gui.CollapsibleObject
 		public OreConfig scaldingVolcanicStoneInJungle = new OreConfig(20, 15, 0, 64);
@@ -49,7 +45,7 @@ public class VConfig implements ConfigData {
 	    @Gui.CollapsibleObject
 		public OreConfig mossyStone = new OreConfig(33, 15, 0, 128);
 	    @Gui.CollapsibleObject
-		public OreConfig oceanStone = new OreConfig(33, 10, 0, 128);
+		public OreConfig mariniteStone = new OreConfig(33, 10, 0, 128);
 	    @Gui.CollapsibleObject
 		public OreConfig greenGranite = new OreConfig(15, 5, 0, 50);
 	    @Gui.CollapsibleObject
@@ -147,43 +143,82 @@ public class VConfig implements ConfigData {
 		}
 
 		public static class PlantFeatures implements ConfigData {
-			public boolean wheatPatchEnabled = true;
-			public boolean carrotPatchEnabled = true;
-			public boolean beetPatchEnabled = true;
-			public boolean potatoPatchEnabled = true;
-			public boolean willowPatchEnabled = true;
-			public boolean ribbonPatchEnabled = true;
-			public boolean orangeFernPatchEnabled = true;
-			public boolean orangeBeautyPatchEnabled = true;
-			public boolean dahliaPatchEnabled = true;
-			public boolean lavenderPatchEnabled = true;
-			public boolean sorrelPatchEnabled = true;
-			public boolean dandelionPatchEnabled = true;
-			public boolean herbPatchEnabled = true;
-			public boolean taprootPatchEnabled = true;
-			public boolean crocusPatchEnabled = true;
-			public boolean hollyPatchEnabled = true;
-			public boolean morelPatchEnabled = true;
-			public boolean bushPatchEnabled = true;
-			public boolean sproutPatchEnabled = true;
-			public boolean jungleCapPatchEnabled = true;
-			public boolean panPatchEnabled = true;
-			public boolean swampBushPatchEnabled = true;
-			public boolean rockPatchEnabled = true;
-			public boolean snowPatchEnabled = true;
-			public boolean snowRockPatchEnabled = true;
-			public boolean rosePatchEnabled = true;
-			public boolean honeyClusterPatchEnabled = true;
-			public boolean lilacPatchEnabled = true;
-			public boolean peonyPatchEnabled = true;
-			public boolean tumblePatchEnabled = true;
-			public boolean floweringCactusPatchEnabled = true;
-			public boolean cactusPatchEnabled = true;
-			public boolean alivePatchEnabled = true;
-			public boolean bitterPatchEnabled = true;
-			public boolean tomatoPatchEnabled = true;
-			public boolean sourPatchEnabled = true;
-			public boolean reedPatchEnabled = true;
+		    @Gui.CollapsibleObject
+			public PlantConfig wheatPatch = new PlantConfig(1, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig carrotPatch = new PlantConfig(1, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig beetPatch = new PlantConfig(1, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig potatoPatch = new PlantConfig(1, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig willowPatch = new PlantConfig(2, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig ribbonPatch = new PlantConfig(12, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig orangeFernPatch = new PlantConfig(5, 1);
+		    @Gui.CollapsibleObject
+			public PlantConfig orangeBeautyPatch = new PlantConfig(2, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig dahliaPatch = new PlantConfig(8, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig lavenderPatch = new PlantConfig(8, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig sorrelPatch = new PlantConfig(5, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig dandelionPatch = new PlantConfig(2, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig herbPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig taprootPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig crocusPatch = new PlantConfig(3, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig hollyPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig morelPatch = new PlantConfig(3, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig bushPatch = new PlantConfig(7, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig sproutPatch = new PlantConfig(3, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig boxwoodPatch = new PlantConfig(7, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig jungleCapPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig panPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig swampBushPatch = new PlantConfig(7, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig rockPatch = new PlantConfig(8, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig snowPatch = new PlantConfig(10, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig snowRockPatch = new PlantConfig(0, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig rosePatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig honeyClusterPatch = new PlantConfig(2, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig lilacPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig peonyPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig tumblePatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig floweringCactusPatch = new PlantConfig(3, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig cactusPatch = new PlantConfig(2, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig alivePatch = new PlantConfig(10, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig bitterPatch = new PlantConfig(2, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig tomatoPatch = new PlantConfig(1, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig sourPatch = new PlantConfig(2, 1);
+			@Gui.CollapsibleObject
+			public PlantConfig reedPatch = new PlantConfig(0, 1);
 		}
 
 		public static class Trees implements ConfigData {
