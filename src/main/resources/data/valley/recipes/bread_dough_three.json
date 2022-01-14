@@ -11,7 +11,7 @@
       "item": "valley:flour_bag"
     },
     {
-      "item": "minecraft:water_bucket"
+      "tag": "c:eggs"
     }
   ],
   "result": {
