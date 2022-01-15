@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "y": 90,
+      "model": "valley:block/telescope"
+    },
+    "facing=east,waterlogged=true": {
+      "y": 90,
+      "model": "valley:block/telescope"
+    },
+    "facing=north,waterlogged=false": {
+      "y": 0,
+      "model": "valley:block/telescope"
+    },
+    "facing=north,waterlogged=true": {
+      "y": 0,
+      "model": "valley:block/telescope"
+    },
+    "facing=south,waterlogged=false": {
+      "y": 180,
+      "model": "valley:block/telescope"
+    },
+    "facing=south,waterlogged=true": {
+      "y": 180,
+      "model": "valley:block/telescope"
+    },
+    "facing=west,waterlogged=false": {
+      "y": 270,
+      "model": "valley:block/telescope"
+    },
+    "facing=west,waterlogged=true": {
+      "y": 270,
+      "model": "valley:block/telescope"
+    }
+  }
+}
