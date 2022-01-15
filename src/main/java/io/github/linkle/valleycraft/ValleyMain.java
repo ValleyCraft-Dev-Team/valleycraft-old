@@ -8,7 +8,7 @@ import io.github.linkle.valleycraft.init.features.*;
 import io.github.linkle.valleycraft.network.ServerNetwork;
 import io.github.linkle.valleycraft.screen.Screens;
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,7 +23,7 @@ public class ValleyMain implements ModInitializer {
     @Override
     @SuppressWarnings("unused")
     public void onInitialize() {
-        AutoConfig.register(VConfig.class, JanksonConfigSerializer::new);
+        AutoConfig.register(VConfig.class, GsonConfigSerializer::new);
         CONFIG = AutoConfig.getConfigHolder(VConfig.class).getConfig();
 
         // This should stay first before items and blocks.

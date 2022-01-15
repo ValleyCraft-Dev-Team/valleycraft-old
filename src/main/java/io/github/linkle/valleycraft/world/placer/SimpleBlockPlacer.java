@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.utils;
+package io.github.linkle.valleycraft.world.placer;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;

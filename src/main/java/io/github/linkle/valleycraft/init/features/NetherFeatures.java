@@ -1,7 +1,5 @@
 package io.github.linkle.valleycraft.init.features;
 
-import static io.github.linkle.valleycraft.init.features.CaveFeatures.SIMPLE_PATCH;
-
 import java.util.ArrayList;
 import java.util.function.Predicate;
 
@@ -25,10 +23,10 @@ import net.minecraft.world.gen.feature.PlacedFeatures;
 
 public class NetherFeatures {
     
-    private static final ConfiguredFeature<?, ?> SOUL_SPORECAP_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.SOUL_SPORECAP.getDefaultState(), 35, 7, 5));
-    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG1 = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER.getDefaultState(), 35, 7, 5));
-    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG2 = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER.getDefaultState(), 35, 7, 5));
-    private static final ConfiguredFeature<?, ?> TAINTED_WART_CONFIG = SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.TAINTED_WART.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> SOUL_SPORECAP_CONFIG = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.SOUL_SPORECAP.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG1 = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> ROOTED_WATCHER_CONFIG2 = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.ROOTED_WATCHER.getDefaultState(), 35, 7, 5));
+    private static final ConfiguredFeature<?, ?> TAINTED_WART_CONFIG = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(Plants.TAINTED_WART.getDefaultState(), 35, 7, 5));
     
     public static void initialize() {
         var features = ValleyMain.CONFIG.featureGenerations.netherFeatures;

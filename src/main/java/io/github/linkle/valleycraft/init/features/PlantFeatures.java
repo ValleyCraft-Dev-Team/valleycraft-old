@@ -2,20 +2,22 @@ package io.github.linkle.valleycraft.init.features;
 
 import java.util.function.Predicate;
 
+import com.google.common.base.Predicates;
+import com.ibm.icu.impl.units.UnitsData.Categories;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
 import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.init.Plants;
 import io.github.linkle.valleycraft.utils.Util;
-import io.github.linkle.valleycraft.world.gen.features.ReedPatchFeature;
+import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;
+import io.github.linkle.valleycraft.world.placer.ConditionBlockPlacer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.Properties;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
@@ -25,25 +27,19 @@ import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
 import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.ConfiguredFeatures;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.SimpleBlockFeatureConfig;
 import net.minecraft.world.gen.heightprovider.ConstantHeightProvider;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public class PlantFeatures {
-    public static final ReedPatchFeature REED_PATCH = new ReedPatchFeature();
-
     //Beach Features
     private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Aquatic.CLAM, 3, 1);
     private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, false), 1, 1);
     private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, false), 1, 1);
 
     public static void initialize() {
-        Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, "reed_patch"), REED_PATCH);
         var config = ValleyMain.CONFIG.featureGenerations.plantFeatures;
         var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
         var topLayer = GenerationStep.Feature.TOP_LAYER_MODIFICATION;
@@ -78,7 +74,7 @@ public class PlantFeatures {
             
         if (config.willowPatch.enable) {
             var set = config.willowPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
         }
             
         if (config.ribbonPatch.enable) {
@@ -154,12 +150,12 @@ public class PlantFeatures {
         //found in every biome except snow
         if (config.bushPatch.enable) {
             var set = config.bushPatch;
-            BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, create("bush_patch", Plants.BUSH, set.tries, set.rarity));
+            BiomeModifications.addFeature(Predicates.not(snowOnly::test), vegetal, create("bush_patch", Plants.BUSH, set.tries, set.rarity));
         }
-            
+        
         if (config.sproutPatch.enable) {
             var set = config.sproutPatch;
-            BiomeModifications.addFeature(c -> !snowOnly.test(c), vegetal, create("sprout_patch", Plants.SPROUT, set.tries, set.rarity));
+            BiomeModifications.addFeature(Predicates.not(snowOnly::test), vegetal, create("sprout_patch", Plants.SPROUT, set.tries, set.rarity));
         }
             
         //found in old growth biomes
@@ -187,7 +183,7 @@ public class PlantFeatures {
             
         if (config.rockPatch.enable) {
             var set = config.rockPatch;
-            BiomeModifications.addFeature(c -> !snowOnly.test(c), GenerationStep.Feature.VEGETAL_DECORATION, create("rock_patch", Plants.ROCK_PILE, set.tries, set.rarity));
+            BiomeModifications.addFeature(Predicates.not(snowOnly::test), vegetal, create("rock_patch", Plants.ROCK_PILE, set.tries, set.rarity));
         }
             
         //found in snowy biomes
@@ -196,10 +192,9 @@ public class PlantFeatures {
             BiomeModifications.addFeature(snowOnly, vegetal, create("snow_bush_patch", Plants.SNOW_BUSH, set.tries, set.rarity));
         }
             
-        // This will crash the game, and I don't know why.
         if (config.snowRockPatch.enable) {
             var set = config.snowRockPatch;
-            //BiomeModifications.addFeature(snowOnly, vegetal, create("snow_rock_patch", Plants.SNOW_ROCK_PILE, set.tries, set.rarity));
+            BiomeModifications.addFeature(snowOnly, vegetal, create("snow_rock_patch", Plants.SNOW_ROCK_PILE, set.tries, set.rarity));
         }
             
         //these three share the same biomes, keep the values low so they don't overpopulate them!
@@ -211,12 +206,12 @@ public class PlantFeatures {
             
         if (config.honeyClusterPatch.enable) {
             var set = config.honeyClusterPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("honey_cluster_patch", Plants.HONEY_CLUSTER, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS), vegetal, create("honey_cluster_patch", Plants.HONEY_CLUSTER, set.tries, set.rarity));
         }
             
         if (config.lilacPatch.enable) {
             var set = config.lilacPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("lilac_patch", Plants.LILACBUSH, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS), vegetal, create("lilac_patch", Plants.LILACBUSH, set.tries, set.rarity));
         }
             
         if (config.peonyPatch.enable) {
@@ -262,7 +257,7 @@ public class PlantFeatures {
         
         // 62 is where a sea level with water block inside.
         // If you want to config reeds counts or something, check the ReedPatchFeature class.
-        RegistryKey<PlacedFeature> key = Util.register("reed_patch", REED_PATCH.configure(DefaultFeatureConfig.INSTANCE), 
+        RegistryKey<PlacedFeature> key = Util.register("reed_patch", VFeatures.REED_PATCH.configure(DefaultFeatureConfig.INSTANCE), 
                 HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
         var categories = BiomeSelectors.categories(Category.RIVER, Category.PLAINS, Category.SWAMP, Category.FOREST, Category.JUNGLE, Category.TAIGA);
         if (config.reedPatch.enable)
@@ -279,10 +274,11 @@ public class PlantFeatures {
         return create(id, BlockStateProvider.of(block), tries, rarity);
     }
     
+    private static final ConditionBlockPlacer PLACER = new ConditionBlockPlacer(state -> state.getMaterial().isReplaceable());
+    
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
-        var simple = Feature.SIMPLE_BLOCK.configure(new SimpleBlockFeatureConfig(block)).withInAirFilter();
-        var config = ConfiguredFeatures.createRandomPatchFeatureConfig(tries, simple);
-        return Util.register(id, Feature.RANDOM_PATCH.configure(config), RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
+        var config = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(block, tries, 7, 3, PLACER));
+        return Util.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
     }
 }

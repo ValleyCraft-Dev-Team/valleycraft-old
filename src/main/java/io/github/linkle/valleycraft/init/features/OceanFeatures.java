@@ -1,5 +1,8 @@
 package io.github.linkle.valleycraft.init.features;
 
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.utils.Util;
@@ -13,20 +16,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
 import net.minecraft.world.gen.decorator.PlacementModifier;
 import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
-
-import java.util.ArrayList;
-import java.util.function.Predicate;
 
 public class OceanFeatures {
     /** Custom gen feature to spawn stuffs in ocean. */

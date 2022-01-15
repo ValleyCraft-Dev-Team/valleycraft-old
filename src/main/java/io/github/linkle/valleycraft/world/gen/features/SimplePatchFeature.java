@@ -19,9 +19,9 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
         var state = config.state().getBlockState(random, origin);
         var mutable = new BlockPos.Mutable();
 
-        int height = config.height().get(random);
-        int size = config.size().get(random) * 2;
-        int tries = config.tries().get(random);
+        int height = config.ySpread();
+        int size = config.xzSpread() * 2;
+        int tries = config.tries();
         int spawned = 0;
 
         for (int i = 0; i < tries; ++i) {
@@ -30,12 +30,8 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
             int zOffset = random.nextInt(size) - (size / 2);
             mutable.set(origin, xOffset, yOffset, zOffset);
 
-            var surface = mutable.down();
-            var surState = world.getBlockState(surface);
-            if (surState.isOpaque() && world.isAir(mutable) && state.canPlaceAt(world, mutable)) {
-                if (config.placer().place(world, mutable, state)) {
-                    ++spawned;
-                }
+            if (state.canPlaceAt(world, mutable) && config.placer().place(world, mutable, state)) {
+                spawned++;
             }
         }
 

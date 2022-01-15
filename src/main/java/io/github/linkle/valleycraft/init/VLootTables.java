@@ -4,11 +4,9 @@ import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.utils.loot.LootBuilder;
 import io.github.linkle.valleycraft.utils.loot.LootTableHelper;
 import io.github.linkle.valleycraft.utils.loot.LootUtils;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.MatchToolLootCondition;
@@ -19,10 +17,6 @@ import net.minecraft.loot.function.LootingEnchantLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
-
-import static io.github.linkle.valleycraft.ValleyMain.CONFIG;
-import static io.github.linkle.valleycraft.ValleyMain.LOGGER;
 
 public class VLootTables {
     
@@ -33,14 +27,16 @@ public class VLootTables {
         entities();
         chests();
         
-            //If the config has fishing enabled...
+        //If the config has fishing enabled...
+        /*
         if (CONFIG.fishing.enabled) {
                 //... inject our fish and junk into the respective vanilla loot tables
             LootTableHelper.injectLoot(LootTables.FISHING_FISH_GAMEPLAY, VLootTables::fishingFishLoot);
             LootTableHelper.injectLoot(LootTables.FISHING_JUNK_GAMEPLAY, VLootTables::fishingJunkLoot);
-        }
+        } */
     }
     
+    /*
     private static void fishingFishLoot(FabricLootPoolBuilder pool) {
         for (var entry : CONFIG.fishing.fish) {
             Item item = Registry.ITEM.get(new Identifier(entry.item));
@@ -63,7 +59,7 @@ public class VLootTables {
             
             pool.with(ItemEntry.builder(item).weight(entry.weight));
         }
-    }
+    } */
 
     private static void entities() {
         LootBuilder builder = LootBuilder.create();

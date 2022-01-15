@@ -50,10 +50,6 @@ public class LootTableHelper {
         if (append != null) {
             append.forEach(supplier::pool);
         }
-        
-        if (id.getPath().equals("crabtrap/baiting")) {
-            ValleyMain.LOGGER.info("Hello! If you see this message, it means loot table " + id + " is loaded and ready to go!");
-        }
     }
     
     static {
