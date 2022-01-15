@@ -52,8 +52,7 @@ public class CrabTrapScreenHandler extends ScreenHandler {
     }
 
     @Override
-    // This method is where shift-click item transfer is implemented. I gave up on
-    // it - AndEditor7
+    // This method is where shift-click item transfer is implemented. I gave up on it - AndEditor7
     public ItemStack transferSlot(PlayerEntity player, int index) {
         return ItemStack.EMPTY;
     }
