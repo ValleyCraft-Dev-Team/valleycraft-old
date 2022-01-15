@@ -50,6 +50,7 @@ public class FurnitureCont {
     public static final Block CRATE_POISON = new CrateBlock();
 
     public static final Block BONE_JOINT = new BoneJointBlock();
+    public static final Block TELESCOPE_BLOCK = new StewPotBlock();
 
     @SuppressWarnings("unused")
     public static void initialize() {
@@ -102,6 +103,7 @@ public class FurnitureCont {
         Util.registerWithItem("crate_sugar", CRATE_SUGAR, furnGroup);
 
         Util.registerWithItem("bone_joint_block", BONE_JOINT, furnGroup);
+        Util.registerWithItem("telescope_block", TELESCOPE_BLOCK, furnGroup);
 
     }
 }
