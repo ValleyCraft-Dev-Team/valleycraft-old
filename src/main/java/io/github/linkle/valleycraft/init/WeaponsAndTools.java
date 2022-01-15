@@ -13,8 +13,14 @@ import static io.github.linkle.valleycraft.utils.Util.register;
 
 public class WeaponsAndTools {
 
+        //Store instances of each gear item's base classes, configured with the chosen attack damage, speed, etc.
+        //We only store them in variables when another class needs to do things like inject them into loot tables
     public static final Item TONGS = new TongsBase(new TongsToolMaterial());
     public static final Item DRUID = new DruidStaffBase();
+    public static final Item MERMAID_SWORD = new MermaidSwordBase(new MermaidToolMaterialKnife(), 5, -1.5f);
+    public static final Item MERMAID_SPEAR = new MermaidSpearBase(new MermaidToolMaterialKnife(), 7, -1.8f);
+    public static final Item ENCRUSTED_PICKAXE = new EncrustedPickaxeBase(new EncrustedToolMaterialPickaxe(), 2, -2.5f);
+    public static final Item CORAL_KNIFE = new CoralKnifeBase(new CoralToolMaterialKnife(), 4, -1.5f);
 
     public static void initialize() {
         //Branch
@@ -42,12 +48,12 @@ public class WeaponsAndTools {
         Util.register("druid_staff", DRUID);
 
         //Coral Knife
-        Util.register("coral_knife", new CoralKnifeBase(new CoralToolMaterialKnife(), 4, -1.5f));
+        Util.register("coral_knife", CORAL_KNIFE);
 
         //Mermaid Weapons
-        Util.register("mermaids_spear", new MermaidSpearBase(new MermaidToolMaterialKnife(), 6, -1.8f));
-        Util.register("mermaids_sword", new MermaidSwordBase(new MermaidToolMaterialKnife(), 5, -1.5f));
-        Util.register("encrusted_pickaxe", new EncrustedPickaxeBase(new EncrustedToolMaterialPickaxe(), 2, -2.5f));
+        Util.register("mermaids_spear", MERMAID_SPEAR);
+        Util.register("mermaids_sword", MERMAID_SWORD);
+        Util.register("encrusted_pickaxe", ENCRUSTED_PICKAXE);
 
         //Knives
         register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));

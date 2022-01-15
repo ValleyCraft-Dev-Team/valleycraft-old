@@ -31,8 +31,11 @@ public class VLootTables {
     public static void initialize() {
         blocks();
         entities();
+        chests();
         
+            //If the config has fishing enabled...
         if (CONFIG.fishing.enabled) {
+                //... inject our fish and junk into the respective vanilla loot tables
             LootTableHelper.injectLoot(LootTables.FISHING_FISH_GAMEPLAY, VLootTables::fishingFishLoot);
             LootTableHelper.injectLoot(LootTables.FISHING_JUNK_GAMEPLAY, VLootTables::fishingJunkLoot);
         }
@@ -94,6 +97,23 @@ public class VLootTables {
     private static void chests() {
         LootTableHelper.appendLoot(LootTables.ABANDONED_MINESHAFT_CHEST,
                 LootBuilder.create().rolls(1).with(EmptyEntry.Serializer().weight(0)));
+
+            //Inject all three mermaid weapons into the large ocean ruin loot table
+        LootTableHelper.appendLoot(LootTables.UNDERWATER_RUIN_BIG_CHEST,
+                LootBuilder.create().rolls(1)
+                    .with(WeaponsAndTools.MERMAID_SWORD)
+                    .with(WeaponsAndTools.MERMAID_SPEAR)
+                    .with(WeaponsAndTools.CORAL_KNIFE)
+                        //Only 9 in 10 large ocean ruin chests will contain a mermaid weapon
+                    .conditionally(RandomChanceLootCondition.builder(0.91f))
+        );
+            //Inject encrusted pickaxe into the small ocean ruin loot table
+        LootTableHelper.appendLoot(LootTables.UNDERWATER_RUIN_BIG_CHEST,
+                LootBuilder.create().rolls(1)
+                    .with(WeaponsAndTools.ENCRUSTED_PICKAXE)
+                        //Only 1 in 15 small ocean ruin chests will contain an encrusted pickaxe
+                    .conditionally(RandomChanceLootCondition.builder(0.07f))
+        );
     }
 
     private static void blocks() {
