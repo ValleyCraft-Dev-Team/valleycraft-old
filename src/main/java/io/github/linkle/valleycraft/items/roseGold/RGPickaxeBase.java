@@ -6,6 +6,6 @@ import net.minecraft.item.ToolMaterial;
 
 public class RGPickaxeBase extends PickaxeItem {
     public RGPickaxeBase(ToolMaterial RGToolMaterialPickaxe) {
-        super(RGToolMaterialPickaxe, 3, -2.8f, new Settings().group(ItemGroups.EXPLORATION_GROUP));
+        super(RGToolMaterialPickaxe, 2, -2.8f, new Settings().group(ItemGroups.EXPLORATION_GROUP));
     }
 }

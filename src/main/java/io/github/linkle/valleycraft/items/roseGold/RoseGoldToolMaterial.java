@@ -4,7 +4,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class RoseGoldToolMaterialShovel implements ToolMaterial {
+public class RoseGoldToolMaterial implements ToolMaterial {
     @Override
     public int getDurability() {
         //Wood: 59
@@ -39,7 +39,7 @@ public class RoseGoldToolMaterialShovel implements ToolMaterial {
         //Diamond: 3.0f
         //Gold: 0.0f
         //Netherite: 4.0f?
-        return 0.5f;
+        return 1.0f;
     }
 
     @Override

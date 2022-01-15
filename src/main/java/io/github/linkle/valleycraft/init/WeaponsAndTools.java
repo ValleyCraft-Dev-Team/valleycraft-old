@@ -8,6 +8,9 @@ import io.github.linkle.valleycraft.items.roseGold.*;
 import io.github.linkle.valleycraft.items.sickles.*;
 import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.item.Item;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.Item.Settings;
 
 import static io.github.linkle.valleycraft.utils.Util.register;
 
@@ -19,8 +22,21 @@ public class WeaponsAndTools {
     public static final Item DRUID = new DruidStaffBase();
     public static final Item MERMAID_SWORD = new MermaidSwordBase(new MermaidToolMaterialKnife(), 5, -1.5f);
     public static final Item MERMAID_SPEAR = new MermaidSpearBase(new MermaidToolMaterialKnife(), 7, -1.8f);
-    public static final Item ENCRUSTED_PICKAXE = new EncrustedPickaxeBase(new EncrustedToolMaterialPickaxe(), 2, -2.5f);
-    public static final Item CORAL_KNIFE = new CoralKnifeBase(new CoralToolMaterialKnife(), 4, -1.5f);
+    public static final Item ENCRUSTED_PICKAXE = new EncrustedPickaxeBase(new EncrustedToolMaterialPickaxe(), 2, -2.8f);
+    public static final Item CORAL_KNIFE = new CoralKnifeBase(new CoralToolMaterialKnife(), 3, -1.4f);
+
+        //The base attack damage of each tool type.
+        //These values are added to the attack stats of their materials when they're registered.
+        //The attack stats are listed in RoseGoldToolMaterial.class.
+    public static final Integer KNIFE_BASE_DAMAGE = 1;
+    public static final Integer SICKLE_BASE_DAMAGE = 7;
+    public static final Integer HATCHET_BASE_DAMAGE = 4;
+        //The base attack speed of each tool type.
+        //These numbers are subtracted from four, so 4.0 will make the tool never charge, and higher will likely cause issues.
+        //Larger number = slower, smaller number = faster.
+    public static final Float KNIFE_BASE_SPEED = -2.0f;
+    public static final Float SICKLE_BASE_SPEED = -3.0f;
+    public static final Float HATCHET_BASE_SPEED = -2.4f;
 
     public static void initialize() {
         //Branch
@@ -55,35 +71,39 @@ public class WeaponsAndTools {
         Util.register("mermaids_sword", MERMAID_SWORD);
         Util.register("encrusted_pickaxe", ENCRUSTED_PICKAXE);
 
-        //Knives
-        register("wood_knife", new KnifeBase(new WoodToolMaterialKnife(), 2, -2.2f));
-        register("stone_knife", new KnifeBase(new StoneToolMaterialKnife(), 2, -2.0f));
-        register("golden_knife", new KnifeBase(new GoldenToolMaterialKnife(), 2, -2.2f));
-        register("iron_knife", new KnifeBase(new IronToolMaterialKnife(), 3, -2.0f));
-        register("rg_knife", new KnifeBase(new RoseGoldToolMaterialKnife(), 3, -2.0f));
-        register("diamond_knife", new KnifeBase(new DiamondToolMaterialKnife(), 4, -2.0f));
-        register("netherite_knife", new KnifeBase(new NetheriteToolMaterialKnife(), 5, -2.0f));
-        //Sickles
-        Util.register("wood_sickle", new SickleBase(new WoodToolMaterialSickle(), 2, -3.4f));
-        Util.register("stone_sickle", new SickleBase(new StoneToolMaterialSickle(), 2, -3.3f));
-        Util.register("golden_sickle", new SickleBase(new GoldenToolMaterialSickle(), 2, -3.4f));
-        Util.register("iron_sickle", new SickleBase(new IronToolMaterialSickle(), 2, -3.2f));
-        Util.register("rg_sickle", new SickleBase(new RoseGoldToolMaterialSickle(), 2, -3.2f));
-        Util.register("diamond_sickle", new SickleBase(new DiamondToolMaterialSickle(), 2, -3.1f));
-        Util.register("netherite_sickle", new SickleBase(new NetheriteToolMaterialSickle(), 3, -3.0f));
-        //Hatchets
-        Util.register("wood_hatchet", new HatchetBase(new WoodToolMaterialHatchet(), 5, -2.6f));
-        Util.register("stone_hatchet", new HatchetBase(new StoneToolMaterialHatchet(), 7, -2.6f));
-        Util.register("golden_hatchet", new HatchetBase(new GoldenToolMaterialHatchet(), 5, -2.4f));
-        Util.register("iron_hatchet", new HatchetBase(new IronToolMaterialHatchet(), 7, -2.5f));
-        Util.register("rg_hatchet", new HatchetBase(new RoseGoldToolMaterialHatchet(), 7, -2.5f));
-        Util.register("diamond_hatchet", new HatchetBase(new DiamondToolMaterialHatchet(), 7, -2.4f));
-        Util.register("netherite_hatchet", new HatchetBase(new NetheriteToolMaterialHatchet(), 8, -2.4f));
-        //Rose Gold Tools
-        register("rg_shovel", new RGShovelBase(new RoseGoldToolMaterialShovel()));
-        register("rg_pickaxe", new RGPickaxeBase(new RoseGoldToolMaterialPickaxe()));
-        register("rg_axe", new RGAxeBase(new RoseGoldToolMaterialAxe()));
-        register("rg_hoe", new RGHoeBase(new RoseGoldToolMaterialHoe()));
-        register("rg_sword", new RGSwordBase(new RoseGoldToolMaterialSword()));
+            //Knives
+        register("wood_knife", new KnifeBase(ToolMaterials.WOOD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("stone_knife", new KnifeBase(ToolMaterials.STONE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("golden_knife", new KnifeBase(ToolMaterials.GOLD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("iron_knife", new KnifeBase(ToolMaterials.IRON, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("rg_knife", new KnifeBase(new RoseGoldToolMaterial(), KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("diamond_knife", new KnifeBase(ToolMaterials.DIAMOND, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("netherite_knife", new KnifeBase(ToolMaterials.NETHERITE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+            //Sickles
+            //Lower tier sickles have slightly slower attack speeds than base, to match vanilla hoes
+        Util.register("wood_sickle", new SickleBase(ToolMaterials.WOOD, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.4f));
+        Util.register("stone_sickle", new SickleBase(ToolMaterials.STONE, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.3f));
+        Util.register("golden_sickle", new SickleBase(ToolMaterials.GOLD, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.4f));
+        Util.register("iron_sickle", new SickleBase(ToolMaterials.IRON, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.2f));
+        Util.register("rg_sickle", new SickleBase(new RoseGoldToolMaterial(), SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.2f));
+        Util.register("diamond_sickle", new SickleBase(ToolMaterials.DIAMOND, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.1f));
+        Util.register("netherite_sickle", new SickleBase(ToolMaterials.NETHERITE, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED));
+            //Hatchets
+            //Lower tier hatchest have slightly slower attack speeds than base, to match vanilla axes
+        Util.register("wood_hatchet", new HatchetBase(ToolMaterials.WOOD, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.2f));
+        Util.register("stone_hatchet", new HatchetBase(ToolMaterials.STONE, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.2f));
+        Util.register("golden_hatchet", new HatchetBase(ToolMaterials.GOLD, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));
+        Util.register("iron_hatchet", new HatchetBase(ToolMaterials.IRON, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.1f));
+        Util.register("rg_hatchet", new HatchetBase(new RoseGoldToolMaterial(), HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.1f));
+        Util.register("diamond_hatchet", new HatchetBase(ToolMaterials.DIAMOND, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));
+        Util.register("netherite_hatchet", new HatchetBase(ToolMaterials.NETHERITE, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));
+            //Rose Gold Tools
+            //The shovel specifically can just use the vanilla class. All other tool classes have protected methods, so we have to extend them.
+            //TL;DR: The shovel is different because only it can use the vanilla class, because mojank
+        register("rg_shovel", new ShovelItem(new RoseGoldToolMaterial(), 3.5f, -3f, new Settings().group(ItemGroups.EXPLORATION_GROUP)));
+        register("rg_pickaxe", new RGPickaxeBase(new RoseGoldToolMaterial()));
+        register("rg_axe", new RGAxeBase(new RoseGoldToolMaterial()));
+        register("rg_hoe", new RGHoeBase(new RoseGoldToolMaterial()));
+        register("rg_sword", new RGSwordBase(new RoseGoldToolMaterial()));
     }
 }

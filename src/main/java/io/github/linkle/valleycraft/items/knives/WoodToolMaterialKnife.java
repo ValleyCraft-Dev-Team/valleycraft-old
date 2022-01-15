@@ -30,6 +30,8 @@ public class WoodToolMaterialKnife implements ToolMaterial {
         return 3.0f;
     }
 
+        //Any value input here is added to the one in WeaponsAndTools.java
+        //DO NOT set attack damage to anything but 0.0, set desired value in WeaponsAndTools.java instead
     @Override
     public float getAttackDamage() {
         //Wood: 0.0f
@@ -39,7 +41,7 @@ public class WoodToolMaterialKnife implements ToolMaterial {
         //Diamond: 3.0f
         //Gold: 0.0f
         //Netherite: 4.0f?
-        return 0.5f;
+        return 0.0f;
     }
 
     @Override

@@ -6,6 +6,6 @@ import net.minecraft.item.ToolMaterial;
 
 public class RGSwordBase extends SwordItem {
     public RGSwordBase(ToolMaterial RGToolMaterialSword) {
-        super(RGToolMaterialSword, 5, -2.4f, new Settings().group(ItemGroups.EXPLORATION_GROUP));
+        super(RGToolMaterialSword, 4, -2.4f, new Settings().group(ItemGroups.EXPLORATION_GROUP));
     }
 }
