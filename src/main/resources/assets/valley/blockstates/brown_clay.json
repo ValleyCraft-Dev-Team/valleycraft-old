@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "valley:block/brown_clay"
+      "model": "valley:block/mud_block"
     }
   }
 }

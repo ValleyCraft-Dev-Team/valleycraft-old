@@ -68,8 +68,8 @@ public class CrabTrap extends BlockWithEntity implements Waterloggable {
             if (j == 0) {
                 f += (float)itemStack.getCount() / (float)Math.min(inventory.getMaxCountPerStack(), itemStack.getMaxCount());
             }
-                //If we're checking an output slot, because items don't stack in output slots,
-                //and because we checked for empty earlier, the slot is full, so add one to f.
+                //If we're checking an output slot, we treat the slot as full if it contains anything at all.
+                //Because we checked for empty earlier, the slot is full, so add one to f.
             else {
                 f += 1;
             }
