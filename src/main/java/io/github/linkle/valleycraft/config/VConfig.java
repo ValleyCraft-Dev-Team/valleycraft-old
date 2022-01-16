@@ -145,57 +145,57 @@ public class VConfig implements ConfigData {
         // Make sure you reset your config if you made a change.
         public static class PlantFeatures implements ConfigData {
             @Gui.CollapsibleObject
-            public PlantConfig wheatPatch = new PlantConfig(50, 100); // (1, 6)
+            public PlantConfig wheatPatch = new PlantConfig(20, 60); // (1, 6)
             @Gui.CollapsibleObject
-            public PlantConfig carrotPatch = new PlantConfig(50, 75); // (1, 3)
+            public PlantConfig carrotPatch = new PlantConfig(20, 60); // (1, 3)
             @Gui.CollapsibleObject
-            public PlantConfig beetPatch = new PlantConfig(50, 75); // (1, 4)
+            public PlantConfig beetPatch = new PlantConfig(20, 60); // (1, 4)
             @Gui.CollapsibleObject
-            public PlantConfig potatoPatch = new PlantConfig(50, 90); // (1, 5)
+            public PlantConfig potatoPatch = new PlantConfig(20, 60); // (1, 5)
             @Gui.CollapsibleObject
-            public PlantConfig willowPatch = new PlantConfig(30, 70); // (2, 5)
+            public PlantConfig willowPatch = new PlantConfig(3, 10); // (2, 5)
             @Gui.CollapsibleObject
-            public PlantConfig ribbonPatch = new PlantConfig(12, 2);
+            public PlantConfig ribbonPatch = new PlantConfig(7, 3);
             @Gui.CollapsibleObject
-            public PlantConfig orangeFernPatch = new PlantConfig(30, 45); // (5, 1)
+            public PlantConfig orangeFernPatch = new PlantConfig(5, 2); // (5, 1)
             @Gui.CollapsibleObject
-            public PlantConfig orangeBeautyPatch = new PlantConfig(30, 60); // (2, 2)
+            public PlantConfig orangeBeautyPatch = new PlantConfig(5, 10); // (2, 2)
             @Gui.CollapsibleObject
             public PlantConfig dahliaPatch = new PlantConfig(35, 60); // (8, 2)
             @Gui.CollapsibleObject
-            public PlantConfig lavenderPatch = new PlantConfig(35, 60); // (8, 1)
+            public PlantConfig lavenderPatch = new PlantConfig(35, 20); // (8, 1)
             @Gui.CollapsibleObject
             public PlantConfig sorrelPatch = new PlantConfig(5, 4);
             @Gui.CollapsibleObject
             public PlantConfig dandelionPatch = new PlantConfig(2, 3);
             @Gui.CollapsibleObject
-            public PlantConfig herbPatch = new PlantConfig(40, 85); // (1, 2)
+            public PlantConfig herbPatch = new PlantConfig(10, 60); // (1, 2)
             @Gui.CollapsibleObject
-            public PlantConfig taprootPatch = new PlantConfig(40, 85); // (1, 3)
+            public PlantConfig taprootPatch = new PlantConfig(10, 60); // (1, 3)
             @Gui.CollapsibleObject
             public PlantConfig crocusPatch = new PlantConfig(3, 3);
             @Gui.CollapsibleObject
-            public PlantConfig hollyPatch = new PlantConfig(40, 85); // (1, 4)
+            public PlantConfig hollyPatch = new PlantConfig(3040, 65); // (1, 4)
             @Gui.CollapsibleObject
             public PlantConfig morelPatch = new PlantConfig(3, 5);
             @Gui.CollapsibleObject
             public PlantConfig bushPatch = new PlantConfig(7, 2);
             @Gui.CollapsibleObject
-            public PlantConfig sproutPatch = new PlantConfig(3, 1);
+            public PlantConfig sproutPatch = new PlantConfig(5, 1);
             @Gui.CollapsibleObject
             public PlantConfig boxwoodPatch = new PlantConfig(7, 3);
             @Gui.CollapsibleObject
-            public PlantConfig jungleCapPatch = new PlantConfig(30, 70); // (1, 3)
+            public PlantConfig jungleCapPatch = new PlantConfig(10, 20); // (1, 3)
             @Gui.CollapsibleObject
-            public PlantConfig panPatch = new PlantConfig(40, 85); // (1, 4)
+            public PlantConfig panPatch = new PlantConfig(2, 4); // (1, 4)
             @Gui.CollapsibleObject
             public PlantConfig swampBushPatch = new PlantConfig(7, 3);
             @Gui.CollapsibleObject
-            public PlantConfig rockPatch = new PlantConfig(7, 2);
+            public PlantConfig rockPatch = new PlantConfig(7, 4);
             @Gui.CollapsibleObject
-            public PlantConfig snowPatch = new PlantConfig(7, 2);
+            public PlantConfig snowPatch = new PlantConfig(7, 4);
             @Gui.CollapsibleObject
-            public PlantConfig snowRockPatch = new PlantConfig(7, 2);
+            public PlantConfig snowRockPatch = new PlantConfig(7, 4);
             @Gui.CollapsibleObject
             public PlantConfig rosePatch = new PlantConfig(30, 60); // (1, 5)
             @Gui.CollapsibleObject
@@ -205,21 +205,21 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig peonyPatch = new PlantConfig(30, 70); // (1, 5)
             @Gui.CollapsibleObject
-            public PlantConfig tumblePatch = new PlantConfig(30, 70); // (1, 5)
+            public PlantConfig tumblePatch = new PlantConfig(5, 40); // (1, 5)
             @Gui.CollapsibleObject
             public PlantConfig floweringCactusPatch = new PlantConfig(3, 5);
             @Gui.CollapsibleObject
             public PlantConfig cactusPatch = new PlantConfig(10, 20); // (2, 5)
             @Gui.CollapsibleObject
-            public PlantConfig alivePatch = new PlantConfig(15, 10); // (10, 5)
+            public PlantConfig alivePatch = new PlantConfig(10, 7); //done - L
             @Gui.CollapsibleObject
-            public PlantConfig bitterPatch = new PlantConfig(30, 50);  // (2, 5)
+            public PlantConfig bitterPatch = new PlantConfig(5, 40);  // (2, 5)
             @Gui.CollapsibleObject
-            public PlantConfig tomatoPatch = new PlantConfig(30, 60); // (1, 5)
+            public PlantConfig tomatoPatch = new PlantConfig(5, 30); // (1, 5)
             @Gui.CollapsibleObject
             public PlantConfig sourPatch = new PlantConfig(2, 5); 
             @Gui.CollapsibleObject
-            public PlantConfig reedPatch = new PlantConfig(0, 2);
+            public PlantConfig reedPatch = new PlantConfig(5, 2); //done - L
         }
 
         public static class Trees implements ConfigData {

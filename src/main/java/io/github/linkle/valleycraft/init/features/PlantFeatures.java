@@ -35,9 +35,9 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public class PlantFeatures {
     //Beach Features
-    private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Aquatic.CLAM, 3, 1);
-    private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, false), 1, 1);
-    private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, false), 1, 1);
+    private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Aquatic.CLAM, 3, 4);
+    private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, false), 1, 10);
+    private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, false), 1, 10);
 
     public static void initialize() {
         var config = ValleyMain.CONFIG.featureGenerations.plantFeatures;
