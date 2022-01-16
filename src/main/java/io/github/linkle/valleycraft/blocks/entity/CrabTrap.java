@@ -55,7 +55,7 @@ public class CrabTrap extends BlockWithEntity implements Waterloggable {
         //Determine what signal strength comparators should output based on how full the trap is
     @Override
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
-        Inventory inventory = (Inventory)((Object)world.getBlockEntity(pos));
+        Inventory inventory = (Inventory)world.getBlockEntity(pos);
         int i = 0;
         float f = 0.0f;
             //This starts a loop. We're gonna check every slot for how full it is

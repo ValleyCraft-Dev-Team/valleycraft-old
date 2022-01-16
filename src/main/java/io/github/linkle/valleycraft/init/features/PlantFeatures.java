@@ -206,12 +206,12 @@ public class PlantFeatures {
             
         if (config.honeyClusterPatch.enable) {
             var set = config.honeyClusterPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS), vegetal, create("honey_cluster_patch", Plants.HONEY_CLUSTER, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("honey_cluster_patch", Plants.HONEY_CLUSTER, set.tries, set.rarity));
         }
             
         if (config.lilacPatch.enable) {
             var set = config.lilacPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS), vegetal, create("lilac_patch", Plants.LILACBUSH, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("lilac_patch", Plants.LILACBUSH, set.tries, set.rarity));
         }
             
         if (config.peonyPatch.enable) {

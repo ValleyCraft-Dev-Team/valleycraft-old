@@ -5,6 +5,7 @@ import java.util.Random;
 import io.github.linkle.valleycraft.init.Aquatic;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.state.property.Properties;
 import net.minecraft.structure.PostPlacementProcessor;
 import net.minecraft.structure.StructureGeneratorFactory;
@@ -23,11 +24,9 @@ import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 
 public class ResearchStationFeature extends StructureFeature<DefaultFeatureConfig> {
-    
-    private static final PostPlacementProcessor PROCESSOR = ResearchStationFeature::postPlace;
 
     public ResearchStationFeature() {
-        super(DefaultFeatureConfig.CODEC, StructureGeneratorFactory.simple(ResearchStationFeature::canGenerate, ResearchStationFeature::addPieces), PROCESSOR);
+        super(DefaultFeatureConfig.CODEC, StructureGeneratorFactory.simple(ResearchStationFeature::canGenerate, ResearchStationFeature::addPieces), ResearchStationFeature::postPlace);
     }
     
     private static void postPlace(StructureWorldAccess world, StructureAccessor structureAccessor, ChunkGenerator chunkGenerator, Random random, BlockBox chunkBox, ChunkPos chunkPos, StructurePiecesList children) {
@@ -47,11 +46,13 @@ public class ResearchStationFeature extends StructureFeature<DefaultFeatureConfi
                         var bool = state.getMaterial().isLiquid() || state.isAir();
                         if (bool || num++ < 3) {
                             world.setBlockState(mutable, Blocks.OAK_LOG.getDefaultState(), Block.NOTIFY_LISTENERS);
-                            if (random.nextInt(12) == 0) {
+                            if (random.nextInt(10) == 0) {
                                 var face = Direction.fromHorizontal(random.nextInt(4));
                                 var pos = mutable.offset(face);
                                 if (canReplace(world, pos)) {
-                                    world.setBlockState(pos, Aquatic.BARNACLE.getDefaultState().with(Properties.FACING, face), Block.NOTIFY_LISTENERS);
+                                    var newState = Aquatic.BARNACLE.getDefaultState().with(Properties.FACING, face);
+                                    newState = newState.with(Properties.WATERLOGGED, world.getFluidState(pos).getFluid() == Fluids.WATER);
+                                    world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
                                 }
                             }
                             if (bool) num = 0;

@@ -4,6 +4,7 @@ import static io.github.linkle.valleycraft.ValleyMain.MOD_ID;
 
 import io.github.linkle.valleycraft.world.gen.structures.ResearchStationFeature;
 import io.github.linkle.valleycraft.world.gen.structures.ShipwreckFeature;
+import io.github.linkle.valleycraft.world.gen.structures.TidePoolFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
@@ -19,8 +20,8 @@ import net.minecraft.world.gen.feature.StructureFeature;
 
 public class Structures {
     private static final StructureFeature<DefaultFeatureConfig> SHIPWRECK = new ShipwreckFeature();
-    
     private static final StructureFeature<DefaultFeatureConfig> AQUATIC_STATION = new ResearchStationFeature();
+    private static final StructureFeature<DefaultFeatureConfig> TIDE_POOL = new TidePoolFeatures();
 
     public static void initialize() {
         var surface = GenerationStep.Feature.SURFACE_STRUCTURES;
@@ -29,19 +30,28 @@ public class Structures {
 
         FabricStructureBuilder.create(new Identifier(MOD_ID, "shipwreck"), SHIPWRECK)
                 .step(surface)
-                .defaultConfig(32, 12, 4353)
+                .defaultConfig(24, 10, 4353)
                 .adjustsSurface()
                 .register();
         
         FabricStructureBuilder.create(new Identifier(MOD_ID, "research_station"), AQUATIC_STATION)
                 .step(surface)
-                .defaultConfig(64, 28, 5678)
+                .defaultConfig(64, 24, 5678)
                 .register();
+        
+        FabricStructureBuilder.create(new Identifier(MOD_ID, "tide_pool"), TIDE_POOL)
+        .step(surface)
+        .defaultConfig(6, 2, 2545)
+        .adjustsSurface()
+        .register();
 
         key = registor(SHIPWRECK.configure(DefaultFeatureConfig.DEFAULT), "shipwreck");
         BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
         
         key = registor(AQUATIC_STATION.configure(DefaultFeatureConfig.DEFAULT), "research_station");
+        BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
+        
+        key = registor(TIDE_POOL.configure(DefaultFeatureConfig.DEFAULT), "tide_pool");
         BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
     }
 
