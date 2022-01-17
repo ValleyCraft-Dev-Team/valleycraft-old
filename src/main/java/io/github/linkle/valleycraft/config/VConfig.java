@@ -181,15 +181,15 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig bushPatch = new PlantConfig(14, 2);
             @Gui.CollapsibleObject
-            public PlantConfig sproutPatch = new PlantConfig(15, 1);
+            public PlantConfig sproutPatch = new PlantConfig(7, 1);
             @Gui.CollapsibleObject
             public PlantConfig boxwoodPatch = new PlantConfig(14, 3);
             @Gui.CollapsibleObject
-            public PlantConfig jungleCapPatch = new PlantConfig(15, 4); // (1, 3)
+            public PlantConfig jungleCapPatch = new PlantConfig(7, 4); // (1, 3)
             @Gui.CollapsibleObject
-            public PlantConfig panPatch = new PlantConfig(15, 6); // (1, 4)
+            public PlantConfig panPatch = new PlantConfig(7, 6); // (1, 4)
             @Gui.CollapsibleObject
-            public PlantConfig swampBushPatch = new PlantConfig(20, 3);
+            public PlantConfig swampBushPatch = new PlantConfig(13, 3);
             @Gui.CollapsibleObject
             public PlantConfig rockPatch = new PlantConfig(7, 4);
             @Gui.CollapsibleObject

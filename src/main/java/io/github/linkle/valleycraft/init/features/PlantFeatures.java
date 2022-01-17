@@ -19,6 +19,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
 import net.minecraft.world.biome.BiomeKeys;
@@ -74,22 +75,22 @@ public class PlantFeatures {
             
         if (config.willowPatch.enable) {
             var set = config.willowPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
         }
             
         if (config.ribbonPatch.enable) {
             var set = config.ribbonPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, create("ribbon_patch", Plants.SWAMP_RIBBON, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP, BiomeKeys.JUNGLE, BiomeKeys.SPARSE_JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("ribbon_patch", Plants.SWAMP_RIBBON, set.tries, set.rarity));
         }
             
         if (config.orangeFernPatch.enable) {
             var set = config.orangeFernPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, create("orange_fern_patch", Plants.ORANGE_FERN, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("orange_fern_patch", Plants.ORANGE_FERN, set.tries, set.rarity));
         }
             
         if (config.orangeBeautyPatch.enable) {
             var set = config.orangeBeautyPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, create("orange_beauty_patch", Plants.ORANGE_BEAUTY, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("orange_beauty_patch", Plants.ORANGE_BEAUTY, set.tries, set.rarity));
         }
             
         if (config.dahliaPatch.enable) {
