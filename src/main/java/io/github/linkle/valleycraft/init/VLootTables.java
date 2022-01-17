@@ -113,17 +113,23 @@ public class VLootTables {
     }
 
     private static void blocks() {
+            //When we need to add an item to multiple loot tables, like fiber or worms,
+            //first we make a "loot builder" and store it in a variable,
+            //then we call it for all of the blocks we want to drop the item.
+
+            //Create fiber loot builder and apply it to grass and tall grass
         LootBuilder builder = LootBuilder.create()
             .rolls(1).with(MiscItems.FIBER)
-            .withCondition(new MatchToolLootCondition(LootUtils.tag(VItemTags.KNIVES))
+            .withCondition(new MatchToolLootCondition(LootUtils.tag(VItemTags.SICKLES))
         );
-
+        
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
 
+            //Create worm loot builder and apply it to grass and tall grass
         builder = LootBuilder.create()
-                .rolls(1).with(FoodAndCooking.WORM)
-                .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS))
+            .rolls(1).with(FoodAndCooking.WORM)
+            .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS))
         );
 
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
@@ -133,6 +139,7 @@ public class VLootTables {
             .rolls(1).with(Blocks.ICE)
             .withCondition(new MatchToolLootCondition(LootUtils.items(WeaponsAndTools.TONGS))
         );
+        
         LootTableHelper.appendLoot(Blocks.ICE.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.BLUE_ICE.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.PACKED_ICE.getLootTableId(), builder);

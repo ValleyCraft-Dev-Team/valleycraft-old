@@ -20,6 +20,7 @@ public class VItemTags {
     public static final Tag<Item> EGGS = ITEM.create(newId("eggs"));
     public static final Tag<Item> FLOUR = ITEM.create(newId("flour"));
     public static final Tag<Item> KNIVES = ITEM.create(newId("knives"));
+    public static final Tag<Item> SICKLES = ITEM.create(newId("sickles"));
     public static final Tag<Item> LIGHT_BLUE_DYES = ITEM.create(newId("light_blue_dyes"));
     public static final Tag<Item> MINERS_LETTUCE = ITEM.create(newId("miners_lettuce"));
     public static final Tag<Item> MOLLUSKS = ITEM.create(newId("mollusks"));
