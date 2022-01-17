@@ -125,7 +125,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             if (rememberList.containsKey(item)) {
                 timer = rememberList.getInt(item);
             } else {
-                timer = CrabTrapBaits.get(getBait().getItem(), world.random);
+                timer = 0;
                 rememberList.put(item, timer);
                 maxTimer = timer;
             }
@@ -163,19 +163,37 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         var list = lootTable.generateLoot(builder.build(LootContextTypes.EMPTY));
         for (var loot : list) {
             var added = false;
+            int emptySlot = -1;
+            ItemStack foundStack = null;
+            
             for (int i = 1; i < 10; i++) {
                 var stack = getStack(i);
-                if (stack.isEmpty()) {
-                    setStack(i, loot);
-                    added = true;
+                if (emptySlot == -1 && stack.isEmpty()) {
+                    emptySlot = i;
                 } else if (Util.canMergeItems(stack, loot)) {
                     int num = Math.min(loot.getMaxCount(), 16) - stack.getCount();
                     int change = Math.min(loot.getCount(), num);
-                    stack.increment(change);
-                    added = change > 0;
+                    if (change > 0) {
+                        foundStack = stack;
+                        break; 
+                    }
                 }
+            }
+            
+            // Check if it found the stack then increment it.
+            if (foundStack != null) {
+                int num = Math.min(loot.getMaxCount(), 16) - foundStack.getCount();
+                int change = Math.min(loot.getCount(), num);
+                foundStack.increment(change);
+                loot.decrement(change);
+                added = change > 0;
                 
-                if (added) break;
+                if (!loot.isEmpty() && emptySlot != -1) {
+                    setStack(emptySlot, loot);
+                }
+            } else if (emptySlot != -1) {
+                setStack(emptySlot, loot);
+                added = true;
             }
             
             if (added) {

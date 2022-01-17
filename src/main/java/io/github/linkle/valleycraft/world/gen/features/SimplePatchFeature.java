@@ -16,7 +16,6 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
         var random = context.getRandom();
         var origin = context.getOrigin();
         var world = context.getWorld();
-        var state = config.state().getBlockState(random, origin);
         var mutable = new BlockPos.Mutable();
 
         int height = config.ySpread();
@@ -29,7 +28,8 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
             int yOffset = random.nextInt(height) - (height / 2);
             int zOffset = random.nextInt(size) - (size / 2);
             mutable.set(origin, xOffset, yOffset, zOffset);
-
+            var state = config.state().getBlockState(random, mutable);
+            
             if (state.canPlaceAt(world, mutable) && config.placer().place(world, mutable, state)) {
                 spawned++;
             }

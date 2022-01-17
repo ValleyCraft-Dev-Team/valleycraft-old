@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/brown_clay"
+    "layer0": "valley:items/mud_ball"
   }
 }
