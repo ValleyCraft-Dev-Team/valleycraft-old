@@ -1,6 +1,7 @@
 package io.github.linkle.valleycraft;
 
 import io.github.linkle.valleycraft.blocks.entity.BlockEntities;
+import io.github.linkle.valleycraft.config.ConfigVersionHandler;
 import io.github.linkle.valleycraft.config.VConfig;
 import io.github.linkle.valleycraft.criterions.VCriteria;
 import io.github.linkle.valleycraft.init.*;
@@ -24,7 +25,10 @@ public class ValleyMain implements ModInitializer {
     @SuppressWarnings("unused")
     public void onInitialize() {
         AutoConfig.register(VConfig.class, GsonConfigSerializer::new);
-        CONFIG = AutoConfig.getConfigHolder(VConfig.class).getConfig();
+        var holder = AutoConfig.getConfigHolder(VConfig.class);
+        CONFIG = holder.getConfig();
+        holder.resetToDefault(); // Reset everything to default. If this code left open to execute. Please comment this line with //
+        ConfigVersionHandler.handle(holder);
 
         // This should stay first before items and blocks.
         Object initializer1 = VItemTags.KNIVES; // will force the class to load (any static member will do)
