@@ -155,15 +155,15 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig tubeWormPatch = new PlantConfig(40, 23);
             @Gui.CollapsibleObject
-            public PlantConfig anPinkPatch = new PlantConfig(45, 65);
+            public PlantConfig anPinkPatch = new PlantConfig(45, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anPurplePatch = new PlantConfig(45, 65);
+            public PlantConfig anPurplePatch = new PlantConfig(45, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anYellowPatch = new PlantConfig(45, 65);
+            public PlantConfig anYellowPatch = new PlantConfig(45, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anGreenPatch = new PlantConfig(45, 65);
+            public PlantConfig anGreenPatch = new PlantConfig(45, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anOrangePatch = new PlantConfig(45, 65);
+            public PlantConfig anOrangePatch = new PlantConfig(45, 80);
             @Gui.CollapsibleObject
             public PlantConfig scallopPatch = new PlantConfig(40, 30);
         }
