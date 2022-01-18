@@ -273,7 +273,7 @@ public class PlantFeatures {
         return create(id, BlockStateProvider.of(block), tries, rarity);
     }
     
-    private static final ConditionBlockPlacer PLACER = new ConditionBlockPlacer(state -> state.getMaterial().isReplaceable());
+    private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer(state -> state.getMaterial().isReplaceable()));
     
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {

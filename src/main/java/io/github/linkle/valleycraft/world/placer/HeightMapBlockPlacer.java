@@ -8,6 +8,6 @@ import net.minecraft.world.Heightmap;
 public class HeightMapBlockPlacer extends ConditionBlockPlacer {
     /** @param predicate comparing block's height and world's heightmap. */
     public HeightMapBlockPlacer(Heightmap.Type type, IntPredicate predicate) {
-        super((world, pos) -> predicate.test(Integer.compare(pos.getY(), world.getTopY(type, pos.getX(), pos.getZ()))));
+        super((world, pos) -> world.isAir(pos) && predicate.test(Integer.compare(pos.getY(), world.getTopY(type, pos.getX(), pos.getZ()))));
     }
 }

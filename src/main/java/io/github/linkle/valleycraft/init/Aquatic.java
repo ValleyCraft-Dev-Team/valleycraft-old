@@ -15,7 +15,7 @@ public class Aquatic {
     public static final Block CLAM = new ClamBlock();
     public static final Block GIANT_SCALLOP = new GiantClamBlock();
     public static final Block STARFISH = new AquaticFacingBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
-    public static final Block SAND_DOLLAR = new AquaticFacingBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
+    public static final Block SAND_DOLLAR = new AquaticBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
     public static final Block RED_SEA_GRASS = new RedSeagrassBlock();
     
     public static final GlowKelp GLOW_KELP = new GlowKelp();

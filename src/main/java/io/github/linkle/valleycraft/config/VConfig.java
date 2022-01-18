@@ -10,6 +10,7 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 @Config(name = ValleyMain.MOD_ID)
 @Config.Gui.Background("valley:textures/blocks/brown_bricks.png")
 public class VConfig implements ConfigData {
+    
     /** A config version for handling outdated values. */
     @Gui.Excluded
     public int configVersion = ConfigVersionHandler.VERSION;
@@ -19,19 +20,19 @@ public class VConfig implements ConfigData {
     //public FishingConfig fishing = new FishingConfig();
 
     @Comment("Disables generation of features like stones, mud, sandstone, \nand biome-specific blobs, but not ores.")
-    @ConfigEntry.Gui.CollapsibleObject
+    @Gui.CollapsibleObject
     public BlobsGenerations blobsGenerations = new BlobsGenerations();
 
     @Comment("Disables generate of features like plants, flowers, crops, and rocks.")
-    @ConfigEntry.Gui.CollapsibleObject
+    @Gui.CollapsibleObject
     public FeatureGenerations featureGenerations = new FeatureGenerations();
 
     @Comment("Disables mob spawns")
-    @ConfigEntry.Gui.CollapsibleObject
+    @Gui.CollapsibleObject
     public Mobs mobs = new Mobs();
 
     @Comment("Other miscellaneous options")
-    @ConfigEntry.Gui.CollapsibleObject
+    @Gui.CollapsibleObject
     public Misc misc = new Misc();
 
     public static class BlobsGenerations implements ConfigData {
@@ -139,10 +140,32 @@ public class VConfig implements ConfigData {
         }
 
         public static class OceanFeatures implements ConfigData {
-            public boolean redSeaGrassPatchEnabled = true;
-            public boolean clamPatchEnabled = true;
-            public boolean sandDollarPatchEnabled = true;
-            public boolean starfishPatchEnabled = true;
+            @Gui.CollapsibleObject
+            public PlantConfig redSeaGrassPatch = new PlantConfig(60, 6);
+            @Gui.CollapsibleObject
+            public PlantConfig clamPatch = new PlantConfig(40, 17);
+            @Gui.CollapsibleObject
+            public PlantConfig sandDollarPatch = new PlantConfig(40, 25);
+            @Gui.CollapsibleObject
+            public PlantConfig starfishPatch = new PlantConfig(40, 30);
+            @Gui.CollapsibleObject
+            public PlantConfig seaFernPatch = new PlantConfig(50, 10);
+            @Gui.CollapsibleObject
+            public PlantConfig seaUrchinPatch = new PlantConfig(40, 25);
+            @Gui.CollapsibleObject
+            public PlantConfig tubeWormPatch = new PlantConfig(40, 20);
+            @Gui.CollapsibleObject
+            public PlantConfig anPinkPatch = new PlantConfig(45, 65);
+            @Gui.CollapsibleObject
+            public PlantConfig anPurplePatch = new PlantConfig(45, 65);
+            @Gui.CollapsibleObject
+            public PlantConfig anYellowPatch = new PlantConfig(45, 65);
+            @Gui.CollapsibleObject
+            public PlantConfig anGreenPatch = new PlantConfig(45, 65);
+            @Gui.CollapsibleObject
+            public PlantConfig anOrangePatch = new PlantConfig(45, 65);
+            @Gui.CollapsibleObject
+            public PlantConfig scallopPatch = new PlantConfig(40, 30);
         }
 
         // Make sure you reset your config if you made a change.

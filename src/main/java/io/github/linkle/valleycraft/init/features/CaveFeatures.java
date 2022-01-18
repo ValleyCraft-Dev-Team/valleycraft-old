@@ -43,7 +43,7 @@ public class CaveFeatures {
     private static final ConfiguredFeature<?, ?> ROCKS_PATCH_CONFIG = 
             VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(
         Plants.ROCK_PILE.getDefaultState(), 30, 7, 5, 
-        new HeightMapBlockPlacer(Heightmap.Type.WORLD_SURFACE_WG, IntPredicates.LESS)
+        VFeatures.SIMPLE_PATCH.create(new HeightMapBlockPlacer(Heightmap.Type.WORLD_SURFACE_WG, IntPredicates.LESS))
     ));
 
     public static void initialize() {
