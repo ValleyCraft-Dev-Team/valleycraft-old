@@ -8,7 +8,7 @@
 	"CriteriaInvoker",
 	"ItemUsageContextAccessor",
 	"ItemSettingsAccessor",
-	"EnchantmentMixin",
+	"DuckDepthStriderMixin",
   "EquipEnchantmentMixin",
 	"WorldMixin"
   ],

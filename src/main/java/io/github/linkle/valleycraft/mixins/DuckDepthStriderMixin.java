@@ -10,7 +10,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
 
 @Mixin(EnchantmentHelper.class)
-public class EnchantmentMixin {
+public class DuckDepthStriderMixin {
     @Inject(method =  "getDepthStrider", at = @At("HEAD"), cancellable = true)
     private static void getDepthStrider(LivingEntity entity, CallbackInfoReturnable<Integer> info) {
         if (entity instanceof DuckEntity) {
