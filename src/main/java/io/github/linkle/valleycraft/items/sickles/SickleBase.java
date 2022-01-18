@@ -2,6 +2,9 @@ package io.github.linkle.valleycraft.items.sickles;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -17,18 +20,20 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import java.util.Collections;
 import java.util.List;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 
+import io.github.linkle.valleycraft.api.EnchantmentHandler;
 import io.github.linkle.valleycraft.init.VBlockTags;
 
 import static io.github.linkle.valleycraft.init.ItemGroups.EXPLORATION_GROUP;
 
 public class SickleBase
 extends ToolItem
-implements Vanishable {
+implements Vanishable, EnchantmentHandler {
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
@@ -73,5 +78,20 @@ implements Vanishable {
             return this.attributeModifiers;
         }
         return super.getAttributeModifiers(slot);
+    }
+
+        //These two methods use our special mixin to force specific enchantments to work on the sickle
+        //despite enchantment compatibility being hardcoded in vanilla.
+
+        //Make the sickle accept any weapon enchantments
+    @Override
+    public List<EnchantmentTarget> getEnchantmentTypes() {
+        return Collections.singletonList(EnchantmentTarget.WEAPON);
+    }
+
+        //Make the sickle accept Fortune and Silk Touch specifically
+    @Override
+    public boolean isExplicitlyValid(Enchantment enchantment) {
+        return enchantment.equals(Enchantments.FORTUNE) || enchantment.equals(Enchantments.SILK_TOUCH);
     }
 }

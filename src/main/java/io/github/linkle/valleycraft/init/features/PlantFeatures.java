@@ -3,7 +3,6 @@ package io.github.linkle.valleycraft.init.features;
 import java.util.function.Predicate;
 
 import com.google.common.base.Predicates;
-import com.ibm.icu.impl.units.UnitsData.Categories;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
@@ -19,7 +18,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
 import net.minecraft.world.biome.BiomeKeys;

@@ -9,6 +9,7 @@
 	"ItemUsageContextAccessor",
 	"ItemSettingsAccessor",
 	"EnchantmentMixin",
+  "EquipEnchantmentMixin",
 	"WorldMixin"
   ],
   "injectors": {
