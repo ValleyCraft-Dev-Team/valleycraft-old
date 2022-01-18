@@ -53,7 +53,7 @@ implements Vanishable, EnchantmentHandler {
         return true;
     }
 
-        //Damage the sickle when it's used to break blocks
+        //Damage the sickle when it's used to mine blocks
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
             //Breaking things with no hardness, like plants, won't take durabiltiy,

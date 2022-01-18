@@ -8,8 +8,8 @@
 	"CriteriaInvoker",
 	"ItemUsageContextAccessor",
 	"ItemSettingsAccessor",
-	"DuckDepthStriderMixin",
-  "EquipEnchantmentMixin",
+  "EnchantmentMixin",
+  "EnchantmentHelperMixin",
 	"WorldMixin"
   ],
   "injectors": {

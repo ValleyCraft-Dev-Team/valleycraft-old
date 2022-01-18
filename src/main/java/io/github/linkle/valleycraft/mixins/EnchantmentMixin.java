@@ -15,7 +15,7 @@ import io.github.linkle.valleycraft.api.EnchantmentHandler;
     //Code taken from Draylar's Gate of Babylon mod, and is important to make enchantments behave on tools with custom classes
 
 @Mixin(Enchantment.class)
-public abstract class EquipEnchantmentMixin {
+public abstract class EnchantmentMixin {
 
     @Shadow @Final public EnchantmentTarget type;
 
