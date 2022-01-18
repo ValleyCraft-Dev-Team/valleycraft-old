@@ -135,14 +135,15 @@ public class VLootTables {
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
 
-        builder = LootBuilder.create()
-            .rolls(1).with(Blocks.ICE)
-            .withCondition(new MatchToolLootCondition(LootUtils.items(WeaponsAndTools.TONGS))
-        );
+            //When we need to add an item to just one loot table, we don't need to store a builder.
         
-        LootTableHelper.appendLoot(Blocks.ICE.getLootTableId(), builder);
-        LootTableHelper.appendLoot(Blocks.BLUE_ICE.getLootTableId(), builder);
-        LootTableHelper.appendLoot(Blocks.PACKED_ICE.getLootTableId(), builder);
+            //Make all three ice variants drop themselves whem mined with ice tongs
+        LootTableHelper.appendLoot(Blocks.ICE.getLootTableId(),
+                LootBuilder.create().with(Blocks.ICE).withCondition(new MatchToolLootCondition(LootUtils.items(WeaponsAndTools.TONGS))));
+        LootTableHelper.appendLoot(Blocks.BLUE_ICE.getLootTableId(),
+                LootBuilder.create().with(Blocks.BLUE_ICE).withCondition(new MatchToolLootCondition(LootUtils.items(WeaponsAndTools.TONGS))));
+        LootTableHelper.appendLoot(Blocks.PACKED_ICE.getLootTableId(),
+                LootBuilder.create().with(Blocks.PACKED_ICE).withCondition(new MatchToolLootCondition(LootUtils.items(WeaponsAndTools.TONGS))));
     }
     
     private static Identifier register(String id) {
