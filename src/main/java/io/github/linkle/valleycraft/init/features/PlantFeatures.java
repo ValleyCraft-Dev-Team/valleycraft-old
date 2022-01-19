@@ -3,6 +3,7 @@ package io.github.linkle.valleycraft.init.features;
 import java.util.function.Predicate;
 
 import com.google.common.base.Predicates;
+import com.ibm.icu.impl.units.UnitsData.Categories;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
@@ -16,7 +17,10 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.FluidFillable;
+import net.minecraft.block.TallPlantBlock;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
@@ -42,7 +46,7 @@ public class PlantFeatures {
         var config = ValleyMain.CONFIG.featureGenerations.plantFeatures;
         var vegetal = GenerationStep.Feature.VEGETAL_DECORATION;
         var topLayer = GenerationStep.Feature.TOP_LAYER_MODIFICATION;
-        Predicate<BiomeSelectionContext> snowOnly;
+        Predicate<BiomeSelectionContext> snowOnly, selector;
         snowOnly = context -> context.getBiome().getPrecipitation() == Precipitation.SNOW;
 
         //found on beaches
@@ -73,22 +77,25 @@ public class PlantFeatures {
             
         if (config.willowPatch.enable) {
             var set = config.willowPatch;
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
+            selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
+            BiomeModifications.addFeature(selector, vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
         }
             
         if (config.ribbonPatch.enable) {
             var set = config.ribbonPatch;
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SWAMP, BiomeKeys.JUNGLE, BiomeKeys.SPARSE_JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("ribbon_patch", Plants.SWAMP_RIBBON, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, create("ribbon_patch", Plants.SWAMP_RIBBON, set.tries, set.rarity));
         }
             
         if (config.orangeFernPatch.enable) {
             var set = config.orangeFernPatch;
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("orange_fern_patch", Plants.ORANGE_FERN, set.tries, set.rarity));
+            selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
+            BiomeModifications.addFeature(selector, vegetal, create("orange_fern_patch", Plants.ORANGE_FERN, set.tries, set.rarity));
         }
             
         if (config.orangeBeautyPatch.enable) {
             var set = config.orangeBeautyPatch;
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.BAMBOO_JUNGLE), vegetal, create("orange_beauty_patch", Plants.ORANGE_BEAUTY, set.tries, set.rarity));
+            selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
+            BiomeModifications.addFeature(selector, vegetal, create("orange_beauty_patch", Plants.ORANGE_BEAUTY, set.tries, set.rarity));
         }
             
         if (config.dahliaPatch.enable) {
@@ -273,7 +280,9 @@ public class PlantFeatures {
         return create(id, BlockStateProvider.of(block), tries, rarity);
     }
     
-    private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer(state -> state.getMaterial().isReplaceable()));
+    private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer(state ->
+        state.getMaterial().isReplaceable() && !(state.getBlock() instanceof TallPlantBlock) && !(state.getBlock() instanceof FluidFillable)
+    ));
     
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {

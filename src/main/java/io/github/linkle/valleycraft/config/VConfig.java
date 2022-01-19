@@ -171,81 +171,81 @@ public class VConfig implements ConfigData {
         // Make sure you reset your config if you made a change.
         public static class PlantFeatures implements ConfigData {
             @Gui.CollapsibleObject
-            public PlantConfig wheatPatch = new PlantConfig(30, 40); // (1, 6)
+            public PlantConfig wheatPatch = new PlantConfig(60, 70); // (30, 40)
             @Gui.CollapsibleObject
-            public PlantConfig carrotPatch = new PlantConfig(30, 40); // (1, 3)
+            public PlantConfig carrotPatch = new PlantConfig(60, 70); // (30, 40)
             @Gui.CollapsibleObject
-            public PlantConfig beetPatch = new PlantConfig(30, 40); // (1, 4)
+            public PlantConfig beetPatch = new PlantConfig(60, 70); // (30, 40)
             @Gui.CollapsibleObject
-            public PlantConfig potatoPatch = new PlantConfig(30, 40); // (1, 5)
+            public PlantConfig potatoPatch = new PlantConfig(60, 70); // (30, 40)
             @Gui.CollapsibleObject
-            public PlantConfig willowPatch = new PlantConfig(30, 10); // (2, 5)
+            public PlantConfig willowPatch = new PlantConfig(50, 12); // (30, 10)
             @Gui.CollapsibleObject
-            public PlantConfig ribbonPatch = new PlantConfig(30, 3);
+            public PlantConfig ribbonPatch = new PlantConfig(50, 12); // (30, 3)
             @Gui.CollapsibleObject
-            public PlantConfig orangeFernPatch = new PlantConfig(30, 2); // (5, 1)
+            public PlantConfig orangeFernPatch = new PlantConfig(60, 12); // (30, 2)
             @Gui.CollapsibleObject
-            public PlantConfig orangeBeautyPatch = new PlantConfig(30, 2); // (2, 2)
+            public PlantConfig orangeBeautyPatch = new PlantConfig(60, 12); // (30, 2)
             @Gui.CollapsibleObject
-            public PlantConfig dahliaPatch = new PlantConfig(30, 10); // (8, 2)
+            public PlantConfig dahliaPatch = new PlantConfig(30, 10); // (30, 10)
             @Gui.CollapsibleObject
-            public PlantConfig lavenderPatch = new PlantConfig(45, 10); // (8, 1)
+            public PlantConfig lavenderPatch = new PlantConfig(45, 10); // (45, 10)
             @Gui.CollapsibleObject
-            public PlantConfig sorrelPatch = new PlantConfig(30, 4);
+            public PlantConfig sorrelPatch = new PlantConfig(30, 4); // (30, 4)
             @Gui.CollapsibleObject
-            public PlantConfig dandelionPatch = new PlantConfig(20, 3);
+            public PlantConfig dandelionPatch = new PlantConfig(50, 15); // (20, 3)
             @Gui.CollapsibleObject
-            public PlantConfig herbPatch = new PlantConfig(20, 45); // (1, 2)
+            public PlantConfig herbPatch = new PlantConfig(40, 60); // (20, 45)
             @Gui.CollapsibleObject
-            public PlantConfig taprootPatch = new PlantConfig(20, 45); // (1, 3)
+            public PlantConfig taprootPatch = new PlantConfig(40, 60); // (20, 45)
             @Gui.CollapsibleObject
-            public PlantConfig crocusPatch = new PlantConfig(30, 3);
+            public PlantConfig crocusPatch = new PlantConfig(30, 3); // (30, 3)
             @Gui.CollapsibleObject
-            public PlantConfig hollyPatch = new PlantConfig(40, 45); // (1, 4)
+            public PlantConfig hollyPatch = new PlantConfig(40, 45); // (40, 45)
             @Gui.CollapsibleObject
-            public PlantConfig morelPatch = new PlantConfig(15, 5);
+            public PlantConfig morelPatch = new PlantConfig(50, 20); // (15, 5)
             @Gui.CollapsibleObject
-            public PlantConfig bushPatch = new PlantConfig(14, 2);
+            public PlantConfig bushPatch = new PlantConfig(14, 3); // (14, 2)
             @Gui.CollapsibleObject
-            public PlantConfig sproutPatch = new PlantConfig(7, 1);
+            public PlantConfig sproutPatch = new PlantConfig(25, 7); // (7, 1)
             @Gui.CollapsibleObject
-            public PlantConfig boxwoodPatch = new PlantConfig(14, 3);
+            public PlantConfig boxwoodPatch = new PlantConfig(14, 3); // (14, 3)
             @Gui.CollapsibleObject
-            public PlantConfig jungleCapPatch = new PlantConfig(7, 4); // (1, 3)
+            public PlantConfig jungleCapPatch = new PlantConfig(60, 12); // (1, 3)
             @Gui.CollapsibleObject
-            public PlantConfig panPatch = new PlantConfig(7, 6); // (1, 4)
+            public PlantConfig panPatch = new PlantConfig(40, 20); // (7, 6)
             @Gui.CollapsibleObject
-            public PlantConfig swampBushPatch = new PlantConfig(13, 3);
+            public PlantConfig swampBushPatch = new PlantConfig(13, 3); // (13, 3)
             @Gui.CollapsibleObject
-            public PlantConfig rockPatch = new PlantConfig(7, 4);
+            public PlantConfig rockPatch = new PlantConfig(7, 4); // (7, 4)
             @Gui.CollapsibleObject
-            public PlantConfig snowPatch = new PlantConfig(7, 4);
+            public PlantConfig snowPatch = new PlantConfig(7, 4); /// (7, 4)
             @Gui.CollapsibleObject
-            public PlantConfig snowRockPatch = new PlantConfig(7, 4);
+            public PlantConfig snowRockPatch = new PlantConfig(7, 4); // (7, 4)
             @Gui.CollapsibleObject
-            public PlantConfig rosePatch = new PlantConfig(30, 40); // (1, 5)
+            public PlantConfig rosePatch = new PlantConfig(30, 40); // (30, 40)
             @Gui.CollapsibleObject
-            public PlantConfig honeyClusterPatch = new PlantConfig(30, 5);
+            public PlantConfig honeyClusterPatch = new PlantConfig(50, 15); // (30, 5)
             @Gui.CollapsibleObject
-            public PlantConfig lilacPatch = new PlantConfig(20, 40); // (1, 5)
+            public PlantConfig lilacPatch = new PlantConfig(40, 50); // (20, 40)
             @Gui.CollapsibleObject
-            public PlantConfig peonyPatch = new PlantConfig(20, 40); // (1, 5)
+            public PlantConfig peonyPatch = new PlantConfig(40, 50); // (20, 40)
             @Gui.CollapsibleObject
-            public PlantConfig tumblePatch = new PlantConfig(20, 5); // (1, 5)
+            public PlantConfig tumblePatch = new PlantConfig(20, 5); // (20, 5)
             @Gui.CollapsibleObject
-            public PlantConfig floweringCactusPatch = new PlantConfig(15, 5);
+            public PlantConfig floweringCactusPatch = new PlantConfig(40, 10); // (15, 5)
             @Gui.CollapsibleObject
-            public PlantConfig cactusPatch = new PlantConfig(10, 20); // (2, 5)
+            public PlantConfig cactusPatch = new PlantConfig(10, 20); // (10, 20)
             @Gui.CollapsibleObject
-            public PlantConfig alivePatch = new PlantConfig(20, 4); //done - L
+            public PlantConfig alivePatch = new PlantConfig(20, 4); //done - L (20, 4)
             @Gui.CollapsibleObject
-            public PlantConfig bitterPatch = new PlantConfig(15, 20);  // (2, 5)
+            public PlantConfig bitterPatch = new PlantConfig(40, 20);  // (15, 20)
             @Gui.CollapsibleObject
-            public PlantConfig tomatoPatch = new PlantConfig(25, 30); // (1, 5)
+            public PlantConfig tomatoPatch = new PlantConfig(25, 30); // (25, 30)
             @Gui.CollapsibleObject
-            public PlantConfig sourPatch = new PlantConfig(25, 5);
+            public PlantConfig sourPatch = new PlantConfig(50, 15); // (25, 5)
             @Gui.CollapsibleObject
-            public PlantConfig reedPatch = new PlantConfig(20, 2); //done - L
+            public PlantConfig reedPatch = new PlantConfig(20, 2); //done - L (20, 2)
         }
 
         public static class Trees implements ConfigData {

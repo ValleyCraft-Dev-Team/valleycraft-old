@@ -1,6 +1,7 @@
 package io.github.linkle.valleycraft.utils;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import net.minecraft.block.Block;
@@ -16,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
@@ -90,6 +92,10 @@ public class Util {
     public static <E extends BlockEntity, A extends BlockEntity> BlockEntityTicker<A> checkType(
             BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
+    }
+    
+    public static <T> Predicate<T> pair(Predicate<T> first, Predicate<T> second, BooleanBiFunction function) {
+        return obj -> function.apply(first.test(obj), second.test(obj));
     }
     
     public static boolean canMergeItems(ItemStack first, ItemStack second) {

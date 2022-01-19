@@ -27,7 +27,6 @@ public class ValleyMain implements ModInitializer {
         AutoConfig.register(VConfig.class, GsonConfigSerializer::new);
         var holder = AutoConfig.getConfigHolder(VConfig.class);
         CONFIG = holder.getConfig();
-        holder.resetToDefault(); // Reset everything to default. If this code left open to execute. Please comment this line with //
         ConfigVersionHandler.handle(holder);
 
         // This should stay first before items and blocks.
