@@ -15,9 +15,9 @@ public class VConfig implements ConfigData {
     @Gui.Excluded
     public int configVersion = ConfigVersionHandler.VERSION;
 
-    //@Comment("Disables fishing loots for valleycraft items")
-    //@ConfigEntry.Gui.CollapsibleObject
-    //public FishingConfig fishing = new FishingConfig();
+    @Comment("Disables fishing loots for valleycraft items")
+    @ConfigEntry.Gui.CollapsibleObject
+    public FishingConfig fishing = new FishingConfig();
 
     @Comment("Disables generation of features like stones, mud, sandstone, \nand biome-specific blobs, but not ores.")
     @Gui.CollapsibleObject
@@ -191,7 +191,7 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig lavenderPatch = new PlantConfig(45, 10); // (45, 10)
             @Gui.CollapsibleObject
-            public PlantConfig sorrelPatch = new PlantConfig(30, 4); // (30, 4)
+            public PlantConfig sorrelPatch = new PlantConfig(60, 25); // (30, 4)
             @Gui.CollapsibleObject
             public PlantConfig dandelionPatch = new PlantConfig(50, 15); // (20, 3)
             @Gui.CollapsibleObject
@@ -199,7 +199,7 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig taprootPatch = new PlantConfig(40, 60); // (20, 45)
             @Gui.CollapsibleObject
-            public PlantConfig crocusPatch = new PlantConfig(30, 3); // (30, 3)
+            public PlantConfig crocusPatch = new PlantConfig(60, 20); // (30, 3)
             @Gui.CollapsibleObject
             public PlantConfig hollyPatch = new PlantConfig(40, 45); // (40, 45)
             @Gui.CollapsibleObject
@@ -209,7 +209,7 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig sproutPatch = new PlantConfig(25, 7); // (7, 1)
             @Gui.CollapsibleObject
-            public PlantConfig boxwoodPatch = new PlantConfig(14, 3); // (14, 3)
+            public PlantConfig boxwoodPatch = new PlantConfig(40, 25); // (14, 3)
             @Gui.CollapsibleObject
             public PlantConfig jungleCapPatch = new PlantConfig(60, 12); // (1, 3)
             @Gui.CollapsibleObject
@@ -241,7 +241,7 @@ public class VConfig implements ConfigData {
             @Gui.CollapsibleObject
             public PlantConfig bitterPatch = new PlantConfig(40, 20);  // (15, 20)
             @Gui.CollapsibleObject
-            public PlantConfig tomatoPatch = new PlantConfig(25, 30); // (25, 30)
+            public PlantConfig tomatoPatch = new PlantConfig(40, 30); // (25, 30)
             @Gui.CollapsibleObject
             public PlantConfig sourPatch = new PlantConfig(50, 15); // (25, 5)
             @Gui.CollapsibleObject

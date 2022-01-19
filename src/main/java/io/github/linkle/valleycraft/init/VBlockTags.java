@@ -1,5 +1,6 @@
 package io.github.linkle.valleycraft.init;
 
+import static io.github.linkle.valleycraft.ValleyMain.MOD_ID;
 import static net.fabricmc.fabric.api.tag.TagFactory.BLOCK;
 
 import net.minecraft.block.Block;
@@ -20,7 +21,7 @@ public class VBlockTags {
     }
     
     private static Identifier newId(String id) {
-        return new Identifier("valley", id);
+        return new Identifier(MOD_ID, id);
     }
     
 }

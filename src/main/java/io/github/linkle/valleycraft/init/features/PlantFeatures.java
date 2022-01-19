@@ -110,7 +110,7 @@ public class PlantFeatures {
             
         if (config.sorrelPatch.enable) {
             var set = config.sorrelPatch;
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, create("sorrel_patch", Plants.REDWOOD_SORREL, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, create("sorrel_patch", Plants.REDWOOD_SORREL, set.tries, set.rarity));
         }
             
         if (config.dandelionPatch.enable) {
@@ -131,14 +131,14 @@ public class PlantFeatures {
             
         if (config.crocusPatch.enable) {
             var set = config.crocusPatch;
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, create("crocus_patch", Plants.CROCUS, set.tries, set.rarity));
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, create("crocus_patch", Plants.CROCUS, set.tries, set.rarity));
         }
             
 
         if (config.hollyPatch.enable) {
             var set = config.hollyPatch;
             var key = create("holly_patch", Plants.HOLLY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 2), set.tries, set.rarity);
-            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), vegetal, key);
+            BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, key);
         }
             
         //found in dark woods

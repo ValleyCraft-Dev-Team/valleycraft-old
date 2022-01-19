@@ -4,6 +4,7 @@ import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.utils.loot.LootBuilder;
 import io.github.linkle.valleycraft.utils.loot.LootTableHelper;
 import io.github.linkle.valleycraft.utils.loot.LootUtils;
+import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
@@ -18,6 +19,8 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
+import static io.github.linkle.valleycraft.ValleyMain.CONFIG;
+
 public class VLootTables {
     
     public static final Identifier BAITING = register("crabtrap/baiting");
@@ -28,38 +31,51 @@ public class VLootTables {
         chests();
         
         //If the config has fishing enabled...
-        /*
         if (CONFIG.fishing.enabled) {
                 //... inject our fish and junk into the respective vanilla loot tables
             LootTableHelper.injectLoot(LootTables.FISHING_FISH_GAMEPLAY, VLootTables::fishingFishLoot);
             LootTableHelper.injectLoot(LootTables.FISHING_JUNK_GAMEPLAY, VLootTables::fishingJunkLoot);
-        } */
+        }
     }
     
-    /*
     private static void fishingFishLoot(FabricLootPoolBuilder pool) {
-        for (var entry : CONFIG.fishing.fish) {
-            Item item = Registry.ITEM.get(new Identifier(entry.item));
-            if (item == null) {
-                LOGGER.warn("Unknown fishing loot item with an id: " + entry.item);
-                continue;
-            }
-            
-            pool.with(ItemEntry.builder(item).weight(entry.weight));
-        }
+        pool.with(ItemEntry.builder(Fishing.CRAB).weight(20));
+        pool.with(ItemEntry.builder(Fishing.MASKING_CRAB).weight(10));
+        pool.with(ItemEntry.builder(Fishing.LOBSTER).weight(20));
+        pool.with(ItemEntry.builder(Fishing.MUSSEL).weight(13));
+        pool.with(ItemEntry.builder(Fishing.BROWN_MUSSEL).weight(13));
+        pool.with(ItemEntry.builder(Fishing.CERITH_SNAIL).weight(13));
+        pool.with(ItemEntry.builder(Fishing.MARLIN_SPIKE).weight(13));
+        pool.with(ItemEntry.builder(MiscItems.SQUID_SUCKER).weight(4));
+        pool.with(ItemEntry.builder(Aquatic.CLAM).weight(24));
+        pool.with(ItemEntry.builder(Fishing.SARDINE).weight(43));
+        pool.with(ItemEntry.builder(Fishing.LIONFISH).weight(6));
+        pool.with(ItemEntry.builder(Fishing.SLIMEFISH).weight(20));
+        pool.with(ItemEntry.builder(Fishing.PERCH).weight(40));
+        pool.with(ItemEntry.builder(Aquatic.SAND_DOLLAR).weight(10));
+        pool.with(ItemEntry.builder(Aquatic.STARFISH_ORANGE).weight(10));
+        pool.with(ItemEntry.builder(Fishing.FIRE_EEL).weight(7));
+        pool.with(ItemEntry.builder(Fishing.OCTO).weight(9));
+        pool.with(ItemEntry.builder(Fishing.GLISTERING_ANGLER).weight(3));
+        pool.with(ItemEntry.builder(Fishing.GHOST_FISH).weight(5));
+        pool.with(ItemEntry.builder(Fishing.PRIDEFIN).weight(5));
+        pool.with(ItemEntry.builder(Fishing.WRASSE).weight(5));
+        pool.with(ItemEntry.builder(Fishing.FROG_FISH).weight(7));
+        pool.with(ItemEntry.builder(Aquatic.SEA_URCHIN).weight(13));
+        pool.with(ItemEntry.builder(Fishing.MARLIN_SPIKE).weight(10));
+        pool.with(ItemEntry.builder(Fishing.STONEROLLER).weight(43));
+        pool.with(ItemEntry.builder(Fishing.ABYSS_WATCHER).weight(15));
+        pool.with(ItemEntry.builder(Fishing.BONEFIN).weight(13));
+        pool.with(ItemEntry.builder(MiscItems.SEA_EYE).weight(2));
+        pool.with(ItemEntry.builder(MiscItems.MESSAGE_BOTTLE).weight(5));
     }
     
     private static void fishingJunkLoot(FabricLootPoolBuilder pool) {
-        for (var entry : CONFIG.fishing.junk) {
-            Item item = Registry.ITEM.get(new Identifier(entry.item));
-            if (item == null) {
-                LOGGER.warn("Unknown fishing loot item with an id: " + entry.item);
-                continue;
-            }
-            
-            pool.with(ItemEntry.builder(item).weight(entry.weight));
-        }
-    } */
+        pool.with(ItemEntry.builder(Aquatic.RED_SEA_GRASS).weight(17));
+        pool.with(ItemEntry.builder(Aquatic.GLOW_KELP).weight(10));
+        pool.with(ItemEntry.builder(Items.BONE).weight(4));
+        pool.with(ItemEntry.builder(Items.SKELETON_SKULL).weight(1));
+    }
 
     private static void entities() {
         LootBuilder builder = LootBuilder.create();
