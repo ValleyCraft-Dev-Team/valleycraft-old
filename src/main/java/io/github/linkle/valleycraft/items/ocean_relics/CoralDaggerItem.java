@@ -1,10 +1,11 @@
 package io.github.linkle.valleycraft.items.ocean_relics;
 
 import io.github.linkle.valleycraft.init.ItemGroups;
+import io.github.linkle.valleycraft.items.knives.KnifeBase;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -14,14 +15,21 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class EncrustedPickaxeBase extends PickaxeItem {
-    public EncrustedPickaxeBase(ToolMaterial material, int attackDamage, float attackSpeed) {
+public class CoralDaggerItem
+extends KnifeBase {
+    public CoralDaggerItem(ToolMaterial material, int attackDamage, float attackSpeed) {
         super(material, attackDamage, attackSpeed, new Settings().group(ItemGroups.ARTEFACT_GROUP).rarity(Rarity.RARE));
     }
 
+        //Add the explanatory tooltip
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add( new TranslatableText("item.valley.encrusted_pickaxe.tooltip").formatted(Formatting.YELLOW) );
-        tooltip.add( new TranslatableText("item.valley.encrusted_pickaxe.tooltip_2").formatted(Formatting.YELLOW) );
+        tooltip.add( new TranslatableText("item.valley.coral_knife.tooltip").formatted(Formatting.LIGHT_PURPLE) );
+    }
+
+        //Make the coral dagger accept Impaling
+    @Override
+    public boolean isExplicitlyValid(Enchantment enchantment) {
+        return enchantment.equals(Enchantments.IMPALING);
     }
 }

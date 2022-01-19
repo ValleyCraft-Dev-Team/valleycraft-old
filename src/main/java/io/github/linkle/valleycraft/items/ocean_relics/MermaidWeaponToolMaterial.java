@@ -1,10 +1,9 @@
 package io.github.linkle.valleycraft.items.ocean_relics;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class CoralToolMaterialKnife implements ToolMaterial {
+public class MermaidWeaponToolMaterial implements ToolMaterial {
     @Override
     public int getDurability() {
         //Wood: 59

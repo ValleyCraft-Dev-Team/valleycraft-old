@@ -1,9 +1,10 @@
 package io.github.linkle.valleycraft.items.ocean_relics;
 
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
-public class MermaidToolMaterialKnife implements ToolMaterial {
+public class EncrustedPickaxeToolMaterial implements ToolMaterial {
     @Override
     public int getDurability() {
         //Wood: 59
@@ -13,7 +14,7 @@ public class MermaidToolMaterialKnife implements ToolMaterial {
         //Golden: 32
         //Diamond: 1561
         //Netherite: 2031
-        return 780;
+        return 1561;
     }
 
     @Override
@@ -26,7 +27,7 @@ public class MermaidToolMaterialKnife implements ToolMaterial {
         //Diamond: 8.0f
         //Netherite: 10.0f
         //Gold: 12.0f
-        return 8.0f;
+        return 9.0f;
     }
 
     @Override
@@ -50,7 +51,7 @@ public class MermaidToolMaterialKnife implements ToolMaterial {
         //Diamond: 3
         //Gold: 0
         //Netherite: 3
-        return 3;
+        return 2;
     }
 
     @Override
@@ -67,6 +68,6 @@ public class MermaidToolMaterialKnife implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems();
+        return Ingredient.ofItems(Items.NAUTILUS_SHELL);
     }
 }

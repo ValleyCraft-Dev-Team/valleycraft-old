@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterial;
@@ -27,16 +28,14 @@ import java.util.List;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 
-import static io.github.linkle.valleycraft.init.ItemGroups.EXPLORATION_GROUP;
-
 public class KnifeBase
 extends ToolItem
 implements Vanishable, EnchantmentHandler {
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public KnifeBase(ToolMaterial material, int attackDamage, float attackSpeed) {
-        super(material, new Settings().group(EXPLORATION_GROUP));
+    public KnifeBase(ToolMaterial material, int attackDamage, float attackSpeed, Item.Settings settings) {
+        super(material, settings);
         this.attackDamage = attackDamage + material.getAttackDamage();
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Tool modifier", (double)this.attackDamage, EntityAttributeModifier.Operation.ADDITION));

@@ -12,10 +12,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import io.github.linkle.valleycraft.api.EnchantmentHandler;
 
-    //Code taken from Draylar's Gate of Babylon mod, and is important to make enchantments behave on tools with custom classes
-
 @Mixin(Enchantment.class)
 public abstract class EnchantmentMixin {
+
+        //This mixin lets us customize what enchantments are applicable on our tools using EnchantmentHelper methods
+        //This code is ported from Draylar's Gate of Babylon mod (legally via MIT license)
 
     @Shadow @Final public EnchantmentTarget type;
 

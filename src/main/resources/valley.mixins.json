@@ -10,6 +10,7 @@
 	"ItemSettingsAccessor",
   "EnchantmentMixin",
   "EnchantmentHelperMixin",
+  "DamageEnchantmentMixin",
 	"WorldMixin"
   ],
   "injectors": {

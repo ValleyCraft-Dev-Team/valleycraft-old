@@ -28,6 +28,8 @@ public class EnchantmentHelperMixin {
         }
     }
 
+        //Make the enchanting table dish out the correct enchantments to tools whose applicable enchantments we've customized
+        //This code is ported from Draylar's Gate of Babylon mod (legally via MIT license)
     @Inject(method = "getPossibleEntries", at = @At("HEAD"), cancellable = true)
     private static void adjustPossibleEntries(int power, ItemStack stack, boolean treasureAllowed, CallbackInfoReturnable<List<EnchantmentLevelEntry>> cir) {
         Item item = stack.getItem();

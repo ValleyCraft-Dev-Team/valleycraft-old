@@ -14,16 +14,18 @@ import net.minecraft.item.Item.Settings;
 
 import static io.github.linkle.valleycraft.utils.Util.register;
 
+import static io.github.linkle.valleycraft.init.ItemGroups.EXPLORATION_GROUP;
+
 public class WeaponsAndTools {
 
         //Store instances of each gear item's base classes, configured with the chosen attack damage, speed, etc.
         //We only store them in variables when another class needs to do things like inject them into loot tables
     public static final Item TONGS = new TongsBase(new TongsToolMaterial());
     public static final Item DRUID = new DruidStaffBase();
-    public static final Item MERMAID_SWORD = new MermaidSwordBase(new MermaidToolMaterialKnife(), 5, -1.5f);
-    public static final Item MERMAID_SPEAR = new MermaidSpearBase(new MermaidToolMaterialKnife(), 7, -1.8f);
-    public static final Item ENCRUSTED_PICKAXE = new EncrustedPickaxeBase(new EncrustedToolMaterialPickaxe(), 2, -2.8f);
-    public static final Item CORAL_KNIFE = new CoralKnifeBase(new CoralToolMaterialKnife(), 3, -1.4f);
+    public static final Item MERMAID_SWORD = new MermaidSwordItem(new MermaidWeaponToolMaterial(), 5, -1.5f);
+    public static final Item MERMAID_SPEAR = new MermaidSpearItem(new MermaidWeaponToolMaterial(), 7, -1.8f);
+    public static final Item ENCRUSTED_PICKAXE = new EncrustedPickaxeItem(new EncrustedPickaxeToolMaterial(), 2, -2.8f);
+    public static final Item CORAL_KNIFE = new CoralDaggerItem(new CoralDaggerToolMaterial(), 3, -1.4f);
 
         //The base attack damage of each tool type.
         //These values are added to the attack stats of their materials when they're registered.
@@ -37,6 +39,8 @@ public class WeaponsAndTools {
     public static final Float KNIFE_BASE_SPEED = -2.0f;
     public static final Float SICKLE_BASE_SPEED = -3.0f;
     public static final Float HATCHET_BASE_SPEED = -2.4f;
+        //The item settings for knives made of 'basic' materials- wood, gold, stone, iron, rose gold, diamond, netherite
+    public static final Item.Settings BASIC_KNIFE_SETTINGS = new Settings().group(EXPLORATION_GROUP);
 
     public static void initialize() {
         //Branch
@@ -72,13 +76,13 @@ public class WeaponsAndTools {
         Util.register("encrusted_pickaxe", ENCRUSTED_PICKAXE);
 
             //Knives
-        register("wood_knife", new KnifeBase(ToolMaterials.WOOD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
-        register("stone_knife", new KnifeBase(ToolMaterials.STONE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
-        register("golden_knife", new KnifeBase(ToolMaterials.GOLD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
-        register("iron_knife", new KnifeBase(ToolMaterials.IRON, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
-        register("rg_knife", new KnifeBase(new RoseGoldToolMaterial(), KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
-        register("diamond_knife", new KnifeBase(ToolMaterials.DIAMOND, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
-        register("netherite_knife", new KnifeBase(ToolMaterials.NETHERITE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED));
+        register("wood_knife", new KnifeBase(ToolMaterials.WOOD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        register("stone_knife", new KnifeBase(ToolMaterials.STONE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        register("golden_knife", new KnifeBase(ToolMaterials.GOLD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        register("iron_knife", new KnifeBase(ToolMaterials.IRON, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        register("rg_knife", new KnifeBase(new RoseGoldToolMaterial(), KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        register("diamond_knife", new KnifeBase(ToolMaterials.DIAMOND, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        register("netherite_knife", new KnifeBase(ToolMaterials.NETHERITE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
             //Sickles
             //Lower tier sickles have slightly slower attack speeds than base, to match vanilla hoes
         Util.register("wood_sickle", new SickleBase(ToolMaterials.WOOD, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.4f));
