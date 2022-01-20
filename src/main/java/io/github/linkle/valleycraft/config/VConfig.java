@@ -141,31 +141,31 @@ public class VConfig implements ConfigData {
 
         public static class OceanFeatures implements ConfigData {
             @Gui.CollapsibleObject
-            public PlantConfig redSeaGrassPatch = new PlantConfig(60, 6);
+            public PlantConfig redSeaGrassPatch = new PlantConfig(70, 6);
             @Gui.CollapsibleObject
-            public PlantConfig clamPatch = new PlantConfig(40, 17);
+            public PlantConfig clamPatch = new PlantConfig(50, 17);
             @Gui.CollapsibleObject
-            public PlantConfig sandDollarPatch = new PlantConfig(40, 25);
+            public PlantConfig sandDollarPatch = new PlantConfig(50, 25);
             @Gui.CollapsibleObject
-            public PlantConfig starfishPatch = new PlantConfig(40, 30);
+            public PlantConfig starfishPatch = new PlantConfig(50, 30);
             @Gui.CollapsibleObject
-            public PlantConfig seaFernPatch = new PlantConfig(50, 10);
+            public PlantConfig seaFernPatch = new PlantConfig(60, 10);
             @Gui.CollapsibleObject
-            public PlantConfig seaUrchinPatch = new PlantConfig(40, 32);
+            public PlantConfig seaUrchinPatch = new PlantConfig(50, 32);
             @Gui.CollapsibleObject
-            public PlantConfig tubeWormPatch = new PlantConfig(40, 23);
+            public PlantConfig tubeWormPatch = new PlantConfig(50, 23);
             @Gui.CollapsibleObject
-            public PlantConfig anPinkPatch = new PlantConfig(45, 80);
+            public PlantConfig anPinkPatch = new PlantConfig(55, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anPurplePatch = new PlantConfig(45, 80);
+            public PlantConfig anPurplePatch = new PlantConfig(55, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anYellowPatch = new PlantConfig(45, 80);
+            public PlantConfig anYellowPatch = new PlantConfig(55, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anGreenPatch = new PlantConfig(45, 80);
+            public PlantConfig anGreenPatch = new PlantConfig(55, 80);
             @Gui.CollapsibleObject
-            public PlantConfig anOrangePatch = new PlantConfig(45, 80);
+            public PlantConfig anOrangePatch = new PlantConfig(55, 80);
             @Gui.CollapsibleObject
-            public PlantConfig scallopPatch = new PlantConfig(40, 30);
+            public PlantConfig scallopPatch = new PlantConfig(50, 30);
         }
 
         // Make sure you reset your config if you made a change.

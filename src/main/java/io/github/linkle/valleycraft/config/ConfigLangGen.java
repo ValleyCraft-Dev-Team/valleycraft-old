@@ -21,7 +21,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 @Environment(EnvType.CLIENT)
 public class ConfigLangGen {
     // This should be disable all a time. If this is true, please set it to false.
-    private static final boolean isEnable = false;
+    private static final boolean isEnable = true;
     
     private static final HashMap<Class<?>, Map<String, String>> MAP = new HashMap<>();;
     private static final LinkedHashSet<Trans> LIST = new LinkedHashSet<>(100);
@@ -32,8 +32,8 @@ public class ConfigLangGen {
         // This is where it class registered for lang generate
         //register(EntityConfig.class, EntityConfig::getLang);
         //register(OreConfig.class, OreConfig::getLang);
-        //register(PlantConfig.class, PlantConfig::getLang);
-        register(FishingConfig.class, FishingConfig::getLang);
+        register(PlantConfig.class, PlantConfig::getLang);
+        //register(FishingConfig.class, FishingConfig::getLang);
         
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (!LIST.isEmpty()) {
