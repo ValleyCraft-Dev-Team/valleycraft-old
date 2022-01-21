@@ -85,9 +85,9 @@ public class Entities {
             BiomeKeys.OLD_GROWTH_PINE_TAIGA,
             BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
         );
-        config.bear.addSpawn(keys, SpawnGroup.CREATURE, BEAR);
-        config.duck.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK);
-        config.fireEel.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL);
+        config.bearSpawn.addSpawn(keys, SpawnGroup.CREATURE, BEAR);
+        config.duckSpawn.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK);
+        config.fireEelSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL);
         
         keys = BiomeSelectors.includeByKey(
             BiomeKeys.LUKEWARM_OCEAN,
@@ -95,8 +95,8 @@ public class Entities {
             BiomeKeys.WARM_OCEAN,
             BiomeKeys.DEEP_OCEAN
         );
-        config.perch.addSpawn(keys, SpawnGroup.WATER_AMBIENT, PERCH);
-        config.minnow.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW);
+        config.perchSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, PERCH);
+        config.minnowSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW);
         
         keys = BiomeSelectors.includeByKey(
             BiomeKeys.COLD_OCEAN,
@@ -106,8 +106,8 @@ public class Entities {
             BiomeKeys.DEEP_OCEAN,
             BiomeKeys.DEEP_FROZEN_OCEAN
         );
-        config.sardine.addSpawn(keys, SpawnGroup.WATER_AMBIENT, MINNOW);
-        config.red_porgy.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE);
+        config.sardineSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, MINNOW);
+        config.redPorgySpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE);
     }
 
     @Environment(EnvType.CLIENT)

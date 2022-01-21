@@ -1,6 +1,11 @@
 package io.github.linkle.valleycraft.config;
 
 import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.config.objects.EntityConfig;
+import io.github.linkle.valleycraft.config.objects.FishingConfig;
+import io.github.linkle.valleycraft.config.objects.NetherConfig;
+import io.github.linkle.valleycraft.config.objects.OreConfig;
+import io.github.linkle.valleycraft.config.objects.PlantConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
@@ -134,9 +139,14 @@ public class VConfig implements ConfigData {
         }
 
         public static class NetherFeatures implements ConfigData {
-            public boolean soulSporecapPatchEnabled = true;
-            public boolean rootedWatcherPatchEnabled = true;
-            public boolean taintedWartPatchEnabled = true;
+            @Gui.CollapsibleObject
+            public NetherConfig soulSporecapPatch = new NetherConfig(50, 4);
+            @Gui.CollapsibleObject
+            public NetherConfig rootedWatcherPatch = new NetherConfig(50, 2);
+            @Gui.CollapsibleObject
+            public NetherConfig rootedWatcherCrimsonPatch = new NetherConfig(50, 4);
+            @Gui.CollapsibleObject
+            public NetherConfig taintedWartPatch = new NetherConfig(50, 3);
         }
 
         public static class OceanFeatures implements ConfigData {
@@ -255,25 +265,25 @@ public class VConfig implements ConfigData {
 
     public static class Mobs implements ConfigData {
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig bear = new EntityConfig(5, 1, 2);
+        public EntityConfig bearSpawn = new EntityConfig(5, 1, 2);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig duck = new EntityConfig(7, 3, 4);
+        public EntityConfig duckSpawn = new EntityConfig(7, 3, 4);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig fireEel = new EntityConfig(6, 1, 2);
+        public EntityConfig fireEelSpawn = new EntityConfig(6, 1, 2);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig perch = new EntityConfig(6, 3, 6);
+        public EntityConfig perchSpawn = new EntityConfig(6, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig minnow = new EntityConfig(6, 3, 6);
+        public EntityConfig minnowSpawn = new EntityConfig(6, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig sardine = new EntityConfig(6, 3, 6);
+        public EntityConfig sardineSpawn = new EntityConfig(6, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig red_porgy = new EntityConfig(6, 3, 6);
+        public EntityConfig redPorgySpawn = new EntityConfig(6, 3, 6);
     }
 
     public static class Misc implements ConfigData {

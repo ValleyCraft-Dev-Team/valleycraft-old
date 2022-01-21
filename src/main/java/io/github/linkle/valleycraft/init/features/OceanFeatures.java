@@ -3,7 +3,7 @@ package io.github.linkle.valleycraft.init.features;
 import java.util.function.Predicate;
 
 import io.github.linkle.valleycraft.ValleyMain;
-import io.github.linkle.valleycraft.config.PlantConfig;
+import io.github.linkle.valleycraft.config.objects.PlantConfig;
 import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;

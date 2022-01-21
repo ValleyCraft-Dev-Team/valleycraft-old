@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.config;
+package io.github.linkle.valleycraft.config.objects;
 
 import java.util.Map;
 
@@ -36,7 +36,7 @@ public class OreConfig implements ConfigData {
         return maxAboveBottom ? YOffset.aboveBottom(maxOffset) : YOffset.fixed(maxOffset);
     }
     
-    static void getLang(Map<String, String> map) {
+    public static void getLang(Map<String, String> map) {
         map.put("enable", "Enable");
         map.put("size", "Vein Size");
         map.put("repeat", "Repeat");

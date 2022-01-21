@@ -33,12 +33,12 @@ public interface EnchantmentHandler {
         return Collections.emptyList();
     }
 
-        //Use this method to list specific enchantments the item should *not* accept that it would otherwise.
+    /** Use this method to list specific enchantments the item should *not* accept that it would otherwise. */
     default boolean isInvalid(Enchantment enchantment) {
         return false;
     }
 
-        //Use this method to list specific enchantments the item *should* accept.
+    /** Use this method to list specific enchantments the item *should* accept. */
     default boolean isExplicitlyValid(Enchantment enchantment) {
         return false;
     }

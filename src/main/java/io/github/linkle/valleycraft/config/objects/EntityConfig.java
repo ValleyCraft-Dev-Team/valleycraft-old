@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.config;
+package io.github.linkle.valleycraft.config.objects;
 
 import java.util.Map;
 import java.util.function.Predicate;
@@ -28,7 +28,7 @@ public class EntityConfig implements ConfigData {
         BiomeModifications.addSpawn(biomeSelector, spawnGroup, entityType, weight, minGroupSize, maxGroupSize);
     }
     
-    static void getLang(Map<String, String> map) {
+    public static void getLang(Map<String, String> map) {
         map.put("enable", "Enable");
         map.put("weight", "Weight");
         map.put("minGroupSize", "Min Group Size");

@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.config;
+package io.github.linkle.valleycraft.config.objects;
 
 import java.util.Map;
 
@@ -15,12 +15,12 @@ public class PlantConfig implements ConfigData {
     @Comment("Spawn rarity in a chunk. Higher rarity means less likely to spawn a patch.")
     public int rarity;
     
-    PlantConfig(int tries, int rarity) {
+    public PlantConfig(int tries, int rarity) {
         this.tries = tries;
         this.rarity = rarity;
     }
     
-    static void getLang(Map<String, String> map) {
+    public static void getLang(Map<String, String> map) {
         map.put("enable", "Enable");
         map.put("tries", "Tries");
         map.put("rarity", "Rarity");

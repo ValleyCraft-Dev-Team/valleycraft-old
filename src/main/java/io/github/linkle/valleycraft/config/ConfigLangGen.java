@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import org.apache.commons.lang3.ClassUtils;
 
 import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.config.objects.EntityConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.gui.registry.api.GuiRegistryAccess;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
@@ -20,8 +21,8 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 /** Lang generator to generate translation from valleycraft autoconfig and output logs. Open the mod menu to output the log */
 @Environment(EnvType.CLIENT)
 public class ConfigLangGen {
-    // This should be disable all a time. If this is true, please set it to false.
-    private static final boolean isEnable = true;
+    /** This should be disable all a time. If this is true, please set it to false. */
+    private static final boolean isEnable = false;
     
     private static final HashMap<Class<?>, Map<String, String>> MAP = new HashMap<>();;
     private static final LinkedHashSet<Trans> LIST = new LinkedHashSet<>(100);
@@ -30,10 +31,9 @@ public class ConfigLangGen {
         if (!isEnable) return;
         
         // This is where it class registered for lang generate
-        //register(EntityConfig.class, EntityConfig::getLang);
+        register(EntityConfig.class, EntityConfig::getLang);
         //register(OreConfig.class, OreConfig::getLang);
-        register(PlantConfig.class, PlantConfig::getLang);
-        //register(FishingConfig.class, FishingConfig::getLang);
+        //register(NetherConfig.class, NetherConfig::getLang);
         
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (!LIST.isEmpty()) {

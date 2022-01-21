@@ -1,7 +1,5 @@
 package io.github.linkle.valleycraft.init.features;
 
-import static io.github.linkle.valleycraft.utils.Util.register;
-
 import java.util.ArrayList;
 
 import io.github.linkle.valleycraft.ValleyMain;
@@ -79,7 +77,7 @@ public class CaveFeatures {
         list.add(CountPlacementModifier.of(9));
         list.add(SquarePlacementModifier.of());
         list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.fixed(32)));
-        key = register("glow_kelp_patch_cave", VFeatures.GLOW_KELP.configure(FeatureConfig.DEFAULT), list);
+        key = Util.register("glow_kelp_patch_cave", VFeatures.GLOW_KELP.configure(FeatureConfig.DEFAULT), list);
         if (config.glowKelpPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
     }

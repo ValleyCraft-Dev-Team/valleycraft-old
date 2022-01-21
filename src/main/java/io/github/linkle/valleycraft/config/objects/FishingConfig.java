@@ -1,4 +1,4 @@
-package io.github.linkle.valleycraft.config;
+package io.github.linkle.valleycraft.config.objects;
 
 import java.util.Map;
 import java.util.Objects;
@@ -8,7 +8,7 @@ import me.shedaniel.autoconfig.ConfigData;
 public class FishingConfig implements ConfigData {
     public boolean enabled = true;
     
-    static void getLang(Map<String, String> map) {
+    public static void getLang(Map<String, String> map) {
         map.put("enabled", "Enable Fishing Loot");
         map.put("fish", "Fish Loot List");
         map.put("junk", "Junk Loot List");
