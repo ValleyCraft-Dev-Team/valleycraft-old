@@ -45,13 +45,6 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
         int tries = config.tries();
         int spawned = 0;
         
-        if (config.state().getBlockState(random, mutable).isOf(Aquatic.RED_SEA_GRASS)) {
-            ValleyMain.LOGGER.info(tries);
-            ValleyMain.LOGGER.info(height);
-            ValleyMain.LOGGER.info(size);
-        }
-        
-        
         for (int i = 0; i < tries; ++i) {
             int xOffset = random.nextInt(size*2) - size;
             int yOffset = random.nextInt(height*2) - height;

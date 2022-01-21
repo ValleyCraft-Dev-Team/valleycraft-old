@@ -140,13 +140,13 @@ public class VConfig implements ConfigData {
 
         public static class NetherFeatures implements ConfigData {
             @Gui.CollapsibleObject
-            public NetherConfig soulSporecapPatch = new NetherConfig(50, 4);
+            public PlantConfig soulSporecapPatch = new PlantConfig(80, 1);
             @Gui.CollapsibleObject
-            public NetherConfig rootedWatcherPatch = new NetherConfig(50, 2);
+            public PlantConfig rootedWatcherPatch = new PlantConfig(80, 3);
             @Gui.CollapsibleObject
-            public NetherConfig rootedWatcherCrimsonPatch = new NetherConfig(50, 4);
+            public PlantConfig rootedWatcherCrimsonPatch = new PlantConfig(80, 2);
             @Gui.CollapsibleObject
-            public NetherConfig taintedWartPatch = new NetherConfig(50, 3);
+            public PlantConfig taintedWartPatch = new PlantConfig(80, 1);
         }
 
         public static class OceanFeatures implements ConfigData {

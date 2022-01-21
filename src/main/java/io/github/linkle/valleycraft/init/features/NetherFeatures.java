@@ -15,7 +15,7 @@ import net.minecraft.block.TallPlantBlock;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.CountPlacementModifier;
+import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
@@ -29,23 +29,27 @@ public class NetherFeatures {
         Predicate<BiomeSelectionContext> selection;
         
         if (features.soulSporecapPatch.enable) {
+            var set = features.soulSporecapPatch;
             selection = BiomeSelectors.foundInTheNether();
-            BiomeModifications.addFeature(selection, step, create("soul_sporecap_patch", Plants.SOUL_SPORECAP, 50, 4));
+            BiomeModifications.addFeature(selection, step, create("soul_sporecap_patch", Plants.SOUL_SPORECAP, set.tries, set.rarity));
         }
         
         if (features.rootedWatcherPatch.enable) {
+            var set = features.rootedWatcherPatch;
             selection = BiomeSelectors.foundInTheNether();
-            BiomeModifications.addFeature(selection, step, create("rooted_watcher_patch", Plants.ROOTED_WATCHER, 50, 2));
+            BiomeModifications.addFeature(selection, step, create("rooted_watcher_patch", Plants.ROOTED_WATCHER, set.tries, set.rarity));
         }
         
         if (features.rootedWatcherCrimsonPatch.enable) {
+            var set = features.rootedWatcherCrimsonPatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.CRIMSON_FOREST);
-            BiomeModifications.addFeature(selection, step, create("rooted_watcher_patch_crimson", Plants.ROOTED_WATCHER, 50, 4));
+            BiomeModifications.addFeature(selection, step, create("rooted_watcher_patch_crimson", Plants.ROOTED_WATCHER, set.tries, set.rarity));
         }
         
         if (features.taintedWartPatch.enable) {
+            var set = features.taintedWartPatch;
             selection = BiomeSelectors.foundInTheNether();
-            BiomeModifications.addFeature(selection, step, create("tainted_wart_patch", Plants.TAINTED_WART, 50, 3));
+            BiomeModifications.addFeature(selection, step, create("tainted_wart_patch", Plants.TAINTED_WART, set.tries, set.rarity));
         }
     }
     
@@ -53,13 +57,13 @@ public class NetherFeatures {
         state.getMaterial().isReplaceable() && !(state.getBlock() instanceof TallPlantBlock)
     ));
     
-    private static RegistryKey<PlacedFeature> create(String id, Block block, int tries, int repeat) {
-        return create(id, BlockStateProvider.of(block), tries, repeat);
+    private static RegistryKey<PlacedFeature> create(String id, Block block, int tries, int rarity) {
+        return create(id, BlockStateProvider.of(block), tries, rarity);
     }
     
     /** Create the random patch feature config. */
-    private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int repeat) {
+    private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
         var config = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(block, tries, 7, 5, PLACER));
-        return Util.register(id, config, CountPlacementModifier.of(repeat), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_TOP_RANGE);
+        return Util.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_TOP_RANGE);
     }
 }
