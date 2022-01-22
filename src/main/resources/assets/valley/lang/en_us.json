@@ -919,6 +919,7 @@
   "text.autoconfig.valley.option.misc": "Miscellaneous",
   "text.autoconfig.valley.option.misc.foodEffectsEnabled": "Food's Status Effects",
   "text.autoconfig.valley.option.misc.spiderEggWebGenEnabled": "Spider Egg Web Gen",
+  "text.autoconfig.valley.option.misc.scaldingBurn": "Scalding Block Burn Enitity",
   "text.autoconfig.valley.option.FishEntry": "Entry",
   "text.autoconfig.valley.option.FishEntry.item": "Item",
   "text.autoconfig.valley.option.FishEntry.weight": "Weight",

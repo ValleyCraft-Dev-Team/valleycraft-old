@@ -1,15 +1,16 @@
 package io.github.linkle.valleycraft.config;
 
 import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.config.enums.EntityCondition;
 import io.github.linkle.valleycraft.config.objects.EntityConfig;
 import io.github.linkle.valleycraft.config.objects.FishingConfig;
-import io.github.linkle.valleycraft.config.objects.NetherConfig;
 import io.github.linkle.valleycraft.config.objects.OreConfig;
 import io.github.linkle.valleycraft.config.objects.PlantConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.EnumHandler.EnumDisplayOption;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
 @Config(name = ValleyMain.MOD_ID)
@@ -24,15 +25,15 @@ public class VConfig implements ConfigData {
     @ConfigEntry.Gui.CollapsibleObject
     public FishingConfig fishing = new FishingConfig();
 
-    @Comment("Disables generation of features like stones, mud, sandstone, \nand biome-specific blobs, but not ores.")
+    @Comment("Config generation of features like stones, mud, sandstone, \nand biome-specific blobs, but not ores.")
     @Gui.CollapsibleObject
     public BlobsGenerations blobsGenerations = new BlobsGenerations();
 
-    @Comment("Disables generate of features like plants, flowers, crops, and rocks.")
+    @Comment("Config generate of features like plants, flowers, crops, and rocks.")
     @Gui.CollapsibleObject
     public FeatureGenerations featureGenerations = new FeatureGenerations();
 
-    @Comment("Disables mob spawns")
+    @Comment("Config mob spawns")
     @Gui.CollapsibleObject
     public Mobs mobs = new Mobs();
 
@@ -271,19 +272,19 @@ public class VConfig implements ConfigData {
         public EntityConfig duckSpawn = new EntityConfig(7, 3, 4);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig fireEelSpawn = new EntityConfig(6, 1, 2);
+        public EntityConfig fireEelSpawn = new EntityConfig(5, 1, 2);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig perchSpawn = new EntityConfig(6, 3, 6);
+        public EntityConfig perchSpawn = new EntityConfig(5, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig minnowSpawn = new EntityConfig(6, 3, 6);
+        public EntityConfig minnowSpawn = new EntityConfig(5, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig sardineSpawn = new EntityConfig(6, 3, 6);
+        public EntityConfig sardineSpawn = new EntityConfig(5, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig redPorgySpawn = new EntityConfig(6, 3, 6);
+        public EntityConfig redPorgySpawn = new EntityConfig(5, 3, 6);
     }
 
     public static class Misc implements ConfigData {
@@ -291,5 +292,8 @@ public class VConfig implements ConfigData {
         public boolean foodEffectsEnabled = true;
         @Comment("Disables Cave Spider Egg's web cluster cover around the egg")
         public boolean spiderEggWebGenEnabled = true;
+        @Comment("Config whether should burn all entity when walk on scalding block")
+        @Gui.EnumHandler(option = EnumDisplayOption.BUTTON)
+        public EntityCondition scaldingBurn = EntityCondition.ALL;
     }
 }
