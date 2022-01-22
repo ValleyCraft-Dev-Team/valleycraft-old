@@ -2,10 +2,12 @@ package io.github.linkle.valleycraft.config;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.cave.CrystalBlock;
+import io.github.linkle.valleycraft.blocks.plants.aquatic.GlowKelp;
 import io.github.linkle.valleycraft.config.enums.EntityCondition;
 import io.github.linkle.valleycraft.config.objects.CrystalConfig;
 import io.github.linkle.valleycraft.config.objects.EntityConfig;
 import io.github.linkle.valleycraft.config.objects.FishingConfig;
+import io.github.linkle.valleycraft.config.objects.GlowKelpConfig;
 import io.github.linkle.valleycraft.config.objects.OreConfig;
 import io.github.linkle.valleycraft.config.objects.PlantConfig;
 import me.shedaniel.autoconfig.ConfigData;
@@ -137,10 +139,11 @@ public class VConfig implements ConfigData {
         public static class CaveFeatures implements ConfigData {
             public boolean redstoneCrystalPatchEnabled = true;
             public boolean spiderSackPatchEnabled = true;
-            public boolean glowKelpPatchEnabled = true;
             public boolean rocksPatchEnabled = true;
             @Gui.CollapsibleObject
-            public CrystalConfig prismarineCluster = new CrystalConfig(80, 6, 2);
+            public GlowKelpConfig glowKelpPatch = new GlowKelpConfig(65, 9);
+            @Gui.CollapsibleObject
+            public CrystalConfig prismarineCluster = new CrystalConfig(200, 6, 4);
         }
 
         public static class NetherFeatures implements ConfigData {

@@ -20,6 +20,7 @@ import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome.Category;
+import net.minecraft.world.gen.CountConfig;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.CountPlacementModifier;
@@ -78,14 +79,15 @@ public class CaveFeatures {
         if (config.rocksPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
         
-        list = new ArrayList<>();
-        list.add(CountPlacementModifier.of(9));
-        list.add(SquarePlacementModifier.of());
-        list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(10), YOffset.fixed(32)));
-        key = Util.register("glow_kelp_patch_cave", VFeatures.GLOW_KELP.configure(FeatureConfig.DEFAULT), list);
-        if (config.glowKelpPatchEnabled)
+        if (config.glowKelpPatch.enable) {
+            var set = config.glowKelpPatch;
+            list = new ArrayList<>();
+            list.add(CountPlacementModifier.of(set.repeat));
+            list.add(SquarePlacementModifier.of());
+            list.add(HeightRangePlacementModifier.uniform(YOffset.aboveBottom(set.yMinBottom), YOffset.fixed(set.yMax)));
+            key = Util.register("glow_kelp_patch_cave", VFeatures.GLOW_KELP.configure(new CountConfig(set.tries)), list);
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
-        
+        }
         
         if (config.prismarineCluster.enable) {
             var set = config.prismarineCluster;

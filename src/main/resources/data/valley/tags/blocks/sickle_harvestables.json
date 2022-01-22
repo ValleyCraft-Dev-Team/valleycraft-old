@@ -2,6 +2,8 @@
     "replace": false,
     "values": [
         "minecraft:grass",
-        "minecraft:tall_grass"
+        "minecraft:tall_grass",
+        "valley:herbs",
+        "valley:taproots"
     ]
 }

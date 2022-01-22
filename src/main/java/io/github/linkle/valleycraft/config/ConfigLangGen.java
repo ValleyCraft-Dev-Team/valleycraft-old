@@ -10,8 +10,9 @@ import java.util.function.Consumer;
 import org.apache.commons.lang3.ClassUtils;
 
 import io.github.linkle.valleycraft.ValleyMain;
-import io.github.linkle.valleycraft.config.objects.CrystalConfig;
+import io.github.linkle.valleycraft.config.objects.GlowKelpConfig;
 import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.gui.registry.api.GuiRegistryAccess;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import net.fabricmc.api.EnvType;
@@ -32,7 +33,8 @@ public class ConfigLangGen {
         
         // This is where it class registered for lang generate
         //register(PlantConfig.class, PlantConfig::getLang);
-        register(CrystalConfig.class, CrystalConfig::getLang);
+        //register(CrystalConfig.class, CrystalConfig::getLang);
+        register(GlowKelpConfig.class, GlowKelpConfig::getLang);
         
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (!LIST.isEmpty()) {
@@ -71,7 +73,7 @@ public class ConfigLangGen {
         return guis;
     }
     
-    private static void register(Class<?> type, Consumer<Map<String, String>> consumer) {
+    private static void register(Class<? extends ConfigData> type, Consumer<Map<String, String>> consumer) {
         var map = new HashMap<String, String>(32);
         consumer.accept(map);
         MAP.put(type, map);

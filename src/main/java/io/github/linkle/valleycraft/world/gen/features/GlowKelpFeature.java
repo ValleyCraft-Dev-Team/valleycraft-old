@@ -6,18 +6,19 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.KelpBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Heightmap.Type;
+import net.minecraft.world.gen.CountConfig;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
-public class GlowKelpFeature extends Feature<DefaultFeatureConfig> {
+public class GlowKelpFeature extends Feature<CountConfig> {
 
     public GlowKelpFeature() {
-        super(DefaultFeatureConfig.CODEC);
+        super(CountConfig.CODEC);
     }
 
     @Override
-    public boolean generate(FeatureContext<DefaultFeatureConfig> context) {
+    public boolean generate(FeatureContext<CountConfig> context) {
         int spawned = 0;
         var world = context.getWorld();
         var origin = context.getOrigin();
@@ -25,10 +26,11 @@ public class GlowKelpFeature extends Feature<DefaultFeatureConfig> {
         var kelp = Aquatic.GLOW_KELP.getDefaultState();
         var plant = Aquatic.GLOW_KELP_PLANT.getDefaultState();
         var mutable = new BlockPos.Mutable();
+        var tries = context.getConfig().getCount().get(random);
 
-        for (int i = 0; i < 50; ++i) {
+        for (int i = 0; i < tries; ++i) {
             int xOffset = random.nextInt(7) - random.nextInt(7);
-            int yOffset = random.nextInt(4) - random.nextInt(4);
+            int yOffset = random.nextInt(5) - random.nextInt(5);
             int zOffset = random.nextInt(7) - random.nextInt(7);
             mutable.set(origin, xOffset, yOffset, zOffset);
             

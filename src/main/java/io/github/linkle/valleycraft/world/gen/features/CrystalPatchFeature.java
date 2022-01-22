@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.state.property.Properties;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -40,14 +42,31 @@ public class CrystalPatchFeature extends Feature<CrystalPatchConfig> {
             
             if (!world.isWater(mutable)) continue;
             
+            
             int topY = world.getTopY(Type.OCEAN_FLOOR, mutable.getX(), mutable.getZ());
-            if (topY <= mutable.getY()) {
-                continue;
-            }
+            boolean exit = topY <= mutable.getY();
             
             for (int j = 0; j < 6; j++) {
-                var newState = state.with(Properties.FACING, Direction.byId(i));
-                if (newState.canPlaceAt(world, mutable)) list.add(newState);
+                var face = Direction.byId(i);
+                var newState = state.with(Properties.FACING, face);
+                if (newState.canPlaceAt(world, mutable)) {
+                    
+                    if (exit) {
+                        var ground = world.getBlockState(mutable.offset(face.getOpposite()));
+                        
+                        boolean bool = 
+                        ground.isIn(BlockTags.BASE_STONE_OVERWORLD) ||
+                        ground.isOf(Blocks.PRISMARINE) ||
+                        ground.isOf(Blocks.PRISMARINE_BRICKS) ||
+                        ground.isOf(Blocks.DARK_PRISMARINE);
+                        
+                        if (!bool) {
+                            continue;
+                        }
+                    }
+                    
+                    list.add(newState);
+                }
             }
             
             if (!list.isEmpty()) {
