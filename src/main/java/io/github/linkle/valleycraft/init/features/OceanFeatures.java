@@ -91,7 +91,7 @@ public class OceanFeatures {
         if (config.scallopPatch.enable) {
             set = config.scallopPatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.COLD_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.FROZEN_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN);
-            BiomeModifications.addFeature(selection, step, create("scallop_patch", Aquatic.GIANT_SCALLOP, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("scallop_patch", Util.randomHoriFacing(Aquatic.GIANT_SCALLOP.getDefaultState()), set.tries, set.rarity));
         }
 
         if (config.clamPatch.enable) {
@@ -109,12 +109,11 @@ public class OceanFeatures {
         if (config.starfishPatch.enable) {
             set = config.starfishPatch;
             selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
-            BiomeModifications.addFeature(selection, step, create("starfish_orange_patch", Aquatic.STARFISH_ORANGE, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("starfish_orange_patch", Util.randomHoriFacing(Aquatic.STARFISH_ORANGE.getDefaultState()), set.tries, set.rarity));
         }
     }
     
     private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer((world, pos) -> {
-        
         if (world.isWater(pos)) {
             return true;
         }

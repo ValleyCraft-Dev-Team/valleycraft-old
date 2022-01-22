@@ -8,6 +8,7 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.world.Heightmap.Type;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
@@ -37,7 +38,12 @@ public class CrystalPatchFeature extends Feature<CrystalPatchConfig> {
             int zOffset = random.nextInt(spread*2) - spread;
             mutable.set(origin, xOffset, yOffset, zOffset);
             
-            if (!world.isAir(mutable)) continue;
+            if (!world.isWater(mutable)) continue;
+            
+            int topY = world.getTopY(Type.OCEAN_FLOOR, mutable.getX(), mutable.getZ());
+            if (topY <= mutable.getY()) {
+                continue;
+            }
             
             for (int j = 0; j < 6; j++) {
                 var newState = state.with(Properties.FACING, Direction.byId(i));

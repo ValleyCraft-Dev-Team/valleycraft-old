@@ -1,7 +1,9 @@
 package io.github.linkle.valleycraft.config;
 
 import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.blocks.cave.CrystalBlock;
 import io.github.linkle.valleycraft.config.enums.EntityCondition;
+import io.github.linkle.valleycraft.config.objects.CrystalConfig;
 import io.github.linkle.valleycraft.config.objects.EntityConfig;
 import io.github.linkle.valleycraft.config.objects.FishingConfig;
 import io.github.linkle.valleycraft.config.objects.OreConfig;
@@ -117,19 +119,19 @@ public class VConfig implements ConfigData {
     }
 
     public static class FeatureGenerations implements ConfigData {
-        @ConfigEntry.Gui.CollapsibleObject
+        @Gui.CollapsibleObject
         public CaveFeatures caveFeatures = new CaveFeatures();
 
-        @ConfigEntry.Gui.CollapsibleObject
+        @Gui.CollapsibleObject
         public OceanFeatures oceanFeatures = new OceanFeatures();
 
-        @ConfigEntry.Gui.CollapsibleObject
+        @Gui.CollapsibleObject
         public NetherFeatures netherFeatures = new NetherFeatures();
 
-        @ConfigEntry.Gui.CollapsibleObject
+        @Gui.CollapsibleObject
         public PlantFeatures plantFeatures = new PlantFeatures();
 
-        @ConfigEntry.Gui.CollapsibleObject
+        @Gui.CollapsibleObject
         public Trees trees = new Trees();
 
         public static class CaveFeatures implements ConfigData {
@@ -137,6 +139,8 @@ public class VConfig implements ConfigData {
             public boolean spiderSackPatchEnabled = true;
             public boolean glowKelpPatchEnabled = true;
             public boolean rocksPatchEnabled = true;
+            @Gui.CollapsibleObject
+            public CrystalConfig prismarineCluster = new CrystalConfig(80, 6, 2);
         }
 
         public static class NetherFeatures implements ConfigData {

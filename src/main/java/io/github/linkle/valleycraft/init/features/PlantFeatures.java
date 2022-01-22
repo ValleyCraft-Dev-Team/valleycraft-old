@@ -3,7 +3,6 @@ package io.github.linkle.valleycraft.init.features;
 import java.util.function.Predicate;
 
 import com.google.common.base.Predicates;
-import com.ibm.icu.impl.units.UnitsData.Categories;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
@@ -19,7 +18,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidFillable;
 import net.minecraft.block.TallPlantBlock;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
@@ -38,9 +36,9 @@ import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public class PlantFeatures {
     //Beach Features
-    private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Aquatic.CLAM, 3, 4);
-    private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState().with(Properties.WATERLOGGED, false), 1, 10);
-    private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, false), 1, 10);
+    private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Util.randomHoriFacing(Aquatic.CLAM.getDefaultState()), 3, 4);
+    private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState(), 1, 10);
+    private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Util.randomHoriFacing(Aquatic.STARFISH_ORANGE.getDefaultState()), 1, 10);
 
     public static void initialize() {
         var config = ValleyMain.CONFIG.featureGenerations.plantFeatures;

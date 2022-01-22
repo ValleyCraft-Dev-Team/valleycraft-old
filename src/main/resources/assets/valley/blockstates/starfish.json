@@ -1,34 +1,18 @@
 {
   "variants": {
-    "facing=east,open=false": {
+    "facing=east": {
       "y": 90,
       "model": "valley:block/starfish"
     },
-    "facing=east,open=true": {
-      "y": 90,
-      "model": "valley:block/starfish"
-    },
-    "facing=north,open=false": {
+    "facing=north": {
       "y": 0,
       "model": "valley:block/starfish"
     },
-    "facing=north,open=true": {
-      "y": 0,
-      "model": "valley:block/starfish"
-    },
-    "facing=south,open=false": {
+    "facing=south": {
       "y": 180,
       "model": "valley:block/starfish"
     },
-    "facing=south,open=true": {
-      "y": 180,
-      "model": "valley:block/starfish"
-    },
-    "facing=west,open=false": {
-      "y": 270,
-      "model": "valley:block/starfish"
-    },
-    "facing=west,open=true": {
+    "facing=west": {
       "y": 270,
       "model": "valley:block/starfish"
     }

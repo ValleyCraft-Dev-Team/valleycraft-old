@@ -29,7 +29,7 @@ public class Aquatic {
     public static final Block ANEMONE_YELLOW = new AnenomeBlock();
     public static final Block ANEMONE_GREEN = new AnenomeBlock();
     public static final Block ANEMONE_ORANGE = new AnenomeBlock();
-    public static final Block STARFISH_ORANGE = new ClamBlock();
+    public static final Block STARFISH_ORANGE = new AquaticFacingBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
 
     public static final Block TUBE_WORMS = new AnenomeBlock();
 
