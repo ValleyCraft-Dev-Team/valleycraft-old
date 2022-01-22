@@ -1,8 +1,19 @@
 {
-  "replace": false,
-  "values": [
-    "valley:tomato_bush", "valley:rice_crop", "valley:bitter_berries", "valley:maize_crop", "valley:onion_crop_block", "valley:miners_lettuce_crop_block", "valley:snow_yam_crop_block"
-    , "valley:green_bean_crop_block", "valley:puff_crop_block","valley:eggplant_crop_block","valley:pepper_crop_block",
-    "valley:mandrake_crop_block","valley:spicy_berries","valley:holly"
-  ]
+	"replace": false,
+	"values": [
+		"valley:tomato_bush",
+		"valley:rice_crop",
+		"valley:bitter_berries",
+		"valley:maize_crop",
+		"valley:onion_crop_block",
+		"valley:miners_lettuce_crop_block",
+		"valley:snow_yam_crop_block",
+		"valley:green_bean_crop_block",
+		"valley:puff_crop_block",
+		"valley:eggplant_crop_block",
+		"valley:pepper_crop_block",
+		"valley:mandrake_crop_block",
+		"valley:spicy_berries",
+		"valley:holly"
+	]
 }

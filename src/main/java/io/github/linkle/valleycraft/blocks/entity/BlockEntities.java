@@ -4,14 +4,11 @@ import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.ItemGroups;
-import io.github.linkle.valleycraft.init.MiscItems;
 import io.github.linkle.valleycraft.utils.Util;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder.Factory;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
@@ -20,29 +17,13 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BlockEntities {
-	public static final Block BRICK_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
-	        .requiresTool()
-			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
-			.luminance(7)
-			.strength(1.5f, 2f));
+	public static final Block BRICK_FURNACE = new BrickFurnace(Block.Settings.copy(Blocks.FURNACE)
+	        .sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
+            .luminance(s->7));
 
-	public static final Block COBBLE_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
-			.requiresTool()
-			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
-			.luminance(7)
-			.strength(1.5f, 2f));
-
-	public static final Block VOLCANIC_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
-			.requiresTool()
-			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
-			.luminance(7)
-			.strength(1.5f, 2f));
-
-	public static final Block CARMINE_FURNACE = new BrickFurnace(FabricBlockSettings.of(Material.STONE)
-			.requiresTool()
-			.sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
-			.luminance(7)
-			.strength(1.5f, 2f));
+	public static final Block COBBLE_FURNACE = new BrickFurnace(Block.Settings.copy(BRICK_FURNACE));
+	public static final Block VOLCANIC_FURNACE = new BrickFurnace(Block.Settings.copy(BRICK_FURNACE));
+	public static final Block CARMINE_FURNACE = new BrickFurnace(Block.Settings.copy(BRICK_FURNACE));
 
 	public static final Block CRAB_TRAP = new CrabTrap();
 	

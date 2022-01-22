@@ -100,6 +100,7 @@
 		"valley:glow_kelp_block",
 		"valley:prismarine_cluster",
 		"valley:sea_urchin",
-		"valley:bone_joint_block"
+		"valley:bone_joint_block",
+		"valley:saltpeter_block"
 	]
 }

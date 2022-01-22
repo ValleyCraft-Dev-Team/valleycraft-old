@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import org.apache.commons.lang3.ClassUtils;
 
 import io.github.linkle.valleycraft.ValleyMain;
-import io.github.linkle.valleycraft.config.objects.EntityConfig;
+import io.github.linkle.valleycraft.config.objects.CrystalConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.gui.registry.api.GuiRegistryAccess;
 import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
@@ -31,9 +31,8 @@ public class ConfigLangGen {
         if (!isEnable) return;
         
         // This is where it class registered for lang generate
-        register(EntityConfig.class, EntityConfig::getLang);
-        //register(OreConfig.class, OreConfig::getLang);
-        //register(NetherConfig.class, NetherConfig::getLang);
+        //register(PlantConfig.class, PlantConfig::getLang);
+        register(CrystalConfig.class, CrystalConfig::getLang);
         
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (!LIST.isEmpty()) {
