@@ -11,7 +11,8 @@
   "EnchantmentMixin",
   "EnchantmentHelperMixin",
   "DamageEnchantmentMixin",
-	"WorldMixin"
+	"WorldMixin",
+  "IceBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
