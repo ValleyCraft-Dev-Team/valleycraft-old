@@ -11,7 +11,6 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.item.EntityBucketItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Rarity;
 

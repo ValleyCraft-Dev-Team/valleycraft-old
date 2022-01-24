@@ -9,6 +9,7 @@ import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -31,11 +32,41 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class CrabTrap extends BlockWithEntity implements Waterloggable {
     protected static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
+    public static final VoxelShape SHAPE = VoxelShapes.union(Block.createCuboidShape(0, 0, 0, 16, 3, 16),
+                                                                //Top
+                                                             Block.createCuboidShape(0, 13, 0, 16, 16, 16),
+                                                                //Northwest corner
+                                                             Block.createCuboidShape(0, 0, 0, 2, 16, 1),
+                                                             Block.createCuboidShape(0, 0, 0, 1, 16, 2),
+                                                                //North side
+                                                             Block.createCuboidShape(4, 0, 0, 7, 16, 1),
+                                                             Block.createCuboidShape(9, 0, 0, 12, 16, 1),
+                                                                //Northeast corner
+                                                             Block.createCuboidShape(14, 0, 0, 16, 16, 1),
+                                                             Block.createCuboidShape(15, 0, 0, 16, 16, 2),
+                                                                //East side
+                                                             Block.createCuboidShape(15, 0, 4, 16, 16, 7),
+                                                             Block.createCuboidShape(15, 0, 9, 16, 16, 12),
+                                                                //Southeast corner
+                                                             Block.createCuboidShape(15, 0, 14, 16, 16, 16),
+                                                             Block.createCuboidShape(14, 0, 15, 16, 16, 16),
+                                                                //South side
+                                                             Block.createCuboidShape(4, 0, 15, 7, 16, 16),
+                                                             Block.createCuboidShape(9, 0, 15, 12, 16, 16),
+                                                                //Southwest corner
+                                                             Block.createCuboidShape(0, 0, 15, 2, 16, 16),
+                                                             Block.createCuboidShape(0, 0, 14, 1, 16, 16),
+                                                                //West side
+                                                             Block.createCuboidShape(0, 0, 4, 1, 16, 7),
+                                                             Block.createCuboidShape(0, 0, 9, 1, 16, 12));
     
     public static BlockEntityType<CrabTrapEntity> BLOCK_ENTITY;
 
@@ -45,6 +76,11 @@ public class CrabTrap extends BlockWithEntity implements Waterloggable {
                 .sounds(BlockSoundGroup.WOOD)
                 .nonOpaque());
         setDefaultState(stateManager.getDefaultState().with(WATERLOGGED, false));
+    }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return SHAPE;
     }
 
         //Enables comparators to read from crap traps

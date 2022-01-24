@@ -15,7 +15,6 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;

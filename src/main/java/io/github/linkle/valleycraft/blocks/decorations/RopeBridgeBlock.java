@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.EntityShapeContext;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.block.SlabBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.item.BlockItem;

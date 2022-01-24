@@ -4,7 +4,6 @@ import io.github.linkle.valleycraft.init.ItemGroups;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;

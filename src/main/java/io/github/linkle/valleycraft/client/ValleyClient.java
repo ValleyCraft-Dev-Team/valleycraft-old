@@ -2,11 +2,8 @@ package io.github.linkle.valleycraft.client;
 
 import io.github.linkle.valleycraft.client.screen.HandledScreens;
 import io.github.linkle.valleycraft.config.ConfigLangGen;
-import io.github.linkle.valleycraft.config.VConfig;
 import io.github.linkle.valleycraft.init.Entities;
 import io.github.linkle.valleycraft.network.ClientNetwork;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.annotation.Config;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

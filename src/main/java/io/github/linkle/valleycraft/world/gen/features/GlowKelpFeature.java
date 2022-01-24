@@ -7,7 +7,6 @@ import net.minecraft.block.KelpBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Heightmap.Type;
 import net.minecraft.world.gen.CountConfig;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 

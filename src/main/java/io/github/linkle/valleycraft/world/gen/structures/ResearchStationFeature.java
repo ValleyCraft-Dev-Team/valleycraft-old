@@ -7,7 +7,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.state.property.Properties;
-import net.minecraft.structure.PostPlacementProcessor;
 import net.minecraft.structure.StructureGeneratorFactory;
 import net.minecraft.structure.StructurePiecesCollector;
 import net.minecraft.structure.StructurePiecesGenerator;

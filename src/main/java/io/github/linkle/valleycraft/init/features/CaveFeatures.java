@@ -10,7 +10,6 @@ import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.CavePatchConfig;
 import io.github.linkle.valleycraft.world.gen.features.CrystalPatchConfig;
 import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;
-import io.github.linkle.valleycraft.world.placer.ConditionBlockPlacer;
 import io.github.linkle.valleycraft.world.placer.HeightMapBlockPlacer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -29,7 +28,6 @@ import net.minecraft.world.gen.decorator.PlacementModifier;
 import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
 import net.minecraft.world.gen.decorator.SquarePlacementModifier;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 

@@ -1,8 +1,6 @@
 package io.github.linkle.valleycraft.blocks.plants.aquatic;
 
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.GuardianEntity;

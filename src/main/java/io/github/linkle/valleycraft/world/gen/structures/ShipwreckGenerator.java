@@ -17,7 +17,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
-import net.minecraft.world.Heightmap;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.StructureAccessor;

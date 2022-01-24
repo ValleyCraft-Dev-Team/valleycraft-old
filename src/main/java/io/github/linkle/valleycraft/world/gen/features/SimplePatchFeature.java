@@ -2,13 +2,9 @@ package io.github.linkle.valleycraft.world.gen.features;
 
 import java.util.ArrayList;
 
-import io.github.linkle.valleycraft.ValleyMain;
-import io.github.linkle.valleycraft.blocks.plants.aquatic.AquaticBlock;
-import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.world.placer.AirBlockPlacer;
 import io.github.linkle.valleycraft.world.placer.BlockPlacer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 

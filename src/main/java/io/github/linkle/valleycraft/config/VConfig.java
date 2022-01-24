@@ -1,8 +1,6 @@
 package io.github.linkle.valleycraft.config;
 
 import io.github.linkle.valleycraft.ValleyMain;
-import io.github.linkle.valleycraft.blocks.cave.CrystalBlock;
-import io.github.linkle.valleycraft.blocks.plants.aquatic.GlowKelp;
 import io.github.linkle.valleycraft.config.enums.EntityCondition;
 import io.github.linkle.valleycraft.config.objects.CrystalConfig;
 import io.github.linkle.valleycraft.config.objects.EntityConfig;
