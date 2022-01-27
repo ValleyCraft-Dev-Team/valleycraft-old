@@ -125,7 +125,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             if (rememberList.containsKey(item)) {
                 timer = rememberList.getInt(item);
             } else {
-                timer = 0;
+                timer = CrabTrapBaits.get(item, world.random);
                 rememberList.put(item, timer);
                 maxTimer = timer;
             }
