@@ -18,6 +18,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidFillable;
 import net.minecraft.block.TallPlantBlock;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.tag.FluidTags;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
@@ -171,7 +173,8 @@ public class PlantFeatures {
         //found in jungles
         if (config.jungleCapPatch.enable) {
             var set = config.jungleCapPatch;
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, create("jungle_cap_patch", Plants.JUNGLE_CAP, set.tries, set.rarity));
+            selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
+            BiomeModifications.addFeature(selector, vegetal, create("jungle_cap_patch", Plants.JUNGLE_CAP, set.tries, set.rarity));
         }
             
         if (config.panPatch.enable) {
@@ -249,7 +252,8 @@ public class PlantFeatures {
         if (config.bitterPatch.enable) {
             var set = config.bitterPatch;
             var key = create("bitter_patch", Plants.BITTER_BERRY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 3), set.tries, set.rarity);
-            BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, key);
+            selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
+            BiomeModifications.addFeature(selector, vegetal, key);
         }
 
         //found in shattered savannas

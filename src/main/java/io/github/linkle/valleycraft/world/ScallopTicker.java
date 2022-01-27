@@ -33,11 +33,6 @@ public class ScallopTicker extends WorldTicker {
             return Reason.STOP;
         }
         
-        if ((tick&1) == 0) {
-            if (tick < 6) 
-            return Reason.CONTINUE;
-        }
-        
         var random = world.random;
         var face = state.get(Properties.HORIZONTAL_FACING).getOpposite();
         var wise = face.rotateYClockwise();
