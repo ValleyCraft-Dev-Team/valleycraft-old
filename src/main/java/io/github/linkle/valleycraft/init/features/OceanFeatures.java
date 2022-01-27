@@ -109,7 +109,7 @@ public class OceanFeatures {
         if (config.starfishPatch.enable) {
             set = config.starfishPatch;
             selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
-            BiomeModifications.addFeature(selection, step, create("starfish_orange_patch", Util.randomHoriFacing(Aquatic.STARFISH_ORANGE.getDefaultState()), set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("starfish_orange_patch", Util.randomHoriFacing(Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, true)), set.tries, set.rarity));
         }
     }
     
