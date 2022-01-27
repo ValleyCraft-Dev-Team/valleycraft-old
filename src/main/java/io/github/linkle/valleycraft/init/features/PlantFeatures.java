@@ -278,9 +278,23 @@ public class PlantFeatures {
         return create(id, BlockStateProvider.of(block), tries, rarity);
     }
     
-    private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer(state ->
-        state.getMaterial().isReplaceable() && !(state.getBlock() instanceof TallPlantBlock) && !(state.getBlock() instanceof FluidFillable)
-    ));
+    private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer((world, pos) -> {
+        if (world.isWater(pos)) {
+            return false;
+        }
+        
+        var state = world.getBlockState(pos);
+        if (state.getMaterial().isReplaceable()) {
+            if (state.getBlock() instanceof TallPlantBlock) {
+                return false;
+            }
+            if (state.getFluidState().isOf(Fluids.EMPTY)) {
+                return true;
+            }
+        }
+        
+        return false;
+    }));
     
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
