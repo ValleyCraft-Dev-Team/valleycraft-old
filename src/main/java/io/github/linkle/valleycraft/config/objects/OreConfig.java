@@ -40,9 +40,9 @@ public class OreConfig implements ConfigData {
         map.put("enable", "Enable");
         map.put("size", "Vein Size");
         map.put("repeat", "Repeat");
-        map.put("minOffset", "Min Offset");
-        map.put("maxOffset", "Max Offset");
-        map.put("minBelowTop", "Min Use Below Top Offset");
-        map.put("maxAboveBottom", "Max Use Above Bottom Offset");
+        map.put("minOffset", "Y Min Offset");
+        map.put("maxOffset", "Y Max Offset");
+        map.put("minBelowTop", "Y Min Use Below Top Offset");
+        map.put("maxAboveBottom", "Y Max Use Above Bottom Offset");
     }
 }
