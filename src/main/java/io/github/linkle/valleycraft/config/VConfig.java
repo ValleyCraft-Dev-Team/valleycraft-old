@@ -274,7 +274,7 @@ public class VConfig implements ConfigData {
         public EntityConfig bearSpawn = new EntityConfig(5, 1, 2);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig duckSpawn = new EntityConfig(7, 3, 4);
+        public EntityConfig duckSpawn = new EntityConfig(6, 3, 4);
 
         @ConfigEntry.Gui.CollapsibleObject
         public EntityConfig fireEelSpawn = new EntityConfig(5, 1, 2);
@@ -283,13 +283,13 @@ public class VConfig implements ConfigData {
         public EntityConfig perchSpawn = new EntityConfig(5, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig minnowSpawn = new EntityConfig(5, 3, 6);
+        public EntityConfig minnowSpawn = new EntityConfig(4, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig sardineSpawn = new EntityConfig(5, 3, 6);
+        public EntityConfig sardineSpawn = new EntityConfig(4, 3, 6);
 
         @ConfigEntry.Gui.CollapsibleObject
-        public EntityConfig redPorgySpawn = new EntityConfig(5, 3, 6);
+        public EntityConfig redPorgySpawn = new EntityConfig(4, 3, 6);
     }
 
     public static class Misc implements ConfigData {

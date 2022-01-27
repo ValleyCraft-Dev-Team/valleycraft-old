@@ -78,7 +78,6 @@ public class Entities {
         FabricDefaultAttributeRegistry.register(MINNOW, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(SARDINE, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(RED_PORGY, FishEntity.createFishAttributes());
-
         
         var keys = BiomeSelectors.includeByKey(
             BiomeKeys.OLD_GROWTH_PINE_TAIGA,
@@ -86,7 +85,6 @@ public class Entities {
         );
         config.bearSpawn.addSpawn(keys, SpawnGroup.CREATURE, BEAR);
         config.duckSpawn.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK);
-        config.fireEelSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL);
         
         keys = BiomeSelectors.includeByKey(
             BiomeKeys.LUKEWARM_OCEAN,
@@ -95,7 +93,7 @@ public class Entities {
             BiomeKeys.DEEP_OCEAN
         );
         config.perchSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, PERCH);
-        config.minnowSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW);
+        
         
         keys = BiomeSelectors.includeByKey(
             BiomeKeys.COLD_OCEAN,
@@ -105,8 +103,11 @@ public class Entities {
             BiomeKeys.DEEP_OCEAN,
             BiomeKeys.DEEP_FROZEN_OCEAN
         );
-        config.sardineSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, MINNOW);
-        config.redPorgySpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, SARDINE);
+        config.sardineSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, SARDINE);
+        
+        config.fireEelSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL);
+        config.minnowSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW);
+        config.redPorgySpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, RED_PORGY);
     }
 
     @Environment(EnvType.CLIENT)

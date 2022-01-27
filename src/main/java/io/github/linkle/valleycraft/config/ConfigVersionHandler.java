@@ -10,7 +10,7 @@ import static io.github.linkle.valleycraft.ValleyMain.LOGGER;
 /** Config version handler, it checks the config file version and reset the value to the new default. */
 public class ConfigVersionHandler {
     
-    static final int VERSION = 0;
+    static final int VERSION = 1;
     
     private static final VConfig DEFAULT = new VConfig();
     private static final ArrayList<Runnable> ARRAY = new ArrayList<>();
@@ -39,8 +39,25 @@ public class ConfigVersionHandler {
         holder.save();
     }
     
+    // version handler
+    
+    // valley 2.3 to 2.3.1
     private static void handleVersion0() {
-        LOGGER.info("Handle config version 0");
+        var oldMobs = CONFIG.mobs;
+        var newMobs = DEFAULT.mobs;
+        
+        if (oldMobs.duckSpawn.weight == 7) {
+            oldMobs.duckSpawn.weight = newMobs.duckSpawn.weight; // 6
+        }
+        if (oldMobs.minnowSpawn.weight == 5) {
+            oldMobs.minnowSpawn.weight = newMobs.minnowSpawn.weight; // 4
+        }
+        if (oldMobs.sardineSpawn.weight == 5) {
+            oldMobs.sardineSpawn.weight = newMobs.sardineSpawn.weight; // 4
+        }
+        if (oldMobs.redPorgySpawn.weight == 5) {
+            oldMobs.redPorgySpawn.weight = newMobs.redPorgySpawn.weight; // 4
+        }
     }
     
     private static void handleVersion1() {
