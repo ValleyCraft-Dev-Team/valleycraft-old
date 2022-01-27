@@ -16,11 +16,13 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.SpawnRestriction.Location;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.FishEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.BiomeKeys;
 
@@ -41,32 +43,37 @@ public class Entities {
     
     public static final EntityType<EelEntity> FIRE_EEL = Registry.register(Registry.ENTITY_TYPE,
         new Identifier(ValleyMain.MOD_ID, "fire_eel"),
-        FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, EelEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.7f, 0.4f)).build()
+        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(EelEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.7f, 0.4f))
+        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EelEntity::canSpawn).build()
     );
     
     public static final EntityType<PerchEntity> PERCH = Registry.register(Registry.ENTITY_TYPE,
         new Identifier(ValleyMain.MOD_ID, "perch"),
-        FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, PerchEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(PerchEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, PerchEntity::canSpawn).build()
     );
 
     public static final EntityType<MinnowEntity> MINNOW = Registry.register(Registry.ENTITY_TYPE,
-            new Identifier(ValleyMain.MOD_ID, "minnow"),
-            FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, MinnowEntity::new)
-                    .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+        new Identifier(ValleyMain.MOD_ID, "minnow"),
+        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(MinnowEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MinnowEntity::canSpawn).build()
     );
 
     public static final EntityType<SardineEntity> SARDINE = Registry.register(Registry.ENTITY_TYPE,
-            new Identifier(ValleyMain.MOD_ID, "sardine"),
-            FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, SardineEntity::new)
-                    .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+        new Identifier(ValleyMain.MOD_ID, "sardine"),
+        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(SardineEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SardineEntity::canSpawn).build()
     );
 
     public static final EntityType<RedPorgyEntity> RED_PORGY = Registry.register(Registry.ENTITY_TYPE,
-            new Identifier(ValleyMain.MOD_ID, "red_porgy"),
-            FabricEntityTypeBuilder.create(SpawnGroup.WATER_AMBIENT, RedPorgyEntity::new)
-                    .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f)).build()
+        new Identifier(ValleyMain.MOD_ID, "red_porgy"),
+        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(RedPorgyEntity::new)
+        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, RedPorgyEntity::canSpawn).build()
     );
 
     public static void initialize() {
