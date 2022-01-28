@@ -3,14 +3,16 @@ package io.github.linkle.valleycraft.init;
 
 import io.github.linkle.valleycraft.blocks.decorations.*;
 import io.github.linkle.valleycraft.blocks.plants.Decorative.SporeBlock;
+import io.github.linkle.valleycraft.blocks.terrain.MudBlock;
 import io.github.linkle.valleycraft.blocks.plants.DryMossBlock;
 import io.github.linkle.valleycraft.blocks.plants.MossBlock;
-import io.github.linkle.valleycraft.blocks.plants.MudBlock;
 import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.item.Item;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
@@ -38,7 +40,9 @@ public class StoneBlocks {
     public static final Block SALTPETER_BLOCK = new StoneBlock();
     public static final Block NETHER_SALT = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
     public static final Block NETHER_COAL_ORE = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
-    public static final Block B_CLAY = new MudBlock();
+    public static final Block B_CLAY = new MudBlock(Blocks.TERRACOTTA, Block.Settings.of(Material.SOIL)
+        .sounds(BlockSoundGroup.GRAVEL)
+        .strength(0.6f, 1.5f));
 
     public static final Block JUNGLE = new StoneBlock();
     public static final Block JUNGLE_MOSSY = new MossBlock();
