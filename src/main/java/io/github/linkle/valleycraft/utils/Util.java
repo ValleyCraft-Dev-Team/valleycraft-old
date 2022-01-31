@@ -83,6 +83,10 @@ public class Util {
         builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.WEST), 1);
         return new WeightedBlockStateProvider(builder);
     }
+    
+    public static Identifier newId(String id) {
+        return new Identifier(ValleyMain.MOD_ID, id);
+    }
 
     /**
      * {@return the ticker if the given type and expected type are the same, or
