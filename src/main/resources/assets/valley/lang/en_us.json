@@ -801,6 +801,12 @@
   "block.valley.tainted_nether_wart": "Tainted Nether Wart",
   "block.valley.soul_sporecap": "Soul Sporecap",
   "block.valley.rooted_watcher": "Rooted Watcher",
+  
+  "entity.valley.fire_eel": "Fire Eel",
+  "entity.valley.perch": "Perch",
+  "entity.valley.sardine": "Sandine",
+  "entity.valley.minnow": "Saltwater Stoneroller Minnow",
+  "entity.valley.red_porgy": "Red Porgy",
 
   "text.autoconfig.valley.title": "ValleyCraft Config",
   "text.autoconfig.valley.option.fishing": "Fishing",

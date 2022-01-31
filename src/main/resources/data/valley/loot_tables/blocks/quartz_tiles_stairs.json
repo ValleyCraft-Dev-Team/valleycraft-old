@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:quartz_tiles_stair"
+          "name": "valley:quartz_tiles_stairs"
         }
       ],
       "conditions": [
