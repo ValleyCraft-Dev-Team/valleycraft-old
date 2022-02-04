@@ -508,8 +508,17 @@
   "block.valley.cobblestone_chiseled": "Chiseled Cobblestone Bricks",
   "block.valley.cobblestone_brick_slab": "Cobblestone Brick Slab",
   "block.valley.cobblestone_brick_stairs": "Cobblestone Brick Stairs",
-
+  
   "block.valley.copper_chain": "Copper Chain",
+  "block.valley.exposed_copper_chain": "Exposed Copper Chain",
+  "block.valley.weathered_copper_chain": "Weathered Copper Chain",
+  "block.valley.oxidized_copper_chain": "Oxidized Copper Chain",
+  
+  "block.valley.waxed_copper_chain": "Waxed Copper Chain",
+  "block.valley.waxed_exposed_copper_chain": "Waxed Exposed Copper Chain",
+  "block.valley.waxed_weathered_copper_chain": "Waxed Weathered Copper Chain",
+  "block.valley.waxed_oxidized_copper_chain": "Waxed Oxidized Copper Chain",
+  
   "block.valley.golden_chain": "Golden Chain",
   "block.valley.netherite_chain": "Netherite Chain",
   "block.valley.ladder_dark": "Dark Oak Ladder",

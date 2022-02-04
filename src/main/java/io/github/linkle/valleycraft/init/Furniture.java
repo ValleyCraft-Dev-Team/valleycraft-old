@@ -6,9 +6,11 @@ import io.github.linkle.valleycraft.blocks.plants.Stumps.StumpBlock;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.Oxidizable.OxidationLevel;
 import net.minecraft.item.Item;
 import net.minecraft.item.WallStandingBlockItem;
 import net.minecraft.particle.ParticleTypes;
@@ -153,7 +155,16 @@ public class Furniture {
             .strength(0,0.1f));
 
     //chain
-    public static final Block CHAIN_C = new VChainBlock();
+    public static final Block COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.UNAFFECTED);
+    public static final Block EXPOSED_COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.EXPOSED);
+    public static final Block WEATHERED_COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.WEATHERED);
+    public static final Block OXIDIZED_COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.OXIDIZED);
+    
+    public static final Block WAXED_COPPER_CHAIN = new VChainBlock();
+    public static final Block WAXED_EXPOSED_COPPER_CHAIN = new VChainBlock();
+    public static final Block WAXED_WEATHERED_COPPER_CHAIN = new VChainBlock();
+    public static final Block WAXED_OXIDIZED_COPPER_CHAIN = new VChainBlock();
+    
     public static final Block CHAIN_G = new VChainBlock();
     public static final Block CHAIN_N = new VChainBlock();
 
@@ -341,9 +352,18 @@ public class Furniture {
         Util.registerWithItem("glow_kelp_block", GLOW_KELP_BALE, furnGroup);
         Util.registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
         //registerWithItem("ameranth_block", AMERANTH_BALE, furnGroup);
-
         Util.registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
-        Util.registerWithItem("copper_chain", CHAIN_C, explGroup);
+        
+        Util.registerWithItem("copper_chain", COPPER_CHAIN, explGroup);
+        Util.registerWithItem("exposed_copper_chain", EXPOSED_COPPER_CHAIN, explGroup);
+        Util.registerWithItem("weathered_copper_chain", WEATHERED_COPPER_CHAIN, explGroup);
+        Util.registerWithItem("oxidized_copper_chain", OXIDIZED_COPPER_CHAIN, explGroup);
+        
+        Util.registerWithItem("waxed_copper_chain", WAXED_COPPER_CHAIN, explGroup);
+        Util.registerWithItem("waxed_exposed_copper_chain", WAXED_EXPOSED_COPPER_CHAIN, explGroup);
+        Util.registerWithItem("waxed_weathered_copper_chain", WAXED_WEATHERED_COPPER_CHAIN, explGroup);
+        Util.registerWithItem("waxed_oxidized_copper_chain", WAXED_OXIDIZED_COPPER_CHAIN, explGroup);
+        
         Util.registerWithItem("golden_chain", CHAIN_G, explGroup);
         Util.registerWithItem("netherite_chain", CHAIN_N, explGroup);
 
@@ -496,5 +516,14 @@ public class Furniture {
         //Fuels
         //same as Coal Block
         FuelRegistry.INSTANCE.add(CHARCOAL_BLOCK, 16000);
+        
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_CHAIN, EXPOSED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_CHAIN, WEATHERED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_CHAIN, OXIDIZED_COPPER_CHAIN);
+        
+        OxidizableBlocksRegistry.registerWaxableBlockPair(COPPER_CHAIN, WAXED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_COPPER_CHAIN, WAXED_EXPOSED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_COPPER_CHAIN, WAXED_WEATHERED_COPPER_CHAIN);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(OXIDIZED_COPPER_CHAIN, WAXED_OXIDIZED_COPPER_CHAIN);
     }
 }

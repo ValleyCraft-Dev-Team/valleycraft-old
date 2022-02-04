@@ -249,7 +249,16 @@ public class ValleyClient implements ClientModInitializer {
 
         culloutBlocks.add(APPLE_LEAVES_EMPTY);
 
-        culloutBlocks.add(CHAIN_C);
+        culloutBlocks.add(COPPER_CHAIN);
+        culloutBlocks.add(EXPOSED_COPPER_CHAIN);
+        culloutBlocks.add(WEATHERED_COPPER_CHAIN);
+        culloutBlocks.add(OXIDIZED_COPPER_CHAIN);
+        
+        culloutBlocks.add(WAXED_COPPER_CHAIN);
+        culloutBlocks.add(WAXED_EXPOSED_COPPER_CHAIN);
+        culloutBlocks.add(WAXED_WEATHERED_COPPER_CHAIN);
+        culloutBlocks.add(WAXED_OXIDIZED_COPPER_CHAIN);
+        
         culloutBlocks.add(CHAIN_G);
         culloutBlocks.add(CHAIN_N);
         

@@ -19,6 +19,13 @@
 		"valley:golden_chain",
 		"valley:netherite_chain",
 		"valley:copper_chain",
+		"valley:exposed_copper_chain",
+		"valley:weathered_copper_chain",
+		"valley:oxidized_copper_chain",
+		"valley:waxed_copper_chain",
+		"valley:waxed_exposed_copper_chain",
+		"valley:waxed_weathered_copper_chain",
+		"valley:waxed_oxidized_copper_chain",
 		"valley:dry_vines",
 		"valley:dry_vines_plant"
 	]

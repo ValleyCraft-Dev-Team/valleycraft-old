@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "valley:block/chain_copper_oxidized",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "valley:block/chain_copper_oxidized"
+    },
+    "axis=z": {
+      "model": "valley:block/chain_copper_oxidized",
+      "x": 90
+    }
+  }
+}

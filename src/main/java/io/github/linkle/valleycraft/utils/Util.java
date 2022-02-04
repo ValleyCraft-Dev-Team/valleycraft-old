@@ -30,21 +30,21 @@ import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 public class Util {
     public static Item register(String ID, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(ValleyMain.MOD_ID, ID), item);
+        return Registry.register(Registry.ITEM, newId(ID), item);
     }
 
     public static Block register(String ID, Block block) {
-        return Registry.register(Registry.BLOCK, new Identifier(ValleyMain.MOD_ID, ID), block);
+        return Registry.register(Registry.BLOCK, newId(ID), block);
     }
 
     public static void register(String ID, BlockItem item) {
-        var id = new Identifier(ValleyMain.MOD_ID, ID);
+        var id = newId(ID);
         Registry.register(Registry.BLOCK, id, item.getBlock());
         Registry.register(Registry.ITEM, id, item);
     }
 
     public static void registerWithItem(String ID, Block block, Item.Settings settings) {
-        var id = new Identifier(ValleyMain.MOD_ID, ID);
+        var id = newId(ID);
         Registry.register(Registry.BLOCK, id, block);
         Registry.register(Registry.ITEM, id, new BlockItem(block, settings));
     }
@@ -61,16 +61,8 @@ public class Util {
     public static RegistryKey<PlacedFeature> register(String id, ConfiguredFeature<?, ?> config,
             List<PlacementModifier> mods) {
         var place = config.withPlacement(mods);
-        var identifier = new Identifier(ValleyMain.MOD_ID, id);
+        var identifier = newId(id);
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, identifier, config);
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, identifier, place);
-        return RegistryKey.of(Registry.PLACED_FEATURE_KEY, identifier);
-    }
-
-    public static RegistryKey<PlacedFeature> registerPlace(String id, ConfiguredFeature<?, ?> config,
-            List<PlacementModifier> mods) {
-        var place = config.withPlacement(mods);
-        var identifier = new Identifier(ValleyMain.MOD_ID, id);
         Registry.register(BuiltinRegistries.PLACED_FEATURE, identifier, place);
         return RegistryKey.of(Registry.PLACED_FEATURE_KEY, identifier);
     }

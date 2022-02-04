@@ -1,6 +1,6 @@
 {
     "parent": "valley:block/template_chain",
     "textures": {
-        "all": "valley:blocks/golden_chain_block"
+        "all": "valley:blocks/exposed_copper_chain"
     }
 }

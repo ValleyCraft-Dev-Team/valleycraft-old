@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "valley:items/weathered_copper_chain_item"
+  }
+}
