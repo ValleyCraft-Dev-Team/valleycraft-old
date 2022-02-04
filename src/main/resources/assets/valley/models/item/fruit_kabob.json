@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/fruit_cabob_alt"
+    "layer0": "valley:item/fruit_cabob_alt"
   }
 }

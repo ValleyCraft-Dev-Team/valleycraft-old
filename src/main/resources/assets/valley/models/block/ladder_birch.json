@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "valley:blocks/ladder_birch",
-		"particle": "valley:blocks/ladder_birch"
+		"2": "valley:block/ladder_birch",
+		"particle": "valley:block/ladder_birch"
 
 	},
 	"elements": [

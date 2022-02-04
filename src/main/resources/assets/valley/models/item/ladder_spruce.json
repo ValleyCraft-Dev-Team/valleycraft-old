@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/ladder_spruce"
+    "layer0": "valley:block/ladder_spruce"
   }
 }

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/bush_alive_tall",
-		"particle": "valley:blocks/bush_alive"
+		"0": "valley:block/bush_alive_tall",
+		"particle": "valley:block/bush_alive"
 	},
 	"ambientocclusion": false,
 	"elements": [

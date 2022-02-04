@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/prismarine_cluster"
+    "cross": "valley:block/prismarine_cluster"
   }
 }

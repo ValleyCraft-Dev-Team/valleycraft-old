@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/scarecrow_base_soul",
-		"particle": "valley:blocks/scarecrow_base"
+		"0": "valley:block/scarecrow_base_soul",
+		"particle": "valley:block/scarecrow_base"
 	},
 	"elements": [
 		{

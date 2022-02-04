@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/duck_egg"
+    "layer0": "valley:item/duck_egg"
   }
 }

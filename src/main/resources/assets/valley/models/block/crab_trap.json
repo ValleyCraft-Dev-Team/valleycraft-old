@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/crab_trap_bottom",
-		"1": "valley:blocks/crab_trap_side",
-		"2": "valley:blocks/crab_trap_top",
-		"particle": "valley:blocks/crab_trap_bottom"
+		"0": "valley:block/crab_trap_bottom",
+		"1": "valley:block/crab_trap_side",
+		"2": "valley:block/crab_trap_top",
+		"particle": "valley:block/crab_trap_bottom"
 	},
 	"elements": [
 		{

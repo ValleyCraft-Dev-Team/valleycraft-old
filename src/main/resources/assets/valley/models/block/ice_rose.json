@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/ice_rose_sprig"
+    "cross": "valley:block/ice_rose_sprig"
   }
 }

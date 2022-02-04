@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "top": "valley:blocks/volcanic_stove_top",
-    "front": "valley:blocks/volcanic_stove_front_on",
-    "side": "valley:blocks/volcanic_stove_side"
+    "top": "valley:block/volcanic_stove_top",
+    "front": "valley:block/volcanic_stove_front_on",
+    "side": "valley:block/volcanic_stove_side"
   }
 }

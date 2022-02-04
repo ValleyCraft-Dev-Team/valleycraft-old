@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/soul_jack_top",
-		"1": "valley:blocks/soul_jack_side",
-		"2": "valley:blocks/soul_jack",
-		"particle": "valley:blocks/soul_jack_top"
+		"0": "valley:block/soul_jack_top",
+		"1": "valley:block/soul_jack_side",
+		"2": "valley:block/soul_jack",
+		"particle": "valley:block/soul_jack_top"
 	},
 	"elements": [
 		{

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/prismarine_cluster"
+    "layer0": "valley:block/prismarine_cluster"
   }
 }

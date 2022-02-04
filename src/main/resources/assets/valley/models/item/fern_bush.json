@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/fern_bush"
+    "layer0": "valley:block/fern_bush"
   }
 }

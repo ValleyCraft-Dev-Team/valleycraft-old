@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/smooth_stone_tiles"
+     "all": "valley:block/smooth_stone_tiles"
    }
 }

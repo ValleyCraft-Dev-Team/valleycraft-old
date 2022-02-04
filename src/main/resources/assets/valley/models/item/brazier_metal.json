@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/brazier_metal"
+    "layer0": "valley:item/brazier_metal"
   }
 }

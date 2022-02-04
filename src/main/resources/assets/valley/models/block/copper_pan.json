@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "valley:blocks/copper_blocks"
+		"particle": "valley:block/copper_blocks"
 	},
 	"elements": [
 		{

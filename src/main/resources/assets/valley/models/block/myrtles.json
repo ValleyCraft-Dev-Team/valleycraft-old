@@ -1,7 +1,7 @@
 {
   "parent": "valley:block/partly_tinted_cross",
   "textures": {
-    "tinted_cross": "valley:blocks/myrtles_stem",
-    "untinted_cross": "valley:blocks/myrtles_head"
+    "tinted_cross": "valley:block/myrtles_stem",
+    "untinted_cross": "valley:block/myrtles_head"
   }
 }

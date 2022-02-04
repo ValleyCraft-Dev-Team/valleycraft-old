@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"8": "valley:blocks/ladder_warped",
-		"particle": "valley:blocks/ladder_warped"
+		"8": "valley:block/ladder_warped",
+		"particle": "valley:block/ladder_warped"
 	},
 	"elements": [
 		{

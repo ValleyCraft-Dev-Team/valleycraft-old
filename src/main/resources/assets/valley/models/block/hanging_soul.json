@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/volcanic_stone_smooth",
+		"0": "valley:block/volcanic_stone_smooth",
 		"2": "minecraft:block/soul_lantern",
-		"particle": "valley:blocks/volcanic_stone_smooth"
+		"particle": "valley:block/volcanic_stone_smooth"
 	},
 	"elements": [
 		{

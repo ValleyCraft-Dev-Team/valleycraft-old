@@ -1,6 +1,6 @@
 {
 	"parent": "valley:block/brazier_off",
 	"textures": {
-		"pot": "valley:blocks/brazier_copper_bowl"
+		"pot": "valley:block/brazier_copper_bowl"
 	}
 }

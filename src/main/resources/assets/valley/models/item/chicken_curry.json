@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/chicken_curry"
+    "layer0": "valley:item/chicken_curry"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/soul_sporecap"
+    "cross": "valley:block/soul_sporecap"
   }
 }

@@ -3,8 +3,8 @@
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
-		"tex": "valley:blocks/reeds_block",
-		"particle": "valley:items/reed_item"
+		"tex": "valley:block/reeds_block",
+		"particle": "valley:item/reed_item"
 	},
 	"elements": [
 		{

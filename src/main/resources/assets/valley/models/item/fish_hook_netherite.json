@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/fish_hook_netherite"
+    "layer0": "valley:item/fish_hook_netherite"
   }
 }

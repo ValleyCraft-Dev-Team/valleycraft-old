@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/sardine_cooked"
+    "layer0": "valley:item/sardine_cooked"
   }
 }

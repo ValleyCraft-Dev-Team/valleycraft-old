@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/hairy_frog_fish"
+    "layer0": "valley:item/hairy_frog_fish"
   }
 }

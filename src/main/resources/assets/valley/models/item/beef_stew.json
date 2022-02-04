@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/beef_and_potato_stew"
+    "layer0": "valley:item/beef_and_potato_stew"
   }
 }

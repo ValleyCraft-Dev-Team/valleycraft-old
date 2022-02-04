@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/rabbit_bigo"
+    "layer0": "valley:item/rabbit_bigo"
   }
 }

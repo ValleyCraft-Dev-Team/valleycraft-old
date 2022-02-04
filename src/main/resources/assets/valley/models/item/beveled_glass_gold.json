@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/beveled_glass_gold"
+    "layer0": "valley:block/beveled_glass_gold"
   }
 }

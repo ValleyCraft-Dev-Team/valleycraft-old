@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/message_bottle"
+    "layer0": "valley:item/message_bottle"
   }
 }

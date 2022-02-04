@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "valley:blocks/net_block",
-		"particle": "valley:blocks/beveled_glass"
+		"1": "valley:block/net_block",
+		"particle": "valley:block/beveled_glass"
 	},
 	"elements": [
 		{

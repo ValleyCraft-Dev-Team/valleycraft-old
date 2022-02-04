@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/nautilus_pickaxe"
+    "layer0": "valley:item/nautilus_pickaxe"
   }
 }

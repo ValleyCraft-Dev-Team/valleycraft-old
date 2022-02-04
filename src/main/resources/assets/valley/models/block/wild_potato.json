@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/wild_potato"
+    "cross": "valley:block/wild_potato"
   }
 }

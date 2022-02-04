@@ -2,8 +2,8 @@
   "credit": "Made with Blockbench",
   "texture_size": [32, 32],
   "textures": {
-    "0": "valley:blocks/rope",
-    "particle": "valley:blocks/rope"
+    "0": "valley:block/rope",
+    "particle": "valley:block/rope"
   },
   "elements": [
     {

@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/dried_seaweed_bottom",
-		"1": "valley:blocks/dried_seaweed_side_alt",
-		"2": "valley:blocks/dried_seaweed_top",
-		"3": "valley:blocks/dried_seaweed_side",
-		"particle": "valley:blocks/dried_seaweed_bottom"
+		"0": "valley:block/dried_seaweed_bottom",
+		"1": "valley:block/dried_seaweed_side_alt",
+		"2": "valley:block/dried_seaweed_top",
+		"3": "valley:block/dried_seaweed_side",
+		"particle": "valley:block/dried_seaweed_bottom"
 	},
 	"elements": [
 		{

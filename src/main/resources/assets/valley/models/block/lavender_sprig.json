@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/lavender_sprig"
+    "cross": "valley:block/lavender_sprig"
   }
 }

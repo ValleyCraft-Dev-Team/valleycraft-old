@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/squid_roll_new"
+    "layer0": "valley:item/squid_roll_new"
   }
 }

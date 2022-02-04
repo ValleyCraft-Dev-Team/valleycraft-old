@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_hanging_lantern",
   "textures": {
-    "lantern": "valley:blocks/redstone_lantern_hanging"
+    "lantern": "valley:block/redstone_lantern_hanging"
   }
 }

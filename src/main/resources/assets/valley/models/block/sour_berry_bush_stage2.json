@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/sour_berry_bush_stage2",
-		"particle": "valley:blocks/sour_berry_bush_stage2"
+		"0": "valley:block/sour_berry_bush_stage2",
+		"particle": "valley:block/sour_berry_bush_stage2"
 	},
 	"elements": [
 		{

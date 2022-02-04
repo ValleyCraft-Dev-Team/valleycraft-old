@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/viking_war_axe"
+    "layer0": "valley:item/viking_war_axe"
   }
 }

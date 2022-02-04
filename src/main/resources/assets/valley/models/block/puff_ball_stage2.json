@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/puff_ball_2"
+    "cross": "valley:block/puff_ball_2"
   }
 }
 

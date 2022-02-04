@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "valley:blocks/snow_yam_crate_top",
-    "bottom": "valley:blocks/crate_bottom",
-    "side": "valley:blocks/snow_yam_crate_side"
+    "top": "valley:block/snow_yam_crate_top",
+    "bottom": "valley:block/crate_bottom",
+    "side": "valley:block/snow_yam_crate_side"
   }
 }

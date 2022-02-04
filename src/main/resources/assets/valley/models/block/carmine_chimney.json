@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/chimney_carmine_brick",
-		"particle": "valley:blocks/carmine_bricks"
+		"0": "valley:block/chimney_carmine_brick",
+		"particle": "valley:block/carmine_bricks"
 	},
 	"elements": [
 		{

@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/cooked_tropical_fish"
+    "layer0": "valley:item/cooked_tropical_fish"
   }
 }

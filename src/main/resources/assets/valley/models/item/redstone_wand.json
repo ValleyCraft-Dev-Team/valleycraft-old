@@ -1,6 +1,6 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-	"layer0": "valley:items/redstone_wand"
+	"layer0": "valley:item/redstone_wand"
 	}
 }

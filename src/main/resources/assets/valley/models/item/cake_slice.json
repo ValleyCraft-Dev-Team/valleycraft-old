@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/cake_slice"
+    "layer0": "valley:item/cake_slice"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/arrow_head"
+    "layer0": "valley:item/arrow_head"
   }
 }

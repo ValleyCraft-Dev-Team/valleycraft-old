@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/cooked_pumpkin_seeds"
+    "layer0": "valley:item/cooked_pumpkin_seeds"
   }
 }

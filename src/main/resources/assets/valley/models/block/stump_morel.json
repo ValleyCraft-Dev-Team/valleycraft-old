@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "valley:blocks/mush_log",
-		"1": "valley:blocks/mushies_2",
-		"particle": "valley:blocks/mush_log"
+		"0": "valley:block/mush_log",
+		"1": "valley:block/mushies_2",
+		"particle": "valley:block/mush_log"
 	},
 	"elements": [
 		{

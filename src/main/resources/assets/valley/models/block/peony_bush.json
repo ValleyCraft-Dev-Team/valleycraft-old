@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/peony_bush"
+    "cross": "valley:block/peony_bush"
   }
 }

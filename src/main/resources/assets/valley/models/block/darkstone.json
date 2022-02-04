@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/darkstone"
+     "all": "valley:block/darkstone"
    }
 }

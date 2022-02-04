@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/beveled_glass_amethyst_gold",
-		"particle": "valley:blocks/beveled_glass_amethyst_gold"
+		"0": "valley:block/beveled_glass_amethyst_gold",
+		"particle": "valley:block/beveled_glass_amethyst_gold"
 	},
 	"elements": [
 		{

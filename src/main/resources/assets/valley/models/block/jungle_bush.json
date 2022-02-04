@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "valley:blocks/jungle_bush",
-		"2": "valley:blocks/jungle_bush_inside",
-		"particle": "valley:blocks/jungle_bush_inside"
+		"1": "valley:block/jungle_bush",
+		"2": "valley:block/jungle_bush_inside",
+		"particle": "valley:block/jungle_bush_inside"
 	},
 	"elements": [
 		{

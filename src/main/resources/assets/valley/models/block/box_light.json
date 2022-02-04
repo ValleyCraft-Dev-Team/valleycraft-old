@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"2": "valley:blocks/box",
-		"3": "valley:blocks/oak_planks",
+		"2": "valley:block/box",
+		"3": "valley:block/oak_planks",
 		"particle": "block/oak_log"
 	},
 	"elements": [

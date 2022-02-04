@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/prismarine_scalpel"
+    "layer0": "valley:item/prismarine_scalpel"
   }
 }

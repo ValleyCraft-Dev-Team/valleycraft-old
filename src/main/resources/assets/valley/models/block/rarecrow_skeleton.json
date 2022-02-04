@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/rarecrow_skeleton",
-		"particle": "valley:blocks/rarecrow_skeleton"
+		"0": "valley:block/rarecrow_skeleton",
+		"particle": "valley:block/rarecrow_skeleton"
 	},
 	"elements": [
 		{

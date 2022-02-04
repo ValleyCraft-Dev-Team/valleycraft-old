@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "valley:blocks/gb_5"
+    "crop": "valley:block/gb_5"
   }
 }

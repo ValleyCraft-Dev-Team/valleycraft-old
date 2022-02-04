@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/miners_lettuce_3"
+    "layer0": "valley:block/miners_lettuce_3"
   }
 }

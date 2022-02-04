@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/ice_rose_item"
+    "layer0": "valley:item/ice_rose_item"
   }
 }

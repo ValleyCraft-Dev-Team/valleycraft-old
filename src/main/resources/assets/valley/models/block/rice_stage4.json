@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "valley:blocks/rice_stage4"
+    "crop": "valley:block/rice_stage4"
   }
 }

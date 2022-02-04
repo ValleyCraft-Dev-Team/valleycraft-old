@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "valley:items/glow_kelp_item"
+    "layer0": "valley:item/glow_kelp_item"
   }
 }

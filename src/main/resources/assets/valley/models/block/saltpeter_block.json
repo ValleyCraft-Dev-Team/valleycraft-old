@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/saltpeter_block"
+     "all": "valley:block/saltpeter_block"
    }
 }

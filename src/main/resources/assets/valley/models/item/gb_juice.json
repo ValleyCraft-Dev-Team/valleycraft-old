@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/gb_juice"
+    "layer0": "valley:item/gb_juice"
   }
 }

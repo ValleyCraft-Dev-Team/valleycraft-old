@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/hand_sieve"
+    "layer0": "valley:item/hand_sieve"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/dandelion_puff_balls"
+    "cross": "valley:block/dandelion_puff_balls"
   }
 }

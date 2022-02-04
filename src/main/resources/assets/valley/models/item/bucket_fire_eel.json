@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/bucket_fire_eel"
+    "layer0": "valley:item/bucket_fire_eel"
   }
 }

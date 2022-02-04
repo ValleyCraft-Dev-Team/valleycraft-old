@@ -1,6 +1,6 @@
 {
   "parent": "block/template_torch_wall",
   "textures": {
-    "torch": "valley:blocks/bone_torch"
+    "torch": "valley:block/bone_torch"
   }
 }

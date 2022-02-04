@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "block/oak_leaves",
-		"particle": "valley:blocks/apple_leaves"
+		"particle": "valley:block/apple_leaves"
 	},
 	"elements": [
 		{

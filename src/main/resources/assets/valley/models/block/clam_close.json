@@ -1,8 +1,8 @@
 {
   "credit": "Made with Blockbench",
   "textures": {
-    "1": "valley:blocks/clam",
-    "particle": "valley:blocks/clam"
+    "1": "valley:block/clam",
+    "particle": "valley:block/clam"
   },
   "elements": [
     {

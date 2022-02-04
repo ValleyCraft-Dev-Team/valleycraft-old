@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/tainted_nether_wart"
+    "cross": "valley:block/tainted_nether_wart"
   }
 }

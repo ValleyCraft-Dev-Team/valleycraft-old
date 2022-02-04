@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "valley:blocks/snow_yam_3"
+    "crop": "valley:block/snow_yam_3"
   }
 }

@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/marinite_smooth"
+     "all": "valley:block/marinite_smooth"
    }
 }

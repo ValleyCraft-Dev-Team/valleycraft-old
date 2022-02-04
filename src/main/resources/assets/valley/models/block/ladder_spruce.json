@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"7": "valley:blocks/ladder_spruce",
-		"particle": "valley:blocks/ladder_spruce"
+		"7": "valley:block/ladder_spruce",
+		"particle": "valley:block/ladder_spruce"
 	},
 	"elements": [
 		{

@@ -2,10 +2,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "valley:blocks/witch_ball_inner",
-		"1": "valley:blocks/witch_ball",
-		"2": "valley:blocks/frozen_ball",
-		"particle": "valley:blocks/frozen_ball"
+		"0": "valley:block/witch_ball_inner",
+		"1": "valley:block/witch_ball",
+		"2": "valley:block/frozen_ball",
+		"particle": "valley:block/frozen_ball"
 	},
 	"elements": [
 		{

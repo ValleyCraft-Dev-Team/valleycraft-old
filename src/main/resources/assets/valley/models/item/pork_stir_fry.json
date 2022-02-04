@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/pork_stir_fry"
+    "layer0": "valley:item/pork_stir_fry"
   }
 }

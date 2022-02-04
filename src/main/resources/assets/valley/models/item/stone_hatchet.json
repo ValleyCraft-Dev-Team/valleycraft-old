@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/stone_hatchet"
+    "layer0": "valley:item/stone_hatchet"
   }
 }

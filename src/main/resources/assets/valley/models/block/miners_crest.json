@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/pickaxe_block",
-		"particle": "valley:blocks/pickaxe_block"
+		"0": "valley:block/pickaxe_block",
+		"particle": "valley:block/pickaxe_block"
 	},
 	"elements": [
 		{

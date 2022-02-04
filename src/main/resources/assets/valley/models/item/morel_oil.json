@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/morel_oil"
+    "layer0": "valley:item/morel_oil"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/cooked_sea_urchin"
+    "layer0": "valley:item/cooked_sea_urchin"
   }
 }

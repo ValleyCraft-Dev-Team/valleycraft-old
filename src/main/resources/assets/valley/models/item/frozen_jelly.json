@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/frozen_jelly"
+    "layer0": "valley:item/frozen_jelly"
   }
 }

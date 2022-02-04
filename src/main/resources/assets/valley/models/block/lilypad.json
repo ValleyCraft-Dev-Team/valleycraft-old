@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "valley:blocks/lilypad_base",
-		"2": "valley:blocks/flower",
-		"particle": "valley:items/lily_pad_base"
+		"1": "valley:block/lilypad_base",
+		"2": "valley:block/flower",
+		"particle": "valley:item/lily_pad_base"
 	},
 	"elements": [
 		{

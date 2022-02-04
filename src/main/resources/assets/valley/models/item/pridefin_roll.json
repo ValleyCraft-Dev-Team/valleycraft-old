@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/pridefin_roll"
+    "layer0": "valley:item/pridefin_roll"
   }
 }

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/barnacle",
-		"particle": "valley:blocks/barnacle_particles"
+		"0": "valley:block/barnacle",
+		"particle": "valley:block/barnacle_particles"
 	},
 	"elements": [
 		{

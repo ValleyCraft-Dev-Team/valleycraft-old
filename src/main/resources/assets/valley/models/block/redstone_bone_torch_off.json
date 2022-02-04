@@ -1,6 +1,6 @@
 {
   "parent": "block/template_torch",
   "textures": {
-    "torch": "valley:blocks/redstone_bone_torch_off"
+    "torch": "valley:block/redstone_bone_torch_off"
   }
 }

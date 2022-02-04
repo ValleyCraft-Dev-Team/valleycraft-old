@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/cerith_snail",
-		"particle": "valley:blocks/cerith_snail"
+		"0": "valley:block/cerith_snail",
+		"particle": "valley:block/cerith_snail"
 	},
 	"elements": [
 		{

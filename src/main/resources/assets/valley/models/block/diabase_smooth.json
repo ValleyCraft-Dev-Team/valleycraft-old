@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/diabase_smooth"
+     "all": "valley:block/diabase_smooth"
    }
 }

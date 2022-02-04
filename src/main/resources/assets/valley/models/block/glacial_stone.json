@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/glacial_stone"
+     "all": "valley:block/glacial_stone"
    }
 }

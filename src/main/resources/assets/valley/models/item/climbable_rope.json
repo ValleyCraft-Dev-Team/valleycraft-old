@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/rope"
+    "layer0": "valley:item/rope"
   }
 }

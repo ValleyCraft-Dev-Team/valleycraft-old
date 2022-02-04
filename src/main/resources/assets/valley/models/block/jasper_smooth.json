@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/jasper_smooth"
+     "all": "valley:block/jasper_smooth"
    }
 }

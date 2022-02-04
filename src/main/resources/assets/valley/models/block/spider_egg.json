@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/spider_egg_web",
-		"1": "valley:blocks/spider_egg",
-		"particle": "valley:blocks/spider_egg"
+		"0": "valley:block/spider_egg_web",
+		"1": "valley:block/spider_egg",
+		"particle": "valley:block/spider_egg"
 	},
 	"elements": [
 		{

@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/planter_inner",
-		"1": "valley:blocks/planter_side",
-		"particle": "valley:blocks/planter_inner"
+		"0": "valley:block/planter_inner",
+		"1": "valley:block/planter_side",
+		"particle": "valley:block/planter_inner"
 	},
 	"elements": [
 		{

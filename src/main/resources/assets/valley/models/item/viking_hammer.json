@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/viking_hammer"
+    "layer0": "valley:item/viking_hammer"
   }
 }

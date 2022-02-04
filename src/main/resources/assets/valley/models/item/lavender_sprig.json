@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/lavender_sprig"
+    "layer0": "valley:block/lavender_sprig"
   }
 }

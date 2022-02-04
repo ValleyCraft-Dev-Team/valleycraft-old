@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/kitchen_tiles"
+     "all": "valley:block/kitchen_tiles"
    }
 }

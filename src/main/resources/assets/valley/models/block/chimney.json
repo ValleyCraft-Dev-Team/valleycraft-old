@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/chimney_new_cobble",
+		"0": "valley:block/chimney_new_cobble",
 		"particle": "minecraft:block/cobblestone"
 	},
 	"elements": [

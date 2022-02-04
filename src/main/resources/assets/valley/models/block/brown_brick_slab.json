@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "valley:blocks/brown_bricks",
-    "top": "valley:blocks/brown_bricks",
-    "side": "valley:blocks/brown_bricks"
+    "bottom": "valley:block/brown_bricks",
+    "top": "valley:block/brown_bricks",
+    "side": "valley:block/brown_bricks"
   }
 }

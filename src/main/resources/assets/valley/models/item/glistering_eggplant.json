@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/glistering_eggplant"
+    "layer0": "valley:item/glistering_eggplant"
   }
 }

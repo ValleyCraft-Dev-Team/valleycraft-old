@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/tomatoe_bush_stage2"
+    "cross": "valley:block/tomatoe_bush_stage2"
   }
 }

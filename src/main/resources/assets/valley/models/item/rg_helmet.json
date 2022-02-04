@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/rg_helmet"
+    "layer0": "valley:item/rg_helmet"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/bone_broth"
+    "layer0": "valley:item/bone_broth"
   }
 }

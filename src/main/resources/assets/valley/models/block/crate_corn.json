@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "valley:blocks/corn_crate_top",
-    "bottom": "valley:blocks/crate_bottom",
-    "side": "valley:blocks/corn_crate_side"
+    "top": "valley:block/corn_crate_top",
+    "bottom": "valley:block/crate_bottom",
+    "side": "valley:block/corn_crate_side"
   }
 }

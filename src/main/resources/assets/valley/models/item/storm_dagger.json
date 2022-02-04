@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/storm_dagger"
+    "layer0": "valley:item/storm_dagger"
   }
 }

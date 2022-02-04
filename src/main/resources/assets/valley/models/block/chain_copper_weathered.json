@@ -1,6 +1,6 @@
 {
     "parent": "valley:block/template_chain",
     "textures": {
-        "all": "valley:blocks/weathered_copper_chain"
+        "all": "valley:block/weathered_copper_chain"
     }
 }

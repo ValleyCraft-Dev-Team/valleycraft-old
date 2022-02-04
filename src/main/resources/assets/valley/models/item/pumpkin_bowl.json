@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/pumpkin_soup"
+    "layer0": "valley:item/pumpkin_soup"
   }
 }

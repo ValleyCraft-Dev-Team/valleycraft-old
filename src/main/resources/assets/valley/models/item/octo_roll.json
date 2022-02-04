@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/octo_roll_new"
+    "layer0": "valley:item/octo_roll_new"
   }
 }

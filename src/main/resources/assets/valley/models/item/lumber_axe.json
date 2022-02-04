@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/lumber_axe"
+    "layer0": "valley:item/lumber_axe"
   }
 }

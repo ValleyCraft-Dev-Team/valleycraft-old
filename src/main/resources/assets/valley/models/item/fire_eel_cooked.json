@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/fire_eel_cooked"
+    "layer0": "valley:item/fire_eel_cooked"
   }
 }

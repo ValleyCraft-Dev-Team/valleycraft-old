@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/golden_sickle"
+    "layer0": "valley:item/golden_sickle"
   }
 }

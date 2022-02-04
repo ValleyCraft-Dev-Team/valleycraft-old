@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/oak_planks",
-		"1": "valley:blocks/pet_bed",
-		"particle": "valley:blocks/oak_planks"
+		"0": "valley:block/oak_planks",
+		"1": "valley:block/pet_bed",
+		"particle": "valley:block/oak_planks"
 	},
 	"elements": [
 		{

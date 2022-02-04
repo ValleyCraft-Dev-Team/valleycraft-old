@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "valley:blocks/cactus_small_arm",
+		"1": "valley:block/cactus_small_arm",
 		"particle": "minecraft:block/cactus_side"
 	},
 	"elements": [

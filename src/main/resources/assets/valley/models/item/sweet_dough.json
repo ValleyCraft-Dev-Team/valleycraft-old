@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/sweet_berry_pie_dough"
+    "layer0": "valley:item/sweet_berry_pie_dough"
   }
 }

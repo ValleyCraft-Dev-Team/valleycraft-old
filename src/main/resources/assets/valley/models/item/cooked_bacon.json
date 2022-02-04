@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/bacon_cooked"
+    "layer0": "valley:item/bacon_cooked"
   }
 }

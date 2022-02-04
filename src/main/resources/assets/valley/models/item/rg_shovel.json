@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/rg_shovel"
+    "layer0": "valley:item/rg_shovel"
   }
 }

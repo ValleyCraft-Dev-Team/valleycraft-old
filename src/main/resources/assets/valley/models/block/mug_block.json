@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"6": "valley:items/mug",
-		"particle": "valley:items/mug"
+		"6": "valley:item/mug",
+		"particle": "valley:item/mug"
 	},
 	"elements": [
 		{

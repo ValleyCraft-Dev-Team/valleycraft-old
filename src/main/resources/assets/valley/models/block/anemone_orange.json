@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/anemone_orange"
+    "cross": "valley:block/anemone_orange"
   }
 }

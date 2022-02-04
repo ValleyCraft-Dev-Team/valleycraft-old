@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/worm_bowl"
+    "layer0": "valley:item/worm_bowl"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/red_porgy"
+    "layer0": "valley:item/red_porgy"
   }
 }

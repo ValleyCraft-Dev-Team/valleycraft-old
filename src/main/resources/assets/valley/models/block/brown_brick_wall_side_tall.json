@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_wall_side_tall",
   "textures": {
-    "wall": "valley:blocks/brown_bricks"
+    "wall": "valley:block/brown_bricks"
   }
 }

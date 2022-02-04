@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/volcanic_stone"
+     "all": "valley:block/volcanic_stone"
    }
 }

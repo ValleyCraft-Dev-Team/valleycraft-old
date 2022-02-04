@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"4": "valley:items/bbox",
-		"8": "valley:items/rice_bowl",
-		"particle": "valley:items/bbox"
+		"4": "valley:item/bbox",
+		"8": "valley:item/rice_bowl",
+		"particle": "valley:item/bbox"
 	},
 	"elements": [
 		{

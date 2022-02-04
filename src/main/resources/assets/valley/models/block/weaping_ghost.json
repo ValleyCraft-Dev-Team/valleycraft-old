@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/weaping_ghost"
+    "cross": "valley:block/weaping_ghost"
   }
 }

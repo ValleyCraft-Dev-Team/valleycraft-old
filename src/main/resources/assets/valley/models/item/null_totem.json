@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/null_totem"
+    "layer0": "valley:item/null_totem"
   }
 }

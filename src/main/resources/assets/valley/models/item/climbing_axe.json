@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/climbing_axe"
+    "layer0": "valley:item/climbing_axe"
   }
 }

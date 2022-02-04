@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/log_pile"
+    "layer0": "valley:item/log_pile"
   }
 }

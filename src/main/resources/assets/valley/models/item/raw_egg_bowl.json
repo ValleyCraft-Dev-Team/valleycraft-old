@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/egg_bowl_raw"
+    "layer0": "valley:item/egg_bowl_raw"
   }
 }

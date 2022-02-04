@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/anemone_green"
+    "layer0": "valley:block/anemone_green"
   }
 }

@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/carmine_bricks"
+     "all": "valley:block/carmine_bricks"
    }
 }

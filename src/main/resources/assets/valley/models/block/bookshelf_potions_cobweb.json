@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"5": "valley:blocks/cobweb_potions",
-		"10": "valley:blocks/bookshelf_top",
-		"particle": "valley:blocks/cobweb_lantern"
+		"5": "valley:block/cobweb_potions",
+		"10": "valley:block/bookshelf_top",
+		"particle": "valley:block/cobweb_lantern"
 	},
 	"elements": [
 		{

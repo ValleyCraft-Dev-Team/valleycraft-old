@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/dry_mossy_stone"
+     "all": "valley:block/dry_mossy_stone"
    }
 }

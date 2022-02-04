@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/soldiers_sword"
+    "layer0": "valley:item/soldiers_sword"
   }
 }

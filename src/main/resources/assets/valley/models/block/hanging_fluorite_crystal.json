@@ -2,9 +2,9 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "valley:blocks/hanging_pot",
-		"1": "valley:blocks/fluorite_crystal_2",
-		"particle": "valley:blocks/hanging_pot"
+		"0": "valley:block/hanging_pot",
+		"1": "valley:block/fluorite_crystal_2",
+		"particle": "valley:block/hanging_pot"
 	},
 	"elements": [
 		{

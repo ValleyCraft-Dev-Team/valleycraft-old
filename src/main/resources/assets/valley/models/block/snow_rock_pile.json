@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/rock",
-		"1": "valley:blocks/snow_bush_2",
-		"particle": "valley:blocks/rock"
+		"0": "valley:block/rock",
+		"1": "valley:block/snow_bush_2",
+		"particle": "valley:block/rock"
 	},
 	"elements": [
 		{

@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "valley:blocks/iron_ladder_alt",
-		"particle": "valley:blocks/iron_ladder_alt"
+		"1": "valley:block/iron_ladder_alt",
+		"particle": "valley:block/iron_ladder_alt"
 	},
 	"elements": [
 		{

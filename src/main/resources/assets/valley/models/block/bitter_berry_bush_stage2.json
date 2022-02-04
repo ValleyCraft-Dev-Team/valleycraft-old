@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/bitter_berry_bush_stage2"
+    "cross": "valley:block/bitter_berry_bush_stage2"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/black_dahlia"
+    "cross": "valley:block/black_dahlia"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/soup_ladle"
+    "layer0": "valley:item/soup_ladle"
   }
 }

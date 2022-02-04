@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/tea_bb"
+    "layer0": "valley:item/tea_bb"
   }
 }

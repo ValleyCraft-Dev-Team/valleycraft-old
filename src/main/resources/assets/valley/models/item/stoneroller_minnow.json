@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/stoneroller_minnow"
+    "layer0": "valley:item/stoneroller_minnow"
   }
 }

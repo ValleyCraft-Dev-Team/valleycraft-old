@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/maize_porridge"
+    "layer0": "valley:item/maize_porridge"
   }
 }

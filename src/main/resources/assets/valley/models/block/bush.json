@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-		"cross": "valley:blocks/bush",
-        "particle": "valley:blocks/bush_particles"
+		"cross": "valley:block/bush",
+        "particle": "valley:block/bush_particles"
     },
     "elements": [
         {   "from": [ 0.8, 0, 8 ],

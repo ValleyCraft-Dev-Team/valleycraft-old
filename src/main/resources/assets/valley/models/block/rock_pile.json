@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/rock",
-		"particle": "valley:blocks/rock"
+		"0": "valley:block/rock",
+		"particle": "valley:block/rock"
 	},
 	"elements": [
 		{

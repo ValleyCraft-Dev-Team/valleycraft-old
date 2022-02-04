@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "valley:blocks/sugarcane_top",
-    "bottom": "valley:blocks/crate_bottom",
-    "side": "valley:blocks/sugarcane_side"
+    "top": "valley:block/sugarcane_top",
+    "bottom": "valley:block/crate_bottom",
+    "side": "valley:block/sugarcane_side"
   }
 }

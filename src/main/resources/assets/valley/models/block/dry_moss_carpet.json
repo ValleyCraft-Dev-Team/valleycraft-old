@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/carpet",
   "textures": {
-    "wool": "valley:blocks/dry_moss"
+    "wool": "valley:block/dry_moss"
   }
 }

@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "minecraft:block/anvil",
-		"1": "valley:blocks/screen",
+		"1": "valley:block/screen",
 		"particle": "minecraft:block/anvil"
 	},
 	"elements": [

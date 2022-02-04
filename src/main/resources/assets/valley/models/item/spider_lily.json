@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "valley:blocks/spider_lily_stem",
-        "layer1": "valley:blocks/spider_lily_head"
+        "layer0": "valley:block/spider_lily_stem",
+        "layer1": "valley:block/spider_lily_head"
     }
 }

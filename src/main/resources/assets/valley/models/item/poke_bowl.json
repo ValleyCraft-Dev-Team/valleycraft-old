@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/poke_bowl"
+    "layer0": "valley:item/poke_bowl"
   }
 }

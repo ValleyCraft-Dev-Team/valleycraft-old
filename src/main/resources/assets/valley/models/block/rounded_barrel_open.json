@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "valley:blocks/fish_barrel_side",
-		"2": "valley:blocks/fish_barrel_bottom",
-		"particle": "valley:blocks/empty_barrel_top"
+		"1": "valley:block/fish_barrel_side",
+		"2": "valley:block/fish_barrel_bottom",
+		"particle": "valley:block/empty_barrel_top"
 	},
 	"elements": [
 		{

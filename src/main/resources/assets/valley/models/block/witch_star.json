@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/witch_stick",
-		"particle": "valley:blocks/witch_stick"
+		"0": "valley:block/witch_stick",
+		"particle": "valley:block/witch_stick"
 	},
 	"elements": [
 		{

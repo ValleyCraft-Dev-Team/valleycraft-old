@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/coin_stack",
-		"particle": "valley:blocks/coin_stack"
+		"0": "valley:block/coin_stack",
+		"particle": "valley:block/coin_stack"
 	},
 	"elements": [
 		{

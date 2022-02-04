@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "valley:blocks/fluorite_crystal",
-		"particle": "valley:blocks/fluorite_particles"
+		"0": "valley:block/fluorite_crystal",
+		"particle": "valley:block/fluorite_particles"
 	},
 	"elements": [
 		{

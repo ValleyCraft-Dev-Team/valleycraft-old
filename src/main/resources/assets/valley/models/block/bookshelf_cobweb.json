@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"7": "valley:blocks/cobweb_bookshelf",
-		"10": "valley:blocks/bookshelf_top",
-		"particle": "valley:blocks/cobweb_lantern"
+		"7": "valley:block/cobweb_bookshelf",
+		"10": "valley:block/bookshelf_top",
+		"particle": "valley:block/cobweb_lantern"
 	},
 	"elements": [
 		{

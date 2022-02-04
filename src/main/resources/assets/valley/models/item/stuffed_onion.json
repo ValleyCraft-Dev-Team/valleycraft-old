@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/stuffed_onion"
+    "layer0": "valley:item/stuffed_onion"
   }
 }

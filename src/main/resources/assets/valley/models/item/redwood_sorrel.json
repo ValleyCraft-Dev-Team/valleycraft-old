@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/redwood_sorrel"
+    "layer0": "valley:block/redwood_sorrel"
   }
 }

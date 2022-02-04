@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"4": "valley:blocks/ladder_dark_oak",
-		"particle": "valley:blocks/ladder_dark_oak"
+		"4": "valley:block/ladder_dark_oak",
+		"particle": "valley:block/ladder_dark_oak"
 	},
 	"elements": [
 		{

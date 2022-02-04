@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:items/sand_dollar",
-		"particle": "valley:items/sand_dollar"
+		"0": "valley:item/sand_dollar",
+		"particle": "valley:item/sand_dollar"
 	},
 	"elements": [
 		{

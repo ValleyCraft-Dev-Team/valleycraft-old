@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/bamboo_ladder",
-		"particle": "valley:blocks/bamboo_ladder"
+		"0": "valley:block/bamboo_ladder",
+		"particle": "valley:block/bamboo_ladder"
 	},
 	"elements": [
 		{

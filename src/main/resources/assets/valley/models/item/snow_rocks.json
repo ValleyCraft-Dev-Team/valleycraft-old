@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/snow_rock_item"
+    "layer0": "valley:item/snow_rock_item"
   }
 }

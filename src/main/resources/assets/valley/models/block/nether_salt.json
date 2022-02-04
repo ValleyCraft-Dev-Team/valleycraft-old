@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "valley:blocks/nether_salt_ore"
+    "all": "valley:block/nether_salt_ore"
   }
 }

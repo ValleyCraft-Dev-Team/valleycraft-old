@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "valley:blocks/planter_side",
-		"2": "valley:items/mycelium_planter",
-		"particle": "valley:items/mycelium_planter"
+		"1": "valley:block/planter_side",
+		"2": "valley:item/mycelium_planter",
+		"particle": "valley:item/mycelium_planter"
 	},
 	"elements": [
 		{

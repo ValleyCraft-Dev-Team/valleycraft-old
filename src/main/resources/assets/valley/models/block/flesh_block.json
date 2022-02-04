@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/rotten_flesh_block"
+     "all": "valley:block/rotten_flesh_block"
    }
 }

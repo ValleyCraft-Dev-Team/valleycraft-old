@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/jungle_cap"
+    "layer0": "valley:block/jungle_cap"
   }
 }

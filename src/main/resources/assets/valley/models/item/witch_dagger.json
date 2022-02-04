@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/witch_dagger"
+    "layer0": "valley:item/witch_dagger"
   }
 }

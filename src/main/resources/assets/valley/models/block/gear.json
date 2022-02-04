@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/rusty_gear",
-		"particle": "valley:blocks/rusty_gear"
+		"0": "valley:block/rusty_gear",
+		"particle": "valley:block/rusty_gear"
 	},
 	"elements": [
 		{

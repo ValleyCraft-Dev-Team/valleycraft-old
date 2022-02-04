@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/royal_sword"
+    "layer0": "valley:item/royal_sword"
   }
 }

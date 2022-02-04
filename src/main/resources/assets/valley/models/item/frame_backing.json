@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/frame_backing"
+    "layer0": "valley:item/frame_backing"
   }
 }

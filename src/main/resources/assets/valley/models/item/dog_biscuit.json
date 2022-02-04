@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/dog_biscuit"
+    "layer0": "valley:item/dog_biscuit"
   }
 }

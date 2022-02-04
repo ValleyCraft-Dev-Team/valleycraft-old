@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/redstone_lantern_item"
+    "layer0": "valley:item/redstone_lantern_item"
   }
 }

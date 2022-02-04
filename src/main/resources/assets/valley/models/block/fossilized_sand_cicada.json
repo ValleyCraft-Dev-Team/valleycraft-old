@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:items/fossilized_sand_cicada",
-		"particle": "valley:items/fossilized_sand_cicada"
+		"0": "valley:item/fossilized_sand_cicada",
+		"particle": "valley:item/fossilized_sand_cicada"
 	},
 	"elements": [
 		{

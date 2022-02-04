@@ -2,7 +2,7 @@
   "credit": "Made with Blockbench",
   "texture_size": [32, 32],
   "textures": {
-    "2": "valley:blocks/anchor",
+    "2": "valley:block/anchor",
     "particle": "minecraft:block/anvil"
   },
   "elements": [

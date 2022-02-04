@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "top": "valley:blocks/sweet_berry_crate_top",
-    "bottom": "valley:blocks/crate_bottom",
-    "side": "valley:blocks/sweet_berry_crate_side"
+    "top": "valley:block/sweet_berry_crate_top",
+    "bottom": "valley:block/crate_bottom",
+    "side": "valley:block/sweet_berry_crate_side"
   }
 }

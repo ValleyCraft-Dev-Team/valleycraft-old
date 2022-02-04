@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "valley:blocks/myrtles_stem",
-        "layer1": "valley:blocks/myrtles_head"
+        "layer0": "valley:block/myrtles_stem",
+        "layer1": "valley:block/myrtles_head"
     }
 }

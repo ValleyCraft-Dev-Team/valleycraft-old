@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/yellow_shield"
+    "layer0": "valley:block/yellow_shield"
   }
 }

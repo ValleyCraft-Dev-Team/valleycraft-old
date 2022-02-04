@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/rainbow_wrasse"
+    "layer0": "valley:item/rainbow_wrasse"
   }
 }

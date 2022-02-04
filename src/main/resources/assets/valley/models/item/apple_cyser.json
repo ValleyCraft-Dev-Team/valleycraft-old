@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/apple_cyser"
+    "layer0": "valley:item/apple_cyser"
   }
 }

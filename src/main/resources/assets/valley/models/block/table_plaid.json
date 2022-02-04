@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "minecraft:block/oak_log",
-		"2": "valley:blocks/flannel_pattern",
-		"3": "valley:blocks/oak_planks",
+		"2": "valley:block/flannel_pattern",
+		"3": "valley:block/oak_planks",
 		"particle": "minecraft:block/oak_log"
 	},
 	"elements": [

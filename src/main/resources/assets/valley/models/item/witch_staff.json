@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/witch_staff"
+    "layer0": "valley:item/witch_staff"
   }
 }

@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/mountain_gravel"
+     "all": "valley:block/mountain_gravel"
    }
 }

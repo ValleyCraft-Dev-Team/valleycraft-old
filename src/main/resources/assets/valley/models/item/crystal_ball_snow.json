@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/witchs_ball_frozen"
+    "layer0": "valley:item/witchs_ball_frozen"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/flint_tool"
+    "layer0": "valley:item/flint_tool"
   }
 }

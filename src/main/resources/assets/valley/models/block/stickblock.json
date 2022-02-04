@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "valley:items/driftwood",
-		"particle": "valley:items/tree_branch"
+		"1": "valley:item/driftwood",
+		"particle": "valley:item/tree_branch"
 	},
 	"elements": [
 		{

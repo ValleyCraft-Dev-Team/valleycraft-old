@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/bb_gh_tail"
+    "layer0": "valley:item/bb_gh_tail"
   }
 }

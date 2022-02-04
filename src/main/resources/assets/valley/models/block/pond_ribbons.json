@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/swamp_vine"
+    "cross": "valley:block/swamp_vine"
   }
 }

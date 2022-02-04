@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "valley:items/armor/straw_hat",
-		"particle": "valley:items/armor/straw_hat"
+		"0": "valley:item/armor/straw_hat",
+		"particle": "valley:item/armor/straw_hat"
 	},
 	"elements": [
 		{

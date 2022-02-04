@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "valley:blocks/encrusted_sandstone_top",
-    "side": "valley:blocks/encrusted_sandstone_side"
+    "end": "valley:block/encrusted_sandstone_top",
+    "side": "valley:block/encrusted_sandstone_side"
   }
 }

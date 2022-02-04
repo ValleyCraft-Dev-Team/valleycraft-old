@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/flowering_cactus"
+    "layer0": "valley:block/flowering_cactus"
   }
 }

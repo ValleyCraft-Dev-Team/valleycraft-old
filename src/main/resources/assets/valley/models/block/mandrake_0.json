@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/mandrake_0"
+    "cross": "valley:block/mandrake_0"
   }
 }

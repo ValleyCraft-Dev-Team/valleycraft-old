@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/creamy_heart_stew"
+    "layer0": "valley:item/creamy_heart_stew"
   }
 }

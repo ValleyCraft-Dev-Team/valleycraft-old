@@ -1,11 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/sky_path",
-		"1": "valley:blocks/sky_basket_side",
-		"2": "valley:blocks/sky_basket_top",
-		"3": "valley:blocks/sky_basket_handle",
-		"particle": "valley:blocks/sky_path"
+		"0": "valley:block/sky_path",
+		"1": "valley:block/sky_basket_side",
+		"2": "valley:block/sky_basket_top",
+		"3": "valley:block/sky_basket_handle",
+		"particle": "valley:block/sky_path"
 	},
 	"elements": [
 		{

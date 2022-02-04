@@ -1,6 +1,6 @@
 {
 	"parent": "valley:block/brazier_off",
 	"textures": {
-		"pot": "valley:blocks/polished_stone_bricks"
+		"pot": "valley:block/polished_stone_bricks"
 	}
 }

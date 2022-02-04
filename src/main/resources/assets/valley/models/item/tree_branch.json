@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/tree_branch"
+    "layer0": "valley:item/tree_branch"
   }
 }

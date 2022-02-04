@@ -1,6 +1,6 @@
 {
     "parent": "valley:block/template_chain",
     "textures": {
-        "all": "valley:blocks/netherite_chain_block"
+        "all": "valley:block/netherite_chain_block"
     }
 }

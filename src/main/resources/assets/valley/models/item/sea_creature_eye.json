@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:items/sea_creature_eye"
+    "layer0": "valley:item/sea_creature_eye"
   }
 }

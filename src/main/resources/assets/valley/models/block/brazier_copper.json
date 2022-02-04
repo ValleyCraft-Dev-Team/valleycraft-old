@@ -1,7 +1,7 @@
 {
 	"parent": "valley:block/brazier",
 	"textures": {
-		"fire": "valley:blocks/campfire_pot_fire_alt_copper",
-		"pot": "valley:blocks/brazier_copper_bowl"
+		"fire": "valley:block/campfire_pot_fire_alt_copper",
+		"pot": "valley:block/brazier_copper_bowl"
 	}
 }

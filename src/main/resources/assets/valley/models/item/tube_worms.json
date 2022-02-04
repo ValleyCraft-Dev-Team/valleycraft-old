@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/tube_worms"
+    "layer0": "valley:block/tube_worms"
   }
 }

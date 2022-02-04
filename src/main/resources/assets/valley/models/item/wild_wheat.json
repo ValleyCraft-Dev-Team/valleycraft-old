@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/wild_wheat"
+    "layer0": "valley:block/wild_wheat"
   }
 }

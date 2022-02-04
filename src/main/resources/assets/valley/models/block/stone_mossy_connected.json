@@ -2,8 +2,8 @@
    "parent": "block/cube_bottom_top",
    "textures": {
 	 "top": "minecraft:block/moss_block",
-     "bottom": "valley:blocks/mossy_stone",
-     "side": "valley:blocks/mossy_stone_connected",
-     "particle": "valley:blocks/mossy_stone"
+     "bottom": "valley:block/mossy_stone",
+     "side": "valley:block/mossy_stone_connected",
+     "particle": "valley:block/mossy_stone"
    }
 }

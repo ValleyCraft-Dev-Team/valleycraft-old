@@ -1,6 +1,6 @@
 {
    "parent": "block/cross",
    "textures": {
-     "cross": "valley:blocks/moss_vines"
+     "cross": "valley:block/moss_vines"
    }
 }

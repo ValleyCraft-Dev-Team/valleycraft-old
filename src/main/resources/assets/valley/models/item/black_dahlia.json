@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:blocks/black_dahlia"
+    "layer0": "valley:block/black_dahlia"
   }
 }

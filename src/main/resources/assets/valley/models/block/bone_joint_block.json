@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-     "all": "valley:blocks/bone_joint_block"
+     "all": "valley:block/bone_joint_block"
    }
 }

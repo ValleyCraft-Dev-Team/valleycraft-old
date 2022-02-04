@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:items/netherite_sickle"
+    "layer0": "valley:item/netherite_sickle"
   }
 }

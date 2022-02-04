@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "valley:blocks/redwood_sorrel"
+    "cross": "valley:block/redwood_sorrel"
   }
 }

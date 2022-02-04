@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "valley:blocks/volcanic_stone_smooth",
-		"1": "valley:blocks/redstone_lantern_hanging",
-		"particle": "valley:blocks/volcanic_stone_smooth"
+		"0": "valley:block/volcanic_stone_smooth",
+		"1": "valley:block/redstone_lantern_hanging",
+		"particle": "valley:block/volcanic_stone_smooth"
 	},
 	"elements": [
 		{
