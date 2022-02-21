@@ -21,7 +21,7 @@ import net.minecraft.world.World;
 public class GiantClamBlock extends AquaticFacingBlock {
     protected static final BooleanProperty OPEN = Properties.OPEN;
     public static final VoxelShape SHAPE = Block.createCuboidShape(1, 0, 1, 15, 4, 15);
-    
+
     public static final int MAX_TICK = 50;
 
     public GiantClamBlock() {
@@ -37,7 +37,7 @@ public class GiantClamBlock extends AquaticFacingBlock {
         super.appendProperties(builder);
         builder.add(OPEN);
     }
-    
+
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         super.randomTick(state, world, pos, random);
@@ -50,7 +50,7 @@ public class GiantClamBlock extends AquaticFacingBlock {
         ServerNetwork.sendScallopOpen(world, pos);
     }
 
-    
+
     @Override
     public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!state.get(OPEN).booleanValue()) {

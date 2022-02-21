@@ -39,9 +39,9 @@ public abstract class GrowthBlock extends Block {
     }
 
     protected abstract boolean isBlockUpper(BlockState state);
-    
+
     protected abstract BlockState getBlockUpper();
-    
+
     protected abstract BlockState getBlockLower();
 
     @Override
@@ -54,7 +54,7 @@ public abstract class GrowthBlock extends Block {
         if (world.random.nextInt(5) > 0) {
             return;
         }
-        
+
         BlockPos blockPos = pos.down();
         if (world.isAir(blockPos)) {
             world.setBlockState(blockPos, getBlockLower());

@@ -19,20 +19,20 @@ import java.util.function.Consumer;
 public class LootTableHelper {
     private static final HashMap<Identifier, List<FabricLootPoolBuilder>> APPEND_MAP = new HashMap<>(64);
     private static final HashMap<Identifier, List<Consumer<FabricLootPoolBuilder>>> INJECT_MAP = new HashMap<>(64);
-    
+
     /** Create and append a new pool. */
     public static void appendLoot(Identifier lootID, LootBuilder loot) {
         var pools = APPEND_MAP.computeIfAbsent(lootID, k -> new ArrayList<>(5));
         pools.add(loot.build());
     }
-    
+
     /** Inject pool with new entry. */
     public static void injectLoot(Identifier lootID, Consumer<FabricLootPoolBuilder> consumer) {
         var pools = INJECT_MAP.computeIfAbsent(lootID, k -> new ArrayList<>(5));
         pools.add(consumer);
     }
-    
-    private static void onLootLoad(ResourceManager resourceManager, LootManager manager, 
+
+    private static void onLootLoad(ResourceManager resourceManager, LootManager manager,
             Identifier id, FabricLootSupplierBuilder supplier, LootTableSetter setter) {
         var inject = INJECT_MAP.get(id);
         if (inject != null) {
@@ -45,13 +45,13 @@ public class LootTableHelper {
                 pools.set(0, pool.build());
             }
         }
-        
+
         var append = APPEND_MAP.get(id);
         if (append != null) {
             append.forEach(supplier::pool);
         }
     }
-    
+
     static {
         LootTableLoadingCallback.EVENT.register(LootTableHelper::onLootLoad);
     }

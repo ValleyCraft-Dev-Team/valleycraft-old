@@ -4,6 +4,8 @@ import static io.github.linkle.valleycraft.ValleyMain.MOD_ID;
 
 import java.util.Random;
 
+import net.minecraft.block.entity.LootableContainerBlockEntity;
+import net.minecraft.loot.LootTables;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.structure.SimpleStructurePiece;
 import net.minecraft.structure.StructureContext;
@@ -24,22 +26,22 @@ import net.minecraft.world.gen.chunk.ChunkGenerator;
 
 public class ShipwreckGenerator {
     private static final Identifier SHIPWRECK = new Identifier(MOD_ID, "underwater/shipwreck");
-    
+
     public static void addParts(StructurePiecesHolder holder, Context<?> context, BlockPos pos) {
         var rotation = BlockRotation.random(context.random());
         holder.addPiece(new Piece(context.structureManager(), SHIPWRECK, pos, rotation));
     }
-    
+
     public static class Piece
     extends SimpleStructurePiece {
         public Piece(StructureManager manager, Identifier id, BlockPos pos, BlockRotation rotation) {
             super(VStructurePieceType.RESEARCH_STATION, 0, manager, id, id.toString(), createPlacementData(rotation), pos);
         }
-        
+
         public Piece(StructureManager manager, NbtCompound nbt) {
             super(VStructurePieceType.RESEARCH_STATION, nbt, manager, identifier -> Piece.createPlacementData(BlockRotation.valueOf(nbt.getString("Rot"))));
         }
-        
+
         @Override
         protected void writeNbt(StructureContext context, NbtCompound nbt) {
             super.writeNbt(context, nbt);
@@ -48,16 +50,18 @@ public class ShipwreckGenerator {
 
         @Override
         protected void handleMetadata(String metadata, BlockPos pos, ServerWorldAccess world, Random random, BlockBox box) {
-            
+            if (metadata.equals("supply_chest")) {
+                LootableContainerBlockEntity.setLootTable(world, random, pos.down(), LootTables.SHIPWRECK_SUPPLY_CHEST);
+            }
         }
-        
+
         private static StructurePlacementData createPlacementData(BlockRotation rotation) {
             var data = new StructurePlacementData();
             data.setRotation(rotation);
             data.addProcessor(BlockIgnoreStructureProcessor.IGNORE_AIR_AND_STRUCTURE_BLOCKS);
             return data;
         }
-        
+
         @Override
         public void generate(StructureWorldAccess world, StructureAccessor structureAccessor, ChunkGenerator chunkGenerator, Random random, BlockBox chunkBox, ChunkPos chunkPos, BlockPos pos) {
             this.pos = this.pos.down();

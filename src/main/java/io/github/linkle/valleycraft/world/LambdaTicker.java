@@ -3,12 +3,12 @@ package io.github.linkle.valleycraft.world;
 import java.util.function.BooleanSupplier;
 
 public class LambdaTicker extends WorldTicker {
-    
+
     private final BooleanSupplier exe;
-    
+
     public LambdaTicker(BooleanSupplier exe) {
         this(Integer.MAX_VALUE, exe);
-        
+
     }
 
     public LambdaTicker(int tick, BooleanSupplier exe) {
@@ -23,6 +23,6 @@ public class LambdaTicker extends WorldTicker {
 
     @Override
     public void end(boolean isDelete) {
-        
+
     }
 }

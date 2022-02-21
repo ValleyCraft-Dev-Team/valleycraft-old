@@ -13,23 +13,23 @@ public class WanderingTraderOffers {
     public static void initialize() {
         //TradeOfferHelper.registerWanderingTraderOffers(0, WanderingTraderOffers::addTradesLevel0);
     }
-    
+
     private static void addTradesLevel(List<TradeOffers.Factory> list) {
         list.add(new Factory(new TradeOffer(new ItemStack(Items.EMERALD, 1), new ItemStack(Items.DIRT, 1), 1, 3, 1)));
     }
-    
+
     private static class Factory implements TradeOffers.Factory {
-        
+
         final TradeOffer offer;
-        
+
         Factory(TradeOffer offer) {
             this.offer = offer;
         }
-        
+
         @Override
         public TradeOffer create(Entity entity, Random random) {
             return offer;
         }
-        
+
     }
 }

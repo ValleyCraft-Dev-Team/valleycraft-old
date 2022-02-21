@@ -24,7 +24,7 @@ public class VinesBlock extends AbstractPlantStemBlock {
     public VinesBlock(Settings settings) {
         this(settings, createCuboidShape(4, 9, 4, 12, 16, 12));
     }
-    
+
     public VinesBlock(Settings settings, VoxelShape shape) {
         super(settings, Direction.DOWN, shape, false, 0.1);
         growthChance = 0.1;
@@ -47,7 +47,7 @@ public class VinesBlock extends AbstractPlantStemBlock {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockPos blockPos;
-        if (state.get(AGE) < MAX_AGE && random.nextDouble() < this.growthChance && chooseStemState(world.getBlockState(blockPos = pos.offset(growthDirection)))) {
+        if (state.get(AGE) < MAX_AGE && random.nextDouble() < growthChance && chooseStemState(world.getBlockState(blockPos = pos.offset(growthDirection)))) {
             world.setBlockState(blockPos, age(state, world.random));
         }
     }
@@ -74,7 +74,7 @@ public class VinesBlock extends AbstractPlantStemBlock {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        BlockPos blockPos = pos.offset(this.growthDirection);
+        BlockPos blockPos = pos.offset(growthDirection);
         int age = Math.min(state.get(AGE) + 1, MAX_AGE);
         int len = getGrowthLength(random);
         for (int i = 0; i < len && chooseStemState(world.getBlockState(blockPos)); ++i) {

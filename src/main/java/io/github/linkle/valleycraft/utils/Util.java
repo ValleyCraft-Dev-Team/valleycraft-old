@@ -75,7 +75,7 @@ public class Util {
         builder.add(state.with(Properties.HORIZONTAL_FACING, Direction.WEST), 1);
         return new WeightedBlockStateProvider(builder);
     }
-    
+
     public static Identifier newId(String id) {
         return new Identifier(ValleyMain.MOD_ID, id);
     }
@@ -89,11 +89,11 @@ public class Util {
             BlockEntityType<A> givenType, BlockEntityType<E> expectedType, BlockEntityTicker<? super E> ticker) {
         return expectedType == givenType ? (BlockEntityTicker<A>) ticker : null;
     }
-    
+
     public static <T> Predicate<T> pair(Predicate<T> first, Predicate<T> second, BooleanBiFunction function) {
         return obj -> function.apply(first.test(obj), second.test(obj));
     }
-    
+
     public static boolean canMergeItems(ItemStack first, ItemStack second) {
         if (!first.isOf(second.getItem())) {
             return false;

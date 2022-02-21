@@ -29,10 +29,6 @@ public class ValleyMain implements ModInitializer {
         CONFIG = holder.getConfig();
         ConfigVersionHandler.handle(holder);
 
-        // This should stay first before items and blocks.
-        Object initializer1 = VItemTags.KNIVES; // will force the class to load (any static member will do)
-        Object initializer2 = VCriteria.BROKE_BLOCK;
-
         //Item Initializers
         FoodAndCooking.initialize();
         Fishing.initialize();
@@ -50,7 +46,7 @@ public class ValleyMain implements ModInitializer {
         StoneBlocks.initialize();
         BlockEntities.ints();
         PotBlock.initialize();
-        
+
         // Misc Initializers (Recommended put it after the blocks and items initializers)
         Screens.initialize();
         VLootTables.initialize();
@@ -62,7 +58,7 @@ public class ValleyMain implements ModInitializer {
         ServerNetwork.initialize();
         WanderingTraderOffers.initialize();
         Structures.initialize();
-        
+
         //Configured Feature Initializers
         OreFeatures.initialize();
         PlantFeatures.initialize();

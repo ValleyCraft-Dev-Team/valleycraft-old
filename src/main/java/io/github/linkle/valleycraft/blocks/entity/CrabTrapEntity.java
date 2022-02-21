@@ -40,8 +40,8 @@ import net.minecraft.world.biome.Biome.Category;
 
 public class CrabTrapEntity extends LockableContainerBlockEntity implements SidedInventory {
 
-    private static final ImmutableSet<Category> BIOMES = 
-    ImmutableSet.of(Category.OCEAN, Category.RIVER, Category.BEACH, Category.SWAMP);
+    private static final ImmutableSet<Category> BIOMES =
+            ImmutableSet.of(Category.OCEAN, Category.RIVER, Category.BEACH, Category.SWAMP);
 
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(10, ItemStack.EMPTY);
     private final Object2IntArrayMap<Item> rememberList = new Object2IntArrayMap<>(CrabTrapBaits.size());
@@ -104,7 +104,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             entity.isInProgress = true;
             entity.setBaitTimer();
         }
-        
+
         entity.checkBait();
 
         if (--entity.timer <= 0) {
@@ -132,7 +132,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             lastBait = item;
         }
     }
-    
+
     private void checkBait() {
         if (getBait().getItem() != lastBait) {
             setBaitTimer();
@@ -152,11 +152,11 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
 
         condition = Condition.PERFECT;
     }
-    
+
     private boolean isInvaild() {
         return condition.isInvaild();
     }
-    
+
     private void addLoot() {
         var builder = new LootContext.Builder((ServerWorld)world);
         var lootTable = world.getServer().getLootManager().getTable(VLootTables.BAITING);
@@ -165,7 +165,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             var added = false;
             int emptySlot = -1;
             ItemStack foundStack = null;
-            
+
             for (int i = 1; i < 10; i++) {
                 var stack = getStack(i);
                 if (emptySlot == -1 && stack.isEmpty()) {
@@ -175,11 +175,11 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
                     int change = Math.min(loot.getCount(), num);
                     if (change > 0) {
                         foundStack = stack;
-                        break; 
+                        break;
                     }
                 }
             }
-            
+
             // Check if it found the stack then increment it.
             if (foundStack != null) {
                 int num = Math.min(loot.getMaxCount(), 16) - foundStack.getCount();
@@ -187,7 +187,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
                 foundStack.increment(change);
                 loot.decrement(change);
                 added = change > 0;
-                
+
                 if (!loot.isEmpty() && emptySlot != -1) {
                     setStack(emptySlot, loot);
                 }
@@ -195,7 +195,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
                 setStack(emptySlot, loot);
                 added = true;
             }
-            
+
             if (added) {
                 rememberList.removeInt(getBait().getItem());
                 getBait().decrement(1);
@@ -292,7 +292,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         isInProgress = nbt.getBoolean("IsInProgress");
         condition = Condition.fromId(nbt.getByte("Condition"));
         lastBait = Registry.ITEM.get(new Identifier(nbt.getString("LastBait")));
-        
+
         rememberList.clear();
         var list = nbt.getList("Remember", 10);
         for (int i = 0; i < list.size(); ++i) {
@@ -313,7 +313,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         nbt.putBoolean("IsInProgress", isInProgress);
         nbt.putByte("Condition", condition.getId());
         nbt.putString("LastBait", Registry.ITEM.getId(lastBait).toString());
-        
+
         var list = new NbtList();
         for (var entry : rememberList.object2IntEntrySet()) {
             var compound = new NbtCompound();
@@ -323,9 +323,9 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         }
         nbt.put("Remember", list);
     }
-    
+
     private static final int[] BAIT_SLOTS = {0};
-    
+
     private static final int[] LOOT_SLOTS = ((Supplier<int[]>)() -> {
         var slots = new int[9];
         for (int i = 0; i < slots.length; i++) slots[i] = i + 1;
@@ -346,11 +346,11 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
     public boolean canExtract(int slot, ItemStack stack, Direction face) {
         return slot != 0;
     }
-    
-    static enum Condition {
+
+    enum Condition {
         PERFECT("MISSINGNO."), NOT_WATERLOGGED("text.valley.crab_trap.not_waterlogged"),
         INVAILD_BIOME("text.valley.crab_trap.invaild_biome");
-        
+
         static final Condition[] CONDITIONS = Condition.values();
 
         String key;
@@ -362,11 +362,11 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
         boolean isInvaild() {
             return this != PERFECT;
         }
-        
+
         byte getId() {
             return (byte) ordinal();
         }
-        
+
         static Condition fromId(byte id) {
             return CONDITIONS[id];
         }

@@ -46,10 +46,9 @@ public class BrokeBlockCriterion extends AbstractCriterion<BrokeBlockCriterion.C
         if (obj.has("block")) {
             Identifier identifier = new Identifier(JsonHelper.getString(obj, "block"));
             return Registry.BLOCK.getOrEmpty(identifier).orElseThrow(() ->
-                    new JsonSyntaxException("Unknown block type '" + identifier + "'"));
-        } else {
-            return null;
+            new JsonSyntaxException("Unknown block type '" + identifier + "'"));
         }
+        return null;
     }
 
     public void trigger(ServerPlayerEntity player, BlockState state) {
@@ -67,7 +66,7 @@ public class BrokeBlockCriterion extends AbstractCriterion<BrokeBlockCriterion.C
         }
 
         public boolean matches(BlockState state) {
-            if (this.block != null && !state.isOf(this.block)) {
+            if (block != null && !state.isOf(block)) {
                 return false;
             }
             return this.state.test(state);

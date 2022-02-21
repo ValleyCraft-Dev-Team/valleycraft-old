@@ -8,7 +8,7 @@ public class LootUtils {
     public static ItemPredicate items(Item... items) {
         return ItemPredicate.Builder.create().items(items).build();
     }
-    
+
     public static ItemPredicate tag(Tag<Item> tag) {
         return ItemPredicate.Builder.create().tag(tag).build();
     }

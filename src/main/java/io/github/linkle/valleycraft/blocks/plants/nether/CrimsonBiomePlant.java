@@ -31,7 +31,7 @@ public class CrimsonBiomePlant extends PlantBlock {
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(BlockTags.INFINIBURN_NETHER) ||
-               floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.NETHERRACK);
+                floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.NETHERRACK);
     }
 
     @Override

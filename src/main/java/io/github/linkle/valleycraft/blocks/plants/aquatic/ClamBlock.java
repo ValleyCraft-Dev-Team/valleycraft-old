@@ -38,11 +38,11 @@ public class ClamBlock extends AquaticFacingBlock {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         super.randomTick(state, world, pos, random);
-        
+
         if (state.get(OPEN) || !state.get(WATERLOGGED)) {
             return;
         }
-        
+
         open(state, world, pos);
         spawnBubbles(world, pos);
     }
@@ -65,21 +65,21 @@ public class ClamBlock extends AquaticFacingBlock {
         }
 
         open(state, world, pos);
-        
+
         if (world instanceof ServerWorld server) {
             spawnBubbles(server, pos);
         }
-        
+
         return ActionResult.SUCCESS;
     }
-    
+
 
     protected void open(BlockState state, World world, BlockPos pos) {
         world.setBlockState(pos, state.with(OPEN, true), Block.NOTIFY_ALL);
         world.updateNeighborsAlways(pos, this);
         world.createAndScheduleBlockTick(pos, this, 30);
     }
-    
+
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         super.onStateReplaced(state, world, pos, newState, moved);
@@ -96,7 +96,7 @@ public class ClamBlock extends AquaticFacingBlock {
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (!state.get(OPEN))
             return;
-        
+
         double x = pos.getX() + 0.5;
         double y = pos.getY() + 0.1;
         double z = pos.getZ() + 0.5;

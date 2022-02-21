@@ -25,12 +25,12 @@ public class DirectionBlockWithWater extends DirectionBlock implements Waterlogg
     protected DirectionBlockWithWater(Settings settings) {
         super(settings);
     }
-    
+
     @Override
     protected void setDefaultState() {
         setDefaultState(Direction.NORTH);
     }
-    
+
     @Override
     protected void setDefaultState(Direction facing) {
         setDefaultState(stateManager.getDefaultState().with(FACING, facing).with(WATERLOGGED, false));

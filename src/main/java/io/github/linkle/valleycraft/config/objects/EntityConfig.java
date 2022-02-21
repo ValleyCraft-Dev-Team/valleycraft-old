@@ -11,23 +11,23 @@ import net.minecraft.entity.SpawnGroup;
 
 
 public class EntityConfig implements ConfigData {
-    
+
     public boolean enable = true;
     public int weight;
     public int minGroupSize;
     public int maxGroupSize;
-    
+
     public EntityConfig(int weight, int minGroupSize, int maxGroupSize) {
         this.weight = weight;
         this.minGroupSize = minGroupSize;
         this.maxGroupSize = maxGroupSize;
     }
-    
+
     public void addSpawn(Predicate<BiomeSelectionContext> biomeSelector, SpawnGroup spawnGroup, EntityType<?> entityType) {
         if (enable)
-        BiomeModifications.addSpawn(biomeSelector, spawnGroup, entityType, weight, minGroupSize, maxGroupSize);
+            BiomeModifications.addSpawn(biomeSelector, spawnGroup, entityType, weight, minGroupSize, maxGroupSize);
     }
-    
+
     public static void getLang(Map<String, String> map) {
         map.put("enable", "Enable");
         map.put("weight", "Weight");

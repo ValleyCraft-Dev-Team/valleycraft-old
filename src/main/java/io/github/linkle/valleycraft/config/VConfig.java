@@ -18,7 +18,7 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 @Config(name = ValleyMain.MOD_ID)
 @Config.Gui.Background("valley:textures/blocks/brown_bricks.png")
 public class VConfig implements ConfigData {
-    
+
     /** A config version for handling outdated values. */
     @Gui.Excluded
     public int configVersion = ConfigVersionHandler.VERSION;

@@ -38,19 +38,19 @@ implements Vanishable, EnchantmentHandler {
         super(material, settings);
         this.attackDamage = attackDamage + material.getAttackDamage();
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Tool modifier", (double)this.attackDamage, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Tool modifier", (double)attackSpeed, EntityAttributeModifier.Operation.ADDITION));
-        this.attributeModifiers = builder.build();
+        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Tool modifier", this.attackDamage, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Tool modifier", attackSpeed, EntityAttributeModifier.Operation.ADDITION));
+        attributeModifiers = builder.build();
     }
 
-        //Damage the knife when it's used to hit mobs
+    //Damage the knife when it's used to hit mobs
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         stack.damage(1, attacker, e -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
         return true;
     }
 
-        //Damage the knife when it's used to mine blocks
+    //Damage the knife when it's used to mine blocks
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
         if (state.getHardness(world, pos) != 0.0f) {
@@ -59,31 +59,31 @@ implements Vanishable, EnchantmentHandler {
         return true;
     }
 
-        //Add the explanatory tooltip
+    //Add the explanatory tooltip
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add( new TranslatableText("item.valley.knife.tooltip").formatted(Formatting.YELLOW) );
     }
 
-        //This is needed to show the damage and attack speed tooltip shown by all tools
+    //This is needed to show the damage and attack speed tooltip shown by all tools
     @Override
     public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
         if (slot == EquipmentSlot.MAINHAND) {
-            return this.attributeModifiers;
+            return attributeModifiers;
         }
         return super.getAttributeModifiers(slot);
     }
 
-        //These two methods use our special mixin to force specific enchantments to work on the sickle
-        //despite enchantment compatibility being hardcoded in vanilla.
-    
-        //Make the knife accept any weapon enchantments
+    //These two methods use our special mixin to force specific enchantments to work on the sickle
+    //despite enchantment compatibility being hardcoded in vanilla.
+
+    //Make the knife accept any weapon enchantments
     @Override
     public List<EnchantmentTarget> getEnchantmentTypes() {
         return Collections.singletonList(EnchantmentTarget.WEAPON);
     }
 
-        //Make the knife *not* accept Sweeping Edge, even though it's in the above category
+    //Make the knife *not* accept Sweeping Edge, even though it's in the above category
     @Override
     public boolean isInvalid(Enchantment enchantment) {
         return enchantment.equals(Enchantments.SWEEPING);

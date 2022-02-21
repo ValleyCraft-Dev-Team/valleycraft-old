@@ -24,7 +24,7 @@ public class SmallCactusBlock extends PlantBlock {
                 .sounds(BlockSoundGroup.GRASS)
                 .noCollision());
     }
-    
+
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(BlockTags.SAND);

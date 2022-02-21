@@ -29,20 +29,20 @@ public class DishBlock extends HorizontalWithWaterBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        switch ((Direction)state.get(FACING)) {
-            case NORTH:
-                return NORTH_SHAPE;
-            case SOUTH:
-                return SOUTH_SHAPE;
-            case WEST:
-                return WEST_SHAPE;
-            case EAST:
-                return EAST_SHAPE;
-            default:
-                return NORTH_SHAPE;
+        switch (state.get(FACING)) {
+        case NORTH:
+            return NORTH_SHAPE;
+        case SOUTH:
+            return SOUTH_SHAPE;
+        case WEST:
+            return WEST_SHAPE;
+        case EAST:
+            return EAST_SHAPE;
+        default:
+            return NORTH_SHAPE;
         }
     }
-    
+
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;

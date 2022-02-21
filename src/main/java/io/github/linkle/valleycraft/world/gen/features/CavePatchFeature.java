@@ -30,9 +30,9 @@ public class CavePatchFeature extends Feature<CavePatchConfig> {
         int spawned = 0;
 
         for (int i = 0; i < tries; ++i) {
-            int xOffset = random.nextInt(size) - (size / 2);
-            int yOffset = random.nextInt(height) - (height / 2);
-            int zOffset = random.nextInt(size) - (size / 2);
+            int xOffset = random.nextInt(size) - size / 2;
+            int yOffset = random.nextInt(height) - height / 2;
+            int zOffset = random.nextInt(size) - size / 2;
             mutable.set(origin, xOffset, yOffset, zOffset);
 
             var surface = mutable.down();
@@ -42,15 +42,15 @@ public class CavePatchFeature extends Feature<CavePatchConfig> {
                 ++spawned;
 
                 if (!state.isOf(Plants.SPIDER_EGG_BLOCK)) {
-                    if (ValleyMain.CONFIG.misc.spiderEggWebGenEnabled) 
-                    for (BlockPos pos : BlockPos.iterate(mutable.getX() - 3, mutable.getY() - 3, mutable.getZ() - 3,
-                            mutable.getX() + 3, mutable.getY() + 3, mutable.getZ() + 3)) {
-                        if (random.nextFloat(1) < config.extraBlockChance()) {
-                            if (world.getBlockState(pos).isIn(BlockTags.DEEPSLATE_ORE_REPLACEABLES)) {
-                                world.setBlockState(pos, config.extraBlock(), Block.NOTIFY_LISTENERS);
+                    if (ValleyMain.CONFIG.misc.spiderEggWebGenEnabled)
+                        for (BlockPos pos : BlockPos.iterate(mutable.getX() - 3, mutable.getY() - 3, mutable.getZ() - 3,
+                                mutable.getX() + 3, mutable.getY() + 3, mutable.getZ() + 3)) {
+                            if (random.nextFloat(1) < config.extraBlockChance()) {
+                                if (world.getBlockState(pos).isIn(BlockTags.DEEPSLATE_ORE_REPLACEABLES)) {
+                                    world.setBlockState(pos, config.extraBlock(), Block.NOTIFY_LISTENERS);
+                                }
                             }
                         }
-                    }
                 } else {
                     for (Direction direction : Direction.values()) {
                         BlockPos pos = mutable.offset(direction);

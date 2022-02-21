@@ -25,7 +25,7 @@ public class HorizontalWithWaterBlock extends HorizontalBlock implements Waterlo
     protected HorizontalWithWaterBlock(Settings settings) {
         super(settings);
     }
-    
+
     @Override
     protected void setDefaultState() {
         setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH).with(WATERLOGGED, false));

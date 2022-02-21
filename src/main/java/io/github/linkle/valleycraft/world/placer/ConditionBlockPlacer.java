@@ -10,11 +10,11 @@ import net.minecraft.world.WorldAccess;
 /** A simple condition block placer. */
 public class ConditionBlockPlacer implements BlockPlacer {
     private final BiPredicate<WorldAccess, BlockPos> predicate;
-    
+
     public ConditionBlockPlacer(Predicate<BlockState> predicate) {
         this((world, pos) -> predicate.test(world.getBlockState(pos)));
     }
-    
+
     public ConditionBlockPlacer(BiPredicate<WorldAccess, BlockPos> predicate) {
         this.predicate = predicate;
     }

@@ -5,7 +5,6 @@ import java.util.function.Predicate;
 import com.google.common.base.Predicates;
 
 import io.github.linkle.valleycraft.ValleyMain;
-import io.github.linkle.valleycraft.blocks.plants.bushes.BerryBushBlock;
 import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.init.Plants;
 import io.github.linkle.valleycraft.utils.Util;
@@ -16,10 +15,9 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.FluidFillable;
+import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.tag.FluidTags;
 import net.minecraft.util.function.BooleanBiFunction;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
@@ -69,87 +67,87 @@ public class PlantFeatures {
             var set = config.beetPatch;
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), vegetal, create("beet_patch", Plants.WILD_BEET, set.tries, set.rarity));
         }
-            
+
         if (config.potatoPatch.enable) {
             var set = config.potatoPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.SAVANNA), vegetal, create("potato_patch", Plants.WILD_POTATO, set.tries, set.rarity));
         }
-            
+
         if (config.willowPatch.enable) {
             var set = config.willowPatch;
             selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
             BiomeModifications.addFeature(selector, vegetal, create("willow_patch", Plants.WEAPING_SWAMP_WILLOW, set.tries, set.rarity));
         }
-            
+
         if (config.ribbonPatch.enable) {
             var set = config.ribbonPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.SWAMP, Category.JUNGLE), vegetal, create("ribbon_patch", Plants.SWAMP_RIBBON, set.tries, set.rarity));
         }
-            
+
         if (config.orangeFernPatch.enable) {
             var set = config.orangeFernPatch;
             selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
             BiomeModifications.addFeature(selector, vegetal, create("orange_fern_patch", Plants.ORANGE_FERN, set.tries, set.rarity));
         }
-            
+
         if (config.orangeBeautyPatch.enable) {
             var set = config.orangeBeautyPatch;
             selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
             BiomeModifications.addFeature(selector, vegetal, create("orange_beauty_patch", Plants.ORANGE_BEAUTY, set.tries, set.rarity));
         }
-            
+
         if (config.dahliaPatch.enable) {
             var set = config.dahliaPatch;
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), vegetal, create("black_dahlia_patch", Plants.BLACK_DAHLIA, set.tries, set.rarity));
         }
-            
+
         if (config.lavenderPatch.enable) {
             var set = config.lavenderPatch;
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), vegetal, create("lavender_patch", Plants.LAVENDER, set.tries, set.rarity));
         }
-            
+
         if (config.sorrelPatch.enable) {
             var set = config.sorrelPatch;
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, create("sorrel_patch", Plants.REDWOOD_SORREL, set.tries, set.rarity));
         }
-            
+
         if (config.dandelionPatch.enable) {
             var set = config.dandelionPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST, Category.PLAINS, Category.TAIGA), vegetal, create("dandelion_patch", Plants.DANDELION_PUFF, set.tries, set.rarity));
         }
-            
+
         //herbs and taproots
         if (config.herbPatch.enable) {
             var set = config.herbPatch;
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), vegetal, create("herbs_patch", Plants.HERBS, set.tries, set.rarity));
         }
-            
+
         if (config.taprootPatch.enable) {
             var set = config.taprootPatch;
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), vegetal, create("taproots_patch", Plants.TAPROOTS, set.tries, set.rarity));
         }
-            
+
         if (config.crocusPatch.enable) {
             var set = config.crocusPatch;
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, create("crocus_patch", Plants.CROCUS, set.tries, set.rarity));
         }
-            
+
 
         if (config.hollyPatch.enable) {
             var set = config.hollyPatch;
-            var key = create("holly_patch", Plants.HOLLY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 2), set.tries, set.rarity);
+            var key = create("holly_patch", Plants.HOLLY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, key);
         }
-            
+
         //found in dark woods
         if (config.morelPatch.enable) {
             var set = config.morelPatch;
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, create("morel_patch", Plants.MOREL, set.tries, set.rarity));
         }
-           
+
         if (config.sourPatch.enable) {
             var set = config.sourPatch;
-            var key = create("sour_patch", Plants.SOUR_BERRY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 2), set.tries, set.rarity);
+            var key = create("sour_patch", Plants.SOUR_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, key);
         }
 
@@ -158,12 +156,12 @@ public class PlantFeatures {
             var set = config.bushPatch;
             BiomeModifications.addFeature(Predicates.not(snowOnly::test), vegetal, create("bush_patch", Plants.BUSH, set.tries, set.rarity));
         }
-        
+
         if (config.sproutPatch.enable) {
             var set = config.sproutPatch;
             BiomeModifications.addFeature(Predicates.not(snowOnly::test), vegetal, create("sprout_patch", Plants.SPROUT, set.tries, set.rarity));
         }
-            
+
         //found in old growth biomes
         if (config.boxwoodPatch.enable) {
             var set = config.boxwoodPatch;
@@ -176,67 +174,67 @@ public class PlantFeatures {
             selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
             BiomeModifications.addFeature(selector, vegetal, create("jungle_cap_patch", Plants.JUNGLE_CAP, set.tries, set.rarity));
         }
-            
+
         if (config.panPatch.enable) {
             var set = config.panPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE), vegetal, create("panflower_patch", Plants.PANFLOWER, set.tries, set.rarity));
         }
-            
+
         //found in jungles and swamps
         if (config.swampBushPatch.enable) {
             var set = config.swampBushPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.JUNGLE, Category.SWAMP), vegetal, create("js_bush_patch", Plants.SWAMP_BUSH, set.tries, set.rarity));
         }
-            
+
         if (config.rockPatch.enable) {
             var set = config.rockPatch;
             BiomeModifications.addFeature(Predicates.not(snowOnly::test), vegetal, create("rock_patch", Plants.ROCK_PILE, set.tries, set.rarity));
         }
-            
+
         //found in snowy biomes
         if (config.snowPatch.enable) {
             var set = config.snowPatch;
             BiomeModifications.addFeature(snowOnly, vegetal, create("snow_bush_patch", Plants.SNOW_BUSH, set.tries, set.rarity));
         }
-            
+
         if (config.snowRockPatch.enable) {
             var set = config.snowRockPatch;
             BiomeModifications.addFeature(snowOnly, vegetal, create("snow_rock_patch", Plants.SNOW_ROCK_PILE, set.tries, set.rarity));
         }
-            
+
         //these three share the same biomes, keep the values low so they don't overpopulate them!
         //found in forests
         if (config.rosePatch.enable) {
             var set = config.rosePatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("rose_patch", Plants.ROSEBUSH, set.tries, set.rarity));
         }
-            
+
         if (config.honeyClusterPatch.enable) {
             var set = config.honeyClusterPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("honey_cluster_patch", Plants.HONEY_CLUSTER, set.tries, set.rarity));
         }
-            
+
         if (config.lilacPatch.enable) {
             var set = config.lilacPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("lilac_patch", Plants.LILACBUSH, set.tries, set.rarity));
         }
-            
+
         if (config.peonyPatch.enable) {
             var set = config.peonyPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.FOREST), vegetal, create("peony_patch", Plants.PEONYBUSH, set.tries, set.rarity));
         }
-            
+
         //found in deserts
         if (config.tumblePatch.enable) {
             var set = config.tumblePatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, create("tumbleweed_patch", Plants.TUMBLE_WEED, set.tries, set.rarity));
         }
-            
+
         if (config.floweringCactusPatch.enable) {
             var set = config.floweringCactusPatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.DESERT, Category.MESA), vegetal, create("flowering_cactus_patch", Plants.FLOWERING_CACTUS, set.tries, set.rarity));
         }
-            
+
         if (config.cactusPatch.enable) {
             var set = config.cactusPatch;
             var key = create("small_patch", Util.randomHoriFacing(Plants.SMALL_CACTUS.getDefaultState()), set.tries, set.rarity);
@@ -247,11 +245,11 @@ public class PlantFeatures {
             var set = config.alivePatch;
             BiomeModifications.addFeature(BiomeSelectors.categories(Category.SAVANNA), vegetal, create("alive_patch", Plants.BUSH_ALIVE, set.tries, set.rarity));
         }
-            
+
         //found in podzol
         if (config.bitterPatch.enable) {
             var set = config.bitterPatch;
-            var key = create("bitter_patch", Plants.BITTER_BERRY_BUSH.getDefaultState().with(BerryBushBlock.AGE, 3), set.tries, set.rarity);
+            var key = create("bitter_patch", Plants.BITTER_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 3), set.tries, set.rarity);
             selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
             BiomeModifications.addFeature(selector, vegetal, key);
         }
@@ -259,34 +257,34 @@ public class PlantFeatures {
         //found in shattered savannas
         if (config.tomatoPatch.enable) {
             var set = config.tomatoPatch;
-            var key = create("tomato_patch", Plants.TOMATO_BUSH.getDefaultState().with(BerryBushBlock.AGE, 2), set.tries, set.rarity);
+            var key = create("tomato_patch", Plants.TOMATO_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_SAVANNA), vegetal, key);
         }
-        
+
         // 62 is where a sea level with water block inside.
         // If you want to config reeds counts or something, check the ReedPatchFeature class.
-        RegistryKey<PlacedFeature> key = Util.register("reed_patch", VFeatures.REED_PATCH.configure(DefaultFeatureConfig.INSTANCE), 
+        RegistryKey<PlacedFeature> key = Util.register("reed_patch", VFeatures.REED_PATCH.configure(DefaultFeatureConfig.INSTANCE),
                 HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
         var categories = BiomeSelectors.categories(Category.RIVER, Category.PLAINS, Category.SWAMP, Category.FOREST, Category.JUNGLE, Category.TAIGA);
         if (config.reedPatch.enable)
             BiomeModifications.addFeature(categories, topLayer, key);
     }
-    
+
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, Block block, int tries, int rarity) {
         return create(id, block.getDefaultState(), tries, rarity);
     }
-    
+
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockState block, int tries, int rarity) {
         return create(id, BlockStateProvider.of(block), tries, rarity);
     }
-    
+
     private static final int PLACER = VFeatures.SIMPLE_PATCH.create(new ConditionBlockPlacer((world, pos) -> {
         if (world.isWater(pos)) {
             return false;
         }
-        
+
         var state = world.getBlockState(pos);
         if (state.getMaterial().isReplaceable()) {
             if (state.getBlock() instanceof TallPlantBlock) {
@@ -296,10 +294,10 @@ public class PlantFeatures {
                 return true;
             }
         }
-        
+
         return false;
     }));
-    
+
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
         var config = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(block, tries, 7, 3, PLACER));

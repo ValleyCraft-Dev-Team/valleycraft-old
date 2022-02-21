@@ -29,7 +29,7 @@ public class StatueBlock extends HorizontalWithWaterBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return super.getFacing(ctx).getOpposite();

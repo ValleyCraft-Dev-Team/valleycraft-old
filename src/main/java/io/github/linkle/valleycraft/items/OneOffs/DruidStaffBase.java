@@ -10,7 +10,7 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
 
 public class DruidStaffBase extends Item {
-    
+
     public DruidStaffBase() {
         super(new Settings().group(ItemGroups.EXPLORATION_GROUP).maxDamage(250));
     }

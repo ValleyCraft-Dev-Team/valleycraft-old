@@ -24,7 +24,7 @@ public class SnowmanBlock extends HorizontalWithWaterBlock {
                 .strength(1f, 1f));
         setDefaultState();
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return super.getFacing(ctx).getOpposite();

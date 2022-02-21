@@ -41,33 +41,33 @@ import net.minecraft.world.WorldAccess;
 public class CrabTrap extends BlockWithEntity implements Waterloggable {
     protected static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     public static final VoxelShape SHAPE = VoxelShapes.union(Block.createCuboidShape(0, 0, 0, 16, 3, 16),
-                                                                //Top
-                                                             Block.createCuboidShape(0, 13, 0, 16, 16, 16),
-                                                                //Northwest corner
-                                                             Block.createCuboidShape(0, 0, 0, 2, 16, 1),
-                                                             Block.createCuboidShape(0, 0, 0, 1, 16, 2),
-                                                                //North side
-                                                             Block.createCuboidShape(4, 0, 0, 7, 16, 1),
-                                                             Block.createCuboidShape(9, 0, 0, 12, 16, 1),
-                                                                //Northeast corner
-                                                             Block.createCuboidShape(14, 0, 0, 16, 16, 1),
-                                                             Block.createCuboidShape(15, 0, 0, 16, 16, 2),
-                                                                //East side
-                                                             Block.createCuboidShape(15, 0, 4, 16, 16, 7),
-                                                             Block.createCuboidShape(15, 0, 9, 16, 16, 12),
-                                                                //Southeast corner
-                                                             Block.createCuboidShape(15, 0, 14, 16, 16, 16),
-                                                             Block.createCuboidShape(14, 0, 15, 16, 16, 16),
-                                                                //South side
-                                                             Block.createCuboidShape(4, 0, 15, 7, 16, 16),
-                                                             Block.createCuboidShape(9, 0, 15, 12, 16, 16),
-                                                                //Southwest corner
-                                                             Block.createCuboidShape(0, 0, 15, 2, 16, 16),
-                                                             Block.createCuboidShape(0, 0, 14, 1, 16, 16),
-                                                                //West side
-                                                             Block.createCuboidShape(0, 0, 4, 1, 16, 7),
-                                                             Block.createCuboidShape(0, 0, 9, 1, 16, 12));
-    
+            //Top
+            Block.createCuboidShape(0, 13, 0, 16, 16, 16),
+            //Northwest corner
+            Block.createCuboidShape(0, 0, 0, 2, 16, 1),
+            Block.createCuboidShape(0, 0, 0, 1, 16, 2),
+            //North side
+            Block.createCuboidShape(4, 0, 0, 7, 16, 1),
+            Block.createCuboidShape(9, 0, 0, 12, 16, 1),
+            //Northeast corner
+            Block.createCuboidShape(14, 0, 0, 16, 16, 1),
+            Block.createCuboidShape(15, 0, 0, 16, 16, 2),
+            //East side
+            Block.createCuboidShape(15, 0, 4, 16, 16, 7),
+            Block.createCuboidShape(15, 0, 9, 16, 16, 12),
+            //Southeast corner
+            Block.createCuboidShape(15, 0, 14, 16, 16, 16),
+            Block.createCuboidShape(14, 0, 15, 16, 16, 16),
+            //South side
+            Block.createCuboidShape(4, 0, 15, 7, 16, 16),
+            Block.createCuboidShape(9, 0, 15, 12, 16, 16),
+            //Southwest corner
+            Block.createCuboidShape(0, 0, 15, 2, 16, 16),
+            Block.createCuboidShape(0, 0, 14, 1, 16, 16),
+            //West side
+            Block.createCuboidShape(0, 0, 4, 1, 16, 7),
+            Block.createCuboidShape(0, 0, 9, 1, 16, 12));
+
     public static BlockEntityType<CrabTrapEntity> BLOCK_ENTITY;
 
     public CrabTrap() {
@@ -83,54 +83,54 @@ public class CrabTrap extends BlockWithEntity implements Waterloggable {
         return SHAPE;
     }
 
-        //Enables comparators to read from crap traps
+    //Enables comparators to read from crap traps
     @Override
     public boolean hasComparatorOutput(BlockState state) {
         return true;
     }
-        //Determine what signal strength comparators should output based on how full the trap is
+    //Determine what signal strength comparators should output based on how full the trap is
     @Override
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
         Inventory inventory = (Inventory)world.getBlockEntity(pos);
         int i = 0;
         float f = 0.0f;
-            //This starts a loop. We're gonna check every slot for how full it is
+        //This starts a loop. We're gonna check every slot for how full it is
         for (int j = 0; j < inventory.size(); ++j) {
             ItemStack itemStack = inventory.getStack(j);
-                //If the slot is empty, check the next slot
+            //If the slot is empty, check the next slot
             if (itemStack.isEmpty()) continue;
-                //If we're currently testing the bait slot, we have to see how full the bait stack is,
-                //then add a number between 0 and 1 to f representing how full the bait slot is
+            //If we're currently testing the bait slot, we have to see how full the bait stack is,
+            //then add a number between 0 and 1 to f representing how full the bait slot is
             if (j == 0) {
                 f += (float)itemStack.getCount() / (float)Math.min(inventory.getMaxCountPerStack(), itemStack.getMaxCount());
             }
-                //If we're checking an output slot, we treat the slot as full if it contains anything at all.
-                //Because we checked for empty earlier, the slot is full, so add one to f.
+            //If we're checking an output slot, we treat the slot as full if it contains anything at all.
+            //Because we checked for empty earlier, the slot is full, so add one to f.
             else {
                 f += 1;
             }
             ++i;
         }
-            //Return comparator strength based on how full the crab trap is overall.
-        return MathHelper.floor((f /= (float)inventory.size()) * 14.0f) + (i > 0 ? 1 : 0);
+        //Return comparator strength based on how full the crab trap is overall.
+        return MathHelper.floor((f /= inventory.size()) * 14.0f) + (i > 0 ? 1 : 0);
     }
 
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new CrabTrapEntity(pos, state);
     }
-    
+
     @Override
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return world.isClient ? null : Util.checkType(type, BLOCK_ENTITY, CrabTrapEntity::tick);
     }
-    
+
     @Override
     public BlockRenderType getRenderType(BlockState state) {
         return BlockRenderType.MODEL;
     }
-    
+
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.isClient) {
@@ -149,7 +149,7 @@ public class CrabTrap extends BlockWithEntity implements Waterloggable {
             entity.checkValidation();
         }
     }
-    
+
     @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.isOf(newState.getBlock())) {
@@ -164,7 +164,7 @@ public class CrabTrap extends BlockWithEntity implements Waterloggable {
         }
         super.onStateReplaced(state, world, pos, newState, moved);
     }
-    
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         return super.getPlacementState(ctx).with(WATERLOGGED, Util.inWater(ctx));

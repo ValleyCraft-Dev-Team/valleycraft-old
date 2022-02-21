@@ -17,7 +17,7 @@ public class HorizontalBlock extends HorizontalFacingBlock {
     protected HorizontalBlock(Settings settings) {
         super(settings);
     }
-    
+
     /** A common method to set its default state. */
     protected void setDefaultState() {
         setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));

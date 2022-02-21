@@ -30,10 +30,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class DuckEntity extends ChickenEntity {
-    
+
     private static final Ingredient BREEDING_INGREDIENT;
     private static final int DROP_DURATION = 6000;
-    
+
     private int dropFeatherTime;
     private int duckEggLayTime;
 
@@ -42,7 +42,7 @@ public class DuckEntity extends ChickenEntity {
         dropFeatherTime = getRandomTime();
         duckEggLayTime  = getRandomTime();
     }
-    
+
     @Override
     protected void initGoals() {
         goalSelector.add(0, new SwimGoal(this));
@@ -64,7 +64,7 @@ public class DuckEntity extends ChickenEntity {
     public void tickMovement() {
         super.tickMovement();
         eggLayTime = DROP_DURATION; // Disable laying chicken egg.
-        
+
         if (!world.isClient && isAlive() && !isBaby() && !hasJockey()) {
             if (--duckEggLayTime <= 0) {
                 playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (random.nextFloat() - random.nextFloat()) * 0.2F + 1.0F);
@@ -76,14 +76,14 @@ public class DuckEntity extends ChickenEntity {
                 dropItem(Items.FEATHER);
             }
         }
-        
+
         if (isTouchingWater()) {
             prevFlapProgress = 80;
             flapProgress = 80;
         }
-        
+
     }
-    
+
     @Override
     protected SoundEvent getAmbientSound() {
         return Sounds.DUCK_QUACK;
@@ -98,12 +98,12 @@ public class DuckEntity extends ChickenEntity {
     protected SoundEvent getDeathSound() {
         return Sounds.DUCK_QUACK;
     }
-    
+
     @Override
     public boolean isBreedingItem(ItemStack stack) {
         return BREEDING_INGREDIENT.test(stack);
     }
-    
+
     @Override
     public void readCustomDataFromNbt(NbtCompound nbt) {
         super.readCustomDataFromNbt(nbt);
@@ -117,12 +117,12 @@ public class DuckEntity extends ChickenEntity {
         nbt.putInt("DropFeatherTime", dropFeatherTime);
         nbt.putInt("DuckEggLayTime", duckEggLayTime);
     }
-    
+
     @Override
     public void setPathfindingPenalty(PathNodeType nodeType, float penalty) {
         // Remove water penalty.
     }
-    
+
     @Override
     protected EntityNavigation createNavigation(World world) {
         return new MobNavigation(this, world) {
@@ -133,11 +133,11 @@ public class DuckEntity extends ChickenEntity {
             }
         };
     }
-    
+
     private int getRandomTime() {
         return random.nextInt(DROP_DURATION) + DROP_DURATION;
     }
-    
+
     static {
         BREEDING_INGREDIENT = Ingredient.ofItems(Items.KELP);
     }

@@ -25,10 +25,12 @@ public class SnowBush extends PlantBlock {
                 .strength(0, 0.5f));
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
+    @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         Block block = floor.getBlock();
         return  floor.isIn(BlockTags.DIRT) ||
@@ -40,6 +42,7 @@ public class SnowBush extends PlantBlock {
 
     public static final VoxelShape BlockCollisionShape;
 
+    @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext context) {
         return BlockCollisionShape;
     }

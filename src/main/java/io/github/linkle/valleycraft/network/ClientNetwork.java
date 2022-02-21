@@ -15,7 +15,7 @@ public class ClientNetwork {
             client.execute(() -> {
                 var world = client.world;
                 if (world == null) return;
-                
+
                 if (world.getBlockState(pos).getBlock() instanceof GiantClamBlock) {
                     ((WorldExt)world).addTicker(new ScallopTicker(world, pos));
                 }

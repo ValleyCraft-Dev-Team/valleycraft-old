@@ -36,7 +36,7 @@ public class VItemTags {
     public static final Tag<Item> WORMS = ITEM.create(newId("worms"));
     public static final Tag<Item> HOLLY = ITEM.create(newId("holly"));
     public static final Tag<Item> EGGPLANTS = ITEM.create(newId("eggplants"));
-    
+
     // valley tags
     // use ValleyMain.MOD_ID for namespace
 
@@ -44,7 +44,7 @@ public class VItemTags {
     private VItemTags() {
         assert false; // should never be called
     }
-    
+
     private static Identifier newId(String id) {
         return new Identifier("c", id);
     }

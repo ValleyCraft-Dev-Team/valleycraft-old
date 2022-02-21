@@ -16,6 +16,7 @@ import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
+import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 
 public class Structures {
@@ -25,33 +26,32 @@ public class Structures {
 
     public static void initialize() {
         var surface = GenerationStep.Feature.SURFACE_STRUCTURES;
-        var underground = GenerationStep.Feature.UNDERGROUND_STRUCTURES;
         RegistryKey<ConfiguredStructureFeature<?, ?>> key;
 
         FabricStructureBuilder.create(new Identifier(MOD_ID, "shipwreck"), SHIPWRECK)
-                .step(surface)
-                .defaultConfig(24, 10, 4353)
-                .adjustsSurface()
-                .register();
-        
+        .step(surface)
+        .defaultConfig(24, 10, 4353)
+        .adjustsSurface()
+        .register();
+
         FabricStructureBuilder.create(new Identifier(MOD_ID, "research_station"), AQUATIC_STATION)
-                .step(surface)
-                .defaultConfig(64, 24, 5678)
-                .register();
-        
+        .step(surface)
+        .defaultConfig(64, 24, 5678)
+        .register();
+
         FabricStructureBuilder.create(new Identifier(MOD_ID, "tide_pool"), TIDE_POOL)
         .step(surface)
         .defaultConfig(6, 2, 2545)
         .adjustsSurface()
         .register();
 
-        key = registor(SHIPWRECK.configure(DefaultFeatureConfig.DEFAULT), "shipwreck");
+        key = registor(SHIPWRECK.configure(FeatureConfig.DEFAULT), "shipwreck");
         BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
-        
-        key = registor(AQUATIC_STATION.configure(DefaultFeatureConfig.DEFAULT), "research_station");
+
+        key = registor(AQUATIC_STATION.configure(FeatureConfig.DEFAULT), "research_station");
         BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
-        
-        key = registor(TIDE_POOL.configure(DefaultFeatureConfig.DEFAULT), "tide_pool");
+
+        key = registor(TIDE_POOL.configure(FeatureConfig.DEFAULT), "tide_pool");
         BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
     }
 

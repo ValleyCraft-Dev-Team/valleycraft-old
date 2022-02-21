@@ -9,7 +9,7 @@ import net.minecraft.advancement.criterion.Criterion;
 @Mixin(Criteria.class)
 public interface CriteriaInvoker {
     @Invoker("register")
-    public static <T extends Criterion<?>> T register(T object) {
+    static <T extends Criterion<?>> T register(T object) {
         throw new AssertionError();
     }
 }

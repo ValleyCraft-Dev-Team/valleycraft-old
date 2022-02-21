@@ -37,19 +37,19 @@ public class NetBlock extends DirectionBlockWithWater {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH:
-                return NORTH_SHAPE;
-            case SOUTH:
-                return SOUTH_SHAPE;
-            case WEST:
-                return WEST_SHAPE;
-            case EAST:
-                return EAST_SHAPE;
-            case UP:
-                return UP_SHAPE;
-            case DOWN:
-            default:
-                return DOWN_SHAPE;
+        case NORTH:
+            return NORTH_SHAPE;
+        case SOUTH:
+            return SOUTH_SHAPE;
+        case WEST:
+            return WEST_SHAPE;
+        case EAST:
+            return EAST_SHAPE;
+        case UP:
+            return UP_SHAPE;
+        case DOWN:
+        default:
+            return DOWN_SHAPE;
         }
     }
 
@@ -92,7 +92,7 @@ public class NetBlock extends DirectionBlockWithWater {
 
         super.onSteppedOn(world, pos, state, entity);
     }
-    
+
     static {
         UP_SHAPE = Block.createCuboidShape(0.0D, 15.0D, 0.0D, 16.0D, 16.0D, 16.0D);
         DOWN_SHAPE = Block.createCuboidShape(0.0D, 4.0D, 0.0D, 16.0D, 6.0D, 16.0D);

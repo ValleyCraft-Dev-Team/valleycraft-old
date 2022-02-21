@@ -15,7 +15,7 @@ public enum EntityCondition implements Predicate<Entity> {
         case DISABLE -> false;
         };
     }
-    
+
     @Override
     public String toString() {
         return switch (this) {

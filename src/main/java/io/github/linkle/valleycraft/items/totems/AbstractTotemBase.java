@@ -19,20 +19,20 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public abstract class AbstractTotemBase extends Item {
-    
+
     public static final int MAX_DURATION = 24000;
 
     public AbstractTotemBase(Settings settings) {
         super(settings);
     }
-    
+
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
         if (playerEntity instanceof ServerPlayerEntity serverEntity) {
             Criteria.CONSUME_ITEM.trigger(serverEntity, stack);
         }
-        
+
         showFloatingItem(world, user);
 
         if (playerEntity != null) {
@@ -44,7 +44,7 @@ public abstract class AbstractTotemBase extends Item {
 
         return stack.isEmpty() ? new ItemStack(Items.AIR, 0) : stack;
     }
-    
+
     @Override
     public int getMaxUseTime(ItemStack stack) {
         return 1;
@@ -54,20 +54,20 @@ public abstract class AbstractTotemBase extends Item {
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BLOCK;
     }
-    
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!canSetWeather(world)) {
             return TypedActionResult.pass(user.getStackInHand(hand));
         }
-        
+
         if (world instanceof ServerWorld serverWorld) {
             setWeather(serverWorld);
         }
 
         return ItemUsage.consumeHeldItem(world, user, hand);
     }
-    
+
     protected void showFloatingItem(World world, LivingEntity user) {
         if (world.isClient) {
             var client = MinecraftClient.getInstance();
@@ -79,8 +79,8 @@ public abstract class AbstractTotemBase extends Item {
             world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_TOTEM_USE, user.getSoundCategory(), 1, 1);
         }
     }
-    
+
     public abstract boolean canSetWeather(World world);
-    
+
     public abstract void setWeather(ServerWorld world);
 }

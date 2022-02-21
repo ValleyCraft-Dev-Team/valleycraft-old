@@ -16,7 +16,7 @@ public class ShipwreckFeature extends StructureFeature<DefaultFeatureConfig> {
 
     private static boolean canGenerate(StructureGeneratorFactory.Context<DefaultFeatureConfig> context) {
         return context.isBiomeValid(Heightmap.Type.OCEAN_FLOOR_WG);
-    }   
+    }
 
     private static void addPieces(StructurePiecesCollector collector, StructurePiecesGenerator.Context<DefaultFeatureConfig> context) {
         int x = context.chunkPos().getStartX();

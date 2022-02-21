@@ -19,6 +19,7 @@ public class ArrowBundleBase extends Item {
         super(settings);
     }
 
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
         if (playerEntity instanceof ServerPlayerEntity) {
@@ -45,14 +46,17 @@ public class ArrowBundleBase extends Item {
         return stack.isEmpty() ? new ItemStack(Items.ARROW, 8) : stack;
     }
 
+    @Override
     public int getMaxUseTime(ItemStack stack) {
         return 1;
     }
 
+    @Override
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.BLOCK;
     }
 
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         return ItemUsage.consumeHeldItem(world, user, hand);
     }

@@ -1,6 +1,7 @@
 package io.github.linkle.valleycraft.world.gen.features;
 
 import io.github.linkle.valleycraft.init.Aquatic;
+import net.minecraft.block.AbstractPlantStemBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.KelpBlock;
@@ -32,7 +33,7 @@ public class GlowKelpFeature extends Feature<CountConfig> {
             int yOffset = random.nextInt(5) - random.nextInt(5);
             int zOffset = random.nextInt(7) - random.nextInt(7);
             mutable.set(origin, xOffset, yOffset, zOffset);
-            
+
             if (world.getBlockState(mutable).isOf(Blocks.WATER) && world.getBlockState(mutable.down()).isOpaque()) {
                 int topY = world.getTopY(Type.OCEAN_FLOOR_WG, mutable.getX(), mutable.getZ());
                 if (topY <= mutable.getY()) {
@@ -43,7 +44,7 @@ public class GlowKelpFeature extends Feature<CountConfig> {
                 for (int h = 0; h <= height; ++h) {
                     if (world.getBlockState(surface).isOf(Blocks.WATER) && world.getBlockState(surface.up()).isOf(Blocks.WATER) && plant.canPlaceAt(world, surface)) {
                         if (h == height) {
-                            world.setBlockState(surface, kelp.with(KelpBlock.AGE, random.nextInt(4) + 20), Block.NOTIFY_LISTENERS);
+                            world.setBlockState(surface, kelp.with(AbstractPlantStemBlock.AGE, random.nextInt(4) + 20), Block.NOTIFY_LISTENERS);
                             ++spawned;
                         } else {
                             world.setBlockState(surface, plant, Block.NOTIFY_LISTENERS);
@@ -51,7 +52,7 @@ public class GlowKelpFeature extends Feature<CountConfig> {
                     } else if (h > 0) {
                         var down = surface.down();
                         if (!kelp.canPlaceAt(world, down) || world.getBlockState(down.down()).isOf(Blocks.KELP)) break;
-                        world.setBlockState(down, kelp.with(KelpBlock.AGE, random.nextInt(4) + 20), Block.NOTIFY_LISTENERS);
+                        world.setBlockState(down, kelp.with(AbstractPlantStemBlock.AGE, random.nextInt(4) + 20), Block.NOTIFY_LISTENERS);
                         ++spawned;
                         break;
                     }

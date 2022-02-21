@@ -159,12 +159,12 @@ public class Furniture {
     public static final Block EXPOSED_COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.EXPOSED);
     public static final Block WEATHERED_COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.WEATHERED);
     public static final Block OXIDIZED_COPPER_CHAIN = new OxidizableChainBlock(OxidationLevel.OXIDIZED);
-    
+
     public static final Block WAXED_COPPER_CHAIN = new VChainBlock();
     public static final Block WAXED_EXPOSED_COPPER_CHAIN = new VChainBlock();
     public static final Block WAXED_WEATHERED_COPPER_CHAIN = new VChainBlock();
     public static final Block WAXED_OXIDIZED_COPPER_CHAIN = new VChainBlock();
-    
+
     public static final Block CHAIN_G = new VChainBlock();
     public static final Block CHAIN_N = new VChainBlock();
 
@@ -258,13 +258,13 @@ public class Furniture {
     public static final Block CREST = new CrestBlock();
 
     public static final Block BRAZIER_METAL = new BrazierMetalBlock();
-    
+
     public static final Block BONE_TORCH = new TorchBlock(Block.Settings.copy(Blocks.TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.FLAME);
     public static final Block WALL_BONE_TORCH = new WallTorchBlock(Block.Settings.copy(Blocks.WALL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.FLAME);
 
     public static final Block SOUL_BONE_TORCH = new TorchBlock(Block.Settings.copy(Blocks.SOUL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.SOUL_FIRE_FLAME);
     public static final Block SOUL_WALL_BONE_TORCH = new WallTorchBlock(Block.Settings.copy(Blocks.SOUL_WALL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.SOUL_FIRE_FLAME);
-    
+
     public static final Block REDSTONE_BONE_TORCH = new RedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_TORCH).sounds(BlockSoundGroup.BONE));
     public static final Block REDSTONE_WALL_BONE_TORCH = new WallRedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_WALL_TORCH).sounds(BlockSoundGroup.BONE));
 
@@ -279,8 +279,8 @@ public class Furniture {
         var explGroup = new Item.Settings().group(EXPLORATION_GROUP);
         var cookGroup = new Item.Settings().group(COOKING_GROUP);
         var artGroup = new Item.Settings().group(ARTEFACT_GROUP).rarity(Rarity.RARE);
-        var furnGroupRare = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
-        
+        new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
+
         Util.registerWithItem("table_oak", TABLE_OAK, furnGroup);
         Util.registerWithItem("table_stone", TABLE_STONE, furnGroup);
         Util.registerWithItem("table_plaid", TABLE_PLAID, furnGroup);
@@ -291,7 +291,7 @@ public class Furniture {
         Util.registerWithItem("table_dark_oak", TABLE_DARK, furnGroup);
         Util.registerWithItem("table_warped", TABLE_WARPED, furnGroup);
         Util.registerWithItem("table_crimson", TABLE_CRIMSON, furnGroup);
-        
+
         Util.registerWithItem("stool_oak", STOOL_OAK, furnGroup);
         Util.registerWithItem("stool_stone", STOOL_STONE, furnGroup);
         Util.registerWithItem("stool_plaid", STOOL_PLAID, furnGroup);
@@ -325,25 +325,25 @@ public class Furniture {
         Util.registerWithItem("scarecrow_hat_soul", SCARE_HAT_SOUL, furnGroup);
         Util.registerWithItem("scarecrow_copper", SCARE_COPPER, furnGroup);
         Util.registerWithItem("scarecrow_hat_copper", SCARE_HAT_COPPER, furnGroup);
-        
+
         Util.registerWithItem("rarecrow_melon", RARE_MELON, furnGroup);
         Util.registerWithItem("rarecrow_zombie", RARE_ZOMBIE, furnGroup);
         Util.registerWithItem("rarecrow_skeleton", RARE_SKELETON, furnGroup);
 
         Util.registerWithItem("snow", SNOW, furnGroup);
-        
+
         Util.registerWithItem("spike_wall_block", SPIKE_WALL_BLOCK, furnGroup);
         Util.registerWithItem("brazier", BRAZIER, furnGroup);
         Util.registerWithItem("brazier_soul", SOUL_BRAZIER, furnGroup);
         Util.registerWithItem("brazier_copper", COPPER_BRAZIER, furnGroup);
-        
+
         //registerWithItem("brazier_metal", BRAZIER_METAL, furnGroup);
         //registerWithItem("blaze_brazier", BLAZE_BRAZIER, furnGroup);
 
         //Crock Pots *coming soonTM*
         //registerWithItem("campfire_pot", CAMPFIRE_POT, explGroup);
         //registerWithItem("soul_campfire_pot", SOUL_CAMPFIRE_POT, explGroup);
-        
+
         Util.registerWithItem("screen", SCREEN, furnGroup);
 
         Util.registerWithItem("charcoal_block", CHARCOAL_BLOCK, furnGroup);
@@ -353,17 +353,17 @@ public class Furniture {
         Util.registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
         //registerWithItem("ameranth_block", AMERANTH_BALE, furnGroup);
         Util.registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
-        
+
         Util.registerWithItem("copper_chain", COPPER_CHAIN, explGroup);
         Util.registerWithItem("exposed_copper_chain", EXPOSED_COPPER_CHAIN, explGroup);
         Util.registerWithItem("weathered_copper_chain", WEATHERED_COPPER_CHAIN, explGroup);
         Util.registerWithItem("oxidized_copper_chain", OXIDIZED_COPPER_CHAIN, explGroup);
-        
+
         Util.registerWithItem("waxed_copper_chain", WAXED_COPPER_CHAIN, explGroup);
         Util.registerWithItem("waxed_exposed_copper_chain", WAXED_EXPOSED_COPPER_CHAIN, explGroup);
         Util.registerWithItem("waxed_weathered_copper_chain", WAXED_WEATHERED_COPPER_CHAIN, explGroup);
         Util.registerWithItem("waxed_oxidized_copper_chain", WAXED_OXIDIZED_COPPER_CHAIN, explGroup);
-        
+
         Util.registerWithItem("golden_chain", CHAIN_G, explGroup);
         Util.registerWithItem("netherite_chain", CHAIN_N, explGroup);
 
@@ -418,7 +418,7 @@ public class Furniture {
 
         //Lanterns & Torches
         Util.registerWithItem("redstone_lantern", REDSTONE_LANTERN, furnGroup);
-        
+
         Util.registerWithItem("mug_block", MUG_BLOCK, cookGroup);
         Util.registerWithItem("small_mug_block", SMALL_MUG_BLOCK, cookGroup);
         Util.registerWithItem("goblet", GOBLET_BLOCK, artGroup);
@@ -426,13 +426,13 @@ public class Furniture {
         Util.registerWithItem("bento_block", BENTO_BLOCK, cookGroup);
         Util.registerWithItem("stew_pot", STEW_POT, furnGroup);
         Util.registerWithItem("stew_campfire_pot", STEW_POT_CAMPFIRE, furnGroup);
-        
+
         Util.registerWithItem("anchor", ANCHOR, artGroup);
         Util.registerWithItem("beveled_glass", BEVELED_PANE, furnGroup);
         Util.registerWithItem("beveled_glass_copper", BEVELED_PANE_COPPER, furnGroup);
         Util.registerWithItem("beveled_glass_gold", BEVELED_PANE_GOLD, furnGroup);
         Util.registerWithItem("beveled_glass_netherite", BEVELED_PANE_NETHERITE, furnGroup);
-        
+
         //amethyst
         Util.registerWithItem("beveled_glass_amethyst", BEVELED_PANE_A, furnGroup);
         Util.registerWithItem("beveled_glass_amethyst_copper", BEVELED_PANE_A_C, furnGroup);
@@ -456,7 +456,7 @@ public class Furniture {
         Util.registerWithItem("copper_jack_o_lantern", COPPER_JACK, furnGroup);
 
         Util.registerWithItem("volc_stone_smooth", VOLCANIC_STONE_SMOOTH, furnGroup);
-        
+
         Util.registerWithItem("chimney_cobble", CHIMNEY_COBBLE, furnGroup);
         Util.registerWithItem("chimney_cobblestone_brick", CHIMNEY_COBBLE_BRICK, furnGroup);
         Util.registerWithItem("chimney_brick", CHIMNEY_BRICK, furnGroup);
@@ -475,52 +475,52 @@ public class Furniture {
 
         //registerWithItem("crystal_ball", CRYSTAL, furnGroup);
         //registerWithItem("crystal_ball_snow", CRYSTAL_FROZEN, furnGroupRare);
-        
+
         Util.registerWithItem("bookshelf_cobweb", BOOK_COBWEB, furnGroup);
-        
+
         Util.registerWithItem("bookshelf_empty", EMPTY_SHELF, furnGroup);
         Util.registerWithItem("bookshelf_empty_cobweb", EMPTY_COBWEB, furnGroup);
-        
+
         Util.registerWithItem("bookshelf_lantern", LANTERN_SHELF, furnGroup);
         Util.registerWithItem("bookshelf_lantern_cobweb", LANTERN_COBWEB, furnGroup);
-        
+
         Util.registerWithItem("bookshelf_potions", POTION_SHELF, furnGroup);
         Util.registerWithItem("bookshelf_potions_cobweb", POTION_COBWEB, furnGroup);
-        
+
         Util.registerWithItem("bookshelf_anthropology", ANTHRO_SHELF, furnGroup);
         Util.registerWithItem("bookshelf_anthropology_cobweb", ANTHRO_COBWEB, furnGroup);
-        
+
         Util.registerWithItem("bookshelf_dishes", DISH_SHELF, furnGroup);
         Util.registerWithItem("bookshelf_dishes_cobweb", DISH_COBWEB, furnGroup);
-        
+
         Util.registerWithItem("stump_morel", STUMP_MOREL, furnGroup);
         Util.registerWithItem("stump_red", STUMP_RED, furnGroup);
         Util.registerWithItem("stump_brown", STUMP_BROWN, furnGroup);
 
         Util.registerWithItem("wreath", WREATH, furnGroup);
         Util.registerWithItem("miners_crest", CREST, furnGroup);
-        
+
         Util.register("bone_torch", new WallStandingBlockItem(BONE_TORCH, WALL_BONE_TORCH, furnGroup));
         Util.register("wall_bone_torch", WALL_BONE_TORCH);
-        
+
         Util.register("soul_bone_torch", new WallStandingBlockItem(SOUL_BONE_TORCH, SOUL_WALL_BONE_TORCH, furnGroup));
         Util.register("soul_wall_bone_torch", SOUL_WALL_BONE_TORCH);
-        
+
         Util.register("redstone_bone_torch", new WallStandingBlockItem(REDSTONE_BONE_TORCH, REDSTONE_WALL_BONE_TORCH, furnGroup));
         Util.register("redstone_wall_bone_torch", REDSTONE_WALL_BONE_TORCH);
-        
+
         //registerWithItem("gear", GEAR, furnGroupRare);
 
         //registerWithItem("pet_bed", PET_BED, furnGroup);
-        
+
         //Fuels
         //same as Coal Block
         FuelRegistry.INSTANCE.add(CHARCOAL_BLOCK, 16000);
-        
+
         OxidizableBlocksRegistry.registerOxidizableBlockPair(COPPER_CHAIN, EXPOSED_COPPER_CHAIN);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(EXPOSED_COPPER_CHAIN, WEATHERED_COPPER_CHAIN);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(WEATHERED_COPPER_CHAIN, OXIDIZED_COPPER_CHAIN);
-        
+
         OxidizableBlocksRegistry.registerWaxableBlockPair(COPPER_CHAIN, WAXED_COPPER_CHAIN);
         OxidizableBlocksRegistry.registerWaxableBlockPair(EXPOSED_COPPER_CHAIN, WAXED_EXPOSED_COPPER_CHAIN);
         OxidizableBlocksRegistry.registerWaxableBlockPair(WEATHERED_COPPER_CHAIN, WAXED_WEATHERED_COPPER_CHAIN);

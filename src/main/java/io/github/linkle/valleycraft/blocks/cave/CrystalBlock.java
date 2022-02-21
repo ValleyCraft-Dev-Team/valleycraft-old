@@ -46,7 +46,7 @@ public class CrystalBlock extends BlockWithWater {
         int i;
         super.onStacksDropped(state, world, pos, stack);
         if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0 && (i = experienceDropped.get(world.random)) > 0) {
-            this.dropExperience(world, pos, i);
+            dropExperience(world, pos, i);
         }
     }
 }

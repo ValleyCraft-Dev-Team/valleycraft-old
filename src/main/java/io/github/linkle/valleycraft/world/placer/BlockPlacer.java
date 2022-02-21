@@ -11,6 +11,6 @@ public interface BlockPlacer {
     default boolean place(WorldAccess world, BlockPos pos, BlockState state) {
         return place(world, pos, state, Block.NOTIFY_LISTENERS);
     }
-    
+
     boolean place(WorldAccess world, BlockPos pos, BlockState state, int flags);
 }

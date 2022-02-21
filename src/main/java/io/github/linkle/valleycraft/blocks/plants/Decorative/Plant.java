@@ -16,7 +16,7 @@ public class Plant extends PlantBlock {
     public Plant() {
         super(SETTINGS);
     }
-    
+
     public Plant(Settings settings) {
         super(settings);
     }

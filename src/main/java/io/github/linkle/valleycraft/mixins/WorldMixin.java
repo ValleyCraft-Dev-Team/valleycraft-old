@@ -15,14 +15,14 @@ import net.minecraft.world.WorldAccess;
 
 @Mixin(World.class)
 abstract class WorldMixin implements WorldAccess, WorldExt {
-    
+
     private final ArrayList<WorldTicker> tickers = new ArrayList<>();
-    
+
     @Override
     public void addTicker(WorldTicker ticker) {
         tickers.add(ticker);
     }
-    
+
     @Inject(method = "tickBlockEntities", at = @At("HEAD"))
     void tick(CallbackInfo info) {
         for (int i = 0; i < tickers.size(); i++) {

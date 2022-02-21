@@ -13,10 +13,10 @@ public class ScaldingBlock extends MagmaBlock {
     public ScaldingBlock() {
         super(Settings.copy(Blocks.MAGMA_BLOCK).strength(1.5f, 6.0f)); // Stone Block's strength.
     }
-    
+
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
-        if (CONFIG.misc.scaldingBurn.test(entity)) 
-        super.onSteppedOn(world, pos, state, entity);
+        if (CONFIG.misc.scaldingBurn.test(entity))
+            super.onSteppedOn(world, pos, state, entity);
     }
 }

@@ -15,8 +15,8 @@ import io.github.linkle.valleycraft.api.EnchantmentHandler;
 @Mixin(Enchantment.class)
 public abstract class EnchantmentMixin {
 
-        //This mixin lets us customize what enchantments are applicable on our tools using EnchantmentHelper methods
-        //This code is ported from Draylar's Gate of Babylon mod (legally via MIT license)
+    //This mixin lets us customize what enchantments are applicable on our tools using EnchantmentHelper methods
+    //This code is ported from Draylar's Gate of Babylon mod (legally via MIT license)
 
     @Shadow @Final public EnchantmentTarget type;
 

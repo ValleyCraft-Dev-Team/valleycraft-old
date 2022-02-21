@@ -51,20 +51,20 @@ public class CrabTrapScreenHandler extends ScreenHandler {
         return inventory.canPlayerUse(player);
     }
 
-        //This method adds shift-clicking functionality.
-        //It is referenced off of the method of the same name in AbstractFurnaceScreenHandler.
+    //This method adds shift-clicking functionality.
+    //It is referenced off of the method of the same name in AbstractFurnaceScreenHandler.
     @Override
     public ItemStack transferSlot(PlayerEntity player, int index) {
-            //Initialize itemStack as an empty stack for now
+        //Initialize itemStack as an empty stack for now
         ItemStack itemStack = ItemStack.EMPTY;
-            //Use the index input variable to get which slot the player clicked
-        Slot slot = (Slot)this.slots.get(index);
-            //This method is adapted from a similar one in AbstractFurnaceScreenHandler. I replaced all the magic numbers with variables.
-            //The slots are counted from left to right and top to bottom, like reading, starting with one.
-            //Slot 1 = the bait slot
-            //Slots 2-10 = the output slots
-            //Slots 11-37 = the player's inventory
-            //Slots 38-46 = the player's hotbar
+        //Use the index input variable to get which slot the player clicked
+        Slot slot = slots.get(index);
+        //This method is adapted from a similar one in AbstractFurnaceScreenHandler. I replaced all the magic numbers with variables.
+        //The slots are counted from left to right and top to bottom, like reading, starting with one.
+        //Slot 1 = the bait slot
+        //Slots 2-10 = the output slots
+        //Slots 11-37 = the player's inventory
+        //Slots 38-46 = the player's hotbar
         final int NumberOfSlots = 46;
         final int BaitSlot = 0;
         final int FirstOutputSlot = 1;
@@ -72,27 +72,27 @@ public class CrabTrapScreenHandler extends ScreenHandler {
         final int FirstPlayerInvSlot = 10;
         final int LastPlayerInvSlot = 36;
         final int FirstHotbarSlot = 37;
-            //Make sure the slot the player clicked isn't empty or "null" before we proceed
+        //Make sure the slot the player clicked isn't empty or "null" before we proceed
         if (slot != null && slot.hasStack()) {
-                //Get the ItemStack contained in the slot the player shift-clicked and store it
+            //Get the ItemStack contained in the slot the player shift-clicked and store it
             ItemStack itemStack2 = slot.getStack();
-                //Copy said ItemStack into another variable
+            //Copy said ItemStack into another variable
             itemStack = itemStack2.copy();
-                //If the player shift clicked one of the output slots, move it into the player's inventory or hotbar...
+            //If the player shift clicked one of the output slots, move it into the player's inventory or hotbar...
             if (index >= FirstOutputSlot && index <= LastOutputSlot) {
-                if (!this.insertItem(itemStack2, FirstPlayerInvSlot, NumberOfSlots, true)) {
+                if (!insertItem(itemStack2, FirstPlayerInvSlot, NumberOfSlots, true)) {
                     return ItemStack.EMPTY;
                 }
-                    //... then call this method so the game can tell that an item was "crafted."
+                //... then call this method so the game can tell that an item was "crafted."
                 slot.onQuickTransfer(itemStack2, itemStack);
                 //Else, if the player shift clicked the bait slot, remove bait and place it into the player's inventory or hotbar.
-            } else if (index == 0 ? !this.insertItem(itemStack2, FirstPlayerInvSlot, NumberOfSlots, false)
-                //Else, if the player shift clicked a bait item stack, place bait into the bait slot from the player's inventory or hotbar.
-            : (isBait(itemStack2) ? !this.insertItem(itemStack2, BaitSlot, BaitSlot +1, false)
-                //Else, if the player shift clicked one of their inventory slots, move items from their inventory into their hotbar.
-            : (index >= FirstPlayerInvSlot && index <= LastPlayerInvSlot ? !this.insertItem(itemStack2, FirstHotbarSlot, NumberOfSlots, false)
-                //Else, if the player shift clicked one of their hotbar slots, move items from their hotbar into their inventory.
-            : index >= FirstHotbarSlot && index < NumberOfSlots && !this.insertItem(itemStack2, FirstPlayerInvSlot, LastPlayerInvSlot +1, false)))) {
+            } else if (index == 0 ? !insertItem(itemStack2, FirstPlayerInvSlot, NumberOfSlots, false)
+                    //Else, if the player shift clicked a bait item stack, place bait into the bait slot from the player's inventory or hotbar.
+                    : isBait(itemStack2) ? !insertItem(itemStack2, BaitSlot, BaitSlot +1, false)
+                            //Else, if the player shift clicked one of their inventory slots, move items from their inventory into their hotbar.
+                            : index >= FirstPlayerInvSlot && index <= LastPlayerInvSlot ? !insertItem(itemStack2, FirstHotbarSlot, NumberOfSlots, false)
+                                    //Else, if the player shift clicked one of their hotbar slots, move items from their hotbar into their inventory.
+                                    : index >= FirstHotbarSlot && index < NumberOfSlots && !insertItem(itemStack2, FirstPlayerInvSlot, LastPlayerInvSlot +1, false)) {
                 return ItemStack.EMPTY;
             }
             if (itemStack2.isEmpty()) {
@@ -111,11 +111,11 @@ public class CrabTrapScreenHandler extends ScreenHandler {
     public boolean isInProgress() {
         return propertyDelegate.get(0) != 0;
     }
-    
+
     public int getTimer() {
         return propertyDelegate.get(1);
     }
-    
+
     public int getMaxTimer() {
         return propertyDelegate.get(2);
     }
@@ -147,7 +147,7 @@ public class CrabTrapScreenHandler extends ScreenHandler {
         }
     }
 
-        //This method checks if a given ItemStack is bait and returns true if it is
+    //This method checks if a given ItemStack is bait and returns true if it is
     public static boolean isBait(ItemStack stack) {
         return CrabTrapBaits.contains(stack.getItem());
     }

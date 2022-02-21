@@ -18,6 +18,7 @@ public class RoundedBarrelBlock extends BarrelBlock {
                 .strength(1f, 2.5f));
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return BARREL_SHAPE;
     }

@@ -21,13 +21,13 @@ extends KnifeBase {
         super(material, attackDamage, attackSpeed, new Settings().group(ItemGroups.ARTEFACT_GROUP).rarity(Rarity.RARE));
     }
 
-        //Add the explanatory tooltip
+    //Add the explanatory tooltip
     @Override
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
         tooltip.add( new TranslatableText("item.valley.coral_knife.tooltip").formatted(Formatting.LIGHT_PURPLE) );
     }
 
-        //Make the coral dagger accept Impaling
+    //Make the coral dagger accept Impaling
     @Override
     public boolean isExplicitlyValid(Enchantment enchantment) {
         return enchantment.equals(Enchantments.IMPALING);

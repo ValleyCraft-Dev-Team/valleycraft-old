@@ -19,12 +19,12 @@ public class LootBuilder {
         pool.rolls(range);
         return this;
     }
-    
+
     public LootBuilder rolls(float value) {
         pool.rolls(ConstantLootNumberProvider.create(value));
         return this;
     }
-    
+
     public LootBuilder rolls(float min, float max) {
         pool.rolls(UniformLootNumberProvider.create(min, max));
         return this;
@@ -34,7 +34,7 @@ public class LootBuilder {
         pool.with(entry);
         return this;
     }
-    
+
     public LootBuilder with(ItemConvertible item) {
         pool.with(ItemEntry.builder(item));
         return this;
@@ -77,7 +77,7 @@ public class LootBuilder {
     public FabricLootPoolBuilder build() {
         return pool;
     }
-    
+
     public static LootBuilder create() {
         return new LootBuilder();
     }

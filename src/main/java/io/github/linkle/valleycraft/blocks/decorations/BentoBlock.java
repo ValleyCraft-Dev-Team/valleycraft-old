@@ -22,10 +22,12 @@ public class BentoBlock extends HorizontalWithWaterBlock {
         setDefaultState();
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return state.get(FACING).getAxis() == Axis.X ? SHAPE_X : SHAPE_Z;
     }
 
+    @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
     }

@@ -16,6 +16,7 @@ public class BearEntityRenderer extends PolarBearEntityRenderer {
         super(context);
     }
 
+    @Override
     public Identifier getTexture(PolarBearEntity entity) {
         return TEXTURE;
     }

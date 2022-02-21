@@ -21,7 +21,7 @@ public class CicadaBlock extends DirectionBlockWithWater {
                 .strength(0.5f, 2.5f));
         setDefaultState();
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return super.getFacing(ctx).getOpposite();

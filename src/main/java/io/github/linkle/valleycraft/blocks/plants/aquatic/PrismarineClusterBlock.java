@@ -16,7 +16,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
 public class PrismarineClusterBlock extends AmethystClusterBlock {
-    
+
     public PrismarineClusterBlock() {
         super(6, 3, FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque().luminance(7)
@@ -25,7 +25,7 @@ public class PrismarineClusterBlock extends AmethystClusterBlock {
                 .strength(1, 0.5f)
                 .noCollision());
     }
-    
+
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack stack) {
         super.onStacksDropped(state, world, pos, stack);
@@ -37,24 +37,24 @@ public class PrismarineClusterBlock extends AmethystClusterBlock {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH: {
-                return northShape;
-            }
-            case SOUTH: {
-                return southShape;
-            }
-            case EAST: {
-                return eastShape;
-            }
-            case WEST: {
-                return westShape;
-            }
-            case DOWN: {
-                return downShape;
-            }
-            default: {
-                return upShape;
-            }
+        case NORTH: {
+            return northShape;
+        }
+        case SOUTH: {
+            return southShape;
+        }
+        case EAST: {
+            return eastShape;
+        }
+        case WEST: {
+            return westShape;
+        }
+        case DOWN: {
+            return downShape;
+        }
+        default: {
+            return upShape;
+        }
         }
     }
 }

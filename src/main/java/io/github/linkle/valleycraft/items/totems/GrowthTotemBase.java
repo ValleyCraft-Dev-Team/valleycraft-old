@@ -32,6 +32,7 @@ public class GrowthTotemBase extends AbstractTotemBase {
         world.setWeather(MAX_DURATION, 0, false, false);
     }
 
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
         if (playerEntity instanceof ServerPlayerEntity) {
@@ -44,7 +45,7 @@ public class GrowthTotemBase extends AbstractTotemBase {
                 stack.decrement(1);
             }
         }
-        
+
         showFloatingItem(world, user);
 
         if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {

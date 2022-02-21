@@ -30,7 +30,7 @@ public class GolemBlockWaxed extends HorizontalWithWaterBlock {
                 .strength(1.5f, 2.5f));
         setDefaultState();
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return super.getFacing(ctx).getOpposite();

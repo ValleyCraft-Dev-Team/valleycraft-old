@@ -50,13 +50,13 @@ public class SpiderEggBlock extends Block {
             VCriteria.SPIDER_SPAWN.trigger((ServerPlayerEntity)player);
         }
     }
-    
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (state.canPlaceAt(world, pos)) {
             return state;
         }
-        
+
         return Blocks.AIR.getDefaultState();
     }
 
@@ -74,7 +74,7 @@ public class SpiderEggBlock extends Block {
             spawnCaveSpider(server, pos);
         }
     }
-    
+
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof PlayerEntity || entity instanceof CaveSpiderEntity) {

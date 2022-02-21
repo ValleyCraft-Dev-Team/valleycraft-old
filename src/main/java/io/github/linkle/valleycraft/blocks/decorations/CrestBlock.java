@@ -34,19 +34,19 @@ public class CrestBlock extends HorizontalWithWaterBlock {
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH:
-                return NORTH_SHAPE;
-            case SOUTH:
-                return SOUTH_SHAPE;
-            case WEST:
-                return WEST_SHAPE;
-            case EAST:
-                return EAST_SHAPE;
-            default:
-                return NORTH_SHAPE;
+        case NORTH:
+            return NORTH_SHAPE;
+        case SOUTH:
+            return SOUTH_SHAPE;
+        case WEST:
+            return WEST_SHAPE;
+        case EAST:
+            return EAST_SHAPE;
+        default:
+            return NORTH_SHAPE;
         }
     }
-    
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         var state = super.getPlacementState(ctx);
@@ -55,14 +55,14 @@ public class CrestBlock extends HorizontalWithWaterBlock {
         }
         return null;
     }
-    
+
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         var face = state.get(FACING);
         var offset = pos.offset(face);
         return world.getBlockState(offset).isSideSolidFullSquare(world, offset, face.getOpposite());
     }
-    
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (!state.canPlaceAt(world, pos)) {
@@ -70,7 +70,7 @@ public class CrestBlock extends HorizontalWithWaterBlock {
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return getSideElseUserFacing(ctx);

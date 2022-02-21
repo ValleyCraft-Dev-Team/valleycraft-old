@@ -19,13 +19,13 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public class AquaticFacingBlock extends HorizontalWithWaterBlock {
-    
+
     protected final VoxelShape shape;
 
     public AquaticFacingBlock(VoxelShape shape) {
         this(getSettings(), shape);
     }
-    
+
     public AquaticFacingBlock(Settings settings, VoxelShape shape) {
         super(settings);
         setDefaultState();
@@ -63,7 +63,7 @@ public class AquaticFacingBlock extends HorizontalWithWaterBlock {
             }
         }
     }
-    
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (!state.canPlaceAt(world, pos)) {
@@ -78,14 +78,14 @@ public class AquaticFacingBlock extends HorizontalWithWaterBlock {
         var blockState = world.getBlockState(blockPos);
         return blockState.isFullCube(world, blockPos);
     }
-    
+
     public static FabricBlockSettings getSettings() {
         return FabricBlockSettings.of(Material.UNDERWATER_PLANT)
-            .nonOpaque()
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.CALCITE)
-            .strength(0, 0.1f)
-            .ticksRandomly()
-            .noCollision();
+                .nonOpaque()
+                .breakByHand(true)
+                .sounds(BlockSoundGroup.CALCITE)
+                .strength(0, 0.1f)
+                .ticksRandomly()
+                .noCollision();
     }
 }

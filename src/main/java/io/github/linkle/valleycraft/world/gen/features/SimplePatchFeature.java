@@ -9,7 +9,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
 public class SimplePatchFeature extends Feature<SimplePatchConfig> {
-    
+
     /** An array list of block placers. */
     private final ArrayList<BlockPlacer> list = new ArrayList<>();
 
@@ -17,7 +17,7 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
         super(SimplePatchConfig.CODEC);
         list.add(new AirBlockPlacer());
     }
-    
+
     /** Add block placer and return an id */
     public int create(BlockPlacer placer) {
         int id = list.indexOf(placer);
@@ -40,14 +40,14 @@ public class SimplePatchFeature extends Feature<SimplePatchConfig> {
         int size = config.xzSpread();
         int tries = config.tries();
         int spawned = 0;
-        
+
         for (int i = 0; i < tries; ++i) {
             int xOffset = random.nextInt(size*2) - size;
             int yOffset = random.nextInt(height*2) - height;
             int zOffset = random.nextInt(size*2) - size;
             mutable.set(origin, xOffset, yOffset, zOffset);
             var state = config.state().getBlockState(random, mutable);
-            
+
             if (state.canPlaceAt(world, mutable) && list.get(config.placerId()).place(world, mutable, state)) {
                 spawned++;
             }

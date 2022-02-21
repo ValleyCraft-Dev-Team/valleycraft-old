@@ -12,7 +12,7 @@ import net.minecraft.util.math.Direction.AxisDirection;
 import static net.minecraft.util.math.MathHelper.nextDouble;
 
 public class ScallopTicker extends WorldTicker {
-    
+
     private final ClientWorld world;
     private final BlockPos pos;
 
@@ -28,32 +28,32 @@ public class ScallopTicker extends WorldTicker {
         if (!(state.getBlock() instanceof GiantClamBlock)) {
             return Reason.DELETE;
         }
-        
+
         if (!state.get(Properties.OPEN)) {
             return Reason.STOP;
         }
-        
+
         var random = world.random;
         var face = state.get(Properties.HORIZONTAL_FACING).getOpposite();
         var wise = face.rotateYClockwise();
         double xScl = Math.abs(wise.getOffsetX());
         double zScl = Math.abs(wise.getOffsetZ());
-        
-        double xPos = pos.getX() + 0.5 + (face.getOffsetX() * 0.2) + (nextDouble(random, -0.3, 0.3) * xScl);
+
+        double xPos = pos.getX() + 0.5 + face.getOffsetX() * 0.2 + nextDouble(random, -0.3, 0.3) * xScl;
         double yPos = pos.getY() + nextDouble(random, 0.2, 0.45);
-        double zPos = pos.getZ() + 0.5 + (face.getOffsetZ() * 0.2) + (nextDouble(random, -0.3, 0.3) * zScl);
+        double zPos = pos.getZ() + 0.5 + face.getOffsetZ() * 0.2 + nextDouble(random, -0.3, 0.3) * zScl;
         double xVel = face.getOffsetX() * nextDouble(random, 0.5, 1.1);
         double yVel = nextDouble(random, 0.2, 0.8);
         double zVel = face.getOffsetZ() * nextDouble(random, 0.5, 1.1);
-        
+
         xPos += random.nextDouble() * face.getOffsetX() * 0.3;
         zPos += random.nextDouble() * face.getOffsetZ() * 0.3;
-        
+
         xVel += nextDouble(random, -0.1, 0.1) * xScl;
         zVel += nextDouble(random, -0.1, 0.1) * zScl;
-        
+
         world.addParticle(ParticleTypes.BUBBLE_COLUMN_UP, xPos, yPos, zPos, xVel, yVel, zVel);
-        
+
         return Reason.CONTINUE;
     }
 
@@ -68,31 +68,29 @@ public class ScallopTicker extends WorldTicker {
             var angle = random.nextDouble() * Math.PI * 2.0;
             var sin = Math.sin(angle);
             var cos = Math.cos(angle);
-            
+
             if (face.getAxis() == Axis.X) {
                 if (face.getDirection() == AxisDirection.POSITIVE) {
                     if (sin > limit) continue;
                 } else {
                     if (sin < -limit) continue;
                 }
+            } else if (face.getDirection() == AxisDirection.POSITIVE) {
+                if (cos > limit) continue;
             } else {
-                if (face.getDirection() == AxisDirection.POSITIVE) {
-                    if (cos > limit) continue;
-                } else {
-                    if (cos < -limit) continue;
-                }
+                if (cos < -limit) continue;
             }
-            
+
             sin *= 0.4;
             cos *= 0.4;
-            
+
             var x = pos.getX() + 0.5 + sin;
             var z = pos.getZ() + 0.5 + cos;
             var y = pos.getY() + 0.25;
-            
+
             sin *= nextDouble(random, 1.15, 1.4);
             cos *= nextDouble(random, 1.15, 1.4);
-            
+
             world.addParticle(ParticleTypes.BUBBLE_COLUMN_UP, x, y, z, sin, nextDouble(random, 0.1, 0.5), cos);
         }
     }

@@ -10,14 +10,14 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 
 public class OxidizableChainBlock extends ChainBlock implements Oxidizable {
-    
+
     private final OxidationLevel level;
 
     public OxidizableChainBlock(OxidationLevel level, Settings settings) {
         super(settings);
         this.level = level;
     }
-    
+
     public OxidizableChainBlock(OxidationLevel level) {
         this(level, Settings.copy(Blocks.CHAIN));
     }
@@ -34,6 +34,6 @@ public class OxidizableChainBlock extends ChainBlock implements Oxidizable {
 
     @Override
     public OxidationLevel getDegradationLevel() {
-        return this.level;
+        return level;
     }
 }

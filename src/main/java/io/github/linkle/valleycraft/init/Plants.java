@@ -51,9 +51,9 @@ public class Plants {
 
     public static final Block SOUR_BERRY_BUSH = new BerryBushBlock(true);
 
-    public static final Block SPICY_BERRY_BUSH = new BerryBushBlock(true, floor -> 
-        floor.isIn(BlockTags.BASE_STONE_NETHER) || floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.MAGMA_BLOCK)
-    );
+    public static final Block SPICY_BERRY_BUSH = new BerryBushBlock(true, floor ->
+    floor.isIn(BlockTags.BASE_STONE_NETHER) || floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.MAGMA_BLOCK)
+            );
 
     public static final Block TOMATO_BUSH = new BerryBushBlock(false);
 
@@ -102,10 +102,10 @@ public class Plants {
 
     public static final Block BUSH_ALIVE = new RoseBushTall();
     public static final Block SNOW_BUSH = new SnowBush();
-    
+
     public static final Block DRY_MOSS_CARPET = new CarpetBlock(Block.Settings.of(Material.PLANT, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_CARPET));
     public static final Block DRY_MOSS = new MossBlock(Block.Settings.of(Material.MOSS_BLOCK, MapColor.YELLOW).strength(0.1f).sounds(BlockSoundGroup.MOSS_BLOCK));
-    
+
     public static final Block ROCK_PILE = new RockBlock();
     public static final Block REDSTONE_CRYSTAL = new CrystalBlock(FabricBlockSettings.of(Material.AMETHYST)
             .nonOpaque().requiresTool().sounds(BlockSoundGroup.AMETHYST_CLUSTER)
@@ -125,7 +125,7 @@ public class Plants {
             .noCollision()
             .breakInstantly()
             .sounds(BlockSoundGroup.WEEPING_VINES));
-    
+
     // Dry vines
     public static final VinesBlock DRY_VINES = new VinesBlock(
             FabricBlockSettings.of(Material.PLANT, MapColor.YELLOW)
@@ -138,7 +138,7 @@ public class Plants {
             .noCollision()
             .breakInstantly()
             .sounds(BlockSoundGroup.WEEPING_VINES));
-    
+
     public static final Block JUNGLE_BUSH = new JungleBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
@@ -216,7 +216,7 @@ public class Plants {
         Util.registerWithItem("wild_beet", WILD_BEET, natureGroup);
         Util.registerWithItem("wild_wheat", WILD_WHEAT, natureGroup);
         Util.registerWithItem("morel", MOREL, natureGroup);
-        
+
         Util.registerWithItem("rice_crop", RICE_SEEDLINGS, natureGroup);
         Util.registerWithItem("tomato_bush", TOMATO_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
         Util.registerWithItem("spicy_berries", SPICY_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600), 1.0f).build()).maxCount(64));
@@ -239,19 +239,19 @@ public class Plants {
         MOSSY_VINES_PLANT.setStem(MOSSY_VINES);
         Util.registerWithItem("mossy_vines", MOSSY_VINES, natureGroup);
         Util.register("mossy_vines_plant", MOSSY_VINES_PLANT);
-        
+
         DRY_VINES.setPlant(DRY_VINES_PLANT);
         DRY_VINES_PLANT.setStem(DRY_VINES);
         Util.registerWithItem("dry_vines", DRY_VINES, natureGroup);
         Util.register("dry_vines_plant", DRY_VINES_PLANT);
-        
+
         Util.registerWithItem("dry_moss_carpet", DRY_MOSS_CARPET, natureGroup);
         Util.registerWithItem("dry_moss", DRY_MOSS, natureGroup);
-        
+
         Util.registerWithItem("jungle_bush", JUNGLE_BUSH, natureGroup);
         Util.registerWithItem("swamp_bush", SWAMP_BUSH, natureGroup);
         Util.registerWithItem("hedge", HEDGE, natureGroup);
-        
+
         Util.registerWithItem("apple_sapling", APPLE_SAPLING, natureGroup);
         Util.registerWithItem("apple_leaves", APPLE_LEAVES, natureGroup);
         Util.registerWithItem("apple_leaves_empty", APPLE_LEAVES_EMPTY, natureGroup);

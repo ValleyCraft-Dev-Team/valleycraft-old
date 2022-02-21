@@ -25,7 +25,7 @@ import static io.github.linkle.valleycraft.init.PotBlock.POTTED_ROSE_SPRIG;
 
 @Environment(EnvType.CLIENT)
 public class ValleyClient implements ClientModInitializer {
-    
+
     @Override
     public void onInitializeClient() {
         ConfigLangGen.initialize();
@@ -35,37 +35,37 @@ public class ValleyClient implements ClientModInitializer {
         renderLayer();
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
-                tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
+        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
                 APPLE_LEAVES
-        );
+                );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-                tintIndex == 1 ? 4764952 : -1,
+        tintIndex == 1 ? 4764952 : -1,
                 APPLE_LEAVES
-        );
+                );
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
-                tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
+        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
                 APPLE_LEAVES_EMPTY
-        );
+                );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-                tintIndex == 1 ? 4764952 : -1,
+        tintIndex == 1 ? 4764952 : -1,
                 APPLE_LEAVES_EMPTY
-        );
-        
+                );
+
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
-                tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
+        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
                 BUSH
-        );
+                );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-                4764952,
-                BUSH
-        );
+        4764952,
+        BUSH
+                );
     }
-    
+
     private static void renderLayer() {
         var culloutBlocks = new ArrayList<Block>(300);
         var translucentBlocks = new ArrayList<Block>(100);
-        
+
         //bush texture fix
         culloutBlocks.add(BITTER_BERRY_BUSH);
         culloutBlocks.add(SOUR_BERRY_BUSH);
@@ -84,7 +84,7 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(RED_HANGING);
 
         culloutBlocks.add(ROUNDED_BARREL);
-        
+
         //spike trap fix
         culloutBlocks.add(SPIKE_WALL_BLOCK);
         culloutBlocks.add(TELESCOPE_BLOCK);
@@ -178,7 +178,7 @@ public class ValleyClient implements ClientModInitializer {
 
         //culloutBlocks.add(FROZEN_FOSSIL);
         //culloutBlocks.add(CICADA);
-        
+
         //Seed Type Crops
         culloutBlocks.add(PUFF_CROP_BLOCK);
         culloutBlocks.add(GB_CROP_BLOCK);
@@ -229,7 +229,7 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(BEVELED_PANE_COPPER);
         culloutBlocks.add(BEVELED_PANE_GOLD);
         culloutBlocks.add(BEVELED_PANE_NETHERITE);
-        
+
         //Amethyst
         translucentBlocks.add(BEVELED_PANE_A);
         translucentBlocks.add(BEVELED_PANE_A_C);
@@ -253,29 +253,29 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(EXPOSED_COPPER_CHAIN);
         culloutBlocks.add(WEATHERED_COPPER_CHAIN);
         culloutBlocks.add(OXIDIZED_COPPER_CHAIN);
-        
+
         culloutBlocks.add(WAXED_COPPER_CHAIN);
         culloutBlocks.add(WAXED_EXPOSED_COPPER_CHAIN);
         culloutBlocks.add(WAXED_WEATHERED_COPPER_CHAIN);
         culloutBlocks.add(WAXED_OXIDIZED_COPPER_CHAIN);
-        
+
         culloutBlocks.add(CHAIN_G);
         culloutBlocks.add(CHAIN_N);
-        
+
         culloutBlocks.add(CAMPFIRE_RING);
-        
+
         culloutBlocks.add(SPIDER_EGG_BLOCK);
         culloutBlocks.add(RED_SEA_GRASS);
         culloutBlocks.add(GLOW_KELP_PLANT);
         culloutBlocks.add(GLOW_KELP);
-        
+
         culloutBlocks.add(BONE_TORCH);
         culloutBlocks.add(WALL_BONE_TORCH);
         culloutBlocks.add(SOUL_BONE_TORCH);
         culloutBlocks.add(SOUL_WALL_BONE_TORCH);
         culloutBlocks.add(REDSTONE_BONE_TORCH);
         culloutBlocks.add(REDSTONE_WALL_BONE_TORCH);
-        
+
         translucentBlocks.add(BRAZIER_METAL);
 
         // Remapping block's render layer. This code should always be last!

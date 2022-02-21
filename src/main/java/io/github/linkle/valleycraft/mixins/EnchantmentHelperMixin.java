@@ -20,7 +20,7 @@ import java.util.List;
 @Mixin(EnchantmentHelper.class)
 public class EnchantmentHelperMixin {
 
-        //Treat ducks as if they have depth strider
+    //Treat ducks as if they have depth strider
     @Inject(method =  "getDepthStrider", at = @At("HEAD"), cancellable = true)
     private static void getDepthStrider(LivingEntity entity, CallbackInfoReturnable<Integer> info) {
         if (entity instanceof DuckEntity) {
@@ -28,8 +28,8 @@ public class EnchantmentHelperMixin {
         }
     }
 
-        //Make the enchanting table dish out the correct enchantments to tools whose applicable enchantments we've customized
-        //This code is ported from Draylar's Gate of Babylon mod (legally via MIT license)
+    //Make the enchanting table dish out the correct enchantments to tools whose applicable enchantments we've customized
+    //This code is ported from Draylar's Gate of Babylon mod (legally via MIT license)
     @Inject(method = "getPossibleEntries", at = @At("HEAD"), cancellable = true)
     private static void adjustPossibleEntries(int power, ItemStack stack, boolean treasureAllowed, CallbackInfoReturnable<List<EnchantmentLevelEntry>> cir) {
         Item item = stack.getItem();

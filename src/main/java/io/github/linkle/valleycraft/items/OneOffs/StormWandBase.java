@@ -14,7 +14,7 @@ import static io.github.linkle.valleycraft.init.ItemGroups.EXPLORATION_GROUP;
 public class StormWandBase extends HoeItem {
     public StormWandBase(ToolMaterial StormToolMaterialKnife) {
         super(StormToolMaterialKnife, 7, -2.5f, new Settings().group(EXPLORATION_GROUP
-            ));
+                ));
     }
 
     @Override

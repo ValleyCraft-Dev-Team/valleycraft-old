@@ -47,7 +47,7 @@ public class KegBlock extends HorizontalWithWaterBlock {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return super.getFacing(ctx).getOpposite();
@@ -73,8 +73,8 @@ public class KegBlock extends HorizontalWithWaterBlock {
 
             if (hasFill) {
                 world.playSound((PlayerEntity)null, pos,
-                stack.isOf(Items.BUCKET) ? SoundEvents.ITEM_BUCKET_FILL : SoundEvents.ITEM_BOTTLE_FILL,
-                SoundCategory.BLOCKS, 1.0F, 1.0F);
+                        stack.isOf(Items.BUCKET) ? SoundEvents.ITEM_BUCKET_FILL : SoundEvents.ITEM_BOTTLE_FILL,
+                                SoundCategory.BLOCKS, 1.0F, 1.0F);
             }
         }
 

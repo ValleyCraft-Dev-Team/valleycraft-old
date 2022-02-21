@@ -16,7 +16,7 @@ import net.minecraft.world.BlockView;
 
 public class PetBedBlock extends HorizontalWithWaterBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 2, 16);
-    
+
     public PetBedBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
                 .breakByHand(true)
@@ -24,16 +24,18 @@ public class PetBedBlock extends HorizontalWithWaterBlock {
                 .strength(0.5f, 2.5f));
         setDefaultState();
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return super.getFacing(ctx).getOpposite();
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
 
+    @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
     }

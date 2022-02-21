@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class BaitItemBase extends Item {
-    
+
     private final String tooltip;
-    
+
     public BaitItemBase(Settings settings, String tooltip) {
         super(settings);
         this.tooltip = tooltip;

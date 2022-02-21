@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 
 public class BrazierBlock extends BlockWithWater {
     protected static final VoxelShape SHAPE = createCuboidShape(5, 0, 5, 11, 16, 11);
-    
+
     private final float fireDamage;
 
     public BrazierBlock(int luminance, float fireDamage) {
@@ -35,7 +35,7 @@ public class BrazierBlock extends BlockWithWater {
         this.fireDamage = fireDamage;
         setDefaultState();
     }
-    
+
     @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
@@ -45,7 +45,7 @@ public class BrazierBlock extends BlockWithWater {
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }
-    
+
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (!entity.isFireImmune() && !state.get(WATERLOGGED) && entity instanceof LivingEntity living && !EnchantmentHelper.hasFrostWalker(living)) {
@@ -65,7 +65,7 @@ public class BrazierBlock extends BlockWithWater {
 
         if (random.nextInt(100) == 0) {
             for(int i = 0; i < random.nextInt(1) + 1; ++i) {
-                world.addParticle(ParticleTypes.LAVA, pos.getX() + 0.5, pos.getY() + 1.2, pos.getZ() + 0.5, (random.nextFloat() / 2.0F), 5.0E-5D, random.nextFloat() / 2.0F);
+                world.addParticle(ParticleTypes.LAVA, pos.getX() + 0.5, pos.getY() + 1.2, pos.getZ() + 0.5, random.nextFloat() / 2.0F, 5.0E-5D, random.nextFloat() / 2.0F);
             }
         }
     }

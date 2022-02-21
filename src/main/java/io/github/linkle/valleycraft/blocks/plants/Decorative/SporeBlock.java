@@ -27,7 +27,7 @@ public class SporeBlock extends OreBlock {
         if (world.random.nextInt(5) > 0) {
             return;
         }
-        
+
         BlockPos blockPos = pos.down();
         if (world.isAir(blockPos)) {
             world.setBlockState(blockPos, SPORE_BLOSSOM.getDefaultState());

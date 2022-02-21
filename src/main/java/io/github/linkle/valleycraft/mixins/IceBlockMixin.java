@@ -24,14 +24,14 @@ public class IceBlockMixin extends TransparentBlock {
         super(settings);
     }
 
-        //Make ice not generate water if broken by tongs
+    //Make ice not generate water if broken by tongs
     @Inject(method = "afterBreak", at = @At("HEAD"), cancellable = true)
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack stack, CallbackInfo info) {
         if (stack.isOf(WeaponsAndTools.TONGS)) {
             super.afterBreak(world, player, pos, state, blockEntity, stack);
             info.cancel();
         }
-        
+
     }
-    
+
 }

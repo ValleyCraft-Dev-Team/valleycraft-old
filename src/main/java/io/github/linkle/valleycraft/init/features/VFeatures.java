@@ -16,7 +16,7 @@ class VFeatures {
     static final CavePatchFeature CAVE_PATCH = register(new CavePatchFeature(), "cave_patch");
     static final GlowKelpFeature GLOW_KELP = register(new GlowKelpFeature(), "glow_kelp");
     static final CrystalPatchFeature PRIS_CLUSTER = register(new CrystalPatchFeature(), "pris_cluster");
-    
+
     private static <T extends Feature<?>> T register(T feature, String id) {
         return Registry.register(Registry.FEATURE, new Identifier(ValleyMain.MOD_ID, id), feature);
     }

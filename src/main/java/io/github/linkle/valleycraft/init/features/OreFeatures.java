@@ -164,7 +164,7 @@ public class OreFeatures {
             var key = register(create(Blocks.RED_SANDSTONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_redsandstone");
             addFeature(BiomeSelectors.categories(Category.MESA), key, false);
         }
-        
+
         //scalding all biomes
         if (config.scaldingStone.enable) {
             var set = config.scaldingStone;
@@ -190,14 +190,14 @@ public class OreFeatures {
             var key = register(create(SNOW_BLOCK, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_snow_overworld");
             addFeature(snowOnly, key, false);
         }
-        
+
 
         if (config.undergroundBlueIce.enable) {
             var set = config.undergroundBlueIce;
             var key = register(create(BLUE_ICE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_blue_overworld");
             addFeature(snowOnly, key, false);
         }
-        
+
 
         if (config.undergroundPowderedSnow.enable) {
             var set = config.undergroundPowderedSnow;
@@ -211,7 +211,7 @@ public class OreFeatures {
             var key = register(create(StoneBlocks.GLACIAL_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_glacial_stone_overworld");
             addFeature(c -> c.getBiome().getCategory() == Category.EXTREME_HILLS, key, false);
         }
-        
+
 
         //overworld ores
         if (config.saltOre.enable) {
@@ -235,7 +235,7 @@ public class OreFeatures {
         if (config.mud.enable) {
             var set = config.mud;
             var key = register(create(StoneBlocks.B_CLAY, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "mud_overworld");
-            
+
             var overWorldOnly = BiomeSelectors.foundInOverworld();
             var blackList = BiomeSelectors.categories(Category.DESERT, Category.ICY);
             Predicate<BiomeSelectionContext> select = (context) -> {
@@ -244,7 +244,7 @@ public class OreFeatures {
                 }
                 return true;
             };
-            
+
             addFeature(select, key, false);
         }
 
@@ -253,7 +253,7 @@ public class OreFeatures {
             var key = register(create(StoneBlocks.VOLCANIC_ASH, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "volcanic_sand_overworld");
             addFeature(BiomeSelectors.categories(Category.JUNGLE), key, false);
         }
-        
+
         if (config.volcanicStone.enable) {
             var set = config.volcanicStone;
             var key = register(create(StoneBlocks.VOLCANIC_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "volcanic_stone_overworld");
@@ -266,7 +266,7 @@ public class OreFeatures {
             var key = register(create(OreConfiguredFeatures.NETHERRACK, StoneBlocks.NETHER_SALT, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_salt_nether");
             addFeature(BiomeSelectors.foundInTheNether(), key, true);
         }
-        
+
         if (config.netherCoalOre.enable) {
             var set = config.netherCoalOre;
             var key = register(create(OreConfiguredFeatures.NETHERRACK, StoneBlocks.NETHER_COAL_ORE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_coal_nether");
@@ -280,8 +280,8 @@ public class OreFeatures {
             addFeature(BiomeSelectors.categories(Category.TAIGA), key, false);
         }
     }
-    
-    /** 
+
+    /**
      * @param underbiome if whether it include it in underground biomes.
      * */
     private static void addFeature(Predicate<BiomeSelectionContext> selector, RegistryKey<PlacedFeature> key, boolean underbiome) {
@@ -291,11 +291,11 @@ public class OreFeatures {
         };
         BiomeModifications.addFeature(select, GenerationStep.Feature.UNDERGROUND_ORES, key);
     }
-    
+
     private static RegistryKey<PlacedFeature> register(ConfiguredFeature<?, ?> config, int repeat, int yMinOffset, int yMaxOffset, String id) {
         return register(config, repeat, YOffset.fixed(yMinOffset), YOffset.fixed(yMaxOffset), id);
     }
-    
+
     private static RegistryKey<PlacedFeature> register(ConfiguredFeature<?, ?> config, int repeat, YOffset yMinOffset, YOffset yMaxOffset, String id) {
         var list = new ArrayList<PlacementModifier>(3);
         list.add(CountPlacementModifier.of(repeat)); // number of veins per chunk
@@ -303,11 +303,11 @@ public class OreFeatures {
         list.add(HeightRangePlacementModifier.uniform(yMinOffset, yMaxOffset)); // height
         return Util.register(id, config, list);
     }
-    
+
     private static ConfiguredFeature<OreFeatureConfig, ?> create(Block block, int size) {
         return create(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, block, size);
     }
-    
+
     private static ConfiguredFeature<OreFeatureConfig, ?> create(RuleTest test, Block block, int size) {
         return Feature.ORE.configure(new OreFeatureConfig(test, block.getDefaultState(), size));
     }

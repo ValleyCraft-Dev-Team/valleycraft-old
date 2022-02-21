@@ -8,8 +8,8 @@ import net.minecraft.sound.SoundEvents;
 
 public class QuiverArmorMaterial implements ArmorMaterial {
     public static final ArmorMaterial INSTANCE = new QuiverArmorMaterial();
-    
-    static final int[] PROTECTION_VALUES = new int[] {2, 5, 6, 2};
+
+    static final int[] PROTECTION_VALUES = {2, 5, 6, 2};
 
     @Override
     public int getDurability(EquipmentSlot slot) {

@@ -15,25 +15,25 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class AppleLeaves extends LeavesBlock {
-	private final BooleanProperty HAS_APPLES = BooleanProperty.of("has_apples");
+    private final BooleanProperty HAS_APPLES = BooleanProperty.of("has_apples");
 
-	public AppleLeaves(Settings settings) {
-		super(settings);
-		this.setDefaultState(this.getDefaultState().with(HAS_APPLES, false));
-	}
+    public AppleLeaves(Settings settings) {
+        super(settings);
+        setDefaultState(getDefaultState().with(HAS_APPLES, false));
+    }
 
-	@Override
-	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-		super.appendProperties(builder);
-		builder.add(HAS_APPLES);
-	}
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        super.appendProperties(builder);
+        builder.add(HAS_APPLES);
+    }
 
-	@Override
-	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-		if (state.get(HAS_APPLES)) {
-			world.setBlockState(pos, state.with(HAS_APPLES, false));
-			dropStack(world, pos, new ItemStack(Items.APPLE, 2));
-		}
-		return ActionResult.FAIL;
-	}
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (state.get(HAS_APPLES)) {
+            world.setBlockState(pos, state.with(HAS_APPLES, false));
+            dropStack(world, pos, new ItemStack(Items.APPLE, 2));
+        }
+        return ActionResult.FAIL;
+    }
 }

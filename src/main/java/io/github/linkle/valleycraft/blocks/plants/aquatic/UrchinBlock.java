@@ -20,8 +20,8 @@ public class UrchinBlock extends AquaticBlock {
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity instanceof WaterCreatureEntity ||
-            entity instanceof GuardianEntity ||
-            entity instanceof AxolotlEntity) {
+                entity instanceof GuardianEntity ||
+                entity instanceof AxolotlEntity) {
             return;
         }
 

@@ -7,7 +7,6 @@ import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
 
-import static io.github.linkle.valleycraft.init.ItemGroups.ARTEFACT_GROUP;
 import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 
 public class Aquatic {
@@ -17,7 +16,7 @@ public class Aquatic {
     public static final Block STARFISH = new AquaticFacingBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
     public static final Block SAND_DOLLAR = new AquaticBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
     public static final Block RED_SEA_GRASS = new RedSeagrassBlock();
-    
+
     public static final GlowKelp GLOW_KELP = new GlowKelp();
     public static final Block GLOW_KELP_PLANT = new GlowKelpPlant();
 

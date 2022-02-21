@@ -21,10 +21,10 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
 public class BerryBushBlock extends SweetBerryBushBlock {
-    
+
     private final boolean damageEntity;
     private final Predicate<BlockState> canPlantOnTop;
-    
+
     public BerryBushBlock(boolean damageEntity) {
         this(damageEntity, floor -> floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.FARMLAND));
     }
@@ -34,12 +34,12 @@ public class BerryBushBlock extends SweetBerryBushBlock {
         this.damageEntity = damageEntity;
         this.canPlantOnTop = canPlantOnTop;
     }
-    
+
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
         return new ItemStack(this);
     }
-    
+
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (damageEntity) {
@@ -51,11 +51,11 @@ public class BerryBushBlock extends SweetBerryBushBlock {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         int age = state.get(AGE);
         boolean grown = age == MAX_AGE;
-        
+
         if (!grown && player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
             return ActionResult.PASS;
         }
-        
+
         if (age > 1) {
             int amount = 1 + world.random.nextInt(2);
             dropStack(world, pos, new ItemStack(this, amount + (grown ? 1 : 0)));
@@ -63,10 +63,10 @@ public class BerryBushBlock extends SweetBerryBushBlock {
             world.setBlockState(pos, state.with(AGE, 1), Block.NOTIFY_LISTENERS);
             return ActionResult.success(world.isClient);
         }
-        
+
         return super.onUse(state, world, pos, player, hand, hit);
     }
-    
+
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return canPlantOnTop.test(floor);

@@ -21,7 +21,7 @@ public class LanternBlock extends HorizontalWithWaterBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(5, 1, 5, 11, 8, 11);
 
     private final boolean emitsRedstone;
-    
+
     public LanternBlock(int luminance, boolean emitsRedstone) {
         super(FabricBlockSettings.of(Material.METAL)
                 .breakByHand(true)
@@ -31,7 +31,7 @@ public class LanternBlock extends HorizontalWithWaterBlock {
         setDefaultState();
         this.emitsRedstone = emitsRedstone;
     }
-    
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         var state = super.getPlacementState(ctx);
@@ -40,14 +40,14 @@ public class LanternBlock extends HorizontalWithWaterBlock {
         }
         return null;
     }
-    
+
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         var face = state.get(FACING);
         var offset = pos.offset(face);
         return world.getBlockState(offset).isSideSolidFullSquare(world, offset, face.getOpposite());
     }
-    
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (!state.canPlaceAt(world, pos)) {
@@ -55,17 +55,17 @@ public class LanternBlock extends HorizontalWithWaterBlock {
         }
         return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return getSideElseUserFacing(ctx);
     }
-    
+
     @Override
     public boolean emitsRedstonePower(BlockState state) {
         return emitsRedstone;
     }
-    
+
     @Override
     public int getWeakRedstonePower(BlockState state, BlockView world, BlockPos pos, Direction direction) {
         return emitsRedstone ? 15 : 0;

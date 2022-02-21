@@ -17,17 +17,17 @@ public class FoodStatusEffect {
             addEffect(effect);
         }
     }
-    
+
     public void addEffect(StatusEffectInstance effect) {
         addEffect(effect, 1);
     }
-    
+
     public FoodStatusEffect addEffect(StatusEffectInstance effect, float chance) {
         if (ValleyMain.CONFIG.misc.foodEffectsEnabled)
-        statusEffects.add(new Pair<>(effect, chance));
+            statusEffects.add(new Pair<>(effect, chance));
         return this;
     }
-    
+
     public FoodComponent.Builder build(FoodComponent.Builder builder) {
         boolean hasEffect = false;
         for (var effect : statusEffects) {

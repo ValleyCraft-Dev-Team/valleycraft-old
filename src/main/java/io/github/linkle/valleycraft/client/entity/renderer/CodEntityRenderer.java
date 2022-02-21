@@ -12,9 +12,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3f;
 
 public class CodEntityRenderer extends MobEntityRenderer<FishEntity, CodEntityModel<FishEntity>> {
-    
+
     private final Identifier texture;
-    
+
     private CodEntityRenderer(EntityRendererFactory.Context context, Identifier texture) {
         super(context, new CodEntityModel<>(context.getPart(EntityModelLayers.COD)), 0.3f);
         this.texture = texture;
@@ -35,7 +35,7 @@ public class CodEntityRenderer extends MobEntityRenderer<FishEntity, CodEntityMo
             matrixStack.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(90.0f));
         }
     }
-    
+
     /** @param texture file name of the fish texture. */
     public static EntityRendererFactory<FishEntity> create(String texture) {
         var id = new Identifier(ValleyMain.MOD_ID, "textures/entity/fish/" + texture + ".png");

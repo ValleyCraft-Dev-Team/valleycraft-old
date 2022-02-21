@@ -14,7 +14,7 @@ import static io.github.linkle.valleycraft.init.ItemGroups.EXPLORATION_GROUP;
 public class StormStaffBase extends HoeItem {
     public StormStaffBase(ToolMaterial StormToolMaterialKnife) {
         super(StormToolMaterialKnife, 5, -2.4f, new Settings().group(EXPLORATION_GROUP
-));
+                ));
     }
 
     @Override

@@ -42,55 +42,55 @@ public class BarnacleBlock extends DirectionBlockWithWater {
         eastShape = createCuboidShape(0.0, xzOffset, xzOffset, height, 16 - xzOffset, 16 - xzOffset);
         westShape = createCuboidShape(16 - height, xzOffset, xzOffset, 16.0, 16 - xzOffset, 16 - xzOffset);
     }
-    
+
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH: {
-                return northShape;
-            }
-            case SOUTH: {
-                return southShape;
-            }
-            case EAST: {
-                return eastShape;
-            }
-            case WEST: {
-                return westShape;
-            }
-            case DOWN: {
-                return downShape;
-            }
-            default: {
-                return upShape;
-            }
+        case NORTH: {
+            return northShape;
+        }
+        case SOUTH: {
+            return southShape;
+        }
+        case EAST: {
+            return eastShape;
+        }
+        case WEST: {
+            return westShape;
+        }
+        case DOWN: {
+            return downShape;
+        }
+        default: {
+            return upShape;
+        }
         }
     }
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH: {
-                return northShape;
-            }
-            case SOUTH: {
-                return southShape;
-            }
-            case EAST: {
-                return eastShape;
-            }
-            case WEST: {
-                return westShape;
-            }
-            case DOWN: {
-                return downShape;
-            }
-            default: {
-                return upShape;
-            }
+        case NORTH: {
+            return northShape;
+        }
+        case SOUTH: {
+            return southShape;
+        }
+        case EAST: {
+            return eastShape;
+        }
+        case WEST: {
+            return westShape;
+        }
+        case DOWN: {
+            return downShape;
+        }
+        default: {
+            return upShape;
+        }
         }
     }
-    
+
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         var face = state.get(FACING);
@@ -106,7 +106,7 @@ public class BarnacleBlock extends DirectionBlockWithWater {
         }
         return state;
     }
-    
+
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         var world = ctx.getWorld();

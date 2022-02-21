@@ -9,11 +9,11 @@ import net.minecraft.util.Identifier;
 
 public class Screens {
     public static final ScreenHandlerType<CrabTrapScreenHandler> CRAB_TRAP = register("crab_trap", CrabTrapScreenHandler::new);
-    
+
     public static void initialize() {
         ValleyMain.LOGGER.info("Screens initialized");
     }
-    
+
     public static <T extends ScreenHandler> ScreenHandlerType<T> register(String id, SimpleClientHandlerFactory<T> factory) {
         return ScreenHandlerRegistry.registerSimple(new Identifier(ValleyMain.MOD_ID, id), factory);
     }

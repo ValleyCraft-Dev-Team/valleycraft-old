@@ -41,8 +41,8 @@ public class StoneBlocks {
     public static final Block NETHER_SALT = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
     public static final Block NETHER_COAL_ORE = new OreBlock(Block.Settings.copy(Blocks.NETHER_QUARTZ_ORE), UniformIntProvider.create(0, 2));
     public static final Block B_CLAY = new MudBlock(Blocks.TERRACOTTA, Block.Settings.of(Material.SOIL)
-        .sounds(BlockSoundGroup.GRAVEL)
-        .strength(0.6f, 1.5f));
+            .sounds(BlockSoundGroup.GRAVEL)
+            .strength(0.6f, 1.5f));
 
     public static final Block JUNGLE = new StoneBlock();
     public static final Block JUNGLE_MOSSY = new MossBlock();

@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Random;
 
 public class StumpBlock extends Block {
-    
+
     private final BlockState mushroom;
 
     public StumpBlock(BlockState mushroom) {
@@ -24,7 +24,7 @@ public class StumpBlock extends Block {
         if (world.random.nextInt(5) == 0) {
             return;
         }
-        
+
         var up = pos.up();
         if (world.isAir(up)) {
             world.setBlockState(up, mushroom);

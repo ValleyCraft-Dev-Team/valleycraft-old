@@ -19,7 +19,9 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.entity.SpawnRestriction.Location;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.FishEntity;
+import net.minecraft.entity.passive.PolarBearEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.Heightmap;
@@ -29,89 +31,89 @@ import net.minecraft.world.biome.BiomeKeys;
 public class Entities {
 
     public static final EntityType<BearEntity> BEAR = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "bear"),
-        FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BearEntity::new)
-        .dimensions(EntityDimensions.fixed(1.4F, 1.4F)).trackRangeBlocks(10).build()
-    );
-    
+            new Identifier(ValleyMain.MOD_ID, "bear"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BearEntity::new)
+            .dimensions(EntityDimensions.fixed(1.4F, 1.4F)).trackRangeBlocks(10).build()
+            );
+
     public static final EntityType<DuckEntity> DUCK = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "duck"),
-        FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, DuckEntity::new)
-        .trackRangeBlocks(10).dimensions(EntityDimensions.fixed(0.4F, 0.7F))
-        .specificSpawnBlocks(Blocks.WATER).build()
-    );
-    
+            new Identifier(ValleyMain.MOD_ID, "duck"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, DuckEntity::new)
+            .trackRangeBlocks(10).dimensions(EntityDimensions.fixed(0.4F, 0.7F))
+            .specificSpawnBlocks(Blocks.WATER).build()
+            );
+
     public static final EntityType<EelEntity> FIRE_EEL = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "fire_eel"),
-        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(EelEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.7f, 0.4f))
-        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EelEntity::canSpawn).build()
-    );
-    
+            new Identifier(ValleyMain.MOD_ID, "fire_eel"),
+            FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(EelEntity::new)
+            .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.7f, 0.4f))
+            .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, EelEntity::canSpawn).build()
+            );
+
     public static final EntityType<PerchEntity> PERCH = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "perch"),
-        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(PerchEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
-        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, PerchEntity::canSpawn).build()
-    );
+            new Identifier(ValleyMain.MOD_ID, "perch"),
+            FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(PerchEntity::new)
+            .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+            .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, PerchEntity::canSpawn).build()
+            );
 
     public static final EntityType<MinnowEntity> MINNOW = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "minnow"),
-        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(MinnowEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
-        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MinnowEntity::canSpawn).build()
-    );
+            new Identifier(ValleyMain.MOD_ID, "minnow"),
+            FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(MinnowEntity::new)
+            .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+            .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MinnowEntity::canSpawn).build()
+            );
 
     public static final EntityType<SardineEntity> SARDINE = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "sardine"),
-        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(SardineEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
-        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SardineEntity::canSpawn).build()
-    );
+            new Identifier(ValleyMain.MOD_ID, "sardine"),
+            FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(SardineEntity::new)
+            .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+            .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, SardineEntity::canSpawn).build()
+            );
 
     public static final EntityType<RedPorgyEntity> RED_PORGY = Registry.register(Registry.ENTITY_TYPE,
-        new Identifier(ValleyMain.MOD_ID, "red_porgy"),
-        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(RedPorgyEntity::new)
-        .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
-        .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, RedPorgyEntity::canSpawn).build()
-    );
+            new Identifier(ValleyMain.MOD_ID, "red_porgy"),
+            FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.WATER_AMBIENT).entityFactory(RedPorgyEntity::new)
+            .trackRangeBlocks(4).dimensions(EntityDimensions.fixed(0.5f, 0.3f))
+            .spawnRestriction(Location.IN_WATER, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, RedPorgyEntity::canSpawn).build()
+            );
 
     public static void initialize() {
         var config = ValleyMain.CONFIG.mobs;
-        FabricDefaultAttributeRegistry.register(BEAR, BearEntity.createPolarBearAttributes());
-        FabricDefaultAttributeRegistry.register(DUCK, DuckEntity.createChickenAttributes());
+        FabricDefaultAttributeRegistry.register(BEAR, PolarBearEntity.createPolarBearAttributes());
+        FabricDefaultAttributeRegistry.register(DUCK, ChickenEntity.createChickenAttributes());
         FabricDefaultAttributeRegistry.register(FIRE_EEL, MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8)); // 8 heath point
         FabricDefaultAttributeRegistry.register(PERCH, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(MINNOW, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(SARDINE, FishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(RED_PORGY, FishEntity.createFishAttributes());
-        
+
         var keys = BiomeSelectors.includeByKey(
-            BiomeKeys.OLD_GROWTH_PINE_TAIGA,
-            BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
-        );
+                BiomeKeys.OLD_GROWTH_PINE_TAIGA,
+                BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA
+                );
         config.bearSpawn.addSpawn(keys, SpawnGroup.CREATURE, BEAR);
         config.duckSpawn.addSpawn(BiomeSelectors.categories(Category.RIVER), SpawnGroup.CREATURE, DUCK);
-        
+
         keys = BiomeSelectors.includeByKey(
-            BiomeKeys.LUKEWARM_OCEAN,
-            BiomeKeys.DEEP_LUKEWARM_OCEAN,
-            BiomeKeys.WARM_OCEAN,
-            BiomeKeys.DEEP_OCEAN
-        );
+                BiomeKeys.LUKEWARM_OCEAN,
+                BiomeKeys.DEEP_LUKEWARM_OCEAN,
+                BiomeKeys.WARM_OCEAN,
+                BiomeKeys.DEEP_OCEAN
+                );
         config.perchSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, PERCH);
-        
-        
+
+
         keys = BiomeSelectors.includeByKey(
-            BiomeKeys.COLD_OCEAN,
-            BiomeKeys.DEEP_COLD_OCEAN,
-            BiomeKeys.FROZEN_OCEAN,
-            BiomeKeys.DEEP_LUKEWARM_OCEAN,
-            BiomeKeys.DEEP_OCEAN,
-            BiomeKeys.DEEP_FROZEN_OCEAN
-        );
+                BiomeKeys.COLD_OCEAN,
+                BiomeKeys.DEEP_COLD_OCEAN,
+                BiomeKeys.FROZEN_OCEAN,
+                BiomeKeys.DEEP_LUKEWARM_OCEAN,
+                BiomeKeys.DEEP_OCEAN,
+                BiomeKeys.DEEP_FROZEN_OCEAN
+                );
         config.sardineSpawn.addSpawn(keys, SpawnGroup.WATER_AMBIENT, SARDINE);
-        
+
         config.fireEelSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, FIRE_EEL);
         config.minnowSpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, MINNOW);
         config.redPorgySpawn.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.WARM_OCEAN), SpawnGroup.WATER_AMBIENT, RED_PORGY);

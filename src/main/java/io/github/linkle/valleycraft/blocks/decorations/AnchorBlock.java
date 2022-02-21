@@ -28,17 +28,19 @@ public class AnchorBlock extends DirectionBlockWithWater {
         setDefaultState();
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return switch (state.get(FACING)) {
-            case NORTH -> NORTH_SHAPE;
-            case SOUTH -> SOUTH_SHAPE;
-            case WEST -> WEST_SHAPE;
-            case EAST ->  EAST_SHAPE;
-            case UP -> UP_SHAPE;
-            case DOWN -> DOWN_SHAPE;
+        case NORTH -> NORTH_SHAPE;
+        case SOUTH -> SOUTH_SHAPE;
+        case WEST -> WEST_SHAPE;
+        case EAST ->  EAST_SHAPE;
+        case UP -> UP_SHAPE;
+        case DOWN -> DOWN_SHAPE;
         };
     }
 
+    @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
     }
@@ -46,7 +48,7 @@ public class AnchorBlock extends DirectionBlockWithWater {
     static {
         var side = Block.createCuboidShape(4, 0, 4, 12, 7, 12);
         var down = Block.createCuboidShape(3, 0, 3, 13, 2, 13);
-        
+
         UP_SHAPE = side;
         DOWN_SHAPE = down;
         EAST_SHAPE = side;

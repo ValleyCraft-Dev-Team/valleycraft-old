@@ -1,5 +1,5 @@
 
-	package io.github.linkle.valleycraft.init;
+package io.github.linkle.valleycraft.init;
 
 import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 

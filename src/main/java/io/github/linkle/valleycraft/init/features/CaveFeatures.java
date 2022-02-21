@@ -37,16 +37,16 @@ public class CaveFeatures {
     private static final ConfiguredFeature<?, ?> REDSTONE_CRYSTAL_PATCH_CONFIG = VFeatures.CAVE_PATCH
             .configure(new CavePatchConfig(BlockStateProvider.of(Plants.REDSTONE_CRYSTAL.getDefaultState()), ConstantIntProvider.create(15),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6), 0.03F, Blocks.DEEPSLATE_REDSTONE_ORE.getDefaultState()));
-    
+
     private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = VFeatures.CAVE_PATCH
             .configure(new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(30),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6), 1.0F, Blocks.COBWEB.getDefaultState()));
-    
-    private static final ConfiguredFeature<?, ?> ROCKS_PATCH_CONFIG = 
+
+    private static final ConfiguredFeature<?, ?> ROCKS_PATCH_CONFIG =
             VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(
-        Plants.ROCK_PILE.getDefaultState(), 30, 7, 5, 
-        VFeatures.SIMPLE_PATCH.create(new HeightMapBlockPlacer(Heightmap.Type.WORLD_SURFACE_WG, IntPredicates.LESS))
-    ));
+                    Plants.ROCK_PILE.getDefaultState(), 30, 7, 5,
+                    VFeatures.SIMPLE_PATCH.create(new HeightMapBlockPlacer(Heightmap.Type.WORLD_SURFACE_WG, IntPredicates.LESS))
+                    ));
 
     public static void initialize() {
         var config = ValleyMain.CONFIG.featureGenerations.caveFeatures;
@@ -60,7 +60,7 @@ public class CaveFeatures {
         key = Util.register("redstone_crystal_patch_cave", REDSTONE_CRYSTAL_PATCH_CONFIG, list);
         if (config.redstoneCrystalPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
-        
+
         list = new ArrayList<>();
         list.add(RarityFilterPlacementModifier.of(2));
         list.add(SquarePlacementModifier.of());
@@ -68,7 +68,7 @@ public class CaveFeatures {
         key = Util.register("spider_egg_patch_cave", SPIDER_EGG_PATCH_CONFIG, list);
         if (config.spiderSackPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
-        
+
         list = new ArrayList<>();
         list.add(CountPlacementModifier.of(13));
         list.add(SquarePlacementModifier.of());
@@ -76,7 +76,7 @@ public class CaveFeatures {
         key = Util.register("rocks_patch_cave", ROCKS_PATCH_CONFIG, list);
         if (config.rocksPatchEnabled)
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
-        
+
         if (config.glowKelpPatch.enable) {
             var set = config.glowKelpPatch;
             list = new ArrayList<>();
@@ -86,7 +86,7 @@ public class CaveFeatures {
             key = Util.register("glow_kelp_patch_cave", VFeatures.GLOW_KELP.configure(new CountConfig(set.tries)), list);
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), underground, key);
         }
-        
+
         if (config.prismarineCluster.enable) {
             var set = config.prismarineCluster;
             list = new ArrayList<>();

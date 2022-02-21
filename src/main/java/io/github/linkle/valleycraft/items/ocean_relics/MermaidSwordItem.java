@@ -28,7 +28,7 @@ implements EnchantmentHandler {
         tooltip.add( new TranslatableText("item.valley.mermaids_sword.tooltip").formatted(Formatting.GOLD) );
     }
 
-        //Make the mermaid sword accept Impaling
+    //Make the mermaid sword accept Impaling
     @Override
     public boolean isExplicitlyValid(Enchantment enchantment) {
         return enchantment.equals(Enchantments.IMPALING);

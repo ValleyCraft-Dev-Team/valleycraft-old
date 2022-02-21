@@ -74,8 +74,7 @@ public class MushBlock extends PlantBlock {
         var blockState = world.getBlockState(blockPos);
         if (blockState.isIn(BlockTags.MUSHROOM_GROW_BLOCK)) {
             return true;
-        } else {
-            return world.getBaseLightLevel(pos, 0) > 7 && canPlantOnTop(blockState, world, blockPos);
         }
+        return world.getBaseLightLevel(pos, 0) > 7 && canPlantOnTop(blockState, world, blockPos);
     }
 }

@@ -10,7 +10,7 @@ import net.minecraft.item.Items;
 import net.minecraft.world.World;
 
 public class BowlBase extends FoodItemBase {
-    
+
     public BowlBase(Settings settings, int hunger, float saturationModifier, boolean isMeat,
             @Nullable FoodStatusEffect effects) {
         super(settings, hunger, saturationModifier, isMeat, effects);

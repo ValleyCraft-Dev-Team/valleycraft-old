@@ -27,7 +27,7 @@ extends KnifeBase {
         tooltip.add( new TranslatableText("item.valley.mermaids_spear.tooltip_2").formatted(Formatting.DARK_AQUA) );
     }
 
-        //Make the mermaid sword accept Impaling
+    //Make the mermaid sword accept Impaling
     @Override
     public boolean isExplicitlyValid(Enchantment enchantment) {
         return enchantment.equals(Enchantments.IMPALING);

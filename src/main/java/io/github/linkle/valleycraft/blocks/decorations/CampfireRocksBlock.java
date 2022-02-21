@@ -32,7 +32,7 @@ public class CampfireRocksBlock extends HorizontalWithWaterBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-       return SHAPE;
+        return SHAPE;
     }
 
     @Override

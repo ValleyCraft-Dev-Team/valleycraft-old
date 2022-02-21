@@ -19,9 +19,9 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public class AquaticBlock extends BlockWithWater {
-    
+
     protected final VoxelShape shape;
-    
+
     public AquaticBlock(VoxelShape shape) {
         this(getSettings(), shape);
     }
@@ -63,7 +63,7 @@ public class AquaticBlock extends BlockWithWater {
             }
         }
     }
-    
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         if (!state.canPlaceAt(world, pos)) {
@@ -78,7 +78,7 @@ public class AquaticBlock extends BlockWithWater {
         var blockState = world.getBlockState(blockPos);
         return blockState.isFullCube(world, blockPos);
     }
-    
+
     public static FabricBlockSettings getSettings() {
         return FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()

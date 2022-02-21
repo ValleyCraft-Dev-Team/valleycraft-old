@@ -24,9 +24,9 @@ import net.minecraft.world.gen.StructureAccessor;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 
 public class TidePoolGenerator {
-    
+
     private static final ArrayList<Identifier> LIST = new ArrayList<>(20);
-    
+
     static {
         add("barnacle_rock");
         add("large_dripstone");
@@ -57,11 +57,11 @@ public class TidePoolGenerator {
         public Piece(StructureManager manager, Identifier id, BlockPos pos, BlockRotation rotation) {
             super(VStructurePieceType.TIDE_POOL, 0, manager, id, id.toString(), createPlacementData(rotation), pos);
         }
-        
+
         public Piece(StructureManager manager, NbtCompound nbt) {
             super(VStructurePieceType.TIDE_POOL, nbt, manager, identifier -> Piece.createPlacementData(BlockRotation.valueOf(nbt.getString("Rot"))));
         }
-        
+
         @Override
         protected void writeNbt(StructureContext context, NbtCompound nbt) {
             super.writeNbt(context, nbt);
@@ -70,16 +70,16 @@ public class TidePoolGenerator {
 
         @Override
         protected void handleMetadata(String metadata, BlockPos pos, ServerWorldAccess world, Random random, BlockBox box) {
-            
+
         }
-        
+
         @Override
         public void generate(StructureWorldAccess world, StructureAccessor structureAccessor,
                 ChunkGenerator chunkGenerator, Random random, BlockBox chunkBox, ChunkPos chunkPos, BlockPos pos) {
             this.pos = this.pos.down();
             super.generate(world, structureAccessor, chunkGenerator, random, chunkBox, chunkPos, pos);
         }
-        
+
         private static StructurePlacementData createPlacementData(BlockRotation rotation) {
             var data = new StructurePlacementData();
             data.setRotation(rotation);
@@ -87,7 +87,7 @@ public class TidePoolGenerator {
             return data;
         }
     }
-    
+
     private static void add(String name) {
         LIST.add(new Identifier(ValleyMain.MOD_ID, "beachorunderwater/tide_pool_" + name));
     }

@@ -28,7 +28,7 @@ public class RopeBridgeBlock extends HorizontalWithWaterBlock {
     protected static final VoxelShape ROPE_RIGHT_Z_SHAPE;
     protected static final VoxelShape Z_AXIS_SHAPE;
     protected static final VoxelShape X_AXIS_SHAPE;
-    
+
     protected static final VoxelShape SHAPE = createCuboidShape(0, 0, 0, 16, 10, 16);
 
     public RopeBridgeBlock(Settings settings) {
@@ -36,11 +36,12 @@ public class RopeBridgeBlock extends HorizontalWithWaterBlock {
         setDefaultState();
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         if (context.isHolding(state.getBlock().asItem())) {
             return SHAPE;
         }
-        
+
         if (context instanceof EntityShapeContext entityContext && entityContext.getEntity() instanceof LivingEntity entity) {
             Predicate<ItemStack> predicate = stack -> {
                 return stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof RopeBridgeBlock;
@@ -49,25 +50,26 @@ public class RopeBridgeBlock extends HorizontalWithWaterBlock {
                 return SHAPE;
             }
         }
-        
+
         final Direction direction = state.get(FACING);
         return direction.getAxis() == Direction.Axis.X ? X_AXIS_SHAPE : Z_AXIS_SHAPE;
     }
-    
+
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         if (collidable) {
             final Direction direction = state.get(FACING);
             return direction.getAxis() == Direction.Axis.X ? X_AXIS_SHAPE : Z_AXIS_SHAPE;
         }
-        
+
         return VoxelShapes.empty();
     }
 
+    @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return true;
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         var world = ctx.getWorld();

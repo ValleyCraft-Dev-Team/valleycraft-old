@@ -33,7 +33,7 @@ public class SpikeTrapBlock extends DirectionBlockWithWater {
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return true;
     }
-    
+
     @Override
     protected Direction getFacing(ItemPlacementContext ctx) {
         return ctx.getSide();

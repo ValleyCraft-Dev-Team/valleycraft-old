@@ -7,25 +7,25 @@ import me.shedaniel.autoconfig.ConfigData;
 
 public class FishingConfig implements ConfigData {
     public boolean enabled = true;
-    
+
     public static void getLang(Map<String, String> map) {
         map.put("enabled", "Enable Fishing Loot");
         map.put("fish", "Fish Loot List");
         map.put("junk", "Junk Loot List");
     }
-    
+
     public static class FishEntry implements ConfigData {
         public String item;
         public int weight;
-        
+
         public FishEntry() {
         }
-        
+
         public FishEntry(String item, int weight) {
             this.item = item;
             this.weight = weight;
         }
-        
+
         @Override
         public int hashCode() {
             return Objects.hash(item, weight);
@@ -39,7 +39,7 @@ public class FishingConfig implements ConfigData {
             }
             return false;
         }
-        
+
         static void getLang(Map<String, String> map) {
             map.put("item", "Item");
             map.put("weight", "Weight");

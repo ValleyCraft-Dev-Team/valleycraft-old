@@ -28,24 +28,26 @@ public class BeveledGlassBlock extends DirectionBlockWithWater {
         setDefaultState();
     }
 
+    @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         switch (state.get(FACING)) {
-            case NORTH:
-                return NORTH_SHAPE;
-            case SOUTH:
-                return SOUTH_SHAPE;
-            case WEST:
-                return WEST_SHAPE;
-            case EAST:
-                return EAST_SHAPE;
-            case UP:
-                return UP_SHAPE;
-            case DOWN:
-            default:
-                return DOWN_SHAPE;
+        case NORTH:
+            return NORTH_SHAPE;
+        case SOUTH:
+            return SOUTH_SHAPE;
+        case WEST:
+            return WEST_SHAPE;
+        case EAST:
+            return EAST_SHAPE;
+        case UP:
+            return UP_SHAPE;
+        case DOWN:
+        default:
+            return DOWN_SHAPE;
         }
     }
 
+    @Override
     public boolean canPathfindThrough(BlockState state, BlockView world, BlockPos pos, NavigationType type) {
         return false;
     }

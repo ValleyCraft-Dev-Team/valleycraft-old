@@ -16,11 +16,11 @@ import net.minecraft.util.Identifier;
 @Environment(EnvType.CLIENT)
 public class CrabTrapScreen extends HandledScreen<CrabTrapScreenHandler> {
     private static final Identifier TEXTURE = new Identifier(ValleyMain.MOD_ID, "textures/gui/crab_trap.png");
-    
+
     public CrabTrapScreen(CrabTrapScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
-    
+
     @Override
     protected void init() {
         super.init();
@@ -41,9 +41,9 @@ public class CrabTrapScreen extends HandledScreen<CrabTrapScreenHandler> {
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
-        
+
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
-        
+
         if (handler.isInProgress()) {
             var progress = handler.getTimer() / (float)handler.getMaxTimer();
             progress = 1f - progress;

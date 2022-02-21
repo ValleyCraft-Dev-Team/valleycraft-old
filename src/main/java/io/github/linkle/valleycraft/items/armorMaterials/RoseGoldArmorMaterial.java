@@ -8,8 +8,8 @@ import net.minecraft.sound.SoundEvents;
 
 public class RoseGoldArmorMaterial implements ArmorMaterial {
     public static final ArmorMaterial INSTANCE = new RoseGoldArmorMaterial();
-    
-    static final int[] PROTECTION_VALUES = new int[] {1, 3, 5, 2};
+
+    static final int[] PROTECTION_VALUES = {1, 3, 5, 2};
 
     @Override
     public int getDurability(EquipmentSlot slot) {
