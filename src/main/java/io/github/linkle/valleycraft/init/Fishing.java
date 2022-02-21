@@ -72,6 +72,5 @@ public class Fishing {
         Util.register("bucket_sardine", BUCKET_SARDINE);
         Util.register("bucket_minnow", BUCKET_MINNOW);
         Util.register("bucket_red_porgy", BUCKET_RED_PORGY);
-
     }
 }
