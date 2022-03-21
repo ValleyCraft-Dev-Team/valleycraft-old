@@ -36,6 +36,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 
 public class CrabTrapEntity extends LockableContainerBlockEntity implements SidedInventory {
@@ -145,7 +146,7 @@ public class CrabTrapEntity extends LockableContainerBlockEntity implements Side
             return;
         }
 
-        if (!BIOMES.contains(world.getBiome(pos).getCategory())) {
+        if (!BIOMES.contains(Biome.getCategory(world.getBiome(pos)))) {
             condition = Condition.INVAILD_BIOME;
             return;
         }

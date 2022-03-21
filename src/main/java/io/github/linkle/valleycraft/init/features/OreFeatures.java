@@ -1,6 +1,12 @@
 package io.github.linkle.valleycraft.init.features;
 
+import static net.minecraft.block.Blocks.*;
+
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
 import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.init.StoneBlocks;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -9,22 +15,23 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryKey;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.CountPlacementModifier;
-import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
-import net.minecraft.world.gen.decorator.PlacementModifier;
-import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.*;
-
-import java.util.ArrayList;
-import java.util.function.Predicate;
-
-import static net.minecraft.block.Blocks.*;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.OreConfiguredFeatures;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.placementmodifier.CountPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 
 public class OreFeatures {
 
@@ -103,7 +110,7 @@ public class OreFeatures {
             var set = config.limestone;
             var key = register(create(StoneBlocks.LIMESTONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_limestone");
             Predicate<BiomeSelectionContext> select;
-            select = c -> c.getBiomeKey().equals(BiomeKeys.FOREST) || c.getBiome().getCategory() == Category.PLAINS;
+            select = c -> c.getBiomeKey().equals(BiomeKeys.FOREST) || Biome.getCategory(c.getBiomeRegistryEntry()) == Category.PLAINS;
             addFeature(select, key, false);
         }
 
@@ -209,7 +216,7 @@ public class OreFeatures {
         if (config.glacialStone.enable) {
             var set = config.glacialStone;
             var key = register(create(StoneBlocks.GLACIAL_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_glacial_stone_overworld");
-            addFeature(c -> c.getBiome().getCategory() == Category.EXTREME_HILLS, key, false);
+            addFeature(c -> Biome.getCategory(c.getBiomeRegistryEntry()) == Category.EXTREME_HILLS, key, false);
         }
 
 
@@ -286,7 +293,7 @@ public class OreFeatures {
      * */
     private static void addFeature(Predicate<BiomeSelectionContext> selector, RegistryKey<PlacedFeature> key, boolean underbiome) {
         Predicate<BiomeSelectionContext> select = (context) -> {
-            var cat = context.getBiome().getCategory();
+            var cat = Biome.getCategory(context.getBiomeRegistryEntry());
             return selector.test(context) && (underbiome ? true : cat != Category.UNDERGROUND);
         };
         BiomeModifications.addFeature(select, GenerationStep.Feature.UNDERGROUND_ORES, key);
@@ -301,7 +308,8 @@ public class OreFeatures {
         list.add(CountPlacementModifier.of(repeat)); // number of veins per chunk
         list.add(SquarePlacementModifier.of()); // spreading horizontally
         list.add(HeightRangePlacementModifier.uniform(yMinOffset, yMaxOffset)); // height
-        return Util.register(id, config, list);
+        var place = Reg.register(id, config, list);
+        return place.getKey().get();
     }
 
     private static ConfiguredFeature<OreFeatureConfig, ?> create(Block block, int size) {
@@ -309,6 +317,6 @@ public class OreFeatures {
     }
 
     private static ConfiguredFeature<OreFeatureConfig, ?> create(RuleTest test, Block block, int size) {
-        return Feature.ORE.configure(new OreFeatureConfig(test, block.getDefaultState(), size));
+        return new ConfiguredFeature<>(Feature.ORE, new OreFeatureConfig(test, block.getDefaultState(), size));
     }
 }

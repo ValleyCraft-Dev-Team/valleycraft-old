@@ -29,7 +29,6 @@ public class GolemBlock extends HorizontalWithWaterBlock {
 
     public GolemBlock() {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN).luminance(4)
                 .strength(1.5f, 2.5f));
         setDefaultState();

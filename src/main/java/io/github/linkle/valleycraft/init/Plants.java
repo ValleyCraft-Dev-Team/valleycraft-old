@@ -60,7 +60,6 @@ public class Plants {
     public static final Block HOLLY_BUSH = new BerryBushBlock(true);
 
     public static final Block TUMBLE_WEED = new TumbleWeedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
             .strength(0.4f,0.1f));
     //crops
@@ -78,7 +77,6 @@ public class Plants {
     public static final Block HERBS = new Plant();
 
     public static final Block HEDGE = new HedgeBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
@@ -86,7 +84,6 @@ public class Plants {
     public static final Block FLOWERING_CACTUS = new SmallCactusBlock();
 
     public static final Block REED_BLOCK = new ReedBlock(FabricBlockSettings.of(Material.UNDERWATER_PLANT).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
@@ -140,7 +137,6 @@ public class Plants {
             .sounds(BlockSoundGroup.WEEPING_VINES));
 
     public static final Block JUNGLE_BUSH = new JungleBushBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.GRASS)
             .strength(0,0.1f));
 
@@ -162,7 +158,7 @@ public class Plants {
     public static final Block APPLE_LEAVES_EMPTY = new LeavesBlock(Settings.copy(Blocks.OAK_LEAVES));
 
     public static final Block SPIDER_EGG_BLOCK = new SpiderEggBlock(FabricBlockSettings.of(Material.CACTUS, MapColor.LIGHT_GRAY)
-            .breakByHand(true).nonOpaque()
+            .nonOpaque()
             .sounds(BlockSoundGroup.WOOL).breakInstantly()
             .strength(0.0f,0.1f).ticksRandomly());
 

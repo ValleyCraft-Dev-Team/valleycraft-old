@@ -7,7 +7,7 @@ import net.minecraft.block.HayBlock;
 public class GlowingBaleBlock extends HayBlock {
 
     public GlowingBaleBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK).luminance(10).breakByHand(true));
+        super(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK).luminance(10));
     }
 
 }

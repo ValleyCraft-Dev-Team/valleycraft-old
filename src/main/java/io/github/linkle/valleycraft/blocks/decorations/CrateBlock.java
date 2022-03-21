@@ -6,6 +6,6 @@ import net.minecraft.block.Blocks;
 
 public class CrateBlock extends Block {
     public CrateBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).breakByHand(true));
+        super(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS));
     }
 }

@@ -13,7 +13,6 @@ public class IceBoxBarrelBlock extends BarrelBlock {
 
     public IceBoxBarrelBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1f, 2.5f));
     }

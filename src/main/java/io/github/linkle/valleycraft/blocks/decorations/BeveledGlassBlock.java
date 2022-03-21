@@ -22,7 +22,6 @@ public class BeveledGlassBlock extends DirectionBlockWithWater {
 
     public BeveledGlassBlock() {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByHand(false)
                 .sounds(BlockSoundGroup.GLASS).nonOpaque()
                 .strength(1.5f, 5f));
         setDefaultState();

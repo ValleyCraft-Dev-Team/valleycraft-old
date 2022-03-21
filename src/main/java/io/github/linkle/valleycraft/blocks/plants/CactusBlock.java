@@ -27,7 +27,6 @@ public class CactusBlock extends HorizontalBlock {
     public CactusBlock() {
         super(FabricBlockSettings.of(Material.CACTUS)
                 .nonOpaque()
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOL)
                 .strength(0.4f, 0.2f));
         setDefaultState();

@@ -76,12 +76,10 @@ public class Furniture {
     public static final Block SNOW = new SnowmanBlock();
 
     public static final Block ROPE_BRIDGE = new RopeBridgeBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
             .strength(1.0f,1f));
 
     public static final Block ROPE_BRIDGE_ANCHOR = new RopeBridgeBlock(FabricBlockSettings.of(Material.WOOD).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
             .strength(1.0f,1f).collidable(false));
 
@@ -150,7 +148,6 @@ public class Furniture {
 
     //rope
     public static final Block CLIMBABLE_ROPE = new VChainBlock(FabricBlockSettings.of(Material.NETHER_WOOD).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.NETHER_STEM)
             .strength(0,0.1f));
 
@@ -170,7 +167,6 @@ public class Furniture {
 
     //lantern
     public static final Block REDSTONE_LANTERN = new RedLanternBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()
-            .breakByHand(true)
             .sounds(BlockSoundGroup.CHAIN)
             .strength(1.0f,0.8f).luminance(7));
 
@@ -194,7 +190,6 @@ public class Furniture {
     public static final Block GOBLET_BLOCK = new DishBlock();
 
     public static final Block SPIKE_WALL_BLOCK = new SpikeTrapBlock(FabricBlockSettings.of(Material.WOOD)
-            .breakByHand(true)
             .sounds(BlockSoundGroup.WOOD)
             .strength(0.5f, 1.0f));
 

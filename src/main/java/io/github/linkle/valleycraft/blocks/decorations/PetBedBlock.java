@@ -19,7 +19,6 @@ public class PetBedBlock extends HorizontalWithWaterBlock {
 
     public PetBedBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.5f, 2.5f));
         setDefaultState();

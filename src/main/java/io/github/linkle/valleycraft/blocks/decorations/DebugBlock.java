@@ -9,7 +9,6 @@ public class DebugBlock extends Block {
     public DebugBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
                 //.breakByTool(FabricToolTags.AXES)
-                .breakByHand(false)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1, 1f));
     }

@@ -19,7 +19,6 @@ public class StatueBlock extends HorizontalWithWaterBlock {
 
     public StatueBlock(boolean isGlowing) {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque()
                 .strength(1f, 2f).luminance(isGlowing ? 13 : 0));
         setDefaultState();

@@ -82,7 +82,6 @@ public class AquaticBlock extends BlockWithWater {
     public static FabricBlockSettings getSettings() {
         return FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.CALCITE)
                 .strength(0.0f, 0.1f)
                 .ticksRandomly();

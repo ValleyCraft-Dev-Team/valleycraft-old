@@ -16,7 +16,6 @@ public class BentoBlock extends HorizontalWithWaterBlock {
 
     public BentoBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.5f, 2.5f));
         setDefaultState();

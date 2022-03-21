@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.config.objects.PlantConfig;
 import io.github.linkle.valleycraft.init.Aquatic;
+import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;
 import io.github.linkle.valleycraft.world.placer.ConditionBlockPlacer;
@@ -20,10 +21,11 @@ import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.decorator.SquarePlacementModifier;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public class OceanFeatures {
@@ -142,7 +144,7 @@ public class OceanFeatures {
     }
 
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
-        var config = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(block, tries, 7, 3, PLACER));
-        return Util.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.OCEAN_FLOOR_WG_HEIGHTMAP);
+        var config = new ConfiguredFeature<>(VFeatures.SIMPLE_PATCH, new SimplePatchConfig(block, tries, 7, 3, PLACER));
+        return Reg.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.OCEAN_FLOOR_WG_HEIGHTMAP).getKey().get();
     }
 }

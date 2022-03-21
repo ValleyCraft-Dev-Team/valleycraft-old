@@ -8,7 +8,6 @@ import net.minecraft.sound.BlockSoundGroup;
 public class VolcanicAshBlock extends GravelBlock {
     public VolcanicAshBlock() {
         super(FabricBlockSettings.of(Material.SOIL)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.GRAVEL)
                 .strength(0.5f, 1.5f));
     }

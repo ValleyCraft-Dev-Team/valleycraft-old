@@ -4,6 +4,7 @@ import java.util.function.Predicate;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
+import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;
 import io.github.linkle.valleycraft.world.placer.ConditionBlockPlacer;
@@ -15,10 +16,11 @@ import net.minecraft.block.TallPlantBlock;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.decorator.SquarePlacementModifier;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public class NetherFeatures {
@@ -63,7 +65,7 @@ public class NetherFeatures {
 
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
-        var config = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(block, tries, 7, 5, PLACER));
-        return Util.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_TOP_RANGE);
+        var config = new ConfiguredFeature<>(VFeatures.SIMPLE_PATCH, new SimplePatchConfig(block, tries, 7, 5, PLACER));
+        return Reg.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.BOTTOM_TO_TOP_RANGE).getKey().get();
     }
 }

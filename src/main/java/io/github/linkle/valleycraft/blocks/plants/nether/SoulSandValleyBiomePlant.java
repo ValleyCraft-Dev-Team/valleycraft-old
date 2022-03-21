@@ -22,7 +22,7 @@ public class SoulSandValleyBiomePlant extends PlantBlock {
     public SoulSandValleyBiomePlant() {
         super(FabricBlockSettings.of(Material.NETHER_SHOOTS)
                 .nonOpaque().luminance(7)
-                .breakByHand(true).ticksRandomly()
+                .ticksRandomly()
                 .sounds(BlockSoundGroup.FUNGUS)
                 .strength(0, 0.2f)
                 .noCollision());

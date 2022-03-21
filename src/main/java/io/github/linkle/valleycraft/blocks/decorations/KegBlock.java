@@ -37,7 +37,6 @@ public class KegBlock extends HorizontalWithWaterBlock {
 
     public KegBlock() {
         super(FabricBlockSettings.of(Material.WOOD).nonOpaque()
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1.0f, 2.0f));
         setDefaultState();

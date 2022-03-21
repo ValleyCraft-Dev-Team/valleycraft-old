@@ -1,5 +1,6 @@
 package io.github.linkle.valleycraft.init.features;
 
+import java.util.List;
 import java.util.function.Predicate;
 
 import com.google.common.base.Predicates;
@@ -7,6 +8,7 @@ import com.google.common.base.Predicates;
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Aquatic;
 import io.github.linkle.valleycraft.init.Plants;
+import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;
 import io.github.linkle.valleycraft.world.placer.ConditionBlockPlacer;
@@ -19,19 +21,22 @@ import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.util.function.BooleanBiFunction;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biome.Precipitation;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.decorator.HeightRangePlacementModifier;
-import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.decorator.SquarePlacementModifier;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.heightprovider.ConstantHeightProvider;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 public class PlantFeatures {
@@ -263,11 +268,10 @@ public class PlantFeatures {
 
         // 62 is where a sea level with water block inside.
         // If you want to config reeds counts or something, check the ReedPatchFeature class.
-        RegistryKey<PlacedFeature> key = Util.register("reed_patch", VFeatures.REED_PATCH.configure(DefaultFeatureConfig.INSTANCE),
-                HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
+        RegistryEntry<PlacedFeature> entry = Reg.register("reed_patch", new ConfiguredFeature<>(VFeatures.REED_PATCH, DefaultFeatureConfig.INSTANCE), HeightRangePlacementModifier.of(ConstantHeightProvider.create(YOffset.fixed(62))));
         var categories = BiomeSelectors.categories(Category.RIVER, Category.PLAINS, Category.SWAMP, Category.FOREST, Category.JUNGLE, Category.TAIGA);
         if (config.reedPatch.enable)
-            BiomeModifications.addFeature(categories, topLayer, key);
+            BiomeModifications.addFeature(categories, topLayer, entry.getKey().get());
     }
 
     /** Create the random patch feature config. */
@@ -300,7 +304,8 @@ public class PlantFeatures {
 
     /** Create the random patch feature config. */
     private static RegistryKey<PlacedFeature> create(String id, BlockStateProvider block, int tries, int rarity) {
-        var config = VFeatures.SIMPLE_PATCH.configure(new SimplePatchConfig(block, tries, 7, 3, PLACER));
-        return Util.register(id, config, RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
+        var config = new ConfiguredFeature<>(VFeatures.SIMPLE_PATCH, new SimplePatchConfig(block, tries, 7, 3, PLACER));
+        var list = List.of(RarityFilterPlacementModifier.of(rarity), SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
+        return Reg.register(id, config, list).getKey().get();
     }
 }

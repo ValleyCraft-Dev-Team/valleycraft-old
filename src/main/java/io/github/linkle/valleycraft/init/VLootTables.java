@@ -1,11 +1,12 @@
 package io.github.linkle.valleycraft.init;
 
+import static io.github.linkle.valleycraft.ValleyMain.CONFIG;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.utils.loot.LootBuilder;
 import io.github.linkle.valleycraft.utils.loot.LootTableHelper;
 import io.github.linkle.valleycraft.utils.loot.LootUtils;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
@@ -18,8 +19,6 @@ import net.minecraft.loot.function.LootingEnchantLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
-
-import static io.github.linkle.valleycraft.ValleyMain.CONFIG;
 
 public class VLootTables {
 
@@ -142,14 +141,15 @@ public class VLootTables {
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
 
+        /*
         //Create worm loot builder and apply it to grass and tall grass
         builder = LootBuilder.create()
                 .rolls(1).with(FoodAndCooking.WORM)
-                .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS))
-                        );
+                .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS)));
 
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
+        */
 
         //When we need to add an item to just one loot table, we don't need to store a builder.
 

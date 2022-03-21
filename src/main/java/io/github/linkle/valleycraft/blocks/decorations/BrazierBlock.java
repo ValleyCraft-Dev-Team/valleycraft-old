@@ -28,7 +28,6 @@ public class BrazierBlock extends BlockWithWater {
 
     public BrazierBlock(int luminance, float fireDamage) {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.STONE)
                 .luminance(state -> state.get(WATERLOGGED) ? 0 : luminance)
                 .strength(1.0f, 1.0f));

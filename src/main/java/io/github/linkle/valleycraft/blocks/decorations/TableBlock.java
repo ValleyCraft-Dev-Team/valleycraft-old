@@ -17,7 +17,6 @@ public class TableBlock extends HorizontalWithWaterBlock {
 
     public TableBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.5f, 1f));
         setDefaultState();

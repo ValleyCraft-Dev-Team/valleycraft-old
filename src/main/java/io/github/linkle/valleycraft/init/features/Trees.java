@@ -1,7 +1,10 @@
 package io.github.linkle.valleycraft.init.features;
 
+import java.util.ArrayList;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
+import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -10,22 +13,27 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
-import net.minecraft.world.gen.decorator.BlockFilterPlacementModifier;
-import net.minecraft.world.gen.decorator.PlacementModifier;
-import net.minecraft.world.gen.decorator.RarityFilterPlacementModifier;
-import net.minecraft.world.gen.decorator.SquarePlacementModifier;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.PlacedFeature;
+import net.minecraft.world.gen.feature.PlacedFeatures;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.placementmodifier.BlockFilterPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.RarityFilterPlacementModifier;
+import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-
-import java.util.ArrayList;
 
 public class Trees {
 
@@ -38,15 +46,24 @@ public class Trees {
             new TwoLayersFeatureSize(1, 0, 1)
             ).build();
 
-    public static ConfiguredFeature<TreeFeatureConfig, ?> APPLE_TREE = Feature.TREE.configure(APPLE_TREE_CONFIG);
+    public static RegistryEntry<ConfiguredFeature<?, ?>> APPLE_TREE;
+    
+    static {
+        
+        
+    }
 
     public static void initialize() {
-        ArrayList<PlacementModifier> list = new ArrayList<>();
+        var config = new ConfiguredFeature<>(Feature.TREE, APPLE_TREE_CONFIG);
+        APPLE_TREE = Reg.add(BuiltinRegistries.CONFIGURED_FEATURE, "apple_tree", config);
+        
+        ArrayList<PlacementModifier> list = new ArrayList<>(4);
         list.add(RarityFilterPlacementModifier.of(10));
         list.add(SquarePlacementModifier.of());
         list.add(PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP);
         list.add(BlockFilterPlacementModifier.of(BlockPredicate.wouldSurvive(Plants.APPLE_SAPLING.getDefaultState(), BlockPos.ORIGIN)));
-        RegistryKey<PlacedFeature> appleTreeKey = Util.register("apple_tree", Feature.TREE.configure(APPLE_TREE_CONFIG), list);
+        
+        var appleTreeKey = Reg.register("apple_tree", APPLE_TREE, list).getKey().get();
         if (ValleyMain.CONFIG.featureGenerations.trees.appleTreeEnabled)
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.MEADOW), GenerationStep.Feature.VEGETAL_DECORATION, appleTreeKey);
     }

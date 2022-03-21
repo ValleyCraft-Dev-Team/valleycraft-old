@@ -1,41 +1,40 @@
 package io.github.linkle.valleycraft.init;
 
-import static net.fabricmc.fabric.api.tag.TagFactory.ITEM;
-
 import net.minecraft.item.Item;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class VItemTags {
 
     // if any hard-coded string is changed, change the assets accordingly
 
     // common tags ("c" is short for "common")
-    public static final Tag<Item> BITTER_BERRIES = ITEM.create(newId("bitter_berries"));
-    public static final Tag<Item> BONES = ITEM.create(newId("bones"));
-    public static final Tag<Item> COPPER_INGOT = ITEM.create(newId("copper_ingot"));
-    public static final Tag<Item> COPPER_NUGGETS = ITEM.create(newId("copper_nuggets"));
-    public static final Tag<Item> CORN = ITEM.create(newId("corn"));
-    public static final Tag<Item> DOUGH = ITEM.create(newId("dough"));
-    public static final Tag<Item> EGGS = ITEM.create(newId("eggs"));
-    public static final Tag<Item> FLOUR = ITEM.create(newId("flour"));
-    public static final Tag<Item> KNIVES = ITEM.create(newId("knives"));
-    public static final Tag<Item> SICKLES = ITEM.create(newId("sickles"));
-    public static final Tag<Item> LIGHT_BLUE_DYES = ITEM.create(newId("light_blue_dyes"));
-    public static final Tag<Item> MINERS_LETTUCE = ITEM.create(newId("miners_lettuce"));
-    public static final Tag<Item> MOLLUSKS = ITEM.create(newId("mollusks"));
-    public static final Tag<Item> NETHERITE_NUGGETS = ITEM.create(newId("netherite_nuggets"));
-    public static final Tag<Item> ONION = ITEM.create(newId("onion"));
-    public static final Tag<Item> RED_DYES = ITEM.create(newId("red_dyes"));
-    public static final Tag<Item> RICE = ITEM.create(newId("rice"));
-    public static final Tag<Item> SALT = ITEM.create(newId("salt"));
-    public static final Tag<Item> SPICY_BERRIES = ITEM.create(newId("spicy_berries"));
-    public static final Tag<Item> TOMATO = ITEM.create(newId("tomato"));
-    public static final Tag<Item> TROPICAL_FISH = ITEM.create(newId("tropical_fish"));
-    public static final Tag<Item> WHITE_DYES = ITEM.create(newId("white_dyes"));
-    public static final Tag<Item> WORMS = ITEM.create(newId("worms"));
-    public static final Tag<Item> HOLLY = ITEM.create(newId("holly"));
-    public static final Tag<Item> EGGPLANTS = ITEM.create(newId("eggplants"));
+    public static final TagKey<Item> BITTER_BERRIES = TagKey.of(Registry.ITEM_KEY, newId("bitter_berries"));
+    public static final TagKey<Item> BONES = TagKey.of(Registry.ITEM_KEY, newId("bones"));
+    public static final TagKey<Item> COPPER_INGOT = TagKey.of(Registry.ITEM_KEY, newId("copper_ingot"));
+    public static final TagKey<Item> COPPER_NUGGETS = TagKey.of(Registry.ITEM_KEY, newId("copper_nuggets"));
+    public static final TagKey<Item> CORN = TagKey.of(Registry.ITEM_KEY, newId("corn"));
+    public static final TagKey<Item> DOUGH = TagKey.of(Registry.ITEM_KEY, newId("dough"));
+    public static final TagKey<Item> EGGS = TagKey.of(Registry.ITEM_KEY, newId("eggs"));
+    public static final TagKey<Item> FLOUR = TagKey.of(Registry.ITEM_KEY, newId("flour"));
+    public static final TagKey<Item> KNIVES = TagKey.of(Registry.ITEM_KEY, newId("knives"));
+    public static final TagKey<Item> SICKLES = TagKey.of(Registry.ITEM_KEY, newId("sickles"));
+    public static final TagKey<Item> LIGHT_BLUE_DYES = TagKey.of(Registry.ITEM_KEY, newId("light_blue_dyes"));
+    public static final TagKey<Item> MINERS_LETTUCE = TagKey.of(Registry.ITEM_KEY, newId("miners_lettuce"));
+    public static final TagKey<Item> MOLLUSKS = TagKey.of(Registry.ITEM_KEY, newId("mollusks"));
+    public static final TagKey<Item> NETHERITE_NUGGETS = TagKey.of(Registry.ITEM_KEY, newId("netherite_nuggets"));
+    public static final TagKey<Item> ONION = TagKey.of(Registry.ITEM_KEY, newId("onion"));
+    public static final TagKey<Item> RED_DYES = TagKey.of(Registry.ITEM_KEY, newId("red_dyes"));
+    public static final TagKey<Item> RICE = TagKey.of(Registry.ITEM_KEY, newId("rice"));
+    public static final TagKey<Item> SALT = TagKey.of(Registry.ITEM_KEY, newId("salt"));
+    public static final TagKey<Item> SPICY_BERRIES = TagKey.of(Registry.ITEM_KEY, newId("spicy_berries"));
+    public static final TagKey<Item> TOMATO = TagKey.of(Registry.ITEM_KEY, newId("tomato"));
+    public static final TagKey<Item> TROPICAL_FISH = TagKey.of(Registry.ITEM_KEY, newId("tropical_fish"));
+    public static final TagKey<Item> WHITE_DYES = TagKey.of(Registry.ITEM_KEY, newId("white_dyes"));
+    public static final TagKey<Item> WORMS = TagKey.of(Registry.ITEM_KEY, newId("worms"));
+    public static final TagKey<Item> HOLLY = TagKey.of(Registry.ITEM_KEY, newId("holly"));
+    public static final TagKey<Item> EGGPLANTS = TagKey.of(Registry.ITEM_KEY, newId("eggplants"));
 
     // valley tags
     // use ValleyMain.MOD_ID for namespace

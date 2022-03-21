@@ -13,7 +13,6 @@ public class StumpBlock extends Block {
 
     public StumpBlock(BlockState mushroom) {
         super(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)
-                .breakByHand(true)
                 .ticksRandomly()
                 .nonOpaque());
         this.mushroom = mushroom;

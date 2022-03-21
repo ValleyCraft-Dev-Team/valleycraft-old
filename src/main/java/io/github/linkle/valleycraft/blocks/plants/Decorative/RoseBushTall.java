@@ -20,7 +20,6 @@ public class RoseBushTall extends PlantBlock {
     public RoseBushTall() {
         super(FabricBlockSettings.of(Material.PLANT)
                 //.breakByTool(FabricToolTags.SHEARS)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0, 0.5f));
     }

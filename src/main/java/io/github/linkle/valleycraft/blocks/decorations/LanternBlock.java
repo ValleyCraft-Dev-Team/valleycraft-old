@@ -24,7 +24,6 @@ public class LanternBlock extends HorizontalWithWaterBlock {
 
     public LanternBlock(int luminance, boolean emitsRedstone) {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN)
                 .luminance(luminance)
                 .strength(1f, 3.5f));
