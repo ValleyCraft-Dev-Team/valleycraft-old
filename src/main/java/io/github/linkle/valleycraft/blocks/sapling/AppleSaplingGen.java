@@ -12,8 +12,7 @@ public class AppleSaplingGen extends SaplingGenerator {
 
     @Override
     protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random arg0, boolean arg1) {
-        // TODO Auto-generated method stub
-        return null;
+        return Trees.APPLE_TREE;
     }
     
     /* 
