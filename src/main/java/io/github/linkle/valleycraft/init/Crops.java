@@ -2,7 +2,6 @@ package io.github.linkle.valleycraft.init;
 
 import io.github.linkle.valleycraft.blocks.plants.CropsSeeds.VCropBlock;
 import io.github.linkle.valleycraft.items.food.FoodItemBase;
-import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.CropBlock;
 import net.minecraft.block.Material;
@@ -60,42 +59,42 @@ public class Crops {
 
     public static void initialize() {
         //Puff Ball
-        Util.register("puff_crop_block", PUFF_CROP_BLOCK);
-        Util.register("puff_seeds", PUFF_SEEDS);
+        Reg.register("puff_crop_block", PUFF_CROP_BLOCK);
+        Reg.register("puff_seeds", PUFF_SEEDS);
         //Green Bean
-        Util.register("green_bean_crop_block", GB_CROP_BLOCK);
-        Util.register("green_bean_seeds", GB_SEEDS);
-        Util.register("green_bean", GREEN_BEAN);
+        Reg.register("green_bean_crop_block", GB_CROP_BLOCK);
+        Reg.register("green_bean_seeds", GB_SEEDS);
+        Reg.register("green_bean", GREEN_BEAN);
         //Mandrake
-        Util.register("mandrake_crop_block", MANDRAKE_CROP_BLOCK);
-        Util.register("mandrake_seeds", MANDRAKE_SEEDS);
-        Util.register("mandrake", MANDRAKE);
-        Util.register("cooked_mandrake", COOKED_MANDRAKE);
+        Reg.register("mandrake_crop_block", MANDRAKE_CROP_BLOCK);
+        Reg.register("mandrake_seeds", MANDRAKE_SEEDS);
+        Reg.register("mandrake", MANDRAKE);
+        Reg.register("cooked_mandrake", COOKED_MANDRAKE);
         //Crystal Fruit
         //register("crystal_crop_block", CRYSTAL_CROP_BLOCK);
         //register("crystal_seeds", CRYSTAL_SEEDS);
         //register("crystal_fruit", CRYSTAL_FRUIT);
         //Foraged Items
         //Snow Yam
-        Util.register("snow_yam_crop_block", SNOW_CROP_BLOCK);
-        Util.register("snow_yam_item", SNOW_YAM_ITEM);
+        Reg.register("snow_yam_crop_block", SNOW_CROP_BLOCK);
+        Reg.register("snow_yam_item", SNOW_YAM_ITEM);
         //Winter Root
         //register("winter_root_crop_block", WINTER_CROP_BLOCK);
         //register("winter_root_item", WINTER_ROOT_ITEM);
         //Miners Lettuce
-        Util.register("miners_lettuce_crop_block", MINERS_CROP_BLOCK);
-        Util.register("miners_lettuce", MINERS_LETTUCE_ITEM);
+        Reg.register("miners_lettuce_crop_block", MINERS_CROP_BLOCK);
+        Reg.register("miners_lettuce", MINERS_LETTUCE_ITEM);
         //Onion
-        Util.register("onion_crop_block", ONION_CROP_BLOCK);
-        Util.register("onion_seeds", ONION_SEEDS);
-        Util.register("onion", ONION);
+        Reg.register("onion_crop_block", ONION_CROP_BLOCK);
+        Reg.register("onion_seeds", ONION_SEEDS);
+        Reg.register("onion", ONION);
         //Pepper
-        Util.register("pepper_crop_block", PEPPER_CROP_BLOCK);
-        Util.register("pepper_seeds", PEPPER_SEEDS);
-        Util.register("fire_pepper", PEPPER_ITEM);
+        Reg.register("pepper_crop_block", PEPPER_CROP_BLOCK);
+        Reg.register("pepper_seeds", PEPPER_SEEDS);
+        Reg.register("fire_pepper", PEPPER_ITEM);
         //Eggplant
-        Util.register("eggplant_crop_block", EGGPLANT_CROP_BLOCK);
-        Util.register("eggplant_seeds", EGGPLANT_SEEDS);
-        Util.register("eggplant", EGGPLANT_ITEM);
+        Reg.register("eggplant_crop_block", EGGPLANT_CROP_BLOCK);
+        Reg.register("eggplant_seeds", EGGPLANT_SEEDS);
+        Reg.register("eggplant", EGGPLANT_ITEM);
     }
 }

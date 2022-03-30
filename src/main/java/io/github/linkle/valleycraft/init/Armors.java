@@ -2,7 +2,6 @@ package io.github.linkle.valleycraft.init;
 
 import io.github.linkle.valleycraft.items.armorMaterials.FurArmorMaterial;
 import io.github.linkle.valleycraft.items.armorMaterials.RoseGoldArmorMaterial;
-import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterials;
@@ -47,20 +46,20 @@ public class Armors {
         //register("trader_leggings", TRADER_LEGGINGS);
         //register("trader_boots", TRADER_BOOTS);
 
-        Util.register("rg_helmet", RG_HELMET);
-        Util.register("rg_chestplate", RG_CHESTPLATE);
-        Util.register("rg_leggings", RG_LEGGINGS);
-        Util.register("rg_boots", RG_BOOTS);
+        Reg.register("rg_helmet", RG_HELMET);
+        Reg.register("rg_chestplate", RG_CHESTPLATE);
+        Reg.register("rg_leggings", RG_LEGGINGS);
+        Reg.register("rg_boots", RG_BOOTS);
 
-        Util.register("turtle_chestplate", TURTLE_CHESTPLATE);
-        Util.register("turtle_leggings", TURTLE_LEGGINGS);
-        Util.register("turtle_boots", TURTLE_BOOTS);
+        Reg.register("turtle_chestplate", TURTLE_CHESTPLATE);
+        Reg.register("turtle_leggings", TURTLE_LEGGINGS);
+        Reg.register("turtle_boots", TURTLE_BOOTS);
 
         //register("stray_helmet", STRAY_HELMET);
         //register("stray_chestplate", STRAY_CHESTPLATE);
         //register("stray_leggings", STRAY_LEGGINGS);
 
-        Util.register("fur_chestplate", FUR_CHESTPLATE);
+        Reg.register("fur_chestplate", FUR_CHESTPLATE);
 
         //register("quiver_helmet", QUIVER_HELMET);
         //register("quiver_chestplate", QUIVER_CHESTPLATE);

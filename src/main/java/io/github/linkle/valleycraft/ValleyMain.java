@@ -24,48 +24,48 @@ public class ValleyMain implements ModInitializer {
     @Override
     @SuppressWarnings("unused")
     public void onInitialize() {
-        AutoConfig.register(VConfig.class, GsonConfigSerializer::new);
-        var holder = AutoConfig.getConfigHolder(VConfig.class);
-        CONFIG = holder.getConfig();
-        ConfigVersionHandler.handle(holder);
+        //AutoConfig.register(VConfig.class, GsonConfigSerializer::new);
+        //var holder = AutoConfig.getConfigHolder(VConfig.class);
+        //CONFIG = holder.getConfig();
+        //ConfigVersionHandler.handle(holder);
 
         //Item Initializers
-        FoodAndCooking.initialize();
-        Fishing.initialize();
-        ItemGroups.initialize();
-        WeaponsAndTools.initialize();
-        MiscItems.initialize();
-        Armors.initialize();
+        //FoodAndCooking.initialize();
+        //Fishing.initialize();
+        //ItemGroups.initialize();
+        //WeaponsAndTools.initialize();
+        //MiscItems.initialize();
+        //Armors.initialize();
 
         //Block Initializers
-        Furniture.initialize();
-        FurnitureCont.initialize();
-        Plants.initialize();
-        Aquatic.initialize();
-        Crops.initialize();
-        StoneBlocks.initialize();
-        BlockEntities.ints();
-        PotBlock.initialize();
+        //Furniture.initialize();
+        //FurnitureCont.initialize();
+        //Plants.initialize();
+        //Aquatic.initialize();
+        //Crops.initialize();
+        //StoneBlocks.initialize();
+        //BlockEntities.ints();
+        //PotBlock.initialize();
 
         // Misc Initializers (Recommended put it after the blocks and items initializers)
-        Screens.initialize();
-        VLootTables.initialize();
-        Sounds.initialize();
-        Compostables.initialize();
-        Entities.initialize();
-        WanderingTraderOffers.initialize();
-        CrabTrapBaits.initialize();
-        ServerNetwork.initialize();
-        WanderingTraderOffers.initialize();
-        Structures.initialize();
+        //Screens.initialize();
+        //VLootTables.initialize();
+        //Sounds.initialize();
+        //Compostables.initialize();
+        //Entities.initialize();
+        //WanderingTraderOffers.initialize();
+        //CrabTrapBaits.initialize();
+        //ServerNetwork.initialize();
+        //WanderingTraderOffers.initialize();
+        //Structures.initialize();
 
         //Configured Feature Initializers
-        OreFeatures.initialize();
-        PlantFeatures.initialize();
-        CaveFeatures.initialize();
-        NetherFeatures.initialize();
-        OceanFeatures.initialize();
-        Trees.initialize();
+        //OreFeatures.initialize();
+        //PlantFeatures.initialize();
+        //CaveFeatures.initialize();
+        //NetherFeatures.initialize();
+        //OceanFeatures.initialize();
+        //Trees.initialize();
 
         //Future Updates ;)
         //NetherPlantConfiguredFeatures.initialize();

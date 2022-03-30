@@ -6,7 +6,6 @@ import io.github.linkle.valleycraft.blocks.plants.Decorative.SporeBlock;
 import io.github.linkle.valleycraft.blocks.terrain.MudBlock;
 import io.github.linkle.valleycraft.blocks.plants.DryMossBlock;
 import io.github.linkle.valleycraft.blocks.plants.MossBlock;
-import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -78,52 +77,52 @@ public class StoneBlocks {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
 
-        Util.registerWithItem("brown_clay", B_CLAY, natureGroup);
-        Util.registerWithItem("volc_ash", VOLCANIC_ASH, natureGroup);
-        Util.registerWithItem("volc_stone", VOLCANIC_STONE, natureGroup);
-        Util.registerWithItem("scalding_volc_stone", SCALDING_VOLC, natureGroup);
+        Reg.registerWithItem("brown_clay", B_CLAY, natureGroup);
+        Reg.registerWithItem("volc_ash", VOLCANIC_ASH, natureGroup);
+        Reg.registerWithItem("volc_stone", VOLCANIC_STONE, natureGroup);
+        Reg.registerWithItem("scalding_volc_stone", SCALDING_VOLC, natureGroup);
 
-        Util.registerWithItem("mixed_ore", MIXED_ORE, natureGroup);
-        Util.registerWithItem("deepslate_mixed_ore", DEEPSLATE_MIXED_ORE, natureGroup);
-        Util.registerWithItem("saltpeter_ore", SALTPETER_ORE, natureGroup);
-        Util.registerWithItem("deepslate_saltpeter_ore", DEEPSLATE_SALTPETER_ORE, natureGroup);
+        Reg.registerWithItem("mixed_ore", MIXED_ORE, natureGroup);
+        Reg.registerWithItem("deepslate_mixed_ore", DEEPSLATE_MIXED_ORE, natureGroup);
+        Reg.registerWithItem("saltpeter_ore", SALTPETER_ORE, natureGroup);
+        Reg.registerWithItem("deepslate_saltpeter_ore", DEEPSLATE_SALTPETER_ORE, natureGroup);
 
-        Util.registerWithItem("glacial_stone", GLACIAL_STONE, natureGroup);
-        Util.registerWithItem("scalding_stone", SCALDING_STONE, natureGroup);
-        Util.registerWithItem("scalding_sandstone", SCALDING_SANDSTONE, natureGroup);
-        Util.registerWithItem("desert_gravel", DESERT_GRAVEL, natureGroup);
-        Util.registerWithItem("bleached_gravel", BLEACHED_GRAVEL, natureGroup);
+        Reg.registerWithItem("glacial_stone", GLACIAL_STONE, natureGroup);
+        Reg.registerWithItem("scalding_stone", SCALDING_STONE, natureGroup);
+        Reg.registerWithItem("scalding_sandstone", SCALDING_SANDSTONE, natureGroup);
+        Reg.registerWithItem("desert_gravel", DESERT_GRAVEL, natureGroup);
+        Reg.registerWithItem("bleached_gravel", BLEACHED_GRAVEL, natureGroup);
 
-        Util.registerWithItem("jungle_stone", JUNGLE, natureGroup);
-        Util.registerWithItem("jungle_cobble", JUNGLE_COBBLE, furnGroup);
-        Util.registerWithItem("jungle_sporey", JUNGLE_SPOREY, natureGroup);
-        Util.registerWithItem("jungle_mossy", JUNGLE_MOSSY, natureGroup);
-        Util.registerWithItem("stone_mossy", STONE_MOSSY, natureGroup);
-        Util.registerWithItem("dry_mossy_stone", DRY_MOSS_STONE, natureGroup);
+        Reg.registerWithItem("jungle_stone", JUNGLE, natureGroup);
+        Reg.registerWithItem("jungle_cobble", JUNGLE_COBBLE, furnGroup);
+        Reg.registerWithItem("jungle_sporey", JUNGLE_SPOREY, natureGroup);
+        Reg.registerWithItem("jungle_mossy", JUNGLE_MOSSY, natureGroup);
+        Reg.registerWithItem("stone_mossy", STONE_MOSSY, natureGroup);
+        Reg.registerWithItem("dry_mossy_stone", DRY_MOSS_STONE, natureGroup);
 
-        Util.registerWithItem("oceanstone", OCEAN_STONE, natureGroup);
-        Util.registerWithItem("swampstone", SWAMP_STONE, natureGroup);
-        Util.registerWithItem("darkstone", DARK_STONE, natureGroup);
-        Util.registerWithItem("taigastone", TAIGA_STONE, natureGroup);
-        Util.registerWithItem("green_granite", GREEN_GRANITE, natureGroup);
-        Util.registerWithItem("pumice", PUMICE, natureGroup);
-        Util.registerWithItem("jasper", JASPER, natureGroup);
-        Util.registerWithItem("limestone", LIMESTONE, natureGroup);
+        Reg.registerWithItem("oceanstone", OCEAN_STONE, natureGroup);
+        Reg.registerWithItem("swampstone", SWAMP_STONE, natureGroup);
+        Reg.registerWithItem("darkstone", DARK_STONE, natureGroup);
+        Reg.registerWithItem("taigastone", TAIGA_STONE, natureGroup);
+        Reg.registerWithItem("green_granite", GREEN_GRANITE, natureGroup);
+        Reg.registerWithItem("pumice", PUMICE, natureGroup);
+        Reg.registerWithItem("jasper", JASPER, natureGroup);
+        Reg.registerWithItem("limestone", LIMESTONE, natureGroup);
 
-        Util.registerWithItem("diabase_smooth", DIABASE_SMOOTH, furnGroup);
-        Util.registerWithItem("grimestone_smooth", GRIMESTONE_SMOOTH, furnGroup);
-        Util.registerWithItem("marinite_smooth", MARINITE_SMOOTH, furnGroup);
-        Util.registerWithItem("verdantine_smooth", VERDANTINE_SMOOTH, furnGroup);
-        Util.registerWithItem("green_granite_smooth", GREEN_GRANITE_SMOOTH, furnGroup);
-        Util.registerWithItem("pumice_smooth", PUMICE_SMOOTH, furnGroup);
-        Util.registerWithItem("jasper_smooth", JASPER_SMOOTH, furnGroup);
-        Util.registerWithItem("limestone_smooth", LIMESTONE_SMOOTH, furnGroup);
+        Reg.registerWithItem("diabase_smooth", DIABASE_SMOOTH, furnGroup);
+        Reg.registerWithItem("grimestone_smooth", GRIMESTONE_SMOOTH, furnGroup);
+        Reg.registerWithItem("marinite_smooth", MARINITE_SMOOTH, furnGroup);
+        Reg.registerWithItem("verdantine_smooth", VERDANTINE_SMOOTH, furnGroup);
+        Reg.registerWithItem("green_granite_smooth", GREEN_GRANITE_SMOOTH, furnGroup);
+        Reg.registerWithItem("pumice_smooth", PUMICE_SMOOTH, furnGroup);
+        Reg.registerWithItem("jasper_smooth", JASPER_SMOOTH, furnGroup);
+        Reg.registerWithItem("limestone_smooth", LIMESTONE_SMOOTH, furnGroup);
 
-        Util.registerWithItem("salt_ore", SALT_ORE, natureGroup);
-        Util.registerWithItem("salt_block", SALT_BLOCK, furnGroup);
-        Util.registerWithItem("saltpeter_block", SALTPETER_BLOCK, furnGroup);
-        Util.registerWithItem("flesh_block", FLESH_BLOCK, furnGroup);
-        Util.registerWithItem("nether_salt", NETHER_SALT, natureGroup);
-        Util.registerWithItem("nether_coal_ore", NETHER_COAL_ORE, natureGroup);
+        Reg.registerWithItem("salt_ore", SALT_ORE, natureGroup);
+        Reg.registerWithItem("salt_block", SALT_BLOCK, furnGroup);
+        Reg.registerWithItem("saltpeter_block", SALTPETER_BLOCK, furnGroup);
+        Reg.registerWithItem("flesh_block", FLESH_BLOCK, furnGroup);
+        Reg.registerWithItem("nether_salt", NETHER_SALT, natureGroup);
+        Reg.registerWithItem("nether_coal_ore", NETHER_COAL_ORE, natureGroup);
     }
 }

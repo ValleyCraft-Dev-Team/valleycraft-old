@@ -1,7 +1,6 @@
 package io.github.linkle.valleycraft.init;
 
 import io.github.linkle.valleycraft.blocks.decorations.*;
-import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
@@ -59,51 +58,51 @@ public class FurnitureCont {
         var furnGroupEpic = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.EPIC);
         var arteGroup = new Item.Settings().group(ARTEFACT_GROUP);
 
-        Util.registerWithItem("stuffy_brown", STUFFY_BROWN, furnGroup);
-        Util.registerWithItem("stuffy_white", STUFFY_WHITE, furnGroup);
+        Reg.registerWithItem("stuffy_brown", STUFFY_BROWN, furnGroup);
+        Reg.registerWithItem("stuffy_white", STUFFY_WHITE, furnGroup);
 
-        Util.registerWithItem("log_pile", LOGPILE, furnGroup);
+        Reg.registerWithItem("log_pile", LOGPILE, furnGroup);
 
-        Util.registerWithItem("campfire_ring", CAMPFIRE_RING, furnGroup);
+        Reg.registerWithItem("campfire_ring", CAMPFIRE_RING, furnGroup);
 
-        Util.registerWithItem("crate_apple", CRATE_APPLE, furnGroup);
-        Util.registerWithItem("crate_carrot", CRATE_CARROT, furnGroup);
-        Util.registerWithItem("crate_potato", CRATE_POTATO, furnGroup);
-        Util.registerWithItem("crate_poison", CRATE_POISON, furnGroup);
-        Util.registerWithItem("crate_beet", CRATE_BEET, furnGroup);
+        Reg.registerWithItem("crate_apple", CRATE_APPLE, furnGroup);
+        Reg.registerWithItem("crate_carrot", CRATE_CARROT, furnGroup);
+        Reg.registerWithItem("crate_potato", CRATE_POTATO, furnGroup);
+        Reg.registerWithItem("crate_poison", CRATE_POISON, furnGroup);
+        Reg.registerWithItem("crate_beet", CRATE_BEET, furnGroup);
 
-        Util.registerWithItem("crate_rice", CRATE_RICE, furnGroup);
-        Util.registerWithItem("crate_corn", CRATE_CORN, furnGroup);
-        Util.registerWithItem("crate_tomato", CRATE_TOMATO, furnGroup);
+        Reg.registerWithItem("crate_rice", CRATE_RICE, furnGroup);
+        Reg.registerWithItem("crate_corn", CRATE_CORN, furnGroup);
+        Reg.registerWithItem("crate_tomato", CRATE_TOMATO, furnGroup);
 
-        Util.registerWithItem("crate_green", CRATE_GREEN, furnGroup);
-        Util.registerWithItem("crate_mandrake", CRATE_MANDRAKE, furnGroup);
-        Util.registerWithItem("crate_snow", CRATE_SNOW, furnGroup);
-        Util.registerWithItem("crate_pepper", CRATE_PEPPER, furnGroup);
-        Util.registerWithItem("crate_eggplant", CRATE_EGGPLANT, furnGroup);
+        Reg.registerWithItem("crate_green", CRATE_GREEN, furnGroup);
+        Reg.registerWithItem("crate_mandrake", CRATE_MANDRAKE, furnGroup);
+        Reg.registerWithItem("crate_snow", CRATE_SNOW, furnGroup);
+        Reg.registerWithItem("crate_pepper", CRATE_PEPPER, furnGroup);
+        Reg.registerWithItem("crate_eggplant", CRATE_EGGPLANT, furnGroup);
 
-        Util.registerWithItem("crate_onion", CRATE_ONION, furnGroup);
-        Util.registerWithItem("crate_miner", CRATE_MINER, furnGroup);
+        Reg.registerWithItem("crate_onion", CRATE_ONION, furnGroup);
+        Reg.registerWithItem("crate_miner", CRATE_MINER, furnGroup);
 
-        Util.registerWithItem("crate_chorus", CRATE_CHORUS, furnGroup);
-        Util.registerWithItem("crate_sweet", CRATE_SWEET, furnGroup);
-        Util.registerWithItem("crate_glow", CRATE_GLOW, furnGroup);
-        Util.registerWithItem("crate_bitter", CRATE_BITTER, furnGroup);
-        Util.registerWithItem("crate_sour", CRATE_SOUR, furnGroup);
-        Util.registerWithItem("crate_spicy", CRATE_SPICY, furnGroup);
-        Util.registerWithItem("crate_holly", CRATE_HOLLY, furnGroup);
-        Util.registerWithItem("crate_cocoa", CRATE_COCOA, furnGroup);
+        Reg.registerWithItem("crate_chorus", CRATE_CHORUS, furnGroup);
+        Reg.registerWithItem("crate_sweet", CRATE_SWEET, furnGroup);
+        Reg.registerWithItem("crate_glow", CRATE_GLOW, furnGroup);
+        Reg.registerWithItem("crate_bitter", CRATE_BITTER, furnGroup);
+        Reg.registerWithItem("crate_sour", CRATE_SOUR, furnGroup);
+        Reg.registerWithItem("crate_spicy", CRATE_SPICY, furnGroup);
+        Reg.registerWithItem("crate_holly", CRATE_HOLLY, furnGroup);
+        Reg.registerWithItem("crate_cocoa", CRATE_COCOA, furnGroup);
 
-        Util.registerWithItem("crate_puff", CRATE_PUFF, furnGroup);
+        Reg.registerWithItem("crate_puff", CRATE_PUFF, furnGroup);
 
-        Util.registerWithItem("crate_duck", CRATE_DUCK, furnGroup);
-        Util.registerWithItem("crate_egg", CRATE_EGG, furnGroup);
+        Reg.registerWithItem("crate_duck", CRATE_DUCK, furnGroup);
+        Reg.registerWithItem("crate_egg", CRATE_EGG, furnGroup);
 
-        Util.registerWithItem("crate_bamboo", CRATE_BAMBOO, furnGroup);
-        Util.registerWithItem("crate_sugar", CRATE_SUGAR, furnGroup);
+        Reg.registerWithItem("crate_bamboo", CRATE_BAMBOO, furnGroup);
+        Reg.registerWithItem("crate_sugar", CRATE_SUGAR, furnGroup);
 
-        Util.registerWithItem("bone_joint_block", BONE_JOINT, furnGroup);
-        Util.registerWithItem("telescope_block", TELESCOPE_BLOCK, furnGroup);
+        Reg.registerWithItem("bone_joint_block", BONE_JOINT, furnGroup);
+        Reg.registerWithItem("telescope_block", TELESCOPE_BLOCK, furnGroup);
 
     }
 }

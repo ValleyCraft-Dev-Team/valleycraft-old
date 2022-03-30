@@ -4,7 +4,7 @@ import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.ItemGroups;
-import io.github.linkle.valleycraft.utils.Util;
+import io.github.linkle.valleycraft.init.Reg;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder.Factory;
 import net.minecraft.block.Block;
@@ -30,19 +30,19 @@ public class BlockEntities {
     public static void ints() {
         var furnGroup = new BlockItem.Settings().group(FURNITURE_GROUP);
 
-        Util.register("brick_furnace", new BlockItem(BRICK_FURNACE, furnGroup));
+        Reg.register("brick_furnace", new BlockItem(BRICK_FURNACE, furnGroup));
         createBlockEntity("brick_furnace", BRICK_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("cobble_furnace", new BlockItem(COBBLE_FURNACE, furnGroup));
+        Reg.register("cobble_furnace", new BlockItem(COBBLE_FURNACE, furnGroup));
         createBlockEntity("cobble_furnace", COBBLE_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("carmine_furnace", new BlockItem(CARMINE_FURNACE, furnGroup));
+        Reg.register("carmine_furnace", new BlockItem(CARMINE_FURNACE, furnGroup));
         createBlockEntity("carmine_furnace", CARMINE_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("volcanic_furnace", new BlockItem(VOLCANIC_FURNACE, furnGroup));
+        Reg.register("volcanic_furnace", new BlockItem(VOLCANIC_FURNACE, furnGroup));
         createBlockEntity("volcanic_furnace", VOLCANIC_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
+        Reg.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
         CrabTrap.BLOCK_ENTITY = createBlockEntity("crab_trap", CRAB_TRAP, CrabTrapEntity::new);
     }
 

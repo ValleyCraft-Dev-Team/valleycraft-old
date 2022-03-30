@@ -4,15 +4,6 @@
   "package": "io.github.linkle.valleycraft.mixins",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-	"LivingEntityMixin",
-	"CriteriaInvoker",
-	"ItemUsageContextAccessor",
-	"ItemSettingsAccessor",
-  "EnchantmentMixin",
-  "EnchantmentHelperMixin",
-  "DamageEnchantmentMixin",
-	"WorldMixin",
-  "IceBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

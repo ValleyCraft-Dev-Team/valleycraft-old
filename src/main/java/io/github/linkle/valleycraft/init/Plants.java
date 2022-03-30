@@ -27,7 +27,6 @@ import io.github.linkle.valleycraft.blocks.plants.nether.CrimsonBiomePlant;
 import io.github.linkle.valleycraft.blocks.plants.nether.NetherWastesBiomePlant;
 import io.github.linkle.valleycraft.blocks.plants.nether.SoulSandValleyBiomePlant;
 import io.github.linkle.valleycraft.blocks.sapling.AppleSaplingGen;
-import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock.Settings;
 import net.minecraft.block.Block;
@@ -172,90 +171,90 @@ public class Plants {
     public static void initialize() {
         var natureGroup = new Item.Settings().group(NATURE_GROUP);
 
-        Util.registerWithItem("small_cactus", SMALL_CACTUS, natureGroup);
-        Util.registerWithItem("flowering_cactus", FLOWERING_CACTUS, natureGroup);
-        Util.registerWithItem("tumbleweed", TUMBLE_WEED, natureGroup);
+        Reg.registerWithItem("small_cactus", SMALL_CACTUS, natureGroup);
+        Reg.registerWithItem("flowering_cactus", FLOWERING_CACTUS, natureGroup);
+        Reg.registerWithItem("tumbleweed", TUMBLE_WEED, natureGroup);
         //bushes
-        Util.registerWithItem("rose_bush", ROSEBUSH, natureGroup);
-        Util.registerWithItem("lilac_bush", LILACBUSH, natureGroup);
-        Util.registerWithItem("peony_bush", PEONYBUSH, natureGroup);
-        Util.registerWithItem("bush", BUSH, natureGroup);
-        Util.registerWithItem("alive_bush", BUSH_ALIVE, natureGroup);
-        Util.registerWithItem("herbs", HERBS, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64));
-        Util.registerWithItem("taproots", TAPROOTS, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64));
+        Reg.registerWithItem("rose_bush", ROSEBUSH, natureGroup);
+        Reg.registerWithItem("lilac_bush", LILACBUSH, natureGroup);
+        Reg.registerWithItem("peony_bush", PEONYBUSH, natureGroup);
+        Reg.registerWithItem("bush", BUSH, natureGroup);
+        Reg.registerWithItem("alive_bush", BUSH_ALIVE, natureGroup);
+        Reg.registerWithItem("herbs", HERBS, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64));
+        Reg.registerWithItem("taproots", TAPROOTS, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()).maxCount(64));
 
-        Util.registerWithItem("weaping_willow", WEAPING_SWAMP_WILLOW, natureGroup);
-        Util.registerWithItem("pond_ribbons", SWAMP_RIBBON, natureGroup);
+        Reg.registerWithItem("weaping_willow", WEAPING_SWAMP_WILLOW, natureGroup);
+        Reg.registerWithItem("pond_ribbons", SWAMP_RIBBON, natureGroup);
 
-        Util.registerWithItem("redwood_sorrel", REDWOOD_SORREL, natureGroup);
-        Util.registerWithItem("crocus", CROCUS, natureGroup);
+        Reg.registerWithItem("redwood_sorrel", REDWOOD_SORREL, natureGroup);
+        Reg.registerWithItem("crocus", CROCUS, natureGroup);
 
-        Util.registerWithItem("dandelion_puffs", DANDELION_PUFF, natureGroup);
-        Util.registerWithItem("lavender", LAVENDER, natureGroup);
-        Util.registerWithItem("lavender_sprig", LAVENDER_SPRIG, natureGroup);
-        Util.registerWithItem("single_rose", ROSE_SPRIG, natureGroup);
-        Util.registerWithItem("black_dahlia", BLACK_DAHLIA, natureGroup);
-        Util.registerWithItem("ice_rose", ICE_ROSE, natureGroup);
-        Util.registerWithItem("orange_beauty", ORANGE_BEAUTY, natureGroup);
+        Reg.registerWithItem("dandelion_puffs", DANDELION_PUFF, natureGroup);
+        Reg.registerWithItem("lavender", LAVENDER, natureGroup);
+        Reg.registerWithItem("lavender_sprig", LAVENDER_SPRIG, natureGroup);
+        Reg.registerWithItem("single_rose", ROSE_SPRIG, natureGroup);
+        Reg.registerWithItem("black_dahlia", BLACK_DAHLIA, natureGroup);
+        Reg.registerWithItem("ice_rose", ICE_ROSE, natureGroup);
+        Reg.registerWithItem("orange_beauty", ORANGE_BEAUTY, natureGroup);
 
-        Util.registerWithItem("panflower", PANFLOWER, natureGroup);
-        Util.registerWithItem("honey_cluster", HONEY_CLUSTER, natureGroup);
+        Reg.registerWithItem("panflower", PANFLOWER, natureGroup);
+        Reg.registerWithItem("honey_cluster", HONEY_CLUSTER, natureGroup);
 
-        Util.registerWithItem("jungle_cap", JUNGLE_CAP, natureGroup);
+        Reg.registerWithItem("jungle_cap", JUNGLE_CAP, natureGroup);
 
-        Util.registerWithItem("orange_fern", ORANGE_FERN, natureGroup);
+        Reg.registerWithItem("orange_fern", ORANGE_FERN, natureGroup);
 
-        Util.registerWithItem("sprout", SPROUT, natureGroup);
+        Reg.registerWithItem("sprout", SPROUT, natureGroup);
 
-        Util.registerWithItem("wild_carrot", WILD_CARROT, natureGroup);
-        Util.registerWithItem("wild_potato", WILD_POTATO, natureGroup);
-        Util.registerWithItem("wild_beet", WILD_BEET, natureGroup);
-        Util.registerWithItem("wild_wheat", WILD_WHEAT, natureGroup);
-        Util.registerWithItem("morel", MOREL, natureGroup);
+        Reg.registerWithItem("wild_carrot", WILD_CARROT, natureGroup);
+        Reg.registerWithItem("wild_potato", WILD_POTATO, natureGroup);
+        Reg.registerWithItem("wild_beet", WILD_BEET, natureGroup);
+        Reg.registerWithItem("wild_wheat", WILD_WHEAT, natureGroup);
+        Reg.registerWithItem("morel", MOREL, natureGroup);
 
-        Util.registerWithItem("rice_crop", RICE_SEEDLINGS, natureGroup);
-        Util.registerWithItem("tomato_bush", TOMATO_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-        Util.registerWithItem("spicy_berries", SPICY_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600), 1.0f).build()).maxCount(64));
-        Util.registerWithItem("bitter_berries", BITTER_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-        Util.registerWithItem("sour_berries", SOUR_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+        Reg.registerWithItem("rice_crop", RICE_SEEDLINGS, natureGroup);
+        Reg.registerWithItem("tomato_bush", TOMATO_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+        Reg.registerWithItem("spicy_berries", SPICY_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600), 1.0f).build()).maxCount(64));
+        Reg.registerWithItem("bitter_berries", BITTER_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+        Reg.registerWithItem("sour_berries", SOUR_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
-        Util.registerWithItem("holly", HOLLY_BUSH, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.POISON,400), 1.0f).build()).maxCount(64));
+        Reg.registerWithItem("holly", HOLLY_BUSH, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.POISON,400), 1.0f).build()).maxCount(64));
 
-        Util.registerWithItem("maize_crop", MAIZE_CROP, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
+        Reg.registerWithItem("maize_crop", MAIZE_CROP, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
 
-        Util.registerWithItem("reeds", REED_BLOCK, natureGroup);
+        Reg.registerWithItem("reeds", REED_BLOCK, natureGroup);
 
-        Util.registerWithItem("rocks", ROCK_PILE, natureGroup);
-        Util.registerWithItem("snow_rocks", SNOW_ROCK_PILE, natureGroup);
-        Util.registerWithItem("redstone_crystal", REDSTONE_CRYSTAL, natureGroup);
-        Util.registerWithItem("snow_bush", SNOW_BUSH, natureGroup);
+        Reg.registerWithItem("rocks", ROCK_PILE, natureGroup);
+        Reg.registerWithItem("snow_rocks", SNOW_ROCK_PILE, natureGroup);
+        Reg.registerWithItem("redstone_crystal", REDSTONE_CRYSTAL, natureGroup);
+        Reg.registerWithItem("snow_bush", SNOW_BUSH, natureGroup);
 
         MOSSY_VINES.setPlant(MOSSY_VINES_PLANT);
         MOSSY_VINES_PLANT.setStem(MOSSY_VINES);
-        Util.registerWithItem("mossy_vines", MOSSY_VINES, natureGroup);
-        Util.register("mossy_vines_plant", MOSSY_VINES_PLANT);
+        Reg.registerWithItem("mossy_vines", MOSSY_VINES, natureGroup);
+        Reg.register("mossy_vines_plant", MOSSY_VINES_PLANT);
 
         DRY_VINES.setPlant(DRY_VINES_PLANT);
         DRY_VINES_PLANT.setStem(DRY_VINES);
-        Util.registerWithItem("dry_vines", DRY_VINES, natureGroup);
-        Util.register("dry_vines_plant", DRY_VINES_PLANT);
+        Reg.registerWithItem("dry_vines", DRY_VINES, natureGroup);
+        Reg.register("dry_vines_plant", DRY_VINES_PLANT);
 
-        Util.registerWithItem("dry_moss_carpet", DRY_MOSS_CARPET, natureGroup);
-        Util.registerWithItem("dry_moss", DRY_MOSS, natureGroup);
+        Reg.registerWithItem("dry_moss_carpet", DRY_MOSS_CARPET, natureGroup);
+        Reg.registerWithItem("dry_moss", DRY_MOSS, natureGroup);
 
-        Util.registerWithItem("jungle_bush", JUNGLE_BUSH, natureGroup);
-        Util.registerWithItem("swamp_bush", SWAMP_BUSH, natureGroup);
-        Util.registerWithItem("hedge", HEDGE, natureGroup);
+        Reg.registerWithItem("jungle_bush", JUNGLE_BUSH, natureGroup);
+        Reg.registerWithItem("swamp_bush", SWAMP_BUSH, natureGroup);
+        Reg.registerWithItem("hedge", HEDGE, natureGroup);
 
-        Util.registerWithItem("apple_sapling", APPLE_SAPLING, natureGroup);
-        Util.registerWithItem("apple_leaves", APPLE_LEAVES, natureGroup);
-        Util.registerWithItem("apple_leaves_empty", APPLE_LEAVES_EMPTY, natureGroup);
+        Reg.registerWithItem("apple_sapling", APPLE_SAPLING, natureGroup);
+        Reg.registerWithItem("apple_leaves", APPLE_LEAVES, natureGroup);
+        Reg.registerWithItem("apple_leaves_empty", APPLE_LEAVES_EMPTY, natureGroup);
 
-        Util.registerWithItem("spider_egg", SPIDER_EGG_BLOCK, natureGroup);
+        Reg.registerWithItem("spider_egg", SPIDER_EGG_BLOCK, natureGroup);
 
-        Util.registerWithItem("rooted_watcher", ROOTED_WATCHER, natureGroup);
-        Util.registerWithItem("tainted_nether_wart", TAINTED_WART, natureGroup);
-        Util.registerWithItem("soul_sporecap", SOUL_SPORECAP, natureGroup);
+        Reg.registerWithItem("rooted_watcher", ROOTED_WATCHER, natureGroup);
+        Reg.registerWithItem("tainted_nether_wart", TAINTED_WART, natureGroup);
+        Reg.registerWithItem("soul_sporecap", SOUL_SPORECAP, natureGroup);
     }
 }

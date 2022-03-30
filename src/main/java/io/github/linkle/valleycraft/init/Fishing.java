@@ -4,7 +4,6 @@ package io.github.linkle.valleycraft.init;
 import static io.github.linkle.valleycraft.init.ItemGroups.FISHING_GROUP;
 
 import io.github.linkle.valleycraft.items.food.FoodItemBase;
-import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.fluid.Fluids;
@@ -45,32 +44,32 @@ public class Fishing {
     public static final Item BUCKET_RED_PORGY = new EntityBucketItem(Entities.RED_PORGY, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().group(FISHING_GROUP).maxCount(1));
 
     public static void initialize() {
-        Util.register("perch", PERCH);
-        Util.register("crab_red", CRAB);
-        Util.register("masking_crab", MASKING_CRAB);
-        Util.register("lobster", LOBSTER);
-        Util.register("mussel", MUSSEL);
-        Util.register("brown_mussel", BROWN_MUSSEL);
-        Util.register("cerith_snail", CERITH_SNAIL);
-        Util.register("marlin_spike_seashell", MARLIN_SPIKE);
-        Util.register("lionfish", LIONFISH);
-        Util.register("sardine", SARDINE);
-        Util.register("red_porgy", RED_PORGY);
-        Util.register("stoneroller_minnow", STONEROLLER);
-        Util.register("slime_fish", SLIMEFISH);
-        Util.register("pridefin", PRIDEFIN);
-        Util.register("rainbow_wrasse", WRASSE);
-        Util.register("glistering_anglerfish", GLISTERING_ANGLER);
-        Util.register("octopus", OCTO);
-        Util.register("hairy_frog_fish", FROG_FISH);
-        Util.register("fire_eel", FIRE_EEL);
-        Util.register("ghost_fish", GHOST_FISH);
-        Util.register("abyss_watcher", ABYSS_WATCHER);
-        Util.register("bonefin", BONEFIN);
-        Util.register("bucket_fire_eel", BUCKET_FIRE_EEL);
-        Util.register("bucket_perch", BUCKET_PERCH);
-        Util.register("bucket_sardine", BUCKET_SARDINE);
-        Util.register("bucket_minnow", BUCKET_MINNOW);
-        Util.register("bucket_red_porgy", BUCKET_RED_PORGY);
+        Reg.register("perch", PERCH);
+        Reg.register("crab_red", CRAB);
+        Reg.register("masking_crab", MASKING_CRAB);
+        Reg.register("lobster", LOBSTER);
+        Reg.register("mussel", MUSSEL);
+        Reg.register("brown_mussel", BROWN_MUSSEL);
+        Reg.register("cerith_snail", CERITH_SNAIL);
+        Reg.register("marlin_spike_seashell", MARLIN_SPIKE);
+        Reg.register("lionfish", LIONFISH);
+        Reg.register("sardine", SARDINE);
+        Reg.register("red_porgy", RED_PORGY);
+        Reg.register("stoneroller_minnow", STONEROLLER);
+        Reg.register("slime_fish", SLIMEFISH);
+        Reg.register("pridefin", PRIDEFIN);
+        Reg.register("rainbow_wrasse", WRASSE);
+        Reg.register("glistering_anglerfish", GLISTERING_ANGLER);
+        Reg.register("octopus", OCTO);
+        Reg.register("hairy_frog_fish", FROG_FISH);
+        Reg.register("fire_eel", FIRE_EEL);
+        Reg.register("ghost_fish", GHOST_FISH);
+        Reg.register("abyss_watcher", ABYSS_WATCHER);
+        Reg.register("bonefin", BONEFIN);
+        Reg.register("bucket_fire_eel", BUCKET_FIRE_EEL);
+        Reg.register("bucket_perch", BUCKET_PERCH);
+        Reg.register("bucket_sardine", BUCKET_SARDINE);
+        Reg.register("bucket_minnow", BUCKET_MINNOW);
+        Reg.register("bucket_red_porgy", BUCKET_RED_PORGY);
     }
 }

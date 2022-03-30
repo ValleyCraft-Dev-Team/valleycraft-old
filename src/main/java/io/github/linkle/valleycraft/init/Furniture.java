@@ -3,7 +3,6 @@ package io.github.linkle.valleycraft.init;
 import io.github.linkle.valleycraft.blocks.decorations.*;
 import io.github.linkle.valleycraft.blocks.plants.Hanging.HangingBlock;
 import io.github.linkle.valleycraft.blocks.plants.Stumps.StumpBlock;
-import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
@@ -276,61 +275,61 @@ public class Furniture {
         var artGroup = new Item.Settings().group(ARTEFACT_GROUP).rarity(Rarity.RARE);
         new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.RARE);
 
-        Util.registerWithItem("table_oak", TABLE_OAK, furnGroup);
-        Util.registerWithItem("table_stone", TABLE_STONE, furnGroup);
-        Util.registerWithItem("table_plaid", TABLE_PLAID, furnGroup);
-        Util.registerWithItem("table_birch", TABLE_BIRCH, furnGroup);
-        Util.registerWithItem("table_spruce", TABLE_SPRUCE, furnGroup);
-        Util.registerWithItem("table_jungle", TABLE_JUNGLE, furnGroup);
-        Util.registerWithItem("table_acacia", TABLE_ACACIA, furnGroup);
-        Util.registerWithItem("table_dark_oak", TABLE_DARK, furnGroup);
-        Util.registerWithItem("table_warped", TABLE_WARPED, furnGroup);
-        Util.registerWithItem("table_crimson", TABLE_CRIMSON, furnGroup);
+        Reg.registerWithItem("table_oak", TABLE_OAK, furnGroup);
+        Reg.registerWithItem("table_stone", TABLE_STONE, furnGroup);
+        Reg.registerWithItem("table_plaid", TABLE_PLAID, furnGroup);
+        Reg.registerWithItem("table_birch", TABLE_BIRCH, furnGroup);
+        Reg.registerWithItem("table_spruce", TABLE_SPRUCE, furnGroup);
+        Reg.registerWithItem("table_jungle", TABLE_JUNGLE, furnGroup);
+        Reg.registerWithItem("table_acacia", TABLE_ACACIA, furnGroup);
+        Reg.registerWithItem("table_dark_oak", TABLE_DARK, furnGroup);
+        Reg.registerWithItem("table_warped", TABLE_WARPED, furnGroup);
+        Reg.registerWithItem("table_crimson", TABLE_CRIMSON, furnGroup);
 
-        Util.registerWithItem("stool_oak", STOOL_OAK, furnGroup);
-        Util.registerWithItem("stool_stone", STOOL_STONE, furnGroup);
-        Util.registerWithItem("stool_plaid", STOOL_PLAID, furnGroup);
-        Util.registerWithItem("stool_birch", STOOL_BIRCH, furnGroup);
-        Util.registerWithItem("stool_spruce", STOOL_SPRUCE, furnGroup);
-        Util.registerWithItem("stool_jungle", STOOL_JUNGLE, furnGroup);
-        Util.registerWithItem("stool_acacia", STOOL_ACACIA, furnGroup);
-        Util.registerWithItem("stool_dark_oak", STOOL_DARK, furnGroup);
-        Util.registerWithItem("stool_warped", STOOL_WARPED, furnGroup);
-        Util.registerWithItem("stool_crimson", STOOL_CRIMSON, furnGroup);
+        Reg.registerWithItem("stool_oak", STOOL_OAK, furnGroup);
+        Reg.registerWithItem("stool_stone", STOOL_STONE, furnGroup);
+        Reg.registerWithItem("stool_plaid", STOOL_PLAID, furnGroup);
+        Reg.registerWithItem("stool_birch", STOOL_BIRCH, furnGroup);
+        Reg.registerWithItem("stool_spruce", STOOL_SPRUCE, furnGroup);
+        Reg.registerWithItem("stool_jungle", STOOL_JUNGLE, furnGroup);
+        Reg.registerWithItem("stool_acacia", STOOL_ACACIA, furnGroup);
+        Reg.registerWithItem("stool_dark_oak", STOOL_DARK, furnGroup);
+        Reg.registerWithItem("stool_warped", STOOL_WARPED, furnGroup);
+        Reg.registerWithItem("stool_crimson", STOOL_CRIMSON, furnGroup);
 
         //registerWithItem("chair_stone", CHAIR_STONE, furnGroup);
 
-        Util.registerWithItem("iron_ladder", IRON_LADDER, furnGroup);
-        Util.registerWithItem("bamboo_ladder", BAMBOO_LADDER, furnGroup);
-        Util.registerWithItem("ladder_oak", OAK_LADDER, furnGroup);
-        Util.registerWithItem("ladder_birch", BIRCH_LADDER, furnGroup);
-        Util.registerWithItem("ladder_spruce", SPRUCE_LADDER, furnGroup);
-        Util.registerWithItem("ladder_jungle", JUNGLE_LADDER, furnGroup);
-        Util.registerWithItem("ladder_acacia", ACACIA_LADDER, furnGroup);
-        Util.registerWithItem("ladder_dark", DARK_LADDER, furnGroup);
-        Util.registerWithItem("ladder_warped", WARPED_LADDER, furnGroup);
-        Util.registerWithItem("ladder_crimson", CRIMSON_LADDER, furnGroup);
+        Reg.registerWithItem("iron_ladder", IRON_LADDER, furnGroup);
+        Reg.registerWithItem("bamboo_ladder", BAMBOO_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_oak", OAK_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_birch", BIRCH_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_spruce", SPRUCE_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_jungle", JUNGLE_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_acacia", ACACIA_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_dark", DARK_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_warped", WARPED_LADDER, furnGroup);
+        Reg.registerWithItem("ladder_crimson", CRIMSON_LADDER, furnGroup);
 
-        Util.registerWithItem("scarecrow", SCARE, furnGroup);
-        Util.registerWithItem("scarecrow_target", SCARE_TARGET, furnGroup);
-        Util.registerWithItem("scarecrow_hat", SCARE_HAT, furnGroup);
-        Util.registerWithItem("scarecrow_glow", SCARE_GLOW, furnGroup);
-        Util.registerWithItem("scarecrow_hat_glow", SCARE_HAT_GLOW, furnGroup);
-        Util.registerWithItem("scarecrow_soul", SCARE_SOUL, furnGroup);
-        Util.registerWithItem("scarecrow_hat_soul", SCARE_HAT_SOUL, furnGroup);
-        Util.registerWithItem("scarecrow_copper", SCARE_COPPER, furnGroup);
-        Util.registerWithItem("scarecrow_hat_copper", SCARE_HAT_COPPER, furnGroup);
+        Reg.registerWithItem("scarecrow", SCARE, furnGroup);
+        Reg.registerWithItem("scarecrow_target", SCARE_TARGET, furnGroup);
+        Reg.registerWithItem("scarecrow_hat", SCARE_HAT, furnGroup);
+        Reg.registerWithItem("scarecrow_glow", SCARE_GLOW, furnGroup);
+        Reg.registerWithItem("scarecrow_hat_glow", SCARE_HAT_GLOW, furnGroup);
+        Reg.registerWithItem("scarecrow_soul", SCARE_SOUL, furnGroup);
+        Reg.registerWithItem("scarecrow_hat_soul", SCARE_HAT_SOUL, furnGroup);
+        Reg.registerWithItem("scarecrow_copper", SCARE_COPPER, furnGroup);
+        Reg.registerWithItem("scarecrow_hat_copper", SCARE_HAT_COPPER, furnGroup);
 
-        Util.registerWithItem("rarecrow_melon", RARE_MELON, furnGroup);
-        Util.registerWithItem("rarecrow_zombie", RARE_ZOMBIE, furnGroup);
-        Util.registerWithItem("rarecrow_skeleton", RARE_SKELETON, furnGroup);
+        Reg.registerWithItem("rarecrow_melon", RARE_MELON, furnGroup);
+        Reg.registerWithItem("rarecrow_zombie", RARE_ZOMBIE, furnGroup);
+        Reg.registerWithItem("rarecrow_skeleton", RARE_SKELETON, furnGroup);
 
-        Util.registerWithItem("snow", SNOW, furnGroup);
+        Reg.registerWithItem("snow", SNOW, furnGroup);
 
-        Util.registerWithItem("spike_wall_block", SPIKE_WALL_BLOCK, furnGroup);
-        Util.registerWithItem("brazier", BRAZIER, furnGroup);
-        Util.registerWithItem("brazier_soul", SOUL_BRAZIER, furnGroup);
-        Util.registerWithItem("brazier_copper", COPPER_BRAZIER, furnGroup);
+        Reg.registerWithItem("spike_wall_block", SPIKE_WALL_BLOCK, furnGroup);
+        Reg.registerWithItem("brazier", BRAZIER, furnGroup);
+        Reg.registerWithItem("brazier_soul", SOUL_BRAZIER, furnGroup);
+        Reg.registerWithItem("brazier_copper", COPPER_BRAZIER, furnGroup);
 
         //registerWithItem("brazier_metal", BRAZIER_METAL, furnGroup);
         //registerWithItem("blaze_brazier", BLAZE_BRAZIER, furnGroup);
@@ -339,126 +338,126 @@ public class Furniture {
         //registerWithItem("campfire_pot", CAMPFIRE_POT, explGroup);
         //registerWithItem("soul_campfire_pot", SOUL_CAMPFIRE_POT, explGroup);
 
-        Util.registerWithItem("screen", SCREEN, furnGroup);
+        Reg.registerWithItem("screen", SCREEN, furnGroup);
 
-        Util.registerWithItem("charcoal_block", CHARCOAL_BLOCK, furnGroup);
+        Reg.registerWithItem("charcoal_block", CHARCOAL_BLOCK, furnGroup);
 
-        Util.registerWithItem("fiber_block", FIBER_BALE, furnGroup);
-        Util.registerWithItem("glow_kelp_block", GLOW_KELP_BALE, furnGroup);
-        Util.registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
+        Reg.registerWithItem("fiber_block", FIBER_BALE, furnGroup);
+        Reg.registerWithItem("glow_kelp_block", GLOW_KELP_BALE, furnGroup);
+        Reg.registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
         //registerWithItem("ameranth_block", AMERANTH_BALE, furnGroup);
-        Util.registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
+        Reg.registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
 
-        Util.registerWithItem("copper_chain", COPPER_CHAIN, explGroup);
-        Util.registerWithItem("exposed_copper_chain", EXPOSED_COPPER_CHAIN, explGroup);
-        Util.registerWithItem("weathered_copper_chain", WEATHERED_COPPER_CHAIN, explGroup);
-        Util.registerWithItem("oxidized_copper_chain", OXIDIZED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("copper_chain", COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("exposed_copper_chain", EXPOSED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("weathered_copper_chain", WEATHERED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("oxidized_copper_chain", OXIDIZED_COPPER_CHAIN, explGroup);
 
-        Util.registerWithItem("waxed_copper_chain", WAXED_COPPER_CHAIN, explGroup);
-        Util.registerWithItem("waxed_exposed_copper_chain", WAXED_EXPOSED_COPPER_CHAIN, explGroup);
-        Util.registerWithItem("waxed_weathered_copper_chain", WAXED_WEATHERED_COPPER_CHAIN, explGroup);
-        Util.registerWithItem("waxed_oxidized_copper_chain", WAXED_OXIDIZED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("waxed_copper_chain", WAXED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("waxed_exposed_copper_chain", WAXED_EXPOSED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("waxed_weathered_copper_chain", WAXED_WEATHERED_COPPER_CHAIN, explGroup);
+        Reg.registerWithItem("waxed_oxidized_copper_chain", WAXED_OXIDIZED_COPPER_CHAIN, explGroup);
 
-        Util.registerWithItem("golden_chain", CHAIN_G, explGroup);
-        Util.registerWithItem("netherite_chain", CHAIN_N, explGroup);
+        Reg.registerWithItem("golden_chain", CHAIN_G, explGroup);
+        Reg.registerWithItem("netherite_chain", CHAIN_N, explGroup);
 
-        Util.registerWithItem("brown_bricks", B_BRICKS, furnGroup);
-        Util.registerWithItem("brown_cracked_bricks", B_CRACKED, furnGroup);
-        Util.registerWithItem("brown_mossy_bricks", B_MOSSY, furnGroup);
-        Util.registerWithItem("brown_brick_slab", B_SLAB, furnGroup);
-        Util.registerWithItem("brown_brick_stairs", B_STAIRS, furnGroup);
+        Reg.registerWithItem("brown_bricks", B_BRICKS, furnGroup);
+        Reg.registerWithItem("brown_cracked_bricks", B_CRACKED, furnGroup);
+        Reg.registerWithItem("brown_mossy_bricks", B_MOSSY, furnGroup);
+        Reg.registerWithItem("brown_brick_slab", B_SLAB, furnGroup);
+        Reg.registerWithItem("brown_brick_stairs", B_STAIRS, furnGroup);
         //Util.registerWithItem("chiseled_brown_bricks", MIXED_CHISELED, furnGroup);
 
-        Util.registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
-        Util.registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
-        Util.registerWithItem("cobblestone_chiseled", COBBLE_CHISELED, furnGroup);
-        Util.registerWithItem("cobblestone_brick_stairs", COBBLE_STAIRS, furnGroup);
-        Util.registerWithItem("cobblestone_brick_slab", COBBLE_SLAB, furnGroup);
+        Reg.registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
+        Reg.registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
+        Reg.registerWithItem("cobblestone_chiseled", COBBLE_CHISELED, furnGroup);
+        Reg.registerWithItem("cobblestone_brick_stairs", COBBLE_STAIRS, furnGroup);
+        Reg.registerWithItem("cobblestone_brick_slab", COBBLE_SLAB, furnGroup);
 
-        Util.registerWithItem("smooth_stone", SMOOTH_STONE_BRICK, furnGroup);
-        Util.registerWithItem("stone_tiles", SMOOTH_STONE_TILE, furnGroup);
-        Util.registerWithItem("stone_tile_stairs", SMOOTH_STONE_TILE_STAIRS, furnGroup);
-        Util.registerWithItem("stone_tile_slab", SMOOTH_STONE_TILE_SLAB, furnGroup);
+        Reg.registerWithItem("smooth_stone", SMOOTH_STONE_BRICK, furnGroup);
+        Reg.registerWithItem("stone_tiles", SMOOTH_STONE_TILE, furnGroup);
+        Reg.registerWithItem("stone_tile_stairs", SMOOTH_STONE_TILE_STAIRS, furnGroup);
+        Reg.registerWithItem("stone_tile_slab", SMOOTH_STONE_TILE_SLAB, furnGroup);
 
-        Util.registerWithItem("smooth_stone_tiles", SMOOTHER_STONE_TILE, furnGroup);
-        Util.registerWithItem("smooth_stone_tiles_slab", SMOOTHER_STONE_TILE_SLAB, furnGroup);
-        Util.registerWithItem("smooth_stone_tiles_stairs", SMOOTHER_STONE_TILE_STAIRS, furnGroup);
+        Reg.registerWithItem("smooth_stone_tiles", SMOOTHER_STONE_TILE, furnGroup);
+        Reg.registerWithItem("smooth_stone_tiles_slab", SMOOTHER_STONE_TILE_SLAB, furnGroup);
+        Reg.registerWithItem("smooth_stone_tiles_stairs", SMOOTHER_STONE_TILE_STAIRS, furnGroup);
 
-        Util.registerWithItem("quartz_tiles", QUARTZ_TILE, furnGroup);
-        Util.registerWithItem("quartz_tiles_stairs", QUARTZ_TILE_STAIRS, furnGroup);
-        Util.registerWithItem("quartz_tiles_slab", QUARTZ_TILE_SLAB, furnGroup);
+        Reg.registerWithItem("quartz_tiles", QUARTZ_TILE, furnGroup);
+        Reg.registerWithItem("quartz_tiles_stairs", QUARTZ_TILE_STAIRS, furnGroup);
+        Reg.registerWithItem("quartz_tiles_slab", QUARTZ_TILE_SLAB, furnGroup);
 
-        Util.registerWithItem("kitchen_tiles", KITCHEN_TILE, furnGroup);
-        Util.registerWithItem("kitchen_tiles_stairs", KITCHEN_TILE_STAIRS, furnGroup);
-        Util.registerWithItem("kitchen_tiles_slab", KITCHEN_TILE_SLAB, furnGroup);
+        Reg.registerWithItem("kitchen_tiles", KITCHEN_TILE, furnGroup);
+        Reg.registerWithItem("kitchen_tiles_stairs", KITCHEN_TILE_STAIRS, furnGroup);
+        Reg.registerWithItem("kitchen_tiles_slab", KITCHEN_TILE_SLAB, furnGroup);
 
-        Util.registerWithItem("volcanic_tiles", VOLCANIC_TILE, furnGroup);
-        Util.registerWithItem("volcanic_tiles_stairs", VOLCANIC_TILE_STAIRS, furnGroup);
-        Util.registerWithItem("volcanic_tiles_slab", VOLCANIC_TILE_SLAB, furnGroup);
+        Reg.registerWithItem("volcanic_tiles", VOLCANIC_TILE, furnGroup);
+        Reg.registerWithItem("volcanic_tiles_stairs", VOLCANIC_TILE_STAIRS, furnGroup);
+        Reg.registerWithItem("volcanic_tiles_slab", VOLCANIC_TILE_SLAB, furnGroup);
 
-        Util.registerWithItem("volcanic_bricks", VOLCANIC_BRICKS, furnGroup);
-        Util.registerWithItem("volcanic_bricks_stairs", VOLCANIC_STAIRS, furnGroup);
-        Util.registerWithItem("volcanic_bricks_slab", VOLCANIC_SLAB, furnGroup);
-        Util.registerWithItem("chiseled_volcanic_bricks", VOLCANIC_CHISELED, furnGroup);
+        Reg.registerWithItem("volcanic_bricks", VOLCANIC_BRICKS, furnGroup);
+        Reg.registerWithItem("volcanic_bricks_stairs", VOLCANIC_STAIRS, furnGroup);
+        Reg.registerWithItem("volcanic_bricks_slab", VOLCANIC_SLAB, furnGroup);
+        Reg.registerWithItem("chiseled_volcanic_bricks", VOLCANIC_CHISELED, furnGroup);
 
-        Util.registerWithItem("carmine_bricks", C_BRICKS, furnGroup);
-        Util.registerWithItem("carmine_stairs", C_STAIRS, furnGroup);
-        Util.registerWithItem("carmine_slab", C_SLAB, furnGroup);
-        Util.registerWithItem("chiseled_carmine", C_CHISELED, furnGroup);
-        Util.registerWithItem("carmine_cracked", C_CRACK, furnGroup);
-        Util.registerWithItem("carmine_mossy", C_MOSSY, furnGroup);
-        Util.registerWithItem("carmine_smooth", C_SMOOTH, furnGroup);
+        Reg.registerWithItem("carmine_bricks", C_BRICKS, furnGroup);
+        Reg.registerWithItem("carmine_stairs", C_STAIRS, furnGroup);
+        Reg.registerWithItem("carmine_slab", C_SLAB, furnGroup);
+        Reg.registerWithItem("chiseled_carmine", C_CHISELED, furnGroup);
+        Reg.registerWithItem("carmine_cracked", C_CRACK, furnGroup);
+        Reg.registerWithItem("carmine_mossy", C_MOSSY, furnGroup);
+        Reg.registerWithItem("carmine_smooth", C_SMOOTH, furnGroup);
 
-        Util.registerWithItem("encrusted_sandstone", ENCRUSTED, furnGroup);
+        Reg.registerWithItem("encrusted_sandstone", ENCRUSTED, furnGroup);
 
         //Lanterns & Torches
-        Util.registerWithItem("redstone_lantern", REDSTONE_LANTERN, furnGroup);
+        Reg.registerWithItem("redstone_lantern", REDSTONE_LANTERN, furnGroup);
 
-        Util.registerWithItem("mug_block", MUG_BLOCK, cookGroup);
-        Util.registerWithItem("small_mug_block", SMALL_MUG_BLOCK, cookGroup);
-        Util.registerWithItem("goblet", GOBLET_BLOCK, artGroup);
-        Util.registerWithItem("bowl_block", BOWL_BLOCK, cookGroup);
-        Util.registerWithItem("bento_block", BENTO_BLOCK, cookGroup);
-        Util.registerWithItem("stew_pot", STEW_POT, furnGroup);
-        Util.registerWithItem("stew_campfire_pot", STEW_POT_CAMPFIRE, furnGroup);
+        Reg.registerWithItem("mug_block", MUG_BLOCK, cookGroup);
+        Reg.registerWithItem("small_mug_block", SMALL_MUG_BLOCK, cookGroup);
+        Reg.registerWithItem("goblet", GOBLET_BLOCK, artGroup);
+        Reg.registerWithItem("bowl_block", BOWL_BLOCK, cookGroup);
+        Reg.registerWithItem("bento_block", BENTO_BLOCK, cookGroup);
+        Reg.registerWithItem("stew_pot", STEW_POT, furnGroup);
+        Reg.registerWithItem("stew_campfire_pot", STEW_POT_CAMPFIRE, furnGroup);
 
-        Util.registerWithItem("anchor", ANCHOR, artGroup);
-        Util.registerWithItem("beveled_glass", BEVELED_PANE, furnGroup);
-        Util.registerWithItem("beveled_glass_copper", BEVELED_PANE_COPPER, furnGroup);
-        Util.registerWithItem("beveled_glass_gold", BEVELED_PANE_GOLD, furnGroup);
-        Util.registerWithItem("beveled_glass_netherite", BEVELED_PANE_NETHERITE, furnGroup);
+        Reg.registerWithItem("anchor", ANCHOR, artGroup);
+        Reg.registerWithItem("beveled_glass", BEVELED_PANE, furnGroup);
+        Reg.registerWithItem("beveled_glass_copper", BEVELED_PANE_COPPER, furnGroup);
+        Reg.registerWithItem("beveled_glass_gold", BEVELED_PANE_GOLD, furnGroup);
+        Reg.registerWithItem("beveled_glass_netherite", BEVELED_PANE_NETHERITE, furnGroup);
 
         //amethyst
-        Util.registerWithItem("beveled_glass_amethyst", BEVELED_PANE_A, furnGroup);
-        Util.registerWithItem("beveled_glass_amethyst_copper", BEVELED_PANE_A_C, furnGroup);
-        Util.registerWithItem("beveled_glass_amethyst_gold", BEVELED_PANE_A_G, furnGroup);
-        Util.registerWithItem("beveled_glass_amethyst_netherite", BEVELED_PANE_A_N, furnGroup);
+        Reg.registerWithItem("beveled_glass_amethyst", BEVELED_PANE_A, furnGroup);
+        Reg.registerWithItem("beveled_glass_amethyst_copper", BEVELED_PANE_A_C, furnGroup);
+        Reg.registerWithItem("beveled_glass_amethyst_gold", BEVELED_PANE_A_G, furnGroup);
+        Reg.registerWithItem("beveled_glass_amethyst_netherite", BEVELED_PANE_A_N, furnGroup);
 
-        Util.registerWithItem("rope_bridge", ROPE_BRIDGE, explGroup);
-        Util.registerWithItem("rope_bridge_anchor", ROPE_BRIDGE_ANCHOR, explGroup);
-        Util.registerWithItem("net_block", NET, explGroup);
+        Reg.registerWithItem("rope_bridge", ROPE_BRIDGE, explGroup);
+        Reg.registerWithItem("rope_bridge_anchor", ROPE_BRIDGE_ANCHOR, explGroup);
+        Reg.registerWithItem("net_block", NET, explGroup);
 
-        Util.registerWithItem("lantern_hanging", LANTERN_HANGING, furnGroup);
-        Util.registerWithItem("soul_hanging", SOUL_HANGING, furnGroup);
-        Util.registerWithItem("redstone_hanging", RED_HANGING, furnGroup);
+        Reg.registerWithItem("lantern_hanging", LANTERN_HANGING, furnGroup);
+        Reg.registerWithItem("soul_hanging", SOUL_HANGING, furnGroup);
+        Reg.registerWithItem("redstone_hanging", RED_HANGING, furnGroup);
 
-        Util.registerWithItem("keg", KEG, furnGroup);
+        Reg.registerWithItem("keg", KEG, furnGroup);
 
-        Util.registerWithItem("rounded_barrel", ROUNDED_BARREL, furnGroup);
-        Util.registerWithItem("ice_box", ICE_BOX, furnGroup);
+        Reg.registerWithItem("rounded_barrel", ROUNDED_BARREL, furnGroup);
+        Reg.registerWithItem("ice_box", ICE_BOX, furnGroup);
 
-        Util.registerWithItem("soul_jack_o_lantern", SOUL_JACK, furnGroup);
-        Util.registerWithItem("copper_jack_o_lantern", COPPER_JACK, furnGroup);
+        Reg.registerWithItem("soul_jack_o_lantern", SOUL_JACK, furnGroup);
+        Reg.registerWithItem("copper_jack_o_lantern", COPPER_JACK, furnGroup);
 
-        Util.registerWithItem("volc_stone_smooth", VOLCANIC_STONE_SMOOTH, furnGroup);
+        Reg.registerWithItem("volc_stone_smooth", VOLCANIC_STONE_SMOOTH, furnGroup);
 
-        Util.registerWithItem("chimney_cobble", CHIMNEY_COBBLE, furnGroup);
-        Util.registerWithItem("chimney_cobblestone_brick", CHIMNEY_COBBLE_BRICK, furnGroup);
-        Util.registerWithItem("chimney_brick", CHIMNEY_BRICK, furnGroup);
-        Util.registerWithItem("chimney_carmine", CHIMNEY_CARMINE, furnGroup);
-        Util.registerWithItem("chimney_volcanic", CHIMNEY_VOLCANIC, furnGroup);
+        Reg.registerWithItem("chimney_cobble", CHIMNEY_COBBLE, furnGroup);
+        Reg.registerWithItem("chimney_cobblestone_brick", CHIMNEY_COBBLE_BRICK, furnGroup);
+        Reg.registerWithItem("chimney_brick", CHIMNEY_BRICK, furnGroup);
+        Reg.registerWithItem("chimney_carmine", CHIMNEY_CARMINE, furnGroup);
+        Reg.registerWithItem("chimney_volcanic", CHIMNEY_VOLCANIC, furnGroup);
 
-        Util.registerWithItem("hanging_pot", HANGING, furnGroup);
+        Reg.registerWithItem("hanging_pot", HANGING, furnGroup);
 
         //registerWithItem("hanging_redstone", HANGING_R, furnGroup);
         //registerWithItem("hanging_fluorite", HANGING_F, furnGroup);
@@ -471,38 +470,38 @@ public class Furniture {
         //registerWithItem("crystal_ball", CRYSTAL, furnGroup);
         //registerWithItem("crystal_ball_snow", CRYSTAL_FROZEN, furnGroupRare);
 
-        Util.registerWithItem("bookshelf_cobweb", BOOK_COBWEB, furnGroup);
+        Reg.registerWithItem("bookshelf_cobweb", BOOK_COBWEB, furnGroup);
 
-        Util.registerWithItem("bookshelf_empty", EMPTY_SHELF, furnGroup);
-        Util.registerWithItem("bookshelf_empty_cobweb", EMPTY_COBWEB, furnGroup);
+        Reg.registerWithItem("bookshelf_empty", EMPTY_SHELF, furnGroup);
+        Reg.registerWithItem("bookshelf_empty_cobweb", EMPTY_COBWEB, furnGroup);
 
-        Util.registerWithItem("bookshelf_lantern", LANTERN_SHELF, furnGroup);
-        Util.registerWithItem("bookshelf_lantern_cobweb", LANTERN_COBWEB, furnGroup);
+        Reg.registerWithItem("bookshelf_lantern", LANTERN_SHELF, furnGroup);
+        Reg.registerWithItem("bookshelf_lantern_cobweb", LANTERN_COBWEB, furnGroup);
 
-        Util.registerWithItem("bookshelf_potions", POTION_SHELF, furnGroup);
-        Util.registerWithItem("bookshelf_potions_cobweb", POTION_COBWEB, furnGroup);
+        Reg.registerWithItem("bookshelf_potions", POTION_SHELF, furnGroup);
+        Reg.registerWithItem("bookshelf_potions_cobweb", POTION_COBWEB, furnGroup);
 
-        Util.registerWithItem("bookshelf_anthropology", ANTHRO_SHELF, furnGroup);
-        Util.registerWithItem("bookshelf_anthropology_cobweb", ANTHRO_COBWEB, furnGroup);
+        Reg.registerWithItem("bookshelf_anthropology", ANTHRO_SHELF, furnGroup);
+        Reg.registerWithItem("bookshelf_anthropology_cobweb", ANTHRO_COBWEB, furnGroup);
 
-        Util.registerWithItem("bookshelf_dishes", DISH_SHELF, furnGroup);
-        Util.registerWithItem("bookshelf_dishes_cobweb", DISH_COBWEB, furnGroup);
+        Reg.registerWithItem("bookshelf_dishes", DISH_SHELF, furnGroup);
+        Reg.registerWithItem("bookshelf_dishes_cobweb", DISH_COBWEB, furnGroup);
 
-        Util.registerWithItem("stump_morel", STUMP_MOREL, furnGroup);
-        Util.registerWithItem("stump_red", STUMP_RED, furnGroup);
-        Util.registerWithItem("stump_brown", STUMP_BROWN, furnGroup);
+        Reg.registerWithItem("stump_morel", STUMP_MOREL, furnGroup);
+        Reg.registerWithItem("stump_red", STUMP_RED, furnGroup);
+        Reg.registerWithItem("stump_brown", STUMP_BROWN, furnGroup);
 
-        Util.registerWithItem("wreath", WREATH, furnGroup);
-        Util.registerWithItem("miners_crest", CREST, furnGroup);
+        Reg.registerWithItem("wreath", WREATH, furnGroup);
+        Reg.registerWithItem("miners_crest", CREST, furnGroup);
 
-        Util.register("bone_torch", new WallStandingBlockItem(BONE_TORCH, WALL_BONE_TORCH, furnGroup));
-        Util.register("wall_bone_torch", WALL_BONE_TORCH);
+        Reg.register("bone_torch", new WallStandingBlockItem(BONE_TORCH, WALL_BONE_TORCH, furnGroup));
+        Reg.register("wall_bone_torch", WALL_BONE_TORCH);
 
-        Util.register("soul_bone_torch", new WallStandingBlockItem(SOUL_BONE_TORCH, SOUL_WALL_BONE_TORCH, furnGroup));
-        Util.register("soul_wall_bone_torch", SOUL_WALL_BONE_TORCH);
+        Reg.register("soul_bone_torch", new WallStandingBlockItem(SOUL_BONE_TORCH, SOUL_WALL_BONE_TORCH, furnGroup));
+        Reg.register("soul_wall_bone_torch", SOUL_WALL_BONE_TORCH);
 
-        Util.register("redstone_bone_torch", new WallStandingBlockItem(REDSTONE_BONE_TORCH, REDSTONE_WALL_BONE_TORCH, furnGroup));
-        Util.register("redstone_wall_bone_torch", REDSTONE_WALL_BONE_TORCH);
+        Reg.register("redstone_bone_torch", new WallStandingBlockItem(REDSTONE_BONE_TORCH, REDSTONE_WALL_BONE_TORCH, furnGroup));
+        Reg.register("redstone_wall_bone_torch", REDSTONE_WALL_BONE_TORCH);
 
         //registerWithItem("gear", GEAR, furnGroupRare);
 
