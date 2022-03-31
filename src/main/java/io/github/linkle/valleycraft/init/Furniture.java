@@ -42,8 +42,6 @@ public class Furniture {
     public static final Block STOOL_STONE = new StoolBlock();
     public static final Block STOOL_PLAID = new StoolBlock();
 
-    public static final Block CHAIR_STONE = new StoolBlock();
-
     public static final Block IRON_LADDER = new LadderBlock(FabricBlockSettings.of(Material.METAL).sounds(BlockSoundGroup.METAL).strength(1f,5f));
     public static final Block BAMBOO_LADDER = new LadderBlock();
     public static final Block OAK_LADDER = new LadderBlock();
@@ -123,7 +121,6 @@ public class Furniture {
     public static final Block BRAZIER = new BrazierBlock(15, 1);
     public static final Block SOUL_BRAZIER = new BrazierBlock(10, 2);
     public static final Block COPPER_BRAZIER = new BrazierBlock(13, 1);
-    public static final Block BLAZE_BRAZIER = new BrazierBlock(15, 3);
 
     public static final Block C_BRICKS = new BrownBlock();
     public static final Block C_CHISELED = new BrownBlock();
@@ -141,7 +138,6 @@ public class Furniture {
             .strength(1.5f, 2.0f));
 
     public static final Block FIBER_BALE = new BaleBlock();
-    public static final Block AMERANTH_BALE = new BaleBlock();
     public static final Block SEAWEED_BALE = new BaleBlock();
     public static final Block GLOW_KELP_BALE = new GlowingBaleBlock();
 
@@ -180,7 +176,6 @@ public class Furniture {
     public static final Block BEVELED_PANE_A_N = new BeveledGlassBlock();
 
     public static final Block MUG_BLOCK = new DishBlock();
-    //public static final Block JAR_BLOCK = new DishBlock();
     public static final Block BENTO_BLOCK = new BentoBlock();
     public static final Block BOWL_BLOCK = new BowlBlock();
     public static final Block STEW_POT = new StewPotBlock();
@@ -199,7 +194,6 @@ public class Furniture {
 
     public static final Block LANTERN_HANGING = new LanternBlock(15, false);
     public static final Block SOUL_HANGING = new LanternBlock(10, false);
-    //public static final Block FAIRY_HANGING = new LanternBlock(15, false);
     public static final Block RED_HANGING = new LanternBlock(7, true);
 
     public static final Block CHIMNEY_COBBLE = new ChimneyBlock(FabricBlockSettings.of(Material.STONE)
@@ -247,11 +241,8 @@ public class Furniture {
 
     public static final Block KEG = new KegBlock();
 
-    //public static final Block PET_BED = new PetBedBlock();
     public static final Block WREATH = new WreathBlock();
     public static final Block CREST = new CrestBlock();
-
-    public static final Block BRAZIER_METAL = new BrazierMetalBlock();
 
     public static final Block BONE_TORCH = new TorchBlock(Block.Settings.copy(Blocks.TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.FLAME);
     public static final Block WALL_BONE_TORCH = new WallTorchBlock(Block.Settings.copy(Blocks.WALL_TORCH).sounds(BlockSoundGroup.BONE), ParticleTypes.FLAME);
@@ -265,7 +256,6 @@ public class Furniture {
     public static final Block ICE_BOX = new IceBoxBarrelBlock();
 
     public static final Block VOLCANIC_CHISELED = new PolishedStoneBlock();
-    public static final Block MIXED_CHISELED = new PolishedStoneBlock();
     public static final Block ENCRUSTED = new EncrustedBlock();
 
     public static void initialize() {
@@ -331,13 +321,6 @@ public class Furniture {
         Reg.registerWithItem("brazier_soul", SOUL_BRAZIER, furnGroup);
         Reg.registerWithItem("brazier_copper", COPPER_BRAZIER, furnGroup);
 
-        //registerWithItem("brazier_metal", BRAZIER_METAL, furnGroup);
-        //registerWithItem("blaze_brazier", BLAZE_BRAZIER, furnGroup);
-
-        //Crock Pots *coming soonTM*
-        //registerWithItem("campfire_pot", CAMPFIRE_POT, explGroup);
-        //registerWithItem("soul_campfire_pot", SOUL_CAMPFIRE_POT, explGroup);
-
         Reg.registerWithItem("screen", SCREEN, furnGroup);
 
         Reg.registerWithItem("charcoal_block", CHARCOAL_BLOCK, furnGroup);
@@ -345,7 +328,6 @@ public class Furniture {
         Reg.registerWithItem("fiber_block", FIBER_BALE, furnGroup);
         Reg.registerWithItem("glow_kelp_block", GLOW_KELP_BALE, furnGroup);
         Reg.registerWithItem("seaweed_block", SEAWEED_BALE, furnGroup);
-        //registerWithItem("ameranth_block", AMERANTH_BALE, furnGroup);
         Reg.registerWithItem("climbable_rope", CLIMBABLE_ROPE, explGroup);
 
         Reg.registerWithItem("copper_chain", COPPER_CHAIN, explGroup);
@@ -366,7 +348,6 @@ public class Furniture {
         Reg.registerWithItem("brown_mossy_bricks", B_MOSSY, furnGroup);
         Reg.registerWithItem("brown_brick_slab", B_SLAB, furnGroup);
         Reg.registerWithItem("brown_brick_stairs", B_STAIRS, furnGroup);
-        //Util.registerWithItem("chiseled_brown_bricks", MIXED_CHISELED, furnGroup);
 
         Reg.registerWithItem("cobblestone_brick", COBBLE_BRICK, furnGroup);
         Reg.registerWithItem("cobblestone_mossy_brick", COBBLE_MOSSY, furnGroup);
@@ -459,17 +440,6 @@ public class Furniture {
 
         Reg.registerWithItem("hanging_pot", HANGING, furnGroup);
 
-        //registerWithItem("hanging_redstone", HANGING_R, furnGroup);
-        //registerWithItem("hanging_fluorite", HANGING_F, furnGroup);
-
-        //registerWithItem("hanging_diamond", HANGING_D, furnGroup);
-        //registerWithItem("hanging_emerald", HANGING_E, furnGroup);
-        //registerWithItem("hanging_amethyst", HANGING_A, furnGroup);
-        //registerWithItem("hanging_glowstone", HANGING_G, furnGroup);
-
-        //registerWithItem("crystal_ball", CRYSTAL, furnGroup);
-        //registerWithItem("crystal_ball_snow", CRYSTAL_FROZEN, furnGroupRare);
-
         Reg.registerWithItem("bookshelf_cobweb", BOOK_COBWEB, furnGroup);
 
         Reg.registerWithItem("bookshelf_empty", EMPTY_SHELF, furnGroup);
@@ -502,10 +472,6 @@ public class Furniture {
 
         Reg.register("redstone_bone_torch", new WallStandingBlockItem(REDSTONE_BONE_TORCH, REDSTONE_WALL_BONE_TORCH, furnGroup));
         Reg.register("redstone_wall_bone_torch", REDSTONE_WALL_BONE_TORCH);
-
-        //registerWithItem("gear", GEAR, furnGroupRare);
-
-        //registerWithItem("pet_bed", PET_BED, furnGroup);
 
         //Fuels
         //same as Coal Block

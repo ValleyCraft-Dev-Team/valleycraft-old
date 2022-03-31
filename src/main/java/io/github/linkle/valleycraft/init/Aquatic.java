@@ -12,7 +12,6 @@ public class Aquatic {
 
     public static final Block CLAM = new ClamBlock();
     public static final Block GIANT_SCALLOP = new GiantClamBlock();
-    public static final Block STARFISH = new AquaticFacingBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
     public static final Block SAND_DOLLAR = new AquaticBlock(Block.createCuboidShape(3, 0, 3, 13, 1, 13));
     public static final Block RED_SEA_GRASS = new RedSeagrassBlock();
 
@@ -38,7 +37,6 @@ public class Aquatic {
     public static void initialize() {
         Reg.registerWithItem("clam", CLAM, new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()));
         Reg.registerWithItem("giant_scallop", GIANT_SCALLOP, new Item.Settings().group(FISHING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.4f).build()).maxCount(16));
-        //Util.registerWithItem("fossilized_starfish", STARFISH, new Item.Settings().group(ARTEFACT_GROUP).rarity(Rarity.EPIC));
         Reg.registerWithItem("sand_dollar", SAND_DOLLAR, new Item.Settings().group(FISHING_GROUP).rarity(Rarity.UNCOMMON));
         Reg.registerWithItem("red_seagrass", RED_SEA_GRASS, new Item.Settings().group(FISHING_GROUP));
         Reg.registerWithItem("sea_fern", SEA_FERN, new Item.Settings().group(FISHING_GROUP));

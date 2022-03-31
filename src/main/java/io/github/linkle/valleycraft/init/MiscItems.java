@@ -16,12 +16,10 @@ import net.minecraft.util.Rarity;
 public class MiscItems {
     public static final Item BOMB_BAG = new BombBundleBase(new Item.Settings().group(ItemGroups.MISC_GROUP).rarity(Rarity.UNCOMMON).maxCount(16));
     public static final Item ARROW_BUNDLE = new ArrowBundleBase(new Item.Settings().group(ItemGroups.EXPLORATION_GROUP).rarity(Rarity.UNCOMMON).maxCount(16));
-    public static final Item STIRRUP = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP));
     public static final Item TURF_ITEM = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP));
     public static final Item MUD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item MUD_BRICK = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item FLOUR_BAG = new MiscItemBase(new Item.Settings().group(ItemGroups.COOKING_GROUP).maxCount(64));
-    public static final Item AMERANTH = new MiscItemBase(new Item.Settings().group(ItemGroups.COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     public static final Item COPPER_NUGGET = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item NETHER_NUGGET = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item SALTPETER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
@@ -37,7 +35,6 @@ public class MiscItems {
     public static final Item G_TOTEM = new GrowthTotemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(1));
     public static final Item MULCH = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item FUR_CLUMP = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
-    public static final Item RAWHIDE = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item BEAR_SPAWN_EGG = new SpawnEggItem(Entities.BEAR, 0x56290D, 0x120802, new Item.Settings().group(ItemGroups.MISC_GROUP));
     public static final Item DUCK_SPAWN_EGG = new SpawnEggItem(Entities.DUCK, 0x5B3200, 0x445B22, new Item.Settings().group(ItemGroups.MISC_GROUP));
     public static final Item DUCK_EGG = new MiscItemBase(new Item.Settings().maxCount(16).group(ItemGroups.MISC_GROUP));
@@ -45,16 +42,8 @@ public class MiscItems {
     public static final Item ARROWHEAD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item DRIP_ARROWHEAD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item OBSIDIAN_ARROWHEAD = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
-    public static final Item HOOK_I = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64));
-    public static final Item HOOK_C = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
-    public static final Item HOOK_G = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64).rarity(Rarity.RARE));
-    public static final Item HOOK_N = new MiscItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64).rarity(Rarity.EPIC));
-    public static final Item SPRUCE_STICK = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
-    public static final Item COIN = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64).rarity(Rarity.UNCOMMON));
     public static final Item BOOK_COVER = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
-    public static final Item FRAME_BACKING = new MiscItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(64));
     public static final Item BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_2");
-    public static final Item PIG_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_4");
     public static final Item GOLDEN_BAIT = new BaitItemBase(new Item.Settings().group(ItemGroups.FISHING_GROUP).maxCount(64), "item.valley.bait.tooltip_3");
     public static final Item LINGERING_POWDER = new LingeringItemBase(new Item.Settings().group(ItemGroups.MISC_GROUP).maxCount(16).rarity(Rarity.UNCOMMON));
     public static final Item MESSAGE_BOTTLE = new BottleBundleBase(new Item.Settings().group(ItemGroups.ARTEFACT_GROUP).maxCount(1).rarity(Rarity.RARE));
@@ -74,8 +63,6 @@ public class MiscItems {
         Reg.register("book_cover", BOOK_COVER);
         Reg.register("bait", BAIT);
         Reg.register("glistering_bait", GOLDEN_BAIT);
-        //Util.register("pork_bait", PIG_BAIT);
-        //Util.register("frame_backing", FRAME_BACKING);
         Reg.register("moss_ball", MOSS_BALL);
         Reg.register("moss_ball_dry", MOSS_BALL_DRY);
         Reg.register("null_totem", E_TOTEM);

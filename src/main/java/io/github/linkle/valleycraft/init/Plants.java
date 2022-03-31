@@ -70,7 +70,6 @@ public class Plants {
     public static final Block ROSEBUSH = new Plant();
     public static final Block LILACBUSH = new Plant();
     public static final Block PEONYBUSH = new Plant();
-    public static final Block FERNBUSH = new Plant();
     public static final Block BUSH = new Plant();
     public static final Block MOREL = new MushBlock();
     public static final Block HERBS = new Plant();

@@ -12,10 +12,6 @@ public class FurnitureCont {
     public static final Block STUFFY_BROWN = new StuffyBlock();
     public static final Block STUFFY_WHITE = new StuffyBlock();
 
-    public static final Block GOLEM_R = new GolemBlockWaxed();
-    public static final Block GOLEM_W = new GolemBlockRusted();
-    public static final Block GOLEM_I = new GolemBlock();
-
     public static final Block CAMPFIRE_RING = new CampfireRocksBlock();
     public static final Block LOGPILE = new LogPileBlock();
 

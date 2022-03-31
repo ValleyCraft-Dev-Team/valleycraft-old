@@ -25,10 +25,6 @@ public class Crops {
     public static final CropBlock MANDRAKE_CROP_BLOCK = new VCropBlock();
     public static final Item MANDRAKE_SEEDS = new AliasedBlockItem(MANDRAKE_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
     public static final Item MANDRAKE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-    //Crystal Fruit
-    public static final CropBlock CRYSTAL_CROP_BLOCK = new VCropBlock();
-    public static final Item CRYSTAL_SEEDS = new AliasedBlockItem(CRYSTAL_CROP_BLOCK, new Item.Settings().group(NATURE_GROUP));
-    public static final Item CRYSTAL_FRUIT = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
     //Foods
     public static final Item COOKED_MANDRAKE = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.8f).build()).maxCount(64));
     //Onions
@@ -42,9 +38,6 @@ public class Crops {
     //Snow Yam
     public static final CropBlock SNOW_CROP_BLOCK = new VCropBlock();
     public static final Item SNOW_YAM_ITEM = new AliasedBlockItem(SNOW_CROP_BLOCK, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-
-    //Winter Root
-    public static final Item WINTER_ROOT_ITEM = new FoodItemBase(new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
 
     //Pepper
     public static final CropBlock PEPPER_CROP_BLOCK = new VCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
@@ -70,17 +63,9 @@ public class Crops {
         Reg.register("mandrake_seeds", MANDRAKE_SEEDS);
         Reg.register("mandrake", MANDRAKE);
         Reg.register("cooked_mandrake", COOKED_MANDRAKE);
-        //Crystal Fruit
-        //register("crystal_crop_block", CRYSTAL_CROP_BLOCK);
-        //register("crystal_seeds", CRYSTAL_SEEDS);
-        //register("crystal_fruit", CRYSTAL_FRUIT);
-        //Foraged Items
         //Snow Yam
         Reg.register("snow_yam_crop_block", SNOW_CROP_BLOCK);
         Reg.register("snow_yam_item", SNOW_YAM_ITEM);
-        //Winter Root
-        //register("winter_root_crop_block", WINTER_CROP_BLOCK);
-        //register("winter_root_item", WINTER_ROOT_ITEM);
         //Miners Lettuce
         Reg.register("miners_lettuce_crop_block", MINERS_CROP_BLOCK);
         Reg.register("miners_lettuce", MINERS_LETTUCE_ITEM);

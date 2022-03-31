@@ -128,7 +128,6 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(BUSH);
         culloutBlocks.add(LILACBUSH);
         culloutBlocks.add(PEONYBUSH);
-        culloutBlocks.add(FERNBUSH);
         culloutBlocks.add(TAPROOTS);
         culloutBlocks.add(REED_BLOCK);
         culloutBlocks.add(BUSH_ALIVE);
@@ -183,7 +182,6 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(PUFF_CROP_BLOCK);
         culloutBlocks.add(GB_CROP_BLOCK);
         culloutBlocks.add(MANDRAKE_CROP_BLOCK);
-        culloutBlocks.add(CRYSTAL_CROP_BLOCK);
 
         culloutBlocks.add(HANGING);
 
@@ -239,9 +237,6 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(BRAZIER);
         culloutBlocks.add(SOUL_BRAZIER);
         culloutBlocks.add(COPPER_BRAZIER);
-        culloutBlocks.add(BLAZE_BRAZIER);
-
-        culloutBlocks.add(BLAZE_BRAZIER);
 
         culloutBlocks.add(STUMP_BROWN);
         culloutBlocks.add(STUMP_RED);
@@ -275,8 +270,6 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(SOUL_WALL_BONE_TORCH);
         culloutBlocks.add(REDSTONE_BONE_TORCH);
         culloutBlocks.add(REDSTONE_WALL_BONE_TORCH);
-
-        translucentBlocks.add(BRAZIER_METAL);
 
         // Remapping block's render layer. This code should always be last!
         var layerMap = BlockRenderLayerMap.INSTANCE;
