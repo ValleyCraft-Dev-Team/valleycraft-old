@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "valley:golden_sickle", "valley:golden_knife", "valley:golden_hatchet","valley:glistering_honeycomb",
-    "valley:glistering_bitter_berries","valley:glistering_sweet_berries","valley:glistering_spicy_berries",
-    "valley:glistering_kelp","valley:glistering_tomato","valley:glistering_onion","valley:glistering_potato",
-    "valley:glistering_beet","valley:glistering_juice","valley:glistering_green_bean",
-    "valley:glistering_mandrake","valley:glistering_corn","valley:glistering_snow_yam",
-    "valley:glistering_pepper","valley:glistering_eggplant","valley:glistering_glow_berries",
-    "valley:goblet","valley:golden_chain","valley:glistering_sour_berries", "valley:glistering_anglerfish",
+    "valley:golden_sickle", "valley:golden_knife", "valley:golden_hatchet","valley:golden_honeycomb",
+    "valley:golden_bitter_berries","valley:golden_sweet_berries","valley:golden_spicy_berries",
+    "valley:golden_kelp","valley:golden_tomato","valley:golden_onion","valley:golden_potato",
+    "valley:golden_beet","valley:glistering_melon_juice","valley:golden_green_bean",
+    "valley:golden_mandrake","valley:golden_corn","valley:golden_snow_yam",
+    "valley:golden_pepper","valley:golden_eggplant","valley:golden_glow_berries",
+    "valley:goblet","valley:golden_chain","valley:golden_sour_berries", "valley:golden_anglerfish",
     "valley:glistering_bait","valley:fire_eel"
   ]
 }

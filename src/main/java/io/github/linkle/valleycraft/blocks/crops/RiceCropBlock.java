@@ -1,6 +1,6 @@
 package io.github.linkle.valleycraft.blocks.crops;
 
-import static io.github.linkle.valleycraft.init.FoodAndCooking.RICE_ITEM;
+import static io.github.linkle.valleycraft.init.FoodAndCooking.RICE;
 
 import java.util.List;
 import java.util.Random;
@@ -44,7 +44,7 @@ public class RiceCropBlock extends CropBlock {
     @Override
     @Environment(EnvType.CLIENT)
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(RICE_ITEM);
+        return new ItemStack(RICE);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class RiceCropBlock extends CropBlock {
 
     @Override
     protected ItemConvertible getPickItem() {
-        return RICE_ITEM;
+        return RICE;
     }
 
     @Override
