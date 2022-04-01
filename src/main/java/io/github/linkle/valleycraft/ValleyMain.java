@@ -37,6 +37,7 @@ public class ValleyMain implements ModInitializer {
         Armors.initialize();
 
         //Block Initializers
+        BuildingBlocks.initialize();
         Furniture.initialize();
         FurnitureCont.initialize();
         Plants.initialize();
