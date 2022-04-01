@@ -3,7 +3,6 @@ package io.github.linkle.valleycraft;
 import io.github.linkle.valleycraft.blocks.entity.BlockEntities;
 import io.github.linkle.valleycraft.config.ConfigVersionHandler;
 import io.github.linkle.valleycraft.config.VConfig;
-import io.github.linkle.valleycraft.criterions.VCriteria;
 import io.github.linkle.valleycraft.init.*;
 import io.github.linkle.valleycraft.init.features.*;
 import io.github.linkle.valleycraft.network.ServerNetwork;

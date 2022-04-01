@@ -80,55 +80,12 @@ public class Furniture {
             .sounds(BlockSoundGroup.WOOD)
             .strength(1.0f,1f).collidable(false));
 
-    public static final Block POLISHED_STONE = new PolishedStoneBlock();
-    public static final Block STONE_TILES = new PolishedStoneBlock();
-    public static final Block STONE_TILE_SLAB = new TileSlabBlock();
-    public static final Block STONE_TILE_STAIRS = new TileStairsBlock();
-
-    public static final Block COBBLESTONE_BRICKS = new PolishedStoneBlock();
-    public static final Block MOSSY_COBBLESTONE_BRICKS = new PolishedStoneBlock();
-    public static final Block CHISELED_COBBLESTONE_BRICKS = new PolishedStoneBlock();
-    public static final Block COBBLESTONE_BRICK_SLAB = new TileSlabBlock();
-    public static final Block COBBLESTONE_BRICK_STAIRS = new TileStairsBlock();
-
-    public static final Block SMOOTH_STONE_TILES = new PolishedStoneBlock();
-    public static final Block SMOOTH_STONE_TILE_SLAB = new TileSlabBlock();
-    public static final Block SMOOTH_STONE_TILE_STAIRS = new TileStairsBlock();
-
-    public static final Block QUARTZ_TILES = new PolishedStoneBlock();
-    public static final Block QUARTZ_TILE_SLAB = new TileSlabBlock();
-    public static final Block QUARTZ_TILE_STAIRS = new TileStairsBlock();
-
-    public static final Block KITCHEN_TILES = new PolishedStoneBlock();
-    public static final Block KITCHEN_TILE_SLAB = new TileSlabBlock();
-    public static final Block KITCHEN_TILE_STAIRS = new TileStairsBlock();
-
-    public static final Block VOLCANIC_TILES = new PolishedStoneBlock();
-    public static final Block VOLCANIC_TILE_SLAB = new TileSlabBlock();
-    public static final Block VOLCANIC_TILE_STAIRS = new TileStairsBlock();
-
-    public static final Block VOLCANIC_BRICKS = new PolishedStoneBlock();
-    public static final Block VOLCANIC_BRICK_SLAB = new TileSlabBlock();
-    public static final Block VOLCANIC_BRICK_STAIRS = new TileStairsBlock();
-
     public static final Block NET = new NetBlock();
-    public static final Block MIXED_BRICKS = new BrownBlock();
-    public static final Block CRACKED_MIXED_BRICKS = new BrownBlock();
-    public static final Block MOSSY_MIXED_BRICKS = new BrownBlock();
-    public static final Block MIXED_BRICK_STAIRS = new BrownStairsBlock();
-    public static final Block MIXED_BRICK_SLAB = new BrownSlabBlock();
+
     public static final Block FIREPLACE_SCREEN = new ScreenBlock();
     public static final Block BRAZIER = new BrazierBlock(15, 1);
     public static final Block SOUL_BRAZIER = new BrazierBlock(10, 2);
     public static final Block COPPERFLAME_BRAZIER = new BrazierBlock(13, 1);
-
-    public static final Block CARMINE_BRICKS = new BrownBlock();
-    public static final Block CHISELED_CARMINE = new BrownBlock();
-    public static final Block CARMINE_BRICK_STAIRS = new BrownStairsBlock();
-    public static final Block CARMINE_BRICK_SLAB = new BrownSlabBlock();
-    public static final Block MOSSY_CARMINE = new BrownBlock();
-    public static final Block CRACKED_CARMINE = new BrownBlock();
-    public static final Block POLISHED_CARMINE = new BrownBlock();
 
     public static final Block ANCHOR = new AnchorBlock();
 
@@ -190,7 +147,7 @@ public class Furniture {
     public static final Block ROUNDED_BARREL = new RoundedBarrelBlock();
     public static final Block SOUL_JACK_O_LANTERN = new JackBlock();
     public static final Block COPPERFLAME_JACK_O_LANTERN = new JackBlock();
-    public static final Block POLISHED_VOLCANIC_STONE = new StoneBlock();
+
 
     public static final Block HANGING_LANTERN = new LanternBlock(15, false);
     public static final Block HANGING_SOUL_LANTERN = new LanternBlock(10, false);
@@ -254,9 +211,6 @@ public class Furniture {
     public static final Block REDSTONE_WALL_BONE_TORCH = new WallRedstoneTorchBlock(Block.Settings.copy(Blocks.REDSTONE_WALL_TORCH).sounds(BlockSoundGroup.BONE));
 
     public static final Block ICE_BOX = new IceBoxBarrelBlock();
-
-    public static final Block CHISELED_VOLCANIC_BRICKS = new PolishedStoneBlock();
-    public static final Block ENCRUSTED_SANDSTONE = new EncrustedBlock();
 
     public static void initialize() {
         var furnGroup = new Item.Settings().group(FURNITURE_GROUP);
@@ -354,65 +308,6 @@ public class Furniture {
         Reg.registerWithItem("waxed_oxidized_copper_chain", WAXED_OXIDIZED_COPPER_CHAIN, explGroup);
         Reg.registerWithItem("golden_chain", GOLDEN_CHAIN, explGroup);
         Reg.registerWithItem("netherite_chain", NETHERITE_CHAIN, explGroup);
-
-        //Mixed brick blocks
-        Reg.registerWithItem("mixed_bricks", MIXED_BRICKS, furnGroup);
-        Reg.registerWithItem("cracked_mixed_bricks", CRACKED_MIXED_BRICKS, furnGroup);
-        Reg.registerWithItem("mossy_mixed_bricks", MOSSY_MIXED_BRICKS, furnGroup);
-        Reg.registerWithItem("mixed_brick_slab", MIXED_BRICK_SLAB, furnGroup);
-        Reg.registerWithItem("mixed_brick_stairs", MIXED_BRICK_STAIRS, furnGroup);
-
-        //Cobblestone brick blocks
-        Reg.registerWithItem("cobblestone_bricks", COBBLESTONE_BRICKS, furnGroup);
-        Reg.registerWithItem("mossy_cobblestone_bricks", MOSSY_COBBLESTONE_BRICKS, furnGroup);
-        Reg.registerWithItem("chiseled_cobblestone_bricks", CHISELED_COBBLESTONE_BRICKS, furnGroup);
-        Reg.registerWithItem("cobblestone_brick_stairs", COBBLESTONE_BRICK_STAIRS, furnGroup);
-        Reg.registerWithItem("cobblestone_brick_slab", COBBLESTONE_BRICK_SLAB, furnGroup);
-
-        //Polished stone & stone tile blocks
-        Reg.registerWithItem("polished_stone", POLISHED_STONE, furnGroup);
-        Reg.registerWithItem("stone_tiles", STONE_TILES, furnGroup);
-        Reg.registerWithItem("stone_tile_stairs", STONE_TILE_STAIRS, furnGroup);
-        Reg.registerWithItem("stone_tile_slab", STONE_TILE_SLAB, furnGroup);
-
-        //Smooth stone tile blocks
-        Reg.registerWithItem("smooth_stone_tiles", SMOOTH_STONE_TILES, furnGroup);
-        Reg.registerWithItem("smooth_stone_tile_slab", SMOOTH_STONE_TILE_SLAB, furnGroup);
-        Reg.registerWithItem("smooth_stone_tile_stairs", SMOOTH_STONE_TILE_STAIRS, furnGroup);
-
-        //Quartz tile blocks
-        Reg.registerWithItem("quartz_tiles", QUARTZ_TILES, furnGroup);
-        Reg.registerWithItem("quartz_tile_stairs", QUARTZ_TILE_STAIRS, furnGroup);
-        Reg.registerWithItem("quartz_tile_slab", QUARTZ_TILE_SLAB, furnGroup);
-
-        //Kitchen tile blocks
-        Reg.registerWithItem("kitchen_tiles", KITCHEN_TILES, furnGroup);
-        Reg.registerWithItem("kitchen_tile_stairs", KITCHEN_TILE_STAIRS, furnGroup);
-        Reg.registerWithItem("kitchen_tile_slab", KITCHEN_TILE_SLAB, furnGroup);
-
-        //Volcanic tile blocks
-        Reg.registerWithItem("volcanic_tiles", VOLCANIC_TILES, furnGroup);
-        Reg.registerWithItem("volcanic_tile_stairs", VOLCANIC_TILE_STAIRS, furnGroup);
-        Reg.registerWithItem("volcanic_tile_slab", VOLCANIC_TILE_SLAB, furnGroup);
-
-        //Volcanic brick blocks & polished volcanic rock
-        Reg.registerWithItem("volcanic_bricks", VOLCANIC_BRICKS, furnGroup);
-        Reg.registerWithItem("volcanic_brick_stairs", VOLCANIC_BRICK_STAIRS, furnGroup);
-        Reg.registerWithItem("volcanic_brick_slab", VOLCANIC_BRICK_SLAB, furnGroup);
-        Reg.registerWithItem("chiseled_volcanic_bricks", CHISELED_VOLCANIC_BRICKS, furnGroup);
-        Reg.registerWithItem("polished_volcanic_stone", POLISHED_VOLCANIC_STONE, furnGroup);
-
-        //Carmine brick blocks & polished carmine
-        Reg.registerWithItem("carmine_bricks", CARMINE_BRICKS, furnGroup);
-        Reg.registerWithItem("carmine_brick_stairs", CARMINE_BRICK_STAIRS, furnGroup);
-        Reg.registerWithItem("carmine_brick_slab", CARMINE_BRICK_SLAB, furnGroup);
-        Reg.registerWithItem("chiseled_carmine", CHISELED_CARMINE, furnGroup);
-        Reg.registerWithItem("cracked_carmine", CRACKED_CARMINE, furnGroup);
-        Reg.registerWithItem("mossy_carmine", MOSSY_CARMINE, furnGroup);
-        Reg.registerWithItem("polished_carmine", POLISHED_CARMINE, furnGroup);
-
-        //Encrusted sandstone
-        Reg.registerWithItem("encrusted_sandstone", ENCRUSTED_SANDSTONE, furnGroup);
 
         //Lanterns
         Reg.registerWithItem("redstone_lantern", REDSTONE_LANTERN, furnGroup);
