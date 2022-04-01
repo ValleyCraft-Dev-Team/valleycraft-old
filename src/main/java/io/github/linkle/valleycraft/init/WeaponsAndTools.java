@@ -15,14 +15,14 @@ import static io.github.linkle.valleycraft.init.ItemGroups.EXPLORATION_GROUP;
 
 public class WeaponsAndTools {
 
-    //Store instances of each gear item's base classes, configured with the chosen attack damage, speed, etc.
-    //We only store them in variables when another class needs to do things like inject them into loot tables
+    //When we need to access a tool or weapon elsewhere in the codebase, such as to inject them into loot tables, we need them stored in variables.
+    //For the tools and weapons to which that applies, we define them here, then register them with the others.
     public static final Item TONGS = new TongsBase(new TongsToolMaterial());
     public static final Item DRUID = new DruidStaffBase();
-    public static final Item MERMAID_SWORD = new MermaidSwordItem(new MermaidWeaponToolMaterial(), 5, -1.5f);
-    public static final Item MERMAID_SPEAR = new MermaidSpearItem(new MermaidWeaponToolMaterial(), 7, -1.8f);
+    public static final Item MERMAIDS_SWORD = new MermaidSwordItem(new MermaidWeaponToolMaterial(), 5, -1.5f);
+    public static final Item MERMAIDS_SPEAR = new MermaidSpearItem(new MermaidWeaponToolMaterial(), 7, -1.8f);
     public static final Item ENCRUSTED_PICKAXE = new EncrustedPickaxeItem(new EncrustedPickaxeToolMaterial(), 2, -2.8f);
-    public static final Item CORAL_KNIFE = new CoralDaggerItem(new CoralDaggerToolMaterial(), 3, -1.4f);
+    public static final Item CORAL_DAGGER = new CoralDaggerItem(new CoralDaggerToolMaterial(), 3, -1.4f);
 
     //The base attack damage of each tool type.
     //These values are added to the attack stats of their materials when they're registered.
@@ -40,37 +40,20 @@ public class WeaponsAndTools {
     public static final Item.Settings BASIC_KNIFE_SETTINGS = new Settings().group(EXPLORATION_GROUP);
 
     public static void initialize() {
-        //Branch
-        Reg.register("tree_branch", new BranchBase(new BranchMaterial()));
-
-        //Sharp Flint Rock
-        Reg.register("flint_rock", new FlintBaseRock(new FlintToolMaterialRock()));
-
-        //Bone Knife
-        Reg.register("bone_knife", new BoneBaseKnife(new BoneToolMaterialKnife()));
-
-        //Climbing Axe
-        Reg.register("climbing_axe", new ClimbingAxeBase(new ClimingAxeToolMaterial()));
-
-        //Ice Tongs
-        Reg.register("tongs", TONGS);
-
-        //Lumber Axe
-        Reg.register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));
+        Reg.register("tree_branch", new BranchBase(new BranchMaterial()));                      //Branch
+        Reg.register("sharpened_flint", new FlintBaseRock(new FlintToolMaterialRock()));        //Sharpened Flint
+        Reg.register("bone_knife", new BoneBaseKnife(new BoneToolMaterialKnife()));             //Bone Knife
+        Reg.register("climbing_axe", new ClimbingAxeBase(new ClimingAxeToolMaterial()));        //Climbing Axe
+        Reg.register("tongs", TONGS);                                                           //Ice Tongs
+        Reg.register("lumber_axe", new LumberAxeBase(new LumberAxeToolMaterial()));             //Lumber Axe
+        Reg.register("druid_staff", DRUID);                                                     //Druid Staff
+        Reg.register("coral_dagger", CORAL_DAGGER);                                             //Coral Dagger
+        Reg.register("mermaids_spear", MERMAIDS_SPEAR);                                         //Mermaid's Spear
+        Reg.register("mermaids_sword", MERMAIDS_SWORD);                                         //Mermaid's Sword
+        Reg.register("encrusted_pickaxe", ENCRUSTED_PICKAXE);                                   //Encrusted Pickaxe
 
         //Prismarine Scalpel
         Reg.register("prismarine_scalpel", new ScalpelBase(new PrismarineToolMaterialScalpel(), 2, -2.0f));
-
-        //Druid Staff
-        Reg.register("druid_staff", DRUID);
-
-        //Coral Knife
-        Reg.register("coral_knife", CORAL_KNIFE);
-
-        //Mermaid Weapons
-        Reg.register("mermaids_spear", MERMAID_SPEAR);
-        Reg.register("mermaids_sword", MERMAID_SWORD);
-        Reg.register("encrusted_pickaxe", ENCRUSTED_PICKAXE);
 
         //Knives
         Reg.register("wood_knife", new KnifeBase(ToolMaterials.WOOD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
@@ -90,7 +73,7 @@ public class WeaponsAndTools {
         Reg.register("diamond_sickle", new SickleBase(ToolMaterials.DIAMOND, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.1f));
         Reg.register("netherite_sickle", new SickleBase(ToolMaterials.NETHERITE, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED));
         //Hatchets
-        //Lower tier hatchest have slightly slower attack speeds than base, to match vanilla axes
+        //Lower tier hatchets have slightly slower attack speeds than base, to match vanilla axes
         Reg.register("wood_hatchet", new HatchetBase(ToolMaterials.WOOD, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.2f));
         Reg.register("stone_hatchet", new HatchetBase(ToolMaterials.STONE, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.2f));
         Reg.register("golden_hatchet", new HatchetBase(ToolMaterials.GOLD, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));

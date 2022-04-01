@@ -16,7 +16,7 @@ public class RedPorgyEntity extends SchoolingFishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(Fishing.BUCKET_RED_PORGY);
+        return new ItemStack(Fishing.RED_PORGY_BUCKET);
     }
 
     @Override
