@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "valley:mandrake"
+    }
+  },
+  "result": {
+    "item": "valley:golden_mandrake",
+    "count": 1
+  }
+}

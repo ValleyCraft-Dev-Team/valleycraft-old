@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:veges"
+    },
+    {
+      "tag": "c:veges"
+    },
+    {
+      "tag": "c:veges"
+    },
+    {
+      "tag": "c:veges"
+    },
+    {
+      "tag": "c:veges"
+    },
+    {
+      "tag": "c:veges"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "valley:mixed_vegetable_bowl",
+    "count": 1
+  }
+}

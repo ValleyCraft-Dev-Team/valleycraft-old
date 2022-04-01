@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "valley:eggplant"
+    }
+  },
+  "result": {
+    "item": "valley:golden_eggplant",
+    "count": 1
+  }
+}

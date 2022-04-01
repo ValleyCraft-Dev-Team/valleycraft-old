@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:dried_seaweed"
+    },
+    {
+      "item": "valley:octopus"
+    },
+    {
+      "tag": "c:rice"
+    }
+  ],
+  "result": {
+    "item": "valley:octorok_roll",
+    "count": 1
+  }
+}

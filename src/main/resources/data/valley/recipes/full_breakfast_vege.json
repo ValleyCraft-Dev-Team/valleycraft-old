@@ -11,11 +11,11 @@
       "tag": "c:tomato"
     },
     {
-      "item": "valley:cooked_egg_bowl"
+      "item": "valley:scrambled_eggs"
     }
   ],
   "result": {
-    "item": "valley:full_breakfast_vegetarian",
+    "item": "valley:full_breakfast",
     "count": 1
   }
 }

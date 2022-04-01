@@ -5,7 +5,7 @@
 			"text": "Tea Specialist"
 		},
 		"icon": {
-			"item": "valley:tea_lavender"
+			"item": "valley:lavender_tea"
 		},
 		"description": {
 			"text": "Drink one of every type of Tea"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea_lavender"
+						"valley:lavender_tea"
 					]
 				}
 			}
@@ -27,7 +27,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea_sour_berry"
+						"valley:sour_berry_tea"
 					]
 				}
 			}
@@ -37,7 +37,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea_dandelion"
+						"valley:dandelion_tea"
 					]
 				}
 			}
@@ -47,7 +47,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea_miner"
+						"valley:miners_tea"
 					]
 				}
 			}
@@ -57,7 +57,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea_bb"
+						"valley:bitter_berry_tea"
 					]
 				}
 			}
@@ -67,7 +67,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea_sb"
+						"valley:sweet_berry_tea"
 					]
 				}
 			}
@@ -77,7 +77,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:tea"
+						"valley:fern_tea"
 					]
 				}
 			}

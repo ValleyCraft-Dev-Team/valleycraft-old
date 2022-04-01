@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:crab_red"
+    },
+    {
+      "item": "valley:flour_bag"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "result": {
+    "item": "valley:crab_cake_dough",
+    "count": 1
+  }
+}

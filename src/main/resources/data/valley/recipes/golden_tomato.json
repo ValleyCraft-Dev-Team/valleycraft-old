@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "C": {
+      "item": "valley:tomato_bush"
+    }
+  },
+  "result": {
+    "item": "valley:golden_tomato",
+    "count": 1
+  }
+}

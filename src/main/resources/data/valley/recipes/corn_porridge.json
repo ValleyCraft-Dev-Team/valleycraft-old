@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:corn"
+    },
+    {
+      "item": "valley:milk_bottle"
+    },
+    {
+      "tag": "c:salt"
+    },
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "valley:corn_porridge",
+    "count": 1
+  }
+}

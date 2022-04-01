@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:crab_cake_dough"
+  },
+  "result": "valley:crab_cake",
+  "experience": 0.1,
+  "cookingtime": 100
+}

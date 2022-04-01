@@ -21,15 +21,15 @@
 							"valley:cookie_dough",
 							"valley:bread_dough",
 							"valley:cake_dough",
-							"valley:apple_dough",
+							"valley:apple_pie_dough",
 							"valley:pumpkin_dough",
-							"valley:bitter_dough",
-							"valley:glow_dough",
-							"valley:sweet_dough",
+							"valley:bitter_berry_pie_dough",
+							"valley:glow_berry_pie_dough",
+							"valley:sweet_berry_pie_dough",
 							"valley:pancake_dough",
 							"valley:skeleton_cookie_dough",
-							"valley:sour_dough",
-							"valley:crabcake_dough"
+							"valley:sour_berry_pie_dough",
+							"valley:crab_cake_dough"
 						]
 					}
 				]
