@@ -79,9 +79,9 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(REDSTONE_LANTERN);
         culloutBlocks.add(WREATH);
 
-        culloutBlocks.add(SOUL_HANGING);
-        culloutBlocks.add(LANTERN_HANGING);
-        culloutBlocks.add(RED_HANGING);
+        culloutBlocks.add(HANGING_SOUL_LANTERN);
+        culloutBlocks.add(HANGING_LANTERN);
+        culloutBlocks.add(HANGING_REDSTONE_LANTERN);
 
         culloutBlocks.add(ROUNDED_BARREL);
 
@@ -183,12 +183,12 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(GB_CROP_BLOCK);
         culloutBlocks.add(MANDRAKE_CROP_BLOCK);
 
-        culloutBlocks.add(HANGING);
+        culloutBlocks.add(HANGING_GLASS_PLANTER);
 
         culloutBlocks.add(ROPE_BRIDGE);
         culloutBlocks.add(ROPE_BRIDGE_ANCHOR);
 
-        culloutBlocks.add(SCREEN);
+        culloutBlocks.add(FIREPLACE_SCREEN);
         culloutBlocks.add(NET);
         culloutBlocks.add(IRON_LADDER);
         culloutBlocks.add(IRON_LADDER);
@@ -205,42 +205,42 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(ANCHOR);
 
         culloutBlocks.add(SCARE);
-        culloutBlocks.add(SCARE_HAT);
-        culloutBlocks.add(SCARE_GLOW);
-        culloutBlocks.add(SCARE_HAT_GLOW);
-        culloutBlocks.add(SCARE_HAT_SOUL);
-        culloutBlocks.add(SCARE_SOUL);
+        culloutBlocks.add(HATTED_SCARECROW);
+        culloutBlocks.add(SCARECR_O_LANTERN);
+        culloutBlocks.add(HATTED_SCARECR_O_LANTERN);
+        culloutBlocks.add(HATTED_N_HAUNTED_SCARECROW);
+        culloutBlocks.add(HAUNTED_SCARECROW);
 
-        culloutBlocks.add(SCARE_TARGET);
-        culloutBlocks.add(RARE_MELON);
-        culloutBlocks.add(RARE_SKELETON);
-        culloutBlocks.add(RARE_ZOMBIE);
+        culloutBlocks.add(TARGET_RARECROW);
+        culloutBlocks.add(MELONHEAD_RARECROW);
+        culloutBlocks.add(SKELETON_RARECROW);
+        culloutBlocks.add(ZOMBIE_RARECROW);
 
-        culloutBlocks.add(SNOW);
+        culloutBlocks.add(SNOWMAN);
 
-        culloutBlocks.add(SCARE_COPPER);
-        culloutBlocks.add(SCARE_HAT_COPPER);
+        culloutBlocks.add(COPPERFLAME_SCARECROW);
+        culloutBlocks.add(HATTED_COPPERFLAME_SCARECROW);
 
-        culloutBlocks.add(STEW_POT_CAMPFIRE);
+        culloutBlocks.add(CAMPFIRE_STEW_POT);
 
-        culloutBlocks.add(BEVELED_PANE);
-        culloutBlocks.add(BEVELED_PANE_COPPER);
-        culloutBlocks.add(BEVELED_PANE_GOLD);
-        culloutBlocks.add(BEVELED_PANE_NETHERITE);
+        culloutBlocks.add(IRON_BEVELED_GLASS);
+        culloutBlocks.add(COPPER_BEVELED_GLASS);
+        culloutBlocks.add(GOLDEN_BEVELED_GLASS);
+        culloutBlocks.add(NETHERITE_BEVELED_GLASS);
 
         //Amethyst
-        translucentBlocks.add(BEVELED_PANE_A);
-        translucentBlocks.add(BEVELED_PANE_A_C);
-        translucentBlocks.add(BEVELED_PANE_A_G);
-        translucentBlocks.add(BEVELED_PANE_A_N);
+        translucentBlocks.add(BEVELED_AMETHYST_GLASS);
+        translucentBlocks.add(COPPER_BEVELED_AMETHYST_GLASS);
+        translucentBlocks.add(GOLDEN_BEVELED_AMETHYST_GLASS);
+        translucentBlocks.add(NETHERITE_BEVELED_AMETHYST_GLASS);
 
         culloutBlocks.add(BRAZIER);
         culloutBlocks.add(SOUL_BRAZIER);
-        culloutBlocks.add(COPPER_BRAZIER);
+        culloutBlocks.add(COPPERFLAME_BRAZIER);
 
-        culloutBlocks.add(STUMP_BROWN);
-        culloutBlocks.add(STUMP_RED);
-        culloutBlocks.add(STUMP_MOREL);
+        culloutBlocks.add(BROWN_MUSHROOM_LOGS);
+        culloutBlocks.add(RED_MUSHROOM_LOGS);
+        culloutBlocks.add(MOREL_LOGS);
 
         culloutBlocks.add(APPLE_LEAVES_EMPTY);
 
@@ -254,8 +254,8 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(WAXED_WEATHERED_COPPER_CHAIN);
         culloutBlocks.add(WAXED_OXIDIZED_COPPER_CHAIN);
 
-        culloutBlocks.add(CHAIN_G);
-        culloutBlocks.add(CHAIN_N);
+        culloutBlocks.add(GOLDEN_CHAIN);
+        culloutBlocks.add(NETHERITE_CHAIN);
 
         culloutBlocks.add(CAMPFIRE_RING);
 

@@ -99,7 +99,7 @@ public class Compostables {
         registerItem(Items.COD, levelHigh);
         registerItem(Items.SALMON, levelHigh);
         registerItem(Items.TROPICAL_FISH, levelHigh);
-        registerItem(Furniture.FIBER_BALE, levelHigh);
+        registerItem(Furniture.PLANT_FIBER_BALE, levelHigh);
     }
     
     private static void registerItem(ItemConvertible item, float chance) {

@@ -8,7 +8,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static io.github.linkle.valleycraft.init.Furniture.MUG_BLOCK;
+import static io.github.linkle.valleycraft.init.Furniture.MEAD_MUG;
 
 public class MeadBase extends FoodItemBase {
     public MeadBase(Settings settings, int hunger, float saturationModifier, @Nullable FoodStatusEffect effects) {
@@ -18,7 +18,7 @@ public class MeadBase extends FoodItemBase {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(MUG_BLOCK);
+        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(MEAD_MUG);
     }
 
     @Override

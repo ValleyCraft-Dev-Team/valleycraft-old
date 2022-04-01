@@ -7,7 +7,7 @@ import net.minecraft.sound.BlockSoundGroup;
 
 public class BrownStairsBlock extends StairsBlock {
     public BrownStairsBlock() {
-        super(Furniture.B_BRICKS.getDefaultState(), Settings.of(Material.STONE)
+        super(Furniture.MIXED_BRICKS.getDefaultState(), Settings.of(Material.STONE)
                 .requiresTool()
                 .sounds(BlockSoundGroup.NETHER_BRICKS)
                 .strength(1.5f, 2));

@@ -8,7 +8,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static io.github.linkle.valleycraft.init.Furniture.SMALL_MUG_BLOCK;
+import static io.github.linkle.valleycraft.init.Furniture.TEA_MUG;
 
 public class DrinkTeaBase extends FoodItemBase {
 
@@ -19,7 +19,7 @@ public class DrinkTeaBase extends FoodItemBase {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ItemStack itemStack = super.finishUsing(stack, world, user);
-        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(SMALL_MUG_BLOCK);
+        return user instanceof PlayerEntity player && player.getAbilities().creativeMode ? itemStack : new ItemStack(TEA_MUG);
     }
 
     @Override
