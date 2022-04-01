@@ -65,8 +65,8 @@ public class VLootTables {
         pool.with(ItemEntry.builder(Fishing.SALTWATER_STONEROLLER_MINNOW).weight(43));
         pool.with(ItemEntry.builder(Fishing.ABYSS_WATCHER).weight(15));
         pool.with(ItemEntry.builder(Fishing.BONEFIN).weight(13));
-        pool.with(ItemEntry.builder(MiscItems.SEA_EYE).weight(2));
-        pool.with(ItemEntry.builder(MiscItems.MESSAGE_BOTTLE).weight(5));
+        pool.with(ItemEntry.builder(MiscItems.SEA_CREATURE_EYE).weight(2));
+        pool.with(ItemEntry.builder(MiscItems.MESSAGE_IN_A_BOTTLE).weight(5));
     }
 
     private static void fishingJunkLoot(FabricLootPoolBuilder pool) {
@@ -134,7 +134,7 @@ public class VLootTables {
 
         //Create fiber loot builder and apply it to grass and tall grass
         LootBuilder builder = LootBuilder.create()
-                .rolls(1).with(MiscItems.FIBER)
+                .rolls(1).with(MiscItems.PLANT_FIBER)
                 .withCondition(new MatchToolLootCondition(LootUtils.tag(VItemTags.SICKLES))
                         );
 

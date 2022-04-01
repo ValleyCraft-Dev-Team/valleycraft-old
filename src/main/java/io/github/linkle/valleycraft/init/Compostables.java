@@ -40,14 +40,14 @@ public class Compostables {
         registerItem(Crops.PEPPER_SEEDS, levelLow);
         registerItem(Crops.PEPPER_ITEM, levelLow);
         registerItem(Crops.GB_SEEDS, levelLow);
-        registerItem(MiscItems.FIBER, levelLow);
-        registerItem(MiscItems.MOSS_BALL, levelLow);
-        registerItem(MiscItems.TURF_ITEM, levelLow);
+        registerItem(MiscItems.PLANT_FIBER, levelLow);
+        registerItem(MiscItems.MOSS_CLUMP, levelLow);
+        registerItem(MiscItems.GRASS_TURF, levelLow);
         registerItem(Plants.DRY_VINES, levelLow);
         registerItem(Items.STICK, levelLow);
         registerItem(Aquatic.SEA_FERN, levelLow);
         registerItem(Aquatic.RED_SEA_GRASS, levelLow);
-        registerItem(MiscItems.MOSS_BALL_DRY, levelLow);
+        registerItem(MiscItems.DRY_MOSS_CLUMP, levelLow);
 
         registerItem(Plants.DRY_MOSS, levelMed);
         registerItem(MiscItems.DUCK_EGG, levelMed);

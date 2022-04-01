@@ -60,7 +60,7 @@ public class WeaponsAndTools {
         Reg.register("stone_knife", new KnifeBase(ToolMaterials.STONE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
         Reg.register("golden_knife", new KnifeBase(ToolMaterials.GOLD, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
         Reg.register("iron_knife", new KnifeBase(ToolMaterials.IRON, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
-        Reg.register("rg_knife", new KnifeBase(new RoseGoldToolMaterial(), KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
+        Reg.register("rose_gold_knife", new KnifeBase(new RoseGoldToolMaterial(), KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
         Reg.register("diamond_knife", new KnifeBase(ToolMaterials.DIAMOND, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
         Reg.register("netherite_knife", new KnifeBase(ToolMaterials.NETHERITE, KNIFE_BASE_DAMAGE, KNIFE_BASE_SPEED, BASIC_KNIFE_SETTINGS));
         //Sickles
@@ -69,7 +69,7 @@ public class WeaponsAndTools {
         Reg.register("stone_sickle", new SickleBase(ToolMaterials.STONE, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.3f));
         Reg.register("golden_sickle", new SickleBase(ToolMaterials.GOLD, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.4f));
         Reg.register("iron_sickle", new SickleBase(ToolMaterials.IRON, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.2f));
-        Reg.register("rg_sickle", new SickleBase(new RoseGoldToolMaterial(), SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.2f));
+        Reg.register("rose_gold_sickle", new SickleBase(new RoseGoldToolMaterial(), SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.2f));
         Reg.register("diamond_sickle", new SickleBase(ToolMaterials.DIAMOND, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED -0.1f));
         Reg.register("netherite_sickle", new SickleBase(ToolMaterials.NETHERITE, SICKLE_BASE_DAMAGE, SICKLE_BASE_SPEED));
         //Hatchets
@@ -78,16 +78,16 @@ public class WeaponsAndTools {
         Reg.register("stone_hatchet", new HatchetBase(ToolMaterials.STONE, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.2f));
         Reg.register("golden_hatchet", new HatchetBase(ToolMaterials.GOLD, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));
         Reg.register("iron_hatchet", new HatchetBase(ToolMaterials.IRON, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.1f));
-        Reg.register("rg_hatchet", new HatchetBase(new RoseGoldToolMaterial(), HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.1f));
+        Reg.register("rose_gold_hatchet", new HatchetBase(new RoseGoldToolMaterial(), HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED -0.1f));
         Reg.register("diamond_hatchet", new HatchetBase(ToolMaterials.DIAMOND, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));
         Reg.register("netherite_hatchet", new HatchetBase(ToolMaterials.NETHERITE, HATCHET_BASE_DAMAGE, HATCHET_BASE_SPEED));
         //Rose Gold Tools
         //The shovel specifically can just use the vanilla class. All other tool classes have protected methods, so we have to extend them.
         //TL;DR: The shovel is different because only it can use the vanilla class, because mojank
-        Reg.register("rg_shovel", new ShovelItem(new RoseGoldToolMaterial(), 3.5f, -3f, new Settings().group(ItemGroups.EXPLORATION_GROUP)));
-        Reg.register("rg_pickaxe", new RGPickaxeBase(new RoseGoldToolMaterial()));
-        Reg.register("rg_axe", new RGAxeBase(new RoseGoldToolMaterial()));
-        Reg.register("rg_hoe", new RGHoeBase(new RoseGoldToolMaterial()));
-        Reg.register("rg_sword", new RGSwordBase(new RoseGoldToolMaterial()));
+        Reg.register("rose_gold_shovel", new ShovelItem(new RoseGoldToolMaterial(), 3.5f, -3f, new Settings().group(ItemGroups.EXPLORATION_GROUP)));
+        Reg.register("rose_gold_pickaxe", new RGPickaxeBase(new RoseGoldToolMaterial()));
+        Reg.register("rose_gold_axe", new RGAxeBase(new RoseGoldToolMaterial()));
+        Reg.register("rose_gold_hoe", new RGHoeBase(new RoseGoldToolMaterial()));
+        Reg.register("rose_gold_sword", new RGSwordBase(new RoseGoldToolMaterial()));
     }
 }

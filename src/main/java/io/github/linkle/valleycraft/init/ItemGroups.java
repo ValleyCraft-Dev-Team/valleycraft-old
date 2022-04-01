@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 import static io.github.linkle.valleycraft.init.Furniture.ANCHOR;
-import static io.github.linkle.valleycraft.init.MiscItems.FIBER;
+import static io.github.linkle.valleycraft.init.MiscItems.PLANT_FIBER;
 
 public class ItemGroups {
     //icons for item groups
@@ -32,7 +32,7 @@ public class ItemGroups {
             new Identifier(ValleyMain.MOD_ID, "furniture")).icon(() -> new ItemStack(FURNITURE_ICON)).build();
 
     public static final ItemGroup MISC_GROUP = FabricItemGroupBuilder.create(
-            new Identifier(ValleyMain.MOD_ID, "misc")).icon(() -> new ItemStack(FIBER)).build();
+            new Identifier(ValleyMain.MOD_ID, "misc")).icon(() -> new ItemStack(PLANT_FIBER)).build();
 
     public static final ItemGroup FISHING_GROUP = FabricItemGroupBuilder.create(
             new Identifier(ValleyMain.MOD_ID, "fishing")).icon(() -> new ItemStack(Fishing.PRIDEFIN)).build();
