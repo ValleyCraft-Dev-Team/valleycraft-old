@@ -21,7 +21,7 @@ public class ReedPatchFeature extends Feature<DefaultFeatureConfig> {
 
     public ReedPatchFeature() {
         super(DefaultFeatureConfig.CODEC);
-        state = Plants.REED_BLOCK.getDefaultState();
+        state = Plants.CATTAILS.getDefaultState();
     }
 
     @Override

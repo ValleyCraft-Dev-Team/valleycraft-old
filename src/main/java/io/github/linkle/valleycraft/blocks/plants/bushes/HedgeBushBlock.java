@@ -13,7 +13,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
-import static io.github.linkle.valleycraft.init.Plants.HEDGE;
+import static io.github.linkle.valleycraft.init.Plants.BOXWOOD_BUSH;
 import static io.github.linkle.valleycraft.init.StoneBlocks.B_CLAY;
 
 public class HedgeBushBlock extends PlantBlock {
@@ -66,7 +66,7 @@ public class HedgeBushBlock extends PlantBlock {
                 block == Blocks.GRAVEL ||
                 block == Blocks.GRASS_BLOCK ||
                 block == B_CLAY ||
-                block == HEDGE ||
+                block == BOXWOOD_BUSH ||
                 block == Blocks.CLAY;
     }
 }

@@ -36,6 +36,15 @@ public class ValleyClient implements ClientModInitializer {
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
         tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
+                FRUIT_BEARING_APPLE_LEAVES
+                );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+        tintIndex == 1 ? 4764952 : -1,
+                FRUIT_BEARING_APPLE_LEAVES
+                );
+
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
+        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
                 APPLE_LEAVES
                 );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
@@ -45,20 +54,11 @@ public class ValleyClient implements ClientModInitializer {
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
         tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
-                APPLE_LEAVES_EMPTY
-                );
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-        tintIndex == 1 ? 4764952 : -1,
-                APPLE_LEAVES_EMPTY
-                );
-
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
-        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
-                BUSH
+                COMMON_BUSH
                 );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
         4764952,
-        BUSH
+                COMMON_BUSH
                 );
     }
 
@@ -102,7 +102,7 @@ public class ValleyClient implements ClientModInitializer {
         //nether plants
         culloutBlocks.add(ROOTED_WATCHER);
         culloutBlocks.add(SOUL_SPORECAP);
-        culloutBlocks.add(TAINTED_WART);
+        culloutBlocks.add(TAINTED_NETHER_WART);
 
         //sea plants
         culloutBlocks.add(SEA_URCHIN);
@@ -124,54 +124,54 @@ public class ValleyClient implements ClientModInitializer {
         //culloutBlocks.add(STEW_POT);
 
         culloutBlocks.add(SMALL_CACTUS);
-        culloutBlocks.add(ROSEBUSH);
-        culloutBlocks.add(BUSH);
-        culloutBlocks.add(LILACBUSH);
-        culloutBlocks.add(PEONYBUSH);
-        culloutBlocks.add(TAPROOTS);
-        culloutBlocks.add(REED_BLOCK);
-        culloutBlocks.add(BUSH_ALIVE);
-        culloutBlocks.add(HERBS);
-        culloutBlocks.add(WILD_BEET);
+        culloutBlocks.add(SMALL_ROSE_BUSH);
+        culloutBlocks.add(COMMON_BUSH);
+        culloutBlocks.add(SMALL_LILAC);
+        culloutBlocks.add(SMALL_PEONY);
+        culloutBlocks.add(WILD_TAPROOTS);
+        culloutBlocks.add(CATTAILS);
+        culloutBlocks.add(SCRAGGLY_BUSH);
+        culloutBlocks.add(WILD_HERBS);
+        culloutBlocks.add(WILD_BEETROOT);
         culloutBlocks.add(WILD_POTATO);
         culloutBlocks.add(WILD_CARROT);
         culloutBlocks.add(WILD_WHEAT);
-        culloutBlocks.add(WEAPING_SWAMP_WILLOW);
+        culloutBlocks.add(WEEPING_JUNGLE_WILLOW);
         culloutBlocks.add(REDWOOD_SORREL);
-        culloutBlocks.add(DANDELION_PUFF);
-        culloutBlocks.add(PANFLOWER);
+        culloutBlocks.add(MATURE_DANDELIONS);
+        culloutBlocks.add(PANFLOWERS);
         culloutBlocks.add(HONEY_CLUSTER);
         culloutBlocks.add(FLOWERING_CACTUS);
         culloutBlocks.add(PEPPER_CROP_BLOCK);
         culloutBlocks.add(EGGPLANT_CROP_BLOCK);
         //culloutBlocks.add(ROCK_PILE);
-        culloutBlocks.add(REDSTONE_CRYSTAL);
+        culloutBlocks.add(CRYSTALLIZED_REDSTONE);
         culloutBlocks.add(ONION_CROP_BLOCK);
         culloutBlocks.add(SNOW_CROP_BLOCK);
         culloutBlocks.add(MINERS_CROP_BLOCK);
-        culloutBlocks.add(SNOW_BUSH);
+        culloutBlocks.add(SNOWY_BUSH);
         //culloutBlocks.add(SNOW_ROCK_PILE);
-        culloutBlocks.add(MOSSY_VINES);
-        culloutBlocks.add(MOSSY_VINES_PLANT);
+        culloutBlocks.add(MOSS_VINES);
+        culloutBlocks.add(MOSS_VINES_PLANT);
         culloutBlocks.add(DRY_VINES);
         culloutBlocks.add(DRY_VINES_PLANT);
-        culloutBlocks.add(JUNGLE_BUSH);
-        culloutBlocks.add(SWAMP_BUSH);
-        culloutBlocks.add(JUNGLE_CAP);
+        culloutBlocks.add(BLUE_POPPY_BUSH);
+        culloutBlocks.add(VERDANT_BUSH);
+        culloutBlocks.add(ORANGE_GILLED_WAXING_CAP);
         culloutBlocks.add(SPROUT);
-        culloutBlocks.add(SWAMP_RIBBON);
+        culloutBlocks.add(POND_RIBBONS);
         culloutBlocks.add(BLACK_DAHLIA);
         culloutBlocks.add(LAVENDER);
-        culloutBlocks.add(LAVENDER_SPRIG);
-        culloutBlocks.add(ROSE_SPRIG);
-        culloutBlocks.add(ICE_ROSE);
+        culloutBlocks.add(SPRING_OF_LAVENDER);
+        culloutBlocks.add(ROSE);
+        culloutBlocks.add(FROZEN_ROSE);
         culloutBlocks.add(ORANGE_FERN);
         culloutBlocks.add(ORANGE_BEAUTY);
-        culloutBlocks.add(APPLE_LEAVES);
+        culloutBlocks.add(FRUIT_BEARING_APPLE_LEAVES);
         culloutBlocks.add(APPLE_SAPLING);
         culloutBlocks.add(CROCUS);
         culloutBlocks.add(MOREL);
-        culloutBlocks.add(HEDGE);
+        culloutBlocks.add(BOXWOOD_BUSH);
 
         culloutBlocks.add(POTTED_ROSE_SPRIG);
 
@@ -242,7 +242,7 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(RED_MUSHROOM_LOGS);
         culloutBlocks.add(MOREL_LOGS);
 
-        culloutBlocks.add(APPLE_LEAVES_EMPTY);
+        culloutBlocks.add(APPLE_LEAVES);
 
         culloutBlocks.add(COPPER_CHAIN);
         culloutBlocks.add(EXPOSED_COPPER_CHAIN);
@@ -259,7 +259,7 @@ public class ValleyClient implements ClientModInitializer {
 
         culloutBlocks.add(CAMPFIRE_RING);
 
-        culloutBlocks.add(SPIDER_EGG_BLOCK);
+        culloutBlocks.add(CAVE_SPIDER_EGG);
         culloutBlocks.add(RED_SEA_GRASS);
         culloutBlocks.add(GLOW_KELP_PLANT);
         culloutBlocks.add(GLOW_KELP);

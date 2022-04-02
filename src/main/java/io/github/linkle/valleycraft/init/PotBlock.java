@@ -6,12 +6,12 @@ import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import static io.github.linkle.valleycraft.init.Plants.ROSE_SPRIG;
+import static io.github.linkle.valleycraft.init.Plants.ROSE;
 import static net.minecraft.block.Blocks.POTTED_POPPY;
 
 public class PotBlock {
 
-    public static final Block POTTED_ROSE_SPRIG = new FlowerPotBlock(ROSE_SPRIG, Block.Settings.copy(POTTED_POPPY));
+    public static final Block POTTED_ROSE_SPRIG = new FlowerPotBlock(ROSE, Block.Settings.copy(POTTED_POPPY));
 
     public static void initialize() {
         register("potted_single_rose", POTTED_ROSE_SPRIG);

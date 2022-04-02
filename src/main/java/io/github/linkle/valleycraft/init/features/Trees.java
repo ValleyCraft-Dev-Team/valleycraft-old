@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
 import io.github.linkle.valleycraft.init.Reg;
-import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.BlockState;
@@ -14,15 +13,12 @@ import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.BuiltinRegistries;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
@@ -41,7 +37,7 @@ public class Trees {
             BlockStateProvider.of(Blocks.OAK_LOG),
             new StraightTrunkPlacer(4, 2, 0),
             new WeightedBlockStateProvider(new DataPool.Builder<BlockState>()
-                    .add(Plants.APPLE_LEAVES.getDefaultState(), 1).add(Plants.APPLE_LEAVES_EMPTY.getDefaultState(), 4)),
+                    .add(Plants.FRUIT_BEARING_APPLE_LEAVES.getDefaultState(), 1).add(Plants.APPLE_LEAVES.getDefaultState(), 4)),
             new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
             new TwoLayersFeatureSize(1, 0, 1)
             ).build();

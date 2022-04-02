@@ -36,17 +36,17 @@ public class CaveFeatures {
 
     private static final ConfiguredFeature<?, ?> REDSTONE_CRYSTAL_PATCH_CONFIG = 
             new ConfiguredFeature<>(VFeatures.CAVE_PATCH, 
-                    new CavePatchConfig(BlockStateProvider.of(Plants.REDSTONE_CRYSTAL.getDefaultState()), ConstantIntProvider.create(15),
+                    new CavePatchConfig(BlockStateProvider.of(Plants.CRYSTALLIZED_REDSTONE.getDefaultState()), ConstantIntProvider.create(15),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6), 0.03F, Blocks.DEEPSLATE_REDSTONE_ORE.getDefaultState()));
 
     private static final ConfiguredFeature<?, ?> SPIDER_EGG_PATCH_CONFIG = 
             new ConfiguredFeature<>(VFeatures.CAVE_PATCH, 
-                    new CavePatchConfig(BlockStateProvider.of(Plants.SPIDER_EGG_BLOCK.getDefaultState()), ConstantIntProvider.create(30),
+                    new CavePatchConfig(BlockStateProvider.of(Plants.CAVE_SPIDER_EGG.getDefaultState()), ConstantIntProvider.create(30),
                     ConstantIntProvider.create(4), ConstantIntProvider.create(6), 1.0F, Blocks.COBWEB.getDefaultState()));
 
     private static final ConfiguredFeature<?, ?> ROCKS_PATCH_CONFIG =
             new ConfiguredFeature<>(VFeatures.SIMPLE_PATCH, new SimplePatchConfig(
-                    Plants.ROCK_PILE.getDefaultState(), 30, 7, 5,
+                    Plants.ROCKS.getDefaultState(), 30, 7, 5,
                     VFeatures.SIMPLE_PATCH.create(new HeightMapBlockPlacer(Heightmap.Type.WORLD_SURFACE_WG, IntPredicates.LESS))));
 
     public static void initialize() {

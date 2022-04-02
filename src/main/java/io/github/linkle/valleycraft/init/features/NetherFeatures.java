@@ -5,7 +5,6 @@ import java.util.function.Predicate;
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Plants;
 import io.github.linkle.valleycraft.init.Reg;
-import io.github.linkle.valleycraft.utils.Util;
 import io.github.linkle.valleycraft.world.gen.features.SimplePatchConfig;
 import io.github.linkle.valleycraft.world.placer.ConditionBlockPlacer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -51,7 +50,7 @@ public class NetherFeatures {
         if (features.taintedWartPatch.enable) {
             var set = features.taintedWartPatch;
             selection = BiomeSelectors.foundInTheNether();
-            BiomeModifications.addFeature(selection, step, create("tainted_wart_patch", Plants.TAINTED_WART, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("tainted_wart_patch", Plants.TAINTED_NETHER_WART, set.tries, set.rarity));
         }
     }
 
