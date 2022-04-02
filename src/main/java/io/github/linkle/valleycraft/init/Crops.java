@@ -52,33 +52,33 @@ public class Crops {
 
     public static void initialize() {
         //Puff Ball
-        Reg.register("puff_crop_block", PUFF_CROP_BLOCK);
-        Reg.register("puff_seeds", PUFF_SEEDS);
+        Reg.register("puff_balls", PUFF_CROP_BLOCK);
+        Reg.register("puff_ball_seeds", PUFF_SEEDS);
         //Green Bean
-        Reg.register("green_bean_crop_block", GB_CROP_BLOCK);
+        Reg.register("green_bean_trellis", GB_CROP_BLOCK);
         Reg.register("green_bean_seeds", GB_SEEDS);
-        Reg.register("green_bean", GREEN_BEAN);
+        Reg.register("green_beans", GREEN_BEAN);
         //Mandrake
-        Reg.register("mandrake_crop_block", MANDRAKE_CROP_BLOCK);
-        Reg.register("mandrake_seeds", MANDRAKE_SEEDS);
-        Reg.register("mandrake", MANDRAKE);
+        Reg.register("living_mandrakes", MANDRAKE_CROP_BLOCK);
+        Reg.register("living_mandrake_seed_bulbs", MANDRAKE_SEEDS);
+        Reg.register("living_mandrake", MANDRAKE);
         Reg.register("cooked_mandrake", COOKED_MANDRAKE);
         //Snow Yam
-        Reg.register("snow_yam_crop_block", SNOW_CROP_BLOCK);
-        Reg.register("snow_yam_item", SNOW_YAM_ITEM);
+        Reg.register("snow_yams", SNOW_CROP_BLOCK);
+        Reg.register("snow_yam", SNOW_YAM_ITEM);
         //Miners Lettuce
-        Reg.register("miners_lettuce_crop_block", MINERS_CROP_BLOCK);
+        Reg.register("miners_lettuce", MINERS_CROP_BLOCK);
         Reg.register("miners_lettuce", MINERS_LETTUCE_ITEM);
         //Onion
-        Reg.register("onion_crop_block", ONION_CROP_BLOCK);
+        Reg.register("onions", ONION_CROP_BLOCK);
         Reg.register("onion_seeds", ONION_SEEDS);
         Reg.register("onion", ONION);
         //Pepper
-        Reg.register("pepper_crop_block", PEPPER_CROP_BLOCK);
-        Reg.register("pepper_seeds", PEPPER_SEEDS);
+        Reg.register("fire_peppers", PEPPER_CROP_BLOCK);
+        Reg.register("fire_pepper_seeds", PEPPER_SEEDS);
         Reg.register("fire_pepper", PEPPER_ITEM);
         //Eggplant
-        Reg.register("eggplant_crop_block", EGGPLANT_CROP_BLOCK);
+        Reg.register("eggplants", EGGPLANT_CROP_BLOCK);
         Reg.register("eggplant_seeds", EGGPLANT_SEEDS);
         Reg.register("eggplant", EGGPLANT_ITEM);
     }
