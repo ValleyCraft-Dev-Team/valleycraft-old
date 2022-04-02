@@ -7,6 +7,7 @@ import com.google.common.base.Predicates;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Aquatic;
+import io.github.linkle.valleycraft.init.Crops;
 import io.github.linkle.valleycraft.init.Plants;
 import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.utils.Util;
@@ -139,7 +140,7 @@ public class PlantFeatures {
 
         if (config.hollyPatch.enable) {
             var set = config.hollyPatch;
-            var key = create("holly_patch", Plants.HOLLY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
+            var key = create("holly_patch", Crops.HOLLY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA), vegetal, key);
         }
 
@@ -151,7 +152,7 @@ public class PlantFeatures {
 
         if (config.sourPatch.enable) {
             var set = config.sourPatch;
-            var key = create("sour_patch", Plants.SOUR_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
+            var key = create("sour_patch", Crops.SOUR_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), vegetal, key);
         }
 
@@ -253,7 +254,7 @@ public class PlantFeatures {
         //found in podzol
         if (config.bitterPatch.enable) {
             var set = config.bitterPatch;
-            var key = create("bitter_patch", Plants.BITTER_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 3), set.tries, set.rarity);
+            var key = create("bitter_patch", Crops.BITTER_BERRY_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 3), set.tries, set.rarity);
             selector = Util.pair(BiomeSelectors.categories(Category.JUNGLE), BiomeSelectors.excludeByKey(BiomeKeys.SPARSE_JUNGLE), BooleanBiFunction.AND);
             BiomeModifications.addFeature(selector, vegetal, key);
         }
@@ -261,7 +262,7 @@ public class PlantFeatures {
         //found in shattered savannas
         if (config.tomatoPatch.enable) {
             var set = config.tomatoPatch;
-            var key = create("tomato_patch", Plants.TOMATO_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
+            var key = create("tomato_patch", Crops.TOMATO_BUSH.getDefaultState().with(SweetBerryBushBlock.AGE, 2), set.tries, set.rarity);
             BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_SAVANNA), vegetal, key);
         }
 

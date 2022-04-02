@@ -45,27 +45,10 @@ import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class Plants {
-    //bushes
-    public static final Block BITTER_BERRY_BUSH = new BerryBushBlock(true);
-
-    public static final Block SOUR_BERRY_BUSH = new BerryBushBlock(true);
-
-    public static final Block SPICY_BERRY_BUSH = new BerryBushBlock(true, floor ->
-    floor.isIn(BlockTags.BASE_STONE_NETHER) || floor.isIn(BlockTags.NYLIUM) || floor.isOf(Blocks.MAGMA_BLOCK)
-            );
-
-    public static final Block TOMATO_BUSH = new BerryBushBlock(false);
-
-    public static final Block HOLLY_BUSH = new BerryBushBlock(true);
 
     public static final Block TUMBLE_WEED = new TumbleWeedBlock(FabricBlockSettings.of(Material.LEAVES).nonOpaque()
             .sounds(BlockSoundGroup.GRASS)
             .strength(0.4f,0.1f));
-    //crops
-
-    public static final Block RICE_SEEDLINGS = new RiceCropBlock(FabricBlockSettings.copy(Blocks.WHEAT));
-
-    public static final Block MAIZE_CROP = new MaizeCropBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 
     public static final Block SMALL_ROSE_BUSH = new Plant();
     public static final Block SMALL_LILAC = new Plant();
@@ -210,17 +193,6 @@ public class Plants {
         Reg.registerWithItem("wild_beetroot", WILD_BEETROOT, natureGroup);
         Reg.registerWithItem("wild_wheat", WILD_WHEAT, natureGroup);
         Reg.registerWithItem("morel", MOREL, natureGroup);
-
-        Reg.registerWithItem("rice_seedlings", RICE_SEEDLINGS, natureGroup);
-        Reg.registerWithItem("wild_tomato", TOMATO_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-        Reg.registerWithItem("spicy_berries", SPICY_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE,600), 1.0f).build()).maxCount(64));
-        Reg.registerWithItem("bitter_berries", BITTER_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-        Reg.registerWithItem("sour_berries", SOUR_BERRY_BUSH, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-
-        Reg.registerWithItem("holly", HOLLY_BUSH, new Item.Settings().group(NATURE_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.6f).statusEffect(new StatusEffectInstance(StatusEffects.POISON,400), 1.0f).build()).maxCount(64));
-
-        Reg.registerWithItem("maize_crop", MAIZE_CROP, new Item.Settings().group(COOKING_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.6f).build()).maxCount(64));
-
 
         Reg.registerWithItem("cattails", CATTAILS, natureGroup);
 

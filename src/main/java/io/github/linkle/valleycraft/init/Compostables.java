@@ -14,12 +14,12 @@ public class Compostables {
         float levelVery = 0.85f; // blocks.
         float levelUltra = 1.0f; // specialties.
 
-        registerItem(Plants.RICE_SEEDLINGS, levelLow);
-        registerItem(Plants.TOMATO_BUSH, levelLow);
-        registerItem(Plants.SPICY_BERRY_BUSH, levelLow);
-        registerItem(Plants.BITTER_BERRY_BUSH, levelLow);
-        registerItem(Plants.SOUR_BERRY_BUSH, levelLow);
-        registerItem(Plants.HOLLY_BUSH, levelLow);
+        registerItem(Crops.RICE_SEEDLINGS, levelLow);
+        registerItem(Crops.TOMATO, levelLow);
+        registerItem(Crops.SPICY_BERRIES, levelLow);
+        registerItem(Crops.BITTER_BERRIES, levelLow);
+        registerItem(Crops.SOUR_BERRIES, levelLow);
+        registerItem(Crops.HOLLY, levelLow);
         registerItem(Plants.APPLE_SAPLING, levelLow);
         registerItem(Plants.FRUIT_BEARING_APPLE_LEAVES, levelLow);
         registerItem(Plants.APPLE_LEAVES, levelLow);
@@ -60,7 +60,7 @@ public class Compostables {
         registerItem(Plants.SCRAGGLY_BUSH, levelMed);
         registerItem(Plants.ORANGE_GILLED_WAXING_CAP, levelMed);
         registerItem(Plants.ORANGE_FERN, levelMed);
-        registerItem(Plants.MAIZE_CROP, levelMed);
+        registerItem(Crops.CORN, levelMed);
         registerItem(Plants.CATTAILS, levelMed);
         registerItem(Crops.MINERS_LETTUCE_ITEM, levelMed);
         registerItem(Crops.SNOW_YAM_ITEM, levelMed);
