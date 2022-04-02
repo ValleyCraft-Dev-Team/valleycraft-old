@@ -8,14 +8,12 @@ import java.util.function.Predicate;
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.Reg;
 import io.github.linkle.valleycraft.init.StoneBlocks;
-import io.github.linkle.valleycraft.utils.Util;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectionContext;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.RuleTest;
-import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.Category;
@@ -43,38 +41,38 @@ public class OreFeatures {
         //jungle ores
         if (config.scaldingVolcanicStoneInJungle.enable) {
             var set = config.scaldingVolcanicStoneInJungle;
-            var key = register(create(StoneBlocks.SCALDING_VOLC, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "scalding_jungle_stone");
+            var key = register(create(StoneBlocks.SCALDING_VOLCANIC_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "scalding_jungle_stone");
             addFeature(BiomeSelectors.categories(Category.JUNGLE), key, false);
         }
 
         if (config.carmineStone.enable) {
             var set = config.carmineStone;
-            var key = register(create(StoneBlocks.JUNGLE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "carmine_stone_jungle");
+            var key = register(create(StoneBlocks.CARMINE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "carmine_stone_jungle");
             addFeature(BiomeSelectors.categories(Category.JUNGLE), key, false);
         }
 
         if (config.mossyCarmineStone.enable) {
             var set = config.mossyCarmineStone;
-            var key = register(create(StoneBlocks.JUNGLE_MOSSY, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_jungle_mossy_overworld");
+            var key = register(create(StoneBlocks.MOSSY_CARMINE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_jungle_mossy_overworld");
             addFeature(BiomeSelectors.categories(Category.JUNGLE), key, false);
         }
 
         if (config.mudInJungle.enable) {
             var set = config.mudInJungle;
-            var key = register(create(StoneBlocks.B_CLAY, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_mud_jungle_overworld");
+            var key = register(create(StoneBlocks.MUD, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_mud_jungle_overworld");
             addFeature(BiomeSelectors.categories(Category.JUNGLE), key, false);
         }
 
         if (config.sporeyCarmineStone.enable) {
             var set = config.sporeyCarmineStone;
-            var key = register(create(StoneBlocks.JUNGLE_SPOREY, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_jungle_sporey_overworld");
+            var key = register(create(StoneBlocks.BLOSSOMING_CARMINE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_jungle_sporey_overworld");
             addFeature(BiomeSelectors.categories(Category.JUNGLE), key, false);
         }
 
         //all biomes except oceans, deserts, and frozen biomes
         if (config.mossyStone.enable) {
             var set = config.mossyStone;
-            var key = register(create(StoneBlocks.STONE_MOSSY, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_mossy_overworld");
+            var key = register(create(StoneBlocks.MOSSY_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_mossy_overworld");
             var select = BiomeSelectors.categories(Category.DESERT, Category.ICY);
             addFeature(c -> !select.test(c) && !snowOnly.test(c), key, false);
         }
@@ -83,7 +81,7 @@ public class OreFeatures {
 
         if (config.mariniteStone.enable) {
             var set = config.mariniteStone;
-            var key = register(create(StoneBlocks.OCEAN_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_ocean_overworld");
+            var key = register(create(StoneBlocks.MARINITE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_ocean_overworld");
             addFeature(BiomeSelectors.categories(Category.OCEAN), key, false);
         }
 
@@ -95,13 +93,13 @@ public class OreFeatures {
 
         if (config.swampStone.enable) {
             var set = config.swampStone;
-            var key = register(create(StoneBlocks.SWAMP_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_swamp_overworld");
+            var key = register(create(StoneBlocks.GRIMESTONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_swamp_overworld");
             addFeature(BiomeSelectors.categories(Category.SWAMP), key, false);
         }
 
         if (config.darkStone.enable) {
             var set = config.darkStone;
-            var key = register(create(StoneBlocks.DARK_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_dark_overworld");
+            var key = register(create(StoneBlocks.DIABASE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_dark_overworld");
             addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), key, false);
         }
 
@@ -143,13 +141,13 @@ public class OreFeatures {
 
         if (config.dryMoss.enable) {
             var set = config.dryMoss;
-            var key = register(create(StoneBlocks.DRY_MOSS_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_dry_mossy");
+            var key = register(create(StoneBlocks.DRY_MOSSY_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_dry_mossy");
             addFeature(BiomeSelectors.categories(Category.MESA, Category.DESERT), key, false);
         }
 
         if (config.gravelInDeserts.enable) {
             var set = config.gravelInDeserts;
-            var key = register(create(StoneBlocks.DESERT_GRAVEL, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_desert_gravel");
+            var key = register(create(StoneBlocks.SANDY_GRAVEL, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_desert_gravel");
             addFeature(BiomeSelectors.categories(Category.MESA, Category.DESERT), key, false);
         }
 
@@ -241,7 +239,7 @@ public class OreFeatures {
 
         if (config.mud.enable) {
             var set = config.mud;
-            var key = register(create(StoneBlocks.B_CLAY, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "mud_overworld");
+            var key = register(create(StoneBlocks.MUD, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "mud_overworld");
 
             var overWorldOnly = BiomeSelectors.foundInOverworld();
             var blackList = BiomeSelectors.categories(Category.DESERT, Category.ICY);
@@ -270,7 +268,7 @@ public class OreFeatures {
         //nether ores
         if (config.netherSaltOre.enable) {
             var set = config.netherSaltOre;
-            var key = register(create(OreConfiguredFeatures.NETHERRACK, StoneBlocks.NETHER_SALT, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_salt_nether");
+            var key = register(create(OreConfiguredFeatures.NETHERRACK, StoneBlocks.NETHER_SALT_ORE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_salt_nether");
             addFeature(BiomeSelectors.foundInTheNether(), key, true);
         }
 
@@ -283,7 +281,7 @@ public class OreFeatures {
         //taiga ores
         if (config.taigaStone.enable) {
             var set = config.taigaStone;
-            var key = register(create(StoneBlocks.TAIGA_STONE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_taiga_overworld");
+            var key = register(create(StoneBlocks.VERDANTINE, set.size), set.repeat, set.getMinOffset(), set.getMaxOffset(), "ore_taiga_overworld");
             addFeature(BiomeSelectors.categories(Category.TAIGA), key, false);
         }
     }

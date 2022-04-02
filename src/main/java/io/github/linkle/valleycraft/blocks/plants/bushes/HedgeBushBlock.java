@@ -14,7 +14,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
 import static io.github.linkle.valleycraft.init.Plants.BOXWOOD_BUSH;
-import static io.github.linkle.valleycraft.init.StoneBlocks.B_CLAY;
+import static io.github.linkle.valleycraft.init.StoneBlocks.MUD;
 
 public class HedgeBushBlock extends PlantBlock {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(1.0D, 1.0D, 1.0D, 15.0D, 15.0D, 15.0D);
@@ -65,7 +65,7 @@ public class HedgeBushBlock extends PlantBlock {
                 floor.isIn(BlockTags.SAND) ||
                 block == Blocks.GRAVEL ||
                 block == Blocks.GRASS_BLOCK ||
-                block == B_CLAY ||
+                block == MUD ||
                 block == BOXWOOD_BUSH ||
                 block == Blocks.CLAY;
     }
