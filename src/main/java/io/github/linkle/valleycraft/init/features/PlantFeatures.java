@@ -42,7 +42,7 @@ public class PlantFeatures {
     //Beach Features
     private static final RegistryKey<PlacedFeature> CLAM_BEACH_PATCH = create("clam_beach_patch", Util.randomHoriFacing(Aquatic.CLAM.getDefaultState()), 3, 4);
     private static final RegistryKey<PlacedFeature> SAND_DOLLAR_BEACH_PATCH = create("sand_dollar_beach_patch", Aquatic.SAND_DOLLAR.getDefaultState(), 1, 10);
-    private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Util.randomHoriFacing(Aquatic.STARFISH_ORANGE.getDefaultState()), 1, 10);
+    private static final RegistryKey<PlacedFeature> STARFISH_ORANGE_BEACH_PATCH = create("starfish_orange_beach_patch", Util.randomHoriFacing(Aquatic.STARFISH.getDefaultState()), 1, 10);
 
     public static void initialize() {
         var config = ValleyMain.CONFIG.featureGenerations.plantFeatures;

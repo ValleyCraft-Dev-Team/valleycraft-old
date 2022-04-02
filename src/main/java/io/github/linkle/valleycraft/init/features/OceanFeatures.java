@@ -45,7 +45,7 @@ public class OceanFeatures {
         if (config.seaFernPatch.enable) {
             set = config.seaFernPatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.BEACH, BiomeKeys.RIVER);
-            BiomeModifications.addFeature(selection, step, create("sea_fern_patch", Aquatic.SEA_FERN, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("sea_fern_patch", Aquatic.DANCING_SEA_FERN, set.tries, set.rarity));
         }
 
         if (config.seaUrchinPatch.enable) {
@@ -63,31 +63,31 @@ public class OceanFeatures {
         if (config.anPinkPatch.enable) {
             set = config.anPinkPatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
-            BiomeModifications.addFeature(selection, step, create("an_pink_patch", Aquatic.ANEMONE_PINK, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("an_pink_patch", Aquatic.PINK_ANEMONE, set.tries, set.rarity));
         }
 
         if (config.anPurplePatch.enable) {
             set = config.anPurplePatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
-            BiomeModifications.addFeature(selection, step, create("an_purple_patch", Aquatic.ANEMONE_PURPLE, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("an_purple_patch", Aquatic.PURPLE_ANEMONE, set.tries, set.rarity));
         }
 
         if (config.anYellowPatch.enable) {
             set = config.anYellowPatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
-            BiomeModifications.addFeature(selection, step, create("an_yellow_patch", Aquatic.ANEMONE_YELLOW, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("an_yellow_patch", Aquatic.YELLOW_ANEMONE, set.tries, set.rarity));
         }
 
         if (config.anGreenPatch.enable) {
             set = config.anGreenPatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
-            BiomeModifications.addFeature(selection, step, create("an_green_patch", Aquatic.ANEMONE_GREEN, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("an_green_patch", Aquatic.GREEN_ANEMONE, set.tries, set.rarity));
         }
 
         if (config.anOrangePatch.enable) {
             set = config.anOrangePatch;
             selection = BiomeSelectors.includeByKey(BiomeKeys.DEEP_OCEAN, BiomeKeys.WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN);
-            BiomeModifications.addFeature(selection, step, create("an_orange_patch", Aquatic.ANEMONE_ORANGE, set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("an_orange_patch", Aquatic.ORANGE_ANEMONE, set.tries, set.rarity));
         }
 
         if (config.scallopPatch.enable) {
@@ -111,7 +111,7 @@ public class OceanFeatures {
         if (config.starfishPatch.enable) {
             set = config.starfishPatch;
             selection = BiomeSelectors.categories(Category.OCEAN, Category.BEACH);
-            BiomeModifications.addFeature(selection, step, create("starfish_orange_patch", Util.randomHoriFacing(Aquatic.STARFISH_ORANGE.getDefaultState().with(Properties.WATERLOGGED, true)), set.tries, set.rarity));
+            BiomeModifications.addFeature(selection, step, create("starfish_orange_patch", Util.randomHoriFacing(Aquatic.STARFISH.getDefaultState().with(Properties.WATERLOGGED, true)), set.tries, set.rarity));
         }
     }
 

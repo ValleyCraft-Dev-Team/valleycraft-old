@@ -106,15 +106,15 @@ public class ValleyClient implements ClientModInitializer {
 
         //sea plants
         culloutBlocks.add(SEA_URCHIN);
-        culloutBlocks.add(ANEMONE_PURPLE);
-        culloutBlocks.add(ANEMONE_PINK);
-        culloutBlocks.add(ANEMONE_YELLOW);
-        culloutBlocks.add(ANEMONE_GREEN);
-        culloutBlocks.add(ANEMONE_ORANGE);
-        culloutBlocks.add(STARFISH_ORANGE);
+        culloutBlocks.add(PURPLE_ANEMONE);
+        culloutBlocks.add(PINK_ANEMONE);
+        culloutBlocks.add(YELLOW_ANEMONE);
+        culloutBlocks.add(GREEN_ANEMONE);
+        culloutBlocks.add(ORANGE_ANEMONE);
+        culloutBlocks.add(STARFISH);
         culloutBlocks.add(GIANT_SCALLOP);
-        culloutBlocks.add(BARNACLE);
-        culloutBlocks.add(SEA_FERN);
+        culloutBlocks.add(THORACICA_BARNACLE);
+        culloutBlocks.add(DANCING_SEA_FERN);
         culloutBlocks.add(TUBE_WORMS);
         culloutBlocks.add(PRISMARINE_CLUSTER);
 

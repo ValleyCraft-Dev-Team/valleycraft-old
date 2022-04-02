@@ -51,7 +51,7 @@ public class ResearchStationFeature extends StructureFeature<DefaultFeatureConfi
                             var face = Direction.fromHorizontal(random.nextInt(4));
                             var pos = mutable.offset(face);
                             if (canReplace(world, pos)) {
-                                var newState = Aquatic.BARNACLE.getDefaultState().with(Properties.FACING, face);
+                                var newState = Aquatic.THORACICA_BARNACLE.getDefaultState().with(Properties.FACING, face);
                                 newState = newState.with(Properties.WATERLOGGED, world.getFluidState(pos).getFluid() == Fluids.WATER);
                                 world.setBlockState(pos, newState, Block.NOTIFY_LISTENERS);
                             }
