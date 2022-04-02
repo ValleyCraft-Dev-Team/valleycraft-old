@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:slime_fish"
+      "item": "valley:gelafin"
     }
   ],
   "result": {

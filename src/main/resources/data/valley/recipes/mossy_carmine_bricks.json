@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:moss_clump"
+    },
+    {
+      "item": "valley:carmine_bricks"
+    }
+  ],
+  "result": {
+    "item": "valley:mossy_carmine_bricks",
+    "count": 1
+  }
+}

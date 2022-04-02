@@ -5,7 +5,7 @@
 			"text": "Medley of Snow"
 		},
 		"icon": {
-			"item": "valley:rain_totem"
+			"item": "valley:rain_and_snow_effigy"
 		},
 		"description": {
 			"text": "Summon the snow or rain"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:rain_totem"
+						"valley:rain_and_snow_effigy"
 					]
 				}
 			}

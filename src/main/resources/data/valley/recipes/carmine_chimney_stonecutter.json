@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "valley:carmine_bricks"
   },
-  "result": "valley:chimney_carmine",
+  "result": "valley:carmine_brick_chimney",
   "count": 1
 }

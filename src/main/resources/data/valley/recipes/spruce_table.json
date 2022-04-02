@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "___",
+    "/ /",
+    "/ /"
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:spruce_slab"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:spruce_table",
+    "count": 1
+  }
+}

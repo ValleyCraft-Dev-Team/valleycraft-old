@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "S#S",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:oak_log"
+    },
+    "S": {
+      "item": "minecraft:stripped_oak_log"
+    }
+  },
+
+  "result": {
+    "item": "valley:blank_effigy",
+    "count": 1
+  }
+}

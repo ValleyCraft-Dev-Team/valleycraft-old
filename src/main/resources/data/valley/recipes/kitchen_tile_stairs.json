@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "valley:kitchen_tiles"
+    }
+  },
+  "result": {
+    "item": "valley:kitchen_tile_stairs",
+    "count": 4
+  }
+}

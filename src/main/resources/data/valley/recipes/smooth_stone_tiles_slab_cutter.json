@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "valley:smooth_stone_tiles"
-  },
-  "result": "valley:smooth_stone_tiles_slab",
-  "count": 2
-}

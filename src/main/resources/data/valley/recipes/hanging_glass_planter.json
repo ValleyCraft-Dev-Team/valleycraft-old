@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "GMG",
+    " G "
+  ],
+  "key": {
+    "#": {
+      "item": "valley:rope"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "M": {
+      "item": "minecraft:moss_block"
+    }
+  },
+  "result": {
+    "item": "valley:hanging_glass_planter",
+    "count": 3
+  }
+}

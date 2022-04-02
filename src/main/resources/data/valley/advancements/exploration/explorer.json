@@ -5,7 +5,7 @@
 			"text": "Advanced Adventurer"
 		},
 		"icon": {
-			"item": "valley:climbable_rope"
+			"item": "valley:rope"
 		},
 		"description": {
 			"text": "Craft Rope, a Rope Bridge, Bridge Anchors, and a Net."
@@ -18,7 +18,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:climbable_rope"
+							"valley:rope"
 						]
 					}
 				]
@@ -54,7 +54,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:net_block"
+							"valley:net"
 						]
 					}
 				]

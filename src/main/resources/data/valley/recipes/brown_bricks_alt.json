@@ -6,14 +6,14 @@
   ],
   "key": {
     "#": {
-      "item": "valley:mud_brick"
+      "item": "valley:brown_brick"
     },
     "X": {
       "item": "minecraft:brick"
     }
   },
   "result": {
-    "item": "valley:brown_bricks",
+    "item": "valley:mixed_bricks",
     "count": 1
   }
 }

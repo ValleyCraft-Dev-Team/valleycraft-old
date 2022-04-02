@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "valley:ghost_fish"
+      "item": "valley:ghostfin"
     },
     "P": {
       "item": "valley:dried_seaweed"
@@ -19,7 +19,7 @@
       "tag": "c:rice"
     },
     "B": {
-      "item": "valley:bento_block"
+      "item": "valley:bento_box"
     }
   },
   "result": {

@@ -42,7 +42,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bento_block"
+							"valley:bento_box"
 						]
 					}
 				]
@@ -54,7 +54,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:small_mug_block"
+							"valley:tea_mug"
 						]
 					}
 				]
@@ -66,7 +66,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:mug_block"
+							"valley:mead_mug"
 						]
 					}
 				]

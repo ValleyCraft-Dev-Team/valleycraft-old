@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "valley:jungle_stone"
+  },
+  "result": "valley:polished_carmine",
+  "experience": 0.2,
+  "cookingtime": 200
+}

@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "valley:volc_stone"
   },
-  "result": "valley:volc_stone_smooth",
+  "result": "valley:polished_volcanic_stone",
   "count": 1
 }

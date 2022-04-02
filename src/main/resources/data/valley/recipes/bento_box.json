@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#R#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bamboo"
+    },
+    "R": {
+      "tag": "c:red_dyes"
+    }
+  },
+  "result": {
+    "item": "valley:bento_box",
+    "count": 2
+  }
+}

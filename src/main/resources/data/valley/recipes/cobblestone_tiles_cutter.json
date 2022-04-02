@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "minecraft:cobblestone"
   },
-  "result": "valley:cobblestone_brick",
+  "result": "valley:cobblestone_bricks",
   "count": 1
 }

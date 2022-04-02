@@ -353,7 +353,7 @@ public class Furniture {
         //Bookshelf variants
         Reg.registerWithItem("cobwebbed_bookshelf", COBWEBBED_BOOKSHELF, furnGroup);
         Reg.registerWithItem("empty_bookshelf", EMPTY_BOOKSHELF, furnGroup);
-        Reg.registerWithItem("bookshelf_empty_cobweb", BOOKSHELF_EMPTY_COBWEB, furnGroup);
+        Reg.registerWithItem("cobwebbed_empty_bookshelf", BOOKSHELF_EMPTY_COBWEB, furnGroup);
         Reg.registerWithItem("bookshelf_with_lantern", BOOKSHELF_WITH_LANTERN, furnGroup);
         Reg.registerWithItem("cobwebbed_bookshelf_with_lantern", COBWEBBED_BOOKSHELF_WITH_LANTERN, furnGroup);
         Reg.registerWithItem("potion_shelf", POTION_SHELF, furnGroup);

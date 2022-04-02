@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:moss_ball_dry"
+      "item": "valley:dry_moss_clump"
     },
     {
       "item": "minecraft:vine"

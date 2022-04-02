@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "weight": 60,
-          "name": "valley:crab_red"
+          "name": "valley:dungeness_crab"
         },
         {
           "type": "minecraft:item",
@@ -17,7 +17,7 @@
         {
           "type": "minecraft:item",
           "weight": 30,
-          "name": "valley:lobster"
+          "name": "valley:spiny_lobster"
         },
         {
           "type": "minecraft:item",
@@ -32,7 +32,7 @@
         {
           "type": "minecraft:item",
           "weight": 3,
-          "name": "valley:marlin_spike_seashell"
+          "name": "valley:marlin_spike"
         },
         {
           "type": "minecraft:item",

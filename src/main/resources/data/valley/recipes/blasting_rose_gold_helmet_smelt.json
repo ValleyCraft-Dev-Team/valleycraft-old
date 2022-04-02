@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "valley:rg_helmet"
+    "item": "valley:rose_gold_helmet"
   },
   "result": "valley:copper_nugget",
   "experience": 0.1,

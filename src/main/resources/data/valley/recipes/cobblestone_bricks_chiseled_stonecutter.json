@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "valley:cobblestone_brick"
+    "item": "valley:cobblestone_bricks"
   },
-  "result": "valley:cobblestone_chiseled",
+  "result": "valley:chiseled_cobblestone_bricks",
   "count": 1
 }

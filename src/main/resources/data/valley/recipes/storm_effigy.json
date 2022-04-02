@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "_@_",
+    "+#+",
+    "==="
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:raw_copper"
+    },
+    "#": {
+      "item": "valley:blank_effigy"
+    },
+    "=": {
+      "item": "minecraft:powder_snow_bucket"
+    },
+    "_": {
+      "item": "minecraft:snowball"
+    },
+    "@": {
+      "item": "minecraft:lightning_rod"
+    }
+  },
+
+  "result": {
+    "item": "valley:storm_effigy",
+    "count": 1
+  }
+}

@@ -2,11 +2,11 @@
 	"replace": false,
 	"values": [
 		"valley:redstone_lantern",
-		"valley:mug_block",
-		"valley:small_mug_block",
-		"valley:bento_block",
+		"valley:mead_mug",
+		"valley:tea_mug",
+		"valley:bento_box",
 		"valley:bowl_block",
-		"valley:climbable_rope",
+		"valley:rope",
 		"valley:bone_torch",
 		"valley:soul_bone_torch",
 		"valley:redstone_bone_torch"

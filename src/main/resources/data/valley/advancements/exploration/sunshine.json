@@ -5,7 +5,7 @@
 			"text": "Bolero of Light"
 		},
 		"icon": {
-			"item": "valley:sunshine_totem"
+			"item": "valley:sunshine_effigy"
 		},
 		"description": {
 			"text": "Summon the sun"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:sunshine_totem"
+						"valley:sunshine_effigy"
 					]
 				}
 			}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "valley:quartz_tiles"
-  },
-  "result": "valley:quartz_tiles_stairs",
-  "count": 1
-}

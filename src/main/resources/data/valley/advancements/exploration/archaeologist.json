@@ -19,14 +19,14 @@
 					{
 						"items": [
 							"valley:anchor",
-							"valley:goblet",
+							"valley:golden_chalice",
 							"valley:bomb_bag",
 							"minecraft:skeleton_skull",
 							"minecraft:wither_skeleton_skull",
-							"valley:coral_knife",
+							"valley:coral_dagger",
 							"valley:mermaids_spear",
 							"valley:mermaids_sword",
-							"valley:message_bottle",
+							"valley:message_in_a_bottle",
 							"valley:sea_creature_eye",
 							"valley:encrusted_pickaxe"
 						]

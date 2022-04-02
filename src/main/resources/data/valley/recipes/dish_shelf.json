@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "BLC",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "L": {
+      "item": "valley:tea_mug"
+    },
+    "C": {
+      "item": "valley:stew_pot"
+    }
+  },
+  "result": {
+    "item": "valley:dish_shelf",
+    "count": 1
+  }
+}

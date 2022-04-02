@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:flour_bag"
+      "item": "valley:flour"
     },
     {
       "item": "minecraft:chicken"

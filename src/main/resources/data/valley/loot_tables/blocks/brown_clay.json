@@ -29,7 +29,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "valley:mud",
+              "name": "valley:mud_ball",
               "functions": [
                 {
                   "function": "minecraft:set_count",

@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:stoneroller_minnow",
+          "name": "valley:saltwater_stoneroller_minnow",
           "functions": [
             {
               "function": "minecraft:furnace_smelt",

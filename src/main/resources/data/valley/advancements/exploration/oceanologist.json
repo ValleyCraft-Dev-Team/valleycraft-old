@@ -5,7 +5,7 @@
 			"text": "Ichthyologist"
 		},
 		"icon": {
-			"item": "valley:octopus"
+			"item": "valley:octorok"
 		},
 		"description": {
 			"text": "Catch one of every sea creature"
@@ -79,7 +79,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:ghost_fish"
+							"valley:ghostfin"
 						]
 					}
 				]
@@ -103,7 +103,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crab_red"
+							"valley:dungeness_crab"
 						]
 					}
 				]
@@ -175,7 +175,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:slime_fish"
+							"valley:gelafin"
 						]
 					}
 				]
@@ -187,7 +187,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:glistering_anglerfish"
+							"valley:glistering_angler"
 						]
 					}
 				]
@@ -199,7 +199,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:octopus"
+							"valley:octorok"
 						]
 					}
 				]
@@ -247,7 +247,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:lobster"
+							"valley:spiny_lobster"
 						]
 					}
 				]
@@ -271,7 +271,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:marlin_spike_seashell"
+							"valley:marlin_spike"
 						]
 					}
 				]
@@ -283,7 +283,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:stoneroller_minnow"
+							"valley:saltwater_stoneroller_minnow"
 						]
 					}
 				]

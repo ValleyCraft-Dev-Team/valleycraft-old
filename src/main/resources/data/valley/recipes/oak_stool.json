@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "__",
+    "//"
+  ],
+  "key": {
+    "_": {
+      "item": "minecraft:oak_slab"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "valley:oak_stool",
+    "count": 1
+  }
+}

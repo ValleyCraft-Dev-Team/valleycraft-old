@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "valley:crab_red"
+    "item": "valley:dungeness_crab"
   },
   "result": "valley:cooked_dungeness_crab",
   "experience": 0.2,

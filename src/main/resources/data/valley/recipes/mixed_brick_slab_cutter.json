@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "valley:mixed_bricks"
+  },
+  "result": "valley:mixed_brick_slab",
+  "count": 2
+}
