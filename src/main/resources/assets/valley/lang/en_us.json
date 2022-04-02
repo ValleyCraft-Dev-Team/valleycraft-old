@@ -87,7 +87,7 @@
   "block.valley.coin_stack.tooltip": "An ancient currency",
   "block.valley.coin_stack.tooltip_2": "devalued by emeralds.",
 
-  "block.valley.bone_joint_block": "Joint Bone Block",
+  "block.valley.bone_joint_block": "Bone Joint Block",
 
   "item.valley.copper_billet.tooltip": "Used to knap Arrowheads",
   "item.valley.copper_billet.tooltip_2": "with Flint, Obsidian or Dripstone",
@@ -260,8 +260,8 @@
   "block.valley.crate_egg": "Chicken Egg Crate",
   "block.valley.crate_pepper": "Fire Pepper Crate",
   "block.valley.crate_eggplant": "Eggplant Crate",
-  "block.valley.crate_bamboo": "Bamboo Bale",
-  "block.valley.crate_sugar": "Sugarcane Bale",
+  "block.valley.crate_bamboo": "Bundled Bamboo",
+  "block.valley.crate_sugar": "Bundled Sugar Cane",
 
   "item.valley.hot_cocoa": "Hot Cocoa",
   "item.valley.mead": "Mead",

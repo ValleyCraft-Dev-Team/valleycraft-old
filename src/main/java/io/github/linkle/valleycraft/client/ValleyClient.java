@@ -19,7 +19,7 @@ import static io.github.linkle.valleycraft.init.Aquatic.*;
 import static io.github.linkle.valleycraft.init.Crops.*;
 import static io.github.linkle.valleycraft.init.Furniture.*;
 import static io.github.linkle.valleycraft.init.FurnitureCont.CAMPFIRE_RING;
-import static io.github.linkle.valleycraft.init.FurnitureCont.TELESCOPE_BLOCK;
+import static io.github.linkle.valleycraft.init.FurnitureCont.STARGAZING_SUPPLIES;
 import static io.github.linkle.valleycraft.init.Plants.*;
 import static io.github.linkle.valleycraft.init.PotBlock.POTTED_ROSE_SPRIG;
 
@@ -87,7 +87,7 @@ public class ValleyClient implements ClientModInitializer {
 
         //spike trap fix
         culloutBlocks.add(SPIKE_WALL_BLOCK);
-        culloutBlocks.add(TELESCOPE_BLOCK);
+        culloutBlocks.add(STARGAZING_SUPPLIES);
 
         //nether plants
         //cullouts.add(BLAZE_NETTLE);
