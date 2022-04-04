@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:duck_egg_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:duck_egg",
+    "count": 6
+  }
+}

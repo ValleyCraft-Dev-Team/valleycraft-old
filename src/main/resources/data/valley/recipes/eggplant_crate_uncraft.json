@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:eggplant_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:eggplant",
+    "count": 6
+  }
+}

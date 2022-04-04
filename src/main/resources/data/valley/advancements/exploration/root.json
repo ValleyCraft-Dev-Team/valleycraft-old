@@ -10,7 +10,7 @@
             "color": "green"
         },
         "icon": {
-            "item": "valley:stone_mossy"
+            "item": "valley:mossy_stone"
         },
         "frame": "task",
         "show_toast": true,

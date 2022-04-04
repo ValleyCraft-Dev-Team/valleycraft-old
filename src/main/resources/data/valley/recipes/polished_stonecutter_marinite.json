@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "valley:oceanstone"
+    "item": "valley:marinite"
   },
-  "result": "valley:marinite_smooth",
+  "result": "valley:polished_marinite",
   "count": 1
 }

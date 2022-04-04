@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:poisonous_potato_crate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:poisonous_potato",
+    "count": 6
+  }
+}

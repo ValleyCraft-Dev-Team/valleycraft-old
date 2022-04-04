@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "valley:jungle_stone"
+    "item": "valley:carmine"
   },
   "result": "valley:polished_carmine",
   "experience": 0.2,

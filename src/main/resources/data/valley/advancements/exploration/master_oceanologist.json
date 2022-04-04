@@ -5,7 +5,7 @@
 			"text": "Master Oceanologist"
 		},
 		"icon": {
-			"item": "valley:anemone_yellow"
+			"item": "valley:yellow_anemone"
 		},
 		"description": {
 			"text": "Find one of every living organism in the Oceans"
@@ -404,7 +404,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:sea_fern"
+							"valley:dancing_sea_fern"
 						]
 					}
 				]
@@ -428,7 +428,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:anemone_pink"
+							"valley:pink_anemone"
 						]
 					}
 				]
@@ -440,7 +440,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:anemone_purple"
+							"valley:purple_anemone"
 						]
 					}
 				]
@@ -452,7 +452,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:anemone_yellow"
+							"valley:yellow_anemone"
 						]
 					}
 				]
@@ -464,7 +464,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:anemone_green"
+							"valley:green_anemone"
 						]
 					}
 				]
@@ -476,7 +476,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:anemone_orange"
+							"valley:orange_anemone"
 						]
 					}
 				]
@@ -500,7 +500,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:barnacle"
+							"valley:thoracica_barnacle"
 						]
 					}
 				]

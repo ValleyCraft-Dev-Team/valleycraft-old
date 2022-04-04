@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:cocoa_bean_crate"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cocoa_beans",
+    "count": 6
+  }
+}

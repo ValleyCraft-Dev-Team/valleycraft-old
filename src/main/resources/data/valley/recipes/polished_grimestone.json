@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "valley:swampstone"
+      "item": "valley:grimestone"
     }
   },
   "result": {
-    "item": "valley:grimestone_smooth",
+    "item": "valley:polished_grimestone",
     "count": 4
   }
 }

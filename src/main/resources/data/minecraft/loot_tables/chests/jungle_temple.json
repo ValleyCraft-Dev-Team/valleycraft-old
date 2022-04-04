@@ -12,7 +12,7 @@
         {
           "type": "minecraft:item",
           "weight": 8,
-          "name": "valley:maize_crop",
+          "name": "valley:corn",
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:snowball"
+    },
+    {
+      "item": "valley:rocks"
+    }
+  ],
+  "result": {
+    "item": "valley:snowy_rocks",
+    "count": 1
+  }
+}

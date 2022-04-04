@@ -2,8 +2,8 @@
   "replace": false,
   "values": [
     "valley:charcoal_block", "valley:rope_bridge_anchor", "valley:rope_bridge",
-    "valley:rope", "valley:bush", "valley:rose_bush",
-    "valley:lilac_bush", "valley:peony_bush", "valley:mossy_vines",
+    "valley:rope", "valley:common_bush", "valley:small_rose_bush",
+    "valley:small_lilac", "valley:small_peony", "valley:moss_vines",
     "valley:dry_vines","valley:dry_moss_carpet","valley:dry_moss","valley:log_pile"
   ]
 }

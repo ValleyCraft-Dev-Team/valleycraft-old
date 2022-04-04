@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:rice_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:rice",
+    "count": 6
+  }
+}

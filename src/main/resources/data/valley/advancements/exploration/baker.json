@@ -5,7 +5,7 @@
 			"text": "A Basic Galley"
 		},
 		"icon": {
-			"item": "valley:brick_furnace"
+			"item": "valley:brick_stove"
 		},
 		"description": {
 			"text": "Craft a Stove for your kitchen"
@@ -18,10 +18,10 @@
 				"items": [
 					{
 						"items": [
-							"valley:brick_furnace",
-							"valley:volcanic_furnace",
-							"valley:cobble_furnace",
-							"valley:carmine_furnace"
+							"valley:brick_stove",
+							"valley:volcanic_brick_stove",
+							"valley:cobblestone_stove",
+							"valley:carmine_brick_stove"
 						]
 					}
 				]

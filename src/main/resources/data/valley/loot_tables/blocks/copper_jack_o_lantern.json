@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:copper_jack_o_lantern"
+          "name": "valley:copperflame_jack_o_lantern"
         }
       ],
       "conditions": [

@@ -1,6 +1,6 @@
 package io.github.linkle.valleycraft.client.entity.renderer;
 
-import io.github.linkle.valleycraft.ValleyMain;
+import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.client.render.entity.model.CodEntityModel;
@@ -38,7 +38,7 @@ public class CodEntityRenderer extends MobEntityRenderer<FishEntity, CodEntityMo
 
     /** @param texture file name of the fish texture. */
     public static EntityRendererFactory<FishEntity> create(String texture) {
-        var id = new Identifier(ValleyMain.MOD_ID, "textures/entity/fish/" + texture + ".png");
+        var id = Util.newId("textures/entity/fish/" + texture + ".png");
         return context -> new CodEntityRenderer(context, id);
     }
 }

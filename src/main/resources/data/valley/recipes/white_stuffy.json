@@ -5,11 +5,11 @@
       "tag": "c:white_dyes"
     },
     {
-      "item": "valley:stuffy_brown"
+      "item": "valley:brown_bear_stuffy"
     }
   ],
   "result": {
-    "item": "valley:stuffy_white",
+    "item": "valley:polar_bear_stuffy",
     "count": 1
   }
 }

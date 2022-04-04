@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "valley:rose_bush", "valley:lilac_bush", "valley:peony_bush", "valley:redwood_sorrel", "valley:miners_lettuce_crop_block", "valley:dandelion_puffs", "valley:reeds", "valley:jungle_bush",
-    "valley:herbs","valley:panflower","valley:honey_cluster"
+    "valley:small_rose_bush", "valley:small_lilac", "valley:small_peony", "valley:redwood_sorrel", "valley:miners_lettuce", "valley:mature_dandelions", "valley:cattails", "valley:blue_poppy_bush",
+    "valley:wild_herbs","valley:panflowers","valley:honey_cluster"
   ]
 }

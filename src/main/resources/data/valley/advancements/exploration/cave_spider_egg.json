@@ -1,0 +1,24 @@
+{
+	"parent": "valley:exploration/root",
+	"display": {
+		"title": {
+			"text": "Jeepers Creepers"
+		},
+		"icon": {
+			"item": "valley:cave_spider_egg"
+		},
+		"description": {
+			"text": "Discover and smash a Cave Spider Egg"
+		}
+	},
+	"criteria": {
+		"spider_spawn": {
+			"trigger": "valley:spider_spawn"
+		}
+	},
+	"requirements": [
+		[
+			"spider_spawn"
+		]
+	]
+}

@@ -5,11 +5,11 @@
       "item": "minecraft:stone"
     },
     {
-      "item": "valley:mossy_vines"
+      "item": "valley:moss_vines"
     }
   ],
   "result": {
-    "item": "valley:stone_mossy",
+    "item": "valley:mossy_stone",
     "count": 1
   }
 }

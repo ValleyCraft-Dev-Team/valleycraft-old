@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:living_mandrake_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:living_mandrake",
+    "count": 6
+  }
+}

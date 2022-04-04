@@ -186,7 +186,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:green_bean"
+							"valley:green_beans"
 						]
 					}
 				]
@@ -198,7 +198,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:maize_crop"
+							"valley:corn"
 						]
 					}
 				]
@@ -234,7 +234,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:tomato_bush"
+							"valley:tomato"
 						]
 					}
 				]
@@ -270,7 +270,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:mandrake"
+							"valley:living_mandrake"
 						]
 					}
 				]
@@ -282,7 +282,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:snow_yam_item"
+							"valley:snow_yam"
 						]
 					}
 				]

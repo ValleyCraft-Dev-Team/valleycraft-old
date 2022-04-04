@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:flesh_block"
+      "item": "valley:rotten_flesh_block"
     }
   ],
   "result": {

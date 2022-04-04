@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:green_bean_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:green_beans",
+    "count": 6
+  }
+}

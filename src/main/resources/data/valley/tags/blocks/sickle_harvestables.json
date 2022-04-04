@@ -3,7 +3,7 @@
     "values": [
         "minecraft:grass",
         "minecraft:tall_grass",
-        "valley:herbs",
-        "valley:taproots"
+        "valley:wild_herbs",
+        "valley:wild_taproots"
     ]
 }

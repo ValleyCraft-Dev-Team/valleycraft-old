@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "valley:brown_clay","valley:volc_ash", "valley:desert_gravel", "valley:glow_kelp_block", "valley:sea_urchin"
+    "valley:mud","valley:volcanic_ash", "valley:sandy_gravel", "valley:glow_kelp_block", "valley:sea_urchin"
   ]
 }

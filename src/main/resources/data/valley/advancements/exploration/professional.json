@@ -176,7 +176,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:rice_crop"
+							"valley:rice_seedlings"
 						]
 					}
 				]
@@ -188,7 +188,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:maize_crop"
+							"valley:corn"
 						]
 					}
 				]

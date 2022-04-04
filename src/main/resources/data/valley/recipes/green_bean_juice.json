@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:green_bean"
+      "item": "valley:green_beans"
     },
     {
       "item": "minecraft:glass_bottle"

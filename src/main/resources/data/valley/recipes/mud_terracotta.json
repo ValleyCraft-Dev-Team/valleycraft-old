@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "valley:brown_clay"
+    "item": "valley:mud"
   },
   "result": "minecraft:terracotta",
   "experience": 0.3,

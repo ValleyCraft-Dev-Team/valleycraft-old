@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "valley:rose_bush", "valley:lilac_bush", "valley:peony_bush", "valley:redwood_sorrel", "valley:miners_lettuce", "valley:dandelion_puffs", "valley:reeds", "valley:jungle_bush",
-    "valley:black_dahlia","valley:orange_beauty","valley:lavender","valley:lavender_sprig","valley:single_rose",
-    "valley:ice_rose","valley:dandelion_puffs","valley:orange_fern",
-    "valley:panflower","valley:herbs"
+    "valley:small_rose_bush", "valley:small_lilac", "valley:small_peony", "valley:redwood_sorrel", "valley:miners_lettuce", "valley:mature_dandelions", "valley:cattails", "valley:blue_poppy_bush",
+    "valley:black_dahlia","valley:orange_beauty","valley:lavender","valley:spring_of_lavender","valley:rose",
+    "valley:frozen_rose","valley:mature_dandelions","valley:orange_fern",
+    "valley:panflowers","valley:wild_herbs"
   ]
 }

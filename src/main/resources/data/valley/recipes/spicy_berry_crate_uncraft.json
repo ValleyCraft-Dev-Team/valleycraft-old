@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:spicy_berry_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:spicy_berries",
+    "count": 6
+  }
+}
