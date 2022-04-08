@@ -27,7 +27,7 @@ public class LadderBlock extends HorizontalWithWaterBlock {
     }
 
     public LadderBlock(FabricBlockSettings setting) {
-        super(setting.nonOpaque().breakByHand(true));
+        super(setting.nonOpaque());
         setDefaultState();
     }
 

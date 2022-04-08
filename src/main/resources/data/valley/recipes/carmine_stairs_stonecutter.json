@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "valley:jungle_stone"
-  },
-  "result": "valley:carmine_stairs",
-  "count": 1
-}

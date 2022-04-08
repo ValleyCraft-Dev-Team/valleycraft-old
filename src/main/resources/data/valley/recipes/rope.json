@@ -7,11 +7,11 @@
   ],
   "key": {
     "#": {
-      "item": "valley:fiber"
+      "item": "valley:plant_fiber"
     }
   },
   "result": {
-    "item": "valley:climbable_rope",
+    "item": "valley:rope",
     "count": 1
   }
 }

@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "valley:taigastone"
+      "item": "valley:verdantine"
     }
   },
   "result": {
-    "item": "valley:verdantine_smooth",
+    "item": "valley:polished_verdantine",
     "count": 4
   }
 }

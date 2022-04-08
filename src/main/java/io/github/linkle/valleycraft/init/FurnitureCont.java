@@ -1,7 +1,6 @@
 package io.github.linkle.valleycraft.init;
 
 import io.github.linkle.valleycraft.blocks.decorations.*;
-import io.github.linkle.valleycraft.utils.Util;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Rarity;
@@ -10,47 +9,43 @@ import static io.github.linkle.valleycraft.init.ItemGroups.ARTEFACT_GROUP;
 import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 public class FurnitureCont {
-    public static final Block STUFFY_BROWN = new StuffyBlock();
-    public static final Block STUFFY_WHITE = new StuffyBlock();
-
-    public static final Block GOLEM_R = new GolemBlockWaxed();
-    public static final Block GOLEM_W = new GolemBlockRusted();
-    public static final Block GOLEM_I = new GolemBlock();
+    public static final Block BROWN_BEAR_STUFFY = new StuffyBlock();
+    public static final Block POLAR_BEAR_STUFFY = new StuffyBlock();
 
     public static final Block CAMPFIRE_RING = new CampfireRocksBlock();
-    public static final Block LOGPILE = new LogPileBlock();
+    public static final Block LOG_PILE = new LogPileBlock();
 
-    public static final Block CRATE_BAMBOO = new CrateBlock();
-    public static final Block CRATE_SUGAR = new CrateBlock();
-    public static final Block CRATE_COCOA = new CrateBlock();
-    public static final Block CRATE_CHORUS = new CrateBlock();
-    public static final Block CRATE_GLOW = new CrateBlock();
-    public static final Block CRATE_SWEET = new CrateBlock();
-    public static final Block CRATE_BITTER = new CrateBlock();
-    public static final Block CRATE_SPICY = new CrateBlock();
-    public static final Block CRATE_GREEN = new CrateBlock();
-    public static final Block CRATE_MANDRAKE = new CrateBlock();
-    public static final Block CRATE_SNOW = new CrateBlock();
-    public static final Block CRATE_HOLLY = new CrateBlock();
-    public static final Block CRATE_RICE = new CrateBlock();
-    public static final Block CRATE_CORN = new CrateBlock();
-    public static final Block CRATE_ONION = new CrateBlock();
-    public static final Block CRATE_TOMATO = new CrateBlock();
-    public static final Block CRATE_PUFF = new CrateBlock();
-    public static final Block CRATE_MINER = new CrateBlock();
-    public static final Block CRATE_DUCK = new CrateBlock();
-    public static final Block CRATE_EGG = new CrateBlock();
-    public static final Block CRATE_BEET = new CrateBlock();
-    public static final Block CRATE_POTATO = new CrateBlock();
-    public static final Block CRATE_CARROT = new CrateBlock();
-    public static final Block CRATE_APPLE = new CrateBlock();
-    public static final Block CRATE_PEPPER = new CrateBlock();
-    public static final Block CRATE_EGGPLANT = new CrateBlock();
-    public static final Block CRATE_SOUR = new CrateBlock();
-    public static final Block CRATE_POISON = new CrateBlock();
+    public static final Block BUNDLED_BAMBOO = new CrateBlock();
+    public static final Block BUNDLED_SUGAR_CANE = new CrateBlock();
+    public static final Block COCOA_BEAN_CRATE = new CrateBlock();
+    public static final Block CHORUS_FRUIT_CRATE = new CrateBlock();
+    public static final Block GLOW_BERRY_CRATE = new CrateBlock();
+    public static final Block SWEET_BERRY_CRATE = new CrateBlock();
+    public static final Block BITTER_BERRY_CRATE = new CrateBlock();
+    public static final Block SPICY_BERRY_CRATE = new CrateBlock();
+    public static final Block GREEN_BEAN_CRATE = new CrateBlock();
+    public static final Block LIVING_MANDRAKE_CRATE = new CrateBlock();
+    public static final Block SNOW_YAM_CRATE = new CrateBlock();
+    public static final Block HOLLY_CRATE = new CrateBlock();
+    public static final Block RICE_CRATE = new CrateBlock();
+    public static final Block CORN_CRATE = new CrateBlock();
+    public static final Block ONION_CRATE = new CrateBlock();
+    public static final Block TOMATO_CRATE = new CrateBlock();
+    public static final Block PUFF_BALL_CRATE = new CrateBlock();
+    public static final Block MINERS_LETTUCE_CRATE = new CrateBlock();
+    public static final Block DUCK_EGG_CRATE = new CrateBlock();
+    public static final Block CHICKEN_EGG_CRATE = new CrateBlock();
+    public static final Block BEETROOT_CRATE = new CrateBlock();
+    public static final Block POTATO_CRATE = new CrateBlock();
+    public static final Block CARROT_CRATE = new CrateBlock();
+    public static final Block APPLE_CRATE = new CrateBlock();
+    public static final Block FIRE_PEPPER_CRATE = new CrateBlock();
+    public static final Block EGGPLANT_CRATE = new CrateBlock();
+    public static final Block SOUR_BERRY_CRATE = new CrateBlock();
+    public static final Block POISONOUS_POTATO_CRATE = new CrateBlock();
 
-    public static final Block BONE_JOINT = new BoneJointBlock();
-    public static final Block TELESCOPE_BLOCK = new StewPotBlock();
+    public static final Block BONE_JOINT_BLOCK = new BoneJointBlock();
+    public static final Block STARGAZING_SUPPLIES = new StewPotBlock();
 
     @SuppressWarnings("unused")
     public static void initialize() {
@@ -59,51 +54,48 @@ public class FurnitureCont {
         var furnGroupEpic = new Item.Settings().group(FURNITURE_GROUP).rarity(Rarity.EPIC);
         var arteGroup = new Item.Settings().group(ARTEFACT_GROUP);
 
-        Util.registerWithItem("stuffy_brown", STUFFY_BROWN, furnGroup);
-        Util.registerWithItem("stuffy_white", STUFFY_WHITE, furnGroup);
+        Reg.registerWithItem("brown_bear_stuffy", BROWN_BEAR_STUFFY, furnGroup);
+        Reg.registerWithItem("polar_bear_stuffy", POLAR_BEAR_STUFFY, furnGroup);
 
-        Util.registerWithItem("log_pile", LOGPILE, furnGroup);
+        Reg.registerWithItem("log_pile", LOG_PILE, furnGroup);
 
-        Util.registerWithItem("campfire_ring", CAMPFIRE_RING, furnGroup);
+        Reg.registerWithItem("campfire_ring", CAMPFIRE_RING, furnGroup);
 
-        Util.registerWithItem("crate_apple", CRATE_APPLE, furnGroup);
-        Util.registerWithItem("crate_carrot", CRATE_CARROT, furnGroup);
-        Util.registerWithItem("crate_potato", CRATE_POTATO, furnGroup);
-        Util.registerWithItem("crate_poison", CRATE_POISON, furnGroup);
-        Util.registerWithItem("crate_beet", CRATE_BEET, furnGroup);
+        Reg.registerWithItem("apple_crate", APPLE_CRATE, furnGroup);
+        Reg.registerWithItem("carrot_crate", CARROT_CRATE, furnGroup);
+        Reg.registerWithItem("potato_crate", POTATO_CRATE, furnGroup);
+        Reg.registerWithItem("poisonous_potato_crate", POISONOUS_POTATO_CRATE, furnGroup);
+        Reg.registerWithItem("beetroot_crate", BEETROOT_CRATE, furnGroup);
 
-        Util.registerWithItem("crate_rice", CRATE_RICE, furnGroup);
-        Util.registerWithItem("crate_corn", CRATE_CORN, furnGroup);
-        Util.registerWithItem("crate_tomato", CRATE_TOMATO, furnGroup);
+        Reg.registerWithItem("rice_crate", RICE_CRATE, furnGroup);
+        Reg.registerWithItem("corn_crate", CORN_CRATE, furnGroup);
+        Reg.registerWithItem("tomato_crate", TOMATO_CRATE, furnGroup);
+        Reg.registerWithItem("green_bean_crate", GREEN_BEAN_CRATE, furnGroup);
+        Reg.registerWithItem("living_mandrake_crate", LIVING_MANDRAKE_CRATE, furnGroup);
+        Reg.registerWithItem("snow_yam_crate", SNOW_YAM_CRATE, furnGroup);
+        Reg.registerWithItem("fire_pepper_crate", FIRE_PEPPER_CRATE, furnGroup);
+        Reg.registerWithItem("eggplant_crate", EGGPLANT_CRATE, furnGroup);
+        Reg.registerWithItem("onion_crate", ONION_CRATE, furnGroup);
+        Reg.registerWithItem("miners_lettuce_crate", MINERS_LETTUCE_CRATE, furnGroup);
 
-        Util.registerWithItem("crate_green", CRATE_GREEN, furnGroup);
-        Util.registerWithItem("crate_mandrake", CRATE_MANDRAKE, furnGroup);
-        Util.registerWithItem("crate_snow", CRATE_SNOW, furnGroup);
-        Util.registerWithItem("crate_pepper", CRATE_PEPPER, furnGroup);
-        Util.registerWithItem("crate_eggplant", CRATE_EGGPLANT, furnGroup);
+        Reg.registerWithItem("chorus_fruit_crate", CHORUS_FRUIT_CRATE, furnGroup);
+        Reg.registerWithItem("sweet_berry_crate", SWEET_BERRY_CRATE, furnGroup);
+        Reg.registerWithItem("glow_berry_crate", GLOW_BERRY_CRATE, furnGroup);
+        Reg.registerWithItem("bitter_berry_crate", BITTER_BERRY_CRATE, furnGroup);
+        Reg.registerWithItem("sour_berry_crate", SOUR_BERRY_CRATE, furnGroup);
+        Reg.registerWithItem("spicy_berry_crate", SPICY_BERRY_CRATE, furnGroup);
+        Reg.registerWithItem("holly_crate", HOLLY_CRATE, furnGroup);
+        Reg.registerWithItem("cocoa_bean_crate", COCOA_BEAN_CRATE, furnGroup);
+        Reg.registerWithItem("puff_ball_crate", PUFF_BALL_CRATE, furnGroup);
 
-        Util.registerWithItem("crate_onion", CRATE_ONION, furnGroup);
-        Util.registerWithItem("crate_miner", CRATE_MINER, furnGroup);
+        Reg.registerWithItem("duck_egg_crate", DUCK_EGG_CRATE, furnGroup);
+        Reg.registerWithItem("chicken_egg_crate", CHICKEN_EGG_CRATE, furnGroup);
 
-        Util.registerWithItem("crate_chorus", CRATE_CHORUS, furnGroup);
-        Util.registerWithItem("crate_sweet", CRATE_SWEET, furnGroup);
-        Util.registerWithItem("crate_glow", CRATE_GLOW, furnGroup);
-        Util.registerWithItem("crate_bitter", CRATE_BITTER, furnGroup);
-        Util.registerWithItem("crate_sour", CRATE_SOUR, furnGroup);
-        Util.registerWithItem("crate_spicy", CRATE_SPICY, furnGroup);
-        Util.registerWithItem("crate_holly", CRATE_HOLLY, furnGroup);
-        Util.registerWithItem("crate_cocoa", CRATE_COCOA, furnGroup);
+        Reg.registerWithItem("bundled_bamboo", BUNDLED_BAMBOO, furnGroup);
+        Reg.registerWithItem("bundled_sugar_cane", BUNDLED_SUGAR_CANE, furnGroup);
 
-        Util.registerWithItem("crate_puff", CRATE_PUFF, furnGroup);
-
-        Util.registerWithItem("crate_duck", CRATE_DUCK, furnGroup);
-        Util.registerWithItem("crate_egg", CRATE_EGG, furnGroup);
-
-        Util.registerWithItem("crate_bamboo", CRATE_BAMBOO, furnGroup);
-        Util.registerWithItem("crate_sugar", CRATE_SUGAR, furnGroup);
-
-        Util.registerWithItem("bone_joint_block", BONE_JOINT, furnGroup);
-        Util.registerWithItem("telescope_block", TELESCOPE_BLOCK, furnGroup);
+        Reg.registerWithItem("bone_joint_block", BONE_JOINT_BLOCK, furnGroup);
+        Reg.registerWithItem("stargazing_supplies", STARGAZING_SUPPLIES, furnGroup);
 
     }
 }

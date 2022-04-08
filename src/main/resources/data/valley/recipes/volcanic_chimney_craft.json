@@ -7,11 +7,11 @@
   ],
   "key": {
     "_": {
-      "item": "valley:volcanic_bricks_slab"
+      "item": "valley:volcanic_brick_slab"
     }
   },
   "result": {
-    "item": "valley:chimney_volcanic",
+    "item": "valley:volcanic_brick_chimney",
     "count": 3
   }
 }

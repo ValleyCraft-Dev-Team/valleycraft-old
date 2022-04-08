@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    },
+    {
+      "item": "valley:plant_fiber"
+    }
+  ],
+  "result": {
+    "item": "valley:plant_fiber_bale",
+    "count": 1
+  }
+}

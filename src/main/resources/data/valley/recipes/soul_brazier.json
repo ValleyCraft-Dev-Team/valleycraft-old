@@ -16,11 +16,11 @@
       "item": "minecraft:iron_ingot"
     },
     "C": {
-      "item": "valley:climbable_rope"
+      "item": "valley:rope"
     }
   },
   "result": {
-    "item": "valley:brazier_soul",
+    "item": "valley:soul_brazier",
     "count": 1
   }
 }

@@ -19,7 +19,6 @@ public class StuffyBlock extends HorizontalWithWaterBlock {
 
     public StuffyBlock() {
         super(FabricBlockSettings.of(Material.WOOL)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOL)
                 .strength(0.5f, 2.5f));
         setDefaultState();

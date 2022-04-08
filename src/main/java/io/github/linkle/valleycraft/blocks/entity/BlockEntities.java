@@ -4,7 +4,7 @@ import static io.github.linkle.valleycraft.init.ItemGroups.FURNITURE_GROUP;
 
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.init.ItemGroups;
-import io.github.linkle.valleycraft.utils.Util;
+import io.github.linkle.valleycraft.init.Reg;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder.Factory;
 import net.minecraft.block.Block;
@@ -17,32 +17,32 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BlockEntities {
-    public static final Block BRICK_FURNACE = new BrickFurnace(Block.Settings.copy(Blocks.FURNACE)
+    public static final Block BRICK_STOVE = new BrickFurnace(Block.Settings.copy(Blocks.FURNACE)
             .sounds(BlockSoundGroup.DEEPSLATE_BRICKS)
             .luminance(s->7));
 
-    public static final Block COBBLE_FURNACE = new BrickFurnace(Block.Settings.copy(BRICK_FURNACE));
-    public static final Block VOLCANIC_FURNACE = new BrickFurnace(Block.Settings.copy(BRICK_FURNACE));
-    public static final Block CARMINE_FURNACE = new BrickFurnace(Block.Settings.copy(BRICK_FURNACE));
+    public static final Block COBBLESTONE_STOVE = new BrickFurnace(Block.Settings.copy(BRICK_STOVE));
+    public static final Block VOLCANIC_BRICK_STOVE = new BrickFurnace(Block.Settings.copy(BRICK_STOVE));
+    public static final Block CARMINE_BRICK_STOVE = new BrickFurnace(Block.Settings.copy(BRICK_STOVE));
 
     public static final Block CRAB_TRAP = new CrabTrap();
 
     public static void ints() {
         var furnGroup = new BlockItem.Settings().group(FURNITURE_GROUP);
 
-        Util.register("brick_furnace", new BlockItem(BRICK_FURNACE, furnGroup));
-        createBlockEntity("brick_furnace", BRICK_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
+        Reg.register("brick_stove", new BlockItem(BRICK_STOVE, furnGroup));
+        createBlockEntity("brick_stove", BRICK_STOVE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("cobble_furnace", new BlockItem(COBBLE_FURNACE, furnGroup));
-        createBlockEntity("cobble_furnace", COBBLE_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
+        Reg.register("cobblestone_stove", new BlockItem(COBBLESTONE_STOVE, furnGroup));
+        createBlockEntity("cobblestone_stove", COBBLESTONE_STOVE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("carmine_furnace", new BlockItem(CARMINE_FURNACE, furnGroup));
-        createBlockEntity("carmine_furnace", CARMINE_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
+        Reg.register("carmine_brick_stove", new BlockItem(CARMINE_BRICK_STOVE, furnGroup));
+        createBlockEntity("carmine_brick_stove", CARMINE_BRICK_STOVE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("volcanic_furnace", new BlockItem(VOLCANIC_FURNACE, furnGroup));
-        createBlockEntity("volcanic_furnace", VOLCANIC_FURNACE, new BlockEntityFactory(BrickFurnaceEntity::new));
+        Reg.register("volcanic_brick_stove", new BlockItem(VOLCANIC_BRICK_STOVE, furnGroup));
+        createBlockEntity("volcanic_brick_stove", VOLCANIC_BRICK_STOVE, new BlockEntityFactory(BrickFurnaceEntity::new));
 
-        Util.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
+        Reg.register("crab_trap", new BlockItem(CRAB_TRAP, new BlockItem.Settings().group(ItemGroups.FISHING_GROUP)));
         CrabTrap.BLOCK_ENTITY = createBlockEntity("crab_trap", CRAB_TRAP, CrabTrapEntity::new);
     }
 

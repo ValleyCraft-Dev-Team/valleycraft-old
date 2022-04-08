@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:bitter_berry_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:bitter_berries",
+    "count": 6
+  }
+}

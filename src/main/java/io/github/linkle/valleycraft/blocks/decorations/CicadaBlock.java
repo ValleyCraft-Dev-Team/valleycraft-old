@@ -16,7 +16,6 @@ public class CicadaBlock extends DirectionBlockWithWater {
 
     public CicadaBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.STONE)
                 .strength(0.5f, 2.5f));
         setDefaultState();

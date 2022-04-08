@@ -5,7 +5,7 @@
 			"text": "Mida's Taste"
 		},
 		"icon": {
-			"item": "valley:glistering_glow_berries"
+			"item": "valley:golden_glow_berries"
 		},
 		"description": {
 			"text": "Eat one of every type of golden food"
@@ -28,7 +28,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_sour_berries"
+						"valley:golden_sour_berries"
 					]
 				}
 			}
@@ -58,7 +58,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:golden_kabob"
+						"valley:golden_fruit_skewer"
 					]
 				}
 			}
@@ -68,7 +68,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_honeycomb"
+						"valley:golden_honeycomb"
 					]
 				}
 			}
@@ -78,7 +78,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_bitter_berries"
+						"valley:golden_bitter_berries"
 					]
 				}
 			}
@@ -88,7 +88,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_sweet_berries"
+						"valley:golden_sweet_berries"
 					]
 				}
 			}
@@ -98,7 +98,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_spicy_berries"
+						"valley:golden_spicy_berries"
 					]
 				}
 			}
@@ -108,7 +108,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_kelp"
+						"valley:golden_kelp"
 					]
 				}
 			}
@@ -118,7 +118,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_tomato"
+						"valley:golden_tomato"
 					]
 				}
 			}
@@ -128,7 +128,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_onion"
+						"valley:golden_onion"
 					]
 				}
 			}
@@ -138,7 +138,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_potato"
+						"valley:golden_potato"
 					]
 				}
 			}
@@ -148,7 +148,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_beet"
+						"valley:golden_beet"
 					]
 				}
 			}
@@ -158,7 +158,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_green_bean"
+						"valley:golden_green_bean"
 					]
 				}
 			}
@@ -168,7 +168,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_juice"
+						"valley:glistering_melon_juice"
 					]
 				}
 			}
@@ -178,7 +178,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_snow_yam"
+						"valley:golden_snow_yam"
 					]
 				}
 			}
@@ -188,7 +188,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_anglerfish"
+						"valley:glistering_angler"
 					]
 				}
 			}
@@ -198,7 +198,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_corn"
+						"valley:golden_corn"
 					]
 				}
 			}
@@ -208,7 +208,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_mandrake"
+						"valley:golden_mandrake"
 					]
 				}
 			}
@@ -218,7 +218,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_pepper"
+						"valley:golden_pepper"
 					]
 				}
 			}
@@ -228,7 +228,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_eggplant"
+						"valley:golden_eggplant"
 					]
 				}
 			}
@@ -238,7 +238,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:glistering_glow_berries"
+						"valley:golden_glow_berries"
 					]
 				}
 			}

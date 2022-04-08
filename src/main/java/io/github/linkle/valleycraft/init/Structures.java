@@ -5,18 +5,13 @@ import static io.github.linkle.valleycraft.ValleyMain.MOD_ID;
 import io.github.linkle.valleycraft.world.gen.structures.ResearchStationFeature;
 import io.github.linkle.valleycraft.world.gen.structures.ShipwreckFeature;
 import io.github.linkle.valleycraft.world.gen.structures.TidePoolFeatures;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.structure.v1.FabricStructureBuilder;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
-import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.ConfiguredStructureFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.StructureFeature;
 
 public class Structures {
@@ -28,6 +23,7 @@ public class Structures {
         var surface = GenerationStep.Feature.SURFACE_STRUCTURES;
         RegistryKey<ConfiguredStructureFeature<?, ?>> key;
 
+        /*
         FabricStructureBuilder.create(new Identifier(MOD_ID, "shipwreck"), SHIPWRECK)
         .step(surface)
         .defaultConfig(24, 10, 4353)
@@ -53,6 +49,7 @@ public class Structures {
 
         key = registor(TIDE_POOL.configure(FeatureConfig.DEFAULT), "tide_pool");
         BiomeModifications.addStructure(BiomeSelectors.categories(Category.OCEAN), key);
+        */
     }
 
     private static RegistryKey<ConfiguredStructureFeature<?, ?>> registor(ConfiguredStructureFeature<?, ?> config, String id) {

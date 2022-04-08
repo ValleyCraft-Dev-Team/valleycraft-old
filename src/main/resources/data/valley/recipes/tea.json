@@ -8,11 +8,11 @@
       "item": "minecraft:water_bucket"
     },
     {
-      "item": "valley:small_mug_block"
+      "item": "valley:tea_mug"
     }
   ],
   "result": {
-    "item": "valley:tea",
+    "item": "valley:fern_tea",
     "count": 1
   }
 }

@@ -37,7 +37,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "valley:rarecrow_skeleton"
+          "name": "valley:skeleton_rarecrow"
         },
         {
           "type": "minecraft:empty",

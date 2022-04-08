@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "/i/",
+    "/C/"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:coals"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "i": {
+      "tag": "c:copper_ingot"
+    },
+    "C": {
+      "item": "valley:rope"
+    }
+  },
+  "result": {
+    "item": "valley:copperflame_brazier",
+    "count": 1
+  }
+}

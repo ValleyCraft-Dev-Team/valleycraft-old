@@ -9,7 +9,6 @@ public class BookshelfBlock extends Block {
 
     public BookshelfBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1, 2f));
     }

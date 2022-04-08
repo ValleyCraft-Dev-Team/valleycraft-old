@@ -16,7 +16,7 @@ public class MinnowEntity extends SchoolingFishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(Fishing.BUCKET_MINNOW);
+        return new ItemStack(Fishing.MINNOW_BUCKET);
     }
 
     @Override

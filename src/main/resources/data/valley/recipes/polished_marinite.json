@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "valley:oceanstone"
+      "item": "valley:marinite"
     }
   },
   "result": {
-    "item": "valley:marinite_smooth",
+    "item": "valley:polished_marinite",
     "count": 4
   }
 }

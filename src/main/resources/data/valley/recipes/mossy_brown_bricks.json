@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:brown_bricks"
+      "item": "valley:mixed_bricks"
     },
     {
       "item": "minecraft:vine"
     }
   ],
   "result": {
-    "item": "valley:brown_mossy_bricks",
+    "item": "valley:mossy_mixed_bricks",
     "count": 1
   }
 }

@@ -5,7 +5,7 @@
 			"text": "Bodacious Baker"
 		},
 		"icon": {
-			"item": "valley:sour_pie"
+			"item": "valley:sour_berry_pie"
 		},
 		"description": {
 			"text": "Bake every possible pastry"
@@ -79,7 +79,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:sweet_pie"
+							"valley:sweet_berry_pie"
 						]
 					}
 				]
@@ -91,7 +91,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bitter_pie"
+							"valley:bitter_berry_pie"
 						]
 					}
 				]
@@ -103,7 +103,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:sour_pie"
+							"valley:sour_berry_pie"
 						]
 					}
 				]
@@ -115,7 +115,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:glow_pie"
+							"valley:glow_berry_pie"
 						]
 					}
 				]
@@ -139,7 +139,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crabcake"
+							"valley:crab_cake"
 						]
 					}
 				]
@@ -175,7 +175,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:puppy_pumpkin"
+							"valley:pumpkin_puppy_treat"
 						]
 					}
 				]

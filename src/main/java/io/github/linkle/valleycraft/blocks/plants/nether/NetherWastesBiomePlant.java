@@ -20,7 +20,6 @@ public class NetherWastesBiomePlant extends PlantBlock {
     public NetherWastesBiomePlant() {
         super(FabricBlockSettings.of(Material.NETHER_SHOOTS)
                 .nonOpaque().luminance(4)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.FUNGUS)
                 .strength(0, 0.2f)
                 .noCollision());

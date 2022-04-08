@@ -25,7 +25,6 @@ public class CrestBlock extends HorizontalWithWaterBlock {
 
     public CrestBlock() {
         super(FabricBlockSettings.of(Material.DECORATION)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.4f, 0.5f));
         setDefaultState();

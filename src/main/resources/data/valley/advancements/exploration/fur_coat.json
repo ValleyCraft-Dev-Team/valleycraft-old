@@ -5,7 +5,7 @@
 			"text": "Frozen Comfort"
 		},
 		"icon": {
-			"item": "valley:fur_chestplate"
+			"item": "valley:fur_cloak"
 		},
 		"description": {
 			"text": "Make a Fur Cloak"
@@ -18,7 +18,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:fur_chestplate"
+							"valley:fur_cloak"
 						]
 					}
 				]

@@ -20,7 +20,6 @@ public class PrismarineClusterBlock extends AmethystClusterBlock {
     public PrismarineClusterBlock() {
         super(6, 3, FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque().luminance(7)
-                .breakByHand(false)
                 .sounds(BlockSoundGroup.GLASS)
                 .strength(1, 0.5f)
                 .noCollision());

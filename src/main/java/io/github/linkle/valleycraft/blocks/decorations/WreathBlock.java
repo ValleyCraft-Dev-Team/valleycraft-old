@@ -25,7 +25,6 @@ public class WreathBlock extends HorizontalWithWaterBlock {
 
     public WreathBlock() {
         super(FabricBlockSettings.of(Material.DECORATION)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0.2f, 0.5f));
         setDefaultState();

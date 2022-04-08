@@ -7,7 +7,7 @@ import net.minecraft.block.HayBlock;
 public class BaleBlock extends HayBlock {
 
     public BaleBlock() {
-        super(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK).breakByHand(true));
+        super(FabricBlockSettings.copyOf(Blocks.HAY_BLOCK));
     }
 
 }

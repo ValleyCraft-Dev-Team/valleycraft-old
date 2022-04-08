@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "+_+",
+    "###"
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:emerald"
+    },
+    "_": {
+      "item": "valley:blank_effigy"
+    },
+    "#": {
+      "item": "minecraft:oak_sapling"
+    }
+  },
+
+  "result": {
+    "item": "valley:sunshine_effigy",
+    "count": 1
+  }
+}

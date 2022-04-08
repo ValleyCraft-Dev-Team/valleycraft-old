@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:flint_rock"
+      "item": "valley:sharpened_flint"
     },
     {
       "tag": "c:bones"

@@ -13,7 +13,7 @@
       "item": "minecraft:ice"
     },
     "C": {
-      "item": "valley:single_rose"
+      "item": "valley:rose"
     },
     "B": {
       "item": "minecraft:blue_ice"
@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "valley:ice_rose",
+    "item": "valley:frozen_rose",
     "count": 1
   }
 }

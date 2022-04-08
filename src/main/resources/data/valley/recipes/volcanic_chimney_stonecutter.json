@@ -3,6 +3,6 @@
   "ingredient": {
     "item": "valley:volcanic_bricks"
   },
-  "result": "valley:chimney_volcanic",
+  "result": "valley:volcanic_brick_chimney",
   "count": 1
 }

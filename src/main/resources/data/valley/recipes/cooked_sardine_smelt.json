@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "valley:sardine"
   },
-  "result": "valley:sardine_cooked",
+  "result": "valley:cooked_sardine",
   "experience": 0.2,
   "cookingtime": 200
 }

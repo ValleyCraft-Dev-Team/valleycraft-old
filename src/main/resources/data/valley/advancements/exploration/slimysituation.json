@@ -16,9 +16,9 @@
 		"conditions": {
 			"item": {
 				"items": [
-					"valley:frozen_jelly",
+					"valley:frozen_slime_ball",
 					"valley:slime_soup",
-					"valley:slime_fish"
+					"valley:gelafin"
 				]
 			}
 		}

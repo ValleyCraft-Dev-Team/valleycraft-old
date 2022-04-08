@@ -5,14 +5,14 @@
       "item": "minecraft:bone_meal"
     },
     {
-      "item": "valley:rice_item"
+      "item": "valley:rice"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "valley:rice_crop",
+    "item": "valley:rice_seedlings",
     "count": 1
   }
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:bundled_sugar_cane"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sugar_cane",
+    "count": 9
+  }
+}

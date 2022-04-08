@@ -25,7 +25,6 @@ public class GolemBlockRusted extends HorizontalWithWaterBlock {
 
     public GolemBlockRusted() {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.CHAIN)
                 .strength(1.5f, 2.5f));
         setDefaultState();

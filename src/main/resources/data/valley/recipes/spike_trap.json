@@ -10,14 +10,14 @@
       "tag": "c:pointy_things"
     },
     "C": {
-      "item": "valley:climbable_rope"
+      "item": "valley:rope"
     },
     "B": {
       "item": "minecraft:bamboo"
     }
   },
   "result": {
-    "item": "valley:spike_wall_block",
+    "item": "valley:spike_trap",
     "count": 3
   }
 }

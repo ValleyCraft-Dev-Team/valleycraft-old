@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:small_rose_bush"
+    }
+  ],
+  "result": {
+    "item": "valley:rose"
+  }
+}

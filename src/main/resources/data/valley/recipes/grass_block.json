@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:turf"
+      "item": "valley:grass_turf"
     },
     {
       "item": "minecraft:dirt"

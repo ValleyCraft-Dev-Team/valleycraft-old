@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:snow_yam_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:snow_yam",
+    "count": 6
+  }
+}

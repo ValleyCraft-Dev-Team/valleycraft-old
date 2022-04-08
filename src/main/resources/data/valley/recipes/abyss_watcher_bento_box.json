@@ -19,11 +19,11 @@
       "tag": "c:rice"
     },
     "B": {
-      "item": "valley:bento_block"
+      "item": "valley:bento_box"
     }
   },
   "result": {
-    "item": "valley:bbox_abyss_watcher",
+    "item": "valley:abyss_watcher_bento_box",
     "count": 3
   }
 }

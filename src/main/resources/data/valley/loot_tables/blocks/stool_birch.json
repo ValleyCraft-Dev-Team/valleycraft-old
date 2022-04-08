@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "valley:stool_birch"
+          "name": "valley:birch_stool"
         }
       ],
       "conditions": [

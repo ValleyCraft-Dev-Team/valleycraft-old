@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "valley:stump_red", "valley:stump_morel", "valley:stump_brown"
+    "valley:red_mushroom_logs", "valley:morel_logs", "valley:brown_mushroom_logs"
   ]
 }

@@ -5,7 +5,7 @@
 			"text": "Trapper"
 		},
 		"icon": {
-			"item": "valley:spike_wall_block"
+			"item": "valley:spike_trap"
 		},
 		"description": {
 			"text": "Craft a Spike Trap"
@@ -18,7 +18,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:spike_wall_block"
+							"valley:spike_trap"
 						]
 					}
 				]

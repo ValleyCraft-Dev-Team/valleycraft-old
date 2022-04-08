@@ -19,8 +19,7 @@ public class SnowBush extends PlantBlock {
 
     public SnowBush() {
         super(FabricBlockSettings.of(Material.LEAVES)
-                //.breakByTool(FabricToolTags.SHEARS)
-                .breakByHand(true)
+                //.breakByTool(FabricToolTags.SHEARS) 
                 .sounds(BlockSoundGroup.SNOW)
                 .strength(0, 0.5f));
     }

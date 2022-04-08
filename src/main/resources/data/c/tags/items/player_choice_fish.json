@@ -1,9 +1,15 @@
 {
   "replace": false,
   "values": [
-    "valley:fire_eel_cooked", "valley:cooked_tropical_fish","valley:sardine_cooked",
-    "minecraft:cooked_salmon","minecraft:cooked_cod","valley:glistering_anglerfish",
-    "valley:cooked_perch", "valley:cooked_stonespinner_minnow", "valley:cooked_pridefin",
+    "valley:cooked_fire_eel",
+    "valley:cooked_tropical_fish",
+    "valley:cooked_sardine",
+    "minecraft:cooked_salmon",
+    "minecraft:cooked_cod",
+    "valley:glistering_angler",
+    "valley:cooked_perch",
+    "valley:cooked_stonespinner_minnow",
+    "valley:cooked_pridefin",
     "valley:cooked_red_porgy"
   ]
 }

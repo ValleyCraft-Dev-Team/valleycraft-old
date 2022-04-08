@@ -21,7 +21,6 @@ public class RockBlock extends BlockWithWater {
 
     public RockBlock() {
         super(FabricBlockSettings.of(Material.DECORATION)
-                .breakByHand(false)
                 .sounds(BlockSoundGroup.DRIPSTONE_BLOCK)
                 .strength(0.5f, 2.5f));
         setDefaultState();

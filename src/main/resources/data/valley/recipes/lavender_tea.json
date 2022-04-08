@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:ferns"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "valley:tea_mug"
+    },
+    {
+      "item": "valley:spring_of_lavender"
+    }
+  ],
+  "result": {
+    "item": "valley:lavender_tea",
+    "count": 1
+  }
+}

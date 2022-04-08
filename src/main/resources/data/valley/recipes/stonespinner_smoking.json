@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "item": "valley:stoneroller_minnow"
+    "item": "valley:saltwater_stoneroller_minnow"
   },
   "result": "valley:cooked_stonespinner_minnow",
   "experience": 0.1,

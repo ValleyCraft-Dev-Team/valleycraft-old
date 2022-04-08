@@ -8,20 +8,20 @@
       "item": "minecraft:sugar"
     },
     {
-      "item": "valley:mug_block"
+      "item": "valley:mead_mug"
     },
     {
       "item": "minecraft:honey_bottle"
     },
     {
-      "item": "valley:mug_block"
+      "item": "valley:mead_mug"
     },
     {
       "item": "minecraft:water_bucket"
     }
   ],
   "result": {
-    "item": "valley:mead_mug",
+    "item": "valley:mead",
     "count": 2
   }
 }

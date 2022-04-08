@@ -16,7 +16,7 @@ public class EelEntity extends FishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(Fishing.BUCKET_FIRE_EEL);
+        return new ItemStack(Fishing.FIRE_EEL_BUCKET);
     }
 
     @Override

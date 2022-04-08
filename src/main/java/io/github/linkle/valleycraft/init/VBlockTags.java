@@ -1,11 +1,11 @@
 package io.github.linkle.valleycraft.init;
 
 import static io.github.linkle.valleycraft.ValleyMain.MOD_ID;
-import static net.fabricmc.fabric.api.tag.TagFactory.BLOCK;
 
 import net.minecraft.block.Block;
-import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
 public class VBlockTags {
 
@@ -13,7 +13,7 @@ public class VBlockTags {
     //This class makes tags in the Valleycraft namespace instead of the c namespace, unlike VItemTags.
     //This is intentional, because no other mods will have sickles that work the same way as Valleycraft's.
 
-    public static final Tag<Block> SICKLE_HARVESTABLES = BLOCK.create(newId("sickle_harvestables"));
+    public static final TagKey<Block> SICKLE_HARVESTABLES = TagKey.of(Registry.BLOCK_KEY, newId("sickle_harvestables"));
 
     // private constructor to avoid instantiation
     private VBlockTags() {

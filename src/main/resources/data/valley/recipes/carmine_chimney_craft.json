@@ -7,11 +7,11 @@
   ],
   "key": {
     "_": {
-      "item": "valley:carmine_slab"
+      "item": "valley:carmine_brick_slab"
     }
   },
   "result": {
-    "item": "valley:chimney_carmine",
+    "item": "valley:carmine_brick_chimney",
     "count": 3
   }
 }

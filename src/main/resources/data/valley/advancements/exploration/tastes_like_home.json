@@ -5,7 +5,7 @@
 			"text": "The Skyloft Special"
 		},
 		"icon": {
-			"item": "valley:pumpkin_bottle"
+			"item": "valley:pumpkin_soup_bottle"
 		},
 		"description": {
 			"text": "Make & drink some hot Bottled Pumpkin Soup"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:pumpkin_bottle"
+						"valley:pumpkin_soup_bottle"
 					]
 				}
 			}

@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "valley:fire_eel"
   },
-  "result": "valley:fire_eel_cooked",
+  "result": "valley:cooked_fire_eel",
   "experience": 0.2,
   "cookingtime": 200
 }

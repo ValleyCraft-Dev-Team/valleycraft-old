@@ -26,7 +26,8 @@ public class ScreenBlock extends HorizontalWithWaterBlock {
     private static final VoxelShape NORTH_SHAPE;
 
     public ScreenBlock() {
-        super(FabricBlockSettings.of(Material.METAL).nonOpaque().breakByHand(true).sounds(BlockSoundGroup.METAL)
+        super(FabricBlockSettings.of(Material.METAL).nonOpaque()
+                .sounds(BlockSoundGroup.METAL)
                 .strength(1f, 5f));
         setDefaultState();
     }

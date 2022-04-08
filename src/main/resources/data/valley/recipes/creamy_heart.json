@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:single_rose"
+      "item": "valley:rose"
     },
     {
       "item": "valley:milk_bottle"

@@ -8,7 +8,6 @@ import net.minecraft.sound.BlockSoundGroup;
 public class FleshBlock extends Block {
     public FleshBlock() {
         super(FabricBlockSettings.of(Material.GOURD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WET_GRASS)
                 .strength(0.4f, 0.5f));
     }

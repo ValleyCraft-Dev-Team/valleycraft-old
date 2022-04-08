@@ -18,7 +18,6 @@ public class CrimsonBiomePlant extends PlantBlock {
     public CrimsonBiomePlant() {
         super(FabricBlockSettings.of(Material.NETHER_SHOOTS)
                 .nonOpaque()
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.FUNGUS)
                 .strength(0, 0.2f)
                 .noCollision());

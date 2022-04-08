@@ -5,7 +5,7 @@
 			"text": "Aquatic Preservation"
 		},
 		"icon": {
-			"item": "valley:bucket_red_porgy"
+			"item": "valley:red_porgy_bucket"
 		},
 		"description": {
 			"text": "Get a bucket of every fish & eel type."
@@ -18,7 +18,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bucket_red_porgy"
+							"valley:red_porgy_bucket"
 						]
 					}
 				]
@@ -30,7 +30,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bucket_perch"
+							"valley:perch_bucket"
 						]
 					}
 				]
@@ -42,7 +42,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bucket_fire_eel"
+							"valley:fire_eel_bucket"
 						]
 					}
 				]
@@ -54,7 +54,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bucket_sardine"
+							"valley:sardine_bucket"
 						]
 					}
 				]
@@ -66,7 +66,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:bucket_minnow"
+							"valley:minnow_bucket"
 						]
 					}
 				]

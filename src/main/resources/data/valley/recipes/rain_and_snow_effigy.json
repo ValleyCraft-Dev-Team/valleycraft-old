@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "===",
+    "+#+",
+    "___"
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "#": {
+      "item": "valley:blank_effigy"
+    },
+    "_": {
+      "item": "minecraft:snowball"
+    },
+    "=": {
+      "tag": "c:holly"
+    }
+  },
+
+  "result": {
+    "item": "valley:rain_and_snow_effigy",
+    "count": 1
+  }
+}

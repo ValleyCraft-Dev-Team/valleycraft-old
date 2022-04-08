@@ -16,7 +16,7 @@ public class PerchEntity extends SchoolingFishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(Fishing.BUCKET_PERCH);
+        return new ItemStack(Fishing.PERCH_BUCKET);
     }
 
     @Override

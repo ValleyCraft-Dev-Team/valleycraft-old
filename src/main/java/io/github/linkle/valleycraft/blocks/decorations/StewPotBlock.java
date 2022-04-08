@@ -17,7 +17,6 @@ public class StewPotBlock extends HorizontalWithWaterBlock {
 
     public StewPotBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.5f, 2.5f));
         setDefaultState();

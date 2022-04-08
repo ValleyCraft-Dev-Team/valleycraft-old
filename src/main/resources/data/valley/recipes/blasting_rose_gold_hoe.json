@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "valley:rg_hoe"
+    "item": "valley:rose_gold_hoe"
   },
   "result": "valley:copper_nugget",
   "experience": 0.1,

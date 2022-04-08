@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:cooked_egg_bowl"
+      "item": "valley:scrambled_eggs"
     },
     {
       "item": "valley:cooked_bacon"
@@ -12,7 +12,7 @@
     }
   ],
   "result": {
-    "item": "valley:full_breakfast",
+    "item": "valley:bacon_breakfast",
     "count": 1
   }
 }

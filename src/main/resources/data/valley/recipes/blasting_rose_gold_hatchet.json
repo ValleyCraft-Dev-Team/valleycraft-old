@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "valley:rg_hatchet"
+    "item": "valley:rose_gold_hatchet"
   },
   "result": "valley:copper_nugget",
   "experience": 0.1,

@@ -41,7 +41,7 @@ public class CavePatchFeature extends Feature<CavePatchConfig> {
                 world.setBlockState(mutable, state, Block.NOTIFY_LISTENERS);
                 ++spawned;
 
-                if (!state.isOf(Plants.SPIDER_EGG_BLOCK)) {
+                if (!state.isOf(Plants.CAVE_SPIDER_EGG)) {
                     if (ValleyMain.CONFIG.misc.spiderEggWebGenEnabled)
                         for (BlockPos pos : BlockPos.iterate(mutable.getX() - 3, mutable.getY() - 3, mutable.getZ() - 3,
                                 mutable.getX() + 3, mutable.getY() + 3, mutable.getZ() + 3)) {

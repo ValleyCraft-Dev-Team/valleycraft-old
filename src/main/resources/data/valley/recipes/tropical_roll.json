@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:dried_seaweed"
+    },
+    {
+      "tag": "c:tropical_fish"
+    },
+    {
+      "tag": "c:rice"
+    },
+    {
+      "item": "minecraft:carrot"
+    }
+  ],
+  "result": {
+    "item": "valley:tropical_roll",
+    "count": 1
+  }
+}

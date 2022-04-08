@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "valley:rg_pickaxe"
+    "item": "valley:rose_gold_pickaxe"
   },
   "result": "valley:copper_nugget",
   "experience": 0.1,

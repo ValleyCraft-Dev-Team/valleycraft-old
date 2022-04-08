@@ -17,7 +17,6 @@ public class LogPileBlock extends HorizontalWithWaterBlock {
 
     public LogPileBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD).nonOpaque()
                 .strength(1f, 2.5f));
         setDefaultState();

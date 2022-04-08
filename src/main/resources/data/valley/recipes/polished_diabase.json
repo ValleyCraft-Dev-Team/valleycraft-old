@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "valley:darkstone"
+      "item": "valley:diabase"
     }
   },
   "result": {
-    "item": "valley:diabase_smooth",
+    "item": "valley:polished_diabase",
     "count": 4
   }
 }

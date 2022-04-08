@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "valley:spiny_lobster"
+  },
+  "result": "valley:cooked_lobster",
+  "experience": 0.1,
+  "cookingtime": 100
+}

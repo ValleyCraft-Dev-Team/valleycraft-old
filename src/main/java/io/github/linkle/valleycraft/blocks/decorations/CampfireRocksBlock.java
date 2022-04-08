@@ -24,7 +24,7 @@ public class CampfireRocksBlock extends HorizontalWithWaterBlock {
 
     public CampfireRocksBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true).collidable(false)
+                .collidable(false)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1.5f, 2.5f));
         setDefaultState();

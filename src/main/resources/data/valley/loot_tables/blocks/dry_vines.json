@@ -24,7 +24,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "valley:moss_ball_dry"
+              "name": "valley:dry_moss_clump"
             }
           ]
         }

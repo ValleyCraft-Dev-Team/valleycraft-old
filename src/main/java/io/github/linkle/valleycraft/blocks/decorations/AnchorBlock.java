@@ -22,7 +22,6 @@ public class AnchorBlock extends DirectionBlockWithWater {
 
     public AnchorBlock() {
         super(FabricBlockSettings.of(Material.METAL)
-                .breakByHand(false)
                 .sounds(BlockSoundGroup.CHAIN).nonOpaque()
                 .strength(2f, 2f));
         setDefaultState();

@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:item/rg_scythe"
+    "layer0": "valley:item/rose_gold_scythe"
   }
 }

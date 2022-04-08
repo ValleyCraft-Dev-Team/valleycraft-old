@@ -16,7 +16,7 @@ public class SardineEntity extends SchoolingFishEntity {
 
     @Override
     public ItemStack getBucketItem() {
-        return new ItemStack(Fishing.BUCKET_SARDINE);
+        return new ItemStack(Fishing.SARDINE_BUCKET);
     }
 
     @Override

@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:jungle_stone"
+      "item": "valley:carmine"
     },
     {
-      "item": "valley:mossy_vines"
+      "item": "valley:moss_vines"
     }
   ],
   "result": {
-    "item": "valley:jungle_mossy",
+    "item": "valley:mossy_carmine",
     "count": 1
   }
 }

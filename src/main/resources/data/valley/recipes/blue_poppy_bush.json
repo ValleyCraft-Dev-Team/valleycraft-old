@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:jungle_bush"
+      "item": "valley:blue_poppy_bush"
     }
   ],
   "result": {

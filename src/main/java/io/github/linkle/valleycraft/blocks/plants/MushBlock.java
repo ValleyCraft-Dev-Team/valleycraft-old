@@ -22,7 +22,6 @@ public class MushBlock extends PlantBlock {
     public MushBlock() {
         super(FabricBlockSettings.of(Material.PLANT)
                 //.breakByTool(FabricToolTags.SHEARS)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.GRASS)
                 .strength(0, 0.5f)
                 .ticksRandomly()

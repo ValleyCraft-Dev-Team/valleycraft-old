@@ -17,7 +17,6 @@ public class HangingCrystalBlock extends BlockWithWater {
 
     public HangingCrystalBlock() {
         super(FabricBlockSettings.of(Material.GLASS)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.GLASS)
                 .strength(0.5f, 2.5f).luminance(13));
         setDefaultState();

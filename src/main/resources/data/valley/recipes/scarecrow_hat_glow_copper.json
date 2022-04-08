@@ -10,7 +10,7 @@
       "item": "minecraft:wheat"
     },
     "J": {
-      "item": "valley:copper_jack_o_lantern"
+      "item": "valley:copperflame_jack_o_lantern"
     },
     "L": {
       "item": "minecraft:leather_chestplate"
@@ -20,7 +20,7 @@
     }
   },
   "result": {
-    "item": "valley:scarecrow_hat_copper",
+    "item": "valley:hatted_copperflame_scarecrow",
     "count": 1
   }
 }

@@ -1,11 +1,12 @@
 package io.github.linkle.valleycraft.init;
 
+import static io.github.linkle.valleycraft.ValleyMain.CONFIG;
+
 import io.github.linkle.valleycraft.ValleyMain;
 import io.github.linkle.valleycraft.utils.loot.LootBuilder;
 import io.github.linkle.valleycraft.utils.loot.LootTableHelper;
 import io.github.linkle.valleycraft.utils.loot.LootUtils;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
@@ -18,8 +19,6 @@ import net.minecraft.loot.function.LootingEnchantLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
-
-import static io.github.linkle.valleycraft.ValleyMain.CONFIG;
 
 public class VLootTables {
 
@@ -39,9 +38,9 @@ public class VLootTables {
     }
 
     private static void fishingFishLoot(FabricLootPoolBuilder pool) {
-        pool.with(ItemEntry.builder(Fishing.CRAB).weight(20));
+        pool.with(ItemEntry.builder(Fishing.DUNGENESS_CRAB).weight(20));
         pool.with(ItemEntry.builder(Fishing.MASKING_CRAB).weight(10));
-        pool.with(ItemEntry.builder(Fishing.LOBSTER).weight(20));
+        pool.with(ItemEntry.builder(Fishing.SPINY_LOBSTER).weight(20));
         pool.with(ItemEntry.builder(Fishing.MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.BROWN_MUSSEL).weight(13));
         pool.with(ItemEntry.builder(Fishing.CERITH_SNAIL).weight(13));
@@ -50,24 +49,24 @@ public class VLootTables {
         pool.with(ItemEntry.builder(Aquatic.CLAM).weight(24));
         pool.with(ItemEntry.builder(Fishing.SARDINE).weight(43));
         pool.with(ItemEntry.builder(Fishing.LIONFISH).weight(6));
-        pool.with(ItemEntry.builder(Fishing.SLIMEFISH).weight(20));
+        pool.with(ItemEntry.builder(Fishing.GELAFIN).weight(20));
         pool.with(ItemEntry.builder(Fishing.PERCH).weight(40));
         pool.with(ItemEntry.builder(Aquatic.SAND_DOLLAR).weight(10));
-        pool.with(ItemEntry.builder(Aquatic.STARFISH_ORANGE).weight(10));
+        pool.with(ItemEntry.builder(Aquatic.STARFISH).weight(10));
         pool.with(ItemEntry.builder(Fishing.FIRE_EEL).weight(7));
-        pool.with(ItemEntry.builder(Fishing.OCTO).weight(9));
+        pool.with(ItemEntry.builder(Fishing.OCTOROK).weight(9));
         pool.with(ItemEntry.builder(Fishing.GLISTERING_ANGLER).weight(3));
-        pool.with(ItemEntry.builder(Fishing.GHOST_FISH).weight(5));
+        pool.with(ItemEntry.builder(Fishing.GHOSTFIN).weight(5));
         pool.with(ItemEntry.builder(Fishing.PRIDEFIN).weight(5));
-        pool.with(ItemEntry.builder(Fishing.WRASSE).weight(5));
-        pool.with(ItemEntry.builder(Fishing.FROG_FISH).weight(7));
+        pool.with(ItemEntry.builder(Fishing.RAINBOW_WRASSE).weight(5));
+        pool.with(ItemEntry.builder(Fishing.HAIRY_FROG_FISH).weight(7));
         pool.with(ItemEntry.builder(Aquatic.SEA_URCHIN).weight(13));
         pool.with(ItemEntry.builder(Fishing.MARLIN_SPIKE).weight(10));
-        pool.with(ItemEntry.builder(Fishing.STONEROLLER).weight(43));
+        pool.with(ItemEntry.builder(Fishing.SALTWATER_STONEROLLER_MINNOW).weight(43));
         pool.with(ItemEntry.builder(Fishing.ABYSS_WATCHER).weight(15));
         pool.with(ItemEntry.builder(Fishing.BONEFIN).weight(13));
-        pool.with(ItemEntry.builder(MiscItems.SEA_EYE).weight(2));
-        pool.with(ItemEntry.builder(MiscItems.MESSAGE_BOTTLE).weight(5));
+        pool.with(ItemEntry.builder(MiscItems.SEA_CREATURE_EYE).weight(2));
+        pool.with(ItemEntry.builder(MiscItems.MESSAGE_IN_A_BOTTLE).weight(5));
     }
 
     private static void fishingJunkLoot(FabricLootPoolBuilder pool) {
@@ -113,9 +112,9 @@ public class VLootTables {
         //Inject all three mermaid weapons into the large ocean ruin loot table
         LootTableHelper.appendLoot(LootTables.UNDERWATER_RUIN_BIG_CHEST,
                 LootBuilder.create().rolls(1)
-                .with(WeaponsAndTools.MERMAID_SWORD)
-                .with(WeaponsAndTools.MERMAID_SPEAR)
-                .with(WeaponsAndTools.CORAL_KNIFE)
+                .with(WeaponsAndTools.MERMAIDS_SWORD)
+                .with(WeaponsAndTools.MERMAIDS_SPEAR)
+                .with(WeaponsAndTools.CORAL_DAGGER)
                 //Only 9 in 10 large ocean ruin chests will contain a mermaid weapon
                 .conditionally(RandomChanceLootCondition.builder(0.91f))
                 );
@@ -135,21 +134,22 @@ public class VLootTables {
 
         //Create fiber loot builder and apply it to grass and tall grass
         LootBuilder builder = LootBuilder.create()
-                .rolls(1).with(MiscItems.FIBER)
+                .rolls(1).with(MiscItems.PLANT_FIBER)
                 .withCondition(new MatchToolLootCondition(LootUtils.tag(VItemTags.SICKLES))
                         );
 
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
 
+        /*
         //Create worm loot builder and apply it to grass and tall grass
         builder = LootBuilder.create()
                 .rolls(1).with(FoodAndCooking.WORM)
-                .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS))
-                        );
+                .withCondition(new MatchToolLootCondition(LootUtils.tag(FabricToolTags.SHOVELS)));
 
         LootTableHelper.appendLoot(Blocks.GRASS.getLootTableId(), builder);
         LootTableHelper.appendLoot(Blocks.TALL_GRASS.getLootTableId(), builder);
+        */
 
         //When we need to add an item to just one loot table, we don't need to store a builder.
 

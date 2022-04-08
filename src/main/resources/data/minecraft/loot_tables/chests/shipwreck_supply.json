@@ -17,7 +17,7 @@
         {
           "type": "minecraft:item",
           "weight": 10,
-          "name": "valley:goblet"
+          "name": "valley:golden_chalice"
         },
         {
           "type": "minecraft:item",

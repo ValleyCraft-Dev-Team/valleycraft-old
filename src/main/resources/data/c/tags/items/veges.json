@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "valley:mandrake","valley:maize_crop","valley:snow_yam_item",
-    "valley:onion","valley:eggplant","valley:tomato_bush","valley:fire_pepper",
-    "valley:green_bean","minecraft:carrot","minecraft:potato",
+    "valley:living_mandrake","valley:corn","valley:snow_yam",
+    "valley:onion","valley:eggplant","valley:tomato","valley:fire_pepper",
+    "valley:green_beans","minecraft:carrot","minecraft:potato",
     "minecraft:pumpkin"
   ]
 }

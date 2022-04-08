@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
   "ingredient": {
-    "item": "valley:jungle_stone"
+    "item": "valley:carmine"
   },
-  "result": "valley:carmine_smooth",
+  "result": "valley:polished_carmine",
   "count": 1
 }

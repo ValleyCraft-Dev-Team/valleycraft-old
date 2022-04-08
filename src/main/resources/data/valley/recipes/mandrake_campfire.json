@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "valley:mandrake"
-  },
-  "result": "valley:cooked_mandrake",
-  "experience": 0.1,
-  "cookingtime": 200
-}

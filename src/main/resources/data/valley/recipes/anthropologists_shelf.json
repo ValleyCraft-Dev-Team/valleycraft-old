@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "BLC",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "B": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "L": {
+      "item": "valley:golden_chalice"
+    },
+    "C": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "valley:anthropologists_shelf",
+    "count": 1
+  }
+}

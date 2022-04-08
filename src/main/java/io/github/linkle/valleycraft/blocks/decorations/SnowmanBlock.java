@@ -19,7 +19,7 @@ public class SnowmanBlock extends HorizontalWithWaterBlock {
 
     public SnowmanBlock() {
         super(FabricBlockSettings.of(Material.SNOW_BLOCK)
-                .breakByHand(true).nonOpaque()
+                .nonOpaque()
                 .sounds(BlockSoundGroup.SNOW)
                 .strength(1f, 1f));
         setDefaultState();

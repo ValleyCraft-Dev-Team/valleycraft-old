@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:ferns"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "item": "valley:tea_mug"
+    },
+    {
+      "tag": "c:bitter_berries"
+    }
+  ],
+  "result": {
+    "item": "valley:bitter_berry_tea",
+    "count": 1
+  }
+}

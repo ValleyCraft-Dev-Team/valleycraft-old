@@ -2,22 +2,22 @@
 "replace": false,
   "values": [
     "valley:dry_mossy_stone",
-    "valley:oceanstone",
-    "valley:swampstone",
-    "valley:darkstone",
-    "valley:taigastone",
+    "valley:marinite",
+    "valley:grimestone",
+    "valley:diabase",
+    "valley:verdantine",
     "valley:green_granite",
     "valley:pumice",
     "valley:jasper",
     "valley:limestone",
-    "valley:stone_mossy",
-    "valley:jungle_mossy",
-    "valley:jungle_sporey",
-    "valley:jungle_stone",
+    "valley:mossy_stone",
+    "valley:mossy_carmine",
+    "valley:blossoming_carmine",
+    "valley:carmine",
     "valley:scalding_sandstone",
     "valley:scalding_stone",
     "valley:glacial_stone",
-    "valley:scalding_volc_stone",
-    "valley:volc_stone"
+    "valley:scalding_volcanic_stone",
+    "valley:volcanic_stone"
   ]
 }

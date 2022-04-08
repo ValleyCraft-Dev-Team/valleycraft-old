@@ -5,7 +5,7 @@
 			"text": "Expert Agronomist"
 		},
 		"icon": {
-			"item": "valley:crate_apple"
+			"item": "valley:apple_crate"
 		},
 		"description": {
 			"text": "Make every Crate type including Egg Crates."
@@ -20,7 +20,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_apple"
+							"valley:apple_crate"
 						]
 					}
 				]
@@ -32,7 +32,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_sour"
+							"valley:sour_berry_crate"
 						]
 					}
 				]
@@ -44,7 +44,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_poison"
+							"valley:poisonous_potato_crate"
 						]
 					}
 				]
@@ -56,7 +56,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_sweet"
+							"valley:sweet_berry_crate"
 						]
 					}
 				]
@@ -68,7 +68,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_potato"
+							"valley:potato_crate"
 						]
 					}
 				]
@@ -80,7 +80,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_glow"
+							"valley:glow_berry_crate"
 						]
 					}
 				]
@@ -92,7 +92,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_cocoa"
+							"valley:cocoa_bean_crate"
 						]
 					}
 				]
@@ -104,7 +104,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_carrot"
+							"valley:carrot_crate"
 						]
 					}
 				]
@@ -116,7 +116,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_beet"
+							"valley:beetroot_crate"
 						]
 					}
 				]
@@ -128,7 +128,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_green"
+							"valley:green_bean_crate"
 						]
 					}
 				]
@@ -140,7 +140,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_corn"
+							"valley:corn_crate"
 						]
 					}
 				]
@@ -152,7 +152,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_bitter"
+							"valley:bitter_berry_crate"
 						]
 					}
 				]
@@ -164,7 +164,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_spicy"
+							"valley:spicy_berry_crate"
 						]
 					}
 				]
@@ -176,7 +176,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_tomato"
+							"valley:tomato_crate"
 						]
 					}
 				]
@@ -188,7 +188,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_holly"
+							"valley:holly_crate"
 						]
 					}
 				]
@@ -200,7 +200,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_mandrake"
+							"valley:living_mandrake_crate"
 						]
 					}
 				]
@@ -212,7 +212,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_snow"
+							"valley:snow_yam_crate"
 						]
 					}
 				]
@@ -224,7 +224,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_onion"
+							"valley:onion_crate"
 						]
 					}
 				]
@@ -236,7 +236,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_miner"
+							"valley:miners_lettuce_crate"
 						]
 					}
 				]
@@ -248,7 +248,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_rice"
+							"valley:rice_crate"
 						]
 					}
 				]
@@ -260,7 +260,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_pepper"
+							"valley:fire_pepper_crate"
 						]
 					}
 				]
@@ -272,7 +272,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_eggplant"
+							"valley:eggplant_crate"
 						]
 					}
 				]
@@ -284,7 +284,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_chorus"
+							"valley:chorus_fruit_crate"
 						]
 					}
 				]
@@ -296,7 +296,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_egg"
+							"valley:chicken_egg_crate"
 						]
 					}
 				]
@@ -308,7 +308,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_duck"
+							"valley:duck_egg_crate"
 						]
 					}
 				]
@@ -320,7 +320,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:crate_puff"
+							"valley:puff_ball_crate"
 						]
 					}
 				]

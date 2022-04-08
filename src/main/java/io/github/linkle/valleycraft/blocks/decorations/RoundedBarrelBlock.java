@@ -13,7 +13,6 @@ public class RoundedBarrelBlock extends BarrelBlock {
 
     public RoundedBarrelBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1f, 2.5f));
     }

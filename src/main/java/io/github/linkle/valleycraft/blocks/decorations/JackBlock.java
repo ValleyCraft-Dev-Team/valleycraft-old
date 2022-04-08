@@ -8,7 +8,7 @@ import net.minecraft.sound.BlockSoundGroup;
 public class JackBlock extends CarvedPumpkinBlock {
     public JackBlock() {
         super(FabricBlockSettings.of(Material.GOURD)
-                .breakByHand(true).luminance(15)
+                .luminance(15)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(1f, 1.0f));
     }

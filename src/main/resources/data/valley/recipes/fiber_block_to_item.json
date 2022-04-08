@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:fiber_block"
+      "item": "valley:plant_fiber_bale"
     }
   ],
   "result": {
-    "item": "valley:fiber",
+    "item": "valley:plant_fiber",
     "count": 9
   }
 }

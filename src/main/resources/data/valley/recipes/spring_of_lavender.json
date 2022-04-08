@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:spring_of_lavender"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}

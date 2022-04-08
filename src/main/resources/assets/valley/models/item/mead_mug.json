@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "valley:item/mead_mug"
+    "layer0": "valley:item/mug"
   }
 }

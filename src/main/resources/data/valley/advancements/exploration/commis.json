@@ -23,13 +23,13 @@
 							"minecraft:cake",
 							"minecraft:pumpkin_pie",
 							"valley:apple_pie",
-							"valley:bitter_pie",
-							"valley:glow_pie",
-							"valley:sweet_pie",
+							"valley:bitter_berry_pie",
+							"valley:glow_berry_pie",
+							"valley:sweet_berry_pie",
 							"valley:pancake",
 							"valley:skeleton_cookie",
-							"valley:sour_pie",
-							"valley:crabcake"
+							"valley:sour_berry_pie",
+							"valley:crab_cake"
 						]
 					}
 				]

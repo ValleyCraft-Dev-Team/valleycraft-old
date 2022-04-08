@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "valley:volc_stone"
+      "item": "valley:volcanic_stone"
     }
   },
   "result": {
-    "item": "valley:volc_stone_smooth",
+    "item": "valley:polished_volcanic_stone",
     "count": 4
   }
 }

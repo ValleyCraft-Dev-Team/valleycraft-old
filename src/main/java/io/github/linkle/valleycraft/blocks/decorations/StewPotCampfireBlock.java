@@ -24,7 +24,6 @@ public class StewPotCampfireBlock extends HorizontalWithWaterBlock {
 
     public StewPotCampfireBlock() {
         super(FabricBlockSettings.of(Material.WOOD)
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WOOD)
                 .strength(0.5f, 2.5f).collidable(false));
         setDefaultState();

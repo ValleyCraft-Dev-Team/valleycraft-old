@@ -5,7 +5,7 @@
 			"text": "Banned From The Kitchen"
 		},
 		"icon": {
-			"item": "valley:worm_bowl"
+			"item": "valley:worm_soup"
 		},
 		"description": {
 			"text": "Why would you even eat that?"
@@ -16,7 +16,7 @@
 		"conditions": {
 			"item": {
 				"items": [
-					"valley:worm_bowl"
+					"valley:worm_soup"
 				]
 			}
 		}

@@ -19,7 +19,7 @@ import static io.github.linkle.valleycraft.init.Aquatic.*;
 import static io.github.linkle.valleycraft.init.Crops.*;
 import static io.github.linkle.valleycraft.init.Furniture.*;
 import static io.github.linkle.valleycraft.init.FurnitureCont.CAMPFIRE_RING;
-import static io.github.linkle.valleycraft.init.FurnitureCont.TELESCOPE_BLOCK;
+import static io.github.linkle.valleycraft.init.FurnitureCont.STARGAZING_SUPPLIES;
 import static io.github.linkle.valleycraft.init.Plants.*;
 import static io.github.linkle.valleycraft.init.PotBlock.POTTED_ROSE_SPRIG;
 
@@ -36,6 +36,15 @@ public class ValleyClient implements ClientModInitializer {
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
         tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
+                FRUIT_BEARING_APPLE_LEAVES
+                );
+        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
+        tintIndex == 1 ? 4764952 : -1,
+                FRUIT_BEARING_APPLE_LEAVES
+                );
+
+        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
+        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
                 APPLE_LEAVES
                 );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
@@ -45,20 +54,11 @@ public class ValleyClient implements ClientModInitializer {
 
         ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
         tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
-                APPLE_LEAVES_EMPTY
-                );
-        ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
-        tintIndex == 1 ? 4764952 : -1,
-                APPLE_LEAVES_EMPTY
-                );
-
-        ColorProviderRegistry.BLOCK.register((state, view, pos, tintIndex) ->
-        tintIndex == 1 ? BiomeColors.getFoliageColor(view, pos) : -1,
-                BUSH
+                COMMON_BUSH
                 );
         ColorProviderRegistry.ITEM.register((stack, tintIndex) ->
         4764952,
-        BUSH
+                COMMON_BUSH
                 );
     }
 
@@ -73,21 +73,21 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(TOMATO_BUSH);
         culloutBlocks.add(HOLLY_BUSH);
 
-        culloutBlocks.add(RICE_SEEDLINGS);
-        culloutBlocks.add(MAIZE_CROP);
+        culloutBlocks.add(RICE_CROP);
+        culloutBlocks.add(CORN_CROP);
 
         culloutBlocks.add(REDSTONE_LANTERN);
         culloutBlocks.add(WREATH);
 
-        culloutBlocks.add(SOUL_HANGING);
-        culloutBlocks.add(LANTERN_HANGING);
-        culloutBlocks.add(RED_HANGING);
+        culloutBlocks.add(HANGING_SOUL_LANTERN);
+        culloutBlocks.add(HANGING_LANTERN);
+        culloutBlocks.add(HANGING_REDSTONE_LANTERN);
 
         culloutBlocks.add(ROUNDED_BARREL);
 
         //spike trap fix
         culloutBlocks.add(SPIKE_WALL_BLOCK);
-        culloutBlocks.add(TELESCOPE_BLOCK);
+        culloutBlocks.add(STARGAZING_SUPPLIES);
 
         //nether plants
         //cullouts.add(BLAZE_NETTLE);
@@ -102,19 +102,19 @@ public class ValleyClient implements ClientModInitializer {
         //nether plants
         culloutBlocks.add(ROOTED_WATCHER);
         culloutBlocks.add(SOUL_SPORECAP);
-        culloutBlocks.add(TAINTED_WART);
+        culloutBlocks.add(TAINTED_NETHER_WART);
 
         //sea plants
         culloutBlocks.add(SEA_URCHIN);
-        culloutBlocks.add(ANEMONE_PURPLE);
-        culloutBlocks.add(ANEMONE_PINK);
-        culloutBlocks.add(ANEMONE_YELLOW);
-        culloutBlocks.add(ANEMONE_GREEN);
-        culloutBlocks.add(ANEMONE_ORANGE);
-        culloutBlocks.add(STARFISH_ORANGE);
+        culloutBlocks.add(PURPLE_ANEMONE);
+        culloutBlocks.add(PINK_ANEMONE);
+        culloutBlocks.add(YELLOW_ANEMONE);
+        culloutBlocks.add(GREEN_ANEMONE);
+        culloutBlocks.add(ORANGE_ANEMONE);
+        culloutBlocks.add(STARFISH);
         culloutBlocks.add(GIANT_SCALLOP);
-        culloutBlocks.add(BARNACLE);
-        culloutBlocks.add(SEA_FERN);
+        culloutBlocks.add(THORACICA_BARNACLE);
+        culloutBlocks.add(DANCING_SEA_FERN);
         culloutBlocks.add(TUBE_WORMS);
         culloutBlocks.add(PRISMARINE_CLUSTER);
 
@@ -124,55 +124,54 @@ public class ValleyClient implements ClientModInitializer {
         //culloutBlocks.add(STEW_POT);
 
         culloutBlocks.add(SMALL_CACTUS);
-        culloutBlocks.add(ROSEBUSH);
-        culloutBlocks.add(BUSH);
-        culloutBlocks.add(LILACBUSH);
-        culloutBlocks.add(PEONYBUSH);
-        culloutBlocks.add(FERNBUSH);
-        culloutBlocks.add(TAPROOTS);
-        culloutBlocks.add(REED_BLOCK);
-        culloutBlocks.add(BUSH_ALIVE);
-        culloutBlocks.add(HERBS);
-        culloutBlocks.add(WILD_BEET);
+        culloutBlocks.add(SMALL_ROSE_BUSH);
+        culloutBlocks.add(COMMON_BUSH);
+        culloutBlocks.add(SMALL_LILAC);
+        culloutBlocks.add(SMALL_PEONY);
+        culloutBlocks.add(WILD_TAPROOTS);
+        culloutBlocks.add(CATTAILS);
+        culloutBlocks.add(SCRAGGLY_BUSH);
+        culloutBlocks.add(WILD_HERBS);
+        culloutBlocks.add(WILD_BEETROOT);
         culloutBlocks.add(WILD_POTATO);
         culloutBlocks.add(WILD_CARROT);
         culloutBlocks.add(WILD_WHEAT);
-        culloutBlocks.add(WEAPING_SWAMP_WILLOW);
+        culloutBlocks.add(WEEPING_JUNGLE_WILLOW);
         culloutBlocks.add(REDWOOD_SORREL);
-        culloutBlocks.add(DANDELION_PUFF);
-        culloutBlocks.add(PANFLOWER);
+        culloutBlocks.add(MATURE_DANDELIONS);
+        culloutBlocks.add(PANFLOWERS);
         culloutBlocks.add(HONEY_CLUSTER);
         culloutBlocks.add(FLOWERING_CACTUS);
         culloutBlocks.add(PEPPER_CROP_BLOCK);
         culloutBlocks.add(EGGPLANT_CROP_BLOCK);
         //culloutBlocks.add(ROCK_PILE);
-        culloutBlocks.add(REDSTONE_CRYSTAL);
+        culloutBlocks.add(CRYSTALLIZED_REDSTONE);
         culloutBlocks.add(ONION_CROP_BLOCK);
         culloutBlocks.add(SNOW_CROP_BLOCK);
         culloutBlocks.add(MINERS_CROP_BLOCK);
-        culloutBlocks.add(SNOW_BUSH);
+        culloutBlocks.add(SNOWY_BUSH);
         //culloutBlocks.add(SNOW_ROCK_PILE);
-        culloutBlocks.add(MOSSY_VINES);
-        culloutBlocks.add(MOSSY_VINES_PLANT);
+        culloutBlocks.add(MOSS_VINES);
+        culloutBlocks.add(MOSS_VINES_PLANT);
         culloutBlocks.add(DRY_VINES);
         culloutBlocks.add(DRY_VINES_PLANT);
-        culloutBlocks.add(JUNGLE_BUSH);
-        culloutBlocks.add(SWAMP_BUSH);
-        culloutBlocks.add(JUNGLE_CAP);
+        culloutBlocks.add(BLUE_POPPY_BUSH);
+        culloutBlocks.add(VERDANT_BUSH);
+        culloutBlocks.add(ORANGE_GILLED_WAXING_CAP);
         culloutBlocks.add(SPROUT);
-        culloutBlocks.add(SWAMP_RIBBON);
+        culloutBlocks.add(POND_RIBBONS);
         culloutBlocks.add(BLACK_DAHLIA);
         culloutBlocks.add(LAVENDER);
-        culloutBlocks.add(LAVENDER_SPRIG);
-        culloutBlocks.add(ROSE_SPRIG);
-        culloutBlocks.add(ICE_ROSE);
+        culloutBlocks.add(SPRING_OF_LAVENDER);
+        culloutBlocks.add(ROSE);
+        culloutBlocks.add(FROZEN_ROSE);
         culloutBlocks.add(ORANGE_FERN);
         culloutBlocks.add(ORANGE_BEAUTY);
-        culloutBlocks.add(APPLE_LEAVES);
+        culloutBlocks.add(FRUIT_BEARING_APPLE_LEAVES);
         culloutBlocks.add(APPLE_SAPLING);
         culloutBlocks.add(CROCUS);
         culloutBlocks.add(MOREL);
-        culloutBlocks.add(HEDGE);
+        culloutBlocks.add(BOXWOOD_BUSH);
 
         culloutBlocks.add(POTTED_ROSE_SPRIG);
 
@@ -183,14 +182,13 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(PUFF_CROP_BLOCK);
         culloutBlocks.add(GB_CROP_BLOCK);
         culloutBlocks.add(MANDRAKE_CROP_BLOCK);
-        culloutBlocks.add(CRYSTAL_CROP_BLOCK);
 
-        culloutBlocks.add(HANGING);
+        culloutBlocks.add(HANGING_GLASS_PLANTER);
 
         culloutBlocks.add(ROPE_BRIDGE);
         culloutBlocks.add(ROPE_BRIDGE_ANCHOR);
 
-        culloutBlocks.add(SCREEN);
+        culloutBlocks.add(FIREPLACE_SCREEN);
         culloutBlocks.add(NET);
         culloutBlocks.add(IRON_LADDER);
         culloutBlocks.add(IRON_LADDER);
@@ -207,47 +205,44 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(ANCHOR);
 
         culloutBlocks.add(SCARE);
-        culloutBlocks.add(SCARE_HAT);
-        culloutBlocks.add(SCARE_GLOW);
-        culloutBlocks.add(SCARE_HAT_GLOW);
-        culloutBlocks.add(SCARE_HAT_SOUL);
-        culloutBlocks.add(SCARE_SOUL);
+        culloutBlocks.add(HATTED_SCARECROW);
+        culloutBlocks.add(SCARECR_O_LANTERN);
+        culloutBlocks.add(HATTED_SCARECR_O_LANTERN);
+        culloutBlocks.add(HATTED_N_HAUNTED_SCARECROW);
+        culloutBlocks.add(HAUNTED_SCARECROW);
 
-        culloutBlocks.add(SCARE_TARGET);
-        culloutBlocks.add(RARE_MELON);
-        culloutBlocks.add(RARE_SKELETON);
-        culloutBlocks.add(RARE_ZOMBIE);
+        culloutBlocks.add(TARGET_RARECROW);
+        culloutBlocks.add(MELONHEAD_RARECROW);
+        culloutBlocks.add(SKELETON_RARECROW);
+        culloutBlocks.add(ZOMBIE_RARECROW);
 
-        culloutBlocks.add(SNOW);
+        culloutBlocks.add(SNOWMAN);
 
-        culloutBlocks.add(SCARE_COPPER);
-        culloutBlocks.add(SCARE_HAT_COPPER);
+        culloutBlocks.add(COPPERFLAME_SCARECROW);
+        culloutBlocks.add(HATTED_COPPERFLAME_SCARECROW);
 
-        culloutBlocks.add(STEW_POT_CAMPFIRE);
+        culloutBlocks.add(CAMPFIRE_STEW_POT);
 
-        culloutBlocks.add(BEVELED_PANE);
-        culloutBlocks.add(BEVELED_PANE_COPPER);
-        culloutBlocks.add(BEVELED_PANE_GOLD);
-        culloutBlocks.add(BEVELED_PANE_NETHERITE);
+        culloutBlocks.add(IRON_BEVELED_GLASS);
+        culloutBlocks.add(COPPER_BEVELED_GLASS);
+        culloutBlocks.add(GOLDEN_BEVELED_GLASS);
+        culloutBlocks.add(NETHERITE_BEVELED_GLASS);
 
         //Amethyst
-        translucentBlocks.add(BEVELED_PANE_A);
-        translucentBlocks.add(BEVELED_PANE_A_C);
-        translucentBlocks.add(BEVELED_PANE_A_G);
-        translucentBlocks.add(BEVELED_PANE_A_N);
+        translucentBlocks.add(BEVELED_AMETHYST_GLASS);
+        translucentBlocks.add(COPPER_BEVELED_AMETHYST_GLASS);
+        translucentBlocks.add(GOLDEN_BEVELED_AMETHYST_GLASS);
+        translucentBlocks.add(NETHERITE_BEVELED_AMETHYST_GLASS);
 
         culloutBlocks.add(BRAZIER);
         culloutBlocks.add(SOUL_BRAZIER);
-        culloutBlocks.add(COPPER_BRAZIER);
-        culloutBlocks.add(BLAZE_BRAZIER);
+        culloutBlocks.add(COPPERFLAME_BRAZIER);
 
-        culloutBlocks.add(BLAZE_BRAZIER);
+        culloutBlocks.add(BROWN_MUSHROOM_LOGS);
+        culloutBlocks.add(RED_MUSHROOM_LOGS);
+        culloutBlocks.add(MOREL_LOGS);
 
-        culloutBlocks.add(STUMP_BROWN);
-        culloutBlocks.add(STUMP_RED);
-        culloutBlocks.add(STUMP_MOREL);
-
-        culloutBlocks.add(APPLE_LEAVES_EMPTY);
+        culloutBlocks.add(APPLE_LEAVES);
 
         culloutBlocks.add(COPPER_CHAIN);
         culloutBlocks.add(EXPOSED_COPPER_CHAIN);
@@ -259,12 +254,12 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(WAXED_WEATHERED_COPPER_CHAIN);
         culloutBlocks.add(WAXED_OXIDIZED_COPPER_CHAIN);
 
-        culloutBlocks.add(CHAIN_G);
-        culloutBlocks.add(CHAIN_N);
+        culloutBlocks.add(GOLDEN_CHAIN);
+        culloutBlocks.add(NETHERITE_CHAIN);
 
         culloutBlocks.add(CAMPFIRE_RING);
 
-        culloutBlocks.add(SPIDER_EGG_BLOCK);
+        culloutBlocks.add(CAVE_SPIDER_EGG);
         culloutBlocks.add(RED_SEA_GRASS);
         culloutBlocks.add(GLOW_KELP_PLANT);
         culloutBlocks.add(GLOW_KELP);
@@ -275,8 +270,6 @@ public class ValleyClient implements ClientModInitializer {
         culloutBlocks.add(SOUL_WALL_BONE_TORCH);
         culloutBlocks.add(REDSTONE_BONE_TORCH);
         culloutBlocks.add(REDSTONE_WALL_BONE_TORCH);
-
-        translucentBlocks.add(BRAZIER_METAL);
 
         // Remapping block's render layer. This code should always be last!
         var layerMap = BlockRenderLayerMap.INSTANCE;

@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "valley:copper_jack_o_lantern"
+      "item": "valley:copperflame_jack_o_lantern"
     },
     "W": {
       "item": "minecraft:wheat"
@@ -20,7 +20,7 @@
     }
   },
   "result": {
-    "item": "valley:scarecrow_copper",
+    "item": "valley:copperflame_scarecrow",
     "count": 1
   }
 }

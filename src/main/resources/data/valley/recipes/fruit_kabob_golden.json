@@ -10,11 +10,11 @@
       "item": "minecraft:gold_nugget"
     },
     "C": {
-      "item": "valley:fruit_kabob"
+      "item": "valley:fruit_skewer"
     }
   },
   "result": {
-    "item": "valley:golden_kabob",
+    "item": "valley:golden_fruit_skewer",
     "count": 1
   }
 }

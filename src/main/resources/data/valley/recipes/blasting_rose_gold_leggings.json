@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "valley:rg_leggings"
+    "item": "valley:rose_gold_leggings"
   },
   "result": "valley:copper_nugget",
   "experience": 0.1,

@@ -17,7 +17,6 @@ public class SeaPlantBlock extends BlockWithWater {
     public SeaPlantBlock() {
         super(FabricBlockSettings.of(Material.UNDERWATER_PLANT)
                 .nonOpaque()
-                .breakByHand(true)
                 .sounds(BlockSoundGroup.WET_GRASS)
                 .strength(0, 0.1f)
                 .noCollision());

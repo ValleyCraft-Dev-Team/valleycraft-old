@@ -28,7 +28,6 @@ public class NetBlock extends DirectionBlockWithWater {
     public NetBlock() {
         super(FabricBlockSettings.of(Material.CARPET)
                 //.breakByTool(FabricToolTags.SWORDS)
-                .breakByHand(false)
                 .sounds(BlockSoundGroup.BAMBOO_SAPLING).nonOpaque()
                 .strength(0.5f, 0.5f));
         setDefaultState();

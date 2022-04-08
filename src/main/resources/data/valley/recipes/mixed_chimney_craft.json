@@ -7,11 +7,11 @@
   ],
   "key": {
     "_": {
-      "item": "valley:brown_brick_slab"
+      "item": "valley:mixed_brick_slab"
     }
   },
   "result": {
-    "item": "valley:chimney_brick",
+    "item": "valley:brick_chimney",
     "count": 3
   }
 }

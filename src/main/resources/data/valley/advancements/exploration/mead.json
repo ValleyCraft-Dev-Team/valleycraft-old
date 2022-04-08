@@ -5,7 +5,7 @@
 			"text": "Professional Viking"
 		},
 		"icon": {
-			"item": "valley:mead_mug"
+			"item": "valley:mead"
 		},
 		"description": {
 			"text": "Drink one of every type of Mead and Cyser"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:mead_mug"
+						"valley:mead"
 					]
 				}
 			}

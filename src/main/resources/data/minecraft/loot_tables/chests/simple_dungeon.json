@@ -12,7 +12,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "valley:rice_crop",
+          "name": "valley:rice_seedlings",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -42,7 +42,7 @@
         {
           "type": "minecraft:item",
           "weight": 15,
-          "name": "valley:rarecrow_melon"
+          "name": "valley:melonhead_rarecrow"
         },
         {
           "type": "minecraft:item",

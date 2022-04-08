@@ -32,7 +32,7 @@
         {
           "type": "minecraft:item",
           "weight": 5,
-          "name": "valley:scarecrow_target",
+          "name": "valley:target_rarecrow",
           "functions": [
             {
               "function": "minecraft:set_count",

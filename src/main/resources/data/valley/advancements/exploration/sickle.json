@@ -19,12 +19,12 @@
 					{
 						"items": [
 							"valley:green_bean_seeds",
-							"valley:puff_seeds",
+							"valley:puff_ball_seeds",
 							"valley:miners_lettuce",
 							"valley:onion_seeds",
-							"valley:snow_yam_item",
-							"valley:mandrake_seeds",
-							"valley:pepper_seeds",
+							"valley:snow_yam",
+							"valley:living_mandrake_seed_bulbs",
+							"valley:fire_pepper_seeds",
 							"valley:eggplant_seeds"
 						]
 					}

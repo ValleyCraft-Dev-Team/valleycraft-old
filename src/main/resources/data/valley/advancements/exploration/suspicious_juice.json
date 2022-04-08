@@ -5,7 +5,7 @@
 			"text": "'Inconceivable!'"
 		},
 		"icon": {
-			"item": "valley:potato_juice"
+			"item": "valley:suspicious_juice"
 		},
 		"description": {
 			"text": "Make & drink some Suspicious Juice"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:potato_juice"
+						"valley:suspicious_juice"
 					]
 				}
 			}

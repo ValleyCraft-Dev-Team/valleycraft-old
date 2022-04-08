@@ -5,7 +5,7 @@
 			"text": "The Lost City"
 		},
 		"icon": {
-			"item": "valley:coral_knife"
+			"item": "valley:coral_dagger"
 		},
 		"description": {
 			"text": "Find remains of the Lost City"
@@ -20,7 +20,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:coral_knife"
+							"valley:coral_dagger"
 						]
 					}
 				]

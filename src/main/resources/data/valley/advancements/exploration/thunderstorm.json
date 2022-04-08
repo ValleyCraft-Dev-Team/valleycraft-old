@@ -5,7 +5,7 @@
 			"text": "Sonata of Storms"
 		},
 		"icon": {
-			"item": "valley:storm_totem"
+			"item": "valley:storm_effigy"
 		},
 		"description": {
 			"text": "Summon a thunderstorm"
@@ -17,7 +17,7 @@
 			"conditions": {
 				"item": {
 					"items": [
-						"valley:storm_totem"
+						"valley:storm_effigy"
 					]
 				}
 			}

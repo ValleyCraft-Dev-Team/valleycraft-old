@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "valley:perch", "valley:lionfish", "valley:sardine", "valley:stoneroller_minnow",
-    "valley:crab_red", "valley:masking_crab", "valley:lobster", "valley:slime_fish", "valley:pridefin",
-    "valley:rainbow_wrasse", "valley:glistering_anglerfish", "valley:octopus", "valley:hairy_frog_fish",
-    "valley:fire_eel", "valley:ghost_fish", "valley:abyss_watcher", "valley:bonefin", "valley:red_porgy"
+    "valley:perch", "valley:lionfish", "valley:sardine", "valley:saltwater_stoneroller_minnow",
+    "valley:dungeness_crab", "valley:masking_crab", "valley:spiny_lobster", "valley:gelafin", "valley:pridefin",
+    "valley:rainbow_wrasse", "valley:glistering_angler", "valley:octorok", "valley:hairy_frog_fish",
+    "valley:fire_eel", "valley:ghostfin", "valley:abyss_watcher", "valley:bonefin", "valley:red_porgy"
   ]
 }

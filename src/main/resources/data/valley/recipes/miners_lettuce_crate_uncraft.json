@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:miners_lettuce_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:miners_lettuce",
+    "count": 6
+  }
+}

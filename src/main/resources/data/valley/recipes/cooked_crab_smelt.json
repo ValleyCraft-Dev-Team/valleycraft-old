@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "valley:crab_red"
+    "item": "valley:dungeness_crab"
   },
-  "result": "valley:crab_red_cooked",
+  "result": "valley:cooked_dungeness_crab",
   "experience": 0.2,
   "cookingtime": 200
 }

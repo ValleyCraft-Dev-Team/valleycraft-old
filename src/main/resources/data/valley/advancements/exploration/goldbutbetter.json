@@ -5,7 +5,7 @@
 			"text": "Gold, but better"
 		},
 		"icon": {
-			"item": "valley:rg_sword"
+			"item": "valley:rose_gold_sword"
 		},
 		"description": {
 			"text": "Make a Rose Gold tool or weapon"
@@ -18,17 +18,17 @@
 				"items": [
 					{
 						"items": [
-							"valley:rg_sword",
-							"valley:rg_hatchet",
-							"valley:rg_sickle",
-							"valley:rg_hoe",
-							"valley:rg_axe",
-							"valley:rg_pickaxe",
-							"valley:rg_shovel",
-							"valley:rg_helmet",
-							"valley:rg_chestplate",
-							"valley:rg_leggings",
-							"valley:rg_boots"
+							"valley:rose_gold_sword",
+							"valley:rose_gold_hatchet",
+							"valley:rose_gold_sickle",
+							"valley:rose_gold_hoe",
+							"valley:rose_gold_axe",
+							"valley:rose_gold_pickaxe",
+							"valley:rose_gold_shovel",
+							"valley:rose_gold_helmet",
+							"valley:rose_gold_chestplate",
+							"valley:rose_gold_leggings",
+							"valley:rose_gold_boots"
 						]
 					}
 				]

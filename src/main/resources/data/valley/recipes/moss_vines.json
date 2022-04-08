@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "valley:moss_ball"
+      "item": "valley:moss_clump"
     },
     {
       "item": "minecraft:vine"
@@ -12,7 +12,7 @@
     }
   ],
   "result": {
-    "item": "valley:mossy_vines",
+    "item": "valley:moss_vines",
     "count": 1
   }
 }

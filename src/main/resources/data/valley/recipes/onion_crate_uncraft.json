@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "valley:onion_crate"
+    }
+  ],
+  "result": {
+    "item": "valley:onion",
+    "count": 6
+  }
+}

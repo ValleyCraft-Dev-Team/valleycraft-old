@@ -5,7 +5,7 @@
 			"text": "Spooky Scary Scarecrows"
 		},
 		"icon": {
-			"item": "valley:scarecrow_hat"
+			"item": "valley:hatted_scarecrow"
 		},
 		"description": {
 			"text": "Find all Rarecrow types"
@@ -20,7 +20,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:scarecrow_target"
+							"valley:target_rarecrow"
 						]
 					}
 				]
@@ -32,7 +32,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:rarecrow_zombie"
+							"valley:zombie_rarecrow"
 						]
 					}
 				]
@@ -44,7 +44,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:rarecrow_melon"
+							"valley:melonhead_rarecrow"
 						]
 					}
 				]
@@ -56,7 +56,7 @@
 				"items": [
 					{
 						"items": [
-							"valley:rarecrow_skeleton"
+							"valley:skeleton_rarecrow"
 						]
 					}
 				]
