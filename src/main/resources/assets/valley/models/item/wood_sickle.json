@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "valley:item/wood_sickle"
+    "layer0": "valley:item/wood_scythe"
   }
 }
